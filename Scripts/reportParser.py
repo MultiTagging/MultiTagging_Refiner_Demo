@@ -7,12 +7,10 @@ from pathlib import Path
 #Get the correct path to the reports main directory
 #-------------------------------------------
 self_dir = Path(__file__).resolve().parents[1]
-print(self_dir)
 #-------------------------------------------
 def parse(tool,reportsLocation):
     path = self_dir /reportsLocation
-    print(path)
-    toolTags = pd.DataFrame(columns=['contractAddress', tool+'_labels'])
+    toolTags = pd.DataFrame(columns=['contractAddress', tool+'_Labels'])
     
     match tool:
         case 'Mythril':
