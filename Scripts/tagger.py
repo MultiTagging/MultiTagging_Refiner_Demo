@@ -1,7 +1,7 @@
-#from Scripts.reportParser import parse
-#from Scripts.mapper import map
-from reportParser import parse
-from mapper import map
+from Scripts.reportParser import parse
+from Scripts.mapper import map
+#from reportParser import parse
+#from mapper import map
 import json
 from pathlib import Path
 import os
@@ -56,4 +56,4 @@ def get_ToolAnalysisTime(tool, analysisTimeReportsPath):
     except IOError:
         print("Path not exist") 
 
-#print(generateTags('MAIAN',1))
+#print(generateTags('Mythril',0))

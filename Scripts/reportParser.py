@@ -85,8 +85,11 @@ def parse(tool,reportsLocation,reportSource):
                 reportsDF['findings'] = np.where((reportsDF['findings']== '{}') & (reportsDF['errors'] != '{}'), 'error', reportsDF['findings'])
 
                 reportsSubDF = reportsDF[['basename','findings','duration']]
+                reportsSubDF['findings'] = reportsSubDF['findings'].str.replace('{','')
+                reportsSubDF['findings'] = reportsSubDF['findings'].str.replace('}','')
+                reportsSubDF['findings'] = reportsSubDF['findings'].str.split(',')
                 reportsSubDF = reportsSubDF.rename(columns={'basename':'contractAddress','findings':tool+'_Labels','duration':tool+'_AnalysisTime'})
-    
+
                 return reportsSubDF
             except IOError:
                 print("Path not exist")
