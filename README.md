@@ -1,2 +1,2 @@
 # MultiTagging
-A vunelnerable Ethereum smart contract lableing method
+A vulnerable Ethereum smart contract labeling method.
