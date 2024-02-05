@@ -11,7 +11,7 @@ self_dir = Path(__file__).resolve().parent
 config_file_path = self_dir / config_file_name
 #-------------------------------------------
 
-def generateTags(tool):
+def generateTags(tool,reportSource):
     Tools =['MAIAN','Mythril','Semgrep','Slither','Solhint','VeriSmart']
     configFile = open(config_file_path)
     reportsLocation = json.load(configFile)
@@ -19,11 +19,12 @@ def generateTags(tool):
     
     vulnReportsPath = reportsLocation['Reports_Directory_Path'][Tools.index(tool)]['Path']
     labeledSC = parse(tool,vulnReportsPath)
+   
+    if reportSource ==0:
+        analysisTimeReportsPath = reportsLocation['AnalysisTime_Directory_Path'][Tools.index(tool)]['Path']    
+        tool_LabeledDS = pd.DataFrame(get_ToolAnalysisTime(tool, analysisTimeReportsPath))
+        labeledSC= labeledSC.merge(tool_LabeledDS,on='contractAddress')
     
-    analysisTimeReportsPath = reportsLocation['AnalysisTime_Directory_Path'][Tools.index(tool)]['Path']    
-    tool_LabeledDS = pd.DataFrame(get_ToolAnalysisTime(tool, analysisTimeReportsPath))
-
-    labeledSC= labeledSC.merge(tool_LabeledDS,on='contractAddress')
     return labeledSC
 
 def get_ToolAnalysisTime(tool, analysisTimeReportsPath):
@@ -43,9 +44,10 @@ def get_ToolAnalysisTime(tool, analysisTimeReportsPath):
         if len(analsisTime)>0:
             analsisTimeDF = pd.DataFrame(data= analsisTime, columns = ['contractAddress', tool+'_AnalysisTime'])
             analsisTimeDF = analsisTimeDF.drop_duplicates(subset='contractAddress', keep='last')
+
             analsisTimeDF['contractAddress'].str.strip()
         return analsisTimeDF
     except IOError:
         print("Path not exist") 
 
-#print(generateTags('Mythril'))
+#print(generateTags('MAIAN',1))
