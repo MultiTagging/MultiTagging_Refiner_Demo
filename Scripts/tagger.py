@@ -1,4 +1,7 @@
+#from Scripts.reportParser import parse
+#from Scripts.mapper import map
 from reportParser import parse
+from mapper import map
 import json
 from pathlib import Path
 import os
@@ -14,18 +17,21 @@ config_file_path = self_dir / config_file_name
 def generateTags(tool,reportSource):
     Tools =['MAIAN','Mythril','Semgrep','Slither','Solhint','VeriSmart']
     configFile = open(config_file_path)
-    reportsLocation = json.load(configFile)
+    config_File = json.load(configFile)
     configFile.close()
     
-    vulnReportsPath = reportsLocation['Reports_Directory_Path'][Tools.index(tool)]['Path']
-    labeledSC = parse(tool,vulnReportsPath)
+    vulnReportsPath = config_File['Reports_Directory_Path'][Tools.index(tool)]['Path']
+    labeledSC = parse(tool,vulnReportsPath,reportSource)
    
     if reportSource ==0:
-        analysisTimeReportsPath = reportsLocation['AnalysisTime_Directory_Path'][Tools.index(tool)]['Path']    
+        analysisTimeReportsPath = config_File['AnalysisTime_Directory_Path'][Tools.index(tool)]['Path']    
         tool_LabeledDS = pd.DataFrame(get_ToolAnalysisTime(tool, analysisTimeReportsPath))
         labeledSC= labeledSC.merge(tool_LabeledDS,on='contractAddress')
     
-    return labeledSC
+    VulnerablityMapFilePath = config_File['VulnerablityMap_File_Path'][0]['Path']  
+    mapLabeledSC = map(labeledSC,VulnerablityMapFilePath,tool)
+
+    return mapLabeledSC
 
 def get_ToolAnalysisTime(tool, analysisTimeReportsPath):
     self_dir = Path(__file__).resolve().parents[1]
