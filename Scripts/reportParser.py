@@ -87,7 +87,7 @@ def parse(tool,reportsLocation,reportSource):
                 reportsSubDF = reportsDF[['basename','findings','duration']]
                 reportsSubDF['findings'] = reportsSubDF['findings'].str.replace('{','')
                 reportsSubDF['findings'] = reportsSubDF['findings'].str.replace('}','')
-                reportsSubDF['findings'] = reportsSubDF['findings'].str.split(',')
+                reportsSubDF['findings'] = reportsSubDF['findings'].str.rsplit(',')
                 reportsSubDF = reportsSubDF.rename(columns={'basename':'contractAddress','findings':tool+'_Labels','duration':tool+'_AnalysisTime'})
 
                 return reportsSubDF
