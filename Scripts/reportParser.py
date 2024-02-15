@@ -55,11 +55,11 @@ def parse(tool,reportsLocation,reportSource):
                             codes = []
                             if os.path.getsize(path/filename) != 0:
                                 file = open(path/filename,errors="ignore")
-                                data = file.readlines()
+                                data = json.load(file)
                                 file.close()
-                                for line in data:
-                                    if '"check"' in line and line.rstrip() not in codes:
-                                        codes.append(line.rstrip().rsplit(':')[1])
+                                for i in range(0,len(data['results']['detectors'])):
+                                    codes.append(data['results']['detectors'][i]['check'])
+                                codes = list(dict.fromkeys(codes))
                             else:
                                 codes ='error'
                             toolTags.loc[len(toolTags)]=[filename.rstrip().rsplit('.')[0],codes]

@@ -37,10 +37,13 @@ def map(labeledSC,VulnerablityMapFilePath,tool):
                         DASP_RowIndex = DASPDF.query("Rank == @rank").index[0]
                         DASP_Titles.append(DASPDF["Vulnerability"].iloc[DASP_RowIndex])
                 
-                labeledSC.at[index,tool+'_SWC_Code'] = SWC_Codes
-                labeledSC.at[index,tool+'_SWC_Title'] = SWC_Titles
-                labeledSC.at[index,tool+'_DASP_Rank'] = DASP_Ranks
-                labeledSC.at[index,tool+'_DASP_Title'] = DASP_Titles
+                SWC_Codes = list(filter(lambda x: str(x) != 'nan', SWC_Codes))
+                DASP_Ranks = list(filter(lambda x: str(x) != 'nan', DASP_Ranks))
+                
+                labeledSC.at[index,tool+'_SWC_Code'] = list(dict.fromkeys(SWC_Codes))
+                labeledSC.at[index,tool+'_SWC_Title'] = list(dict.fromkeys(SWC_Titles))
+                labeledSC.at[index,tool+'_DASP_Rank'] = list(dict.fromkeys(DASP_Ranks))
+                labeledSC.at[index,tool+'_DASP_Title'] = list(dict.fromkeys(DASP_Titles))
         return labeledSC
     except IOError:
         print("Path not exist") 
