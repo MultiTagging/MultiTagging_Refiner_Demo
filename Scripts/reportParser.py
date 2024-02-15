@@ -39,22 +39,35 @@ def parse(tool,reportsLocation,reportSource):
                             codes = []
                             if os.path.getsize(path/filename) != 0:
                                 file = open(path/filename,errors="ignore")
-                                data = json.load(file)
-                                return(data)
-                                '''data = file.readlines()
+                                data = pd.DataFrame(json.load(file))
                                 file.close()
-                                for line in data:
-                                    if 'SWC ID' in line and line.rstrip() not in codes:
-                                        codes.append(line.rstrip())'''
+                                codes = data['ruleId'].unique()
                             else:
                                 codes ='error'
-                            '''toolTags.loc[len(toolTags)]=[filename.rstrip().rsplit('.')[0],codes]
+                            toolTags.loc[len(toolTags)]=[filename.rstrip().rsplit('.')[0],codes]
                         print(tool + " tags have been extracted successfully")
-                        return toolTags'''
-                        return data
+                        return toolTags
                     except IOError:
                         print("Path not exist")
                 case 'Slither':
+                    try:
+                        for filename in os.listdir(path):
+                            codes = []
+                            if os.path.getsize(path/filename) != 0:
+                                file = open(path/filename,errors="ignore")
+                                data = file.readlines()
+                                file.close()
+                                for line in data:
+                                    if '"check"' in line and line.rstrip() not in codes:
+                                        codes.append(line.rstrip().rsplit(':')[1])
+                            else:
+                                codes ='error'
+                            toolTags.loc[len(toolTags)]=[filename.rstrip().rsplit('.')[0],codes]
+                        print(tool + " tags have been extracted successfully")
+                        return toolTags
+                    except IOError:
+                        print("Path not exist")
+                case 'VeriSmart':
                     try:
                         for filename in os.listdir(path):
                             codes = []
@@ -71,7 +84,7 @@ def parse(tool,reportsLocation,reportSource):
                         print(tool + " tags have been extracted successfully")
                         return toolTags
                     except IOError:
-                        print("Path not exist") 
+                        print("Path not exist")
         case 1:
             try:
                 reportsDF = pd.DataFrame()
@@ -83,13 +96,15 @@ def parse(tool,reportsLocation,reportSource):
                 reportsDF = reportsDF.drop_duplicates(subset='basename', keep='last')
                 reportsDF['basename']=reportsDF['basename'].str.rstrip('.sol')
                 reportsDF['findings'] = np.where((reportsDF['findings']== '{}') & (reportsDF['errors'] != '{}'), 'error', reportsDF['findings'])
-
+                
                 reportsSubDF = reportsDF[['basename','findings','duration']]
                 reportsSubDF['findings'] = reportsSubDF['findings'].str.replace('{','')
                 reportsSubDF['findings'] = reportsSubDF['findings'].str.replace('}','')
                 reportsSubDF['findings'] = reportsSubDF['findings'].str.rsplit(',')
-                reportsSubDF = reportsSubDF.rename(columns={'basename':'contractAddress','findings':tool+'_Labels','duration':tool+'_AnalysisTime'})
 
+                reportsSubDF = reportsSubDF.rename(columns={'basename':'contractAddress','findings':tool+'_Labels','duration':tool+'_AnalysisTime'})
+                
+                print(tool + " tags have been extracted successfully")
                 return reportsSubDF
             except IOError:
                 print("Path not exist")

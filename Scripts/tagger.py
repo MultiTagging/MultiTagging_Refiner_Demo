@@ -22,7 +22,6 @@ def generateTags(tool,reportSource):
     
     vulnReportsPath = config_File['Reports_Directory_Path'][Tools.index(tool)]['Path']
     labeledSC = parse(tool,vulnReportsPath,reportSource)
-   
     if reportSource ==0:
         analysisTimeReportsPath = config_File['AnalysisTime_Directory_Path'][Tools.index(tool)]['Path']    
         tool_LabeledDS = pd.DataFrame(get_ToolAnalysisTime(tool, analysisTimeReportsPath))
@@ -30,7 +29,6 @@ def generateTags(tool,reportSource):
     
     VulnerablityMapFilePath = config_File['VulnerablityMap_File_Path'][0]['Path']  
     mapLabeledSC = map(labeledSC,VulnerablityMapFilePath,tool)
-
     return mapLabeledSC
 
 def get_ToolAnalysisTime(tool, analysisTimeReportsPath):
@@ -52,8 +50,9 @@ def get_ToolAnalysisTime(tool, analysisTimeReportsPath):
             analsisTimeDF = analsisTimeDF.drop_duplicates(subset='contractAddress', keep='last')
 
             analsisTimeDF['contractAddress'].str.strip()
+            #print('The AVG analysis time is: ', analsisTimeDF[tool+'_AnalysisTime'].mean())
         return analsisTimeDF
     except IOError:
         print("Path not exist") 
 
-#print(generateTags('Mythril',0))
+#print(generateTags('MAIAN',1))

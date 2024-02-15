@@ -12,7 +12,7 @@ def map(labeledSC,VulnerablityMapFilePath,tool):
         DASPDF = pd.read_excel(VulnerablityMapFilePath,sheet_name='DASP')
 
         for index, row in labeledSC.iterrows():
-            if row[tool+'_Labels'] == ['error'] or row[tool+'_Labels'] == 'error':
+            if len(row[tool+'_Labels']) == 1 and row[tool+'_Labels'] == 'error':
                 continue
             elif len(row[tool+'_Labels']) == 0:
                 labeledSC.at[index,tool+'_Labels'] = 'safe'
@@ -29,11 +29,11 @@ def map(labeledSC,VulnerablityMapFilePath,tool):
                         SWC_Codes.append(VulnerablityMapDF["SWC"].iloc[Detector_RowIndex])
                         DASP_Ranks.append(VulnerablityMapDF["DASP"].iloc[Detector_RowIndex])
                 for code in SWC_Codes:
-                    SWC_RowIndex = SWCDF.query("Code == @code").index[0]
-                    SWC_Titles.append(SWCDF["Title"].iloc[SWC_RowIndex])
+                    if not math.isnan(code):
+                        SWC_RowIndex = SWCDF.query("Code == @code").index[0]
+                        SWC_Titles.append(SWCDF["Title"].iloc[SWC_RowIndex])
                 for rank in DASP_Ranks:
                     if not math.isnan(rank):
-                        #print('Rank is: ', rank)
                         DASP_RowIndex = DASPDF.query("Rank == @rank").index[0]
                         DASP_Titles.append(DASPDF["Vulnerability"].iloc[DASP_RowIndex])
                 
@@ -44,4 +44,3 @@ def map(labeledSC,VulnerablityMapFilePath,tool):
         return labeledSC
     except IOError:
         print("Path not exist") 
-
