@@ -36,15 +36,19 @@ def parse(tool,reportsLocation,reportSource):
                 case 'Solhint':
                     try:
                         for filename in os.listdir(path):
-                            codes = []
-                            if os.path.getsize(path/filename) != 0:
-                                file = open(path/filename,errors="ignore")
-                                data = pd.DataFrame(json.load(file))
-                                file.close()
-                                codes = data['ruleId'].unique()
-                            else:
-                                codes ='error'
-                            toolTags.loc[len(toolTags)]=[filename.rstrip().rsplit('.')[0],codes]
+                            if '.json' in filename:
+                                codes = []
+                                if os.path.getsize(path/filename) != 0:
+                                    file = open(path/filename,errors="ignore")
+                                    data = pd.DataFrame(json.load(file))
+                                    file.close()
+                                    if 'ruleId' not in data.keys() and data['severity'][0] == 'Error':
+                                        codes.append('error')
+                                    else:
+                                        codes = data['ruleId'].unique()
+                                else:
+                                    codes.append('error')
+                                toolTags.loc[len(toolTags)]=[filename.rstrip().rsplit('.')[0],codes]
                         print(tool + " tags have been extracted successfully")
                         return toolTags
                     except IOError:
@@ -90,8 +94,9 @@ def parse(tool,reportsLocation,reportSource):
                 reportsDF = pd.DataFrame()
 
                 for filename in os.listdir(path):
-                    df = pd.read_csv(path/filename)
-                    reportsDF = pd.concat([reportsDF, df], ignore_index=True)
+                    if '.csv' in filename:
+                        df = pd.read_csv(path/filename)
+                        reportsDF = pd.concat([reportsDF, df], ignore_index=True)
                 
                 reportsDF = reportsDF.drop_duplicates(subset='basename', keep='last')
                 reportsDF['basename']=reportsDF['basename'].str.rstrip('.sol')

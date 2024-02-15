@@ -22,6 +22,7 @@ def generateTags(tool,reportSource):
     
     vulnReportsPath = config_File['Reports_Directory_Path'][Tools.index(tool)]['Path']
     labeledSC = parse(tool,vulnReportsPath,reportSource)
+
     if reportSource ==0:
         analysisTimeReportsPath = config_File['AnalysisTime_Directory_Path'][Tools.index(tool)]['Path']    
         tool_LabeledDS = pd.DataFrame(get_ToolAnalysisTime(tool, analysisTimeReportsPath))
@@ -29,6 +30,8 @@ def generateTags(tool,reportSource):
     
     VulnerablityMapFilePath = config_File['VulnerablityMap_File_Path'][0]['Path']  
     mapLabeledSC = map(labeledSC,VulnerablityMapFilePath,tool)
+
+    mapLabeledSC.to_csv('./Results/LabeledData/'+tool+'.csv',index=False)
     return mapLabeledSC
 
 def get_ToolAnalysisTime(tool, analysisTimeReportsPath):
@@ -37,7 +40,7 @@ def get_ToolAnalysisTime(tool, analysisTimeReportsPath):
     analsisTime = []
     try:
         for filename in os.listdir(path):
-            if os.path.getsize(path/filename) != 0:
+            if os.path.getsize(path/filename) != 0 and '.txt' in filename:
                 file = open(path/filename,errors="ignore")
                 data = file.readlines()
                 file.close()
@@ -55,4 +58,4 @@ def get_ToolAnalysisTime(tool, analysisTimeReportsPath):
     except IOError:
         print("Path not exist") 
 
-#print(generateTags('MAIAN',1))
+#print(generateTags('Semgrep',1))
