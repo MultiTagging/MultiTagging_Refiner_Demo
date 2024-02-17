@@ -1,0 +1,84 @@
+{
+  "fileName": "Benchmarks/Study_SamplesSet/d45c20e18623a8cf87ebb0d30506d420.sol",
+  "baseName": "d45c20e18623a8cf87ebb0d30506d420.sol",
+  "iter": 435,
+  "time": "427.240075",
+  "errMsg": null,
+  "result": [
+    {
+      "no": "1",
+      "kind": "IO",
+      "line": 25,
+      "signatures": [
+        {
+          "contractName": "MDTCrowdsale",
+          "methodName": "buyTokens",
+          "argTypes": [ "address" ]
+        }
+      ],
+      "exp": "(a * b)",
+      "status": "unproven"
+    },
+    {
+      "no": "2",
+      "kind": "IO",
+      "line": 57,
+      "signatures": [
+        {
+          "contractName": "MDTCrowdsale",
+          "methodName": "buyTokens",
+          "argTypes": [ "address" ]
+        },
+        {
+          "contractName": "SafeMath",
+          "methodName": "add",
+          "argTypes": [ "uint256", "uint256" ]
+        }
+      ],
+      "exp": "(a + b)",
+      "status": "unproven"
+    },
+    {
+      "no": "3",
+      "kind": "IO",
+      "line": 529,
+      "signatures": [
+        {
+          "contractName": "MDTCrowdsale",
+          "methodName": "MDTCrowdsale",
+          "argTypes": []
+        }
+      ],
+      "exp": "(block.number + 100000)",
+      "status": "unproven"
+    },
+    {
+      "no": "4",
+      "kind": "DZ",
+      "line": 26,
+      "signatures": [
+        {
+          "contractName": "MDTCrowdsale",
+          "methodName": "buyTokens",
+          "argTypes": [ "address" ]
+        }
+      ],
+      "exp": "(c / a)",
+      "status": "proven"
+    },
+    {
+      "no": "5",
+      "kind": "ETH_LEAK",
+      "line": 457,
+      "signatures": [
+        {
+          "contractName": "MDTCrowdsale",
+          "methodName": "buyTokens",
+          "argTypes": [ "address" ]
+        }
+      ],
+      "exp": "wallet.transfer(msg.value);",
+      "status": "proven"
+    }
+  ]
+}

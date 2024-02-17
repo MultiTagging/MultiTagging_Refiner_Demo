@@ -1,0 +1,112 @@
+{
+  "fileName": "Benchmarks/Study_SamplesSet/c4a21695a16860841fa342d96585d373.sol",
+  "baseName": "c4a21695a16860841fa342d96585d373.sol",
+  "iter": 71,
+  "time": "301.097046",
+  "errMsg": null,
+  "result": [
+    {
+      "no": "1",
+      "kind": "IO",
+      "line": 12,
+      "signatures": [
+        {
+          "contractName": "Crowdsale",
+          "methodName": "buyTokens",
+          "argTypes": [ "address" ]
+        }
+      ],
+      "exp": "(a * b)",
+      "status": "unproven"
+    },
+    {
+      "no": "2",
+      "kind": "IO",
+      "line": 30,
+      "signatures": [
+        {
+          "contractName": "Crowdsale",
+          "methodName": "buyTokens",
+          "argTypes": [ "address" ]
+        },
+        {
+          "contractName": "SafeMath",
+          "methodName": "add",
+          "argTypes": [ "uint256", "uint256" ]
+        }
+      ],
+      "exp": "(a + b)",
+      "status": "unproven"
+    },
+    {
+      "no": "3",
+      "kind": "IO",
+      "line": 283,
+      "signatures": [
+        {
+          "contractName": "Crowdsale",
+          "methodName": "Crowdsale",
+          "argTypes": []
+        }
+      ],
+      "exp": "(10 ** 18)",
+      "status": "proven"
+    },
+    {
+      "no": "4",
+      "kind": "IO",
+      "line": 283,
+      "signatures": [
+        {
+          "contractName": "Crowdsale",
+          "methodName": "Crowdsale",
+          "argTypes": []
+        }
+      ],
+      "exp": "(100000000 * (10 ** 18))",
+      "status": "proven"
+    },
+    {
+      "no": "5",
+      "kind": "DZ",
+      "line": 13,
+      "signatures": [
+        {
+          "contractName": "Crowdsale",
+          "methodName": "buyTokens",
+          "argTypes": [ "address" ]
+        }
+      ],
+      "exp": "(c / a)",
+      "status": "proven"
+    },
+    {
+      "no": "6",
+      "kind": "DZ",
+      "line": 19,
+      "signatures": [
+        {
+          "contractName": "Crowdsale",
+          "methodName": "buyTokens",
+          "argTypes": [ "address" ]
+        }
+      ],
+      "exp": "(a / b)",
+      "status": "proven"
+    },
+    {
+      "no": "7",
+      "kind": "ETH_LEAK",
+      "line": 350,
+      "signatures": [
+        {
+          "contractName": "Crowdsale",
+          "methodName": "buyTokens",
+          "argTypes": [ "address" ]
+        }
+      ],
+      "exp": "wallet.transfer(msg.value);",
+      "status": "proven"
+    }
+  ]
+}

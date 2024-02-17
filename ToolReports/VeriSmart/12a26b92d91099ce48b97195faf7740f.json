@@ -1,0 +1,61 @@
+{
+  "fileName": "Benchmarks/Study_SamplesSet/12a26b92d91099ce48b97195faf7740f.sol",
+  "baseName": "12a26b92d91099ce48b97195faf7740f.sol",
+  "iter": 9,
+  "time": "8.404428",
+  "errMsg": null,
+  "result": [
+    {
+      "no": "1",
+      "kind": "IO",
+      "line": 25,
+      "signatures": [
+        {
+          "contractName": "MultiSig",
+          "methodName": "transfer",
+          "argTypes": [ "address", "uint256" ]
+        },
+        {
+          "contractName": "MultiSig",
+          "methodName": "updateAdministratorKey",
+          "argTypes": [ "address", "address" ]
+        }
+      ],
+      "exp": "(a - b)",
+      "status": "proven"
+    },
+    {
+      "no": "2",
+      "kind": "IO",
+      "line": 29,
+      "signatures": [
+        {
+          "contractName": "MultiSig",
+          "methodName": "transfer",
+          "argTypes": [ "address", "uint256" ]
+        },
+        {
+          "contractName": "MultiSig",
+          "methodName": "updateAdministratorKey",
+          "argTypes": [ "address", "address" ]
+        }
+      ],
+      "exp": "(a + b)",
+      "status": "proven"
+    },
+    {
+      "no": "3",
+      "kind": "ETH_LEAK",
+      "line": 193,
+      "signatures": [
+        {
+          "contractName": "MultiSig",
+          "methodName": "transfer",
+          "argTypes": [ "address", "uint256" ]
+        }
+      ],
+      "exp": "recipient.send(amount)",
+      "status": "unproven"
+    }
+  ]
+}

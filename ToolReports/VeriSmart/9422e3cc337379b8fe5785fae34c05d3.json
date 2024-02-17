@@ -1,0 +1,89 @@
+{
+  "fileName": "Benchmarks/Study_SamplesSet/9422e3cc337379b8fe5785fae34c05d3.sol",
+  "baseName": "9422e3cc337379b8fe5785fae34c05d3.sol",
+  "iter": 13,
+  "time": "4.528453",
+  "errMsg": null,
+  "result": [
+    {
+      "no": "1",
+      "kind": "IO",
+      "line": 21,
+      "signatures": [
+        {
+          "contractName": "PhiToken",
+          "methodName": "transfer",
+          "argTypes": [ "address", "uint256" ]
+        },
+        {
+          "contractName": "PhiToken",
+          "methodName": "transferFrom",
+          "argTypes": [ "address", "address", "uint256" ]
+        }
+      ],
+      "exp": "(a + b)",
+      "status": "proven"
+    },
+    {
+      "no": "2",
+      "kind": "IO",
+      "line": 26,
+      "signatures": [
+        {
+          "contractName": "PhiToken",
+          "methodName": "transfer",
+          "argTypes": [ "address", "uint256" ]
+        },
+        {
+          "contractName": "PhiToken",
+          "methodName": "transferFrom",
+          "argTypes": [ "address", "address", "uint256" ]
+        }
+      ],
+      "exp": "(a - b)",
+      "status": "proven"
+    },
+    {
+      "no": "3",
+      "kind": "IO",
+      "line": 119,
+      "signatures": [
+        {
+          "contractName": "PhiToken",
+          "methodName": "PhiToken",
+          "argTypes": []
+        }
+      ],
+      "exp": "(10 ** uint256(decimals))",
+      "status": "proven"
+    },
+    {
+      "no": "4",
+      "kind": "IO",
+      "line": 119,
+      "signatures": [
+        {
+          "contractName": "PhiToken",
+          "methodName": "PhiToken",
+          "argTypes": []
+        }
+      ],
+      "exp": "(10000000000 * (10 ** uint256(decimals)))",
+      "status": "proven"
+    },
+    {
+      "no": "5",
+      "kind": "IO",
+      "line": 129,
+      "signatures": [
+        {
+          "contractName": "PhiToken",
+          "methodName": "totalSupply",
+          "argTypes": []
+        }
+      ],
+      "exp": "(_totalSupply - balances[address(0)])",
+      "status": "proven"
+    }
+  ]
+}

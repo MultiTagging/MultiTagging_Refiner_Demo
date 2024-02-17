@@ -1,0 +1,107 @@
+{
+  "fileName": "Benchmarks/Study_SamplesSet/6564e9376ca7cd8681e48b4c0cd9895a.sol",
+  "baseName": "6564e9376ca7cd8681e48b4c0cd9895a.sol",
+  "iter": 2,
+  "time": "0.104143",
+  "errMsg": null,
+  "result": [
+    {
+      "no": "1",
+      "kind": "IO",
+      "line": 23,
+      "signatures": [
+        {
+          "contractName": "SafeMath",
+          "methodName": "mul",
+          "argTypes": [ "uint256", "uint256" ]
+        }
+      ],
+      "exp": "(a * b)",
+      "status": "unproven"
+    },
+    {
+      "no": "2",
+      "kind": "IO",
+      "line": 37,
+      "signatures": [
+        {
+          "contractName": "SafeMath",
+          "methodName": "sub",
+          "argTypes": [ "uint256", "uint256" ]
+        }
+      ],
+      "exp": "(a - b)",
+      "status": "proven"
+    },
+    {
+      "no": "3",
+      "kind": "IO",
+      "line": 41,
+      "signatures": [
+        {
+          "contractName": "SafeMath",
+          "methodName": "add",
+          "argTypes": [ "uint256", "uint256" ]
+        }
+      ],
+      "exp": "(a + b)",
+      "status": "unproven"
+    },
+    {
+      "no": "4",
+      "kind": "IO",
+      "line": 177,
+      "signatures": [
+        {
+          "contractName": "Noxon",
+          "methodName": "transfer",
+          "argTypes": [ "address", "uint256" ]
+        }
+      ],
+      "exp": "(balances[_to] + _amount)",
+      "status": "unproven"
+    },
+    {
+      "no": "5",
+      "kind": "DZ",
+      "line": 24,
+      "signatures": [
+        {
+          "contractName": "SafeMath",
+          "methodName": "mul",
+          "argTypes": [ "uint256", "uint256" ]
+        }
+      ],
+      "exp": "(c / a)",
+      "status": "unproven"
+    },
+    {
+      "no": "6",
+      "kind": "DZ",
+      "line": 258,
+      "signatures": [
+        {
+          "contractName": "Noxon",
+          "methodName": "getBurnPrice",
+          "argTypes": []
+        }
+      ],
+      "exp": "(this.balance / _totalSupply)",
+      "status": "unproven"
+    },
+    {
+      "no": "7",
+      "kind": "ETH_LEAK",
+      "line": 204,
+      "signatures": [
+        {
+          "contractName": "Noxon",
+          "methodName": "burnTokens",
+          "argTypes": [ "uint256" ]
+        }
+      ],
+      "exp": "msg.sender.transfer(_amount.mul(_burnPrice));",
+      "status": "unproven"
+    }
+  ]
+}

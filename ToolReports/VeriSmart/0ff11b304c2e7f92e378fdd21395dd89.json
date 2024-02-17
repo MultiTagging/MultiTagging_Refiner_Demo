@@ -1,0 +1,107 @@
+{
+  "fileName": "Benchmarks/Study_SamplesSet/0ff11b304c2e7f92e378fdd21395dd89.sol",
+  "baseName": "0ff11b304c2e7f92e378fdd21395dd89.sol",
+  "iter": 17,
+  "time": "10.440656",
+  "errMsg": null,
+  "result": [
+    {
+      "no": "1",
+      "kind": "IO",
+      "line": 14,
+      "signatures": [
+        {
+          "contractName": "RefundVaultWithCommission",
+          "methodName": "close",
+          "argTypes": []
+        }
+      ],
+      "exp": "(a * b)",
+      "status": "unproven"
+    },
+    {
+      "no": "2",
+      "kind": "IO",
+      "line": 32,
+      "signatures": [
+        {
+          "contractName": "RefundVaultWithCommission",
+          "methodName": "deposit",
+          "argTypes": [ "address" ]
+        }
+      ],
+      "exp": "(a + b)",
+      "status": "unproven"
+    },
+    {
+      "no": "3",
+      "kind": "DZ",
+      "line": 15,
+      "signatures": [
+        {
+          "contractName": "RefundVaultWithCommission",
+          "methodName": "close",
+          "argTypes": []
+        }
+      ],
+      "exp": "(c / a)",
+      "status": "proven"
+    },
+    {
+      "no": "4",
+      "kind": "DZ",
+      "line": 21,
+      "signatures": [
+        {
+          "contractName": "RefundVaultWithCommission",
+          "methodName": "close",
+          "argTypes": []
+        }
+      ],
+      "exp": "(a / b)",
+      "status": "proven"
+    },
+    {
+      "no": "5",
+      "kind": "ETH_LEAK",
+      "line": 125,
+      "signatures": [
+        {
+          "contractName": "RefundVaultWithCommission",
+          "methodName": "close",
+          "argTypes": []
+        }
+      ],
+      "exp": "walletFees.transfer(fees);",
+      "status": "proven"
+    },
+    {
+      "no": "6",
+      "kind": "ETH_LEAK",
+      "line": 128,
+      "signatures": [
+        {
+          "contractName": "RefundVaultWithCommission",
+          "methodName": "close",
+          "argTypes": []
+        }
+      ],
+      "exp": "wallet.transfer(this.balance);",
+      "status": "proven"
+    },
+    {
+      "no": "7",
+      "kind": "ETH_LEAK",
+      "line": 141,
+      "signatures": [
+        {
+          "contractName": "RefundVaultWithCommission",
+          "methodName": "refund",
+          "argTypes": [ "address" ]
+        }
+      ],
+      "exp": "investor.transfer(depositedValue);",
+      "status": "proven"
+    }
+  ]
+}

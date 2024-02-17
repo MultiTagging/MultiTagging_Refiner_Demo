@@ -1,0 +1,37 @@
+{
+  "fileName": "Benchmarks/Study_SamplesSet/7fa2835457a05ecd631c5d23a48deabd.sol",
+  "baseName": "7fa2835457a05ecd631c5d23a48deabd.sol",
+  "iter": 3,
+  "time": "0.045968",
+  "errMsg": null,
+  "result": [
+    {
+      "no": "1",
+      "kind": "DZ",
+      "line": 18,
+      "signatures": [
+        {
+          "contractName": "NoSignednessError",
+          "methodName": "NoSignednessError",
+          "argTypes": []
+        }
+      ],
+      "exp": "(msg.value % 1000000000000000000)",
+      "status": "proven"
+    },
+    {
+      "no": "2",
+      "kind": "ETH_LEAK",
+      "line": 25,
+      "signatures": [
+        {
+          "contractName": "NoSignednessError",
+          "methodName": "withdrawOnce",
+          "argTypes": [ "uint256" ]
+        }
+      ],
+      "exp": "msg.sender.transfer(uint256(amount));",
+      "status": "unproven"
+    }
+  ]
+}

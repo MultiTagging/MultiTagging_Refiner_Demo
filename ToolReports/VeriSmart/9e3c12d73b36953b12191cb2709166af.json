@@ -1,0 +1,89 @@
+{
+  "fileName": "Benchmarks/Study_SamplesSet/9e3c12d73b36953b12191cb2709166af.sol",
+  "baseName": "9e3c12d73b36953b12191cb2709166af.sol",
+  "iter": 8,
+  "time": "2.29002",
+  "errMsg": null,
+  "result": [
+    {
+      "no": "1",
+      "kind": "IO",
+      "line": 22,
+      "signatures": [
+        {
+          "contractName": "Pryffer",
+          "methodName": "transfer",
+          "argTypes": [ "address", "uint256" ]
+        },
+        {
+          "contractName": "Pryffer",
+          "methodName": "transferFrom",
+          "argTypes": [ "address", "address", "uint256" ]
+        }
+      ],
+      "exp": "(a + b)",
+      "status": "proven"
+    },
+    {
+      "no": "2",
+      "kind": "IO",
+      "line": 27,
+      "signatures": [
+        {
+          "contractName": "Pryffer",
+          "methodName": "transfer",
+          "argTypes": [ "address", "uint256" ]
+        },
+        {
+          "contractName": "Pryffer",
+          "methodName": "transferFrom",
+          "argTypes": [ "address", "address", "uint256" ]
+        }
+      ],
+      "exp": "(a - b)",
+      "status": "proven"
+    },
+    {
+      "no": "3",
+      "kind": "IO",
+      "line": 120,
+      "signatures": [
+        {
+          "contractName": "Pryffer",
+          "methodName": "Pryffer",
+          "argTypes": []
+        }
+      ],
+      "exp": "(10 ** uint256(decimals))",
+      "status": "proven"
+    },
+    {
+      "no": "4",
+      "kind": "IO",
+      "line": 120,
+      "signatures": [
+        {
+          "contractName": "Pryffer",
+          "methodName": "Pryffer",
+          "argTypes": []
+        }
+      ],
+      "exp": "(1000000000 * (10 ** uint256(decimals)))",
+      "status": "proven"
+    },
+    {
+      "no": "5",
+      "kind": "IO",
+      "line": 130,
+      "signatures": [
+        {
+          "contractName": "Pryffer",
+          "methodName": "totalSupply",
+          "argTypes": []
+        }
+      ],
+      "exp": "(_totalSupply - balances[address(0)])",
+      "status": "proven"
+    }
+  ]
+}

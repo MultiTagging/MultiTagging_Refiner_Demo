@@ -1,0 +1,698 @@
+{
+  "fileName": "Benchmarks/Study_SamplesSet/971deacac2af530ca4d35deac57306b1.sol",
+  "baseName": "971deacac2af530ca4d35deac57306b1.sol",
+  "iter": 18,
+  "time": "324.200128",
+  "errMsg": null,
+  "result": [
+    {
+      "no": "1",
+      "kind": "IO",
+      "line": 24,
+      "signatures": [
+        {
+          "contractName": "_Yesbuzz",
+          "methodName": "_reAdjustDifficulty",
+          "argTypes": []
+        },
+        {
+          "contractName": "_Yesbuzz",
+          "methodName": "_startNewMiningEpoch",
+          "argTypes": []
+        },
+        {
+          "contractName": "_Yesbuzz",
+          "methodName": "mint",
+          "argTypes": [ "uint256", "bytes32" ]
+        },
+        {
+          "contractName": "_Yesbuzz",
+          "methodName": "transfer",
+          "argTypes": [ "address", "uint256" ]
+        },
+        {
+          "contractName": "_Yesbuzz",
+          "methodName": "transferFrom",
+          "argTypes": [ "address", "address", "uint256" ]
+        }
+      ],
+      "exp": "(a + b)",
+      "status": "unproven"
+    },
+    {
+      "no": "2",
+      "kind": "IO",
+      "line": 30,
+      "signatures": [
+        {
+          "contractName": "_Yesbuzz",
+          "methodName": "_reAdjustDifficulty",
+          "argTypes": []
+        },
+        {
+          "contractName": "_Yesbuzz",
+          "methodName": "transfer",
+          "argTypes": [ "address", "uint256" ]
+        },
+        {
+          "contractName": "_Yesbuzz",
+          "methodName": "transferFrom",
+          "argTypes": [ "address", "address", "uint256" ]
+        }
+      ],
+      "exp": "(a - b)",
+      "status": "proven"
+    },
+    {
+      "no": "3",
+      "kind": "IO",
+      "line": 34,
+      "signatures": [
+        {
+          "contractName": "_Yesbuzz",
+          "methodName": "_reAdjustDifficulty",
+          "argTypes": []
+        },
+        {
+          "contractName": "_Yesbuzz",
+          "methodName": "transfer",
+          "argTypes": [ "address", "uint256" ]
+        },
+        {
+          "contractName": "_Yesbuzz",
+          "methodName": "transferFrom",
+          "argTypes": [ "address", "address", "uint256" ]
+        }
+      ],
+      "exp": "(a * b)",
+      "status": "unproven"
+    },
+    {
+      "no": "4",
+      "kind": "IO",
+      "line": 186,
+      "signatures": [
+        {
+          "contractName": "_Yesbuzz",
+          "methodName": "_Yesbuzz",
+          "argTypes": []
+        }
+      ],
+      "exp": "(2 ** 16)",
+      "status": "proven"
+    },
+    {
+      "no": "5",
+      "kind": "IO",
+      "line": 190,
+      "signatures": [
+        {
+          "contractName": "_Yesbuzz",
+          "methodName": "_Yesbuzz",
+          "argTypes": []
+        }
+      ],
+      "exp": "(2 ** 234)",
+      "status": "proven"
+    },
+    {
+      "no": "6",
+      "kind": "IO",
+      "line": 246,
+      "signatures": [
+        {
+          "contractName": "_Yesbuzz",
+          "methodName": "_Yesbuzz",
+          "argTypes": []
+        }
+      ],
+      "exp": "(10 ** uint256(decimals))",
+      "status": "proven"
+    },
+    {
+      "no": "7",
+      "kind": "IO",
+      "line": 246,
+      "signatures": [
+        {
+          "contractName": "_Yesbuzz",
+          "methodName": "_Yesbuzz",
+          "argTypes": []
+        }
+      ],
+      "exp": "(21000000 * (10 ** uint256(decimals)))",
+      "status": "proven"
+    },
+    {
+      "no": "8",
+      "kind": "IO",
+      "line": 302,
+      "signatures": [
+        {
+          "contractName": "_Yesbuzz",
+          "methodName": "_startNewMiningEpoch",
+          "argTypes": []
+        }
+      ],
+      "exp": "(rewardEra + 1)",
+      "status": "proven"
+    },
+    {
+      "no": "9",
+      "kind": "IO",
+      "line": 306,
+      "signatures": [
+        {
+          "contractName": "_Yesbuzz",
+          "methodName": "_startNewMiningEpoch",
+          "argTypes": []
+        }
+      ],
+      "exp": "(2 ** (rewardEra + 1))",
+      "status": "unproven"
+    },
+    {
+      "no": "10",
+      "kind": "IO",
+      "line": 306,
+      "signatures": [
+        {
+          "contractName": "_Yesbuzz",
+          "methodName": "_startNewMiningEpoch",
+          "argTypes": []
+        }
+      ],
+      "exp": "(_totalSupply - _totalSupply.div((2 ** (rewardEra + 1))))",
+      "status": "unproven"
+    },
+    {
+      "no": "11",
+      "kind": "IO",
+      "line": 306,
+      "signatures": [
+        {
+          "contractName": "_Yesbuzz",
+          "methodName": "_startNewMiningEpoch",
+          "argTypes": []
+        }
+      ],
+      "exp": "(rewardEra + 1)",
+      "status": "unproven"
+    },
+    {
+      "no": "12",
+      "kind": "IO",
+      "line": 314,
+      "signatures": [
+        {
+          "contractName": "_Yesbuzz",
+          "methodName": "_startNewMiningEpoch",
+          "argTypes": []
+        }
+      ],
+      "exp": "(block.number - 1)",
+      "status": "unproven"
+    },
+    {
+      "no": "13",
+      "kind": "IO",
+      "line": 324,
+      "signatures": [
+        {
+          "contractName": "_Yesbuzz",
+          "methodName": "_reAdjustDifficulty",
+          "argTypes": []
+        }
+      ],
+      "exp": "(block.number - latestDifficultyPeriodStarted)",
+      "status": "unproven"
+    },
+    {
+      "no": "14",
+      "kind": "IO",
+      "line": 328,
+      "signatures": [
+        {
+          "contractName": "_Yesbuzz",
+          "methodName": "_reAdjustDifficulty",
+          "argTypes": []
+        }
+      ],
+      "exp": "(epochsMined * 60)",
+      "status": "proven"
+    },
+    {
+      "no": "15",
+      "kind": "IO",
+      "line": 387,
+      "signatures": [
+        {
+          "contractName": "_Yesbuzz",
+          "methodName": "_startNewMiningEpoch",
+          "argTypes": []
+        },
+        {
+          "contractName": "_Yesbuzz",
+          "methodName": "getMiningReward",
+          "argTypes": []
+        },
+        {
+          "contractName": "_Yesbuzz",
+          "methodName": "mint",
+          "argTypes": [ "uint256", "bytes32" ]
+        }
+      ],
+      "exp": "(10 ** uint256(decimals))",
+      "status": "proven"
+    },
+    {
+      "no": "16",
+      "kind": "IO",
+      "line": 387,
+      "signatures": [
+        {
+          "contractName": "_Yesbuzz",
+          "methodName": "_startNewMiningEpoch",
+          "argTypes": []
+        },
+        {
+          "contractName": "_Yesbuzz",
+          "methodName": "getMiningReward",
+          "argTypes": []
+        },
+        {
+          "contractName": "_Yesbuzz",
+          "methodName": "mint",
+          "argTypes": [ "uint256", "bytes32" ]
+        }
+      ],
+      "exp": "(2 ** rewardEra)",
+      "status": "unproven"
+    },
+    {
+      "no": "17",
+      "kind": "IO",
+      "line": 387,
+      "signatures": [
+        {
+          "contractName": "_Yesbuzz",
+          "methodName": "_startNewMiningEpoch",
+          "argTypes": []
+        },
+        {
+          "contractName": "_Yesbuzz",
+          "methodName": "getMiningReward",
+          "argTypes": []
+        },
+        {
+          "contractName": "_Yesbuzz",
+          "methodName": "mint",
+          "argTypes": [ "uint256", "bytes32" ]
+        }
+      ],
+      "exp": "(50 * (10 ** uint256(decimals)))",
+      "status": "unproven"
+    },
+    {
+      "no": "18",
+      "kind": "IO",
+      "line": 418,
+      "signatures": [
+        {
+          "contractName": "_Yesbuzz",
+          "methodName": "totalSupply",
+          "argTypes": []
+        }
+      ],
+      "exp": "(_totalSupply - balances[address(0)])",
+      "status": "unproven"
+    },
+    {
+      "no": "19",
+      "kind": "DZ",
+      "line": 35,
+      "signatures": [
+        {
+          "contractName": "_Yesbuzz",
+          "methodName": "_reAdjustDifficulty",
+          "argTypes": []
+        },
+        {
+          "contractName": "_Yesbuzz",
+          "methodName": "transfer",
+          "argTypes": [ "address", "uint256" ]
+        },
+        {
+          "contractName": "_Yesbuzz",
+          "methodName": "transferFrom",
+          "argTypes": [ "address", "address", "uint256" ]
+        }
+      ],
+      "exp": "(c / a)",
+      "status": "proven"
+    },
+    {
+      "no": "20",
+      "kind": "DZ",
+      "line": 40,
+      "signatures": [
+        {
+          "contractName": "_Yesbuzz",
+          "methodName": "_Yesbuzz",
+          "argTypes": []
+        },
+        {
+          "contractName": "_Yesbuzz",
+          "methodName": "_reAdjustDifficulty",
+          "argTypes": []
+        },
+        {
+          "contractName": "_Yesbuzz",
+          "methodName": "_startNewMiningEpoch",
+          "argTypes": []
+        },
+        {
+          "contractName": "_Yesbuzz",
+          "methodName": "getMiningDifficulty",
+          "argTypes": []
+        },
+        {
+          "contractName": "_Yesbuzz",
+          "methodName": "getMiningReward",
+          "argTypes": []
+        },
+        {
+          "contractName": "_Yesbuzz",
+          "methodName": "mint",
+          "argTypes": [ "uint256", "bytes32" ]
+        },
+        {
+          "contractName": "_Yesbuzz",
+          "methodName": "transfer",
+          "argTypes": [ "address", "uint256" ]
+        },
+        {
+          "contractName": "_Yesbuzz",
+          "methodName": "transferFrom",
+          "argTypes": [ "address", "address", "uint256" ]
+        }
+      ],
+      "exp": "(a / b)",
+      "status": "proven"
+    },
+    {
+      "no": "21",
+      "kind": "DZ",
+      "line": 309,
+      "signatures": [
+        {
+          "contractName": "_Yesbuzz",
+          "methodName": "_startNewMiningEpoch",
+          "argTypes": []
+        }
+      ],
+      "exp": "(epochCount % _BLOCKS_PER_READJUSTMENT)",
+      "status": "proven"
+    },
+    {
+      "no": "22",
+      "kind": "ETH_LEAK",
+      "line": 68,
+      "signatures": [
+        {
+          "contractName": "_Yesbuzz",
+          "methodName": "withdrawAll_txorigin34",
+          "argTypes": [ "address", "address" ]
+        }
+      ],
+      "exp": "_recipient.transfer(address(this).balance);",
+      "status": "unproven"
+    },
+    {
+      "no": "23",
+      "kind": "ETH_LEAK",
+      "line": 73,
+      "signatures": [
+        {
+          "contractName": "_Yesbuzz",
+          "methodName": "sendto_txorigin21",
+          "argTypes": [ "address", "uint256", "address" ]
+        }
+      ],
+      "exp": "receiver.transfer(amount);",
+      "status": "unproven"
+    },
+    {
+      "no": "24",
+      "kind": "ETH_LEAK",
+      "line": 78,
+      "signatures": [
+        {
+          "contractName": "_Yesbuzz",
+          "methodName": "withdrawAll_txorigin10",
+          "argTypes": [ "address", "address" ]
+        }
+      ],
+      "exp": "_recipient.transfer(address(this).balance);",
+      "status": "unproven"
+    },
+    {
+      "no": "25",
+      "kind": "ETH_LEAK",
+      "line": 83,
+      "signatures": [
+        {
+          "contractName": "_Yesbuzz",
+          "methodName": "withdrawAll_txorigin22",
+          "argTypes": [ "address", "address" ]
+        }
+      ],
+      "exp": "_recipient.transfer(address(this).balance);",
+      "status": "unproven"
+    },
+    {
+      "no": "26",
+      "kind": "ETH_LEAK",
+      "line": 91,
+      "signatures": [
+        {
+          "contractName": "_Yesbuzz",
+          "methodName": "sendto_txorigin33",
+          "argTypes": [ "address", "uint256", "address" ]
+        }
+      ],
+      "exp": "receiver.transfer(amount);",
+      "status": "unproven"
+    },
+    {
+      "no": "27",
+      "kind": "ETH_LEAK",
+      "line": 138,
+      "signatures": [
+        {
+          "contractName": "_Yesbuzz",
+          "methodName": "sendto_txorigin1",
+          "argTypes": [ "address", "uint256", "address" ]
+        }
+      ],
+      "exp": "receiver.transfer(amount);",
+      "status": "unproven"
+    },
+    {
+      "no": "28",
+      "kind": "ETH_LEAK",
+      "line": 151,
+      "signatures": [
+        {
+          "contractName": "_Yesbuzz",
+          "methodName": "withdrawAll_txorigin2",
+          "argTypes": [ "address", "address" ]
+        }
+      ],
+      "exp": "_recipient.transfer(address(this).balance);",
+      "status": "unproven"
+    },
+    {
+      "no": "29",
+      "kind": "ETH_LEAK",
+      "line": 162,
+      "signatures": [
+        {
+          "contractName": "_Yesbuzz",
+          "methodName": "sendto_txorigin17",
+          "argTypes": [ "address", "uint256", "address" ]
+        }
+      ],
+      "exp": "receiver.transfer(amount);",
+      "status": "unproven"
+    },
+    {
+      "no": "30",
+      "kind": "ETH_LEAK",
+      "line": 199,
+      "signatures": [
+        {
+          "contractName": "_Yesbuzz",
+          "methodName": "withdrawAll_txorigin18",
+          "argTypes": [ "address", "address" ]
+        }
+      ],
+      "exp": "_recipient.transfer(address(this).balance);",
+      "status": "unproven"
+    },
+    {
+      "no": "31",
+      "kind": "ETH_LEAK",
+      "line": 204,
+      "signatures": [
+        {
+          "contractName": "_Yesbuzz",
+          "methodName": "sendto_txorigin29",
+          "argTypes": [ "address", "uint256", "address" ]
+        }
+      ],
+      "exp": "receiver.transfer(amount);",
+      "status": "unproven"
+    },
+    {
+      "no": "32",
+      "kind": "ETH_LEAK",
+      "line": 209,
+      "signatures": [
+        {
+          "contractName": "_Yesbuzz",
+          "methodName": "withdrawAll_txorigin6",
+          "argTypes": [ "address", "address" ]
+        }
+      ],
+      "exp": "_recipient.transfer(address(this).balance);",
+      "status": "unproven"
+    },
+    {
+      "no": "33",
+      "kind": "ETH_LEAK",
+      "line": 222,
+      "signatures": [
+        {
+          "contractName": "_Yesbuzz",
+          "methodName": "sendto_txorigin5",
+          "argTypes": [ "address", "uint256", "address" ]
+        }
+      ],
+      "exp": "receiver.transfer(amount);",
+      "status": "unproven"
+    },
+    {
+      "no": "34",
+      "kind": "ETH_LEAK",
+      "line": 233,
+      "signatures": [
+        {
+          "contractName": "_Yesbuzz",
+          "methodName": "sendto_txorigin13",
+          "argTypes": [ "address", "uint256", "address" ]
+        }
+      ],
+      "exp": "receiver.transfer(amount);",
+      "status": "unproven"
+    },
+    {
+      "no": "35",
+      "kind": "ETH_LEAK",
+      "line": 264,
+      "signatures": [
+        {
+          "contractName": "_Yesbuzz",
+          "methodName": "sendto_txorigin37",
+          "argTypes": [ "address", "uint256", "address" ]
+        }
+      ],
+      "exp": "receiver.transfer(amount);",
+      "status": "unproven"
+    },
+    {
+      "no": "36",
+      "kind": "ETH_LEAK",
+      "line": 318,
+      "signatures": [
+        {
+          "contractName": "_Yesbuzz",
+          "methodName": "sendto_txorigin9",
+          "argTypes": [ "address", "uint256", "address" ]
+        }
+      ],
+      "exp": "receiver.transfer(amount);",
+      "status": "unproven"
+    },
+    {
+      "no": "37",
+      "kind": "ETH_LEAK",
+      "line": 354,
+      "signatures": [
+        {
+          "contractName": "_Yesbuzz",
+          "methodName": "sendto_txorigin25",
+          "argTypes": [ "address", "uint256", "address" ]
+        }
+      ],
+      "exp": "receiver.transfer(amount);",
+      "status": "unproven"
+    },
+    {
+      "no": "38",
+      "kind": "ETH_LEAK",
+      "line": 372,
+      "signatures": [
+        {
+          "contractName": "_Yesbuzz",
+          "methodName": "withdrawAll_txorigin26",
+          "argTypes": [ "address", "address" ]
+        }
+      ],
+      "exp": "_recipient.transfer(address(this).balance);",
+      "status": "unproven"
+    },
+    {
+      "no": "39",
+      "kind": "ETH_LEAK",
+      "line": 400,
+      "signatures": [
+        {
+          "contractName": "_Yesbuzz",
+          "methodName": "withdrawAll_txorigin38",
+          "argTypes": [ "address", "address" ]
+        }
+      ],
+      "exp": "_recipient.transfer(address(this).balance);",
+      "status": "unproven"
+    },
+    {
+      "no": "40",
+      "kind": "ETH_LEAK",
+      "line": 461,
+      "signatures": [
+        {
+          "contractName": "_Yesbuzz",
+          "methodName": "withdrawAll_txorigin14",
+          "argTypes": [ "address", "address" ]
+        }
+      ],
+      "exp": "_recipient.transfer(address(this).balance);",
+      "status": "unproven"
+    },
+    {
+      "no": "41",
+      "kind": "ETH_LEAK",
+      "line": 480,
+      "signatures": [
+        {
+          "contractName": "_Yesbuzz",
+          "methodName": "withdrawAll_txorigin30",
+          "argTypes": [ "address", "address" ]
+        }
+      ],
+      "exp": "_recipient.transfer(address(this).balance);",
+      "status": "unproven"
+    }
+  ]
+}

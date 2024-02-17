@@ -1,0 +1,437 @@
+{
+  "fileName": "Benchmarks/Study_SamplesSet/461f6a32e59e945b01245d69850202fe.sol",
+  "baseName": "461f6a32e59e945b01245d69850202fe.sol",
+  "iter": 130,
+  "time": "305.652626",
+  "errMsg": null,
+  "result": [
+    {
+      "no": "1",
+      "kind": "IO",
+      "line": 25,
+      "signatures": [
+        {
+          "contractName": "IceRockMining",
+          "methodName": "@fallback",
+          "argTypes": []
+        },
+        {
+          "contractName": "IceRockMining",
+          "methodName": "IceRockMining",
+          "argTypes": []
+        },
+        {
+          "contractName": "IceRockMining",
+          "methodName": "burnUnsold",
+          "argTypes": []
+        },
+        {
+          "contractName": "IceRockMining",
+          "methodName": "sendp",
+          "argTypes": [ "address", "uint256" ]
+        },
+        {
+          "contractName": "IceRockMining",
+          "methodName": "transfer",
+          "argTypes": [ "address", "uint256" ]
+        },
+        {
+          "contractName": "IceRockMining",
+          "methodName": "transferFrom",
+          "argTypes": [ "address", "address", "uint256" ]
+        }
+      ],
+      "exp": "(self.keys.length + 1)",
+      "status": "unproven"
+    },
+    {
+      "no": "2",
+      "kind": "IO",
+      "line": 26,
+      "signatures": [
+        {
+          "contractName": "IceRockMining",
+          "methodName": "@fallback",
+          "argTypes": []
+        },
+        {
+          "contractName": "IceRockMining",
+          "methodName": "IceRockMining",
+          "argTypes": []
+        },
+        {
+          "contractName": "IceRockMining",
+          "methodName": "burnUnsold",
+          "argTypes": []
+        },
+        {
+          "contractName": "IceRockMining",
+          "methodName": "sendp",
+          "argTypes": [ "address", "uint256" ]
+        },
+        {
+          "contractName": "IceRockMining",
+          "methodName": "transfer",
+          "argTypes": [ "address", "uint256" ]
+        },
+        {
+          "contractName": "IceRockMining",
+          "methodName": "transferFrom",
+          "argTypes": [ "address", "address", "uint256" ]
+        }
+      ],
+      "exp": "(e.keyIndex - 1)",
+      "status": "unproven"
+    },
+    {
+      "no": "3",
+      "kind": "IO",
+      "line": 132,
+      "signatures": [
+        {
+          "contractName": "IceRockMining",
+          "methodName": "transfer",
+          "argTypes": [ "address", "uint256" ]
+        }
+      ],
+      "exp": "(balances.get(msg.sender) - value)",
+      "status": "proven"
+    },
+    {
+      "no": "4",
+      "kind": "IO",
+      "line": 135,
+      "signatures": [
+        {
+          "contractName": "IceRockMining",
+          "methodName": "transfer",
+          "argTypes": [ "address", "uint256" ]
+        }
+      ],
+      "exp": "(balances.get(to) + value)",
+      "status": "unproven"
+    },
+    {
+      "no": "5",
+      "kind": "IO",
+      "line": 154,
+      "signatures": [
+        {
+          "contractName": "IceRockMining",
+          "methodName": "transferFrom",
+          "argTypes": [ "address", "address", "uint256" ]
+        }
+      ],
+      "exp": "(amountToInsert + balances.get(to))",
+      "status": "unproven"
+    },
+    {
+      "no": "6",
+      "kind": "IO",
+      "line": 157,
+      "signatures": [
+        {
+          "contractName": "IceRockMining",
+          "methodName": "transferFrom",
+          "argTypes": [ "address", "address", "uint256" ]
+        }
+      ],
+      "exp": "(balances.get(from) - value)",
+      "status": "unproven"
+    },
+    {
+      "no": "7",
+      "kind": "IO",
+      "line": 158,
+      "signatures": [
+        {
+          "contractName": "IceRockMining",
+          "methodName": "transferFrom",
+          "argTypes": [ "address", "address", "uint256" ]
+        }
+      ],
+      "exp": "(allowed[from][msg.sender] - value)",
+      "status": "proven"
+    },
+    {
+      "no": "8",
+      "kind": "IO",
+      "line": 199,
+      "signatures": [
+        {
+          "contractName": "IceRockMining",
+          "methodName": "sendp",
+          "argTypes": [ "address", "uint256" ]
+        }
+      ],
+      "exp": "(balances.get(addr) + amount)",
+      "status": "unproven"
+    },
+    {
+      "no": "9",
+      "kind": "IO",
+      "line": 205,
+      "signatures": [
+        {
+          "contractName": "IceRockMining",
+          "methodName": "sendp",
+          "argTypes": [ "address", "uint256" ]
+        }
+      ],
+      "exp": "(balances.get(IceRockMiningAddress) - amount)",
+      "status": "unproven"
+    },
+    {
+      "no": "10",
+      "kind": "IO",
+      "line": 210,
+      "signatures": [
+        {
+          "contractName": "IceRockMining",
+          "methodName": "@fallback",
+          "argTypes": []
+        }
+      ],
+      "exp": "(10 ** 18)",
+      "status": "proven"
+    },
+    {
+      "no": "11",
+      "kind": "IO",
+      "line": 210,
+      "signatures": [
+        {
+          "contractName": "IceRockMining",
+          "methodName": "@fallback",
+          "argTypes": []
+        }
+      ],
+      "exp": "(msg.value * currentUSDExchangeRate)",
+      "status": "unproven"
+    },
+    {
+      "no": "12",
+      "kind": "IO",
+      "line": 212,
+      "signatures": [
+        {
+          "contractName": "IceRockMining",
+          "methodName": "@fallback",
+          "argTypes": []
+        }
+      ],
+      "exp": "(100 + bonus)",
+      "status": "unproven"
+    },
+    {
+      "no": "13",
+      "kind": "IO",
+      "line": 212,
+      "signatures": [
+        {
+          "contractName": "IceRockMining",
+          "methodName": "@fallback",
+          "argTypes": []
+        }
+      ],
+      "exp": "(valueToPass * (100 + bonus))",
+      "status": "unproven"
+    },
+    {
+      "no": "14",
+      "kind": "IO",
+      "line": 216,
+      "signatures": [
+        {
+          "contractName": "IceRockMining",
+          "methodName": "@fallback",
+          "argTypes": []
+        }
+      ],
+      "exp": "(balances.get(msg.sender) + valueToPass)",
+      "status": "unproven"
+    },
+    {
+      "no": "15",
+      "kind": "IO",
+      "line": 221,
+      "signatures": [
+        {
+          "contractName": "IceRockMining",
+          "methodName": "@fallback",
+          "argTypes": []
+        }
+      ],
+      "exp": "(balances.get(IceRockMiningAddress) - valueToPass)",
+      "status": "unproven"
+    },
+    {
+      "no": "16",
+      "kind": "IO",
+      "line": 227,
+      "signatures": [
+        {
+          "contractName": "IceRockMining",
+          "methodName": "approveDividends",
+          "argTypes": [ "uint256" ]
+        }
+      ],
+      "exp": "(10 ** 18)",
+      "status": "proven"
+    },
+    {
+      "no": "17",
+      "kind": "IO",
+      "line": 227,
+      "signatures": [
+        {
+          "contractName": "IceRockMining",
+          "methodName": "approveDividends",
+          "argTypes": [ "uint256" ]
+        }
+      ],
+      "exp": "(totalDividendsAmount * (10 ** 18))",
+      "status": "unproven"
+    },
+    {
+      "no": "18",
+      "kind": "IO",
+      "line": 228,
+      "signatures": [
+        {
+          "contractName": "IceRockMining",
+          "methodName": "approveDividends",
+          "argTypes": [ "uint256" ]
+        }
+      ],
+      "exp": "(i + 1)",
+      "status": "proven"
+    },
+    {
+      "no": "19",
+      "kind": "IO",
+      "line": 231,
+      "signatures": [
+        {
+          "contractName": "IceRockMining",
+          "methodName": "approveDividends",
+          "argTypes": [ "uint256" ]
+        }
+      ],
+      "exp": "(balances.get(tokenHolder) * dividendsPerToken)",
+      "status": "unproven"
+    },
+    {
+      "no": "20",
+      "kind": "IO",
+      "line": 237,
+      "signatures": [
+        {
+          "contractName": "IceRockMining",
+          "methodName": "burnUnsold",
+          "argTypes": []
+        }
+      ],
+      "exp": "(initialSupply - burningAmount)",
+      "status": "unproven"
+    },
+    {
+      "no": "21",
+      "kind": "IO",
+      "line": 248,
+      "signatures": [
+        {
+          "contractName": "IceRockMining",
+          "methodName": "transferAllDividends",
+          "argTypes": []
+        }
+      ],
+      "exp": "(i + 1)",
+      "status": "proven"
+    },
+    {
+      "no": "22",
+      "kind": "DZ",
+      "line": 210,
+      "signatures": [
+        {
+          "contractName": "IceRockMining",
+          "methodName": "@fallback",
+          "argTypes": []
+        }
+      ],
+      "exp": "((msg.value * currentUSDExchangeRate) / (10 ** 18))",
+      "status": "proven"
+    },
+    {
+      "no": "23",
+      "kind": "DZ",
+      "line": 211,
+      "signatures": [
+        {
+          "contractName": "IceRockMining",
+          "methodName": "@fallback",
+          "argTypes": []
+        }
+      ],
+      "exp": "(amountInUSDollars / priceUSD)",
+      "status": "proven"
+    },
+    {
+      "no": "24",
+      "kind": "DZ",
+      "line": 212,
+      "signatures": [
+        {
+          "contractName": "IceRockMining",
+          "methodName": "@fallback",
+          "argTypes": []
+        }
+      ],
+      "exp": "((valueToPass * (100 + bonus)) / 100)",
+      "status": "proven"
+    },
+    {
+      "no": "25",
+      "kind": "DZ",
+      "line": 227,
+      "signatures": [
+        {
+          "contractName": "IceRockMining",
+          "methodName": "approveDividends",
+          "argTypes": [ "uint256" ]
+        }
+      ],
+      "exp": "((totalDividendsAmount * (10 ** 18)) / initialSupply)",
+      "status": "unproven"
+    },
+    {
+      "no": "26",
+      "kind": "ETH_LEAK",
+      "line": 252,
+      "signatures": [
+        {
+          "contractName": "IceRockMining",
+          "methodName": "transferAllDividends",
+          "argTypes": []
+        }
+      ],
+      "exp": "tokenHolder.transfer(approvedDividends[tokenHolder]);",
+      "status": "unproven"
+    },
+    {
+      "no": "27",
+      "kind": "ETH_LEAK",
+      "line": 260,
+      "signatures": [
+        {
+          "contractName": "IceRockMining",
+          "methodName": "withdraw",
+          "argTypes": [ "uint256" ]
+        }
+      ],
+      "exp": "IceRockMiningAddress.transfer(amount);",
+      "status": "proven"
+    }
+  ]
+}

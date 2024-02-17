@@ -1,0 +1,83 @@
+{
+  "fileName": "Benchmarks/Study_SamplesSet/db4462cca71392e455bba9ea96902c48.sol",
+  "baseName": "db4462cca71392e455bba9ea96902c48.sol",
+  "iter": 2334,
+  "time": "258.973013",
+  "errMsg": null,
+  "result": [
+    {
+      "no": "1",
+      "kind": "IO",
+      "line": 147,
+      "signatures": [
+        { "contractName": "ChiSale", "methodName": "buy", "argTypes": [] }
+      ],
+      "exp": "(msg.value - (tokens * tokenPrice))",
+      "status": "unproven"
+    },
+    {
+      "no": "2",
+      "kind": "IO",
+      "line": 147,
+      "signatures": [
+        { "contractName": "ChiSale", "methodName": "buy", "argTypes": [] }
+      ],
+      "exp": "(tokens * tokenPrice)",
+      "status": "unproven"
+    },
+    {
+      "no": "3",
+      "kind": "IO",
+      "line": 152,
+      "signatures": [
+        { "contractName": "ChiSale", "methodName": "buy", "argTypes": [] }
+      ],
+      "exp": "(tokensForSale - tokens)",
+      "status": "proven"
+    },
+    {
+      "no": "4",
+      "kind": "DZ",
+      "line": 137,
+      "signatures": [
+        { "contractName": "ChiSale", "methodName": "buy", "argTypes": [] }
+      ],
+      "exp": "(msg.value / tokenPrice)",
+      "status": "proven"
+    },
+    {
+      "no": "5",
+      "kind": "DZ",
+      "line": 149,
+      "signatures": [
+        { "contractName": "ChiSale", "methodName": "buy", "argTypes": [] }
+      ],
+      "exp": "(msg.value % tokenPrice)",
+      "status": "proven"
+    },
+    {
+      "no": "6",
+      "kind": "ETH_LEAK",
+      "line": 159,
+      "signatures": [
+        { "contractName": "ChiSale", "methodName": "buy", "argTypes": [] }
+      ],
+      "exp": "msg.sender.transfer(remainder);",
+      "status": "unproven"
+    },
+    {
+      "no": "7",
+      "kind": "ETH_LEAK",
+      "line": 185,
+      "signatures": [
+        {
+          "contractName": "ChiSale",
+          "methodName": "withdraw",
+          "argTypes": []
+        }
+      ],
+      "exp": "owner.transfer(this.balance);",
+      "status": "proven"
+    }
+  ]
+}

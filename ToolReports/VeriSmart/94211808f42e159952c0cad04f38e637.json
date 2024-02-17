@@ -1,0 +1,473 @@
+{
+  "fileName": "Benchmarks/Study_SamplesSet/94211808f42e159952c0cad04f38e637.sol",
+  "baseName": "94211808f42e159952c0cad04f38e637.sol",
+  "iter": 450,
+  "time": "300.156034",
+  "errMsg": null,
+  "result": [
+    {
+      "no": "1",
+      "kind": "IO",
+      "line": 5,
+      "signatures": [
+        {
+          "contractName": "ShinHoDeung",
+          "methodName": "increaseApproval",
+          "argTypes": [ "address", "uint256" ]
+        }
+      ],
+      "exp": "(x + y)",
+      "status": "unproven"
+    },
+    {
+      "no": "2",
+      "kind": "IO",
+      "line": 12,
+      "signatures": [
+        {
+          "contractName": "ShinHoDeung",
+          "methodName": "decreaseApproval",
+          "argTypes": [ "address", "uint256" ]
+        },
+        {
+          "contractName": "TokenBase",
+          "methodName": "_transfer",
+          "argTypes": [ "address", "address", "uint256" ]
+        }
+      ],
+      "exp": "(x - y)",
+      "status": "proven"
+    },
+    {
+      "no": "3",
+      "kind": "IO",
+      "line": 101,
+      "signatures": [
+        {
+          "contractName": "ShinHoDeung",
+          "methodName": "ShinHoDeung",
+          "argTypes": []
+        }
+      ],
+      "exp": "(10 ** uint256(tokenDecimals))",
+      "status": "proven"
+    },
+    {
+      "no": "4",
+      "kind": "IO",
+      "line": 101,
+      "signatures": [
+        {
+          "contractName": "ShinHoDeung",
+          "methodName": "ShinHoDeung",
+          "argTypes": []
+        }
+      ],
+      "exp": "(initialSupply * (10 ** uint256(tokenDecimals)))",
+      "status": "proven"
+    },
+    {
+      "no": "5",
+      "kind": "IO",
+      "line": 112,
+      "signatures": [
+        {
+          "contractName": "TokenBase",
+          "methodName": "_transfer",
+          "argTypes": [ "address", "address", "uint256" ]
+        }
+      ],
+      "exp": "(balances[_to] + _value)",
+      "status": "unproven"
+    },
+    {
+      "no": "6",
+      "kind": "IO",
+      "line": 113,
+      "signatures": [
+        {
+          "contractName": "TokenBase",
+          "methodName": "_transfer",
+          "argTypes": [ "address", "address", "uint256" ]
+        }
+      ],
+      "exp": "(balances[_from] + balances[_to])",
+      "status": "unproven"
+    },
+    {
+      "no": "7",
+      "kind": "IO",
+      "line": 117,
+      "signatures": [
+        {
+          "contractName": "TokenBase",
+          "methodName": "_transfer",
+          "argTypes": [ "address", "address", "uint256" ]
+        }
+      ],
+      "exp": "(balances[_from] + balances[_to])",
+      "status": "unproven"
+    },
+    {
+      "no": "8",
+      "kind": "IO",
+      "line": 127,
+      "signatures": [
+        {
+          "contractName": "ShinHoDeung",
+          "methodName": "transferFrom",
+          "argTypes": [ "address", "address", "uint256" ]
+        }
+      ],
+      "exp": "(allowed[_from][msg.sender] - _value)",
+      "status": "proven"
+    },
+    {
+      "no": "9",
+      "kind": "IO",
+      "line": 158,
+      "signatures": [
+        {
+          "contractName": "ShinHoDeung",
+          "methodName": "burn",
+          "argTypes": [ "uint256" ]
+        }
+      ],
+      "exp": "(balances[msg.sender] - _value)",
+      "status": "proven"
+    },
+    {
+      "no": "10",
+      "kind": "IO",
+      "line": 159,
+      "signatures": [
+        {
+          "contractName": "ShinHoDeung",
+          "methodName": "burn",
+          "argTypes": [ "uint256" ]
+        }
+      ],
+      "exp": "(totalSupply - _value)",
+      "status": "unproven"
+    },
+    {
+      "no": "11",
+      "kind": "IO",
+      "line": 167,
+      "signatures": [
+        {
+          "contractName": "ShinHoDeung",
+          "methodName": "burnFrom",
+          "argTypes": [ "address", "uint256" ]
+        }
+      ],
+      "exp": "(balances[_from] - _value)",
+      "status": "proven"
+    },
+    {
+      "no": "12",
+      "kind": "IO",
+      "line": 168,
+      "signatures": [
+        {
+          "contractName": "ShinHoDeung",
+          "methodName": "burnFrom",
+          "argTypes": [ "address", "uint256" ]
+        }
+      ],
+      "exp": "(allowed[_from][msg.sender] - _value)",
+      "status": "proven"
+    },
+    {
+      "no": "13",
+      "kind": "IO",
+      "line": 169,
+      "signatures": [
+        {
+          "contractName": "ShinHoDeung",
+          "methodName": "burnFrom",
+          "argTypes": [ "address", "uint256" ]
+        }
+      ],
+      "exp": "(totalSupply - _value)",
+      "status": "unproven"
+    },
+    {
+      "no": "14",
+      "kind": "IO",
+      "line": 205,
+      "signatures": [
+        {
+          "contractName": "ShinHoDeung",
+          "methodName": "transfer",
+          "argTypes": [ "address", "uint256" ]
+        },
+        {
+          "contractName": "ShinHoDeung",
+          "methodName": "transferFrom",
+          "argTypes": [ "address", "address", "uint256" ]
+        }
+      ],
+      "exp": "(balances[_from] - _value)",
+      "status": "unproven"
+    },
+    {
+      "no": "15",
+      "kind": "IO",
+      "line": 218,
+      "signatures": [
+        {
+          "contractName": "ShinHoDeung",
+          "methodName": "increaseFrozenBalances",
+          "argTypes": [ "address", "uint256" ]
+        }
+      ],
+      "exp": "(frozenBalances[target] + _value)",
+      "status": "unproven"
+    },
+    {
+      "no": "16",
+      "kind": "IO",
+      "line": 224,
+      "signatures": [
+        {
+          "contractName": "ShinHoDeung",
+          "methodName": "decreaseFrozenBalances",
+          "argTypes": [ "address", "uint256" ]
+        }
+      ],
+      "exp": "(frozenBalances[target] - _value)",
+      "status": "proven"
+    },
+    {
+      "no": "17",
+      "kind": "IO",
+      "line": 237,
+      "signatures": [
+        {
+          "contractName": "ShinHoDeung",
+          "methodName": "freeze",
+          "argTypes": [ "address", "uint8" ]
+        },
+        {
+          "contractName": "ShinHoDeung",
+          "methodName": "transfer",
+          "argTypes": [ "address", "uint256" ]
+        },
+        {
+          "contractName": "ShinHoDeung",
+          "methodName": "transferFrom",
+          "argTypes": [ "address", "address", "uint256" ]
+        }
+      ],
+      "exp": "(balances[target] * percent)",
+      "status": "unproven"
+    },
+    {
+      "no": "18",
+      "kind": "IO",
+      "line": 245,
+      "signatures": [
+        {
+          "contractName": "ShinHoDeung",
+          "methodName": "changeFrozenBalanceAll",
+          "argTypes": [ "uint8" ]
+        }
+      ],
+      "exp": "(i + 1)",
+      "status": "proven"
+    },
+    {
+      "no": "19",
+      "kind": "IO",
+      "line": 246,
+      "signatures": [
+        {
+          "contractName": "ShinHoDeung",
+          "methodName": "changeFrozenBalanceAll",
+          "argTypes": [ "uint8" ]
+        }
+      ],
+      "exp": "(balances[frozenAddresses[i]] * percent)",
+      "status": "unproven"
+    },
+    {
+      "no": "20",
+      "kind": "IO",
+      "line": 260,
+      "signatures": [
+        {
+          "contractName": "ShinHoDeung",
+          "methodName": "deleteFrozenAddresses",
+          "argTypes": [ "address" ]
+        }
+      ],
+      "exp": "(i + 1)",
+      "status": "proven"
+    },
+    {
+      "no": "21",
+      "kind": "IO",
+      "line": 267,
+      "signatures": [
+        {
+          "contractName": "ShinHoDeung",
+          "methodName": "deleteFrozenAddresses",
+          "argTypes": [ "address" ]
+        }
+      ],
+      "exp": "(frozenAddresses.length - 1)",
+      "status": "unproven"
+    },
+    {
+      "no": "22",
+      "kind": "IO",
+      "line": 269,
+      "signatures": [
+        {
+          "contractName": "ShinHoDeung",
+          "methodName": "deleteFrozenAddresses",
+          "argTypes": [ "address" ]
+        }
+      ],
+      "exp": "(frozenAddresses.length - 1)",
+      "status": "proven"
+    },
+    {
+      "no": "23",
+      "kind": "IO",
+      "line": 274,
+      "signatures": [
+        {
+          "contractName": "ShinHoDeung",
+          "methodName": "unfreezeAll",
+          "argTypes": []
+        }
+      ],
+      "exp": "(i + 1)",
+      "status": "proven"
+    },
+    {
+      "no": "24",
+      "kind": "IO",
+      "line": 297,
+      "signatures": [
+        {
+          "contractName": "ShinHoDeung",
+          "methodName": "sell",
+          "argTypes": [ "uint256" ]
+        }
+      ],
+      "exp": "(amount * sellPrice)",
+      "status": "unproven"
+    },
+    {
+      "no": "25",
+      "kind": "IO",
+      "line": 299,
+      "signatures": [
+        {
+          "contractName": "ShinHoDeung",
+          "methodName": "sell",
+          "argTypes": [ "uint256" ]
+        }
+      ],
+      "exp": "(amount * sellPrice)",
+      "status": "unproven"
+    },
+    {
+      "no": "26",
+      "kind": "DZ",
+      "line": 237,
+      "signatures": [
+        {
+          "contractName": "ShinHoDeung",
+          "methodName": "freeze",
+          "argTypes": [ "address", "uint8" ]
+        },
+        {
+          "contractName": "ShinHoDeung",
+          "methodName": "transfer",
+          "argTypes": [ "address", "uint256" ]
+        },
+        {
+          "contractName": "ShinHoDeung",
+          "methodName": "transferFrom",
+          "argTypes": [ "address", "address", "uint256" ]
+        }
+      ],
+      "exp": "((balances[target] * percent) / 100)",
+      "status": "proven"
+    },
+    {
+      "no": "27",
+      "kind": "DZ",
+      "line": 246,
+      "signatures": [
+        {
+          "contractName": "ShinHoDeung",
+          "methodName": "changeFrozenBalanceAll",
+          "argTypes": [ "uint8" ]
+        }
+      ],
+      "exp": "((balances[frozenAddresses[i]] * percent) / 100)",
+      "status": "proven"
+    },
+    {
+      "no": "28",
+      "kind": "DZ",
+      "line": 290,
+      "signatures": [
+        {
+          "contractName": "ShinHoDeung",
+          "methodName": "buy",
+          "argTypes": []
+        }
+      ],
+      "exp": "(msg.value / buyPrice)",
+      "status": "proven"
+    },
+    {
+      "no": "29",
+      "kind": "KA",
+      "line": 183,
+      "signatures": [
+        {
+          "contractName": "ShinHoDeung",
+          "methodName": "destruct",
+          "argTypes": []
+        }
+      ],
+      "exp": "selfdestruct(owner);",
+      "status": "proven"
+    },
+    {
+      "no": "30",
+      "kind": "ETH_LEAK",
+      "line": 183,
+      "signatures": [
+        {
+          "contractName": "ShinHoDeung",
+          "methodName": "destruct",
+          "argTypes": []
+        }
+      ],
+      "exp": "selfdestruct(owner);",
+      "status": "proven"
+    },
+    {
+      "no": "31",
+      "kind": "ETH_LEAK",
+      "line": 299,
+      "signatures": [
+        {
+          "contractName": "ShinHoDeung",
+          "methodName": "sell",
+          "argTypes": [ "uint256" ]
+        }
+      ],
+      "exp": "msg.sender.transfer((amount * sellPrice));",
+      "status": "unproven"
+    }
+  ]
+}

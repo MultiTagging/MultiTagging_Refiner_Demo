@@ -1,0 +1,267 @@
+{
+  "fileName": "Benchmarks/Study_SamplesSet/e3856ee56ba7e674608f32890a531651.sol",
+  "baseName": "e3856ee56ba7e674608f32890a531651.sol",
+  "iter": 522,
+  "time": "300.125572",
+  "errMsg": null,
+  "result": [
+    {
+      "no": "1",
+      "kind": "IO",
+      "line": 71,
+      "signatures": [
+        {
+          "contractName": "CrowdSale",
+          "methodName": "removeContract",
+          "argTypes": []
+        }
+      ],
+      "exp": "(completedAt + 3600)",
+      "status": "unproven"
+    },
+    {
+      "no": "2",
+      "kind": "IO",
+      "line": 90,
+      "signatures": [
+        {
+          "contractName": "CrowdSale",
+          "methodName": "CrowdSale",
+          "argTypes": [
+            "uint256", "string", "address", "uint256", "uint256",
+            "contract token", "uint256"
+          ]
+        }
+      ],
+      "exp": "(_fundingMinimumTargetInEther * 1000000000000000000)",
+      "status": "unproven"
+    },
+    {
+      "no": "3",
+      "kind": "IO",
+      "line": 91,
+      "signatures": [
+        {
+          "contractName": "CrowdSale",
+          "methodName": "CrowdSale",
+          "argTypes": [
+            "uint256", "string", "address", "uint256", "uint256",
+            "contract token", "uint256"
+          ]
+        }
+      ],
+      "exp": "(_fundingMaximumTargetInEther * 1000000000000000000)",
+      "status": "unproven"
+    },
+    {
+      "no": "4",
+      "kind": "IO",
+      "line": 92,
+      "signatures": [
+        {
+          "contractName": "CrowdSale",
+          "methodName": "CrowdSale",
+          "argTypes": [
+            "uint256", "string", "address", "uint256", "uint256",
+            "contract token", "uint256"
+          ]
+        }
+      ],
+      "exp": "(_timeInMinutesForFundraising * 60)",
+      "status": "unproven"
+    },
+    {
+      "no": "5",
+      "kind": "IO",
+      "line": 92,
+      "signatures": [
+        {
+          "contractName": "CrowdSale",
+          "methodName": "CrowdSale",
+          "argTypes": [
+            "uint256", "string", "address", "uint256", "uint256",
+            "contract token", "uint256"
+          ]
+        }
+      ],
+      "exp": "(now + (_timeInMinutesForFundraising * 60))",
+      "status": "unproven"
+    },
+    {
+      "no": "6",
+      "kind": "IO",
+      "line": 95,
+      "signatures": [
+        {
+          "contractName": "CrowdSale",
+          "methodName": "CrowdSale",
+          "argTypes": [
+            "uint256", "string", "address", "uint256", "uint256",
+            "contract token", "uint256"
+          ]
+        }
+      ],
+      "exp": "(_etherCostOfEachToken * 1000000000000000000)",
+      "status": "unproven"
+    },
+    {
+      "no": "7",
+      "kind": "IO",
+      "line": 118,
+      "signatures": [
+        {
+          "contractName": "CrowdSale",
+          "methodName": "contribute",
+          "argTypes": []
+        }
+      ],
+      "exp": "(totalRaised + msg.value)",
+      "status": "unproven"
+    },
+    {
+      "no": "8",
+      "kind": "IO",
+      "line": 135,
+      "signatures": [
+        {
+          "contractName": "CrowdSale",
+          "methodName": "contribute",
+          "argTypes": []
+        }
+      ],
+      "exp": "(contributions.length - 1)",
+      "status": "unproven"
+    },
+    {
+      "no": "9",
+      "kind": "IO",
+      "line": 181,
+      "signatures": [
+        {
+          "contractName": "CrowdSale",
+          "methodName": "getRefund",
+          "argTypes": []
+        }
+      ],
+      "exp": "(i + 1)",
+      "status": "proven"
+    },
+    {
+      "no": "10",
+      "kind": "IO",
+      "line": 191,
+      "signatures": [
+        {
+          "contractName": "CrowdSale",
+          "methodName": "getRefund",
+          "argTypes": []
+        }
+      ],
+      "exp": "(totalRaised - amountToRefund)",
+      "status": "unproven"
+    },
+    {
+      "no": "11",
+      "kind": "DZ",
+      "line": 60,
+      "signatures": [
+        {
+          "contractName": "CrowdSale",
+          "methodName": "contribute",
+          "argTypes": []
+        }
+      ],
+      "exp": "(msg.value % priceInWei)",
+      "status": "unproven"
+    },
+    {
+      "no": "12",
+      "kind": "DZ",
+      "line": 124,
+      "signatures": [
+        {
+          "contractName": "CrowdSale",
+          "methodName": "contribute",
+          "argTypes": []
+        }
+      ],
+      "exp": "(amountInWei / priceInWei)",
+      "status": "unproven"
+    },
+    {
+      "no": "13",
+      "kind": "DZ",
+      "line": 127,
+      "signatures": [
+        {
+          "contractName": "CrowdSale",
+          "methodName": "contribute",
+          "argTypes": []
+        }
+      ],
+      "exp": "(amountInWei / priceInWei)",
+      "status": "unproven"
+    },
+    {
+      "no": "14",
+      "kind": "KA",
+      "line": 205,
+      "signatures": [
+        {
+          "contractName": "CrowdSale",
+          "methodName": "removeContract",
+          "argTypes": []
+        }
+      ],
+      "exp": "selfdestruct(msg.sender);",
+      "status": "proven"
+    },
+    {
+      "no": "15",
+      "kind": "ETH_LEAK",
+      "line": 167,
+      "signatures": [
+        {
+          "contractName": "CrowdSale",
+          "methodName": "checkIfFundingCompleteOrExpired",
+          "argTypes": []
+        },
+        {
+          "contractName": "CrowdSale",
+          "methodName": "payOut",
+          "argTypes": []
+        }
+      ],
+      "exp": "beneficiary.send(this.balance)",
+      "status": "proven"
+    },
+    {
+      "no": "16",
+      "kind": "ETH_LEAK",
+      "line": 186,
+      "signatures": [
+        {
+          "contractName": "CrowdSale",
+          "methodName": "getRefund",
+          "argTypes": []
+        }
+      ],
+      "exp": "contributions[i].contributor.send(amountToRefund)",
+      "status": "unproven"
+    },
+    {
+      "no": "17",
+      "kind": "ETH_LEAK",
+      "line": 205,
+      "signatures": [
+        {
+          "contractName": "CrowdSale",
+          "methodName": "removeContract",
+          "argTypes": []
+        }
+      ],
+      "exp": "selfdestruct(msg.sender);",
+      "status": "proven"
+    }
+  ]
+}

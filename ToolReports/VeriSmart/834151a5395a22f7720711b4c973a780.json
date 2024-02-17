@@ -1,0 +1,117 @@
+{
+  "fileName": "Benchmarks/Study_SamplesSet/834151a5395a22f7720711b4c973a780.sol",
+  "baseName": "834151a5395a22f7720711b4c973a780.sol",
+  "iter": 2100,
+  "time": "300.303943",
+  "errMsg": null,
+  "result": [
+    {
+      "no": "1",
+      "kind": "IO",
+      "line": 24,
+      "signatures": [
+        { "contractName": "Arena", "methodName": "throwIn", "argTypes": [] }
+      ],
+      "exp": "(block.number - 1)",
+      "status": "unproven"
+    },
+    {
+      "no": "2",
+      "kind": "IO",
+      "line": 59,
+      "signatures": [
+        { "contractName": "Arena", "methodName": "throwIn", "argTypes": [] }
+      ],
+      "exp": "(block.number + spawnTime)",
+      "status": "unproven"
+    },
+    {
+      "no": "3",
+      "kind": "IO",
+      "line": 69,
+      "signatures": [
+        { "contractName": "Arena", "methodName": "getOut", "argTypes": [] }
+      ],
+      "exp": "(gladiators[owner].coins * coinValue)",
+      "status": "unproven"
+    },
+    {
+      "no": "4",
+      "kind": "IO",
+      "line": 76,
+      "signatures": [
+        { "contractName": "Arena", "methodName": "throwIn", "argTypes": [] }
+      ],
+      "exp": "(tiles[x][y].coins + amount)",
+      "status": "unproven"
+    },
+    {
+      "no": "5",
+      "kind": "IO",
+      "line": 88,
+      "signatures": [
+        { "contractName": "Arena", "methodName": "throwIn", "argTypes": [] }
+      ],
+      "exp": "(i + 1)",
+      "status": "proven"
+    },
+    {
+      "no": "6",
+      "kind": "IO",
+      "line": 112,
+      "signatures": [
+        {
+          "contractName": "Arena",
+          "methodName": "activateGladiator",
+          "argTypes": [ "address" ]
+        }
+      ],
+      "exp": "(uint256(0) - 1)",
+      "status": "unproven"
+    },
+    {
+      "no": "7",
+      "kind": "IO",
+      "line": 119,
+      "signatures": [
+        { "contractName": "Arena", "methodName": "imOut", "argTypes": [] }
+      ],
+      "exp": "(block.number + despawnTime)",
+      "status": "unproven"
+    },
+    {
+      "no": "8",
+      "kind": "IO",
+      "line": 132,
+      "signatures": [
+        {
+          "contractName": "Arena",
+          "methodName": "nextBlock",
+          "argTypes": []
+        }
+      ],
+      "exp": "(gladiators[0].coins + 1)",
+      "status": "unproven"
+    },
+    {
+      "no": "9",
+      "kind": "DZ",
+      "line": 24,
+      "signatures": [
+        { "contractName": "Arena", "methodName": "throwIn", "argTypes": [] }
+      ],
+      "exp": "(uint8(keccak256(block.blockhash((block.number - 1)), pseudoRandomNonce)) % limit)",
+      "status": "proven"
+    },
+    {
+      "no": "10",
+      "kind": "ETH_LEAK",
+      "line": 69,
+      "signatures": [
+        { "contractName": "Arena", "methodName": "getOut", "argTypes": [] }
+      ],
+      "exp": "owner.transfer((gladiators[owner].coins * coinValue));",
+      "status": "unproven"
+    }
+  ]
+}

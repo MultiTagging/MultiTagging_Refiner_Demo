@@ -1,0 +1,1244 @@
+{
+  "fileName": "Benchmarks/Study_SamplesSet/c206245d6caa7135bccfbab9f4404d23.sol",
+  "baseName": "c206245d6caa7135bccfbab9f4404d23.sol",
+  "iter": 4,
+  "time": "380.848614",
+  "errMsg": null,
+  "result": [
+    {
+      "no": "1",
+      "kind": "IO",
+      "line": 24,
+      "signatures": [
+        {
+          "contractName": "_Yesbuzz",
+          "methodName": "_reAdjustDifficulty",
+          "argTypes": []
+        },
+        {
+          "contractName": "_Yesbuzz",
+          "methodName": "_startNewMiningEpoch",
+          "argTypes": []
+        },
+        {
+          "contractName": "_Yesbuzz",
+          "methodName": "mint",
+          "argTypes": [ "uint256", "bytes32" ]
+        },
+        {
+          "contractName": "_Yesbuzz",
+          "methodName": "transfer",
+          "argTypes": [ "address", "uint256" ]
+        },
+        {
+          "contractName": "_Yesbuzz",
+          "methodName": "transferFrom",
+          "argTypes": [ "address", "address", "uint256" ]
+        }
+      ],
+      "exp": "(a + b)",
+      "status": "unproven"
+    },
+    {
+      "no": "2",
+      "kind": "IO",
+      "line": 30,
+      "signatures": [
+        {
+          "contractName": "_Yesbuzz",
+          "methodName": "_reAdjustDifficulty",
+          "argTypes": []
+        },
+        {
+          "contractName": "_Yesbuzz",
+          "methodName": "transfer",
+          "argTypes": [ "address", "uint256" ]
+        },
+        {
+          "contractName": "_Yesbuzz",
+          "methodName": "transferFrom",
+          "argTypes": [ "address", "address", "uint256" ]
+        }
+      ],
+      "exp": "(a - b)",
+      "status": "proven"
+    },
+    {
+      "no": "3",
+      "kind": "IO",
+      "line": 34,
+      "signatures": [
+        {
+          "contractName": "_Yesbuzz",
+          "methodName": "_reAdjustDifficulty",
+          "argTypes": []
+        },
+        {
+          "contractName": "_Yesbuzz",
+          "methodName": "transfer",
+          "argTypes": [ "address", "uint256" ]
+        },
+        {
+          "contractName": "_Yesbuzz",
+          "methodName": "transferFrom",
+          "argTypes": [ "address", "address", "uint256" ]
+        }
+      ],
+      "exp": "(a * b)",
+      "status": "unproven"
+    },
+    {
+      "no": "4",
+      "kind": "IO",
+      "line": 335,
+      "signatures": [
+        {
+          "contractName": "_Yesbuzz",
+          "methodName": "_Yesbuzz",
+          "argTypes": []
+        }
+      ],
+      "exp": "(2 ** 16)",
+      "status": "proven"
+    },
+    {
+      "no": "5",
+      "kind": "IO",
+      "line": 339,
+      "signatures": [
+        {
+          "contractName": "_Yesbuzz",
+          "methodName": "_Yesbuzz",
+          "argTypes": []
+        }
+      ],
+      "exp": "(2 ** 234)",
+      "status": "proven"
+    },
+    {
+      "no": "6",
+      "kind": "IO",
+      "line": 489,
+      "signatures": [
+        {
+          "contractName": "_Yesbuzz",
+          "methodName": "_Yesbuzz",
+          "argTypes": []
+        }
+      ],
+      "exp": "(10 ** uint256(decimals))",
+      "status": "proven"
+    },
+    {
+      "no": "7",
+      "kind": "IO",
+      "line": 489,
+      "signatures": [
+        {
+          "contractName": "_Yesbuzz",
+          "methodName": "_Yesbuzz",
+          "argTypes": []
+        }
+      ],
+      "exp": "(21000000 * (10 ** uint256(decimals)))",
+      "status": "proven"
+    },
+    {
+      "no": "8",
+      "kind": "IO",
+      "line": 563,
+      "signatures": [
+        {
+          "contractName": "_Yesbuzz",
+          "methodName": "_startNewMiningEpoch",
+          "argTypes": []
+        }
+      ],
+      "exp": "(rewardEra + 1)",
+      "status": "proven"
+    },
+    {
+      "no": "9",
+      "kind": "IO",
+      "line": 567,
+      "signatures": [
+        {
+          "contractName": "_Yesbuzz",
+          "methodName": "_startNewMiningEpoch",
+          "argTypes": []
+        }
+      ],
+      "exp": "(2 ** (rewardEra + 1))",
+      "status": "unproven"
+    },
+    {
+      "no": "10",
+      "kind": "IO",
+      "line": 567,
+      "signatures": [
+        {
+          "contractName": "_Yesbuzz",
+          "methodName": "_startNewMiningEpoch",
+          "argTypes": []
+        }
+      ],
+      "exp": "(_totalSupply - _totalSupply.div((2 ** (rewardEra + 1))))",
+      "status": "unproven"
+    },
+    {
+      "no": "11",
+      "kind": "IO",
+      "line": 567,
+      "signatures": [
+        {
+          "contractName": "_Yesbuzz",
+          "methodName": "_startNewMiningEpoch",
+          "argTypes": []
+        }
+      ],
+      "exp": "(rewardEra + 1)",
+      "status": "unproven"
+    },
+    {
+      "no": "12",
+      "kind": "IO",
+      "line": 575,
+      "signatures": [
+        {
+          "contractName": "_Yesbuzz",
+          "methodName": "_startNewMiningEpoch",
+          "argTypes": []
+        }
+      ],
+      "exp": "(block.number - 1)",
+      "status": "unproven"
+    },
+    {
+      "no": "13",
+      "kind": "IO",
+      "line": 594,
+      "signatures": [
+        {
+          "contractName": "_Yesbuzz",
+          "methodName": "_reAdjustDifficulty",
+          "argTypes": []
+        }
+      ],
+      "exp": "(block.number - latestDifficultyPeriodStarted)",
+      "status": "unproven"
+    },
+    {
+      "no": "14",
+      "kind": "IO",
+      "line": 598,
+      "signatures": [
+        {
+          "contractName": "_Yesbuzz",
+          "methodName": "_reAdjustDifficulty",
+          "argTypes": []
+        }
+      ],
+      "exp": "(epochsMined * 60)",
+      "status": "proven"
+    },
+    {
+      "no": "15",
+      "kind": "IO",
+      "line": 704,
+      "signatures": [
+        {
+          "contractName": "_Yesbuzz",
+          "methodName": "_startNewMiningEpoch",
+          "argTypes": []
+        },
+        {
+          "contractName": "_Yesbuzz",
+          "methodName": "getMiningReward",
+          "argTypes": []
+        },
+        {
+          "contractName": "_Yesbuzz",
+          "methodName": "mint",
+          "argTypes": [ "uint256", "bytes32" ]
+        }
+      ],
+      "exp": "(10 ** uint256(decimals))",
+      "status": "proven"
+    },
+    {
+      "no": "16",
+      "kind": "IO",
+      "line": 704,
+      "signatures": [
+        {
+          "contractName": "_Yesbuzz",
+          "methodName": "_startNewMiningEpoch",
+          "argTypes": []
+        },
+        {
+          "contractName": "_Yesbuzz",
+          "methodName": "getMiningReward",
+          "argTypes": []
+        },
+        {
+          "contractName": "_Yesbuzz",
+          "methodName": "mint",
+          "argTypes": [ "uint256", "bytes32" ]
+        }
+      ],
+      "exp": "(2 ** rewardEra)",
+      "status": "unproven"
+    },
+    {
+      "no": "17",
+      "kind": "IO",
+      "line": 704,
+      "signatures": [
+        {
+          "contractName": "_Yesbuzz",
+          "methodName": "_startNewMiningEpoch",
+          "argTypes": []
+        },
+        {
+          "contractName": "_Yesbuzz",
+          "methodName": "getMiningReward",
+          "argTypes": []
+        },
+        {
+          "contractName": "_Yesbuzz",
+          "methodName": "mint",
+          "argTypes": [ "uint256", "bytes32" ]
+        }
+      ],
+      "exp": "(50 * (10 ** uint256(decimals)))",
+      "status": "unproven"
+    },
+    {
+      "no": "18",
+      "kind": "IO",
+      "line": 779,
+      "signatures": [
+        {
+          "contractName": "_Yesbuzz",
+          "methodName": "totalSupply",
+          "argTypes": []
+        }
+      ],
+      "exp": "(_totalSupply - balances[address(0)])",
+      "status": "unproven"
+    },
+    {
+      "no": "19",
+      "kind": "DZ",
+      "line": 35,
+      "signatures": [
+        {
+          "contractName": "_Yesbuzz",
+          "methodName": "_reAdjustDifficulty",
+          "argTypes": []
+        },
+        {
+          "contractName": "_Yesbuzz",
+          "methodName": "transfer",
+          "argTypes": [ "address", "uint256" ]
+        },
+        {
+          "contractName": "_Yesbuzz",
+          "methodName": "transferFrom",
+          "argTypes": [ "address", "address", "uint256" ]
+        }
+      ],
+      "exp": "(c / a)",
+      "status": "proven"
+    },
+    {
+      "no": "20",
+      "kind": "DZ",
+      "line": 40,
+      "signatures": [
+        {
+          "contractName": "_Yesbuzz",
+          "methodName": "_Yesbuzz",
+          "argTypes": []
+        },
+        {
+          "contractName": "_Yesbuzz",
+          "methodName": "_reAdjustDifficulty",
+          "argTypes": []
+        },
+        {
+          "contractName": "_Yesbuzz",
+          "methodName": "_startNewMiningEpoch",
+          "argTypes": []
+        },
+        {
+          "contractName": "_Yesbuzz",
+          "methodName": "getMiningDifficulty",
+          "argTypes": []
+        },
+        {
+          "contractName": "_Yesbuzz",
+          "methodName": "getMiningReward",
+          "argTypes": []
+        },
+        {
+          "contractName": "_Yesbuzz",
+          "methodName": "mint",
+          "argTypes": [ "uint256", "bytes32" ]
+        },
+        {
+          "contractName": "_Yesbuzz",
+          "methodName": "transfer",
+          "argTypes": [ "address", "uint256" ]
+        },
+        {
+          "contractName": "_Yesbuzz",
+          "methodName": "transferFrom",
+          "argTypes": [ "address", "address", "uint256" ]
+        }
+      ],
+      "exp": "(a / b)",
+      "status": "proven"
+    },
+    {
+      "no": "21",
+      "kind": "DZ",
+      "line": 570,
+      "signatures": [
+        {
+          "contractName": "_Yesbuzz",
+          "methodName": "_startNewMiningEpoch",
+          "argTypes": []
+        }
+      ],
+      "exp": "(epochCount % _BLOCKS_PER_READJUSTMENT)",
+      "status": "proven"
+    },
+    {
+      "no": "22",
+      "kind": "ETH_LEAK",
+      "line": 69,
+      "signatures": [
+        {
+          "contractName": "_Yesbuzz",
+          "methodName": "setReward_TOD28",
+          "argTypes": []
+        }
+      ],
+      "exp": "owner_TOD28.transfer(reward_TOD28);",
+      "status": "unproven"
+    },
+    {
+      "no": "23",
+      "kind": "ETH_LEAK",
+      "line": 77,
+      "signatures": [
+        {
+          "contractName": "_Yesbuzz",
+          "methodName": "claimReward_TOD28",
+          "argTypes": [ "uint256" ]
+        }
+      ],
+      "exp": "msg.sender.transfer(reward_TOD28);",
+      "status": "unproven"
+    },
+    {
+      "no": "24",
+      "kind": "ETH_LEAK",
+      "line": 88,
+      "signatures": [
+        {
+          "contractName": "_Yesbuzz",
+          "methodName": "setReward_TOD34",
+          "argTypes": []
+        }
+      ],
+      "exp": "owner_TOD34.transfer(reward_TOD34);",
+      "status": "unproven"
+    },
+    {
+      "no": "25",
+      "kind": "ETH_LEAK",
+      "line": 96,
+      "signatures": [
+        {
+          "contractName": "_Yesbuzz",
+          "methodName": "claimReward_TOD34",
+          "argTypes": [ "uint256" ]
+        }
+      ],
+      "exp": "msg.sender.transfer(reward_TOD34);",
+      "status": "unproven"
+    },
+    {
+      "no": "26",
+      "kind": "ETH_LEAK",
+      "line": 111,
+      "signatures": [
+        {
+          "contractName": "_Yesbuzz",
+          "methodName": "getReward_TOD21",
+          "argTypes": []
+        }
+      ],
+      "exp": "winner_TOD21.transfer(msg.value);",
+      "status": "unproven"
+    },
+    {
+      "no": "27",
+      "kind": "ETH_LEAK",
+      "line": 121,
+      "signatures": [
+        {
+          "contractName": "_Yesbuzz",
+          "methodName": "setReward_TOD10",
+          "argTypes": []
+        }
+      ],
+      "exp": "owner_TOD10.transfer(reward_TOD10);",
+      "status": "proven"
+    },
+    {
+      "no": "28",
+      "kind": "ETH_LEAK",
+      "line": 129,
+      "signatures": [
+        {
+          "contractName": "_Yesbuzz",
+          "methodName": "claimReward_TOD10",
+          "argTypes": [ "uint256" ]
+        }
+      ],
+      "exp": "msg.sender.transfer(reward_TOD10);",
+      "status": "unproven"
+    },
+    {
+      "no": "29",
+      "kind": "ETH_LEAK",
+      "line": 140,
+      "signatures": [
+        {
+          "contractName": "_Yesbuzz",
+          "methodName": "setReward_TOD22",
+          "argTypes": []
+        }
+      ],
+      "exp": "owner_TOD22.transfer(reward_TOD22);",
+      "status": "unproven"
+    },
+    {
+      "no": "30",
+      "kind": "ETH_LEAK",
+      "line": 148,
+      "signatures": [
+        {
+          "contractName": "_Yesbuzz",
+          "methodName": "claimReward_TOD22",
+          "argTypes": [ "uint256" ]
+        }
+      ],
+      "exp": "msg.sender.transfer(reward_TOD22);",
+      "status": "unproven"
+    },
+    {
+      "no": "31",
+      "kind": "ETH_LEAK",
+      "line": 159,
+      "signatures": [
+        {
+          "contractName": "_Yesbuzz",
+          "methodName": "setReward_TOD12",
+          "argTypes": []
+        }
+      ],
+      "exp": "owner_TOD12.transfer(reward_TOD12);",
+      "status": "unproven"
+    },
+    {
+      "no": "32",
+      "kind": "ETH_LEAK",
+      "line": 167,
+      "signatures": [
+        {
+          "contractName": "_Yesbuzz",
+          "methodName": "claimReward_TOD12",
+          "argTypes": [ "uint256" ]
+        }
+      ],
+      "exp": "msg.sender.transfer(reward_TOD12);",
+      "status": "unproven"
+    },
+    {
+      "no": "33",
+      "kind": "ETH_LEAK",
+      "line": 181,
+      "signatures": [
+        {
+          "contractName": "_Yesbuzz",
+          "methodName": "getReward_TOD33",
+          "argTypes": []
+        }
+      ],
+      "exp": "winner_TOD33.transfer(msg.value);",
+      "status": "unproven"
+    },
+    {
+      "no": "34",
+      "kind": "ETH_LEAK",
+      "line": 195,
+      "signatures": [
+        {
+          "contractName": "_Yesbuzz",
+          "methodName": "getReward_TOD27",
+          "argTypes": []
+        }
+      ],
+      "exp": "winner_TOD27.transfer(msg.value);",
+      "status": "unproven"
+    },
+    {
+      "no": "35",
+      "kind": "ETH_LEAK",
+      "line": 246,
+      "signatures": [
+        {
+          "contractName": "_Yesbuzz",
+          "methodName": "getReward_TOD31",
+          "argTypes": []
+        }
+      ],
+      "exp": "winner_TOD31.transfer(msg.value);",
+      "status": "unproven"
+    },
+    {
+      "no": "36",
+      "kind": "ETH_LEAK",
+      "line": 264,
+      "signatures": [
+        {
+          "contractName": "_Yesbuzz",
+          "methodName": "getReward_TOD1",
+          "argTypes": []
+        }
+      ],
+      "exp": "winner_TOD1.transfer(msg.value);",
+      "status": "unproven"
+    },
+    {
+      "no": "37",
+      "kind": "ETH_LEAK",
+      "line": 282,
+      "signatures": [
+        {
+          "contractName": "_Yesbuzz",
+          "methodName": "setReward_TOD2",
+          "argTypes": []
+        }
+      ],
+      "exp": "owner_TOD2.transfer(reward_TOD2);",
+      "status": "unproven"
+    },
+    {
+      "no": "38",
+      "kind": "ETH_LEAK",
+      "line": 290,
+      "signatures": [
+        {
+          "contractName": "_Yesbuzz",
+          "methodName": "claimReward_TOD2",
+          "argTypes": [ "uint256" ]
+        }
+      ],
+      "exp": "msg.sender.transfer(reward_TOD2);",
+      "status": "unproven"
+    },
+    {
+      "no": "39",
+      "kind": "ETH_LEAK",
+      "line": 311,
+      "signatures": [
+        {
+          "contractName": "_Yesbuzz",
+          "methodName": "getReward_TOD17",
+          "argTypes": []
+        }
+      ],
+      "exp": "winner_TOD17.transfer(msg.value);",
+      "status": "unproven"
+    },
+    {
+      "no": "40",
+      "kind": "ETH_LEAK",
+      "line": 353,
+      "signatures": [
+        {
+          "contractName": "_Yesbuzz",
+          "methodName": "setReward_TOD18",
+          "argTypes": []
+        }
+      ],
+      "exp": "owner_TOD18.transfer(reward_TOD18);",
+      "status": "unproven"
+    },
+    {
+      "no": "41",
+      "kind": "ETH_LEAK",
+      "line": 361,
+      "signatures": [
+        {
+          "contractName": "_Yesbuzz",
+          "methodName": "claimReward_TOD18",
+          "argTypes": [ "uint256" ]
+        }
+      ],
+      "exp": "msg.sender.transfer(reward_TOD18);",
+      "status": "unproven"
+    },
+    {
+      "no": "42",
+      "kind": "ETH_LEAK",
+      "line": 376,
+      "signatures": [
+        {
+          "contractName": "_Yesbuzz",
+          "methodName": "getReward_TOD29",
+          "argTypes": []
+        }
+      ],
+      "exp": "winner_TOD29.transfer(msg.value);",
+      "status": "unproven"
+    },
+    {
+      "no": "43",
+      "kind": "ETH_LEAK",
+      "line": 386,
+      "signatures": [
+        {
+          "contractName": "_Yesbuzz",
+          "methodName": "setReward_TOD6",
+          "argTypes": []
+        }
+      ],
+      "exp": "owner_TOD6.transfer(reward_TOD6);",
+      "status": "unproven"
+    },
+    {
+      "no": "44",
+      "kind": "ETH_LEAK",
+      "line": 394,
+      "signatures": [
+        {
+          "contractName": "_Yesbuzz",
+          "methodName": "claimReward_TOD6",
+          "argTypes": [ "uint256" ]
+        }
+      ],
+      "exp": "msg.sender.transfer(reward_TOD6);",
+      "status": "unproven"
+    },
+    {
+      "no": "45",
+      "kind": "ETH_LEAK",
+      "line": 405,
+      "signatures": [
+        {
+          "contractName": "_Yesbuzz",
+          "methodName": "setReward_TOD16",
+          "argTypes": []
+        }
+      ],
+      "exp": "owner_TOD16.transfer(reward_TOD16);",
+      "status": "unproven"
+    },
+    {
+      "no": "46",
+      "kind": "ETH_LEAK",
+      "line": 413,
+      "signatures": [
+        {
+          "contractName": "_Yesbuzz",
+          "methodName": "claimReward_TOD16",
+          "argTypes": [ "uint256" ]
+        }
+      ],
+      "exp": "msg.sender.transfer(reward_TOD16);",
+      "status": "unproven"
+    },
+    {
+      "no": "47",
+      "kind": "ETH_LEAK",
+      "line": 424,
+      "signatures": [
+        {
+          "contractName": "_Yesbuzz",
+          "methodName": "setReward_TOD24",
+          "argTypes": []
+        }
+      ],
+      "exp": "owner_TOD24.transfer(reward_TOD24);",
+      "status": "unproven"
+    },
+    {
+      "no": "48",
+      "kind": "ETH_LEAK",
+      "line": 432,
+      "signatures": [
+        {
+          "contractName": "_Yesbuzz",
+          "methodName": "claimReward_TOD24",
+          "argTypes": [ "uint256" ]
+        }
+      ],
+      "exp": "msg.sender.transfer(reward_TOD24);",
+      "status": "unproven"
+    },
+    {
+      "no": "49",
+      "kind": "ETH_LEAK",
+      "line": 447,
+      "signatures": [
+        {
+          "contractName": "_Yesbuzz",
+          "methodName": "getReward_TOD5",
+          "argTypes": []
+        }
+      ],
+      "exp": "winner_TOD5.transfer(msg.value);",
+      "status": "unproven"
+    },
+    {
+      "no": "50",
+      "kind": "ETH_LEAK",
+      "line": 461,
+      "signatures": [
+        {
+          "contractName": "_Yesbuzz",
+          "methodName": "getReward_TOD15",
+          "argTypes": []
+        }
+      ],
+      "exp": "winner_TOD15.transfer(msg.value);",
+      "status": "unproven"
+    },
+    {
+      "no": "51",
+      "kind": "ETH_LEAK",
+      "line": 476,
+      "signatures": [
+        {
+          "contractName": "_Yesbuzz",
+          "methodName": "getReward_TOD13",
+          "argTypes": []
+        }
+      ],
+      "exp": "winner_TOD13.transfer(msg.value);",
+      "status": "unproven"
+    },
+    {
+      "no": "52",
+      "kind": "ETH_LEAK",
+      "line": 516,
+      "signatures": [
+        {
+          "contractName": "_Yesbuzz",
+          "methodName": "getReward_TOD37",
+          "argTypes": []
+        }
+      ],
+      "exp": "winner_TOD37.transfer(msg.value);",
+      "status": "unproven"
+    },
+    {
+      "no": "53",
+      "kind": "ETH_LEAK",
+      "line": 554,
+      "signatures": [
+        {
+          "contractName": "_Yesbuzz",
+          "methodName": "getReward_TOD3",
+          "argTypes": []
+        }
+      ],
+      "exp": "winner_TOD3.transfer(msg.value);",
+      "status": "unproven"
+    },
+    {
+      "no": "54",
+      "kind": "ETH_LEAK",
+      "line": 588,
+      "signatures": [
+        {
+          "contractName": "_Yesbuzz",
+          "methodName": "getReward_TOD9",
+          "argTypes": []
+        }
+      ],
+      "exp": "winner_TOD9.transfer(msg.value);",
+      "status": "unproven"
+    },
+    {
+      "no": "55",
+      "kind": "ETH_LEAK",
+      "line": 633,
+      "signatures": [
+        {
+          "contractName": "_Yesbuzz",
+          "methodName": "getReward_TOD25",
+          "argTypes": []
+        }
+      ],
+      "exp": "winner_TOD25.transfer(msg.value);",
+      "status": "unproven"
+    },
+    {
+      "no": "56",
+      "kind": "ETH_LEAK",
+      "line": 651,
+      "signatures": [
+        {
+          "contractName": "_Yesbuzz",
+          "methodName": "getReward_TOD19",
+          "argTypes": []
+        }
+      ],
+      "exp": "winner_TOD19.transfer(msg.value);",
+      "status": "unproven"
+    },
+    {
+      "no": "57",
+      "kind": "ETH_LEAK",
+      "line": 665,
+      "signatures": [
+        {
+          "contractName": "_Yesbuzz",
+          "methodName": "setReward_TOD26",
+          "argTypes": []
+        }
+      ],
+      "exp": "owner_TOD26.transfer(reward_TOD26);",
+      "status": "unproven"
+    },
+    {
+      "no": "58",
+      "kind": "ETH_LEAK",
+      "line": 673,
+      "signatures": [
+        {
+          "contractName": "_Yesbuzz",
+          "methodName": "claimReward_TOD26",
+          "argTypes": [ "uint256" ]
+        }
+      ],
+      "exp": "msg.sender.transfer(reward_TOD26);",
+      "status": "unproven"
+    },
+    {
+      "no": "59",
+      "kind": "ETH_LEAK",
+      "line": 687,
+      "signatures": [
+        {
+          "contractName": "_Yesbuzz",
+          "methodName": "setReward_TOD20",
+          "argTypes": []
+        }
+      ],
+      "exp": "owner_TOD20.transfer(reward_TOD20);",
+      "status": "unproven"
+    },
+    {
+      "no": "60",
+      "kind": "ETH_LEAK",
+      "line": 695,
+      "signatures": [
+        {
+          "contractName": "_Yesbuzz",
+          "methodName": "claimReward_TOD20",
+          "argTypes": [ "uint256" ]
+        }
+      ],
+      "exp": "msg.sender.transfer(reward_TOD20);",
+      "status": "unproven"
+    },
+    {
+      "no": "61",
+      "kind": "ETH_LEAK",
+      "line": 713,
+      "signatures": [
+        {
+          "contractName": "_Yesbuzz",
+          "methodName": "setReward_TOD32",
+          "argTypes": []
+        }
+      ],
+      "exp": "owner_TOD32.transfer(reward_TOD32);",
+      "status": "unproven"
+    },
+    {
+      "no": "62",
+      "kind": "ETH_LEAK",
+      "line": 721,
+      "signatures": [
+        {
+          "contractName": "_Yesbuzz",
+          "methodName": "claimReward_TOD32",
+          "argTypes": [ "uint256" ]
+        }
+      ],
+      "exp": "msg.sender.transfer(reward_TOD32);",
+      "status": "unproven"
+    },
+    {
+      "no": "63",
+      "kind": "ETH_LEAK",
+      "line": 737,
+      "signatures": [
+        {
+          "contractName": "_Yesbuzz",
+          "methodName": "setReward_TOD38",
+          "argTypes": []
+        }
+      ],
+      "exp": "owner_TOD38.transfer(reward_TOD38);",
+      "status": "unproven"
+    },
+    {
+      "no": "64",
+      "kind": "ETH_LEAK",
+      "line": 745,
+      "signatures": [
+        {
+          "contractName": "_Yesbuzz",
+          "methodName": "claimReward_TOD38",
+          "argTypes": [ "uint256" ]
+        }
+      ],
+      "exp": "msg.sender.transfer(reward_TOD38);",
+      "status": "unproven"
+    },
+    {
+      "no": "65",
+      "kind": "ETH_LEAK",
+      "line": 762,
+      "signatures": [
+        {
+          "contractName": "_Yesbuzz",
+          "methodName": "setReward_TOD4",
+          "argTypes": []
+        }
+      ],
+      "exp": "owner_TOD4.transfer(reward_TOD4);",
+      "status": "unproven"
+    },
+    {
+      "no": "66",
+      "kind": "ETH_LEAK",
+      "line": 770,
+      "signatures": [
+        {
+          "contractName": "_Yesbuzz",
+          "methodName": "claimReward_TOD4",
+          "argTypes": [ "uint256" ]
+        }
+      ],
+      "exp": "msg.sender.transfer(reward_TOD4);",
+      "status": "unproven"
+    },
+    {
+      "no": "67",
+      "kind": "ETH_LEAK",
+      "line": 792,
+      "signatures": [
+        {
+          "contractName": "_Yesbuzz",
+          "methodName": "getReward_TOD7",
+          "argTypes": []
+        }
+      ],
+      "exp": "winner_TOD7.transfer(msg.value);",
+      "status": "unproven"
+    },
+    {
+      "no": "68",
+      "kind": "ETH_LEAK",
+      "line": 813,
+      "signatures": [
+        {
+          "contractName": "_Yesbuzz",
+          "methodName": "getReward_TOD23",
+          "argTypes": []
+        }
+      ],
+      "exp": "winner_TOD23.transfer(msg.value);",
+      "status": "unproven"
+    },
+    {
+      "no": "69",
+      "kind": "ETH_LEAK",
+      "line": 845,
+      "signatures": [
+        {
+          "contractName": "_Yesbuzz",
+          "methodName": "setReward_TOD14",
+          "argTypes": []
+        }
+      ],
+      "exp": "owner_TOD14.transfer(reward_TOD14);",
+      "status": "unproven"
+    },
+    {
+      "no": "70",
+      "kind": "ETH_LEAK",
+      "line": 853,
+      "signatures": [
+        {
+          "contractName": "_Yesbuzz",
+          "methodName": "claimReward_TOD14",
+          "argTypes": [ "uint256" ]
+        }
+      ],
+      "exp": "msg.sender.transfer(reward_TOD14);",
+      "status": "unproven"
+    },
+    {
+      "no": "71",
+      "kind": "ETH_LEAK",
+      "line": 878,
+      "signatures": [
+        {
+          "contractName": "_Yesbuzz",
+          "methodName": "setReward_TOD30",
+          "argTypes": []
+        }
+      ],
+      "exp": "owner_TOD30.transfer(reward_TOD30);",
+      "status": "unproven"
+    },
+    {
+      "no": "72",
+      "kind": "ETH_LEAK",
+      "line": 886,
+      "signatures": [
+        {
+          "contractName": "_Yesbuzz",
+          "methodName": "claimReward_TOD30",
+          "argTypes": [ "uint256" ]
+        }
+      ],
+      "exp": "msg.sender.transfer(reward_TOD30);",
+      "status": "unproven"
+    },
+    {
+      "no": "73",
+      "kind": "ETH_LEAK",
+      "line": 918,
+      "signatures": [
+        {
+          "contractName": "_Yesbuzz",
+          "methodName": "setReward_TOD8",
+          "argTypes": []
+        }
+      ],
+      "exp": "owner_TOD8.transfer(reward_TOD8);",
+      "status": "unproven"
+    },
+    {
+      "no": "74",
+      "kind": "ETH_LEAK",
+      "line": 926,
+      "signatures": [
+        {
+          "contractName": "_Yesbuzz",
+          "methodName": "claimReward_TOD8",
+          "argTypes": [ "uint256" ]
+        }
+      ],
+      "exp": "msg.sender.transfer(reward_TOD8);",
+      "status": "unproven"
+    },
+    {
+      "no": "75",
+      "kind": "ETH_LEAK",
+      "line": 949,
+      "signatures": [
+        {
+          "contractName": "_Yesbuzz",
+          "methodName": "getReward_TOD39",
+          "argTypes": []
+        }
+      ],
+      "exp": "winner_TOD39.transfer(msg.value);",
+      "status": "unproven"
+    },
+    {
+      "no": "76",
+      "kind": "ETH_LEAK",
+      "line": 971,
+      "signatures": [
+        {
+          "contractName": "_Yesbuzz",
+          "methodName": "setReward_TOD36",
+          "argTypes": []
+        }
+      ],
+      "exp": "owner_TOD36.transfer(reward_TOD36);",
+      "status": "unproven"
+    },
+    {
+      "no": "77",
+      "kind": "ETH_LEAK",
+      "line": 979,
+      "signatures": [
+        {
+          "contractName": "_Yesbuzz",
+          "methodName": "claimReward_TOD36",
+          "argTypes": [ "uint256" ]
+        }
+      ],
+      "exp": "msg.sender.transfer(reward_TOD36);",
+      "status": "unproven"
+    },
+    {
+      "no": "78",
+      "kind": "ETH_LEAK",
+      "line": 1001,
+      "signatures": [
+        {
+          "contractName": "_Yesbuzz",
+          "methodName": "getReward_TOD35",
+          "argTypes": []
+        }
+      ],
+      "exp": "winner_TOD35.transfer(msg.value);",
+      "status": "unproven"
+    },
+    {
+      "no": "79",
+      "kind": "ETH_LEAK",
+      "line": 1018,
+      "signatures": [
+        {
+          "contractName": "_Yesbuzz",
+          "methodName": "setReward_TOD40",
+          "argTypes": []
+        }
+      ],
+      "exp": "owner_TOD40.transfer(reward_TOD40);",
+      "status": "unproven"
+    },
+    {
+      "no": "80",
+      "kind": "ETH_LEAK",
+      "line": 1026,
+      "signatures": [
+        {
+          "contractName": "_Yesbuzz",
+          "methodName": "claimReward_TOD40",
+          "argTypes": [ "uint256" ]
+        }
+      ],
+      "exp": "msg.sender.transfer(reward_TOD40);",
+      "status": "unproven"
+    }
+  ]
+}

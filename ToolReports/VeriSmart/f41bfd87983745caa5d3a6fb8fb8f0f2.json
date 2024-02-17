@@ -1,0 +1,51 @@
+{
+  "fileName": "Benchmarks/Study_SamplesSet/f41bfd87983745caa5d3a6fb8fb8f0f2.sol",
+  "baseName": "f41bfd87983745caa5d3a6fb8fb8f0f2.sol",
+  "iter": 19,
+  "time": "10.805193",
+  "errMsg": null,
+  "result": [
+    {
+      "no": "1",
+      "kind": "IO",
+      "line": 38,
+      "signatures": [
+        {
+          "contractName": "gray_complexFallback",
+          "methodName": "recordPaid",
+          "argTypes": []
+        }
+      ],
+      "exp": "(i + 1)",
+      "status": "proven"
+    },
+    {
+      "no": "2",
+      "kind": "IO",
+      "line": 40,
+      "signatures": [
+        {
+          "contractName": "gray_complexFallback",
+          "methodName": "recordPaid",
+          "argTypes": []
+        }
+      ],
+      "exp": "(money[i] + msg.value)",
+      "status": "unproven"
+    },
+    {
+      "no": "3",
+      "kind": "ETH_LEAK",
+      "line": 27,
+      "signatures": [
+        {
+          "contractName": "gray_complexFallback",
+          "methodName": "getOwnerMoney",
+          "argTypes": []
+        }
+      ],
+      "exp": "msg.sender.transfer(address(this).balance);",
+      "status": "proven"
+    }
+  ]
+}

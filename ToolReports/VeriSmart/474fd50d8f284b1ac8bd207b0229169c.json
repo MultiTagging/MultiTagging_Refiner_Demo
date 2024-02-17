@@ -1,0 +1,1267 @@
+{
+  "fileName": "Benchmarks/Study_SamplesSet/474fd50d8f284b1ac8bd207b0229169c.sol",
+  "baseName": "474fd50d8f284b1ac8bd207b0229169c.sol",
+  "iter": 54,
+  "time": "302.994352",
+  "errMsg": null,
+  "result": [
+    {
+      "no": "1",
+      "kind": "IO",
+      "line": 13,
+      "signatures": [
+        {
+          "contractName": "DWorldCore",
+          "methodName": "_assignBuyoutProceeds",
+          "argTypes": [
+            "address", "uint256", "uint256[]", "uint256", "uint256",
+            "uint256"
+          ]
+        },
+        {
+          "contractName": "DWorldCore",
+          "methodName": "_calculateAndAssignBuyoutProceeds",
+          "argTypes": [ "address", "uint256", "uint256[]" ]
+        },
+        {
+          "contractName": "DWorldCore",
+          "methodName": "_calculateAndAssignClaimDividends",
+          "argTypes": [ "uint256" ]
+        },
+        {
+          "contractName": "DWorldCore",
+          "methodName": "buyoutCost",
+          "argTypes": [ "uint256" ]
+        },
+        {
+          "contractName": "DWorldCore",
+          "methodName": "buyoutWithData",
+          "argTypes": [ "uint256", "string", "string", "string", "string" ]
+        },
+        {
+          "contractName": "DWorldCore",
+          "methodName": "claimDividend",
+          "argTypes": []
+        },
+        {
+          "contractName": "DWorldCore",
+          "methodName": "claimPlotMultipleWithData",
+          "argTypes": [
+            "uint256[]", "uint256", "string", "string", "string", "string"
+          ]
+        },
+        {
+          "contractName": "DWorldCore",
+          "methodName": "maximumInitialBuyoutPrice",
+          "argTypes": [ "uint256" ]
+        },
+        {
+          "contractName": "DWorldCore",
+          "methodName": "nextBuyoutPrice",
+          "argTypes": [ "uint256" ]
+        },
+        {
+          "contractName": "DWorldCore",
+          "methodName": "validInitialBuyoutPrice",
+          "argTypes": [ "uint256", "uint256" ]
+        }
+      ],
+      "exp": "(a * b)",
+      "status": "unproven"
+    },
+    {
+      "no": "2",
+      "kind": "IO",
+      "line": 27,
+      "signatures": [
+        {
+          "contractName": "DWorldCore",
+          "methodName": "_calculateAndAssignBuyoutProceeds",
+          "argTypes": [ "address", "uint256", "uint256[]" ]
+        }
+      ],
+      "exp": "(a - b)",
+      "status": "proven"
+    },
+    {
+      "no": "3",
+      "kind": "IO",
+      "line": 31,
+      "signatures": [
+        {
+          "contractName": "DWorldCore",
+          "methodName": "_assignBalance",
+          "argTypes": [ "address", "uint256" ]
+        },
+        {
+          "contractName": "DWorldCore",
+          "methodName": "_assignBuyoutProceeds",
+          "argTypes": [
+            "address", "uint256", "uint256[]", "uint256", "uint256",
+            "uint256"
+          ]
+        },
+        {
+          "contractName": "DWorldCore",
+          "methodName": "_calculateAndAssignBuyoutProceeds",
+          "argTypes": [ "address", "uint256", "uint256[]" ]
+        },
+        {
+          "contractName": "DWorldCore",
+          "methodName": "_calculateAndAssignClaimDividends",
+          "argTypes": [ "uint256" ]
+        },
+        {
+          "contractName": "DWorldCore",
+          "methodName": "buyoutCost",
+          "argTypes": [ "uint256" ]
+        },
+        {
+          "contractName": "DWorldCore",
+          "methodName": "claimPlotMultipleWithData",
+          "argTypes": [
+            "uint256[]", "uint256", "string", "string", "string", "string"
+          ]
+        }
+      ],
+      "exp": "(a + b)",
+      "status": "unproven"
+    },
+    {
+      "no": "4",
+      "kind": "IO",
+      "line": 428,
+      "signatures": [
+        {
+          "contractName": "DWorldCore",
+          "methodName": "_claimedSurroundingPlots",
+          "argTypes": [ "uint256" ]
+        },
+        {
+          "contractName": "DWorldCore",
+          "methodName": "coordinateToIdentifier",
+          "argTypes": [ "uint256", "uint256" ]
+        }
+      ],
+      "exp": "((y << 16) + x)",
+      "status": "proven"
+    },
+    {
+      "no": "5",
+      "kind": "IO",
+      "line": 437,
+      "signatures": [
+        {
+          "contractName": "DWorldCore",
+          "methodName": "_claimedSurroundingPlots",
+          "argTypes": [ "uint256" ]
+        },
+        {
+          "contractName": "DWorldCore",
+          "methodName": "deedUri",
+          "argTypes": [ "uint256" ]
+        },
+        {
+          "contractName": "DWorldCore",
+          "methodName": "identifierToCoordinate",
+          "argTypes": [ "uint256" ]
+        }
+      ],
+      "exp": "(identifier - (y << 16))",
+      "status": "proven"
+    },
+    {
+      "no": "6",
+      "kind": "IO",
+      "line": 536,
+      "signatures": [
+        {
+          "contractName": "DWorldCore",
+          "methodName": "buyoutWithData",
+          "argTypes": [ "uint256", "string", "string", "string", "string" ]
+        },
+        {
+          "contractName": "DWorldCore",
+          "methodName": "claimPlotMultipleWithData",
+          "argTypes": [
+            "uint256[]", "uint256", "string", "string", "string", "string"
+          ]
+        },
+        {
+          "contractName": "DWorldCore",
+          "methodName": "migrationStep",
+          "argTypes": [ "uint256" ]
+        },
+        {
+          "contractName": "DWorldCore",
+          "methodName": "takeOwnershipMultiple",
+          "argTypes": [ "uint256[]" ]
+        },
+        {
+          "contractName": "DWorldCore",
+          "methodName": "transferMultiple",
+          "argTypes": [ "address", "uint256[]" ]
+        },
+        {
+          "contractName": "DWorldDeed",
+          "methodName": "transferMultiple",
+          "argTypes": [ "address", "uint256[]" ]
+        },
+        {
+          "contractName": "DWorldFinance",
+          "methodName": "transferMultiple",
+          "argTypes": [ "address", "uint256[]" ]
+        },
+        {
+          "contractName": "DWorldMinting",
+          "methodName": "transferMultiple",
+          "argTypes": [ "address", "uint256[]" ]
+        },
+        {
+          "contractName": "DWorldUpgrade",
+          "methodName": "transferMultiple",
+          "argTypes": [ "address", "uint256[]" ]
+        }
+      ],
+      "exp": "(ownershipDeedCount[_to] + 1)",
+      "status": "unproven"
+    },
+    {
+      "no": "7",
+      "kind": "IO",
+      "line": 544,
+      "signatures": [
+        {
+          "contractName": "DWorldCore",
+          "methodName": "buyoutWithData",
+          "argTypes": [ "uint256", "string", "string", "string", "string" ]
+        },
+        {
+          "contractName": "DWorldCore",
+          "methodName": "claimPlotMultipleWithData",
+          "argTypes": [
+            "uint256[]", "uint256", "string", "string", "string", "string"
+          ]
+        },
+        {
+          "contractName": "DWorldCore",
+          "methodName": "migrationStep",
+          "argTypes": [ "uint256" ]
+        },
+        {
+          "contractName": "DWorldCore",
+          "methodName": "takeOwnershipMultiple",
+          "argTypes": [ "uint256[]" ]
+        },
+        {
+          "contractName": "DWorldCore",
+          "methodName": "transferMultiple",
+          "argTypes": [ "address", "uint256[]" ]
+        },
+        {
+          "contractName": "DWorldDeed",
+          "methodName": "transferMultiple",
+          "argTypes": [ "address", "uint256[]" ]
+        },
+        {
+          "contractName": "DWorldFinance",
+          "methodName": "transferMultiple",
+          "argTypes": [ "address", "uint256[]" ]
+        },
+        {
+          "contractName": "DWorldMinting",
+          "methodName": "transferMultiple",
+          "argTypes": [ "address", "uint256[]" ]
+        },
+        {
+          "contractName": "DWorldUpgrade",
+          "methodName": "transferMultiple",
+          "argTypes": [ "address", "uint256[]" ]
+        }
+      ],
+      "exp": "(ownershipDeedCount[_from] - 1)",
+      "status": "unproven"
+    },
+    {
+      "no": "8",
+      "kind": "IO",
+      "line": 595,
+      "signatures": [
+        {
+          "contractName": "DWorldCore",
+          "methodName": "approveMultiple",
+          "argTypes": [ "address", "uint256[]" ]
+        }
+      ],
+      "exp": "(i + 1)",
+      "status": "proven"
+    },
+    {
+      "no": "9",
+      "kind": "IO",
+      "line": 631,
+      "signatures": [
+        {
+          "contractName": "DWorldCore",
+          "methodName": "transferMultiple",
+          "argTypes": [ "address", "uint256[]" ]
+        },
+        {
+          "contractName": "DWorldDeed",
+          "methodName": "transferMultiple",
+          "argTypes": [ "address", "uint256[]" ]
+        },
+        {
+          "contractName": "DWorldFinance",
+          "methodName": "transferMultiple",
+          "argTypes": [ "address", "uint256[]" ]
+        },
+        {
+          "contractName": "DWorldMinting",
+          "methodName": "transferMultiple",
+          "argTypes": [ "address", "uint256[]" ]
+        },
+        {
+          "contractName": "DWorldUpgrade",
+          "methodName": "transferMultiple",
+          "argTypes": [ "address", "uint256[]" ]
+        }
+      ],
+      "exp": "(i + 1)",
+      "status": "proven"
+    },
+    {
+      "no": "10",
+      "kind": "IO",
+      "line": 657,
+      "signatures": [
+        {
+          "contractName": "DWorldCore",
+          "methodName": "takeOwnershipMultiple",
+          "argTypes": [ "uint256[]" ]
+        }
+      ],
+      "exp": "(i + 1)",
+      "status": "proven"
+    },
+    {
+      "no": "11",
+      "kind": "IO",
+      "line": 685,
+      "signatures": [
+        {
+          "contractName": "DWorldCore",
+          "methodName": "deedsOfOwner",
+          "argTypes": [ "address" ]
+        }
+      ],
+      "exp": "(deedNumber + 1)",
+      "status": "proven"
+    },
+    {
+      "no": "12",
+      "kind": "IO",
+      "line": 689,
+      "signatures": [
+        {
+          "contractName": "DWorldCore",
+          "methodName": "deedsOfOwner",
+          "argTypes": [ "address" ]
+        }
+      ],
+      "exp": "(resultIndex + 1)",
+      "status": "proven"
+    },
+    {
+      "no": "13",
+      "kind": "IO",
+      "line": 708,
+      "signatures": [
+        {
+          "contractName": "DWorldCore",
+          "methodName": "deedOfOwnerByIndex",
+          "argTypes": [ "address", "uint256" ]
+        }
+      ],
+      "exp": "(deedNumber + 1)",
+      "status": "proven"
+    },
+    {
+      "no": "14",
+      "kind": "IO",
+      "line": 715,
+      "signatures": [
+        {
+          "contractName": "DWorldCore",
+          "methodName": "deedOfOwnerByIndex",
+          "argTypes": [ "address", "uint256" ]
+        }
+      ],
+      "exp": "(seen + 1)",
+      "status": "unproven"
+    },
+    {
+      "no": "15",
+      "kind": "IO",
+      "line": 733,
+      "signatures": [
+        {
+          "contractName": "DWorldCore",
+          "methodName": "deedUri",
+          "argTypes": [ "uint256" ]
+        }
+      ],
+      "exp": "(i + 1)",
+      "status": "proven"
+    },
+    {
+      "no": "16",
+      "kind": "IO",
+      "line": 734,
+      "signatures": [
+        {
+          "contractName": "DWorldCore",
+          "methodName": "deedUri",
+          "argTypes": [ "uint256" ]
+        }
+      ],
+      "exp": "(10 ** i)",
+      "status": "proven"
+    },
+    {
+      "no": "17",
+      "kind": "IO",
+      "line": 734,
+      "signatures": [
+        {
+          "contractName": "DWorldCore",
+          "methodName": "deedUri",
+          "argTypes": [ "uint256" ]
+        }
+      ],
+      "exp": "(27 - i)",
+      "status": "proven"
+    },
+    {
+      "no": "18",
+      "kind": "IO",
+      "line": 734,
+      "signatures": [
+        {
+          "contractName": "DWorldCore",
+          "methodName": "deedUri",
+          "argTypes": [ "uint256" ]
+        }
+      ],
+      "exp": "(48 + ((x / (10 ** i)) % 10))",
+      "status": "proven"
+    },
+    {
+      "no": "19",
+      "kind": "IO",
+      "line": 735,
+      "signatures": [
+        {
+          "contractName": "DWorldCore",
+          "methodName": "deedUri",
+          "argTypes": [ "uint256" ]
+        }
+      ],
+      "exp": "(10 ** i)",
+      "status": "proven"
+    },
+    {
+      "no": "20",
+      "kind": "IO",
+      "line": 735,
+      "signatures": [
+        {
+          "contractName": "DWorldCore",
+          "methodName": "deedUri",
+          "argTypes": [ "uint256" ]
+        }
+      ],
+      "exp": "(33 - i)",
+      "status": "proven"
+    },
+    {
+      "no": "21",
+      "kind": "IO",
+      "line": 735,
+      "signatures": [
+        {
+          "contractName": "DWorldCore",
+          "methodName": "deedUri",
+          "argTypes": [ "uint256" ]
+        }
+      ],
+      "exp": "(48 + ((y / (10 ** i)) % 10))",
+      "status": "proven"
+    },
+    {
+      "no": "22",
+      "kind": "IO",
+      "line": 863,
+      "signatures": [
+        {
+          "contractName": "DWorldCore",
+          "methodName": "_claimedSurroundingPlots",
+          "argTypes": [ "uint256" ]
+        }
+      ],
+      "exp": "(dx + 1)",
+      "status": "unproven"
+    },
+    {
+      "no": "23",
+      "kind": "IO",
+      "line": 864,
+      "signatures": [
+        {
+          "contractName": "DWorldCore",
+          "methodName": "_claimedSurroundingPlots",
+          "argTypes": [ "uint256" ]
+        }
+      ],
+      "exp": "(dy + 1)",
+      "status": "proven"
+    },
+    {
+      "no": "24",
+      "kind": "IO",
+      "line": 872,
+      "signatures": [
+        {
+          "contractName": "DWorldCore",
+          "methodName": "_claimedSurroundingPlots",
+          "argTypes": [ "uint256" ]
+        }
+      ],
+      "exp": "(int256(x) + dx)",
+      "status": "unproven"
+    },
+    {
+      "no": "25",
+      "kind": "IO",
+      "line": 873,
+      "signatures": [
+        {
+          "contractName": "DWorldCore",
+          "methodName": "_claimedSurroundingPlots",
+          "argTypes": [ "uint256" ]
+        }
+      ],
+      "exp": "(int256(y) + dy)",
+      "status": "unproven"
+    },
+    {
+      "no": "26",
+      "kind": "IO",
+      "line": 878,
+      "signatures": [
+        {
+          "contractName": "DWorldCore",
+          "methodName": "_claimedSurroundingPlots",
+          "argTypes": [ "uint256" ]
+        }
+      ],
+      "exp": "(claimed + 1)",
+      "status": "proven"
+    },
+    {
+      "no": "27",
+      "kind": "IO",
+      "line": 887,
+      "signatures": [
+        {
+          "contractName": "DWorldCore",
+          "methodName": "_claimedSurroundingPlots",
+          "argTypes": [ "uint256" ]
+        }
+      ],
+      "exp": "(i + 1)",
+      "status": "proven"
+    },
+    {
+      "no": "28",
+      "kind": "IO",
+      "line": 925,
+      "signatures": [
+        {
+          "contractName": "DWorldCore",
+          "methodName": "_calculateAndAssignClaimDividends",
+          "argTypes": [ "uint256" ]
+        }
+      ],
+      "exp": "(i + 1)",
+      "status": "proven"
+    },
+    {
+      "no": "29",
+      "kind": "IO",
+      "line": 937,
+      "signatures": [
+        {
+          "contractName": "DWorldCore",
+          "methodName": "_assignBuyoutProceeds",
+          "argTypes": [
+            "address", "uint256", "uint256[]", "uint256", "uint256",
+            "uint256"
+          ]
+        },
+        {
+          "contractName": "DWorldCore",
+          "methodName": "buyoutWithData",
+          "argTypes": [ "uint256", "string", "string", "string", "string" ]
+        },
+        {
+          "contractName": "DWorldCore",
+          "methodName": "nextBuyoutPrice",
+          "argTypes": [ "uint256" ]
+        }
+      ],
+      "exp": "(totalCost * 2)",
+      "status": "unproven"
+    },
+    {
+      "no": "30",
+      "kind": "IO",
+      "line": 939,
+      "signatures": [
+        {
+          "contractName": "DWorldCore",
+          "methodName": "_assignBuyoutProceeds",
+          "argTypes": [
+            "address", "uint256", "uint256[]", "uint256", "uint256",
+            "uint256"
+          ]
+        },
+        {
+          "contractName": "DWorldCore",
+          "methodName": "buyoutWithData",
+          "argTypes": [ "uint256", "string", "string", "string", "string" ]
+        },
+        {
+          "contractName": "DWorldCore",
+          "methodName": "nextBuyoutPrice",
+          "argTypes": [ "uint256" ]
+        }
+      ],
+      "exp": "(totalCost * 170)",
+      "status": "unproven"
+    },
+    {
+      "no": "31",
+      "kind": "IO",
+      "line": 941,
+      "signatures": [
+        {
+          "contractName": "DWorldCore",
+          "methodName": "_assignBuyoutProceeds",
+          "argTypes": [
+            "address", "uint256", "uint256[]", "uint256", "uint256",
+            "uint256"
+          ]
+        },
+        {
+          "contractName": "DWorldCore",
+          "methodName": "buyoutWithData",
+          "argTypes": [ "uint256", "string", "string", "string", "string" ]
+        },
+        {
+          "contractName": "DWorldCore",
+          "methodName": "nextBuyoutPrice",
+          "argTypes": [ "uint256" ]
+        }
+      ],
+      "exp": "(totalCost * 150)",
+      "status": "unproven"
+    },
+    {
+      "no": "32",
+      "kind": "IO",
+      "line": 979,
+      "signatures": [
+        {
+          "contractName": "DWorldCore",
+          "methodName": "_assignBuyoutProceeds",
+          "argTypes": [
+            "address", "uint256", "uint256[]", "uint256", "uint256",
+            "uint256"
+          ]
+        }
+      ],
+      "exp": "(i + 1)",
+      "status": "proven"
+    },
+    {
+      "no": "33",
+      "kind": "IO",
+      "line": 1076,
+      "signatures": [
+        {
+          "contractName": "DWorldCore",
+          "methodName": "buyoutWithData",
+          "argTypes": [ "uint256", "string", "string", "string", "string" ]
+        }
+      ],
+      "exp": "(msg.value - totalCost)",
+      "status": "proven"
+    },
+    {
+      "no": "34",
+      "kind": "IO",
+      "line": 1172,
+      "signatures": [
+        {
+          "contractName": "DWorldCore",
+          "methodName": "claimPlotMultipleWithData",
+          "argTypes": [
+            "uint256[]", "uint256", "string", "string", "string", "string"
+          ]
+        }
+      ],
+      "exp": "(freeClaimAllowance[msg.sender] - buyAmount)",
+      "status": "proven"
+    },
+    {
+      "no": "35",
+      "kind": "IO",
+      "line": 1183,
+      "signatures": [
+        {
+          "contractName": "DWorldCore",
+          "methodName": "claimPlotMultipleWithData",
+          "argTypes": [
+            "uint256[]", "uint256", "string", "string", "string", "string"
+          ]
+        }
+      ],
+      "exp": "(buyAmount - freeAmount)",
+      "status": "proven"
+    },
+    {
+      "no": "36",
+      "kind": "IO",
+      "line": 1197,
+      "signatures": [
+        {
+          "contractName": "DWorldCore",
+          "methodName": "claimPlotMultipleWithData",
+          "argTypes": [
+            "uint256[]", "uint256", "string", "string", "string", "string"
+          ]
+        }
+      ],
+      "exp": "(i + 1)",
+      "status": "proven"
+    },
+    {
+      "no": "37",
+      "kind": "IO",
+      "line": 1207,
+      "signatures": [
+        {
+          "contractName": "DWorldCore",
+          "methodName": "claimPlotMultipleWithData",
+          "argTypes": [
+            "uint256[]", "uint256", "string", "string", "string", "string"
+          ]
+        }
+      ],
+      "exp": "(offset + i)",
+      "status": "unproven"
+    },
+    {
+      "no": "38",
+      "kind": "IO",
+      "line": 1232,
+      "signatures": [
+        {
+          "contractName": "DWorldCore",
+          "methodName": "claimPlotMultipleWithData",
+          "argTypes": [
+            "uint256[]", "uint256", "string", "string", "string", "string"
+          ]
+        }
+      ],
+      "exp": "(msg.value - etherRequired)",
+      "status": "proven"
+    },
+    {
+      "no": "39",
+      "kind": "IO",
+      "line": 1753,
+      "signatures": [
+        {
+          "contractName": "OriginalDWorldDeed",
+          "methodName": "_transfer",
+          "argTypes": [ "address", "address", "uint256" ]
+        }
+      ],
+      "exp": "(ownershipDeedCount[_to] + 1)",
+      "status": "unproven"
+    },
+    {
+      "no": "40",
+      "kind": "IO",
+      "line": 1761,
+      "signatures": [
+        {
+          "contractName": "OriginalDWorldDeed",
+          "methodName": "_transfer",
+          "argTypes": [ "address", "address", "uint256" ]
+        }
+      ],
+      "exp": "(ownershipDeedCount[_from] - 1)",
+      "status": "unproven"
+    },
+    {
+      "no": "41",
+      "kind": "IO",
+      "line": 1848,
+      "signatures": [
+        {
+          "contractName": "OriginalDWorldDeed",
+          "methodName": "transferMultiple",
+          "argTypes": [ "address", "uint256[]" ]
+        }
+      ],
+      "exp": "(i + 1)",
+      "status": "proven"
+    },
+    {
+      "no": "42",
+      "kind": "IO",
+      "line": 2021,
+      "signatures": [
+        {
+          "contractName": "DWorldCore",
+          "methodName": "migrationStep",
+          "argTypes": [ "uint256" ]
+        }
+      ],
+      "exp": "(i + 1)",
+      "status": "proven"
+    },
+    {
+      "no": "43",
+      "kind": "IO",
+      "line": 2021,
+      "signatures": [
+        {
+          "contractName": "DWorldCore",
+          "methodName": "migrationStep",
+          "argTypes": [ "uint256" ]
+        }
+      ],
+      "exp": "(migrationNumPlotsTransferred + numPlotsTransfer)",
+      "status": "unproven"
+    },
+    {
+      "no": "44",
+      "kind": "IO",
+      "line": 2059,
+      "signatures": [
+        {
+          "contractName": "DWorldCore",
+          "methodName": "migrationStep",
+          "argTypes": [ "uint256" ]
+        }
+      ],
+      "exp": "(migrationNumPlotsTransferred + i)",
+      "status": "unproven"
+    },
+    {
+      "no": "45",
+      "kind": "IO",
+      "line": 2084,
+      "signatures": [
+        {
+          "contractName": "DWorldCore",
+          "methodName": "DWorldCore",
+          "argTypes": [ "address", "address", "address", "uint256" ]
+        }
+      ],
+      "exp": "(block.timestamp + (buyoutsEnabledAfterHours * 3600))",
+      "status": "unproven"
+    },
+    {
+      "no": "46",
+      "kind": "IO",
+      "line": 2084,
+      "signatures": [
+        {
+          "contractName": "DWorldCore",
+          "methodName": "DWorldCore",
+          "argTypes": [ "address", "address", "address", "uint256" ]
+        }
+      ],
+      "exp": "(buyoutsEnabledAfterHours * 3600)",
+      "status": "unproven"
+    },
+    {
+      "no": "47",
+      "kind": "IO",
+      "line": 2112,
+      "signatures": [
+        {
+          "contractName": "DWorldCore",
+          "methodName": "setPlotDataMultiple",
+          "argTypes": [ "uint256[]", "string", "string", "string", "string" ]
+        }
+      ],
+      "exp": "(i + 1)",
+      "status": "proven"
+    },
+    {
+      "no": "48",
+      "kind": "IO",
+      "line": 2132,
+      "signatures": [
+        {
+          "contractName": "DWorldCore",
+          "methodName": "withdrawBalance",
+          "argTypes": []
+        }
+      ],
+      "exp": "(outstandingEther - etherOwed)",
+      "status": "unproven"
+    },
+    {
+      "no": "49",
+      "kind": "IO",
+      "line": 2144,
+      "signatures": [
+        {
+          "contractName": "DWorldCore",
+          "methodName": "withdrawFreeBalance",
+          "argTypes": []
+        }
+      ],
+      "exp": "(this.balance - outstandingEther)",
+      "status": "unproven"
+    },
+    {
+      "no": "50",
+      "kind": "DZ",
+      "line": 14,
+      "signatures": [
+        {
+          "contractName": "DWorldCore",
+          "methodName": "_assignBuyoutProceeds",
+          "argTypes": [
+            "address", "uint256", "uint256[]", "uint256", "uint256",
+            "uint256"
+          ]
+        },
+        {
+          "contractName": "DWorldCore",
+          "methodName": "_calculateAndAssignBuyoutProceeds",
+          "argTypes": [ "address", "uint256", "uint256[]" ]
+        },
+        {
+          "contractName": "DWorldCore",
+          "methodName": "_calculateAndAssignClaimDividends",
+          "argTypes": [ "uint256" ]
+        },
+        {
+          "contractName": "DWorldCore",
+          "methodName": "buyoutCost",
+          "argTypes": [ "uint256" ]
+        },
+        {
+          "contractName": "DWorldCore",
+          "methodName": "buyoutWithData",
+          "argTypes": [ "uint256", "string", "string", "string", "string" ]
+        },
+        {
+          "contractName": "DWorldCore",
+          "methodName": "claimDividend",
+          "argTypes": []
+        },
+        {
+          "contractName": "DWorldCore",
+          "methodName": "claimPlotMultipleWithData",
+          "argTypes": [
+            "uint256[]", "uint256", "string", "string", "string", "string"
+          ]
+        },
+        {
+          "contractName": "DWorldCore",
+          "methodName": "maximumInitialBuyoutPrice",
+          "argTypes": [ "uint256" ]
+        },
+        {
+          "contractName": "DWorldCore",
+          "methodName": "nextBuyoutPrice",
+          "argTypes": [ "uint256" ]
+        },
+        {
+          "contractName": "DWorldCore",
+          "methodName": "validInitialBuyoutPrice",
+          "argTypes": [ "uint256", "uint256" ]
+        }
+      ],
+      "exp": "(c / a)",
+      "status": "proven"
+    },
+    {
+      "no": "51",
+      "kind": "DZ",
+      "line": 20,
+      "signatures": [
+        {
+          "contractName": "DWorldCore",
+          "methodName": "_assignBuyoutProceeds",
+          "argTypes": [
+            "address", "uint256", "uint256[]", "uint256", "uint256",
+            "uint256"
+          ]
+        },
+        {
+          "contractName": "DWorldCore",
+          "methodName": "_calculateAndAssignBuyoutProceeds",
+          "argTypes": [ "address", "uint256", "uint256[]" ]
+        },
+        {
+          "contractName": "DWorldCore",
+          "methodName": "_calculateAndAssignClaimDividends",
+          "argTypes": [ "uint256" ]
+        },
+        {
+          "contractName": "DWorldCore",
+          "methodName": "buyoutCost",
+          "argTypes": [ "uint256" ]
+        },
+        {
+          "contractName": "DWorldCore",
+          "methodName": "buyoutWithData",
+          "argTypes": [ "uint256", "string", "string", "string", "string" ]
+        },
+        {
+          "contractName": "DWorldCore",
+          "methodName": "claimDividend",
+          "argTypes": []
+        },
+        {
+          "contractName": "DWorldCore",
+          "methodName": "nextBuyoutPrice",
+          "argTypes": [ "uint256" ]
+        }
+      ],
+      "exp": "(a / b)",
+      "status": "proven"
+    },
+    {
+      "no": "52",
+      "kind": "DZ",
+      "line": 734,
+      "signatures": [
+        {
+          "contractName": "DWorldCore",
+          "methodName": "deedUri",
+          "argTypes": [ "uint256" ]
+        }
+      ],
+      "exp": "((x / (10 ** i)) % 10)",
+      "status": "proven"
+    },
+    {
+      "no": "53",
+      "kind": "DZ",
+      "line": 734,
+      "signatures": [
+        {
+          "contractName": "DWorldCore",
+          "methodName": "deedUri",
+          "argTypes": [ "uint256" ]
+        }
+      ],
+      "exp": "(x / (10 ** i))",
+      "status": "unproven"
+    },
+    {
+      "no": "54",
+      "kind": "DZ",
+      "line": 735,
+      "signatures": [
+        {
+          "contractName": "DWorldCore",
+          "methodName": "deedUri",
+          "argTypes": [ "uint256" ]
+        }
+      ],
+      "exp": "((y / (10 ** i)) % 10)",
+      "status": "proven"
+    },
+    {
+      "no": "55",
+      "kind": "DZ",
+      "line": 735,
+      "signatures": [
+        {
+          "contractName": "DWorldCore",
+          "methodName": "deedUri",
+          "argTypes": [ "uint256" ]
+        }
+      ],
+      "exp": "(y / (10 ** i))",
+      "status": "proven"
+    },
+    {
+      "no": "56",
+      "kind": "DZ",
+      "line": 872,
+      "signatures": [
+        {
+          "contractName": "DWorldCore",
+          "methodName": "_claimedSurroundingPlots",
+          "argTypes": [ "uint256" ]
+        }
+      ],
+      "exp": "(uint256((int256(x) + dx)) % 65536)",
+      "status": "proven"
+    },
+    {
+      "no": "57",
+      "kind": "DZ",
+      "line": 873,
+      "signatures": [
+        {
+          "contractName": "DWorldCore",
+          "methodName": "_claimedSurroundingPlots",
+          "argTypes": [ "uint256" ]
+        }
+      ],
+      "exp": "(uint256((int256(y) + dy)) % 65536)",
+      "status": "proven"
+    },
+    {
+      "no": "58",
+      "kind": "DZ",
+      "line": 939,
+      "signatures": [
+        {
+          "contractName": "DWorldCore",
+          "methodName": "_assignBuyoutProceeds",
+          "argTypes": [
+            "address", "uint256", "uint256[]", "uint256", "uint256",
+            "uint256"
+          ]
+        },
+        {
+          "contractName": "DWorldCore",
+          "methodName": "buyoutWithData",
+          "argTypes": [ "uint256", "string", "string", "string", "string" ]
+        },
+        {
+          "contractName": "DWorldCore",
+          "methodName": "nextBuyoutPrice",
+          "argTypes": [ "uint256" ]
+        }
+      ],
+      "exp": "((totalCost * 170) / 100)",
+      "status": "proven"
+    },
+    {
+      "no": "59",
+      "kind": "DZ",
+      "line": 941,
+      "signatures": [
+        {
+          "contractName": "DWorldCore",
+          "methodName": "_assignBuyoutProceeds",
+          "argTypes": [
+            "address", "uint256", "uint256[]", "uint256", "uint256",
+            "uint256"
+          ]
+        },
+        {
+          "contractName": "DWorldCore",
+          "methodName": "buyoutWithData",
+          "argTypes": [ "uint256", "string", "string", "string", "string" ]
+        },
+        {
+          "contractName": "DWorldCore",
+          "methodName": "nextBuyoutPrice",
+          "argTypes": [ "uint256" ]
+        }
+      ],
+      "exp": "((totalCost * 150) / 100)",
+      "status": "proven"
+    },
+    {
+      "no": "60",
+      "kind": "DZ",
+      "line": 1018,
+      "signatures": [
+        {
+          "contractName": "DWorldCore",
+          "methodName": "_calculateAndAssignBuyoutProceeds",
+          "argTypes": [ "address", "uint256", "uint256[]" ]
+        }
+      ],
+      "exp": "(flatDividends.add(variableDividends) / claimedSurroundingPlots.length)",
+      "status": "proven"
+    },
+    {
+      "no": "61",
+      "kind": "ETH_LEAK",
+      "line": 1081,
+      "signatures": [
+        {
+          "contractName": "DWorldCore",
+          "methodName": "buyoutWithData",
+          "argTypes": [ "uint256", "string", "string", "string", "string" ]
+        }
+      ],
+      "exp": "msg.sender.transfer(excess);",
+      "status": "proven"
+    },
+    {
+      "no": "62",
+      "kind": "ETH_LEAK",
+      "line": 1237,
+      "signatures": [
+        {
+          "contractName": "DWorldCore",
+          "methodName": "claimPlotMultipleWithData",
+          "argTypes": [
+            "uint256[]", "uint256", "string", "string", "string", "string"
+          ]
+        }
+      ],
+      "exp": "msg.sender.transfer(excess);",
+      "status": "unproven"
+    },
+    {
+      "no": "63",
+      "kind": "ETH_LEAK",
+      "line": 2136,
+      "signatures": [
+        {
+          "contractName": "DWorldCore",
+          "methodName": "withdrawBalance",
+          "argTypes": []
+        }
+      ],
+      "exp": "msg.sender.transfer(etherOwed);",
+      "status": "unproven"
+    },
+    {
+      "no": "64",
+      "kind": "ETH_LEAK",
+      "line": 2146,
+      "signatures": [
+        {
+          "contractName": "DWorldCore",
+          "methodName": "withdrawFreeBalance",
+          "argTypes": []
+        }
+      ],
+      "exp": "cfoAddress.transfer(freeBalance);",
+      "status": "unproven"
+    }
+  ]
+}

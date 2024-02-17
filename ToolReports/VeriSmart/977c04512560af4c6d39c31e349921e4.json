@@ -1,0 +1,204 @@
+{
+  "fileName": "Benchmarks/Study_SamplesSet/977c04512560af4c6d39c31e349921e4.sol",
+  "baseName": "977c04512560af4c6d39c31e349921e4.sol",
+  "iter": 639,
+  "time": "300.285605",
+  "errMsg": null,
+  "result": [
+    {
+      "no": "1",
+      "kind": "IO",
+      "line": 177,
+      "signatures": [
+        {
+          "contractName": "BCFMain",
+          "methodName": "createCardForAcquiredPlayer",
+          "argTypes": [ "uint256", "address" ]
+        },
+        {
+          "contractName": "BCFMain",
+          "methodName": "createCardForAcquiredPlayers",
+          "argTypes": [ "uint256[]", "address" ]
+        },
+        {
+          "contractName": "BCFMain",
+          "methodName": "createPlayerAndAssign",
+          "argTypes": [
+            "uint8", "uint8", "uint8", "uint8", "uint8", "uint8", "uint8",
+            "uint8", "dbytes", "string", "address"
+          ]
+        },
+        {
+          "contractName": "BCFMain",
+          "methodName": "createPlayerOnAuction",
+          "argTypes": [
+            "uint8", "uint8", "uint8", "uint8", "uint8", "uint8", "uint8",
+            "uint8", "dbytes", "string", "uint256"
+          ]
+        },
+        {
+          "contractName": "BCFMain",
+          "methodName": "transfer",
+          "argTypes": [ "address", "uint256" ]
+        },
+        {
+          "contractName": "BCFMain",
+          "methodName": "transferFrom",
+          "argTypes": [ "address", "address", "uint256" ]
+        }
+      ],
+      "exp": "(ownerToCardsOwned[_owner].length - 1)",
+      "status": "unproven"
+    },
+    {
+      "no": "2",
+      "kind": "IO",
+      "line": 183,
+      "signatures": [
+        {
+          "contractName": "BCFMain",
+          "methodName": "removeCardFromOwnersList",
+          "argTypes": [ "address", "uint256" ]
+        }
+      ],
+      "exp": "(length - 1)",
+      "status": "unproven"
+    },
+    {
+      "no": "3",
+      "kind": "IO",
+      "line": 188,
+      "signatures": [
+        {
+          "contractName": "BCFMain",
+          "methodName": "removeCardFromOwnersList",
+          "argTypes": [ "address", "uint256" ]
+        }
+      ],
+      "exp": "(length - 1)",
+      "status": "proven"
+    },
+    {
+      "no": "4",
+      "kind": "IO",
+      "line": 189,
+      "signatures": [
+        {
+          "contractName": "BCFMain",
+          "methodName": "removeCardFromOwnersList",
+          "argTypes": [ "address", "uint256" ]
+        }
+      ],
+      "exp": "(ownerToCardsOwned[_owner].length - 1)",
+      "status": "proven"
+    },
+    {
+      "no": "5",
+      "kind": "IO",
+      "line": 237,
+      "signatures": [
+        {
+          "contractName": "BCFMain",
+          "methodName": "createCardForAcquiredPlayer",
+          "argTypes": [ "uint256", "address" ]
+        },
+        {
+          "contractName": "BCFMain",
+          "methodName": "createCardForAcquiredPlayers",
+          "argTypes": [ "uint256[]", "address" ]
+        },
+        {
+          "contractName": "BCFMain",
+          "methodName": "createPlayerAndAssign",
+          "argTypes": [
+            "uint8", "uint8", "uint8", "uint8", "uint8", "uint8", "uint8",
+            "uint8", "dbytes", "string", "address"
+          ]
+        },
+        {
+          "contractName": "BCFMain",
+          "methodName": "createPlayerOnAuction",
+          "argTypes": [
+            "uint8", "uint8", "uint8", "uint8", "uint8", "uint8", "uint8",
+            "uint8", "dbytes", "string", "uint256"
+          ]
+        }
+      ],
+      "exp": "(playerCards.push(_cardInstance) - 1)",
+      "status": "unproven"
+    },
+    {
+      "no": "6",
+      "kind": "IO",
+      "line": 289,
+      "signatures": [
+        {
+          "contractName": "BCFMain",
+          "methodName": "isOwnerOfAllPlayerCards",
+          "argTypes": [ "uint256[]", "address" ]
+        }
+      ],
+      "exp": "(i + 1)",
+      "status": "proven"
+    },
+    {
+      "no": "7",
+      "kind": "IO",
+      "line": 338,
+      "signatures": [
+        {
+          "contractName": "BCFMain",
+          "methodName": "createCardForAcquiredPlayers",
+          "argTypes": [ "uint256[]", "address" ]
+        }
+      ],
+      "exp": "(i + 1)",
+      "status": "proven"
+    },
+    {
+      "no": "8",
+      "kind": "IO",
+      "line": 681,
+      "signatures": [
+        {
+          "contractName": "BCFMain",
+          "methodName": "createPlayer",
+          "argTypes": [
+            "uint8", "uint8", "uint8", "uint8", "uint8", "uint8", "uint8",
+            "uint8", "dbytes", "string"
+          ]
+        }
+      ],
+      "exp": "(players.push(_playerInstance) - 1)",
+      "status": "unproven"
+    },
+    {
+      "no": "9",
+      "kind": "ETH_LEAK",
+      "line": 451,
+      "signatures": [
+        {
+          "contractName": "BCFAuction",
+          "methodName": "withdrawBalance",
+          "argTypes": []
+        }
+      ],
+      "exp": "storageAddress.transfer(this.balance);",
+      "status": "unproven"
+    },
+    {
+      "no": "10",
+      "kind": "ETH_LEAK",
+      "line": 778,
+      "signatures": [
+        {
+          "contractName": "BCFMain",
+          "methodName": "withdrawBalance",
+          "argTypes": []
+        }
+      ],
+      "exp": "owner.transfer(this.balance);",
+      "status": "proven"
+    }
+  ]
+}

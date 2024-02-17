@@ -1,0 +1,673 @@
+{
+  "fileName": "Benchmarks/Study_SamplesSet/ab9c2681eb4aa3c242c82fe2da9b938c.sol",
+  "baseName": "ab9c2681eb4aa3c242c82fe2da9b938c.sol",
+  "iter": 295,
+  "time": "300.267631",
+  "errMsg": null,
+  "result": [
+    {
+      "no": "1",
+      "kind": "IO",
+      "line": 429,
+      "signatures": [
+        { "contractName": "StockBet", "methodName": "betUp", "argTypes": [] }
+      ],
+      "exp": "(bet * 1000000000000000)",
+      "status": "unproven"
+    },
+    {
+      "no": "2",
+      "kind": "IO",
+      "line": 431,
+      "signatures": [
+        { "contractName": "StockBet", "methodName": "betUp", "argTypes": [] }
+      ],
+      "exp": "(guesses[UP].guesses_number + 1)",
+      "status": "unproven"
+    },
+    {
+      "no": "3",
+      "kind": "IO",
+      "line": 456,
+      "signatures": [
+        {
+          "contractName": "StockBet",
+          "methodName": "betDown",
+          "argTypes": []
+        }
+      ],
+      "exp": "(bet * 1000000000000000)",
+      "status": "unproven"
+    },
+    {
+      "no": "4",
+      "kind": "IO",
+      "line": 458,
+      "signatures": [
+        {
+          "contractName": "StockBet",
+          "methodName": "betDown",
+          "argTypes": []
+        }
+      ],
+      "exp": "(guesses[DOWN].guesses_number + 1)",
+      "status": "unproven"
+    },
+    {
+      "no": "5",
+      "kind": "DZ",
+      "line": 494,
+      "signatures": [
+        {
+          "contractName": "StockBet",
+          "methodName": "setFinalPrice",
+          "argTypes": [ "uint256" ]
+        }
+      ],
+      "exp": "(getBalance() / guesses[result].guesses_number)",
+      "status": "proven"
+    },
+    {
+      "no": "6",
+      "kind": "KA",
+      "line": 516,
+      "signatures": [
+        {
+          "contractName": "StockBet",
+          "methodName": "collectOwnerWinnings",
+          "argTypes": []
+        }
+      ],
+      "exp": "selfdestruct(owner);",
+      "status": "proven"
+    },
+    {
+      "no": "7",
+      "kind": "ETH_LEAK",
+      "line": 20,
+      "signatures": [
+        {
+          "contractName": "StockBet",
+          "methodName": "getReward_TOD39",
+          "argTypes": []
+        }
+      ],
+      "exp": "winner_TOD39.transfer(msg.value);",
+      "status": "unproven"
+    },
+    {
+      "no": "8",
+      "kind": "ETH_LEAK",
+      "line": 30,
+      "signatures": [
+        {
+          "contractName": "StockBet",
+          "methodName": "setReward_TOD36",
+          "argTypes": []
+        }
+      ],
+      "exp": "owner_TOD36.transfer(reward_TOD36);",
+      "status": "proven"
+    },
+    {
+      "no": "9",
+      "kind": "ETH_LEAK",
+      "line": 38,
+      "signatures": [
+        {
+          "contractName": "StockBet",
+          "methodName": "claimReward_TOD36",
+          "argTypes": [ "uint256" ]
+        }
+      ],
+      "exp": "msg.sender.transfer(reward_TOD36);",
+      "status": "unproven"
+    },
+    {
+      "no": "10",
+      "kind": "ETH_LEAK",
+      "line": 53,
+      "signatures": [
+        {
+          "contractName": "StockBet",
+          "methodName": "getReward_TOD35",
+          "argTypes": []
+        }
+      ],
+      "exp": "winner_TOD35.transfer(msg.value);",
+      "status": "unproven"
+    },
+    {
+      "no": "11",
+      "kind": "ETH_LEAK",
+      "line": 63,
+      "signatures": [
+        {
+          "contractName": "StockBet",
+          "methodName": "setReward_TOD40",
+          "argTypes": []
+        }
+      ],
+      "exp": "owner_TOD40.transfer(reward_TOD40);",
+      "status": "proven"
+    },
+    {
+      "no": "12",
+      "kind": "ETH_LEAK",
+      "line": 71,
+      "signatures": [
+        {
+          "contractName": "StockBet",
+          "methodName": "claimReward_TOD40",
+          "argTypes": [ "uint256" ]
+        }
+      ],
+      "exp": "msg.sender.transfer(reward_TOD40);",
+      "status": "unproven"
+    },
+    {
+      "no": "13",
+      "kind": "ETH_LEAK",
+      "line": 86,
+      "signatures": [
+        {
+          "contractName": "StockBet",
+          "methodName": "getReward_TOD33",
+          "argTypes": []
+        }
+      ],
+      "exp": "winner_TOD33.transfer(msg.value);",
+      "status": "unproven"
+    },
+    {
+      "no": "14",
+      "kind": "ETH_LEAK",
+      "line": 100,
+      "signatures": [
+        {
+          "contractName": "StockBet",
+          "methodName": "getReward_TOD27",
+          "argTypes": []
+        }
+      ],
+      "exp": "winner_TOD27.transfer(msg.value);",
+      "status": "unproven"
+    },
+    {
+      "no": "15",
+      "kind": "ETH_LEAK",
+      "line": 115,
+      "signatures": [
+        {
+          "contractName": "StockBet",
+          "methodName": "getReward_TOD31",
+          "argTypes": []
+        }
+      ],
+      "exp": "winner_TOD31.transfer(msg.value);",
+      "status": "unproven"
+    },
+    {
+      "no": "16",
+      "kind": "ETH_LEAK",
+      "line": 129,
+      "signatures": [
+        {
+          "contractName": "StockBet",
+          "methodName": "getReward_TOD13",
+          "argTypes": []
+        }
+      ],
+      "exp": "winner_TOD13.transfer(msg.value);",
+      "status": "unproven"
+    },
+    {
+      "no": "17",
+      "kind": "ETH_LEAK",
+      "line": 155,
+      "signatures": [
+        {
+          "contractName": "StockBet",
+          "methodName": "setReward_TOD12",
+          "argTypes": []
+        }
+      ],
+      "exp": "owner_TOD12.transfer(reward_TOD12);",
+      "status": "proven"
+    },
+    {
+      "no": "18",
+      "kind": "ETH_LEAK",
+      "line": 163,
+      "signatures": [
+        {
+          "contractName": "StockBet",
+          "methodName": "claimReward_TOD12",
+          "argTypes": [ "uint256" ]
+        }
+      ],
+      "exp": "msg.sender.transfer(reward_TOD12);",
+      "status": "unproven"
+    },
+    {
+      "no": "19",
+      "kind": "ETH_LEAK",
+      "line": 178,
+      "signatures": [
+        {
+          "contractName": "StockBet",
+          "methodName": "getReward_TOD11",
+          "argTypes": []
+        }
+      ],
+      "exp": "winner_TOD11.transfer(msg.value);",
+      "status": "unproven"
+    },
+    {
+      "no": "20",
+      "kind": "ETH_LEAK",
+      "line": 192,
+      "signatures": [
+        {
+          "contractName": "StockBet",
+          "methodName": "getReward_TOD1",
+          "argTypes": []
+        }
+      ],
+      "exp": "winner_TOD1.transfer(msg.value);",
+      "status": "unproven"
+    },
+    {
+      "no": "21",
+      "kind": "ETH_LEAK",
+      "line": 203,
+      "signatures": [
+        {
+          "contractName": "StockBet",
+          "methodName": "setReward_TOD2",
+          "argTypes": []
+        }
+      ],
+      "exp": "owner_TOD2.transfer(reward_TOD2);",
+      "status": "proven"
+    },
+    {
+      "no": "22",
+      "kind": "ETH_LEAK",
+      "line": 211,
+      "signatures": [
+        {
+          "contractName": "StockBet",
+          "methodName": "claimReward_TOD2",
+          "argTypes": [ "uint256" ]
+        }
+      ],
+      "exp": "msg.sender.transfer(reward_TOD2);",
+      "status": "unproven"
+    },
+    {
+      "no": "23",
+      "kind": "ETH_LEAK",
+      "line": 227,
+      "signatures": [
+        {
+          "contractName": "StockBet",
+          "methodName": "getReward_TOD17",
+          "argTypes": []
+        }
+      ],
+      "exp": "winner_TOD17.transfer(msg.value);",
+      "status": "unproven"
+    },
+    {
+      "no": "24",
+      "kind": "ETH_LEAK",
+      "line": 242,
+      "signatures": [
+        {
+          "contractName": "StockBet",
+          "methodName": "getReward_TOD37",
+          "argTypes": []
+        }
+      ],
+      "exp": "winner_TOD37.transfer(msg.value);",
+      "status": "unproven"
+    },
+    {
+      "no": "25",
+      "kind": "ETH_LEAK",
+      "line": 256,
+      "signatures": [
+        {
+          "contractName": "StockBet",
+          "methodName": "getReward_TOD3",
+          "argTypes": []
+        }
+      ],
+      "exp": "winner_TOD3.transfer(msg.value);",
+      "status": "unproven"
+    },
+    {
+      "no": "26",
+      "kind": "ETH_LEAK",
+      "line": 270,
+      "signatures": [
+        {
+          "contractName": "StockBet",
+          "methodName": "getReward_TOD9",
+          "argTypes": []
+        }
+      ],
+      "exp": "winner_TOD9.transfer(msg.value);",
+      "status": "unproven"
+    },
+    {
+      "no": "27",
+      "kind": "ETH_LEAK",
+      "line": 285,
+      "signatures": [
+        {
+          "contractName": "StockBet",
+          "methodName": "getReward_TOD25",
+          "argTypes": []
+        }
+      ],
+      "exp": "winner_TOD25.transfer(msg.value);",
+      "status": "unproven"
+    },
+    {
+      "no": "28",
+      "kind": "ETH_LEAK",
+      "line": 299,
+      "signatures": [
+        {
+          "contractName": "StockBet",
+          "methodName": "getReward_TOD19",
+          "argTypes": []
+        }
+      ],
+      "exp": "winner_TOD19.transfer(msg.value);",
+      "status": "unproven"
+    },
+    {
+      "no": "29",
+      "kind": "ETH_LEAK",
+      "line": 343,
+      "signatures": [
+        {
+          "contractName": "StockBet",
+          "methodName": "setReward_TOD26",
+          "argTypes": []
+        }
+      ],
+      "exp": "owner_TOD26.transfer(reward_TOD26);",
+      "status": "proven"
+    },
+    {
+      "no": "30",
+      "kind": "ETH_LEAK",
+      "line": 351,
+      "signatures": [
+        {
+          "contractName": "StockBet",
+          "methodName": "claimReward_TOD26",
+          "argTypes": [ "uint256" ]
+        }
+      ],
+      "exp": "msg.sender.transfer(reward_TOD26);",
+      "status": "unproven"
+    },
+    {
+      "no": "31",
+      "kind": "ETH_LEAK",
+      "line": 367,
+      "signatures": [
+        {
+          "contractName": "StockBet",
+          "methodName": "setReward_TOD20",
+          "argTypes": []
+        }
+      ],
+      "exp": "owner_TOD20.transfer(reward_TOD20);",
+      "status": "proven"
+    },
+    {
+      "no": "32",
+      "kind": "ETH_LEAK",
+      "line": 375,
+      "signatures": [
+        {
+          "contractName": "StockBet",
+          "methodName": "claimReward_TOD20",
+          "argTypes": [ "uint256" ]
+        }
+      ],
+      "exp": "msg.sender.transfer(reward_TOD20);",
+      "status": "unproven"
+    },
+    {
+      "no": "33",
+      "kind": "ETH_LEAK",
+      "line": 392,
+      "signatures": [
+        {
+          "contractName": "StockBet",
+          "methodName": "setReward_TOD32",
+          "argTypes": []
+        }
+      ],
+      "exp": "owner_TOD32.transfer(reward_TOD32);",
+      "status": "proven"
+    },
+    {
+      "no": "34",
+      "kind": "ETH_LEAK",
+      "line": 400,
+      "signatures": [
+        {
+          "contractName": "StockBet",
+          "methodName": "claimReward_TOD32",
+          "argTypes": [ "uint256" ]
+        }
+      ],
+      "exp": "msg.sender.transfer(reward_TOD32);",
+      "status": "unproven"
+    },
+    {
+      "no": "35",
+      "kind": "ETH_LEAK",
+      "line": 416,
+      "signatures": [
+        {
+          "contractName": "StockBet",
+          "methodName": "setReward_TOD38",
+          "argTypes": []
+        }
+      ],
+      "exp": "owner_TOD38.transfer(reward_TOD38);",
+      "status": "proven"
+    },
+    {
+      "no": "36",
+      "kind": "ETH_LEAK",
+      "line": 424,
+      "signatures": [
+        {
+          "contractName": "StockBet",
+          "methodName": "claimReward_TOD38",
+          "argTypes": [ "uint256" ]
+        }
+      ],
+      "exp": "msg.sender.transfer(reward_TOD38);",
+      "status": "unproven"
+    },
+    {
+      "no": "37",
+      "kind": "ETH_LEAK",
+      "line": 443,
+      "signatures": [
+        {
+          "contractName": "StockBet",
+          "methodName": "setReward_TOD4",
+          "argTypes": []
+        }
+      ],
+      "exp": "owner_TOD4.transfer(reward_TOD4);",
+      "status": "proven"
+    },
+    {
+      "no": "38",
+      "kind": "ETH_LEAK",
+      "line": 451,
+      "signatures": [
+        {
+          "contractName": "StockBet",
+          "methodName": "claimReward_TOD4",
+          "argTypes": [ "uint256" ]
+        }
+      ],
+      "exp": "msg.sender.transfer(reward_TOD4);",
+      "status": "unproven"
+    },
+    {
+      "no": "39",
+      "kind": "ETH_LEAK",
+      "line": 474,
+      "signatures": [
+        {
+          "contractName": "StockBet",
+          "methodName": "getReward_TOD7",
+          "argTypes": []
+        }
+      ],
+      "exp": "winner_TOD7.transfer(msg.value);",
+      "status": "unproven"
+    },
+    {
+      "no": "40",
+      "kind": "ETH_LEAK",
+      "line": 512,
+      "signatures": [
+        {
+          "contractName": "StockBet",
+          "methodName": "getReward_TOD23",
+          "argTypes": []
+        }
+      ],
+      "exp": "winner_TOD23.transfer(msg.value);",
+      "status": "unproven"
+    },
+    {
+      "no": "41",
+      "kind": "ETH_LEAK",
+      "line": 516,
+      "signatures": [
+        {
+          "contractName": "StockBet",
+          "methodName": "collectOwnerWinnings",
+          "argTypes": []
+        }
+      ],
+      "exp": "selfdestruct(owner);",
+      "status": "proven"
+    },
+    {
+      "no": "42",
+      "kind": "ETH_LEAK",
+      "line": 525,
+      "signatures": [
+        {
+          "contractName": "StockBet",
+          "methodName": "setReward_TOD14",
+          "argTypes": []
+        }
+      ],
+      "exp": "owner_TOD14.transfer(reward_TOD14);",
+      "status": "proven"
+    },
+    {
+      "no": "43",
+      "kind": "ETH_LEAK",
+      "line": 533,
+      "signatures": [
+        {
+          "contractName": "StockBet",
+          "methodName": "claimReward_TOD14",
+          "argTypes": [ "uint256" ]
+        }
+      ],
+      "exp": "msg.sender.transfer(reward_TOD14);",
+      "status": "unproven"
+    },
+    {
+      "no": "44",
+      "kind": "ETH_LEAK",
+      "line": 540,
+      "signatures": [
+        {
+          "contractName": "StockBet",
+          "methodName": "collectPlayerWinnings",
+          "argTypes": []
+        }
+      ],
+      "exp": "msg.sender.transfer(splitJackpot);",
+      "status": "unproven"
+    },
+    {
+      "no": "45",
+      "kind": "ETH_LEAK",
+      "line": 550,
+      "signatures": [
+        {
+          "contractName": "StockBet",
+          "methodName": "setReward_TOD30",
+          "argTypes": []
+        }
+      ],
+      "exp": "owner_TOD30.transfer(reward_TOD30);",
+      "status": "proven"
+    },
+    {
+      "no": "46",
+      "kind": "ETH_LEAK",
+      "line": 558,
+      "signatures": [
+        {
+          "contractName": "StockBet",
+          "methodName": "claimReward_TOD30",
+          "argTypes": [ "uint256" ]
+        }
+      ],
+      "exp": "msg.sender.transfer(reward_TOD30);",
+      "status": "unproven"
+    },
+    {
+      "no": "47",
+      "kind": "ETH_LEAK",
+      "line": 572,
+      "signatures": [
+        {
+          "contractName": "StockBet",
+          "methodName": "setReward_TOD8",
+          "argTypes": []
+        }
+      ],
+      "exp": "owner_TOD8.transfer(reward_TOD8);",
+      "status": "proven"
+    },
+    {
+      "no": "48",
+      "kind": "ETH_LEAK",
+      "line": 580,
+      "signatures": [
+        {
+          "contractName": "StockBet",
+          "methodName": "claimReward_TOD8",
+          "argTypes": [ "uint256" ]
+        }
+      ],
+      "exp": "msg.sender.transfer(reward_TOD8);",
+      "status": "unproven"
+    }
+  ]
+}

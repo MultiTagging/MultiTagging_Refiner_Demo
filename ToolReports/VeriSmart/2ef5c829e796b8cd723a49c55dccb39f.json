@@ -1,0 +1,617 @@
+{
+  "fileName": "Benchmarks/Study_SamplesSet/2ef5c829e796b8cd723a49c55dccb39f.sol",
+  "baseName": "2ef5c829e796b8cd723a49c55dccb39f.sol",
+  "iter": 80,
+  "time": "300.546035",
+  "errMsg": null,
+  "result": [
+    {
+      "no": "1",
+      "kind": "IO",
+      "line": 30,
+      "signatures": [
+        {
+          "contractName": "StockBet",
+          "methodName": "callme_re_ent35",
+          "argTypes": []
+        }
+      ],
+      "exp": "(counter_re_ent35 + 1)",
+      "status": "proven"
+    },
+    {
+      "no": "2",
+      "kind": "IO",
+      "line": 70,
+      "signatures": [
+        {
+          "contractName": "StockBet",
+          "methodName": "withdrawFunds_re_ent31",
+          "argTypes": [ "uint256" ]
+        }
+      ],
+      "exp": "(balances_re_ent31[msg.sender] - _weiToWithdraw)",
+      "status": "proven"
+    },
+    {
+      "no": "3",
+      "kind": "IO",
+      "line": 121,
+      "signatures": [
+        {
+          "contractName": "StockBet",
+          "methodName": "callme_re_ent42",
+          "argTypes": []
+        }
+      ],
+      "exp": "(counter_re_ent42 + 1)",
+      "status": "proven"
+    },
+    {
+      "no": "4",
+      "kind": "IO",
+      "line": 141,
+      "signatures": [
+        {
+          "contractName": "StockBet",
+          "methodName": "withdrawFunds_re_ent17",
+          "argTypes": [ "uint256" ]
+        }
+      ],
+      "exp": "(balances_re_ent17[msg.sender] - _weiToWithdraw)",
+      "status": "unproven"
+    },
+    {
+      "no": "5",
+      "kind": "IO",
+      "line": 160,
+      "signatures": [
+        {
+          "contractName": "StockBet",
+          "methodName": "withdrawFunds_re_ent3",
+          "argTypes": [ "uint256" ]
+        }
+      ],
+      "exp": "(balances_re_ent3[msg.sender] - _weiToWithdraw)",
+      "status": "unproven"
+    },
+    {
+      "no": "6",
+      "kind": "IO",
+      "line": 277,
+      "signatures": [
+        {
+          "contractName": "StockBet",
+          "methodName": "withdrawFunds_re_ent38",
+          "argTypes": [ "uint256" ]
+        }
+      ],
+      "exp": "(balances_re_ent38[msg.sender] - _weiToWithdraw)",
+      "status": "proven"
+    },
+    {
+      "no": "7",
+      "kind": "IO",
+      "line": 281,
+      "signatures": [
+        { "contractName": "StockBet", "methodName": "betUp", "argTypes": [] }
+      ],
+      "exp": "(bet * 1000000000000000)",
+      "status": "unproven"
+    },
+    {
+      "no": "8",
+      "kind": "IO",
+      "line": 283,
+      "signatures": [
+        { "contractName": "StockBet", "methodName": "betUp", "argTypes": [] }
+      ],
+      "exp": "(guesses[UP].guesses_number + 1)",
+      "status": "unproven"
+    },
+    {
+      "no": "9",
+      "kind": "IO",
+      "line": 298,
+      "signatures": [
+        {
+          "contractName": "StockBet",
+          "methodName": "betDown",
+          "argTypes": []
+        }
+      ],
+      "exp": "(bet * 1000000000000000)",
+      "status": "unproven"
+    },
+    {
+      "no": "10",
+      "kind": "IO",
+      "line": 300,
+      "signatures": [
+        {
+          "contractName": "StockBet",
+          "methodName": "betDown",
+          "argTypes": []
+        }
+      ],
+      "exp": "(guesses[DOWN].guesses_number + 1)",
+      "status": "unproven"
+    },
+    {
+      "no": "11",
+      "kind": "IO",
+      "line": 311,
+      "signatures": [
+        {
+          "contractName": "StockBet",
+          "methodName": "callme_re_ent7",
+          "argTypes": []
+        }
+      ],
+      "exp": "(counter_re_ent7 + 1)",
+      "status": "proven"
+    },
+    {
+      "no": "12",
+      "kind": "IO",
+      "line": 356,
+      "signatures": [
+        {
+          "contractName": "StockBet",
+          "methodName": "callme_re_ent14",
+          "argTypes": []
+        }
+      ],
+      "exp": "(counter_re_ent14 + 1)",
+      "status": "proven"
+    },
+    {
+      "no": "13",
+      "kind": "DZ",
+      "line": 331,
+      "signatures": [
+        {
+          "contractName": "StockBet",
+          "methodName": "setFinalPrice",
+          "argTypes": [ "uint256" ]
+        }
+      ],
+      "exp": "(getBalance() / guesses[result].guesses_number)",
+      "status": "proven"
+    },
+    {
+      "no": "14",
+      "kind": "KA",
+      "line": 348,
+      "signatures": [
+        {
+          "contractName": "StockBet",
+          "methodName": "collectOwnerWinnings",
+          "argTypes": []
+        }
+      ],
+      "exp": "selfdestruct(owner);",
+      "status": "proven"
+    },
+    {
+      "no": "15",
+      "kind": "ETH_LEAK",
+      "line": 14,
+      "signatures": [
+        {
+          "contractName": "StockBet",
+          "methodName": "claimReward_re_ent39",
+          "argTypes": []
+        }
+      ],
+      "exp": "msg.sender.transfer(transferValue_re_ent39);",
+      "status": "unproven"
+    },
+    {
+      "no": "16",
+      "kind": "ETH_LEAK",
+      "line": 20,
+      "signatures": [
+        {
+          "contractName": "StockBet",
+          "methodName": "withdraw_balances_re_ent36",
+          "argTypes": []
+        }
+      ],
+      "exp": "msg.sender.send(balances_re_ent36[msg.sender])",
+      "status": "unproven"
+    },
+    {
+      "no": "17",
+      "kind": "ETH_LEAK",
+      "line": 27,
+      "signatures": [
+        {
+          "contractName": "StockBet",
+          "methodName": "callme_re_ent35",
+          "argTypes": []
+        }
+      ],
+      "exp": "msg.sender.send(10000000000000000000)",
+      "status": "unproven"
+    },
+    {
+      "no": "18",
+      "kind": "ETH_LEAK",
+      "line": 37,
+      "signatures": [
+        {
+          "contractName": "StockBet",
+          "methodName": "withdrawBalance_re_ent40",
+          "argTypes": []
+        }
+      ],
+      "exp": "(success,  ) = msg.sender.call.value(userBalance_re_ent40[msg.sender])(\"\");",
+      "status": "unproven"
+    },
+    {
+      "no": "19",
+      "kind": "ETH_LEAK",
+      "line": 48,
+      "signatures": [
+        {
+          "contractName": "StockBet",
+          "methodName": "withdrawBalance_re_ent33",
+          "argTypes": []
+        }
+      ],
+      "exp": "(success,  ) = msg.sender.call.value(userBalance_re_ent33[msg.sender])(\"\");",
+      "status": "unproven"
+    },
+    {
+      "no": "20",
+      "kind": "ETH_LEAK",
+      "line": 58,
+      "signatures": [
+        {
+          "contractName": "StockBet",
+          "methodName": "bug_re_ent27",
+          "argTypes": []
+        }
+      ],
+      "exp": "msg.sender.send(1000000000000000000)",
+      "status": "unproven"
+    },
+    {
+      "no": "21",
+      "kind": "ETH_LEAK",
+      "line": 69,
+      "signatures": [
+        {
+          "contractName": "StockBet",
+          "methodName": "withdrawFunds_re_ent31",
+          "argTypes": [ "uint256" ]
+        }
+      ],
+      "exp": "msg.sender.send(_weiToWithdraw)",
+      "status": "unproven"
+    },
+    {
+      "no": "22",
+      "kind": "ETH_LEAK",
+      "line": 76,
+      "signatures": [
+        {
+          "contractName": "StockBet",
+          "methodName": "bug_re_ent13",
+          "argTypes": []
+        }
+      ],
+      "exp": "(success,  ) = msg.sender.call.value(1000000000000000000)(\"\");",
+      "status": "unproven"
+    },
+    {
+      "no": "23",
+      "kind": "ETH_LEAK",
+      "line": 101,
+      "signatures": [
+        {
+          "contractName": "StockBet",
+          "methodName": "withdraw_balances_re_ent1",
+          "argTypes": []
+        }
+      ],
+      "exp": "(success,  ) = msg.sender.call.value(balances_re_ent1[msg.sender])(\"\");",
+      "status": "unproven"
+    },
+    {
+      "no": "24",
+      "kind": "ETH_LEAK",
+      "line": 109,
+      "signatures": [
+        {
+          "contractName": "StockBet",
+          "methodName": "bug_re_ent41",
+          "argTypes": []
+        }
+      ],
+      "exp": "msg.sender.send(1000000000000000000)",
+      "status": "unproven"
+    },
+    {
+      "no": "25",
+      "kind": "ETH_LEAK",
+      "line": 118,
+      "signatures": [
+        {
+          "contractName": "StockBet",
+          "methodName": "callme_re_ent42",
+          "argTypes": []
+        }
+      ],
+      "exp": "msg.sender.send(10000000000000000000)",
+      "status": "unproven"
+    },
+    {
+      "no": "26",
+      "kind": "ETH_LEAK",
+      "line": 128,
+      "signatures": [
+        {
+          "contractName": "StockBet",
+          "methodName": "buyTicket_re_ent2",
+          "argTypes": []
+        }
+      ],
+      "exp": "lastPlayer_re_ent2.send(jackpot_re_ent2)",
+      "status": "unproven"
+    },
+    {
+      "no": "27",
+      "kind": "ETH_LEAK",
+      "line": 139,
+      "signatures": [
+        {
+          "contractName": "StockBet",
+          "methodName": "withdrawFunds_re_ent17",
+          "argTypes": [ "uint256" ]
+        }
+      ],
+      "exp": "(success,  ) = msg.sender.call.value(_weiToWithdraw)(\"\");",
+      "status": "unproven"
+    },
+    {
+      "no": "28",
+      "kind": "ETH_LEAK",
+      "line": 148,
+      "signatures": [
+        {
+          "contractName": "StockBet",
+          "methodName": "buyTicket_re_ent37",
+          "argTypes": []
+        }
+      ],
+      "exp": "lastPlayer_re_ent37.send(jackpot_re_ent37)",
+      "status": "unproven"
+    },
+    {
+      "no": "29",
+      "kind": "ETH_LEAK",
+      "line": 158,
+      "signatures": [
+        {
+          "contractName": "StockBet",
+          "methodName": "withdrawFunds_re_ent3",
+          "argTypes": [ "uint256" ]
+        }
+      ],
+      "exp": "(success,  ) = msg.sender.call.value(_weiToWithdraw)(\"\");",
+      "status": "unproven"
+    },
+    {
+      "no": "30",
+      "kind": "ETH_LEAK",
+      "line": 166,
+      "signatures": [
+        {
+          "contractName": "StockBet",
+          "methodName": "buyTicket_re_ent9",
+          "argTypes": []
+        }
+      ],
+      "exp": "(success,  ) = lastPlayer_re_ent9.call.value(jackpot_re_ent9)(\"\");",
+      "status": "unproven"
+    },
+    {
+      "no": "31",
+      "kind": "ETH_LEAK",
+      "line": 179,
+      "signatures": [
+        {
+          "contractName": "StockBet",
+          "methodName": "claimReward_re_ent25",
+          "argTypes": []
+        }
+      ],
+      "exp": "msg.sender.transfer(transferValue_re_ent25);",
+      "status": "unproven"
+    },
+    {
+      "no": "32",
+      "kind": "ETH_LEAK",
+      "line": 187,
+      "signatures": [
+        {
+          "contractName": "StockBet",
+          "methodName": "withdrawBalance_re_ent19",
+          "argTypes": []
+        }
+      ],
+      "exp": "msg.sender.send(userBalance_re_ent19[msg.sender])",
+      "status": "unproven"
+    },
+    {
+      "no": "33",
+      "kind": "ETH_LEAK",
+      "line": 231,
+      "signatures": [
+        {
+          "contractName": "StockBet",
+          "methodName": "withdrawBalance_re_ent26",
+          "argTypes": []
+        }
+      ],
+      "exp": "(success,  ) = msg.sender.call.value(userBalance_re_ent26[msg.sender])(\"\");",
+      "status": "unproven"
+    },
+    {
+      "no": "34",
+      "kind": "ETH_LEAK",
+      "line": 246,
+      "signatures": [
+        {
+          "contractName": "StockBet",
+          "methodName": "bug_re_ent20",
+          "argTypes": []
+        }
+      ],
+      "exp": "msg.sender.send(1000000000000000000)",
+      "status": "unproven"
+    },
+    {
+      "no": "35",
+      "kind": "ETH_LEAK",
+      "line": 263,
+      "signatures": [
+        {
+          "contractName": "StockBet",
+          "methodName": "claimReward_re_ent32",
+          "argTypes": []
+        }
+      ],
+      "exp": "msg.sender.transfer(transferValue_re_ent32);",
+      "status": "unproven"
+    },
+    {
+      "no": "36",
+      "kind": "ETH_LEAK",
+      "line": 276,
+      "signatures": [
+        {
+          "contractName": "StockBet",
+          "methodName": "withdrawFunds_re_ent38",
+          "argTypes": [ "uint256" ]
+        }
+      ],
+      "exp": "msg.sender.send(_weiToWithdraw)",
+      "status": "unproven"
+    },
+    {
+      "no": "37",
+      "kind": "ETH_LEAK",
+      "line": 293,
+      "signatures": [
+        {
+          "contractName": "StockBet",
+          "methodName": "claimReward_re_ent4",
+          "argTypes": []
+        }
+      ],
+      "exp": "msg.sender.transfer(transferValue_re_ent4);",
+      "status": "unproven"
+    },
+    {
+      "no": "38",
+      "kind": "ETH_LEAK",
+      "line": 308,
+      "signatures": [
+        {
+          "contractName": "StockBet",
+          "methodName": "callme_re_ent7",
+          "argTypes": []
+        }
+      ],
+      "exp": "msg.sender.send(10000000000000000000)",
+      "status": "unproven"
+    },
+    {
+      "no": "39",
+      "kind": "ETH_LEAK",
+      "line": 341,
+      "signatures": [
+        {
+          "contractName": "StockBet",
+          "methodName": "buyTicket_re_ent23",
+          "argTypes": []
+        }
+      ],
+      "exp": "lastPlayer_re_ent23.send(jackpot_re_ent23)",
+      "status": "unproven"
+    },
+    {
+      "no": "40",
+      "kind": "ETH_LEAK",
+      "line": 348,
+      "signatures": [
+        {
+          "contractName": "StockBet",
+          "methodName": "collectOwnerWinnings",
+          "argTypes": []
+        }
+      ],
+      "exp": "selfdestruct(owner);",
+      "status": "proven"
+    },
+    {
+      "no": "41",
+      "kind": "ETH_LEAK",
+      "line": 353,
+      "signatures": [
+        {
+          "contractName": "StockBet",
+          "methodName": "callme_re_ent14",
+          "argTypes": []
+        }
+      ],
+      "exp": "msg.sender.send(10000000000000000000)",
+      "status": "unproven"
+    },
+    {
+      "no": "42",
+      "kind": "ETH_LEAK",
+      "line": 362,
+      "signatures": [
+        {
+          "contractName": "StockBet",
+          "methodName": "collectPlayerWinnings",
+          "argTypes": []
+        }
+      ],
+      "exp": "msg.sender.transfer(splitJackpot);",
+      "status": "unproven"
+    },
+    {
+      "no": "43",
+      "kind": "ETH_LEAK",
+      "line": 368,
+      "signatures": [
+        {
+          "contractName": "StockBet",
+          "methodName": "buyTicket_re_ent30",
+          "argTypes": []
+        }
+      ],
+      "exp": "lastPlayer_re_ent30.send(jackpot_re_ent30)",
+      "status": "unproven"
+    },
+    {
+      "no": "44",
+      "kind": "ETH_LEAK",
+      "line": 379,
+      "signatures": [
+        {
+          "contractName": "StockBet",
+          "methodName": "withdraw_balances_re_ent8",
+          "argTypes": []
+        }
+      ],
+      "exp": "(success,  ) = msg.sender.call.value(balances_re_ent8[msg.sender])(\"\");",
+      "status": "unproven"
+    }
+  ]
+}

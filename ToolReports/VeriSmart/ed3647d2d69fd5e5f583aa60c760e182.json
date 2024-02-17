@@ -1,0 +1,755 @@
+{
+  "fileName": "Benchmarks/Study_SamplesSet/ed3647d2d69fd5e5f583aa60c760e182.sol",
+  "baseName": "ed3647d2d69fd5e5f583aa60c760e182.sol",
+  "iter": 172,
+  "time": "303.110262",
+  "errMsg": null,
+  "result": [
+    {
+      "no": "1",
+      "kind": "IO",
+      "line": 7,
+      "signatures": [
+        { "contractName": "FUTX", "methodName": "FUTX", "argTypes": [] }
+      ],
+      "exp": "((2 ** 256) - 1)",
+      "status": "proven"
+    },
+    {
+      "no": "2",
+      "kind": "IO",
+      "line": 7,
+      "signatures": [
+        { "contractName": "FUTX", "methodName": "FUTX", "argTypes": [] }
+      ],
+      "exp": "(2 ** 256)",
+      "status": "unproven"
+    },
+    {
+      "no": "3",
+      "kind": "IO",
+      "line": 128,
+      "signatures": [
+        { "contractName": "FUTX", "methodName": "_start", "argTypes": [] }
+      ],
+      "exp": "(now + 7776000)",
+      "status": "unproven"
+    },
+    {
+      "no": "4",
+      "kind": "IO",
+      "line": 129,
+      "signatures": [
+        { "contractName": "FUTX", "methodName": "_start", "argTypes": [] }
+      ],
+      "exp": "(endTime + 2592000)",
+      "status": "unproven"
+    },
+    {
+      "no": "5",
+      "kind": "IO",
+      "line": 130,
+      "signatures": [
+        { "contractName": "FUTX", "methodName": "_start", "argTypes": [] }
+      ],
+      "exp": "(swapTime + 432000)",
+      "status": "unproven"
+    },
+    {
+      "no": "6",
+      "kind": "IO",
+      "line": 131,
+      "signatures": [
+        { "contractName": "FUTX", "methodName": "_start", "argTypes": [] }
+      ],
+      "exp": "(now + 23328000)",
+      "status": "unproven"
+    },
+    {
+      "no": "7",
+      "kind": "IO",
+      "line": 132,
+      "signatures": [
+        { "contractName": "FUTX", "methodName": "_start", "argTypes": [] }
+      ],
+      "exp": "(endTimeExtended + 7776000)",
+      "status": "unproven"
+    },
+    {
+      "no": "8",
+      "kind": "IO",
+      "line": 133,
+      "signatures": [
+        { "contractName": "FUTX", "methodName": "_start", "argTypes": [] }
+      ],
+      "exp": "(swapTimeExtended + 432000)",
+      "status": "unproven"
+    },
+    {
+      "no": "9",
+      "kind": "IO",
+      "line": 154,
+      "signatures": [
+        { "contractName": "FUTX", "methodName": "restart", "argTypes": [] }
+      ],
+      "exp": "(this.balance * 2000)",
+      "status": "unproven"
+    },
+    {
+      "no": "10",
+      "kind": "IO",
+      "line": 170,
+      "signatures": [
+        {
+          "contractName": "FUTX",
+          "methodName": "mint",
+          "argTypes": [ "address", "uint256" ]
+        }
+      ],
+      "exp": "(_submitted + _value)",
+      "status": "unproven"
+    },
+    {
+      "no": "11",
+      "kind": "IO",
+      "line": 174,
+      "signatures": [
+        {
+          "contractName": "FUTX",
+          "methodName": "mint",
+          "argTypes": [ "address", "uint256" ]
+        }
+      ],
+      "exp": "((total - MAX_SUBMITTED) - 1)",
+      "status": "proven"
+    },
+    {
+      "no": "12",
+      "kind": "IO",
+      "line": 174,
+      "signatures": [
+        {
+          "contractName": "FUTX",
+          "methodName": "mint",
+          "argTypes": [ "address", "uint256" ]
+        }
+      ],
+      "exp": "(total - MAX_SUBMITTED)",
+      "status": "proven"
+    },
+    {
+      "no": "13",
+      "kind": "IO",
+      "line": 175,
+      "signatures": [
+        {
+          "contractName": "FUTX",
+          "methodName": "mint",
+          "argTypes": [ "address", "uint256" ]
+        }
+      ],
+      "exp": "(_value - refund)",
+      "status": "unproven"
+    },
+    {
+      "no": "14",
+      "kind": "IO",
+      "line": 181,
+      "signatures": [
+        {
+          "contractName": "FUTX",
+          "methodName": "mint",
+          "argTypes": [ "address", "uint256" ]
+        }
+      ],
+      "exp": "(_submitted + _value)",
+      "status": "unproven"
+    },
+    {
+      "no": "15",
+      "kind": "IO",
+      "line": 183,
+      "signatures": [
+        {
+          "contractName": "FUTX",
+          "methodName": "mint",
+          "argTypes": [ "address", "uint256" ]
+        }
+      ],
+      "exp": "(total - refund)",
+      "status": "unproven"
+    },
+    {
+      "no": "16",
+      "kind": "IO",
+      "line": 187,
+      "signatures": [
+        {
+          "contractName": "FUTX",
+          "methodName": "mint",
+          "argTypes": [ "address", "uint256" ]
+        }
+      ],
+      "exp": "(balances[_to] + tokens)",
+      "status": "unproven"
+    },
+    {
+      "no": "17",
+      "kind": "IO",
+      "line": 189,
+      "signatures": [
+        {
+          "contractName": "FUTX",
+          "methodName": "mint",
+          "argTypes": [ "address", "uint256" ]
+        }
+      ],
+      "exp": "(_totalSupply + tokens)",
+      "status": "unproven"
+    },
+    {
+      "no": "18",
+      "kind": "IO",
+      "line": 207,
+      "signatures": [
+        {
+          "contractName": "FUTX",
+          "methodName": "calculateTokens",
+          "argTypes": [ "uint256", "uint256" ]
+        }
+      ],
+      "exp": "(total - levels[tier])",
+      "status": "proven"
+    },
+    {
+      "no": "19",
+      "kind": "IO",
+      "line": 208,
+      "signatures": [
+        {
+          "contractName": "FUTX",
+          "methodName": "calculateTokens",
+          "argTypes": [ "uint256", "uint256" ]
+        }
+      ],
+      "exp": "(_value - remaining)",
+      "status": "unproven"
+    },
+    {
+      "no": "20",
+      "kind": "IO",
+      "line": 209,
+      "signatures": [
+        {
+          "contractName": "FUTX",
+          "methodName": "calculateTokens",
+          "argTypes": [ "uint256", "uint256" ]
+        }
+      ],
+      "exp": "(_value * ratios[tier])",
+      "status": "unproven"
+    },
+    {
+      "no": "21",
+      "kind": "IO",
+      "line": 211,
+      "signatures": [
+        {
+          "contractName": "FUTX",
+          "methodName": "calculateTokens",
+          "argTypes": [ "uint256", "uint256" ]
+        }
+      ],
+      "exp": "(tier + 1)",
+      "status": "proven"
+    },
+    {
+      "no": "22",
+      "kind": "IO",
+      "line": 213,
+      "signatures": [
+        {
+          "contractName": "FUTX",
+          "methodName": "calculateTokens",
+          "argTypes": [ "uint256", "uint256" ]
+        }
+      ],
+      "exp": "(tokens + calculateTokens(total, remaining))",
+      "status": "unproven"
+    },
+    {
+      "no": "23",
+      "kind": "IO",
+      "line": 217,
+      "signatures": [
+        {
+          "contractName": "FUTX",
+          "methodName": "calculateTokens",
+          "argTypes": [ "uint256", "uint256" ]
+        }
+      ],
+      "exp": "(_value * ratios[tier])",
+      "status": "unproven"
+    },
+    {
+      "no": "24",
+      "kind": "IO",
+      "line": 232,
+      "signatures": [
+        {
+          "contractName": "FUTX",
+          "methodName": "currentTier",
+          "argTypes": []
+        }
+      ],
+      "exp": "(tier + 1)",
+      "status": "unproven"
+    },
+    {
+      "no": "25",
+      "kind": "IO",
+      "line": 243,
+      "signatures": [
+        {
+          "contractName": "FUTX",
+          "methodName": "leftInTier",
+          "argTypes": []
+        }
+      ],
+      "exp": "(levels[tier] - _submitted)",
+      "status": "unproven"
+    },
+    {
+      "no": "26",
+      "kind": "IO",
+      "line": 254,
+      "signatures": [
+        {
+          "contractName": "FUTX",
+          "methodName": "balanceMinusFeesOutstanding",
+          "argTypes": []
+        }
+      ],
+      "exp": "((_submitted - submittedFeesPaid) * 1530)",
+      "status": "unproven"
+    },
+    {
+      "no": "27",
+      "kind": "IO",
+      "line": 254,
+      "signatures": [
+        {
+          "contractName": "FUTX",
+          "methodName": "balanceMinusFeesOutstanding",
+          "argTypes": []
+        }
+      ],
+      "exp": "(_submitted - submittedFeesPaid)",
+      "status": "unproven"
+    },
+    {
+      "no": "28",
+      "kind": "IO",
+      "line": 254,
+      "signatures": [
+        {
+          "contractName": "FUTX",
+          "methodName": "balanceMinusFeesOutstanding",
+          "argTypes": []
+        }
+      ],
+      "exp": "(penalty + (((_submitted - submittedFeesPaid) * 1530) / 10000))",
+      "status": "unproven"
+    },
+    {
+      "no": "29",
+      "kind": "IO",
+      "line": 254,
+      "signatures": [
+        {
+          "contractName": "FUTX",
+          "methodName": "balanceMinusFeesOutstanding",
+          "argTypes": []
+        }
+      ],
+      "exp": "(this.balance - (penalty + (((_submitted - submittedFeesPaid) * 1530) / 10000)))",
+      "status": "unproven"
+    },
+    {
+      "no": "30",
+      "kind": "IO",
+      "line": 260,
+      "signatures": [
+        {
+          "contractName": "FUTX",
+          "methodName": "transfer",
+          "argTypes": [ "address", "uint256" ]
+        }
+      ],
+      "exp": "((_submitted - submittedFeesPaid) * 1530)",
+      "status": "unproven"
+    },
+    {
+      "no": "31",
+      "kind": "IO",
+      "line": 260,
+      "signatures": [
+        {
+          "contractName": "FUTX",
+          "methodName": "transfer",
+          "argTypes": [ "address", "uint256" ]
+        }
+      ],
+      "exp": "(_submitted - submittedFeesPaid)",
+      "status": "unproven"
+    },
+    {
+      "no": "32",
+      "kind": "IO",
+      "line": 260,
+      "signatures": [
+        {
+          "contractName": "FUTX",
+          "methodName": "transfer",
+          "argTypes": [ "address", "uint256" ]
+        }
+      ],
+      "exp": "(penalty + (((_submitted - submittedFeesPaid) * 1530) / 10000))",
+      "status": "unproven"
+    },
+    {
+      "no": "33",
+      "kind": "IO",
+      "line": 263,
+      "signatures": [
+        {
+          "contractName": "FUTX",
+          "methodName": "transfer",
+          "argTypes": [ "address", "uint256" ]
+        }
+      ],
+      "exp": "(this.balance - reservedFees)",
+      "status": "unproven"
+    },
+    {
+      "no": "34",
+      "kind": "IO",
+      "line": 349,
+      "signatures": [
+        {
+          "contractName": "FUTX",
+          "methodName": "transfer",
+          "argTypes": [ "address", "uint256" ]
+        }
+      ],
+      "exp": "(_value * payRate)",
+      "status": "unproven"
+    },
+    {
+      "no": "35",
+      "kind": "IO",
+      "line": 354,
+      "signatures": [
+        {
+          "contractName": "FUTX",
+          "methodName": "transfer",
+          "argTypes": [ "address", "uint256" ]
+        }
+      ],
+      "exp": "(balances[msg.sender] - _value)",
+      "status": "proven"
+    },
+    {
+      "no": "36",
+      "kind": "IO",
+      "line": 355,
+      "signatures": [
+        {
+          "contractName": "FUTX",
+          "methodName": "transfer",
+          "argTypes": [ "address", "uint256" ]
+        }
+      ],
+      "exp": "(_totalSupply - _value)",
+      "status": "unproven"
+    },
+    {
+      "no": "37",
+      "kind": "IO",
+      "line": 362,
+      "signatures": [
+        {
+          "contractName": "FUTX",
+          "methodName": "transfer",
+          "argTypes": [ "address", "uint256" ]
+        }
+      ],
+      "exp": "(balances[msg.sender] - _value)",
+      "status": "proven"
+    },
+    {
+      "no": "38",
+      "kind": "IO",
+      "line": 363,
+      "signatures": [
+        {
+          "contractName": "FUTX",
+          "methodName": "transfer",
+          "argTypes": [ "address", "uint256" ]
+        }
+      ],
+      "exp": "(balances[_to] + _value)",
+      "status": "unproven"
+    },
+    {
+      "no": "39",
+      "kind": "IO",
+      "line": 374,
+      "signatures": [
+        {
+          "contractName": "FUTX",
+          "methodName": "transferFrom",
+          "argTypes": [ "address", "address", "uint256" ]
+        }
+      ],
+      "exp": "(balances[_to] + _value)",
+      "status": "unproven"
+    },
+    {
+      "no": "40",
+      "kind": "IO",
+      "line": 375,
+      "signatures": [
+        {
+          "contractName": "FUTX",
+          "methodName": "transferFrom",
+          "argTypes": [ "address", "address", "uint256" ]
+        }
+      ],
+      "exp": "(balances[_from] - _value)",
+      "status": "unproven"
+    },
+    {
+      "no": "41",
+      "kind": "IO",
+      "line": 377,
+      "signatures": [
+        {
+          "contractName": "FUTX",
+          "methodName": "transferFrom",
+          "argTypes": [ "address", "address", "uint256" ]
+        }
+      ],
+      "exp": "(allowed[_from][msg.sender] - _value)",
+      "status": "proven"
+    },
+    {
+      "no": "42",
+      "kind": "IO",
+      "line": 414,
+      "signatures": [
+        { "contractName": "FUTX", "methodName": "payFees", "argTypes": [] }
+      ],
+      "exp": "((_submitted - submittedFeesPaid) * 1530)",
+      "status": "unproven"
+    },
+    {
+      "no": "43",
+      "kind": "IO",
+      "line": 414,
+      "signatures": [
+        { "contractName": "FUTX", "methodName": "payFees", "argTypes": [] }
+      ],
+      "exp": "(_submitted - submittedFeesPaid)",
+      "status": "unproven"
+    },
+    {
+      "no": "44",
+      "kind": "IO",
+      "line": 414,
+      "signatures": [
+        { "contractName": "FUTX", "methodName": "payFees", "argTypes": [] }
+      ],
+      "exp": "(penalty + (((_submitted - submittedFeesPaid) * 1530) / 10000))",
+      "status": "unproven"
+    },
+    {
+      "no": "45",
+      "kind": "DZ",
+      "line": 154,
+      "signatures": [
+        { "contractName": "FUTX", "methodName": "restart", "argTypes": [] }
+      ],
+      "exp": "((this.balance * 2000) / 10000)",
+      "status": "proven"
+    },
+    {
+      "no": "46",
+      "kind": "DZ",
+      "line": 254,
+      "signatures": [
+        {
+          "contractName": "FUTX",
+          "methodName": "balanceMinusFeesOutstanding",
+          "argTypes": []
+        }
+      ],
+      "exp": "(((_submitted - submittedFeesPaid) * 1530) / 10000)",
+      "status": "proven"
+    },
+    {
+      "no": "47",
+      "kind": "DZ",
+      "line": 260,
+      "signatures": [
+        {
+          "contractName": "FUTX",
+          "methodName": "transfer",
+          "argTypes": [ "address", "uint256" ]
+        }
+      ],
+      "exp": "(((_submitted - submittedFeesPaid) * 1530) / 10000)",
+      "status": "proven"
+    },
+    {
+      "no": "48",
+      "kind": "DZ",
+      "line": 262,
+      "signatures": [
+        {
+          "contractName": "FUTX",
+          "methodName": "transfer",
+          "argTypes": [ "address", "uint256" ]
+        }
+      ],
+      "exp": "(_totalSupply / 1000000000000000000)",
+      "status": "proven"
+    },
+    {
+      "no": "49",
+      "kind": "DZ",
+      "line": 265,
+      "signatures": [
+        {
+          "contractName": "FUTX",
+          "methodName": "transfer",
+          "argTypes": [ "address", "uint256" ]
+        }
+      ],
+      "exp": "(payRate / tokens)",
+      "status": "unproven"
+    },
+    {
+      "no": "50",
+      "kind": "DZ",
+      "line": 351,
+      "signatures": [
+        {
+          "contractName": "FUTX",
+          "methodName": "transfer",
+          "argTypes": [ "address", "uint256" ]
+        }
+      ],
+      "exp": "(amount / 1000000000000000000)",
+      "status": "proven"
+    },
+    {
+      "no": "51",
+      "kind": "DZ",
+      "line": 414,
+      "signatures": [
+        { "contractName": "FUTX", "methodName": "payFees", "argTypes": [] }
+      ],
+      "exp": "(((_submitted - submittedFeesPaid) * 1530) / 10000)",
+      "status": "proven"
+    },
+    {
+      "no": "52",
+      "kind": "DZ",
+      "line": 422,
+      "signatures": [
+        { "contractName": "FUTX", "methodName": "payFees", "argTypes": [] }
+      ],
+      "exp": "(fees / 3)",
+      "status": "proven"
+    },
+    {
+      "no": "53",
+      "kind": "DZ",
+      "line": 423,
+      "signatures": [
+        { "contractName": "FUTX", "methodName": "payFees", "argTypes": [] }
+      ],
+      "exp": "(fees / 3)",
+      "status": "proven"
+    },
+    {
+      "no": "54",
+      "kind": "DZ",
+      "line": 424,
+      "signatures": [
+        { "contractName": "FUTX", "methodName": "payFees", "argTypes": [] }
+      ],
+      "exp": "(fees / 3)",
+      "status": "proven"
+    },
+    {
+      "no": "55",
+      "kind": "ETH_LEAK",
+      "line": 178,
+      "signatures": [
+        {
+          "contractName": "FUTX",
+          "methodName": "mint",
+          "argTypes": [ "address", "uint256" ]
+        }
+      ],
+      "exp": "_to.transfer(refund);",
+      "status": "unproven"
+    },
+    {
+      "no": "56",
+      "kind": "ETH_LEAK",
+      "line": 359,
+      "signatures": [
+        {
+          "contractName": "FUTX",
+          "methodName": "transfer",
+          "argTypes": [ "address", "uint256" ]
+        }
+      ],
+      "exp": "msg.sender.transfer(amount);",
+      "status": "proven"
+    },
+    {
+      "no": "57",
+      "kind": "ETH_LEAK",
+      "line": 422,
+      "signatures": [
+        { "contractName": "FUTX", "methodName": "payFees", "argTypes": [] }
+      ],
+      "exp": "foundation.transfer((fees / 3));",
+      "status": "proven"
+    },
+    {
+      "no": "58",
+      "kind": "ETH_LEAK",
+      "line": 423,
+      "signatures": [
+        { "contractName": "FUTX", "methodName": "payFees", "argTypes": [] }
+      ],
+      "exp": "owner.transfer((fees / 3));",
+      "status": "proven"
+    },
+    {
+      "no": "59",
+      "kind": "ETH_LEAK",
+      "line": 424,
+      "signatures": [
+        { "contractName": "FUTX", "methodName": "payFees", "argTypes": [] }
+      ],
+      "exp": "dev.transfer((fees / 3));",
+      "status": "proven"
+    }
+  ]
+}

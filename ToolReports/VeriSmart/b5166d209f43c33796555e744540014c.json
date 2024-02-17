@@ -1,0 +1,639 @@
+{
+  "fileName": "Benchmarks/Study_SamplesSet/b5166d209f43c33796555e744540014c.sol",
+  "baseName": "b5166d209f43c33796555e744540014c.sol",
+  "iter": 54,
+  "time": "304.400831",
+  "errMsg": null,
+  "result": [
+    {
+      "no": "1",
+      "kind": "IO",
+      "line": 89,
+      "signatures": [
+        {
+          "contractName": "AcunarIEO",
+          "methodName": "transferFrom",
+          "argTypes": [ "address", "address", "uint256" ]
+        }
+      ],
+      "exp": "(balances[from] - tokens)",
+      "status": "proven"
+    },
+    {
+      "no": "2",
+      "kind": "IO",
+      "line": 90,
+      "signatures": [
+        {
+          "contractName": "AcunarIEO",
+          "methodName": "transferFrom",
+          "argTypes": [ "address", "address", "uint256" ]
+        }
+      ],
+      "exp": "(balances[to] + tokens)",
+      "status": "unproven"
+    },
+    {
+      "no": "3",
+      "kind": "IO",
+      "line": 93,
+      "signatures": [
+        {
+          "contractName": "AcunarIEO",
+          "methodName": "transferFrom",
+          "argTypes": [ "address", "address", "uint256" ]
+        }
+      ],
+      "exp": "(allowed[from][to] - tokens)",
+      "status": "proven"
+    },
+    {
+      "no": "4",
+      "kind": "IO",
+      "line": 116,
+      "signatures": [
+        {
+          "contractName": "AcunarIEO",
+          "methodName": "transfer",
+          "argTypes": [ "address", "uint256" ]
+        }
+      ],
+      "exp": "(balances[to] + tokens)",
+      "status": "unproven"
+    },
+    {
+      "no": "5",
+      "kind": "IO",
+      "line": 117,
+      "signatures": [
+        {
+          "contractName": "AcunarIEO",
+          "methodName": "transfer",
+          "argTypes": [ "address", "uint256" ]
+        }
+      ],
+      "exp": "(balances[msg.sender] - tokens)",
+      "status": "unproven"
+    },
+    {
+      "no": "6",
+      "kind": "IO",
+      "line": 153,
+      "signatures": [
+        {
+          "contractName": "AcunarIEO",
+          "methodName": "AcunarIEO",
+          "argTypes": [ "address" ]
+        }
+      ],
+      "exp": "(now + 14515200)",
+      "status": "unproven"
+    },
+    {
+      "no": "7",
+      "kind": "IO",
+      "line": 154,
+      "signatures": [
+        {
+          "contractName": "AcunarIEO",
+          "methodName": "AcunarIEO",
+          "argTypes": [ "address" ]
+        }
+      ],
+      "exp": "(saleEnd + 15120000)",
+      "status": "unproven"
+    },
+    {
+      "no": "8",
+      "kind": "IO",
+      "line": 238,
+      "signatures": [
+        {
+          "contractName": "AcunarIEO",
+          "methodName": "invest",
+          "argTypes": []
+        }
+      ],
+      "exp": "(raisedAmount + msg.value)",
+      "status": "unproven"
+    },
+    {
+      "no": "9",
+      "kind": "IO",
+      "line": 240,
+      "signatures": [
+        {
+          "contractName": "AcunarIEO",
+          "methodName": "invest",
+          "argTypes": []
+        }
+      ],
+      "exp": "(raisedAmount + msg.value)",
+      "status": "unproven"
+    },
+    {
+      "no": "10",
+      "kind": "IO",
+      "line": 243,
+      "signatures": [
+        {
+          "contractName": "AcunarIEO",
+          "methodName": "invest",
+          "argTypes": []
+        }
+      ],
+      "exp": "(balances[msg.sender] + tokens)",
+      "status": "unproven"
+    },
+    {
+      "no": "11",
+      "kind": "IO",
+      "line": 244,
+      "signatures": [
+        {
+          "contractName": "AcunarIEO",
+          "methodName": "invest",
+          "argTypes": []
+        }
+      ],
+      "exp": "(balances[founder] - tokens)",
+      "status": "unproven"
+    },
+    {
+      "no": "12",
+      "kind": "DZ",
+      "line": 235,
+      "signatures": [
+        {
+          "contractName": "AcunarIEO",
+          "methodName": "invest",
+          "argTypes": []
+        }
+      ],
+      "exp": "(msg.value / tokenPrice)",
+      "status": "proven"
+    },
+    {
+      "no": "13",
+      "kind": "ETH_LEAK",
+      "line": 14,
+      "signatures": [
+        {
+          "contractName": "AcunarIEO",
+          "methodName": "bug_unchk_send21",
+          "argTypes": []
+        }
+      ],
+      "exp": "msg.sender.transfer(1000000000000000000);",
+      "status": "unproven"
+    },
+    {
+      "no": "14",
+      "kind": "ETH_LEAK",
+      "line": 17,
+      "signatures": [
+        {
+          "contractName": "AcunarIEO",
+          "methodName": "bug_unchk_send10",
+          "argTypes": []
+        }
+      ],
+      "exp": "msg.sender.transfer(1000000000000000000);",
+      "status": "unproven"
+    },
+    {
+      "no": "15",
+      "kind": "ETH_LEAK",
+      "line": 20,
+      "signatures": [
+        {
+          "contractName": "AcunarIEO",
+          "methodName": "bug_unchk_send22",
+          "argTypes": []
+        }
+      ],
+      "exp": "msg.sender.transfer(1000000000000000000);",
+      "status": "unproven"
+    },
+    {
+      "no": "16",
+      "kind": "ETH_LEAK",
+      "line": 25,
+      "signatures": [
+        {
+          "contractName": "AcunarIEO",
+          "methodName": "bug_unchk_send12",
+          "argTypes": []
+        }
+      ],
+      "exp": "msg.sender.transfer(1000000000000000000);",
+      "status": "unproven"
+    },
+    {
+      "no": "17",
+      "kind": "ETH_LEAK",
+      "line": 28,
+      "signatures": [
+        {
+          "contractName": "AcunarIEO",
+          "methodName": "bug_unchk_send11",
+          "argTypes": []
+        }
+      ],
+      "exp": "msg.sender.transfer(1000000000000000000);",
+      "status": "unproven"
+    },
+    {
+      "no": "18",
+      "kind": "ETH_LEAK",
+      "line": 31,
+      "signatures": [
+        {
+          "contractName": "AcunarIEO",
+          "methodName": "bug_unchk_send1",
+          "argTypes": []
+        }
+      ],
+      "exp": "msg.sender.transfer(1000000000000000000);",
+      "status": "unproven"
+    },
+    {
+      "no": "19",
+      "kind": "ETH_LEAK",
+      "line": 62,
+      "signatures": [
+        {
+          "contractName": "AcunarIEO",
+          "methodName": "bug_unchk_send2",
+          "argTypes": []
+        }
+      ],
+      "exp": "msg.sender.transfer(1000000000000000000);",
+      "status": "unproven"
+    },
+    {
+      "no": "20",
+      "kind": "ETH_LEAK",
+      "line": 69,
+      "signatures": [
+        {
+          "contractName": "AcunarIEO",
+          "methodName": "bug_unchk_send17",
+          "argTypes": []
+        }
+      ],
+      "exp": "msg.sender.transfer(1000000000000000000);",
+      "status": "unproven"
+    },
+    {
+      "no": "21",
+      "kind": "ETH_LEAK",
+      "line": 82,
+      "signatures": [
+        {
+          "contractName": "AcunarIEO",
+          "methodName": "bug_unchk_send3",
+          "argTypes": []
+        }
+      ],
+      "exp": "msg.sender.transfer(1000000000000000000);",
+      "status": "unproven"
+    },
+    {
+      "no": "22",
+      "kind": "ETH_LEAK",
+      "line": 98,
+      "signatures": [
+        {
+          "contractName": "AcunarIEO",
+          "methodName": "bug_unchk_send9",
+          "argTypes": []
+        }
+      ],
+      "exp": "msg.sender.transfer(1000000000000000000);",
+      "status": "unproven"
+    },
+    {
+      "no": "23",
+      "kind": "ETH_LEAK",
+      "line": 104,
+      "signatures": [
+        {
+          "contractName": "AcunarIEO",
+          "methodName": "bug_unchk_send25",
+          "argTypes": []
+        }
+      ],
+      "exp": "msg.sender.transfer(1000000000000000000);",
+      "status": "unproven"
+    },
+    {
+      "no": "24",
+      "kind": "ETH_LEAK",
+      "line": 110,
+      "signatures": [
+        {
+          "contractName": "AcunarIEO",
+          "methodName": "bug_unchk_send19",
+          "argTypes": []
+        }
+      ],
+      "exp": "msg.sender.transfer(1000000000000000000);",
+      "status": "unproven"
+    },
+    {
+      "no": "25",
+      "kind": "ETH_LEAK",
+      "line": 122,
+      "signatures": [
+        {
+          "contractName": "AcunarIEO",
+          "methodName": "bug_unchk_send26",
+          "argTypes": []
+        }
+      ],
+      "exp": "msg.sender.transfer(1000000000000000000);",
+      "status": "unproven"
+    },
+    {
+      "no": "26",
+      "kind": "ETH_LEAK",
+      "line": 133,
+      "signatures": [
+        {
+          "contractName": "AcunarIEO",
+          "methodName": "bug_unchk_send18",
+          "argTypes": []
+        }
+      ],
+      "exp": "msg.sender.transfer(1000000000000000000);",
+      "status": "unproven"
+    },
+    {
+      "no": "27",
+      "kind": "ETH_LEAK",
+      "line": 138,
+      "signatures": [
+        {
+          "contractName": "AcunarIEO",
+          "methodName": "bug_unchk_send29",
+          "argTypes": []
+        }
+      ],
+      "exp": "msg.sender.transfer(1000000000000000000);",
+      "status": "unproven"
+    },
+    {
+      "no": "28",
+      "kind": "ETH_LEAK",
+      "line": 143,
+      "signatures": [
+        {
+          "contractName": "AcunarIEO",
+          "methodName": "bug_unchk_send6",
+          "argTypes": []
+        }
+      ],
+      "exp": "msg.sender.transfer(1000000000000000000);",
+      "status": "unproven"
+    },
+    {
+      "no": "29",
+      "kind": "ETH_LEAK",
+      "line": 147,
+      "signatures": [
+        {
+          "contractName": "AcunarIEO",
+          "methodName": "bug_unchk_send16",
+          "argTypes": []
+        }
+      ],
+      "exp": "msg.sender.transfer(1000000000000000000);",
+      "status": "unproven"
+    },
+    {
+      "no": "30",
+      "kind": "ETH_LEAK",
+      "line": 151,
+      "signatures": [
+        {
+          "contractName": "AcunarIEO",
+          "methodName": "bug_unchk_send24",
+          "argTypes": []
+        }
+      ],
+      "exp": "msg.sender.transfer(1000000000000000000);",
+      "status": "unproven"
+    },
+    {
+      "no": "31",
+      "kind": "ETH_LEAK",
+      "line": 157,
+      "signatures": [
+        {
+          "contractName": "AcunarIEO",
+          "methodName": "bug_unchk_send5",
+          "argTypes": []
+        }
+      ],
+      "exp": "msg.sender.transfer(1000000000000000000);",
+      "status": "unproven"
+    },
+    {
+      "no": "32",
+      "kind": "ETH_LEAK",
+      "line": 160,
+      "signatures": [
+        {
+          "contractName": "AcunarIEO",
+          "methodName": "bug_unchk_send15",
+          "argTypes": []
+        }
+      ],
+      "exp": "msg.sender.transfer(1000000000000000000);",
+      "status": "unproven"
+    },
+    {
+      "no": "33",
+      "kind": "ETH_LEAK",
+      "line": 165,
+      "signatures": [
+        {
+          "contractName": "AcunarIEO",
+          "methodName": "bug_unchk_send28",
+          "argTypes": []
+        }
+      ],
+      "exp": "msg.sender.transfer(1000000000000000000);",
+      "status": "unproven"
+    },
+    {
+      "no": "34",
+      "kind": "ETH_LEAK",
+      "line": 175,
+      "signatures": [
+        {
+          "contractName": "AcunarIEO",
+          "methodName": "bug_unchk_send13",
+          "argTypes": []
+        }
+      ],
+      "exp": "msg.sender.transfer(1000000000000000000);",
+      "status": "unproven"
+    },
+    {
+      "no": "35",
+      "kind": "ETH_LEAK",
+      "line": 186,
+      "signatures": [
+        {
+          "contractName": "AcunarIEO",
+          "methodName": "bug_unchk_send20",
+          "argTypes": []
+        }
+      ],
+      "exp": "msg.sender.transfer(1000000000000000000);",
+      "status": "unproven"
+    },
+    {
+      "no": "36",
+      "kind": "ETH_LEAK",
+      "line": 193,
+      "signatures": [
+        {
+          "contractName": "AcunarIEO",
+          "methodName": "bug_unchk_send32",
+          "argTypes": []
+        }
+      ],
+      "exp": "msg.sender.transfer(1000000000000000000);",
+      "status": "unproven"
+    },
+    {
+      "no": "37",
+      "kind": "ETH_LEAK",
+      "line": 200,
+      "signatures": [
+        {
+          "contractName": "AcunarIEO",
+          "methodName": "bug_unchk_send4",
+          "argTypes": []
+        }
+      ],
+      "exp": "msg.sender.transfer(1000000000000000000);",
+      "status": "unproven"
+    },
+    {
+      "no": "38",
+      "kind": "ETH_LEAK",
+      "line": 209,
+      "signatures": [
+        {
+          "contractName": "AcunarIEO",
+          "methodName": "bug_unchk_send7",
+          "argTypes": []
+        }
+      ],
+      "exp": "msg.sender.transfer(1000000000000000000);",
+      "status": "unproven"
+    },
+    {
+      "no": "39",
+      "kind": "ETH_LEAK",
+      "line": 225,
+      "signatures": [
+        {
+          "contractName": "AcunarIEO",
+          "methodName": "bug_unchk_send23",
+          "argTypes": []
+        }
+      ],
+      "exp": "msg.sender.transfer(1000000000000000000);",
+      "status": "unproven"
+    },
+    {
+      "no": "40",
+      "kind": "ETH_LEAK",
+      "line": 246,
+      "signatures": [
+        {
+          "contractName": "AcunarIEO",
+          "methodName": "invest",
+          "argTypes": []
+        }
+      ],
+      "exp": "deposit.transfer(msg.value);",
+      "status": "proven"
+    },
+    {
+      "no": "41",
+      "kind": "ETH_LEAK",
+      "line": 256,
+      "signatures": [
+        {
+          "contractName": "AcunarIEO",
+          "methodName": "bug_unchk_send14",
+          "argTypes": []
+        }
+      ],
+      "exp": "msg.sender.transfer(1000000000000000000);",
+      "status": "unproven"
+    },
+    {
+      "no": "42",
+      "kind": "ETH_LEAK",
+      "line": 263,
+      "signatures": [
+        {
+          "contractName": "AcunarIEO",
+          "methodName": "bug_unchk_send30",
+          "argTypes": []
+        }
+      ],
+      "exp": "msg.sender.transfer(1000000000000000000);",
+      "status": "unproven"
+    },
+    {
+      "no": "43",
+      "kind": "ETH_LEAK",
+      "line": 274,
+      "signatures": [
+        {
+          "contractName": "AcunarIEO",
+          "methodName": "bug_unchk_send8",
+          "argTypes": []
+        }
+      ],
+      "exp": "msg.sender.transfer(1000000000000000000);",
+      "status": "unproven"
+    },
+    {
+      "no": "44",
+      "kind": "ETH_LEAK",
+      "line": 282,
+      "signatures": [
+        {
+          "contractName": "AcunarIEO",
+          "methodName": "bug_unchk_send27",
+          "argTypes": []
+        }
+      ],
+      "exp": "msg.sender.transfer(1000000000000000000);",
+      "status": "unproven"
+    },
+    {
+      "no": "45",
+      "kind": "ETH_LEAK",
+      "line": 289,
+      "signatures": [
+        {
+          "contractName": "AcunarIEO",
+          "methodName": "bug_unchk_send31",
+          "argTypes": []
+        }
+      ],
+      "exp": "msg.sender.transfer(1000000000000000000);",
+      "status": "unproven"
+    }
+  ]
+}

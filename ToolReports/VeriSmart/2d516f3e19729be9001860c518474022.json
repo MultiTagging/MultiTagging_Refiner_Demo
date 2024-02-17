@@ -1,0 +1,49 @@
+{
+  "fileName": "Benchmarks/Study_SamplesSet/2d516f3e19729be9001860c518474022.sol",
+  "baseName": "2d516f3e19729be9001860c518474022.sol",
+  "iter": 69,
+  "time": "304.955581",
+  "errMsg": null,
+  "result": [
+    {
+      "no": "1",
+      "kind": "IO",
+      "line": 28,
+      "signatures": [
+        { "contractName": "C", "methodName": "pay", "argTypes": [] }
+      ],
+      "exp": "(i + 1)",
+      "status": "proven"
+    },
+    {
+      "no": "2",
+      "kind": "KA",
+      "line": 40,
+      "signatures": [
+        { "contractName": "C", "methodName": "returnMoney", "argTypes": [] }
+      ],
+      "exp": "selfdestruct(owner);",
+      "status": "proven"
+    },
+    {
+      "no": "3",
+      "kind": "ETH_LEAK",
+      "line": 29,
+      "signatures": [
+        { "contractName": "C", "methodName": "pay", "argTypes": [] }
+      ],
+      "exp": "addresses[i].transfer(amounts[i]);",
+      "status": "unproven"
+    },
+    {
+      "no": "4",
+      "kind": "ETH_LEAK",
+      "line": 40,
+      "signatures": [
+        { "contractName": "C", "methodName": "returnMoney", "argTypes": [] }
+      ],
+      "exp": "selfdestruct(owner);",
+      "status": "proven"
+    }
+  ]
+}

@@ -1,0 +1,37 @@
+{
+  "fileName": "Benchmarks/Study_SamplesSet/acb5af00ad32ba1424a7347d7f4faee2.sol",
+  "baseName": "acb5af00ad32ba1424a7347d7f4faee2.sol",
+  "iter": 3,
+  "time": "0.279172",
+  "errMsg": null,
+  "result": [
+    {
+      "no": "1",
+      "kind": "ETH_LEAK",
+      "line": 34,
+      "signatures": [
+        {
+          "contractName": "LuggageStorage",
+          "methodName": "Open",
+          "argTypes": [ "dbytes" ]
+        }
+      ],
+      "exp": "msg.sender.transfer(this.balance);",
+      "status": "unproven"
+    },
+    {
+      "no": "2",
+      "kind": "ETH_LEAK",
+      "line": 36,
+      "signatures": [
+        {
+          "contractName": "LuggageStorage",
+          "methodName": "Open",
+          "argTypes": [ "dbytes" ]
+        }
+      ],
+      "exp": "msg.sender.transfer(this.balance);",
+      "status": "proven"
+    }
+  ]
+}

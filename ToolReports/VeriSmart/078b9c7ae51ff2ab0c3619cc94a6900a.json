@@ -1,0 +1,788 @@
+{
+  "fileName": "Benchmarks/Study_SamplesSet/078b9c7ae51ff2ab0c3619cc94a6900a.sol",
+  "baseName": "078b9c7ae51ff2ab0c3619cc94a6900a.sol",
+  "iter": 3,
+  "time": "18.867559",
+  "errMsg": null,
+  "result": [
+    {
+      "no": "1",
+      "kind": "IO",
+      "line": 118,
+      "signatures": [
+        {
+          "contractName": "Crypland",
+          "methodName": "userAssignElement",
+          "argTypes": [ "uint256", "uint256", "address" ]
+        }
+      ],
+      "exp": "((uint256(block.blockhash((block.number - asset))) % 100) + 1)",
+      "status": "proven"
+    },
+    {
+      "no": "2",
+      "kind": "IO",
+      "line": 118,
+      "signatures": [
+        {
+          "contractName": "Crypland",
+          "methodName": "userAssignElement",
+          "argTypes": [ "uint256", "uint256", "address" ]
+        }
+      ],
+      "exp": "(block.number - asset)",
+      "status": "unproven"
+    },
+    {
+      "no": "3",
+      "kind": "IO",
+      "line": 120,
+      "signatures": [
+        {
+          "contractName": "Crypland",
+          "methodName": "userAssignElement",
+          "argTypes": [ "uint256", "uint256", "address" ]
+        }
+      ],
+      "exp": "(elements[group][asset].push(paidElement) - 1)",
+      "status": "unproven"
+    },
+    {
+      "no": "4",
+      "kind": "IO",
+      "line": 123,
+      "signatures": [
+        {
+          "contractName": "Crypland",
+          "methodName": "userAssignElement",
+          "argTypes": [ "uint256", "uint256", "address" ]
+        }
+      ],
+      "exp": "((uint256(block.blockhash((block.number - paidWorth))) % 100) + 1)",
+      "status": "proven"
+    },
+    {
+      "no": "5",
+      "kind": "IO",
+      "line": 123,
+      "signatures": [
+        {
+          "contractName": "Crypland",
+          "methodName": "userAssignElement",
+          "argTypes": [ "uint256", "uint256", "address" ]
+        }
+      ],
+      "exp": "(block.number - paidWorth)",
+      "status": "unproven"
+    },
+    {
+      "no": "6",
+      "kind": "IO",
+      "line": 125,
+      "signatures": [
+        {
+          "contractName": "Crypland",
+          "methodName": "userAssignElement",
+          "argTypes": [ "uint256", "uint256", "address" ]
+        }
+      ],
+      "exp": "(elements[group][23].push(freeElement) - 1)",
+      "status": "unproven"
+    },
+    {
+      "no": "7",
+      "kind": "IO",
+      "line": 128,
+      "signatures": [
+        {
+          "contractName": "Crypland",
+          "methodName": "userAssignElement",
+          "argTypes": [ "uint256", "uint256", "address" ]
+        }
+      ],
+      "exp": "((uint256(block.blockhash((block.number - freeWorth))) % 100) + 1)",
+      "status": "proven"
+    },
+    {
+      "no": "8",
+      "kind": "IO",
+      "line": 128,
+      "signatures": [
+        {
+          "contractName": "Crypland",
+          "methodName": "userAssignElement",
+          "argTypes": [ "uint256", "uint256", "address" ]
+        }
+      ],
+      "exp": "(block.number - freeWorth)",
+      "status": "unproven"
+    },
+    {
+      "no": "9",
+      "kind": "IO",
+      "line": 130,
+      "signatures": [
+        {
+          "contractName": "Crypland",
+          "methodName": "userAssignElement",
+          "argTypes": [ "uint256", "uint256", "address" ]
+        }
+      ],
+      "exp": "(elements[group][24].push(refElement) - 1)",
+      "status": "unproven"
+    },
+    {
+      "no": "10",
+      "kind": "IO",
+      "line": 147,
+      "signatures": [
+        {
+          "contractName": "Crypland",
+          "methodName": "userUpgradeElement",
+          "argTypes": [ "uint256", "uint256", "uint256" ]
+        }
+      ],
+      "exp": "(elements[group][asset][unit].level + 1)",
+      "status": "unproven"
+    },
+    {
+      "no": "11",
+      "kind": "IO",
+      "line": 148,
+      "signatures": [
+        {
+          "contractName": "Crypland",
+          "methodName": "userUpgradeElement",
+          "argTypes": [ "uint256", "uint256", "uint256" ]
+        }
+      ],
+      "exp": "((elements[group][asset][unit].level - 1) * 120)",
+      "status": "unproven"
+    },
+    {
+      "no": "12",
+      "kind": "IO",
+      "line": 148,
+      "signatures": [
+        {
+          "contractName": "Crypland",
+          "methodName": "userUpgradeElement",
+          "argTypes": [ "uint256", "uint256", "uint256" ]
+        }
+      ],
+      "exp": "(block.number + ((elements[group][asset][unit].level - 1) * 120))",
+      "status": "unproven"
+    },
+    {
+      "no": "13",
+      "kind": "IO",
+      "line": 148,
+      "signatures": [
+        {
+          "contractName": "Crypland",
+          "methodName": "userUpgradeElement",
+          "argTypes": [ "uint256", "uint256", "uint256" ]
+        }
+      ],
+      "exp": "(elements[group][asset][unit].level - 1)",
+      "status": "unproven"
+    },
+    {
+      "no": "14",
+      "kind": "IO",
+      "line": 162,
+      "signatures": [
+        {
+          "contractName": "Crypland",
+          "methodName": "userOfferSubmitElement",
+          "argTypes": [
+            "uint256", "uint256", "uint256", "uint256", "uint256", "uint256"
+          ]
+        }
+      ],
+      "exp": "(block.number + duration)",
+      "status": "unproven"
+    },
+    {
+      "no": "15",
+      "kind": "IO",
+      "line": 185,
+      "signatures": [
+        {
+          "contractName": "Crypland",
+          "methodName": "userOfferAcceptElement",
+          "argTypes": [ "uint256", "uint256", "uint256" ]
+        }
+      ],
+      "exp": "(price * 97)",
+      "status": "unproven"
+    },
+    {
+      "no": "16",
+      "kind": "IO",
+      "line": 186,
+      "signatures": [
+        {
+          "contractName": "Crypland",
+          "methodName": "userOfferAcceptElement",
+          "argTypes": [ "uint256", "uint256", "uint256" ]
+        }
+      ],
+      "exp": "(msg.value - price)",
+      "status": "proven"
+    },
+    {
+      "no": "17",
+      "kind": "IO",
+      "line": 194,
+      "signatures": [
+        {
+          "contractName": "Crypland",
+          "methodName": "publicGetAsset",
+          "argTypes": [ "uint256", "uint256" ]
+        },
+        {
+          "contractName": "Crypland",
+          "methodName": "publicGetElement",
+          "argTypes": [ "uint256", "uint256", "uint256" ]
+        },
+        {
+          "contractName": "Crypland",
+          "methodName": "userOfferAcceptElement",
+          "argTypes": [ "uint256", "uint256", "uint256" ]
+        },
+        {
+          "contractName": "Crypland",
+          "methodName": "userUpgradeElement",
+          "argTypes": [ "uint256", "uint256", "uint256" ]
+        }
+      ],
+      "exp": "(24 - asset)",
+      "status": "proven"
+    },
+    {
+      "no": "18",
+      "kind": "IO",
+      "line": 198,
+      "signatures": [
+        {
+          "contractName": "Crypland",
+          "methodName": "publicGetAsset",
+          "argTypes": [ "uint256", "uint256" ]
+        },
+        {
+          "contractName": "Crypland",
+          "methodName": "userAssignElement",
+          "argTypes": [ "uint256", "uint256", "address" ]
+        }
+      ],
+      "exp": "(((24 - asset) * (25 - asset)) * (10 ** 15))",
+      "status": "unproven"
+    },
+    {
+      "no": "19",
+      "kind": "IO",
+      "line": 198,
+      "signatures": [
+        {
+          "contractName": "Crypland",
+          "methodName": "publicGetAsset",
+          "argTypes": [ "uint256", "uint256" ]
+        },
+        {
+          "contractName": "Crypland",
+          "methodName": "userAssignElement",
+          "argTypes": [ "uint256", "uint256", "address" ]
+        }
+      ],
+      "exp": "((24 - asset) * (25 - asset))",
+      "status": "unproven"
+    },
+    {
+      "no": "20",
+      "kind": "IO",
+      "line": 198,
+      "signatures": [
+        {
+          "contractName": "Crypland",
+          "methodName": "publicGetAsset",
+          "argTypes": [ "uint256", "uint256" ]
+        },
+        {
+          "contractName": "Crypland",
+          "methodName": "userAssignElement",
+          "argTypes": [ "uint256", "uint256", "address" ]
+        }
+      ],
+      "exp": "(10 ** 15)",
+      "status": "proven"
+    },
+    {
+      "no": "21",
+      "kind": "IO",
+      "line": 198,
+      "signatures": [
+        {
+          "contractName": "Crypland",
+          "methodName": "publicGetAsset",
+          "argTypes": [ "uint256", "uint256" ]
+        },
+        {
+          "contractName": "Crypland",
+          "methodName": "userAssignElement",
+          "argTypes": [ "uint256", "uint256", "address" ]
+        }
+      ],
+      "exp": "(24 - asset)",
+      "status": "proven"
+    },
+    {
+      "no": "22",
+      "kind": "IO",
+      "line": 198,
+      "signatures": [
+        {
+          "contractName": "Crypland",
+          "methodName": "publicGetAsset",
+          "argTypes": [ "uint256", "uint256" ]
+        },
+        {
+          "contractName": "Crypland",
+          "methodName": "userAssignElement",
+          "argTypes": [ "uint256", "uint256", "address" ]
+        }
+      ],
+      "exp": "(25 - asset)",
+      "status": "proven"
+    },
+    {
+      "no": "23",
+      "kind": "IO",
+      "line": 202,
+      "signatures": [
+        {
+          "contractName": "Crypland",
+          "methodName": "publicGetAsset",
+          "argTypes": [ "uint256", "uint256" ]
+        },
+        {
+          "contractName": "Crypland",
+          "methodName": "userUpgradeElement",
+          "argTypes": [ "uint256", "uint256", "uint256" ]
+        }
+      ],
+      "exp": "(10 ** 15)",
+      "status": "proven"
+    },
+    {
+      "no": "24",
+      "kind": "IO",
+      "line": 202,
+      "signatures": [
+        {
+          "contractName": "Crypland",
+          "methodName": "publicGetAsset",
+          "argTypes": [ "uint256", "uint256" ]
+        },
+        {
+          "contractName": "Crypland",
+          "methodName": "userUpgradeElement",
+          "argTypes": [ "uint256", "uint256", "uint256" ]
+        }
+      ],
+      "exp": "(calcAssetWorthIndex(asset) * (10 ** 15))",
+      "status": "unproven"
+    },
+    {
+      "no": "25",
+      "kind": "IO",
+      "line": 206,
+      "signatures": [
+        {
+          "contractName": "Crypland",
+          "methodName": "publicGetAsset",
+          "argTypes": [ "uint256", "uint256" ]
+        },
+        {
+          "contractName": "Crypland",
+          "methodName": "userAssignElement",
+          "argTypes": [ "uint256", "uint256", "address" ]
+        }
+      ],
+      "exp": "((asset + 1) * (asset + 2))",
+      "status": "unproven"
+    },
+    {
+      "no": "26",
+      "kind": "IO",
+      "line": 206,
+      "signatures": [
+        {
+          "contractName": "Crypland",
+          "methodName": "publicGetAsset",
+          "argTypes": [ "uint256", "uint256" ]
+        },
+        {
+          "contractName": "Crypland",
+          "methodName": "userAssignElement",
+          "argTypes": [ "uint256", "uint256", "address" ]
+        }
+      ],
+      "exp": "(asset + 1)",
+      "status": "proven"
+    },
+    {
+      "no": "27",
+      "kind": "IO",
+      "line": 206,
+      "signatures": [
+        {
+          "contractName": "Crypland",
+          "methodName": "publicGetAsset",
+          "argTypes": [ "uint256", "uint256" ]
+        },
+        {
+          "contractName": "Crypland",
+          "methodName": "userAssignElement",
+          "argTypes": [ "uint256", "uint256", "address" ]
+        }
+      ],
+      "exp": "(asset + 2)",
+      "status": "proven"
+    },
+    {
+      "no": "28",
+      "kind": "IO",
+      "line": 214,
+      "signatures": [
+        {
+          "contractName": "Crypland",
+          "methodName": "publicGetElement",
+          "argTypes": [ "uint256", "uint256", "uint256" ]
+        },
+        {
+          "contractName": "Crypland",
+          "methodName": "userOfferAcceptElement",
+          "argTypes": [ "uint256", "uint256", "uint256" ]
+        },
+        {
+          "contractName": "Crypland",
+          "methodName": "userUpgradeElement",
+          "argTypes": [ "uint256", "uint256", "uint256" ]
+        }
+      ],
+      "exp": "((elements[group][asset][unit].level - 1) * calcAssetWorthIndex(asset))",
+      "status": "unproven"
+    },
+    {
+      "no": "29",
+      "kind": "IO",
+      "line": 214,
+      "signatures": [
+        {
+          "contractName": "Crypland",
+          "methodName": "publicGetElement",
+          "argTypes": [ "uint256", "uint256", "uint256" ]
+        },
+        {
+          "contractName": "Crypland",
+          "methodName": "userOfferAcceptElement",
+          "argTypes": [ "uint256", "uint256", "uint256" ]
+        },
+        {
+          "contractName": "Crypland",
+          "methodName": "userUpgradeElement",
+          "argTypes": [ "uint256", "uint256", "uint256" ]
+        }
+      ],
+      "exp": "(elements[group][asset][unit].level - 1)",
+      "status": "unproven"
+    },
+    {
+      "no": "30",
+      "kind": "IO",
+      "line": 214,
+      "signatures": [
+        {
+          "contractName": "Crypland",
+          "methodName": "publicGetElement",
+          "argTypes": [ "uint256", "uint256", "uint256" ]
+        },
+        {
+          "contractName": "Crypland",
+          "methodName": "userOfferAcceptElement",
+          "argTypes": [ "uint256", "uint256", "uint256" ]
+        },
+        {
+          "contractName": "Crypland",
+          "methodName": "userUpgradeElement",
+          "argTypes": [ "uint256", "uint256", "uint256" ]
+        }
+      ],
+      "exp": "(elements[group][asset][unit].worth + ((elements[group][asset][unit].level - 1) * calcAssetWorthIndex(asset)))",
+      "status": "unproven"
+    },
+    {
+      "no": "31",
+      "kind": "IO",
+      "line": 218,
+      "signatures": [
+        {
+          "contractName": "Crypland",
+          "methodName": "publicGetElement",
+          "argTypes": [ "uint256", "uint256", "uint256" ]
+        }
+      ],
+      "exp": "(elements[group][asset][unit].cooldown - block.number)",
+      "status": "proven"
+    },
+    {
+      "no": "32",
+      "kind": "IO",
+      "line": 231,
+      "signatures": [
+        {
+          "contractName": "Crypland",
+          "methodName": "calcElementCurrentPrice",
+          "argTypes": [ "uint256", "uint256", "uint256" ]
+        }
+      ],
+      "exp": "(block.number - offers[group][asset][unit].startBlock)",
+      "status": "proven"
+    },
+    {
+      "no": "33",
+      "kind": "IO",
+      "line": 232,
+      "signatures": [
+        {
+          "contractName": "Crypland",
+          "methodName": "calcElementCurrentPrice",
+          "argTypes": [ "uint256", "uint256", "uint256" ]
+        }
+      ],
+      "exp": "(offers[group][asset][unit].endBlock - offers[group][asset][unit].startBlock)",
+      "status": "proven"
+    },
+    {
+      "no": "34",
+      "kind": "IO",
+      "line": 233,
+      "signatures": [
+        {
+          "contractName": "Crypland",
+          "methodName": "calcElementCurrentPrice",
+          "argTypes": [ "uint256", "uint256", "uint256" ]
+        }
+      ],
+      "exp": "(offers[group][asset][unit].startPrice - offers[group][asset][unit].endPrice)",
+      "status": "unproven"
+    },
+    {
+      "no": "35",
+      "kind": "IO",
+      "line": 234,
+      "signatures": [
+        {
+          "contractName": "Crypland",
+          "methodName": "calcElementCurrentPrice",
+          "argTypes": [ "uint256", "uint256", "uint256" ]
+        }
+      ],
+      "exp": "(currentBlockChange * totalPriceChange)",
+      "status": "unproven"
+    },
+    {
+      "no": "36",
+      "kind": "IO",
+      "line": 235,
+      "signatures": [
+        {
+          "contractName": "Crypland",
+          "methodName": "calcElementCurrentPrice",
+          "argTypes": [ "uint256", "uint256", "uint256" ]
+        }
+      ],
+      "exp": "(offers[group][asset][unit].startPrice - currentPriceChange)",
+      "status": "unproven"
+    },
+    {
+      "no": "37",
+      "kind": "DZ",
+      "line": 118,
+      "signatures": [
+        {
+          "contractName": "Crypland",
+          "methodName": "userAssignElement",
+          "argTypes": [ "uint256", "uint256", "address" ]
+        }
+      ],
+      "exp": "(uint256(block.blockhash((block.number - asset))) % 100)",
+      "status": "proven"
+    },
+    {
+      "no": "38",
+      "kind": "DZ",
+      "line": 123,
+      "signatures": [
+        {
+          "contractName": "Crypland",
+          "methodName": "userAssignElement",
+          "argTypes": [ "uint256", "uint256", "address" ]
+        }
+      ],
+      "exp": "(uint256(block.blockhash((block.number - paidWorth))) % 100)",
+      "status": "proven"
+    },
+    {
+      "no": "39",
+      "kind": "DZ",
+      "line": 128,
+      "signatures": [
+        {
+          "contractName": "Crypland",
+          "methodName": "userAssignElement",
+          "argTypes": [ "uint256", "uint256", "address" ]
+        }
+      ],
+      "exp": "(uint256(block.blockhash((block.number - freeWorth))) % 100)",
+      "status": "proven"
+    },
+    {
+      "no": "40",
+      "kind": "DZ",
+      "line": 185,
+      "signatures": [
+        {
+          "contractName": "Crypland",
+          "methodName": "userOfferAcceptElement",
+          "argTypes": [ "uint256", "uint256", "uint256" ]
+        }
+      ],
+      "exp": "((price * 97) / 100)",
+      "status": "proven"
+    },
+    {
+      "no": "41",
+      "kind": "DZ",
+      "line": 198,
+      "signatures": [
+        {
+          "contractName": "Crypland",
+          "methodName": "publicGetAsset",
+          "argTypes": [ "uint256", "uint256" ]
+        },
+        {
+          "contractName": "Crypland",
+          "methodName": "userAssignElement",
+          "argTypes": [ "uint256", "uint256", "address" ]
+        }
+      ],
+      "exp": "((((24 - asset) * (25 - asset)) * (10 ** 15)) / 2)",
+      "status": "proven"
+    },
+    {
+      "no": "42",
+      "kind": "DZ",
+      "line": 206,
+      "signatures": [
+        {
+          "contractName": "Crypland",
+          "methodName": "publicGetAsset",
+          "argTypes": [ "uint256", "uint256" ]
+        },
+        {
+          "contractName": "Crypland",
+          "methodName": "userAssignElement",
+          "argTypes": [ "uint256", "uint256", "address" ]
+        }
+      ],
+      "exp": "(((asset + 1) * (asset + 2)) / 2)",
+      "status": "proven"
+    },
+    {
+      "no": "43",
+      "kind": "DZ",
+      "line": 234,
+      "signatures": [
+        {
+          "contractName": "Crypland",
+          "methodName": "calcElementCurrentPrice",
+          "argTypes": [ "uint256", "uint256", "uint256" ]
+        }
+      ],
+      "exp": "((currentBlockChange * totalPriceChange) / totalBlockChange)",
+      "status": "proven"
+    },
+    {
+      "no": "44",
+      "kind": "KA",
+      "line": 72,
+      "signatures": [
+        {
+          "contractName": "Crypland",
+          "methodName": "ownerDestroy",
+          "argTypes": []
+        }
+      ],
+      "exp": "selfdestruct(owner);",
+      "status": "proven"
+    },
+    {
+      "no": "45",
+      "kind": "ETH_LEAK",
+      "line": 68,
+      "signatures": [
+        {
+          "contractName": "Crypland",
+          "methodName": "ownerWithdraw",
+          "argTypes": [ "uint256" ]
+        }
+      ],
+      "exp": "owner.transfer(amount);",
+      "status": "proven"
+    },
+    {
+      "no": "46",
+      "kind": "ETH_LEAK",
+      "line": 72,
+      "signatures": [
+        {
+          "contractName": "Crypland",
+          "methodName": "ownerDestroy",
+          "argTypes": []
+        }
+      ],
+      "exp": "selfdestruct(owner);",
+      "status": "proven"
+    },
+    {
+      "no": "47",
+      "kind": "ETH_LEAK",
+      "line": 185,
+      "signatures": [
+        {
+          "contractName": "Crypland",
+          "methodName": "userOfferAcceptElement",
+          "argTypes": [ "uint256", "uint256", "uint256" ]
+        }
+      ],
+      "exp": "seller.transfer(((price * 97) / 100));",
+      "status": "unproven"
+    },
+    {
+      "no": "48",
+      "kind": "ETH_LEAK",
+      "line": 186,
+      "signatures": [
+        {
+          "contractName": "Crypland",
+          "methodName": "userOfferAcceptElement",
+          "argTypes": [ "uint256", "uint256", "uint256" ]
+        }
+      ],
+      "exp": "msg.sender.transfer((msg.value - price));",
+      "status": "unproven"
+    }
+  ]
+}

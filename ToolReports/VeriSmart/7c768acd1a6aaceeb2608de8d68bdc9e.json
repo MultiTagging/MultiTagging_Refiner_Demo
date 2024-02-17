@@ -1,0 +1,438 @@
+{
+  "fileName": "Benchmarks/Study_SamplesSet/7c768acd1a6aaceeb2608de8d68bdc9e.sol",
+  "baseName": "7c768acd1a6aaceeb2608de8d68bdc9e.sol",
+  "iter": 75,
+  "time": "308.820503",
+  "errMsg": null,
+  "result": [
+    {
+      "no": "1",
+      "kind": "IO",
+      "line": 50,
+      "signatures": [
+        { "contractName": "MD", "methodName": "bug_unchk30", "argTypes": [] }
+      ],
+      "exp": "(receivers_unchk30 + 1)",
+      "status": "proven"
+    },
+    {
+      "no": "2",
+      "kind": "IO",
+      "line": 89,
+      "signatures": [
+        {
+          "contractName": "MD",
+          "methodName": "MD",
+          "argTypes": [ "uint256", "string", "string" ]
+        }
+      ],
+      "exp": "(10 ** uint256(decimals))",
+      "status": "proven"
+    },
+    {
+      "no": "3",
+      "kind": "IO",
+      "line": 89,
+      "signatures": [
+        {
+          "contractName": "MD",
+          "methodName": "MD",
+          "argTypes": [ "uint256", "string", "string" ]
+        }
+      ],
+      "exp": "(initialSupply * (10 ** uint256(decimals)))",
+      "status": "unproven"
+    },
+    {
+      "no": "4",
+      "kind": "IO",
+      "line": 113,
+      "signatures": [
+        {
+          "contractName": "MD",
+          "methodName": "transfer",
+          "argTypes": [ "address", "uint256" ]
+        },
+        {
+          "contractName": "MD",
+          "methodName": "transferFrom",
+          "argTypes": [ "address", "address", "uint256" ]
+        }
+      ],
+      "exp": "(balanceOf[_to] + _value)",
+      "status": "unproven"
+    },
+    {
+      "no": "5",
+      "kind": "IO",
+      "line": 115,
+      "signatures": [
+        {
+          "contractName": "MD",
+          "methodName": "transfer",
+          "argTypes": [ "address", "uint256" ]
+        },
+        {
+          "contractName": "MD",
+          "methodName": "transferFrom",
+          "argTypes": [ "address", "address", "uint256" ]
+        }
+      ],
+      "exp": "(balanceOf[_from] + balanceOf[_to])",
+      "status": "unproven"
+    },
+    {
+      "no": "6",
+      "kind": "IO",
+      "line": 117,
+      "signatures": [
+        {
+          "contractName": "MD",
+          "methodName": "transfer",
+          "argTypes": [ "address", "uint256" ]
+        },
+        {
+          "contractName": "MD",
+          "methodName": "transferFrom",
+          "argTypes": [ "address", "address", "uint256" ]
+        }
+      ],
+      "exp": "(balanceOf[_from] - _value)",
+      "status": "proven"
+    },
+    {
+      "no": "7",
+      "kind": "IO",
+      "line": 119,
+      "signatures": [
+        {
+          "contractName": "MD",
+          "methodName": "transfer",
+          "argTypes": [ "address", "uint256" ]
+        },
+        {
+          "contractName": "MD",
+          "methodName": "transferFrom",
+          "argTypes": [ "address", "address", "uint256" ]
+        }
+      ],
+      "exp": "(balanceOf[_to] + _value)",
+      "status": "proven"
+    },
+    {
+      "no": "8",
+      "kind": "IO",
+      "line": 122,
+      "signatures": [
+        {
+          "contractName": "MD",
+          "methodName": "transfer",
+          "argTypes": [ "address", "uint256" ]
+        },
+        {
+          "contractName": "MD",
+          "methodName": "transferFrom",
+          "argTypes": [ "address", "address", "uint256" ]
+        }
+      ],
+      "exp": "(balanceOf[_from] + balanceOf[_to])",
+      "status": "unproven"
+    },
+    {
+      "no": "9",
+      "kind": "IO",
+      "line": 154,
+      "signatures": [
+        {
+          "contractName": "MD",
+          "methodName": "transferFrom",
+          "argTypes": [ "address", "address", "uint256" ]
+        }
+      ],
+      "exp": "(allowance[_from][msg.sender] - _value)",
+      "status": "proven"
+    },
+    {
+      "no": "10",
+      "kind": "IO",
+      "line": 223,
+      "signatures": [
+        {
+          "contractName": "MD",
+          "methodName": "burn",
+          "argTypes": [ "uint256" ]
+        }
+      ],
+      "exp": "(balanceOf[msg.sender] - _value)",
+      "status": "proven"
+    },
+    {
+      "no": "11",
+      "kind": "IO",
+      "line": 224,
+      "signatures": [
+        {
+          "contractName": "MD",
+          "methodName": "burn",
+          "argTypes": [ "uint256" ]
+        }
+      ],
+      "exp": "(totalSupply - _value)",
+      "status": "unproven"
+    },
+    {
+      "no": "12",
+      "kind": "IO",
+      "line": 246,
+      "signatures": [
+        {
+          "contractName": "MD",
+          "methodName": "burnFrom",
+          "argTypes": [ "address", "uint256" ]
+        }
+      ],
+      "exp": "(balanceOf[_from] - _value)",
+      "status": "proven"
+    },
+    {
+      "no": "13",
+      "kind": "IO",
+      "line": 247,
+      "signatures": [
+        {
+          "contractName": "MD",
+          "methodName": "burnFrom",
+          "argTypes": [ "address", "uint256" ]
+        }
+      ],
+      "exp": "(allowance[_from][msg.sender] - _value)",
+      "status": "proven"
+    },
+    {
+      "no": "14",
+      "kind": "IO",
+      "line": 248,
+      "signatures": [
+        {
+          "contractName": "MD",
+          "methodName": "burnFrom",
+          "argTypes": [ "address", "uint256" ]
+        }
+      ],
+      "exp": "(totalSupply - _value)",
+      "status": "unproven"
+    },
+    {
+      "no": "15",
+      "kind": "ETH_LEAK",
+      "line": 15,
+      "signatures": [
+        {
+          "contractName": "MD",
+          "methodName": "cash_unchk46",
+          "argTypes": [ "uint256", "uint256", "address" ]
+        }
+      ],
+      "exp": "winner_unchk46.send(subpot_unchk46);",
+      "status": "unproven"
+    },
+    {
+      "no": "16",
+      "kind": "ETH_LEAK",
+      "line": 21,
+      "signatures": [
+        {
+          "contractName": "MD",
+          "methodName": "UncheckedExternalCall_unchk4",
+          "argTypes": []
+        }
+      ],
+      "exp": "addr_unchk4.send(42000000000000000000)",
+      "status": "proven"
+    },
+    {
+      "no": "17",
+      "kind": "ETH_LEAK",
+      "line": 31,
+      "signatures": [
+        { "contractName": "MD", "methodName": "bug_unchk7", "argTypes": [] }
+      ],
+      "exp": "addr_unchk7.send(10000000000000000000)",
+      "status": "proven"
+    },
+    {
+      "no": "18",
+      "kind": "ETH_LEAK",
+      "line": 37,
+      "signatures": [
+        {
+          "contractName": "MD",
+          "methodName": "my_func_unchk23",
+          "argTypes": [ "address" ]
+        }
+      ],
+      "exp": "dst.send(msg.value);",
+      "status": "proven"
+    },
+    {
+      "no": "19",
+      "kind": "ETH_LEAK",
+      "line": 43,
+      "signatures": [
+        {
+          "contractName": "MD",
+          "methodName": "unhandledsend_unchk14",
+          "argTypes": [ "address" ]
+        }
+      ],
+      "exp": "callee.send(5000000000000000000);",
+      "status": "unproven"
+    },
+    {
+      "no": "20",
+      "kind": "ETH_LEAK",
+      "line": 49,
+      "signatures": [
+        { "contractName": "MD", "methodName": "bug_unchk30", "argTypes": [] }
+      ],
+      "exp": "addr_unchk30.send(42000000000000000000)",
+      "status": "proven"
+    },
+    {
+      "no": "21",
+      "kind": "ETH_LEAK",
+      "line": 59,
+      "signatures": [
+        { "contractName": "MD", "methodName": "bug_unchk31", "argTypes": [] }
+      ],
+      "exp": "addr_unchk31.send(10000000000000000000)",
+      "status": "proven"
+    },
+    {
+      "no": "22",
+      "kind": "ETH_LEAK",
+      "line": 69,
+      "signatures": [
+        {
+          "contractName": "MD",
+          "methodName": "withdrawLeftOver_unchk45",
+          "argTypes": []
+        }
+      ],
+      "exp": "msg.sender.send(address(this).balance);",
+      "status": "unproven"
+    },
+    {
+      "no": "23",
+      "kind": "ETH_LEAK",
+      "line": 100,
+      "signatures": [
+        {
+          "contractName": "MD",
+          "methodName": "sendToWinner_unchk8",
+          "argTypes": []
+        }
+      ],
+      "exp": "winner_unchk8.send(winAmount_unchk8);",
+      "status": "proven"
+    },
+    {
+      "no": "24",
+      "kind": "ETH_LEAK",
+      "line": 125,
+      "signatures": [
+        {
+          "contractName": "MD",
+          "methodName": "bug_unchk39",
+          "argTypes": [ "address" ]
+        }
+      ],
+      "exp": "addr.send(4000000000000000000);",
+      "status": "unproven"
+    },
+    {
+      "no": "25",
+      "kind": "ETH_LEAK",
+      "line": 140,
+      "signatures": [
+        {
+          "contractName": "MD",
+          "methodName": "my_func_uncheck36",
+          "argTypes": [ "address" ]
+        }
+      ],
+      "exp": "dst.call.value(msg.value)(\"\");",
+      "status": "proven"
+    },
+    {
+      "no": "26",
+      "kind": "ETH_LEAK",
+      "line": 159,
+      "signatures": [
+        {
+          "contractName": "MD",
+          "methodName": "my_func_unchk35",
+          "argTypes": [ "address" ]
+        }
+      ],
+      "exp": "dst.send(msg.value);",
+      "status": "proven"
+    },
+    {
+      "no": "27",
+      "kind": "ETH_LEAK",
+      "line": 182,
+      "signatures": [
+        {
+          "contractName": "MD",
+          "methodName": "sendToWinner_unchk44",
+          "argTypes": []
+        }
+      ],
+      "exp": "winner_unchk44.send(winAmount_unchk44);",
+      "status": "proven"
+    },
+    {
+      "no": "28",
+      "kind": "ETH_LEAK",
+      "line": 206,
+      "signatures": [
+        {
+          "contractName": "MD",
+          "methodName": "UncheckedExternalCall_unchk40",
+          "argTypes": []
+        }
+      ],
+      "exp": "addr_unchk40.send(2000000000000000000)",
+      "status": "proven"
+    },
+    {
+      "no": "29",
+      "kind": "ETH_LEAK",
+      "line": 232,
+      "signatures": [
+        {
+          "contractName": "MD",
+          "methodName": "withdrawLeftOver_unchk33",
+          "argTypes": []
+        }
+      ],
+      "exp": "msg.sender.send(address(this).balance);",
+      "status": "unproven"
+    },
+    {
+      "no": "30",
+      "kind": "ETH_LEAK",
+      "line": 253,
+      "signatures": [
+        {
+          "contractName": "MD",
+          "methodName": "bug_unchk27",
+          "argTypes": [ "address" ]
+        }
+      ],
+      "exp": "addr.send(42000000000000000000);",
+      "status": "unproven"
+    }
+  ]
+}

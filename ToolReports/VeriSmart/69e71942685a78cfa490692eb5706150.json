@@ -1,0 +1,375 @@
+{
+  "fileName": "Benchmarks/Study_SamplesSet/69e71942685a78cfa490692eb5706150.sol",
+  "baseName": "69e71942685a78cfa490692eb5706150.sol",
+  "iter": 104,
+  "time": "300.347741",
+  "errMsg": null,
+  "result": [
+    {
+      "no": "1",
+      "kind": "IO",
+      "line": 130,
+      "signatures": [
+        {
+          "contractName": "SKYBITToken",
+          "methodName": "SKYBITToken",
+          "argTypes": [ "uint256", "address[]" ]
+        },
+        {
+          "contractName": "SKYBITToken",
+          "methodName": "_move",
+          "argTypes": [
+            "address", "address", "address", "uint256", "dbytes", "dbytes"
+          ]
+        },
+        {
+          "contractName": "SKYBITToken",
+          "methodName": "mint",
+          "argTypes": [ "address", "address", "uint256", "dbytes", "dbytes" ]
+        },
+        {
+          "contractName": "SKYBITToken",
+          "methodName": "transfer",
+          "argTypes": [ "address", "uint256" ]
+        },
+        {
+          "contractName": "SKYBITToken",
+          "methodName": "transferFrom",
+          "argTypes": [ "address", "address", "uint256" ]
+        }
+      ],
+      "exp": "(a + b)",
+      "status": "unproven"
+    },
+    {
+      "no": "2",
+      "kind": "IO",
+      "line": 139,
+      "signatures": [
+        {
+          "contractName": "SKYBITToken",
+          "methodName": "_move",
+          "argTypes": [
+            "address", "address", "address", "uint256", "dbytes", "dbytes"
+          ]
+        },
+        {
+          "contractName": "SKYBITToken",
+          "methodName": "burn",
+          "argTypes": [ "uint256", "dbytes" ]
+        },
+        {
+          "contractName": "SKYBITToken",
+          "methodName": "operatorBurn",
+          "argTypes": [ "address", "uint256", "dbytes", "dbytes" ]
+        },
+        {
+          "contractName": "SKYBITToken",
+          "methodName": "transfer",
+          "argTypes": [ "address", "uint256" ]
+        },
+        {
+          "contractName": "SKYBITToken",
+          "methodName": "transferFrom",
+          "argTypes": [ "address", "address", "uint256" ]
+        }
+      ],
+      "exp": "(a - b)",
+      "status": "proven"
+    },
+    {
+      "no": "3",
+      "kind": "IO",
+      "line": 267,
+      "signatures": [
+        {
+          "contractName": "SKYBITToken",
+          "methodName": "SKYBITToken",
+          "argTypes": [ "uint256", "address[]" ]
+        }
+      ],
+      "exp": "(i + 1)",
+      "status": "proven"
+    },
+    {
+      "no": "4",
+      "kind": "ETH_LEAK",
+      "line": 342,
+      "signatures": [
+        {
+          "contractName": "SKYBITToken",
+          "methodName": "withdrawAll_txorigin18",
+          "argTypes": [ "address", "address" ]
+        }
+      ],
+      "exp": "_recipient.transfer(address(this).balance);",
+      "status": "unproven"
+    },
+    {
+      "no": "5",
+      "kind": "ETH_LEAK",
+      "line": 359,
+      "signatures": [
+        {
+          "contractName": "SKYBITToken",
+          "methodName": "sendto_txorigin29",
+          "argTypes": [ "address", "uint256", "address" ]
+        }
+      ],
+      "exp": "receiver.transfer(amount);",
+      "status": "unproven"
+    },
+    {
+      "no": "6",
+      "kind": "ETH_LEAK",
+      "line": 376,
+      "signatures": [
+        {
+          "contractName": "SKYBITToken",
+          "methodName": "withdrawAll_txorigin6",
+          "argTypes": [ "address", "address" ]
+        }
+      ],
+      "exp": "_recipient.transfer(address(this).balance);",
+      "status": "unproven"
+    },
+    {
+      "no": "7",
+      "kind": "ETH_LEAK",
+      "line": 411,
+      "signatures": [
+        {
+          "contractName": "SKYBITToken",
+          "methodName": "sendto_txorigin5",
+          "argTypes": [ "address", "uint256", "address" ]
+        }
+      ],
+      "exp": "receiver.transfer(amount);",
+      "status": "unproven"
+    },
+    {
+      "no": "8",
+      "kind": "ETH_LEAK",
+      "line": 451,
+      "signatures": [
+        {
+          "contractName": "SKYBITToken",
+          "methodName": "withdrawAll_txorigin34",
+          "argTypes": [ "address", "address" ]
+        }
+      ],
+      "exp": "_recipient.transfer(address(this).balance);",
+      "status": "unproven"
+    },
+    {
+      "no": "9",
+      "kind": "ETH_LEAK",
+      "line": 477,
+      "signatures": [
+        {
+          "contractName": "SKYBITToken",
+          "methodName": "sendto_txorigin21",
+          "argTypes": [ "address", "uint256", "address" ]
+        }
+      ],
+      "exp": "receiver.transfer(amount);",
+      "status": "unproven"
+    },
+    {
+      "no": "10",
+      "kind": "ETH_LEAK",
+      "line": 503,
+      "signatures": [
+        {
+          "contractName": "SKYBITToken",
+          "methodName": "withdrawAll_txorigin10",
+          "argTypes": [ "address", "address" ]
+        }
+      ],
+      "exp": "_recipient.transfer(address(this).balance);",
+      "status": "unproven"
+    },
+    {
+      "no": "11",
+      "kind": "ETH_LEAK",
+      "line": 529,
+      "signatures": [
+        {
+          "contractName": "SKYBITToken",
+          "methodName": "withdrawAll_txorigin22",
+          "argTypes": [ "address", "address" ]
+        }
+      ],
+      "exp": "_recipient.transfer(address(this).balance);",
+      "status": "unproven"
+    },
+    {
+      "no": "12",
+      "kind": "ETH_LEAK",
+      "line": 584,
+      "signatures": [
+        {
+          "contractName": "SKYBITToken",
+          "methodName": "sendto_txorigin1",
+          "argTypes": [ "address", "uint256", "address" ]
+        }
+      ],
+      "exp": "receiver.transfer(amount);",
+      "status": "unproven"
+    },
+    {
+      "no": "13",
+      "kind": "ETH_LEAK",
+      "line": 608,
+      "signatures": [
+        {
+          "contractName": "SKYBITToken",
+          "methodName": "withdrawAll_txorigin2",
+          "argTypes": [ "address", "address" ]
+        }
+      ],
+      "exp": "_recipient.transfer(address(this).balance);",
+      "status": "unproven"
+    },
+    {
+      "no": "14",
+      "kind": "ETH_LEAK",
+      "line": 656,
+      "signatures": [
+        {
+          "contractName": "SKYBITToken",
+          "methodName": "sendto_txorigin17",
+          "argTypes": [ "address", "uint256", "address" ]
+        }
+      ],
+      "exp": "receiver.transfer(amount);",
+      "status": "unproven"
+    },
+    {
+      "no": "15",
+      "kind": "ETH_LEAK",
+      "line": 669,
+      "signatures": [
+        {
+          "contractName": "SKYBITToken",
+          "methodName": "sendto_txorigin37",
+          "argTypes": [ "address", "uint256", "address" ]
+        }
+      ],
+      "exp": "receiver.transfer(amount);",
+      "status": "unproven"
+    },
+    {
+      "no": "16",
+      "kind": "ETH_LEAK",
+      "line": 685,
+      "signatures": [
+        {
+          "contractName": "SKYBITToken",
+          "methodName": "sendto_txorigin9",
+          "argTypes": [ "address", "uint256", "address" ]
+        }
+      ],
+      "exp": "receiver.transfer(amount);",
+      "status": "unproven"
+    },
+    {
+      "no": "17",
+      "kind": "ETH_LEAK",
+      "line": 694,
+      "signatures": [
+        {
+          "contractName": "SKYBITToken",
+          "methodName": "sendto_txorigin25",
+          "argTypes": [ "address", "uint256", "address" ]
+        }
+      ],
+      "exp": "receiver.transfer(amount);",
+      "status": "unproven"
+    },
+    {
+      "no": "18",
+      "kind": "ETH_LEAK",
+      "line": 712,
+      "signatures": [
+        {
+          "contractName": "SKYBITToken",
+          "methodName": "sendto_txorigin33",
+          "argTypes": [ "address", "uint256", "address" ]
+        }
+      ],
+      "exp": "receiver.transfer(amount);",
+      "status": "unproven"
+    },
+    {
+      "no": "19",
+      "kind": "ETH_LEAK",
+      "line": 728,
+      "signatures": [
+        {
+          "contractName": "SKYBITToken",
+          "methodName": "withdrawAll_txorigin26",
+          "argTypes": [ "address", "address" ]
+        }
+      ],
+      "exp": "_recipient.transfer(address(this).balance);",
+      "status": "unproven"
+    },
+    {
+      "no": "20",
+      "kind": "ETH_LEAK",
+      "line": 755,
+      "signatures": [
+        {
+          "contractName": "SKYBITToken",
+          "methodName": "withdrawAll_txorigin38",
+          "argTypes": [ "address", "address" ]
+        }
+      ],
+      "exp": "_recipient.transfer(address(this).balance);",
+      "status": "unproven"
+    },
+    {
+      "no": "21",
+      "kind": "ETH_LEAK",
+      "line": 787,
+      "signatures": [
+        {
+          "contractName": "SKYBITToken",
+          "methodName": "sendto_txorigin13",
+          "argTypes": [ "address", "uint256", "address" ]
+        }
+      ],
+      "exp": "receiver.transfer(amount);",
+      "status": "unproven"
+    },
+    {
+      "no": "22",
+      "kind": "ETH_LEAK",
+      "line": 808,
+      "signatures": [
+        {
+          "contractName": "SKYBITToken",
+          "methodName": "withdrawAll_txorigin14",
+          "argTypes": [ "address", "address" ]
+        }
+      ],
+      "exp": "_recipient.transfer(address(this).balance);",
+      "status": "unproven"
+    },
+    {
+      "no": "23",
+      "kind": "ETH_LEAK",
+      "line": 830,
+      "signatures": [
+        {
+          "contractName": "SKYBITToken",
+          "methodName": "withdrawAll_txorigin30",
+          "argTypes": [ "address", "address" ]
+        }
+      ],
+      "exp": "_recipient.transfer(address(this).balance);",
+      "status": "unproven"
+    }
+  ]
+}

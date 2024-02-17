@@ -1,0 +1,142 @@
+{
+  "fileName": "Benchmarks/Study_SamplesSet/f9224de644158dfdd7cbfad6d5e81865.sol",
+  "baseName": "f9224de644158dfdd7cbfad6d5e81865.sol",
+  "iter": 464,
+  "time": "300.640717",
+  "errMsg": null,
+  "result": [
+    {
+      "no": "1",
+      "kind": "IO",
+      "line": 22,
+      "signatures": [
+        {
+          "contractName": "YES",
+          "methodName": "burn",
+          "argTypes": [ "uint256" ]
+        },
+        {
+          "contractName": "YES",
+          "methodName": "freeze",
+          "argTypes": [ "uint256" ]
+        },
+        {
+          "contractName": "YES",
+          "methodName": "transfer",
+          "argTypes": [ "address", "uint256" ]
+        },
+        {
+          "contractName": "YES",
+          "methodName": "transferFrom",
+          "argTypes": [ "address", "address", "uint256" ]
+        },
+        {
+          "contractName": "YES",
+          "methodName": "unfreeze",
+          "argTypes": [ "uint256" ]
+        }
+      ],
+      "exp": "(a - b)",
+      "status": "proven"
+    },
+    {
+      "no": "2",
+      "kind": "IO",
+      "line": 26,
+      "signatures": [
+        {
+          "contractName": "YES",
+          "methodName": "freeze",
+          "argTypes": [ "uint256" ]
+        },
+        {
+          "contractName": "YES",
+          "methodName": "transfer",
+          "argTypes": [ "address", "uint256" ]
+        },
+        {
+          "contractName": "YES",
+          "methodName": "transferFrom",
+          "argTypes": [ "address", "address", "uint256" ]
+        },
+        {
+          "contractName": "YES",
+          "methodName": "unfreeze",
+          "argTypes": [ "uint256" ]
+        }
+      ],
+      "exp": "(a + b)",
+      "status": "unproven"
+    },
+    {
+      "no": "3",
+      "kind": "IO",
+      "line": 62,
+      "signatures": [
+        {
+          "contractName": "YES",
+          "methodName": "YES",
+          "argTypes": [ "uint256", "string", "string" ]
+        }
+      ],
+      "exp": "(10 ** uint256(decimals))",
+      "status": "proven"
+    },
+    {
+      "no": "4",
+      "kind": "IO",
+      "line": 62,
+      "signatures": [
+        {
+          "contractName": "YES",
+          "methodName": "YES",
+          "argTypes": [ "uint256", "string", "string" ]
+        }
+      ],
+      "exp": "(initialSupply * (10 ** uint256(decimals)))",
+      "status": "unproven"
+    },
+    {
+      "no": "5",
+      "kind": "IO",
+      "line": 74,
+      "signatures": [
+        {
+          "contractName": "YES",
+          "methodName": "transfer",
+          "argTypes": [ "address", "uint256" ]
+        }
+      ],
+      "exp": "(balanceOf[_to] + _value)",
+      "status": "unproven"
+    },
+    {
+      "no": "6",
+      "kind": "IO",
+      "line": 94,
+      "signatures": [
+        {
+          "contractName": "YES",
+          "methodName": "transferFrom",
+          "argTypes": [ "address", "address", "uint256" ]
+        }
+      ],
+      "exp": "(balanceOf[_to] + _value)",
+      "status": "unproven"
+    },
+    {
+      "no": "7",
+      "kind": "ETH_LEAK",
+      "line": 133,
+      "signatures": [
+        {
+          "contractName": "YES",
+          "methodName": "withdrawEther",
+          "argTypes": [ "uint256" ]
+        }
+      ],
+      "exp": "owner.transfer(amount);",
+      "status": "proven"
+    }
+  ]
+}

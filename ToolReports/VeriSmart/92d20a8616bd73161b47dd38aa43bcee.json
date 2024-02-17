@@ -1,0 +1,404 @@
+{
+  "fileName": "Benchmarks/Study_SamplesSet/92d20a8616bd73161b47dd38aa43bcee.sol",
+  "baseName": "92d20a8616bd73161b47dd38aa43bcee.sol",
+  "iter": 998,
+  "time": "300.189211",
+  "errMsg": null,
+  "result": [
+    {
+      "no": "1",
+      "kind": "IO",
+      "line": 49,
+      "signatures": [
+        {
+          "contractName": "RESToken",
+          "methodName": "RESToken",
+          "argTypes": []
+        }
+      ],
+      "exp": "(10 ** uint256(decimals))",
+      "status": "proven"
+    },
+    {
+      "no": "2",
+      "kind": "IO",
+      "line": 49,
+      "signatures": [
+        {
+          "contractName": "RESToken",
+          "methodName": "RESToken",
+          "argTypes": []
+        }
+      ],
+      "exp": "(initialSupply * (10 ** uint256(decimals)))",
+      "status": "proven"
+    },
+    {
+      "no": "3",
+      "kind": "IO",
+      "line": 64,
+      "signatures": [
+        {
+          "contractName": "RESToken",
+          "methodName": "transfer",
+          "argTypes": [ "address", "uint256" ]
+        },
+        {
+          "contractName": "RESToken",
+          "methodName": "transferFrom",
+          "argTypes": [ "address", "address", "uint256" ]
+        }
+      ],
+      "exp": "(balanceOf[_to] + _value)",
+      "status": "unproven"
+    },
+    {
+      "no": "4",
+      "kind": "IO",
+      "line": 66,
+      "signatures": [
+        {
+          "contractName": "RESToken",
+          "methodName": "transfer",
+          "argTypes": [ "address", "uint256" ]
+        },
+        {
+          "contractName": "RESToken",
+          "methodName": "transferFrom",
+          "argTypes": [ "address", "address", "uint256" ]
+        }
+      ],
+      "exp": "(balanceOf[_from] + balanceOf[_to])",
+      "status": "unproven"
+    },
+    {
+      "no": "5",
+      "kind": "IO",
+      "line": 68,
+      "signatures": [
+        {
+          "contractName": "RESToken",
+          "methodName": "transfer",
+          "argTypes": [ "address", "uint256" ]
+        },
+        {
+          "contractName": "RESToken",
+          "methodName": "transferFrom",
+          "argTypes": [ "address", "address", "uint256" ]
+        }
+      ],
+      "exp": "(balanceOf[_from] - _value)",
+      "status": "proven"
+    },
+    {
+      "no": "6",
+      "kind": "IO",
+      "line": 70,
+      "signatures": [
+        {
+          "contractName": "RESToken",
+          "methodName": "transfer",
+          "argTypes": [ "address", "uint256" ]
+        },
+        {
+          "contractName": "RESToken",
+          "methodName": "transferFrom",
+          "argTypes": [ "address", "address", "uint256" ]
+        }
+      ],
+      "exp": "(balanceOf[_to] + _value)",
+      "status": "proven"
+    },
+    {
+      "no": "7",
+      "kind": "IO",
+      "line": 73,
+      "signatures": [
+        {
+          "contractName": "RESToken",
+          "methodName": "transfer",
+          "argTypes": [ "address", "uint256" ]
+        },
+        {
+          "contractName": "RESToken",
+          "methodName": "transferFrom",
+          "argTypes": [ "address", "address", "uint256" ]
+        }
+      ],
+      "exp": "(balanceOf[_from] + balanceOf[_to])",
+      "status": "unproven"
+    },
+    {
+      "no": "8",
+      "kind": "IO",
+      "line": 99,
+      "signatures": [
+        {
+          "contractName": "RESToken",
+          "methodName": "transferFrom",
+          "argTypes": [ "address", "address", "uint256" ]
+        }
+      ],
+      "exp": "(allowanceTransfer[_from][msg.sender] - _value)",
+      "status": "proven"
+    },
+    {
+      "no": "9",
+      "kind": "IO",
+      "line": 141,
+      "signatures": [
+        {
+          "contractName": "RESToken",
+          "methodName": "eliminate",
+          "argTypes": [ "uint256" ]
+        }
+      ],
+      "exp": "(balanceOf[msg.sender] - _value)",
+      "status": "proven"
+    },
+    {
+      "no": "10",
+      "kind": "IO",
+      "line": 142,
+      "signatures": [
+        {
+          "contractName": "RESToken",
+          "methodName": "eliminate",
+          "argTypes": [ "uint256" ]
+        }
+      ],
+      "exp": "(totalSupply - _value)",
+      "status": "proven"
+    },
+    {
+      "no": "11",
+      "kind": "IO",
+      "line": 158,
+      "signatures": [
+        {
+          "contractName": "RESToken",
+          "methodName": "eliminateFrom",
+          "argTypes": [ "address", "uint256" ]
+        }
+      ],
+      "exp": "(balanceOf[_from] - _value)",
+      "status": "proven"
+    },
+    {
+      "no": "12",
+      "kind": "IO",
+      "line": 159,
+      "signatures": [
+        {
+          "contractName": "RESToken",
+          "methodName": "eliminateFrom",
+          "argTypes": [ "address", "uint256" ]
+        }
+      ],
+      "exp": "(allowanceEliminate[_from][msg.sender] - _value)",
+      "status": "proven"
+    },
+    {
+      "no": "13",
+      "kind": "IO",
+      "line": 160,
+      "signatures": [
+        {
+          "contractName": "RESToken",
+          "methodName": "eliminateFrom",
+          "argTypes": [ "address", "uint256" ]
+        }
+      ],
+      "exp": "(totalSupply - _value)",
+      "status": "proven"
+    },
+    {
+      "no": "14",
+      "kind": "IO",
+      "line": 181,
+      "signatures": [
+        {
+          "contractName": "RESToken",
+          "methodName": "RESToken",
+          "argTypes": []
+        }
+      ],
+      "exp": "((initialSupply / 2) * (10 ** uint256(decimals)))",
+      "status": "proven"
+    },
+    {
+      "no": "15",
+      "kind": "IO",
+      "line": 181,
+      "signatures": [
+        {
+          "contractName": "RESToken",
+          "methodName": "RESToken",
+          "argTypes": []
+        }
+      ],
+      "exp": "(10 ** uint256(decimals))",
+      "status": "proven"
+    },
+    {
+      "no": "16",
+      "kind": "IO",
+      "line": 186,
+      "signatures": [
+        {
+          "contractName": "RESToken",
+          "methodName": "updatePrice",
+          "argTypes": []
+        }
+      ],
+      "exp": "(initialSellPrice * initialSupply)",
+      "status": "proven"
+    },
+    {
+      "no": "17",
+      "kind": "IO",
+      "line": 187,
+      "signatures": [
+        {
+          "contractName": "RESToken",
+          "methodName": "updatePrice",
+          "argTypes": []
+        }
+      ],
+      "exp": "(initialBuyPrice * initialSupply)",
+      "status": "proven"
+    },
+    {
+      "no": "18",
+      "kind": "IO",
+      "line": 192,
+      "signatures": [
+        { "contractName": "RESToken", "methodName": "buy", "argTypes": [] }
+      ],
+      "exp": "(msg.value * 1000)",
+      "status": "unproven"
+    },
+    {
+      "no": "19",
+      "kind": "IO",
+      "line": 199,
+      "signatures": [
+        {
+          "contractName": "RESToken",
+          "methodName": "sell",
+          "argTypes": [ "uint256" ]
+        }
+      ],
+      "exp": "(amount * sellPrice)",
+      "status": "unproven"
+    },
+    {
+      "no": "20",
+      "kind": "IO",
+      "line": 201,
+      "signatures": [
+        {
+          "contractName": "RESToken",
+          "methodName": "sell",
+          "argTypes": [ "uint256" ]
+        }
+      ],
+      "exp": "(amount * sellPrice)",
+      "status": "unproven"
+    },
+    {
+      "no": "21",
+      "kind": "DZ",
+      "line": 181,
+      "signatures": [
+        {
+          "contractName": "RESToken",
+          "methodName": "RESToken",
+          "argTypes": []
+        }
+      ],
+      "exp": "(initialSupply / 2)",
+      "status": "proven"
+    },
+    {
+      "no": "22",
+      "kind": "DZ",
+      "line": 186,
+      "signatures": [
+        {
+          "contractName": "RESToken",
+          "methodName": "updatePrice",
+          "argTypes": []
+        }
+      ],
+      "exp": "((initialSellPrice * initialSupply) / totalSupply)",
+      "status": "unproven"
+    },
+    {
+      "no": "23",
+      "kind": "DZ",
+      "line": 187,
+      "signatures": [
+        {
+          "contractName": "RESToken",
+          "methodName": "updatePrice",
+          "argTypes": []
+        }
+      ],
+      "exp": "((initialBuyPrice * initialSupply) / totalSupply)",
+      "status": "proven"
+    },
+    {
+      "no": "24",
+      "kind": "DZ",
+      "line": 192,
+      "signatures": [
+        { "contractName": "RESToken", "methodName": "buy", "argTypes": [] }
+      ],
+      "exp": "((msg.value * 1000) / buyPrice)",
+      "status": "unproven"
+    },
+    {
+      "no": "25",
+      "kind": "DZ",
+      "line": 199,
+      "signatures": [
+        {
+          "contractName": "RESToken",
+          "methodName": "sell",
+          "argTypes": [ "uint256" ]
+        }
+      ],
+      "exp": "((amount * sellPrice) / 1000)",
+      "status": "proven"
+    },
+    {
+      "no": "26",
+      "kind": "DZ",
+      "line": 201,
+      "signatures": [
+        {
+          "contractName": "RESToken",
+          "methodName": "sell",
+          "argTypes": [ "uint256" ]
+        }
+      ],
+      "exp": "((amount * sellPrice) / 1000)",
+      "status": "proven"
+    },
+    {
+      "no": "27",
+      "kind": "ETH_LEAK",
+      "line": 201,
+      "signatures": [
+        {
+          "contractName": "RESToken",
+          "methodName": "sell",
+          "argTypes": [ "uint256" ]
+        }
+      ],
+      "exp": "msg.sender.transfer(((amount * sellPrice) / 1000));",
+      "status": "unproven"
+    }
+  ]
+}

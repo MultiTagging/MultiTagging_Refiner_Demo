@@ -1,0 +1,132 @@
+{
+  "fileName": "Benchmarks/Study_SamplesSet/aa78617003a78b2f3f9cb3cc57fc1b11.sol",
+  "baseName": "aa78617003a78b2f3f9cb3cc57fc1b11.sol",
+  "iter": 28,
+  "time": "304.256595",
+  "errMsg": null,
+  "result": [
+    {
+      "no": "1",
+      "kind": "IO",
+      "line": 21,
+      "signatures": [
+        {
+          "contractName": "FreedomStreaming",
+          "methodName": "@fallback",
+          "argTypes": []
+        }
+      ],
+      "exp": "(a * b)",
+      "status": "unproven"
+    },
+    {
+      "no": "2",
+      "kind": "IO",
+      "line": 35,
+      "signatures": [
+        {
+          "contractName": "FreedomStreaming",
+          "methodName": "@fallback",
+          "argTypes": []
+        },
+        {
+          "contractName": "FreedomStreaming",
+          "methodName": "transfer",
+          "argTypes": [ "address", "uint256" ]
+        },
+        {
+          "contractName": "FreedomStreaming",
+          "methodName": "transferFrom",
+          "argTypes": [ "address", "address", "uint256" ]
+        }
+      ],
+      "exp": "(a - b)",
+      "status": "proven"
+    },
+    {
+      "no": "3",
+      "kind": "IO",
+      "line": 39,
+      "signatures": [
+        {
+          "contractName": "FreedomStreaming",
+          "methodName": "@fallback",
+          "argTypes": []
+        },
+        {
+          "contractName": "FreedomStreaming",
+          "methodName": "drainToken",
+          "argTypes": []
+        },
+        {
+          "contractName": "FreedomStreaming",
+          "methodName": "transfer",
+          "argTypes": [ "address", "uint256" ]
+        },
+        {
+          "contractName": "FreedomStreaming",
+          "methodName": "transferFrom",
+          "argTypes": [ "address", "address", "uint256" ]
+        }
+      ],
+      "exp": "(a + b)",
+      "status": "proven"
+    },
+    {
+      "no": "4",
+      "kind": "IO",
+      "line": 139,
+      "signatures": [
+        {
+          "contractName": "FreedomStreaming",
+          "methodName": "transfer",
+          "argTypes": [ "address", "uint256" ]
+        }
+      ],
+      "exp": "(balances[_to] + _amount)",
+      "status": "unproven"
+    },
+    {
+      "no": "5",
+      "kind": "DZ",
+      "line": 22,
+      "signatures": [
+        {
+          "contractName": "FreedomStreaming",
+          "methodName": "@fallback",
+          "argTypes": []
+        }
+      ],
+      "exp": "(c / a)",
+      "status": "proven"
+    },
+    {
+      "no": "6",
+      "kind": "ETH_LEAK",
+      "line": 112,
+      "signatures": [
+        {
+          "contractName": "FreedomStreaming",
+          "methodName": "@fallback",
+          "argTypes": []
+        }
+      ],
+      "exp": "owner.transfer(this.balance);",
+      "status": "proven"
+    },
+    {
+      "no": "7",
+      "kind": "ETH_LEAK",
+      "line": 210,
+      "signatures": [
+        {
+          "contractName": "FreedomStreaming",
+          "methodName": "drain",
+          "argTypes": []
+        }
+      ],
+      "exp": "owner.transfer(this.balance);",
+      "status": "proven"
+    }
+  ]
+}

@@ -1,0 +1,65 @@
+{
+  "fileName": "Benchmarks/Study_SamplesSet/32bcfb9e179885981f5723508c10f1b1.sol",
+  "baseName": "32bcfb9e179885981f5723508c10f1b1.sol",
+  "iter": 4,
+  "time": "8.40891",
+  "errMsg": null,
+  "result": [
+    {
+      "no": "1",
+      "kind": "IO",
+      "line": 11,
+      "signatures": [
+        {
+          "contractName": "NoSimpleDAOByTransfer",
+          "methodName": "donate",
+          "argTypes": [ "address" ]
+        }
+      ],
+      "exp": "(credit[to] + msg.value)",
+      "status": "unproven"
+    },
+    {
+      "no": "2",
+      "kind": "IO",
+      "line": 12,
+      "signatures": [
+        {
+          "contractName": "NoSimpleDAOByTransfer",
+          "methodName": "donate",
+          "argTypes": [ "address" ]
+        }
+      ],
+      "exp": "(credit[to] + msg.value)",
+      "status": "proven"
+    },
+    {
+      "no": "3",
+      "kind": "IO",
+      "line": 18,
+      "signatures": [
+        {
+          "contractName": "NoSimpleDAOByTransfer",
+          "methodName": "withdraw",
+          "argTypes": [ "uint256" ]
+        }
+      ],
+      "exp": "(credit[msg.sender] - amount)",
+      "status": "proven"
+    },
+    {
+      "no": "4",
+      "kind": "ETH_LEAK",
+      "line": 17,
+      "signatures": [
+        {
+          "contractName": "NoSimpleDAOByTransfer",
+          "methodName": "withdraw",
+          "argTypes": [ "uint256" ]
+        }
+      ],
+      "exp": "msg.sender.transfer(amount);",
+      "status": "proven"
+    }
+  ]
+}

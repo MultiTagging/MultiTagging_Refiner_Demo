@@ -1,0 +1,131 @@
+{
+  "fileName": "Benchmarks/Study_SamplesSet/90dabd067acedb50b209febd7df95a68.sol",
+  "baseName": "90dabd067acedb50b209febd7df95a68.sol",
+  "iter": 70,
+  "time": "315.997247",
+  "errMsg": null,
+  "result": [
+    {
+      "no": "1",
+      "kind": "IO",
+      "line": 63,
+      "signatures": [
+        {
+          "contractName": "DeedSaft",
+          "methodName": "decreaseApproval",
+          "argTypes": [ "address", "uint256" ]
+        },
+        {
+          "contractName": "DeedSaft",
+          "methodName": "transfer",
+          "argTypes": [ "address", "uint256" ]
+        },
+        {
+          "contractName": "DeedSaft",
+          "methodName": "transferFrom",
+          "argTypes": [ "address", "address", "uint256" ]
+        }
+      ],
+      "exp": "(a - b)",
+      "status": "proven"
+    },
+    {
+      "no": "2",
+      "kind": "IO",
+      "line": 67,
+      "signatures": [
+        {
+          "contractName": "DeedSaft",
+          "methodName": "increaseApproval",
+          "argTypes": [ "address", "uint256" ]
+        }
+      ],
+      "exp": "(a + b)",
+      "status": "unproven"
+    },
+    {
+      "no": "3",
+      "kind": "IO",
+      "line": 293,
+      "signatures": [
+        {
+          "contractName": "DeedSaft",
+          "methodName": "DeedSaft",
+          "argTypes": []
+        }
+      ],
+      "exp": "(10 ** decimals)",
+      "status": "proven"
+    },
+    {
+      "no": "4",
+      "kind": "IO",
+      "line": 293,
+      "signatures": [
+        {
+          "contractName": "DeedSaft",
+          "methodName": "DeedSaft",
+          "argTypes": []
+        }
+      ],
+      "exp": "(55999999 * (10 ** decimals))",
+      "status": "proven"
+    },
+    {
+      "no": "5",
+      "kind": "KA",
+      "line": 128,
+      "signatures": [
+        {
+          "contractName": "DeedSaft",
+          "methodName": "destroy",
+          "argTypes": []
+        }
+      ],
+      "exp": "selfdestruct(owner);",
+      "status": "proven"
+    },
+    {
+      "no": "6",
+      "kind": "KA",
+      "line": 132,
+      "signatures": [
+        {
+          "contractName": "DeedSaft",
+          "methodName": "destroyAndSend",
+          "argTypes": [ "address" ]
+        }
+      ],
+      "exp": "selfdestruct(_recipient);",
+      "status": "proven"
+    },
+    {
+      "no": "7",
+      "kind": "ETH_LEAK",
+      "line": 128,
+      "signatures": [
+        {
+          "contractName": "DeedSaft",
+          "methodName": "destroy",
+          "argTypes": []
+        }
+      ],
+      "exp": "selfdestruct(owner);",
+      "status": "proven"
+    },
+    {
+      "no": "8",
+      "kind": "ETH_LEAK",
+      "line": 132,
+      "signatures": [
+        {
+          "contractName": "DeedSaft",
+          "methodName": "destroyAndSend",
+          "argTypes": [ "address" ]
+        }
+      ],
+      "exp": "selfdestruct(_recipient);",
+      "status": "proven"
+    }
+  ]
+}

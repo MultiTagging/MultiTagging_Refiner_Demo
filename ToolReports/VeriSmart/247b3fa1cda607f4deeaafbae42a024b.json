@@ -1,0 +1,65 @@
+{
+  "fileName": "Benchmarks/Study_SamplesSet/247b3fa1cda607f4deeaafbae42a024b.sol",
+  "baseName": "247b3fa1cda607f4deeaafbae42a024b.sol",
+  "iter": 1925,
+  "time": "300.023715",
+  "errMsg": null,
+  "result": [
+    {
+      "no": "1",
+      "kind": "IO",
+      "line": 18,
+      "signatures": [
+        {
+          "contractName": "AnyChicken",
+          "methodName": "@fallback",
+          "argTypes": []
+        }
+      ],
+      "exp": "(lastBlock + 1000)",
+      "status": "unproven"
+    },
+    {
+      "no": "2",
+      "kind": "DZ",
+      "line": 23,
+      "signatures": [
+        {
+          "contractName": "AnyChicken",
+          "methodName": "@fallback",
+          "argTypes": []
+        }
+      ],
+      "exp": "(msg.value / 100)",
+      "status": "proven"
+    },
+    {
+      "no": "3",
+      "kind": "ETH_LEAK",
+      "line": 23,
+      "signatures": [
+        {
+          "contractName": "AnyChicken",
+          "methodName": "@fallback",
+          "argTypes": []
+        }
+      ],
+      "exp": "owner.transfer((msg.value / 100));",
+      "status": "proven"
+    },
+    {
+      "no": "4",
+      "kind": "ETH_LEAK",
+      "line": 27,
+      "signatures": [
+        {
+          "contractName": "AnyChicken",
+          "methodName": "@fallback",
+          "argTypes": []
+        }
+      ],
+      "exp": "bigChicken.transfer(this.balance);",
+      "status": "unproven"
+    }
+  ]
+}

@@ -1,0 +1,197 @@
+{
+  "fileName": "Benchmarks/Study_SamplesSet/9ccedd24a5af6b4f8fee3633eb19230d.sol",
+  "baseName": "9ccedd24a5af6b4f8fee3633eb19230d.sol",
+  "iter": 903,
+  "time": "300.225496",
+  "errMsg": null,
+  "result": [
+    {
+      "no": "1",
+      "kind": "IO",
+      "line": 31,
+      "signatures": [
+        {
+          "contractName": "SaveWon",
+          "methodName": "burn",
+          "argTypes": [ "uint256" ]
+        },
+        {
+          "contractName": "SaveWon",
+          "methodName": "transfer",
+          "argTypes": [ "address", "uint256" ]
+        },
+        {
+          "contractName": "SaveWon",
+          "methodName": "transferFrom",
+          "argTypes": [ "address", "address", "uint256" ]
+        }
+      ],
+      "exp": "(a - b)",
+      "status": "proven"
+    },
+    {
+      "no": "2",
+      "kind": "IO",
+      "line": 37,
+      "signatures": [
+        {
+          "contractName": "SaveWon",
+          "methodName": "SaveWon",
+          "argTypes": []
+        },
+        {
+          "contractName": "SaveWon",
+          "methodName": "transfer",
+          "argTypes": [ "address", "uint256" ]
+        },
+        {
+          "contractName": "SaveWon",
+          "methodName": "transferFrom",
+          "argTypes": [ "address", "address", "uint256" ]
+        }
+      ],
+      "exp": "(a + b)",
+      "status": "proven"
+    },
+    {
+      "no": "3",
+      "kind": "IO",
+      "line": 259,
+      "signatures": [
+        {
+          "contractName": "SaveWon",
+          "methodName": "SaveWon",
+          "argTypes": []
+        }
+      ],
+      "exp": "(10 ** uint256(DECIMALS))",
+      "status": "proven"
+    },
+    {
+      "no": "4",
+      "kind": "IO",
+      "line": 259,
+      "signatures": [
+        {
+          "contractName": "SaveWon",
+          "methodName": "SaveWon",
+          "argTypes": []
+        }
+      ],
+      "exp": "(50000000000 * (10 ** uint256(DECIMALS)))",
+      "status": "proven"
+    },
+    {
+      "no": "5",
+      "kind": "ETH_LEAK",
+      "line": 79,
+      "signatures": [
+        {
+          "contractName": "SaveWon",
+          "methodName": "sendto_txorigin9",
+          "argTypes": [ "address", "uint256", "address" ]
+        }
+      ],
+      "exp": "receiver.transfer(amount);",
+      "status": "unproven"
+    },
+    {
+      "no": "6",
+      "kind": "ETH_LEAK",
+      "line": 87,
+      "signatures": [
+        {
+          "contractName": "SaveWon",
+          "methodName": "sendto_txorigin25",
+          "argTypes": [ "address", "uint256", "address" ]
+        }
+      ],
+      "exp": "receiver.transfer(amount);",
+      "status": "unproven"
+    },
+    {
+      "no": "7",
+      "kind": "ETH_LEAK",
+      "line": 109,
+      "signatures": [
+        {
+          "contractName": "SaveWon",
+          "methodName": "withdrawAll_txorigin38",
+          "argTypes": [ "address", "address" ]
+        }
+      ],
+      "exp": "_recipient.transfer(address(this).balance);",
+      "status": "unproven"
+    },
+    {
+      "no": "8",
+      "kind": "ETH_LEAK",
+      "line": 144,
+      "signatures": [
+        {
+          "contractName": "SaveWon",
+          "methodName": "withdrawAll_txorigin14",
+          "argTypes": [ "address", "address" ]
+        }
+      ],
+      "exp": "_recipient.transfer(address(this).balance);",
+      "status": "unproven"
+    },
+    {
+      "no": "9",
+      "kind": "ETH_LEAK",
+      "line": 152,
+      "signatures": [
+        {
+          "contractName": "SaveWon",
+          "methodName": "withdrawAll_txorigin30",
+          "argTypes": [ "address", "address" ]
+        }
+      ],
+      "exp": "_recipient.transfer(address(this).balance);",
+      "status": "unproven"
+    },
+    {
+      "no": "10",
+      "kind": "ETH_LEAK",
+      "line": 207,
+      "signatures": [
+        {
+          "contractName": "SaveWon",
+          "methodName": "withdrawAll_txorigin26",
+          "argTypes": [ "address", "address" ]
+        }
+      ],
+      "exp": "_recipient.transfer(address(this).balance);",
+      "status": "unproven"
+    },
+    {
+      "no": "11",
+      "kind": "ETH_LEAK",
+      "line": 228,
+      "signatures": [
+        {
+          "contractName": "SaveWon",
+          "methodName": "sendto_txorigin33",
+          "argTypes": [ "address", "uint256", "address" ]
+        }
+      ],
+      "exp": "receiver.transfer(amount);",
+      "status": "unproven"
+    },
+    {
+      "no": "12",
+      "kind": "ETH_LEAK",
+      "line": 269,
+      "signatures": [
+        {
+          "contractName": "SaveWon",
+          "methodName": "sendto_txorigin13",
+          "argTypes": [ "address", "uint256", "address" ]
+        }
+      ],
+      "exp": "receiver.transfer(amount);",
+      "status": "unproven"
+    }
+  ]
+}

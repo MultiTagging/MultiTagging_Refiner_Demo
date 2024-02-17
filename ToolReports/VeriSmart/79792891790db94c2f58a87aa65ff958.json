@@ -1,0 +1,258 @@
+{
+  "fileName": "Benchmarks/Study_SamplesSet/79792891790db94c2f58a87aa65ff958.sol",
+  "baseName": "79792891790db94c2f58a87aa65ff958.sol",
+  "iter": 1988,
+  "time": "300.068335",
+  "errMsg": null,
+  "result": [
+    {
+      "no": "1",
+      "kind": "IO",
+      "line": 50,
+      "signatures": [
+        {
+          "contractName": "mkethToken",
+          "methodName": "mkethToken",
+          "argTypes": []
+        }
+      ],
+      "exp": "(10 ** uint256(decimals))",
+      "status": "proven"
+    },
+    {
+      "no": "2",
+      "kind": "IO",
+      "line": 50,
+      "signatures": [
+        {
+          "contractName": "mkethToken",
+          "methodName": "mkethToken",
+          "argTypes": []
+        }
+      ],
+      "exp": "(initialSupply * (10 ** uint256(decimals)))",
+      "status": "proven"
+    },
+    {
+      "no": "3",
+      "kind": "IO",
+      "line": 100,
+      "signatures": [
+        {
+          "contractName": "mkethToken",
+          "methodName": "transferFrom",
+          "argTypes": [ "address", "address", "uint256" ]
+        }
+      ],
+      "exp": "(allowance[_from][msg.sender] - _value)",
+      "status": "proven"
+    },
+    {
+      "no": "4",
+      "kind": "IO",
+      "line": 147,
+      "signatures": [
+        {
+          "contractName": "mkethToken",
+          "methodName": "burn",
+          "argTypes": [ "uint256" ]
+        }
+      ],
+      "exp": "(balanceOf[msg.sender] - _value)",
+      "status": "proven"
+    },
+    {
+      "no": "5",
+      "kind": "IO",
+      "line": 148,
+      "signatures": [
+        {
+          "contractName": "mkethToken",
+          "methodName": "burn",
+          "argTypes": [ "uint256" ]
+        }
+      ],
+      "exp": "(totalSupply - _value)",
+      "status": "unproven"
+    },
+    {
+      "no": "6",
+      "kind": "IO",
+      "line": 164,
+      "signatures": [
+        {
+          "contractName": "mkethToken",
+          "methodName": "burnFrom",
+          "argTypes": [ "address", "uint256" ]
+        }
+      ],
+      "exp": "(balanceOf[_from] - _value)",
+      "status": "proven"
+    },
+    {
+      "no": "7",
+      "kind": "IO",
+      "line": 165,
+      "signatures": [
+        {
+          "contractName": "mkethToken",
+          "methodName": "burnFrom",
+          "argTypes": [ "address", "uint256" ]
+        }
+      ],
+      "exp": "(allowance[_from][msg.sender] - _value)",
+      "status": "proven"
+    },
+    {
+      "no": "8",
+      "kind": "IO",
+      "line": 166,
+      "signatures": [
+        {
+          "contractName": "mkethToken",
+          "methodName": "burnFrom",
+          "argTypes": [ "address", "uint256" ]
+        }
+      ],
+      "exp": "(totalSupply - _value)",
+      "status": "unproven"
+    },
+    {
+      "no": "9",
+      "kind": "IO",
+      "line": 199,
+      "signatures": [
+        {
+          "contractName": "mkethToken",
+          "methodName": "transfer",
+          "argTypes": [ "address", "uint256" ]
+        },
+        {
+          "contractName": "mkethToken",
+          "methodName": "transferFrom",
+          "argTypes": [ "address", "address", "uint256" ]
+        }
+      ],
+      "exp": "(balanceOf[_to] + _value)",
+      "status": "unproven"
+    },
+    {
+      "no": "10",
+      "kind": "IO",
+      "line": 202,
+      "signatures": [
+        {
+          "contractName": "mkethToken",
+          "methodName": "transfer",
+          "argTypes": [ "address", "uint256" ]
+        },
+        {
+          "contractName": "mkethToken",
+          "methodName": "transferFrom",
+          "argTypes": [ "address", "address", "uint256" ]
+        }
+      ],
+      "exp": "(balanceOf[_from] - _value)",
+      "status": "proven"
+    },
+    {
+      "no": "11",
+      "kind": "IO",
+      "line": 203,
+      "signatures": [
+        {
+          "contractName": "mkethToken",
+          "methodName": "transfer",
+          "argTypes": [ "address", "uint256" ]
+        },
+        {
+          "contractName": "mkethToken",
+          "methodName": "transferFrom",
+          "argTypes": [ "address", "address", "uint256" ]
+        }
+      ],
+      "exp": "(balanceOf[_to] + _value)",
+      "status": "proven"
+    },
+    {
+      "no": "12",
+      "kind": "IO",
+      "line": 211,
+      "signatures": [
+        {
+          "contractName": "mkethToken",
+          "methodName": "mintToken",
+          "argTypes": [ "address", "uint256" ]
+        }
+      ],
+      "exp": "(balanceOf[target] + mintedAmount)",
+      "status": "unproven"
+    },
+    {
+      "no": "13",
+      "kind": "IO",
+      "line": 212,
+      "signatures": [
+        {
+          "contractName": "mkethToken",
+          "methodName": "mintToken",
+          "argTypes": [ "address", "uint256" ]
+        }
+      ],
+      "exp": "(totalSupply + mintedAmount)",
+      "status": "unproven"
+    },
+    {
+      "no": "14",
+      "kind": "IO",
+      "line": 242,
+      "signatures": [
+        {
+          "contractName": "mkethToken",
+          "methodName": "sell",
+          "argTypes": [ "uint256" ]
+        }
+      ],
+      "exp": "(amount * sellPrice)",
+      "status": "unproven"
+    },
+    {
+      "no": "15",
+      "kind": "IO",
+      "line": 244,
+      "signatures": [
+        {
+          "contractName": "mkethToken",
+          "methodName": "sell",
+          "argTypes": [ "uint256" ]
+        }
+      ],
+      "exp": "(amount * sellPrice)",
+      "status": "unproven"
+    },
+    {
+      "no": "16",
+      "kind": "DZ",
+      "line": 235,
+      "signatures": [
+        { "contractName": "mkethToken", "methodName": "buy", "argTypes": [] }
+      ],
+      "exp": "(msg.value / buyPrice)",
+      "status": "unproven"
+    },
+    {
+      "no": "17",
+      "kind": "ETH_LEAK",
+      "line": 244,
+      "signatures": [
+        {
+          "contractName": "mkethToken",
+          "methodName": "sell",
+          "argTypes": [ "uint256" ]
+        }
+      ],
+      "exp": "msg.sender.transfer((amount * sellPrice));",
+      "status": "unproven"
+    }
+  ]
+}

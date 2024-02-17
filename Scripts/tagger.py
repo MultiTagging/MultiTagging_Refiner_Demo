@@ -23,7 +23,7 @@ def generateTags(tool,reportSource):
     vulnReportsPath = config_File['Reports_Directory_Path'][Tools.index(tool)]['Path']
     labeledSC = parse(tool,vulnReportsPath,reportSource)
 
-    if reportSource ==0:
+    if reportSource ==0 and tool != 'VeriSmart':
         analysisTimeReportsPath = config_File['AnalysisTime_Directory_Path'][Tools.index(tool)]['Path']    
         tool_LabeledDS = pd.DataFrame(get_ToolAnalysisTime(tool, analysisTimeReportsPath))
         labeledSC= labeledSC.merge(tool_LabeledDS,on='contractAddress')
@@ -58,4 +58,4 @@ def get_ToolAnalysisTime(tool, analysisTimeReportsPath):
     except IOError:
         print("Path not exist") 
 
-#print(generateTags('Semgrep',1))
+#print(generateTags('VeriSmart',0))

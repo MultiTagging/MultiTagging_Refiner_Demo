@@ -1,0 +1,107 @@
+{
+  "fileName": "Benchmarks/Study_SamplesSet/2b0575027a80a17c1f30dd40d3a5faa5.sol",
+  "baseName": "2b0575027a80a17c1f30dd40d3a5faa5.sol",
+  "iter": 2457,
+  "time": "300.035323",
+  "errMsg": null,
+  "result": [
+    {
+      "no": "1",
+      "kind": "IO",
+      "line": 34,
+      "signatures": [
+        {
+          "contractName": "mhethkeeper",
+          "methodName": "AddManager",
+          "argTypes": [ "address" ]
+        }
+      ],
+      "exp": "(mgrCount + 1)",
+      "status": "unproven"
+    },
+    {
+      "no": "2",
+      "kind": "IO",
+      "line": 64,
+      "signatures": [
+        {
+          "contractName": "mhethkeeper",
+          "methodName": "SetAction",
+          "argTypes": [ "address", "uint256" ]
+        }
+      ],
+      "exp": "(i + 1)",
+      "status": "unproven"
+    },
+    {
+      "no": "3",
+      "kind": "IO",
+      "line": 82,
+      "signatures": [
+        {
+          "contractName": "mhethkeeper",
+          "methodName": "Approve",
+          "argTypes": [ "address", "uint256" ]
+        }
+      ],
+      "exp": "(i + 1)",
+      "status": "unproven"
+    },
+    {
+      "no": "4",
+      "kind": "IO",
+      "line": 86,
+      "signatures": [
+        {
+          "contractName": "mhethkeeper",
+          "methodName": "Approve",
+          "argTypes": [ "address", "uint256" ]
+        }
+      ],
+      "exp": "(curVotes + 1)",
+      "status": "unproven"
+    },
+    {
+      "no": "5",
+      "kind": "IO",
+      "line": 107,
+      "signatures": [
+        {
+          "contractName": "mhethkeeper",
+          "methodName": "NullSettings",
+          "argTypes": []
+        }
+      ],
+      "exp": "(i + 1)",
+      "status": "unproven"
+    },
+    {
+      "no": "6",
+      "kind": "IO",
+      "line": 115,
+      "signatures": [
+        {
+          "contractName": "mhethkeeper",
+          "methodName": "IsManager",
+          "argTypes": [ "address" ]
+        }
+      ],
+      "exp": "(i + 1)",
+      "status": "unproven"
+    },
+    {
+      "no": "7",
+      "kind": "ETH_LEAK",
+      "line": 89,
+      "signatures": [
+        {
+          "contractName": "mhethkeeper",
+          "methodName": "Approve",
+          "argTypes": [ "address", "uint256" ]
+        }
+      ],
+      "exp": "recipient.transfer(amountToTransfer);",
+      "status": "unproven"
+    }
+  ]
+}

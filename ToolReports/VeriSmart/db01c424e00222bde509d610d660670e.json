@@ -1,0 +1,505 @@
+{
+  "fileName": "Benchmarks/Study_SamplesSet/db01c424e00222bde509d610d660670e.sol",
+  "baseName": "db01c424e00222bde509d610d660670e.sol",
+  "iter": 941,
+  "time": "300.17895",
+  "errMsg": null,
+  "result": [
+    {
+      "no": "1",
+      "kind": "IO",
+      "line": 147,
+      "signatures": [
+        { "contractName": "StockBet", "methodName": "betUp", "argTypes": [] }
+      ],
+      "exp": "(bet * 1000000000000000)",
+      "status": "unproven"
+    },
+    {
+      "no": "2",
+      "kind": "IO",
+      "line": 149,
+      "signatures": [
+        { "contractName": "StockBet", "methodName": "betUp", "argTypes": [] }
+      ],
+      "exp": "(guesses[UP].guesses_number + 1)",
+      "status": "unproven"
+    },
+    {
+      "no": "3",
+      "kind": "IO",
+      "line": 158,
+      "signatures": [
+        {
+          "contractName": "StockBet",
+          "methodName": "betDown",
+          "argTypes": []
+        }
+      ],
+      "exp": "(bet * 1000000000000000)",
+      "status": "unproven"
+    },
+    {
+      "no": "4",
+      "kind": "IO",
+      "line": 160,
+      "signatures": [
+        {
+          "contractName": "StockBet",
+          "methodName": "betDown",
+          "argTypes": []
+        }
+      ],
+      "exp": "(guesses[DOWN].guesses_number + 1)",
+      "status": "unproven"
+    },
+    {
+      "no": "5",
+      "kind": "DZ",
+      "line": 185,
+      "signatures": [
+        {
+          "contractName": "StockBet",
+          "methodName": "setFinalPrice",
+          "argTypes": [ "uint256" ]
+        }
+      ],
+      "exp": "(getBalance() / guesses[result].guesses_number)",
+      "status": "proven"
+    },
+    {
+      "no": "6",
+      "kind": "KA",
+      "line": 196,
+      "signatures": [
+        {
+          "contractName": "StockBet",
+          "methodName": "collectOwnerWinnings",
+          "argTypes": []
+        }
+      ],
+      "exp": "selfdestruct(owner);",
+      "status": "proven"
+    },
+    {
+      "no": "7",
+      "kind": "ETH_LEAK",
+      "line": 10,
+      "signatures": [
+        {
+          "contractName": "StockBet",
+          "methodName": "bug_unchk_send7",
+          "argTypes": []
+        }
+      ],
+      "exp": "msg.sender.transfer(1000000000000000000);",
+      "status": "unproven"
+    },
+    {
+      "no": "8",
+      "kind": "ETH_LEAK",
+      "line": 13,
+      "signatures": [
+        {
+          "contractName": "StockBet",
+          "methodName": "bug_unchk_send23",
+          "argTypes": []
+        }
+      ],
+      "exp": "msg.sender.transfer(1000000000000000000);",
+      "status": "unproven"
+    },
+    {
+      "no": "9",
+      "kind": "ETH_LEAK",
+      "line": 16,
+      "signatures": [
+        {
+          "contractName": "StockBet",
+          "methodName": "bug_unchk_send14",
+          "argTypes": []
+        }
+      ],
+      "exp": "msg.sender.transfer(1000000000000000000);",
+      "status": "unproven"
+    },
+    {
+      "no": "10",
+      "kind": "ETH_LEAK",
+      "line": 19,
+      "signatures": [
+        {
+          "contractName": "StockBet",
+          "methodName": "bug_unchk_send30",
+          "argTypes": []
+        }
+      ],
+      "exp": "msg.sender.transfer(1000000000000000000);",
+      "status": "unproven"
+    },
+    {
+      "no": "11",
+      "kind": "ETH_LEAK",
+      "line": 22,
+      "signatures": [
+        {
+          "contractName": "StockBet",
+          "methodName": "bug_unchk_send8",
+          "argTypes": []
+        }
+      ],
+      "exp": "msg.sender.transfer(1000000000000000000);",
+      "status": "unproven"
+    },
+    {
+      "no": "12",
+      "kind": "ETH_LEAK",
+      "line": 25,
+      "signatures": [
+        {
+          "contractName": "StockBet",
+          "methodName": "bug_unchk_send27",
+          "argTypes": []
+        }
+      ],
+      "exp": "msg.sender.transfer(1000000000000000000);",
+      "status": "unproven"
+    },
+    {
+      "no": "13",
+      "kind": "ETH_LEAK",
+      "line": 29,
+      "signatures": [
+        {
+          "contractName": "StockBet",
+          "methodName": "bug_unchk_send31",
+          "argTypes": []
+        }
+      ],
+      "exp": "msg.sender.transfer(1000000000000000000);",
+      "status": "unproven"
+    },
+    {
+      "no": "14",
+      "kind": "ETH_LEAK",
+      "line": 32,
+      "signatures": [
+        {
+          "contractName": "StockBet",
+          "methodName": "bug_unchk_send13",
+          "argTypes": []
+        }
+      ],
+      "exp": "msg.sender.transfer(1000000000000000000);",
+      "status": "unproven"
+    },
+    {
+      "no": "15",
+      "kind": "ETH_LEAK",
+      "line": 51,
+      "signatures": [
+        {
+          "contractName": "StockBet",
+          "methodName": "bug_unchk_send24",
+          "argTypes": []
+        }
+      ],
+      "exp": "msg.sender.transfer(1000000000000000000);",
+      "status": "unproven"
+    },
+    {
+      "no": "16",
+      "kind": "ETH_LEAK",
+      "line": 54,
+      "signatures": [
+        {
+          "contractName": "StockBet",
+          "methodName": "bug_unchk_send5",
+          "argTypes": []
+        }
+      ],
+      "exp": "msg.sender.transfer(1000000000000000000);",
+      "status": "unproven"
+    },
+    {
+      "no": "17",
+      "kind": "ETH_LEAK",
+      "line": 57,
+      "signatures": [
+        {
+          "contractName": "StockBet",
+          "methodName": "bug_unchk_send15",
+          "argTypes": []
+        }
+      ],
+      "exp": "msg.sender.transfer(1000000000000000000);",
+      "status": "unproven"
+    },
+    {
+      "no": "18",
+      "kind": "ETH_LEAK",
+      "line": 61,
+      "signatures": [
+        {
+          "contractName": "StockBet",
+          "methodName": "bug_unchk_send28",
+          "argTypes": []
+        }
+      ],
+      "exp": "msg.sender.transfer(1000000000000000000);",
+      "status": "unproven"
+    },
+    {
+      "no": "19",
+      "kind": "ETH_LEAK",
+      "line": 65,
+      "signatures": [
+        {
+          "contractName": "StockBet",
+          "methodName": "bug_unchk_send21",
+          "argTypes": []
+        }
+      ],
+      "exp": "msg.sender.transfer(1000000000000000000);",
+      "status": "unproven"
+    },
+    {
+      "no": "20",
+      "kind": "ETH_LEAK",
+      "line": 69,
+      "signatures": [
+        {
+          "contractName": "StockBet",
+          "methodName": "bug_unchk_send10",
+          "argTypes": []
+        }
+      ],
+      "exp": "msg.sender.transfer(1000000000000000000);",
+      "status": "unproven"
+    },
+    {
+      "no": "21",
+      "kind": "ETH_LEAK",
+      "line": 72,
+      "signatures": [
+        {
+          "contractName": "StockBet",
+          "methodName": "bug_unchk_send22",
+          "argTypes": []
+        }
+      ],
+      "exp": "msg.sender.transfer(1000000000000000000);",
+      "status": "unproven"
+    },
+    {
+      "no": "22",
+      "kind": "ETH_LEAK",
+      "line": 75,
+      "signatures": [
+        {
+          "contractName": "StockBet",
+          "methodName": "bug_unchk_send12",
+          "argTypes": []
+        }
+      ],
+      "exp": "msg.sender.transfer(1000000000000000000);",
+      "status": "unproven"
+    },
+    {
+      "no": "23",
+      "kind": "ETH_LEAK",
+      "line": 79,
+      "signatures": [
+        {
+          "contractName": "StockBet",
+          "methodName": "bug_unchk_send11",
+          "argTypes": []
+        }
+      ],
+      "exp": "msg.sender.transfer(1000000000000000000);",
+      "status": "unproven"
+    },
+    {
+      "no": "24",
+      "kind": "ETH_LEAK",
+      "line": 82,
+      "signatures": [
+        {
+          "contractName": "StockBet",
+          "methodName": "bug_unchk_send1",
+          "argTypes": []
+        }
+      ],
+      "exp": "msg.sender.transfer(1000000000000000000);",
+      "status": "unproven"
+    },
+    {
+      "no": "25",
+      "kind": "ETH_LEAK",
+      "line": 119,
+      "signatures": [
+        {
+          "contractName": "StockBet",
+          "methodName": "bug_unchk_send2",
+          "argTypes": []
+        }
+      ],
+      "exp": "msg.sender.transfer(1000000000000000000);",
+      "status": "unproven"
+    },
+    {
+      "no": "26",
+      "kind": "ETH_LEAK",
+      "line": 127,
+      "signatures": [
+        {
+          "contractName": "StockBet",
+          "methodName": "bug_unchk_send17",
+          "argTypes": []
+        }
+      ],
+      "exp": "msg.sender.transfer(1000000000000000000);",
+      "status": "unproven"
+    },
+    {
+      "no": "27",
+      "kind": "ETH_LEAK",
+      "line": 136,
+      "signatures": [
+        {
+          "contractName": "StockBet",
+          "methodName": "bug_unchk_send3",
+          "argTypes": []
+        }
+      ],
+      "exp": "msg.sender.transfer(1000000000000000000);",
+      "status": "unproven"
+    },
+    {
+      "no": "28",
+      "kind": "ETH_LEAK",
+      "line": 144,
+      "signatures": [
+        {
+          "contractName": "StockBet",
+          "methodName": "bug_unchk_send9",
+          "argTypes": []
+        }
+      ],
+      "exp": "msg.sender.transfer(1000000000000000000);",
+      "status": "unproven"
+    },
+    {
+      "no": "29",
+      "kind": "ETH_LEAK",
+      "line": 155,
+      "signatures": [
+        {
+          "contractName": "StockBet",
+          "methodName": "bug_unchk_send25",
+          "argTypes": []
+        }
+      ],
+      "exp": "msg.sender.transfer(1000000000000000000);",
+      "status": "unproven"
+    },
+    {
+      "no": "30",
+      "kind": "ETH_LEAK",
+      "line": 166,
+      "signatures": [
+        {
+          "contractName": "StockBet",
+          "methodName": "bug_unchk_send19",
+          "argTypes": []
+        }
+      ],
+      "exp": "msg.sender.transfer(1000000000000000000);",
+      "status": "unproven"
+    },
+    {
+      "no": "31",
+      "kind": "ETH_LEAK",
+      "line": 193,
+      "signatures": [
+        {
+          "contractName": "StockBet",
+          "methodName": "bug_unchk_send26",
+          "argTypes": []
+        }
+      ],
+      "exp": "msg.sender.transfer(1000000000000000000);",
+      "status": "unproven"
+    },
+    {
+      "no": "32",
+      "kind": "ETH_LEAK",
+      "line": 196,
+      "signatures": [
+        {
+          "contractName": "StockBet",
+          "methodName": "collectOwnerWinnings",
+          "argTypes": []
+        }
+      ],
+      "exp": "selfdestruct(owner);",
+      "status": "proven"
+    },
+    {
+      "no": "33",
+      "kind": "ETH_LEAK",
+      "line": 199,
+      "signatures": [
+        {
+          "contractName": "StockBet",
+          "methodName": "bug_unchk_send20",
+          "argTypes": []
+        }
+      ],
+      "exp": "msg.sender.transfer(1000000000000000000);",
+      "status": "unproven"
+    },
+    {
+      "no": "34",
+      "kind": "ETH_LEAK",
+      "line": 204,
+      "signatures": [
+        {
+          "contractName": "StockBet",
+          "methodName": "collectPlayerWinnings",
+          "argTypes": []
+        }
+      ],
+      "exp": "msg.sender.transfer(splitJackpot);",
+      "status": "unproven"
+    },
+    {
+      "no": "35",
+      "kind": "ETH_LEAK",
+      "line": 208,
+      "signatures": [
+        {
+          "contractName": "StockBet",
+          "methodName": "bug_unchk_send32",
+          "argTypes": []
+        }
+      ],
+      "exp": "msg.sender.transfer(1000000000000000000);",
+      "status": "unproven"
+    },
+    {
+      "no": "36",
+      "kind": "ETH_LEAK",
+      "line": 214,
+      "signatures": [
+        {
+          "contractName": "StockBet",
+          "methodName": "bug_unchk_send4",
+          "argTypes": []
+        }
+      ],
+      "exp": "msg.sender.transfer(1000000000000000000);",
+      "status": "unproven"
+    }
+  ]
+}

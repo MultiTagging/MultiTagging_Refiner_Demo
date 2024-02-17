@@ -1,0 +1,121 @@
+{
+  "fileName": "Benchmarks/Study_SamplesSet/b845d738638a81cf34298171cd543497.sol",
+  "baseName": "b845d738638a81cf34298171cd543497.sol",
+  "iter": 707,
+  "time": "300.341519",
+  "errMsg": null,
+  "result": [
+    {
+      "no": "1",
+      "kind": "IO",
+      "line": 30,
+      "signatures": [
+        {
+          "contractName": "Crowdsale",
+          "methodName": "Crowdsale",
+          "argTypes": [ "address", "uint256", "address" ]
+        }
+      ],
+      "exp": "(durationInMinutes * 60)",
+      "status": "unproven"
+    },
+    {
+      "no": "2",
+      "kind": "IO",
+      "line": 30,
+      "signatures": [
+        {
+          "contractName": "Crowdsale",
+          "methodName": "Crowdsale",
+          "argTypes": [ "address", "uint256", "address" ]
+        }
+      ],
+      "exp": "(now + (durationInMinutes * 60))",
+      "status": "unproven"
+    },
+    {
+      "no": "3",
+      "kind": "IO",
+      "line": 42,
+      "signatures": [
+        {
+          "contractName": "Crowdsale",
+          "methodName": "@fallback",
+          "argTypes": []
+        }
+      ],
+      "exp": "(balanceOf[msg.sender] + amount)",
+      "status": "unproven"
+    },
+    {
+      "no": "4",
+      "kind": "IO",
+      "line": 43,
+      "signatures": [
+        {
+          "contractName": "Crowdsale",
+          "methodName": "@fallback",
+          "argTypes": []
+        }
+      ],
+      "exp": "(amountRaised + amount)",
+      "status": "unproven"
+    },
+    {
+      "no": "5",
+      "kind": "IO",
+      "line": 44,
+      "signatures": [
+        {
+          "contractName": "Crowdsale",
+          "methodName": "@fallback",
+          "argTypes": []
+        }
+      ],
+      "exp": "(amount * 10000)",
+      "status": "unproven"
+    },
+    {
+      "no": "6",
+      "kind": "IO",
+      "line": 52,
+      "signatures": [
+        {
+          "contractName": "Crowdsale",
+          "methodName": "@fallback",
+          "argTypes": []
+        }
+      ],
+      "exp": "(amountLeft + amountLeft)",
+      "status": "proven"
+    },
+    {
+      "no": "7",
+      "kind": "ETH_LEAK",
+      "line": 46,
+      "signatures": [
+        {
+          "contractName": "Crowdsale",
+          "methodName": "@fallback",
+          "argTypes": []
+        }
+      ],
+      "exp": "beneficiary.send(amount)",
+      "status": "proven"
+    },
+    {
+      "no": "8",
+      "kind": "ETH_LEAK",
+      "line": 77,
+      "signatures": [
+        {
+          "contractName": "Crowdsale",
+          "methodName": "safeWithdrawal",
+          "argTypes": []
+        }
+      ],
+      "exp": "beneficiary.send(amountLeft)",
+      "status": "proven"
+    }
+  ]
+}

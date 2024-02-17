@@ -1,0 +1,1031 @@
+{
+  "fileName": "Benchmarks/Study_SamplesSet/f405291c759364a521641cee4b2020fd.sol",
+  "baseName": "f405291c759364a521641cee4b2020fd.sol",
+  "iter": 44,
+  "time": "465.030939",
+  "errMsg": null,
+  "result": [
+    {
+      "no": "1",
+      "kind": "IO",
+      "line": 314,
+      "signatures": [
+        {
+          "contractName": "AcunarIEO",
+          "methodName": "transferFrom",
+          "argTypes": [ "address", "address", "uint256" ]
+        }
+      ],
+      "exp": "(balances[from] - tokens)",
+      "status": "proven"
+    },
+    {
+      "no": "2",
+      "kind": "IO",
+      "line": 315,
+      "signatures": [
+        {
+          "contractName": "AcunarIEO",
+          "methodName": "transferFrom",
+          "argTypes": [ "address", "address", "uint256" ]
+        }
+      ],
+      "exp": "(balances[to] + tokens)",
+      "status": "unproven"
+    },
+    {
+      "no": "3",
+      "kind": "IO",
+      "line": 318,
+      "signatures": [
+        {
+          "contractName": "AcunarIEO",
+          "methodName": "transferFrom",
+          "argTypes": [ "address", "address", "uint256" ]
+        }
+      ],
+      "exp": "(allowed[from][to] - tokens)",
+      "status": "proven"
+    },
+    {
+      "no": "4",
+      "kind": "IO",
+      "line": 384,
+      "signatures": [
+        {
+          "contractName": "AcunarIEO",
+          "methodName": "transfer",
+          "argTypes": [ "address", "uint256" ]
+        }
+      ],
+      "exp": "(balances[to] + tokens)",
+      "status": "unproven"
+    },
+    {
+      "no": "5",
+      "kind": "IO",
+      "line": 385,
+      "signatures": [
+        {
+          "contractName": "AcunarIEO",
+          "methodName": "transfer",
+          "argTypes": [ "address", "uint256" ]
+        }
+      ],
+      "exp": "(balances[msg.sender] - tokens)",
+      "status": "unproven"
+    },
+    {
+      "no": "6",
+      "kind": "IO",
+      "line": 525,
+      "signatures": [
+        {
+          "contractName": "AcunarIEO",
+          "methodName": "AcunarIEO",
+          "argTypes": [ "address" ]
+        }
+      ],
+      "exp": "(now + 14515200)",
+      "status": "unproven"
+    },
+    {
+      "no": "7",
+      "kind": "IO",
+      "line": 526,
+      "signatures": [
+        {
+          "contractName": "AcunarIEO",
+          "methodName": "AcunarIEO",
+          "argTypes": [ "address" ]
+        }
+      ],
+      "exp": "(saleEnd + 15120000)",
+      "status": "unproven"
+    },
+    {
+      "no": "8",
+      "kind": "IO",
+      "line": 734,
+      "signatures": [
+        {
+          "contractName": "AcunarIEO",
+          "methodName": "invest",
+          "argTypes": []
+        }
+      ],
+      "exp": "(raisedAmount + msg.value)",
+      "status": "unproven"
+    },
+    {
+      "no": "9",
+      "kind": "IO",
+      "line": 736,
+      "signatures": [
+        {
+          "contractName": "AcunarIEO",
+          "methodName": "invest",
+          "argTypes": []
+        }
+      ],
+      "exp": "(raisedAmount + msg.value)",
+      "status": "unproven"
+    },
+    {
+      "no": "10",
+      "kind": "IO",
+      "line": 739,
+      "signatures": [
+        {
+          "contractName": "AcunarIEO",
+          "methodName": "invest",
+          "argTypes": []
+        }
+      ],
+      "exp": "(balances[msg.sender] + tokens)",
+      "status": "unproven"
+    },
+    {
+      "no": "11",
+      "kind": "IO",
+      "line": 740,
+      "signatures": [
+        {
+          "contractName": "AcunarIEO",
+          "methodName": "invest",
+          "argTypes": []
+        }
+      ],
+      "exp": "(balances[founder] - tokens)",
+      "status": "unproven"
+    },
+    {
+      "no": "12",
+      "kind": "DZ",
+      "line": 731,
+      "signatures": [
+        {
+          "contractName": "AcunarIEO",
+          "methodName": "invest",
+          "argTypes": []
+        }
+      ],
+      "exp": "(msg.value / tokenPrice)",
+      "status": "proven"
+    },
+    {
+      "no": "13",
+      "kind": "ETH_LEAK",
+      "line": 24,
+      "signatures": [
+        {
+          "contractName": "AcunarIEO",
+          "methodName": "getReward_TOD17",
+          "argTypes": []
+        }
+      ],
+      "exp": "winner_TOD17.transfer(msg.value);",
+      "status": "unproven"
+    },
+    {
+      "no": "14",
+      "kind": "ETH_LEAK",
+      "line": 38,
+      "signatures": [
+        {
+          "contractName": "AcunarIEO",
+          "methodName": "getReward_TOD37",
+          "argTypes": []
+        }
+      ],
+      "exp": "winner_TOD37.transfer(msg.value);",
+      "status": "unproven"
+    },
+    {
+      "no": "15",
+      "kind": "ETH_LEAK",
+      "line": 52,
+      "signatures": [
+        {
+          "contractName": "AcunarIEO",
+          "methodName": "getReward_TOD3",
+          "argTypes": []
+        }
+      ],
+      "exp": "winner_TOD3.transfer(msg.value);",
+      "status": "unproven"
+    },
+    {
+      "no": "16",
+      "kind": "ETH_LEAK",
+      "line": 68,
+      "signatures": [
+        {
+          "contractName": "AcunarIEO",
+          "methodName": "getReward_TOD9",
+          "argTypes": []
+        }
+      ],
+      "exp": "winner_TOD9.transfer(msg.value);",
+      "status": "unproven"
+    },
+    {
+      "no": "17",
+      "kind": "ETH_LEAK",
+      "line": 82,
+      "signatures": [
+        {
+          "contractName": "AcunarIEO",
+          "methodName": "getReward_TOD25",
+          "argTypes": []
+        }
+      ],
+      "exp": "winner_TOD25.transfer(msg.value);",
+      "status": "unproven"
+    },
+    {
+      "no": "18",
+      "kind": "ETH_LEAK",
+      "line": 96,
+      "signatures": [
+        {
+          "contractName": "AcunarIEO",
+          "methodName": "getReward_TOD19",
+          "argTypes": []
+        }
+      ],
+      "exp": "winner_TOD19.transfer(msg.value);",
+      "status": "unproven"
+    },
+    {
+      "no": "19",
+      "kind": "ETH_LEAK",
+      "line": 111,
+      "signatures": [
+        {
+          "contractName": "AcunarIEO",
+          "methodName": "setReward_TOD18",
+          "argTypes": []
+        }
+      ],
+      "exp": "owner_TOD18.transfer(reward_TOD18);",
+      "status": "unproven"
+    },
+    {
+      "no": "20",
+      "kind": "ETH_LEAK",
+      "line": 119,
+      "signatures": [
+        {
+          "contractName": "AcunarIEO",
+          "methodName": "claimReward_TOD18",
+          "argTypes": [ "uint256" ]
+        }
+      ],
+      "exp": "msg.sender.transfer(reward_TOD18);",
+      "status": "unproven"
+    },
+    {
+      "no": "21",
+      "kind": "ETH_LEAK",
+      "line": 134,
+      "signatures": [
+        {
+          "contractName": "AcunarIEO",
+          "methodName": "getReward_TOD29",
+          "argTypes": []
+        }
+      ],
+      "exp": "winner_TOD29.transfer(msg.value);",
+      "status": "unproven"
+    },
+    {
+      "no": "22",
+      "kind": "ETH_LEAK",
+      "line": 144,
+      "signatures": [
+        {
+          "contractName": "AcunarIEO",
+          "methodName": "setReward_TOD6",
+          "argTypes": []
+        }
+      ],
+      "exp": "owner_TOD6.transfer(reward_TOD6);",
+      "status": "unproven"
+    },
+    {
+      "no": "23",
+      "kind": "ETH_LEAK",
+      "line": 152,
+      "signatures": [
+        {
+          "contractName": "AcunarIEO",
+          "methodName": "claimReward_TOD6",
+          "argTypes": [ "uint256" ]
+        }
+      ],
+      "exp": "msg.sender.transfer(reward_TOD6);",
+      "status": "unproven"
+    },
+    {
+      "no": "24",
+      "kind": "ETH_LEAK",
+      "line": 164,
+      "signatures": [
+        {
+          "contractName": "AcunarIEO",
+          "methodName": "setReward_TOD16",
+          "argTypes": []
+        }
+      ],
+      "exp": "owner_TOD16.transfer(reward_TOD16);",
+      "status": "unproven"
+    },
+    {
+      "no": "25",
+      "kind": "ETH_LEAK",
+      "line": 172,
+      "signatures": [
+        {
+          "contractName": "AcunarIEO",
+          "methodName": "claimReward_TOD16",
+          "argTypes": [ "uint256" ]
+        }
+      ],
+      "exp": "msg.sender.transfer(reward_TOD16);",
+      "status": "unproven"
+    },
+    {
+      "no": "26",
+      "kind": "ETH_LEAK",
+      "line": 183,
+      "signatures": [
+        {
+          "contractName": "AcunarIEO",
+          "methodName": "setReward_TOD24",
+          "argTypes": []
+        }
+      ],
+      "exp": "owner_TOD24.transfer(reward_TOD24);",
+      "status": "unproven"
+    },
+    {
+      "no": "27",
+      "kind": "ETH_LEAK",
+      "line": 191,
+      "signatures": [
+        {
+          "contractName": "AcunarIEO",
+          "methodName": "claimReward_TOD24",
+          "argTypes": [ "uint256" ]
+        }
+      ],
+      "exp": "msg.sender.transfer(reward_TOD24);",
+      "status": "unproven"
+    },
+    {
+      "no": "28",
+      "kind": "ETH_LEAK",
+      "line": 207,
+      "signatures": [
+        {
+          "contractName": "AcunarIEO",
+          "methodName": "getReward_TOD5",
+          "argTypes": []
+        }
+      ],
+      "exp": "winner_TOD5.transfer(msg.value);",
+      "status": "unproven"
+    },
+    {
+      "no": "29",
+      "kind": "ETH_LEAK",
+      "line": 222,
+      "signatures": [
+        {
+          "contractName": "AcunarIEO",
+          "methodName": "getReward_TOD15",
+          "argTypes": []
+        }
+      ],
+      "exp": "winner_TOD15.transfer(msg.value);",
+      "status": "unproven"
+    },
+    {
+      "no": "30",
+      "kind": "ETH_LEAK",
+      "line": 245,
+      "signatures": [
+        {
+          "contractName": "AcunarIEO",
+          "methodName": "setReward_TOD26",
+          "argTypes": []
+        }
+      ],
+      "exp": "owner_TOD26.transfer(reward_TOD26);",
+      "status": "unproven"
+    },
+    {
+      "no": "31",
+      "kind": "ETH_LEAK",
+      "line": 253,
+      "signatures": [
+        {
+          "contractName": "AcunarIEO",
+          "methodName": "claimReward_TOD26",
+          "argTypes": [ "uint256" ]
+        }
+      ],
+      "exp": "msg.sender.transfer(reward_TOD26);",
+      "status": "unproven"
+    },
+    {
+      "no": "32",
+      "kind": "ETH_LEAK",
+      "line": 268,
+      "signatures": [
+        {
+          "contractName": "AcunarIEO",
+          "methodName": "setReward_TOD20",
+          "argTypes": []
+        }
+      ],
+      "exp": "owner_TOD20.transfer(reward_TOD20);",
+      "status": "unproven"
+    },
+    {
+      "no": "33",
+      "kind": "ETH_LEAK",
+      "line": 276,
+      "signatures": [
+        {
+          "contractName": "AcunarIEO",
+          "methodName": "claimReward_TOD20",
+          "argTypes": [ "uint256" ]
+        }
+      ],
+      "exp": "msg.sender.transfer(reward_TOD20);",
+      "status": "unproven"
+    },
+    {
+      "no": "34",
+      "kind": "ETH_LEAK",
+      "line": 297,
+      "signatures": [
+        {
+          "contractName": "AcunarIEO",
+          "methodName": "setReward_TOD32",
+          "argTypes": []
+        }
+      ],
+      "exp": "owner_TOD32.transfer(reward_TOD32);",
+      "status": "unproven"
+    },
+    {
+      "no": "35",
+      "kind": "ETH_LEAK",
+      "line": 305,
+      "signatures": [
+        {
+          "contractName": "AcunarIEO",
+          "methodName": "claimReward_TOD32",
+          "argTypes": [ "uint256" ]
+        }
+      ],
+      "exp": "msg.sender.transfer(reward_TOD32);",
+      "status": "unproven"
+    },
+    {
+      "no": "36",
+      "kind": "ETH_LEAK",
+      "line": 329,
+      "signatures": [
+        {
+          "contractName": "AcunarIEO",
+          "methodName": "setReward_TOD38",
+          "argTypes": []
+        }
+      ],
+      "exp": "owner_TOD38.transfer(reward_TOD38);",
+      "status": "unproven"
+    },
+    {
+      "no": "37",
+      "kind": "ETH_LEAK",
+      "line": 337,
+      "signatures": [
+        {
+          "contractName": "AcunarIEO",
+          "methodName": "claimReward_TOD38",
+          "argTypes": [ "uint256" ]
+        }
+      ],
+      "exp": "msg.sender.transfer(reward_TOD38);",
+      "status": "unproven"
+    },
+    {
+      "no": "38",
+      "kind": "ETH_LEAK",
+      "line": 351,
+      "signatures": [
+        {
+          "contractName": "AcunarIEO",
+          "methodName": "setReward_TOD4",
+          "argTypes": []
+        }
+      ],
+      "exp": "owner_TOD4.transfer(reward_TOD4);",
+      "status": "unproven"
+    },
+    {
+      "no": "39",
+      "kind": "ETH_LEAK",
+      "line": 359,
+      "signatures": [
+        {
+          "contractName": "AcunarIEO",
+          "methodName": "claimReward_TOD4",
+          "argTypes": [ "uint256" ]
+        }
+      ],
+      "exp": "msg.sender.transfer(reward_TOD4);",
+      "status": "unproven"
+    },
+    {
+      "no": "40",
+      "kind": "ETH_LEAK",
+      "line": 377,
+      "signatures": [
+        {
+          "contractName": "AcunarIEO",
+          "methodName": "getReward_TOD7",
+          "argTypes": []
+        }
+      ],
+      "exp": "winner_TOD7.transfer(msg.value);",
+      "status": "unproven"
+    },
+    {
+      "no": "41",
+      "kind": "ETH_LEAK",
+      "line": 400,
+      "signatures": [
+        {
+          "contractName": "AcunarIEO",
+          "methodName": "getReward_TOD23",
+          "argTypes": []
+        }
+      ],
+      "exp": "winner_TOD23.transfer(msg.value);",
+      "status": "unproven"
+    },
+    {
+      "no": "42",
+      "kind": "ETH_LEAK",
+      "line": 413,
+      "signatures": [
+        {
+          "contractName": "AcunarIEO",
+          "methodName": "setReward_TOD28",
+          "argTypes": []
+        }
+      ],
+      "exp": "owner_TOD28.transfer(reward_TOD28);",
+      "status": "unproven"
+    },
+    {
+      "no": "43",
+      "kind": "ETH_LEAK",
+      "line": 421,
+      "signatures": [
+        {
+          "contractName": "AcunarIEO",
+          "methodName": "claimReward_TOD28",
+          "argTypes": [ "uint256" ]
+        }
+      ],
+      "exp": "msg.sender.transfer(reward_TOD28);",
+      "status": "unproven"
+    },
+    {
+      "no": "44",
+      "kind": "ETH_LEAK",
+      "line": 436,
+      "signatures": [
+        {
+          "contractName": "AcunarIEO",
+          "methodName": "setReward_TOD34",
+          "argTypes": []
+        }
+      ],
+      "exp": "owner_TOD34.transfer(reward_TOD34);",
+      "status": "unproven"
+    },
+    {
+      "no": "45",
+      "kind": "ETH_LEAK",
+      "line": 444,
+      "signatures": [
+        {
+          "contractName": "AcunarIEO",
+          "methodName": "claimReward_TOD34",
+          "argTypes": [ "uint256" ]
+        }
+      ],
+      "exp": "msg.sender.transfer(reward_TOD34);",
+      "status": "unproven"
+    },
+    {
+      "no": "46",
+      "kind": "ETH_LEAK",
+      "line": 461,
+      "signatures": [
+        {
+          "contractName": "AcunarIEO",
+          "methodName": "getReward_TOD21",
+          "argTypes": []
+        }
+      ],
+      "exp": "winner_TOD21.transfer(msg.value);",
+      "status": "unproven"
+    },
+    {
+      "no": "47",
+      "kind": "ETH_LEAK",
+      "line": 473,
+      "signatures": [
+        {
+          "contractName": "AcunarIEO",
+          "methodName": "setReward_TOD10",
+          "argTypes": []
+        }
+      ],
+      "exp": "owner_TOD10.transfer(reward_TOD10);",
+      "status": "unproven"
+    },
+    {
+      "no": "48",
+      "kind": "ETH_LEAK",
+      "line": 481,
+      "signatures": [
+        {
+          "contractName": "AcunarIEO",
+          "methodName": "claimReward_TOD10",
+          "argTypes": [ "uint256" ]
+        }
+      ],
+      "exp": "msg.sender.transfer(reward_TOD10);",
+      "status": "unproven"
+    },
+    {
+      "no": "49",
+      "kind": "ETH_LEAK",
+      "line": 493,
+      "signatures": [
+        {
+          "contractName": "AcunarIEO",
+          "methodName": "setReward_TOD22",
+          "argTypes": []
+        }
+      ],
+      "exp": "owner_TOD22.transfer(reward_TOD22);",
+      "status": "unproven"
+    },
+    {
+      "no": "50",
+      "kind": "ETH_LEAK",
+      "line": 501,
+      "signatures": [
+        {
+          "contractName": "AcunarIEO",
+          "methodName": "claimReward_TOD22",
+          "argTypes": [ "uint256" ]
+        }
+      ],
+      "exp": "msg.sender.transfer(reward_TOD22);",
+      "status": "unproven"
+    },
+    {
+      "no": "51",
+      "kind": "ETH_LEAK",
+      "line": 513,
+      "signatures": [
+        {
+          "contractName": "AcunarIEO",
+          "methodName": "setReward_TOD12",
+          "argTypes": []
+        }
+      ],
+      "exp": "owner_TOD12.transfer(reward_TOD12);",
+      "status": "unproven"
+    },
+    {
+      "no": "52",
+      "kind": "ETH_LEAK",
+      "line": 521,
+      "signatures": [
+        {
+          "contractName": "AcunarIEO",
+          "methodName": "claimReward_TOD12",
+          "argTypes": [ "uint256" ]
+        }
+      ],
+      "exp": "msg.sender.transfer(reward_TOD12);",
+      "status": "unproven"
+    },
+    {
+      "no": "53",
+      "kind": "ETH_LEAK",
+      "line": 539,
+      "signatures": [
+        {
+          "contractName": "AcunarIEO",
+          "methodName": "getReward_TOD11",
+          "argTypes": []
+        }
+      ],
+      "exp": "winner_TOD11.transfer(msg.value);",
+      "status": "unproven"
+    },
+    {
+      "no": "54",
+      "kind": "ETH_LEAK",
+      "line": 553,
+      "signatures": [
+        {
+          "contractName": "AcunarIEO",
+          "methodName": "getReward_TOD1",
+          "argTypes": []
+        }
+      ],
+      "exp": "winner_TOD1.transfer(msg.value);",
+      "status": "unproven"
+    },
+    {
+      "no": "55",
+      "kind": "ETH_LEAK",
+      "line": 565,
+      "signatures": [
+        {
+          "contractName": "AcunarIEO",
+          "methodName": "setReward_TOD2",
+          "argTypes": []
+        }
+      ],
+      "exp": "owner_TOD2.transfer(reward_TOD2);",
+      "status": "unproven"
+    },
+    {
+      "no": "56",
+      "kind": "ETH_LEAK",
+      "line": 573,
+      "signatures": [
+        {
+          "contractName": "AcunarIEO",
+          "methodName": "claimReward_TOD2",
+          "argTypes": [ "uint256" ]
+        }
+      ],
+      "exp": "msg.sender.transfer(reward_TOD2);",
+      "status": "unproven"
+    },
+    {
+      "no": "57",
+      "kind": "ETH_LEAK",
+      "line": 595,
+      "signatures": [
+        {
+          "contractName": "AcunarIEO",
+          "methodName": "getReward_TOD13",
+          "argTypes": []
+        }
+      ],
+      "exp": "winner_TOD13.transfer(msg.value);",
+      "status": "unproven"
+    },
+    {
+      "no": "58",
+      "kind": "ETH_LEAK",
+      "line": 613,
+      "signatures": [
+        {
+          "contractName": "AcunarIEO",
+          "methodName": "setReward_TOD14",
+          "argTypes": []
+        }
+      ],
+      "exp": "owner_TOD14.transfer(reward_TOD14);",
+      "status": "unproven"
+    },
+    {
+      "no": "59",
+      "kind": "ETH_LEAK",
+      "line": 621,
+      "signatures": [
+        {
+          "contractName": "AcunarIEO",
+          "methodName": "claimReward_TOD14",
+          "argTypes": [ "uint256" ]
+        }
+      ],
+      "exp": "msg.sender.transfer(reward_TOD14);",
+      "status": "unproven"
+    },
+    {
+      "no": "60",
+      "kind": "ETH_LEAK",
+      "line": 636,
+      "signatures": [
+        {
+          "contractName": "AcunarIEO",
+          "methodName": "setReward_TOD30",
+          "argTypes": []
+        }
+      ],
+      "exp": "owner_TOD30.transfer(reward_TOD30);",
+      "status": "unproven"
+    },
+    {
+      "no": "61",
+      "kind": "ETH_LEAK",
+      "line": 644,
+      "signatures": [
+        {
+          "contractName": "AcunarIEO",
+          "methodName": "claimReward_TOD30",
+          "argTypes": [ "uint256" ]
+        }
+      ],
+      "exp": "msg.sender.transfer(reward_TOD30);",
+      "status": "unproven"
+    },
+    {
+      "no": "62",
+      "kind": "ETH_LEAK",
+      "line": 659,
+      "signatures": [
+        {
+          "contractName": "AcunarIEO",
+          "methodName": "setReward_TOD8",
+          "argTypes": []
+        }
+      ],
+      "exp": "owner_TOD8.transfer(reward_TOD8);",
+      "status": "proven"
+    },
+    {
+      "no": "63",
+      "kind": "ETH_LEAK",
+      "line": 667,
+      "signatures": [
+        {
+          "contractName": "AcunarIEO",
+          "methodName": "claimReward_TOD8",
+          "argTypes": [ "uint256" ]
+        }
+      ],
+      "exp": "msg.sender.transfer(reward_TOD8);",
+      "status": "unproven"
+    },
+    {
+      "no": "64",
+      "kind": "ETH_LEAK",
+      "line": 688,
+      "signatures": [
+        {
+          "contractName": "AcunarIEO",
+          "methodName": "getReward_TOD39",
+          "argTypes": []
+        }
+      ],
+      "exp": "winner_TOD39.transfer(msg.value);",
+      "status": "unproven"
+    },
+    {
+      "no": "65",
+      "kind": "ETH_LEAK",
+      "line": 711,
+      "signatures": [
+        {
+          "contractName": "AcunarIEO",
+          "methodName": "setReward_TOD36",
+          "argTypes": []
+        }
+      ],
+      "exp": "owner_TOD36.transfer(reward_TOD36);",
+      "status": "unproven"
+    },
+    {
+      "no": "66",
+      "kind": "ETH_LEAK",
+      "line": 719,
+      "signatures": [
+        {
+          "contractName": "AcunarIEO",
+          "methodName": "claimReward_TOD36",
+          "argTypes": [ "uint256" ]
+        }
+      ],
+      "exp": "msg.sender.transfer(reward_TOD36);",
+      "status": "unproven"
+    },
+    {
+      "no": "67",
+      "kind": "ETH_LEAK",
+      "line": 742,
+      "signatures": [
+        {
+          "contractName": "AcunarIEO",
+          "methodName": "invest",
+          "argTypes": []
+        }
+      ],
+      "exp": "deposit.transfer(msg.value);",
+      "status": "proven"
+    },
+    {
+      "no": "68",
+      "kind": "ETH_LEAK",
+      "line": 762,
+      "signatures": [
+        {
+          "contractName": "AcunarIEO",
+          "methodName": "getReward_TOD35",
+          "argTypes": []
+        }
+      ],
+      "exp": "winner_TOD35.transfer(msg.value);",
+      "status": "unproven"
+    },
+    {
+      "no": "69",
+      "kind": "ETH_LEAK",
+      "line": 776,
+      "signatures": [
+        {
+          "contractName": "AcunarIEO",
+          "methodName": "setReward_TOD40",
+          "argTypes": []
+        }
+      ],
+      "exp": "owner_TOD40.transfer(reward_TOD40);",
+      "status": "unproven"
+    },
+    {
+      "no": "70",
+      "kind": "ETH_LEAK",
+      "line": 784,
+      "signatures": [
+        {
+          "contractName": "AcunarIEO",
+          "methodName": "claimReward_TOD40",
+          "argTypes": [ "uint256" ]
+        }
+      ],
+      "exp": "msg.sender.transfer(reward_TOD40);",
+      "status": "unproven"
+    },
+    {
+      "no": "71",
+      "kind": "ETH_LEAK",
+      "line": 807,
+      "signatures": [
+        {
+          "contractName": "AcunarIEO",
+          "methodName": "getReward_TOD33",
+          "argTypes": []
+        }
+      ],
+      "exp": "winner_TOD33.transfer(msg.value);",
+      "status": "unproven"
+    },
+    {
+      "no": "72",
+      "kind": "ETH_LEAK",
+      "line": 826,
+      "signatures": [
+        {
+          "contractName": "AcunarIEO",
+          "methodName": "getReward_TOD27",
+          "argTypes": []
+        }
+      ],
+      "exp": "winner_TOD27.transfer(msg.value);",
+      "status": "unproven"
+    },
+    {
+      "no": "73",
+      "kind": "ETH_LEAK",
+      "line": 844,
+      "signatures": [
+        {
+          "contractName": "AcunarIEO",
+          "methodName": "getReward_TOD31",
+          "argTypes": []
+        }
+      ],
+      "exp": "winner_TOD31.transfer(msg.value);",
+      "status": "unproven"
+    }
+  ]
+}

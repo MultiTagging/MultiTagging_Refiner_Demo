@@ -1,0 +1,624 @@
+{
+  "fileName": "Benchmarks/Study_SamplesSet/5f3a59643ab181bc0e7a14b0ac1988d3.sol",
+  "baseName": "5f3a59643ab181bc0e7a14b0ac1988d3.sol",
+  "iter": 82,
+  "time": "301.479175",
+  "errMsg": null,
+  "result": [
+    {
+      "no": "1",
+      "kind": "IO",
+      "line": 23,
+      "signatures": [
+        {
+          "contractName": "Staking",
+          "methodName": "withdrawFunds_re_ent17",
+          "argTypes": [ "uint256" ]
+        }
+      ],
+      "exp": "(balances_re_ent17[msg.sender] - _weiToWithdraw)",
+      "status": "unproven"
+    },
+    {
+      "no": "2",
+      "kind": "IO",
+      "line": 62,
+      "signatures": [
+        {
+          "contractName": "Staking",
+          "methodName": "withdrawFunds_re_ent38",
+          "argTypes": [ "uint256" ]
+        }
+      ],
+      "exp": "(balances_re_ent38[msg.sender] - _weiToWithdraw)",
+      "status": "proven"
+    },
+    {
+      "no": "3",
+      "kind": "IO",
+      "line": 71,
+      "signatures": [
+        {
+          "contractName": "SafeMath",
+          "methodName": "mul",
+          "argTypes": [ "uint256", "uint256" ]
+        },
+        {
+          "contractName": "Staking",
+          "methodName": "startStaking",
+          "argTypes": []
+        }
+      ],
+      "exp": "(a * b)",
+      "status": "unproven"
+    },
+    {
+      "no": "4",
+      "kind": "IO",
+      "line": 83,
+      "signatures": [
+        {
+          "contractName": "SafeMath",
+          "methodName": "sub",
+          "argTypes": [ "uint256", "uint256" ]
+        }
+      ],
+      "exp": "(a - b)",
+      "status": "proven"
+    },
+    {
+      "no": "5",
+      "kind": "IO",
+      "line": 87,
+      "signatures": [
+        {
+          "contractName": "SafeMath",
+          "methodName": "add",
+          "argTypes": [ "uint256", "uint256" ]
+        }
+      ],
+      "exp": "(a + b)",
+      "status": "unproven"
+    },
+    {
+      "no": "6",
+      "kind": "IO",
+      "line": 145,
+      "signatures": [
+        {
+          "contractName": "Staking",
+          "methodName": "withdrawFunds_re_ent3",
+          "argTypes": [ "uint256" ]
+        }
+      ],
+      "exp": "(balances_re_ent3[msg.sender] - _weiToWithdraw)",
+      "status": "unproven"
+    },
+    {
+      "no": "7",
+      "kind": "IO",
+      "line": 194,
+      "signatures": [
+        {
+          "contractName": "Staking",
+          "methodName": "withdrawFunds_re_ent31",
+          "argTypes": [ "uint256" ]
+        }
+      ],
+      "exp": "(balances_re_ent31[msg.sender] - _weiToWithdraw)",
+      "status": "proven"
+    },
+    {
+      "no": "8",
+      "kind": "IO",
+      "line": 227,
+      "signatures": [
+        {
+          "contractName": "Staking",
+          "methodName": "Staking",
+          "argTypes": [ "address" ]
+        }
+      ],
+      "exp": "(10 ** uint256(10))",
+      "status": "proven"
+    },
+    {
+      "no": "9",
+      "kind": "IO",
+      "line": 227,
+      "signatures": [
+        {
+          "contractName": "Staking",
+          "methodName": "Staking",
+          "argTypes": [ "address" ]
+        }
+      ],
+      "exp": "(500 * (10 ** uint256(10)))",
+      "status": "proven"
+    },
+    {
+      "no": "10",
+      "kind": "IO",
+      "line": 235,
+      "signatures": [
+        {
+          "contractName": "Staking",
+          "methodName": "callme_re_ent14",
+          "argTypes": []
+        }
+      ],
+      "exp": "(counter_re_ent14 + 1)",
+      "status": "proven"
+    },
+    {
+      "no": "11",
+      "kind": "IO",
+      "line": 239,
+      "signatures": [
+        {
+          "contractName": "Staking",
+          "methodName": "startStaking",
+          "argTypes": []
+        }
+      ],
+      "exp": "(stakeTokens + findOnePercent(stakeTokens))",
+      "status": "unproven"
+    },
+    {
+      "no": "12",
+      "kind": "IO",
+      "line": 240,
+      "signatures": [
+        {
+          "contractName": "Staking",
+          "methodName": "startStaking",
+          "argTypes": []
+        }
+      ],
+      "exp": "(stakeTokens + findOnePercent(stakeTokens))",
+      "status": "unproven"
+    },
+    {
+      "no": "13",
+      "kind": "IO",
+      "line": 242,
+      "signatures": [
+        {
+          "contractName": "Staking",
+          "methodName": "startStaking",
+          "argTypes": []
+        }
+      ],
+      "exp": "(staker[msg.sender].tokens + stakeTokens)",
+      "status": "unproven"
+    },
+    {
+      "no": "14",
+      "kind": "IO",
+      "line": 257,
+      "signatures": [
+        { "contractName": "Staking", "methodName": "redeem", "argTypes": [] }
+      ],
+      "exp": "(staker[msg.sender].time + stakeTime)",
+      "status": "unproven"
+    },
+    {
+      "no": "15",
+      "kind": "IO",
+      "line": 259,
+      "signatures": [
+        { "contractName": "Staking", "methodName": "redeem", "argTypes": [] }
+      ],
+      "exp": "((staker[msg.sender].tokens * stakePercentage) * 100)",
+      "status": "unproven"
+    },
+    {
+      "no": "16",
+      "kind": "IO",
+      "line": 259,
+      "signatures": [
+        { "contractName": "Staking", "methodName": "redeem", "argTypes": [] }
+      ],
+      "exp": "(staker[msg.sender].tokens * stakePercentage)",
+      "status": "unproven"
+    },
+    {
+      "no": "17",
+      "kind": "IO",
+      "line": 272,
+      "signatures": [
+        {
+          "contractName": "Staking",
+          "methodName": "changeStakeTokens",
+          "argTypes": [ "uint256" ]
+        }
+      ],
+      "exp": "(10 ** uint256(10))",
+      "status": "proven"
+    },
+    {
+      "no": "18",
+      "kind": "IO",
+      "line": 272,
+      "signatures": [
+        {
+          "contractName": "Staking",
+          "methodName": "changeStakeTokens",
+          "argTypes": [ "uint256" ]
+        }
+      ],
+      "exp": "(_NewTokensThreshold * (10 ** uint256(10)))",
+      "status": "unproven"
+    },
+    {
+      "no": "19",
+      "kind": "IO",
+      "line": 302,
+      "signatures": [
+        {
+          "contractName": "Staking",
+          "methodName": "callme_re_ent35",
+          "argTypes": []
+        }
+      ],
+      "exp": "(counter_re_ent35 + 1)",
+      "status": "proven"
+    },
+    {
+      "no": "20",
+      "kind": "DZ",
+      "line": 72,
+      "signatures": [
+        {
+          "contractName": "SafeMath",
+          "methodName": "mul",
+          "argTypes": [ "uint256", "uint256" ]
+        },
+        {
+          "contractName": "Staking",
+          "methodName": "startStaking",
+          "argTypes": []
+        }
+      ],
+      "exp": "(c / a)",
+      "status": "proven"
+    },
+    {
+      "no": "21",
+      "kind": "DZ",
+      "line": 77,
+      "signatures": [
+        {
+          "contractName": "SafeMath",
+          "methodName": "div",
+          "argTypes": [ "uint256", "uint256" ]
+        },
+        {
+          "contractName": "Staking",
+          "methodName": "startStaking",
+          "argTypes": []
+        }
+      ],
+      "exp": "(a / b)",
+      "status": "proven"
+    },
+    {
+      "no": "22",
+      "kind": "DZ",
+      "line": 259,
+      "signatures": [
+        { "contractName": "Staking", "methodName": "redeem", "argTypes": [] }
+      ],
+      "exp": "(((staker[msg.sender].tokens * stakePercentage) * 100) / 10000)",
+      "status": "proven"
+    },
+    {
+      "no": "23",
+      "kind": "ETH_LEAK",
+      "line": 11,
+      "signatures": [
+        {
+          "contractName": "Staking",
+          "methodName": "buyTicket_re_ent2",
+          "argTypes": []
+        }
+      ],
+      "exp": "lastPlayer_re_ent2.send(jackpot_re_ent2)",
+      "status": "unproven"
+    },
+    {
+      "no": "24",
+      "kind": "ETH_LEAK",
+      "line": 21,
+      "signatures": [
+        {
+          "contractName": "Staking",
+          "methodName": "withdrawFunds_re_ent17",
+          "argTypes": [ "uint256" ]
+        }
+      ],
+      "exp": "(success,  ) = msg.sender.call.value(_weiToWithdraw)(\"\");",
+      "status": "unproven"
+    },
+    {
+      "no": "25",
+      "kind": "ETH_LEAK",
+      "line": 30,
+      "signatures": [
+        {
+          "contractName": "Staking",
+          "methodName": "bug_re_ent27",
+          "argTypes": []
+        }
+      ],
+      "exp": "msg.sender.send(1000000000000000000)",
+      "status": "unproven"
+    },
+    {
+      "no": "26",
+      "kind": "ETH_LEAK",
+      "line": 45,
+      "signatures": [
+        {
+          "contractName": "Staking",
+          "methodName": "claimReward_re_ent32",
+          "argTypes": []
+        }
+      ],
+      "exp": "msg.sender.transfer(transferValue_re_ent32);",
+      "status": "unproven"
+    },
+    {
+      "no": "27",
+      "kind": "ETH_LEAK",
+      "line": 61,
+      "signatures": [
+        {
+          "contractName": "Staking",
+          "methodName": "withdrawFunds_re_ent38",
+          "argTypes": [ "uint256" ]
+        }
+      ],
+      "exp": "msg.sender.send(_weiToWithdraw)",
+      "status": "unproven"
+    },
+    {
+      "no": "28",
+      "kind": "ETH_LEAK",
+      "line": 133,
+      "signatures": [
+        {
+          "contractName": "Staking",
+          "methodName": "buyTicket_re_ent37",
+          "argTypes": []
+        }
+      ],
+      "exp": "lastPlayer_re_ent37.send(jackpot_re_ent37)",
+      "status": "unproven"
+    },
+    {
+      "no": "29",
+      "kind": "ETH_LEAK",
+      "line": 143,
+      "signatures": [
+        {
+          "contractName": "Staking",
+          "methodName": "withdrawFunds_re_ent3",
+          "argTypes": [ "uint256" ]
+        }
+      ],
+      "exp": "(success,  ) = msg.sender.call.value(_weiToWithdraw)(\"\");",
+      "status": "unproven"
+    },
+    {
+      "no": "30",
+      "kind": "ETH_LEAK",
+      "line": 151,
+      "signatures": [
+        {
+          "contractName": "Staking",
+          "methodName": "buyTicket_re_ent9",
+          "argTypes": []
+        }
+      ],
+      "exp": "(success,  ) = lastPlayer_re_ent9.call.value(jackpot_re_ent9)(\"\");",
+      "status": "unproven"
+    },
+    {
+      "no": "31",
+      "kind": "ETH_LEAK",
+      "line": 163,
+      "signatures": [
+        {
+          "contractName": "Staking",
+          "methodName": "claimReward_re_ent25",
+          "argTypes": []
+        }
+      ],
+      "exp": "msg.sender.transfer(transferValue_re_ent25);",
+      "status": "unproven"
+    },
+    {
+      "no": "32",
+      "kind": "ETH_LEAK",
+      "line": 172,
+      "signatures": [
+        {
+          "contractName": "Staking",
+          "methodName": "withdrawBalance_re_ent19",
+          "argTypes": []
+        }
+      ],
+      "exp": "msg.sender.send(userBalance_re_ent19[msg.sender])",
+      "status": "unproven"
+    },
+    {
+      "no": "33",
+      "kind": "ETH_LEAK",
+      "line": 182,
+      "signatures": [
+        {
+          "contractName": "Staking",
+          "methodName": "withdrawBalance_re_ent26",
+          "argTypes": []
+        }
+      ],
+      "exp": "(success,  ) = msg.sender.call.value(userBalance_re_ent26[msg.sender])(\"\");",
+      "status": "unproven"
+    },
+    {
+      "no": "34",
+      "kind": "ETH_LEAK",
+      "line": 193,
+      "signatures": [
+        {
+          "contractName": "Staking",
+          "methodName": "withdrawFunds_re_ent31",
+          "argTypes": [ "uint256" ]
+        }
+      ],
+      "exp": "msg.sender.send(_weiToWithdraw)",
+      "status": "unproven"
+    },
+    {
+      "no": "35",
+      "kind": "ETH_LEAK",
+      "line": 200,
+      "signatures": [
+        {
+          "contractName": "Staking",
+          "methodName": "bug_re_ent13",
+          "argTypes": []
+        }
+      ],
+      "exp": "(success,  ) = msg.sender.call.value(1000000000000000000)(\"\");",
+      "status": "unproven"
+    },
+    {
+      "no": "36",
+      "kind": "ETH_LEAK",
+      "line": 216,
+      "signatures": [
+        {
+          "contractName": "Staking",
+          "methodName": "bug_re_ent20",
+          "argTypes": []
+        }
+      ],
+      "exp": "msg.sender.send(1000000000000000000)",
+      "status": "unproven"
+    },
+    {
+      "no": "37",
+      "kind": "ETH_LEAK",
+      "line": 232,
+      "signatures": [
+        {
+          "contractName": "Staking",
+          "methodName": "callme_re_ent14",
+          "argTypes": []
+        }
+      ],
+      "exp": "msg.sender.send(10000000000000000000)",
+      "status": "unproven"
+    },
+    {
+      "no": "38",
+      "kind": "ETH_LEAK",
+      "line": 248,
+      "signatures": [
+        {
+          "contractName": "Staking",
+          "methodName": "buyTicket_re_ent30",
+          "argTypes": []
+        }
+      ],
+      "exp": "lastPlayer_re_ent30.send(jackpot_re_ent30)",
+      "status": "unproven"
+    },
+    {
+      "no": "39",
+      "kind": "ETH_LEAK",
+      "line": 266,
+      "signatures": [
+        {
+          "contractName": "Staking",
+          "methodName": "withdraw_balances_re_ent8",
+          "argTypes": []
+        }
+      ],
+      "exp": "(success,  ) = msg.sender.call.value(balances_re_ent8[msg.sender])(\"\");",
+      "status": "unproven"
+    },
+    {
+      "no": "40",
+      "kind": "ETH_LEAK",
+      "line": 279,
+      "signatures": [
+        {
+          "contractName": "Staking",
+          "methodName": "claimReward_re_ent39",
+          "argTypes": []
+        }
+      ],
+      "exp": "msg.sender.transfer(transferValue_re_ent39);",
+      "status": "unproven"
+    },
+    {
+      "no": "41",
+      "kind": "ETH_LEAK",
+      "line": 288,
+      "signatures": [
+        {
+          "contractName": "Staking",
+          "methodName": "withdraw_balances_re_ent36",
+          "argTypes": []
+        }
+      ],
+      "exp": "msg.sender.send(balances_re_ent36[msg.sender])",
+      "status": "unproven"
+    },
+    {
+      "no": "42",
+      "kind": "ETH_LEAK",
+      "line": 299,
+      "signatures": [
+        {
+          "contractName": "Staking",
+          "methodName": "callme_re_ent35",
+          "argTypes": []
+        }
+      ],
+      "exp": "msg.sender.send(10000000000000000000)",
+      "status": "unproven"
+    },
+    {
+      "no": "43",
+      "kind": "ETH_LEAK",
+      "line": 312,
+      "signatures": [
+        {
+          "contractName": "Staking",
+          "methodName": "withdrawBalance_re_ent40",
+          "argTypes": []
+        }
+      ],
+      "exp": "(success,  ) = msg.sender.call.value(userBalance_re_ent40[msg.sender])(\"\");",
+      "status": "unproven"
+    },
+    {
+      "no": "44",
+      "kind": "ETH_LEAK",
+      "line": 328,
+      "signatures": [
+        {
+          "contractName": "Staking",
+          "methodName": "withdrawBalance_re_ent33",
+          "argTypes": []
+        }
+      ],
+      "exp": "(success,  ) = msg.sender.call.value(userBalance_re_ent33[msg.sender])(\"\");",
+      "status": "unproven"
+    }
+  ]
+}

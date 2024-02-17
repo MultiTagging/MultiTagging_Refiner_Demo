@@ -1,0 +1,442 @@
+{
+  "fileName": "Benchmarks/Study_SamplesSet/1d89df53144c08b845b4fc9facfe34ef.sol",
+  "baseName": "1d89df53144c08b845b4fc9facfe34ef.sol",
+  "iter": 50,
+  "time": "77.716113",
+  "errMsg": null,
+  "result": [
+    {
+      "no": "1",
+      "kind": "IO",
+      "line": 48,
+      "signatures": [
+        {
+          "contractName": "BitpayerDEX",
+          "methodName": "deposit",
+          "argTypes": []
+        },
+        {
+          "contractName": "BitpayerDEX",
+          "methodName": "depositToken",
+          "argTypes": [ "address", "uint256" ]
+        },
+        {
+          "contractName": "BitpayerDEX",
+          "methodName": "trade",
+          "argTypes": [
+            "address", "uint256", "address", "uint256", "uint256", "uint256",
+            "address", "uint8", "bytes32", "bytes32", "uint256"
+          ]
+        },
+        {
+          "contractName": "BitpayerDEX",
+          "methodName": "tradeBalances",
+          "argTypes": [
+            "address", "uint256", "address", "uint256", "address", "uint256"
+          ]
+        }
+      ],
+      "exp": "(a + b)",
+      "status": "unproven"
+    },
+    {
+      "no": "2",
+      "kind": "IO",
+      "line": 65,
+      "signatures": [
+        {
+          "contractName": "BitpayerDEX",
+          "methodName": "availableVolume",
+          "argTypes": [
+            "address", "uint256", "address", "uint256", "uint256", "uint256",
+            "address", "uint8", "bytes32", "bytes32"
+          ]
+        },
+        {
+          "contractName": "BitpayerDEX",
+          "methodName": "tradeBalances",
+          "argTypes": [
+            "address", "uint256", "address", "uint256", "address", "uint256"
+          ]
+        },
+        {
+          "contractName": "BitpayerDEX",
+          "methodName": "withdraw",
+          "argTypes": [ "uint256" ]
+        },
+        {
+          "contractName": "BitpayerDEX",
+          "methodName": "withdrawToken",
+          "argTypes": [ "address", "uint256" ]
+        }
+      ],
+      "exp": "(a - b)",
+      "status": "proven"
+    },
+    {
+      "no": "3",
+      "kind": "IO",
+      "line": 87,
+      "signatures": [
+        {
+          "contractName": "BitpayerDEX",
+          "methodName": "availableVolume",
+          "argTypes": [
+            "address", "uint256", "address", "uint256", "uint256", "uint256",
+            "address", "uint8", "bytes32", "bytes32"
+          ]
+        },
+        {
+          "contractName": "BitpayerDEX",
+          "methodName": "tradeBalances",
+          "argTypes": [
+            "address", "uint256", "address", "uint256", "address", "uint256"
+          ]
+        }
+      ],
+      "exp": "(a * b)",
+      "status": "unproven"
+    },
+    {
+      "no": "4",
+      "kind": "DZ",
+      "line": 88,
+      "signatures": [
+        {
+          "contractName": "BitpayerDEX",
+          "methodName": "availableVolume",
+          "argTypes": [
+            "address", "uint256", "address", "uint256", "uint256", "uint256",
+            "address", "uint8", "bytes32", "bytes32"
+          ]
+        },
+        {
+          "contractName": "BitpayerDEX",
+          "methodName": "tradeBalances",
+          "argTypes": [
+            "address", "uint256", "address", "uint256", "address", "uint256"
+          ]
+        }
+      ],
+      "exp": "(c / a)",
+      "status": "proven"
+    },
+    {
+      "no": "5",
+      "kind": "DZ",
+      "line": 107,
+      "signatures": [
+        {
+          "contractName": "BitpayerDEX",
+          "methodName": "tradeBalances",
+          "argTypes": [
+            "address", "uint256", "address", "uint256", "address", "uint256"
+          ]
+        }
+      ],
+      "exp": "(a / b)",
+      "status": "proven"
+    },
+    {
+      "no": "6",
+      "kind": "DZ",
+      "line": 429,
+      "signatures": [
+        {
+          "contractName": "BitpayerDEX",
+          "methodName": "tradeBalances",
+          "argTypes": [
+            "address", "uint256", "address", "uint256", "address", "uint256"
+          ]
+        }
+      ],
+      "exp": "(amountGive.mul(amount) / amountGet)",
+      "status": "unproven"
+    },
+    {
+      "no": "7",
+      "kind": "DZ",
+      "line": 430,
+      "signatures": [
+        {
+          "contractName": "BitpayerDEX",
+          "methodName": "tradeBalances",
+          "argTypes": [
+            "address", "uint256", "address", "uint256", "address", "uint256"
+          ]
+        }
+      ],
+      "exp": "(amountGive.mul(amount) / amountGet)",
+      "status": "proven"
+    },
+    {
+      "no": "8",
+      "kind": "DZ",
+      "line": 456,
+      "signatures": [
+        {
+          "contractName": "BitpayerDEX",
+          "methodName": "availableVolume",
+          "argTypes": [
+            "address", "uint256", "address", "uint256", "uint256", "uint256",
+            "address", "uint8", "bytes32", "bytes32"
+          ]
+        }
+      ],
+      "exp": "(tokens[tokenGive][user].mul(amountGet) / amountGive)",
+      "status": "unproven"
+    },
+    {
+      "no": "9",
+      "kind": "ETH_LEAK",
+      "line": 157,
+      "signatures": [
+        {
+          "contractName": "BitpayerDEX",
+          "methodName": "sendto_txorigin1",
+          "argTypes": [ "address", "uint256", "address" ]
+        }
+      ],
+      "exp": "receiver.transfer(amount);",
+      "status": "unproven"
+    },
+    {
+      "no": "10",
+      "kind": "ETH_LEAK",
+      "line": 171,
+      "signatures": [
+        {
+          "contractName": "BitpayerDEX",
+          "methodName": "withdrawAll_txorigin2",
+          "argTypes": [ "address", "address" ]
+        }
+      ],
+      "exp": "_recipient.transfer(address(this).balance);",
+      "status": "unproven"
+    },
+    {
+      "no": "11",
+      "kind": "ETH_LEAK",
+      "line": 183,
+      "signatures": [
+        {
+          "contractName": "BitpayerDEX",
+          "methodName": "sendto_txorigin17",
+          "argTypes": [ "address", "uint256", "address" ]
+        }
+      ],
+      "exp": "receiver.transfer(amount);",
+      "status": "unproven"
+    },
+    {
+      "no": "12",
+      "kind": "ETH_LEAK",
+      "line": 200,
+      "signatures": [
+        {
+          "contractName": "BitpayerDEX",
+          "methodName": "withdrawAll_txorigin34",
+          "argTypes": [ "address", "address" ]
+        }
+      ],
+      "exp": "_recipient.transfer(address(this).balance);",
+      "status": "unproven"
+    },
+    {
+      "no": "13",
+      "kind": "ETH_LEAK",
+      "line": 205,
+      "signatures": [
+        {
+          "contractName": "BitpayerDEX",
+          "methodName": "sendto_txorigin21",
+          "argTypes": [ "address", "uint256", "address" ]
+        }
+      ],
+      "exp": "receiver.transfer(amount);",
+      "status": "unproven"
+    },
+    {
+      "no": "14",
+      "kind": "ETH_LEAK",
+      "line": 210,
+      "signatures": [
+        {
+          "contractName": "BitpayerDEX",
+          "methodName": "withdrawAll_txorigin10",
+          "argTypes": [ "address", "address" ]
+        }
+      ],
+      "exp": "_recipient.transfer(address(this).balance);",
+      "status": "unproven"
+    },
+    {
+      "no": "15",
+      "kind": "ETH_LEAK",
+      "line": 216,
+      "signatures": [
+        {
+          "contractName": "BitpayerDEX",
+          "methodName": "withdrawAll_txorigin22",
+          "argTypes": [ "address", "address" ]
+        }
+      ],
+      "exp": "_recipient.transfer(address(this).balance);",
+      "status": "unproven"
+    },
+    {
+      "no": "16",
+      "kind": "ETH_LEAK",
+      "line": 240,
+      "signatures": [
+        {
+          "contractName": "BitpayerDEX",
+          "methodName": "sendto_txorigin33",
+          "argTypes": [ "address", "uint256", "address" ]
+        }
+      ],
+      "exp": "receiver.transfer(amount);",
+      "status": "unproven"
+    },
+    {
+      "no": "17",
+      "kind": "ETH_LEAK",
+      "line": 255,
+      "signatures": [
+        {
+          "contractName": "BitpayerDEX",
+          "methodName": "sendto_txorigin13",
+          "argTypes": [ "address", "uint256", "address" ]
+        }
+      ],
+      "exp": "receiver.transfer(amount);",
+      "status": "unproven"
+    },
+    {
+      "no": "18",
+      "kind": "ETH_LEAK",
+      "line": 266,
+      "signatures": [
+        {
+          "contractName": "BitpayerDEX",
+          "methodName": "sendto_txorigin37",
+          "argTypes": [ "address", "uint256", "address" ]
+        }
+      ],
+      "exp": "receiver.transfer(amount);",
+      "status": "unproven"
+    },
+    {
+      "no": "19",
+      "kind": "ETH_LEAK",
+      "line": 295,
+      "signatures": [
+        {
+          "contractName": "BitpayerDEX",
+          "methodName": "sendto_txorigin9",
+          "argTypes": [ "address", "uint256", "address" ]
+        }
+      ],
+      "exp": "receiver.transfer(amount);",
+      "status": "unproven"
+    },
+    {
+      "no": "20",
+      "kind": "ETH_LEAK",
+      "line": 310,
+      "signatures": [
+        {
+          "contractName": "BitpayerDEX",
+          "methodName": "sendto_txorigin25",
+          "argTypes": [ "address", "uint256", "address" ]
+        }
+      ],
+      "exp": "receiver.transfer(amount);",
+      "status": "unproven"
+    },
+    {
+      "no": "21",
+      "kind": "ETH_LEAK",
+      "line": 328,
+      "signatures": [
+        {
+          "contractName": "BitpayerDEX",
+          "methodName": "withdrawAll_txorigin26",
+          "argTypes": [ "address", "address" ]
+        }
+      ],
+      "exp": "_recipient.transfer(address(this).balance);",
+      "status": "unproven"
+    },
+    {
+      "no": "22",
+      "kind": "ETH_LEAK",
+      "line": 337,
+      "signatures": [
+        {
+          "contractName": "BitpayerDEX",
+          "methodName": "withdrawTradingFeeOwner",
+          "argTypes": []
+        }
+      ],
+      "exp": "msg.sender.transfer(amount);",
+      "status": "proven"
+    },
+    {
+      "no": "23",
+      "kind": "ETH_LEAK",
+      "line": 358,
+      "signatures": [
+        {
+          "contractName": "BitpayerDEX",
+          "methodName": "withdraw",
+          "argTypes": [ "uint256" ]
+        }
+      ],
+      "exp": "msg.sender.transfer(amount);",
+      "status": "unproven"
+    },
+    {
+      "no": "24",
+      "kind": "ETH_LEAK",
+      "line": 363,
+      "signatures": [
+        {
+          "contractName": "BitpayerDEX",
+          "methodName": "withdrawAll_txorigin38",
+          "argTypes": [ "address", "address" ]
+        }
+      ],
+      "exp": "_recipient.transfer(address(this).balance);",
+      "status": "unproven"
+    },
+    {
+      "no": "25",
+      "kind": "ETH_LEAK",
+      "line": 405,
+      "signatures": [
+        {
+          "contractName": "BitpayerDEX",
+          "methodName": "withdrawAll_txorigin14",
+          "argTypes": [ "address", "address" ]
+        }
+      ],
+      "exp": "_recipient.transfer(address(this).balance);",
+      "status": "unproven"
+    },
+    {
+      "no": "26",
+      "kind": "ETH_LEAK",
+      "line": 434,
+      "signatures": [
+        {
+          "contractName": "BitpayerDEX",
+          "methodName": "withdrawAll_txorigin30",
+          "argTypes": [ "address", "address" ]
+        }
+      ],
+      "exp": "_recipient.transfer(address(this).balance);",
+      "status": "unproven"
+    }
+  ]
+}

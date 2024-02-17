@@ -1,0 +1,51 @@
+{
+  "fileName": "Benchmarks/Study_SamplesSet/4a4837d1c628fae97c22d8bb39b40fbd.sol",
+  "baseName": "4a4837d1c628fae97c22d8bb39b40fbd.sol",
+  "iter": 6,
+  "time": "6.717282",
+  "errMsg": null,
+  "result": [
+    {
+      "no": "1",
+      "kind": "IO",
+      "line": 14,
+      "signatures": [
+        {
+          "contractName": "NoReentranceBySend",
+          "methodName": "addToBalance",
+          "argTypes": []
+        }
+      ],
+      "exp": "(userBalance[msg.sender] + msg.value)",
+      "status": "unproven"
+    },
+    {
+      "no": "2",
+      "kind": "IO",
+      "line": 15,
+      "signatures": [
+        {
+          "contractName": "NoReentranceBySend",
+          "methodName": "addToBalance",
+          "argTypes": []
+        }
+      ],
+      "exp": "(userBalance[msg.sender] + msg.value)",
+      "status": "proven"
+    },
+    {
+      "no": "3",
+      "kind": "ETH_LEAK",
+      "line": 20,
+      "signatures": [
+        {
+          "contractName": "NoReentranceBySend",
+          "methodName": "withdrawBalance",
+          "argTypes": []
+        }
+      ],
+      "exp": "msg.sender.send(userBalance[msg.sender])",
+      "status": "proven"
+    }
+  ]
+}

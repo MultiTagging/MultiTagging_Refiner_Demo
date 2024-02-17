@@ -1,0 +1,113 @@
+{
+  "fileName": "Benchmarks/Study_SamplesSet/a8380621126f794b4776a4dbe4095e3f.sol",
+  "baseName": "a8380621126f794b4776a4dbe4095e3f.sol",
+  "iter": 250,
+  "time": "300.14103",
+  "errMsg": null,
+  "result": [
+    {
+      "no": "1",
+      "kind": "IO",
+      "line": 5,
+      "signatures": [
+        {
+          "contractName": "Alpha",
+          "methodName": "safeAdd",
+          "argTypes": [ "uint256", "uint256" ]
+        },
+        {
+          "contractName": "Alpha",
+          "methodName": "transfer",
+          "argTypes": [ "address", "uint256" ]
+        },
+        {
+          "contractName": "Alpha",
+          "methodName": "transferFrom",
+          "argTypes": [ "address", "address", "uint256" ]
+        }
+      ],
+      "exp": "(a + b)",
+      "status": "unproven"
+    },
+    {
+      "no": "2",
+      "kind": "IO",
+      "line": 10,
+      "signatures": [
+        {
+          "contractName": "Alpha",
+          "methodName": "safeSub",
+          "argTypes": [ "uint256", "uint256" ]
+        },
+        {
+          "contractName": "Alpha",
+          "methodName": "transfer",
+          "argTypes": [ "address", "uint256" ]
+        },
+        {
+          "contractName": "Alpha",
+          "methodName": "transferFrom",
+          "argTypes": [ "address", "address", "uint256" ]
+        }
+      ],
+      "exp": "(a - b)",
+      "status": "proven"
+    },
+    {
+      "no": "3",
+      "kind": "IO",
+      "line": 13,
+      "signatures": [
+        {
+          "contractName": "Alpha",
+          "methodName": "safeMul",
+          "argTypes": [ "uint256", "uint256" ]
+        }
+      ],
+      "exp": "(a * b)",
+      "status": "unproven"
+    },
+    {
+      "no": "4",
+      "kind": "IO",
+      "line": 83,
+      "signatures": [
+        {
+          "contractName": "Alpha",
+          "methodName": "totalSupply",
+          "argTypes": []
+        }
+      ],
+      "exp": "(_totalSupply - balances[address(0)])",
+      "status": "proven"
+    },
+    {
+      "no": "5",
+      "kind": "DZ",
+      "line": 14,
+      "signatures": [
+        {
+          "contractName": "Alpha",
+          "methodName": "safeMul",
+          "argTypes": [ "uint256", "uint256" ]
+        }
+      ],
+      "exp": "(c / a)",
+      "status": "proven"
+    },
+    {
+      "no": "6",
+      "kind": "DZ",
+      "line": 18,
+      "signatures": [
+        {
+          "contractName": "Alpha",
+          "methodName": "safeDiv",
+          "argTypes": [ "uint256", "uint256" ]
+        }
+      ],
+      "exp": "(a / b)",
+      "status": "proven"
+    }
+  ]
+}

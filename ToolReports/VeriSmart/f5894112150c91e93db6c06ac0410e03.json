@@ -1,0 +1,387 @@
+{
+  "fileName": "Benchmarks/Study_SamplesSet/f5894112150c91e93db6c06ac0410e03.sol",
+  "baseName": "f5894112150c91e93db6c06ac0410e03.sol",
+  "iter": 536,
+  "time": "300.560113",
+  "errMsg": null,
+  "result": [
+    {
+      "no": "1",
+      "kind": "IO",
+      "line": 122,
+      "signatures": [
+        {
+          "contractName": "MindsyncPlatform",
+          "methodName": "executeProposal",
+          "argTypes": [ "uint256", "dbytes" ]
+        }
+      ],
+      "exp": "(a * b)",
+      "status": "unproven"
+    },
+    {
+      "no": "2",
+      "kind": "IO",
+      "line": 358,
+      "signatures": [
+        {
+          "contractName": "MindsyncPlatform",
+          "methodName": "newProposal",
+          "argTypes": [ "address", "uint256", "string", "dbytes" ]
+        }
+      ],
+      "exp": "(proposals.length + 1)",
+      "status": "unproven"
+    },
+    {
+      "no": "3",
+      "kind": "IO",
+      "line": 365,
+      "signatures": [
+        {
+          "contractName": "MindsyncPlatform",
+          "methodName": "newProposal",
+          "argTypes": [ "address", "uint256", "string", "dbytes" ]
+        }
+      ],
+      "exp": "(debatingPeriodInMinutes * 60)",
+      "status": "unproven"
+    },
+    {
+      "no": "4",
+      "kind": "IO",
+      "line": 365,
+      "signatures": [
+        {
+          "contractName": "MindsyncPlatform",
+          "methodName": "newProposal",
+          "argTypes": [ "address", "uint256", "string", "dbytes" ]
+        }
+      ],
+      "exp": "(now + (debatingPeriodInMinutes * 60))",
+      "status": "unproven"
+    },
+    {
+      "no": "5",
+      "kind": "IO",
+      "line": 370,
+      "signatures": [
+        {
+          "contractName": "MindsyncPlatform",
+          "methodName": "newProposal",
+          "argTypes": [ "address", "uint256", "string", "dbytes" ]
+        }
+      ],
+      "exp": "(proposalID + 1)",
+      "status": "proven"
+    },
+    {
+      "no": "6",
+      "kind": "IO",
+      "line": 454,
+      "signatures": [
+        {
+          "contractName": "MindsyncPlatform",
+          "methodName": "vote",
+          "argTypes": [ "uint256", "bool" ]
+        }
+      ],
+      "exp": "(p.votes.length + 1)",
+      "status": "unproven"
+    },
+    {
+      "no": "7",
+      "kind": "IO",
+      "line": 457,
+      "signatures": [
+        {
+          "contractName": "MindsyncPlatform",
+          "methodName": "vote",
+          "argTypes": [ "uint256", "bool" ]
+        }
+      ],
+      "exp": "(voteID + 1)",
+      "status": "proven"
+    },
+    {
+      "no": "8",
+      "kind": "IO",
+      "line": 488,
+      "signatures": [
+        {
+          "contractName": "MindsyncPlatform",
+          "methodName": "executeProposal",
+          "argTypes": [ "uint256", "dbytes" ]
+        }
+      ],
+      "exp": "(i + 1)",
+      "status": "proven"
+    },
+    {
+      "no": "9",
+      "kind": "IO",
+      "line": 491,
+      "signatures": [
+        {
+          "contractName": "MindsyncPlatform",
+          "methodName": "executeProposal",
+          "argTypes": [ "uint256", "dbytes" ]
+        }
+      ],
+      "exp": "(quorum + voteWeight)",
+      "status": "unproven"
+    },
+    {
+      "no": "10",
+      "kind": "IO",
+      "line": 493,
+      "signatures": [
+        {
+          "contractName": "MindsyncPlatform",
+          "methodName": "executeProposal",
+          "argTypes": [ "uint256", "dbytes" ]
+        }
+      ],
+      "exp": "(yea + voteWeight)",
+      "status": "unproven"
+    },
+    {
+      "no": "11",
+      "kind": "IO",
+      "line": 495,
+      "signatures": [
+        {
+          "contractName": "MindsyncPlatform",
+          "methodName": "executeProposal",
+          "argTypes": [ "uint256", "dbytes" ]
+        }
+      ],
+      "exp": "(nay + voteWeight)",
+      "status": "unproven"
+    },
+    {
+      "no": "12",
+      "kind": "DZ",
+      "line": 123,
+      "signatures": [
+        {
+          "contractName": "MindsyncPlatform",
+          "methodName": "executeProposal",
+          "argTypes": [ "uint256", "dbytes" ]
+        }
+      ],
+      "exp": "(c / a)",
+      "status": "proven"
+    },
+    {
+      "no": "13",
+      "kind": "DZ",
+      "line": 134,
+      "signatures": [
+        {
+          "contractName": "MindsyncPlatform",
+          "methodName": "executeProposal",
+          "argTypes": [ "uint256", "dbytes" ]
+        }
+      ],
+      "exp": "(a / b)",
+      "status": "proven"
+    },
+    {
+      "no": "14",
+      "kind": "ETH_LEAK",
+      "line": 32,
+      "signatures": [
+        {
+          "contractName": "MindsyncPlatform",
+          "methodName": "sendto_txorigin1",
+          "argTypes": [ "address", "uint256", "address" ]
+        }
+      ],
+      "exp": "receiver.transfer(amount);",
+      "status": "unproven"
+    },
+    {
+      "no": "15",
+      "kind": "ETH_LEAK",
+      "line": 55,
+      "signatures": [
+        {
+          "contractName": "MindsyncPlatform",
+          "methodName": "withdrawAll_txorigin2",
+          "argTypes": [ "address", "address" ]
+        }
+      ],
+      "exp": "_recipient.transfer(address(this).balance);",
+      "status": "unproven"
+    },
+    {
+      "no": "16",
+      "kind": "ETH_LEAK",
+      "line": 63,
+      "signatures": [
+        {
+          "contractName": "MindsyncPlatform",
+          "methodName": "sendto_txorigin17",
+          "argTypes": [ "address", "uint256", "address" ]
+        }
+      ],
+      "exp": "receiver.transfer(amount);",
+      "status": "unproven"
+    },
+    {
+      "no": "17",
+      "kind": "ETH_LEAK",
+      "line": 179,
+      "signatures": [
+        {
+          "contractName": "MindsyncPlatform",
+          "methodName": "sendto_txorigin5",
+          "argTypes": [ "address", "uint256", "address" ]
+        }
+      ],
+      "exp": "receiver.transfer(amount);",
+      "status": "unproven"
+    },
+    {
+      "no": "18",
+      "kind": "ETH_LEAK",
+      "line": 193,
+      "signatures": [
+        {
+          "contractName": "MindsyncPlatform",
+          "methodName": "withdrawAll_txorigin34",
+          "argTypes": [ "address", "address" ]
+        }
+      ],
+      "exp": "_recipient.transfer(address(this).balance);",
+      "status": "unproven"
+    },
+    {
+      "no": "19",
+      "kind": "ETH_LEAK",
+      "line": 198,
+      "signatures": [
+        {
+          "contractName": "MindsyncPlatform",
+          "methodName": "sendto_txorigin21",
+          "argTypes": [ "address", "uint256", "address" ]
+        }
+      ],
+      "exp": "receiver.transfer(amount);",
+      "status": "unproven"
+    },
+    {
+      "no": "20",
+      "kind": "ETH_LEAK",
+      "line": 203,
+      "signatures": [
+        {
+          "contractName": "MindsyncPlatform",
+          "methodName": "withdrawAll_txorigin10",
+          "argTypes": [ "address", "address" ]
+        }
+      ],
+      "exp": "_recipient.transfer(address(this).balance);",
+      "status": "unproven"
+    },
+    {
+      "no": "21",
+      "kind": "ETH_LEAK",
+      "line": 208,
+      "signatures": [
+        {
+          "contractName": "MindsyncPlatform",
+          "methodName": "withdrawAll_txorigin22",
+          "argTypes": [ "address", "address" ]
+        }
+      ],
+      "exp": "_recipient.transfer(address(this).balance);",
+      "status": "unproven"
+    },
+    {
+      "no": "22",
+      "kind": "ETH_LEAK",
+      "line": 228,
+      "signatures": [
+        {
+          "contractName": "MindsyncPlatform",
+          "methodName": "sendto_txorigin33",
+          "argTypes": [ "address", "uint256", "address" ]
+        }
+      ],
+      "exp": "receiver.transfer(amount);",
+      "status": "unproven"
+    },
+    {
+      "no": "23",
+      "kind": "ETH_LEAK",
+      "line": 243,
+      "signatures": [
+        {
+          "contractName": "MindsyncPlatform",
+          "methodName": "sendto_txorigin13",
+          "argTypes": [ "address", "uint256", "address" ]
+        }
+      ],
+      "exp": "receiver.transfer(amount);",
+      "status": "unproven"
+    },
+    {
+      "no": "24",
+      "kind": "ETH_LEAK",
+      "line": 307,
+      "signatures": [
+        {
+          "contractName": "MindsyncPlatform",
+          "methodName": "withdrawAll_txorigin38",
+          "argTypes": [ "address", "address" ]
+        }
+      ],
+      "exp": "_recipient.transfer(address(this).balance);",
+      "status": "unproven"
+    },
+    {
+      "no": "25",
+      "kind": "ETH_LEAK",
+      "line": 432,
+      "signatures": [
+        {
+          "contractName": "MindsyncPlatform",
+          "methodName": "withdrawAll_txorigin14",
+          "argTypes": [ "address", "address" ]
+        }
+      ],
+      "exp": "_recipient.transfer(address(this).balance);",
+      "status": "unproven"
+    },
+    {
+      "no": "26",
+      "kind": "ETH_LEAK",
+      "line": 463,
+      "signatures": [
+        {
+          "contractName": "MindsyncPlatform",
+          "methodName": "withdrawAll_txorigin30",
+          "argTypes": [ "address", "address" ]
+        }
+      ],
+      "exp": "_recipient.transfer(address(this).balance);",
+      "status": "unproven"
+    },
+    {
+      "no": "27",
+      "kind": "ETH_LEAK",
+      "line": 507,
+      "signatures": [
+        {
+          "contractName": "MindsyncPlatform",
+          "methodName": "executeProposal",
+          "argTypes": [ "uint256", "dbytes" ]
+        }
+      ],
+      "exp": "(success,  ) = p.recipient.call.value(p.amount)(transactionBytecode);",
+      "status": "unproven"
+    }
+  ]
+}

@@ -1,0 +1,79 @@
+{
+  "fileName": "Benchmarks/Study_SamplesSet/e7e14a0cc4db1fd170b5f4424ec2ebbd.sol",
+  "baseName": "e7e14a0cc4db1fd170b5f4424ec2ebbd.sol",
+  "iter": 68,
+  "time": "303.54122",
+  "errMsg": null,
+  "result": [
+    {
+      "no": "1",
+      "kind": "IO",
+      "line": 31,
+      "signatures": [
+        {
+          "contractName": "ERC721_token",
+          "methodName": "create",
+          "argTypes": [ "string" ]
+        }
+      ],
+      "exp": "(id + 1)",
+      "status": "unproven"
+    },
+    {
+      "no": "2",
+      "kind": "IO",
+      "line": 35,
+      "signatures": [
+        {
+          "contractName": "ERC721_token",
+          "methodName": "create",
+          "argTypes": [ "string" ]
+        }
+      ],
+      "exp": "(eggBalances[msg.sender] + 1)",
+      "status": "unproven"
+    },
+    {
+      "no": "3",
+      "kind": "IO",
+      "line": 61,
+      "signatures": [
+        {
+          "contractName": "ERC721_token",
+          "methodName": "transfer",
+          "argTypes": [ "address", "uint256" ]
+        }
+      ],
+      "exp": "(eggBalances[_to] + 1)",
+      "status": "unproven"
+    },
+    {
+      "no": "4",
+      "kind": "IO",
+      "line": 62,
+      "signatures": [
+        {
+          "contractName": "ERC721_token",
+          "methodName": "transfer",
+          "argTypes": [ "address", "uint256" ]
+        }
+      ],
+      "exp": "(eggBalances[msg.sender] - 1)",
+      "status": "unproven"
+    },
+    {
+      "no": "5",
+      "kind": "DZ",
+      "line": 33,
+      "signatures": [
+        {
+          "contractName": "ERC721_token",
+          "methodName": "create",
+          "argTypes": [ "string" ]
+        }
+      ],
+      "exp": "(uint256(_dna) % 10)",
+      "status": "proven"
+    }
+  ]
+}

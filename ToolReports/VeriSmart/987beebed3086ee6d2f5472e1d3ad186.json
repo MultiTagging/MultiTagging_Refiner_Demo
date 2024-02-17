@@ -1,0 +1,177 @@
+{
+  "fileName": "Benchmarks/Study_SamplesSet/987beebed3086ee6d2f5472e1d3ad186.sol",
+  "baseName": "987beebed3086ee6d2f5472e1d3ad186.sol",
+  "iter": 429,
+  "time": "306.698368",
+  "errMsg": null,
+  "result": [
+    {
+      "no": "1",
+      "kind": "IO",
+      "line": 37,
+      "signatures": [
+        {
+          "contractName": "CrowdSale",
+          "methodName": "CrowdSale",
+          "argTypes": [
+            "address", "uint256", "uint256", "uint256", "uint256", "address"
+          ]
+        }
+      ],
+      "exp": "(fundingGoalInEthers * 1000000000000000000)",
+      "status": "unproven"
+    },
+    {
+      "no": "2",
+      "kind": "IO",
+      "line": 39,
+      "signatures": [
+        {
+          "contractName": "CrowdSale",
+          "methodName": "CrowdSale",
+          "argTypes": [
+            "address", "uint256", "uint256", "uint256", "uint256", "address"
+          ]
+        }
+      ],
+      "exp": "(durationInMinutes * 60)",
+      "status": "unproven"
+    },
+    {
+      "no": "3",
+      "kind": "IO",
+      "line": 39,
+      "signatures": [
+        {
+          "contractName": "CrowdSale",
+          "methodName": "CrowdSale",
+          "argTypes": [
+            "address", "uint256", "uint256", "uint256", "uint256", "address"
+          ]
+        }
+      ],
+      "exp": "(startTimeInSeconds + (durationInMinutes * 60))",
+      "status": "unproven"
+    },
+    {
+      "no": "4",
+      "kind": "IO",
+      "line": 40,
+      "signatures": [
+        {
+          "contractName": "CrowdSale",
+          "methodName": "CrowdSale",
+          "argTypes": [
+            "address", "uint256", "uint256", "uint256", "uint256", "address"
+          ]
+        }
+      ],
+      "exp": "(szaboCostOfEachToken * 1000000000000000)",
+      "status": "unproven"
+    },
+    {
+      "no": "5",
+      "kind": "IO",
+      "line": 50,
+      "signatures": [
+        {
+          "contractName": "CrowdSale",
+          "methodName": "@fallback",
+          "argTypes": []
+        },
+        {
+          "contractName": "CrowdSale",
+          "methodName": "shiftSalePurchase",
+          "argTypes": []
+        }
+      ],
+      "exp": "(balanceOf[msg.sender] + amount)",
+      "status": "unproven"
+    },
+    {
+      "no": "6",
+      "kind": "IO",
+      "line": 51,
+      "signatures": [
+        {
+          "contractName": "CrowdSale",
+          "methodName": "@fallback",
+          "argTypes": []
+        },
+        {
+          "contractName": "CrowdSale",
+          "methodName": "shiftSalePurchase",
+          "argTypes": []
+        }
+      ],
+      "exp": "(amountRaised + amount)",
+      "status": "unproven"
+    },
+    {
+      "no": "7",
+      "kind": "IO",
+      "line": 52,
+      "signatures": [
+        {
+          "contractName": "CrowdSale",
+          "methodName": "@fallback",
+          "argTypes": []
+        },
+        {
+          "contractName": "CrowdSale",
+          "methodName": "shiftSalePurchase",
+          "argTypes": []
+        }
+      ],
+      "exp": "(amount * price)",
+      "status": "unproven"
+    },
+    {
+      "no": "8",
+      "kind": "DZ",
+      "line": 52,
+      "signatures": [
+        {
+          "contractName": "CrowdSale",
+          "methodName": "@fallback",
+          "argTypes": []
+        },
+        {
+          "contractName": "CrowdSale",
+          "methodName": "shiftSalePurchase",
+          "argTypes": []
+        }
+      ],
+      "exp": "((amount * price) / 1000000000000000000)",
+      "status": "proven"
+    },
+    {
+      "no": "9",
+      "kind": "ETH_LEAK",
+      "line": 147,
+      "signatures": [
+        {
+          "contractName": "CrowdSale",
+          "methodName": "safeWithdrawal",
+          "argTypes": []
+        }
+      ],
+      "exp": "msg.sender.send(amount)",
+      "status": "unproven"
+    },
+    {
+      "no": "10",
+      "kind": "ETH_LEAK",
+      "line": 156,
+      "signatures": [
+        {
+          "contractName": "CrowdSale",
+          "methodName": "safeWithdrawal",
+          "argTypes": []
+        }
+      ],
+      "exp": "beneficiary.send(amountRaised)",
+      "status": "proven"
+    }
+  ]
+}

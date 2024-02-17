@@ -1,0 +1,109 @@
+{
+  "fileName": "Benchmarks/Study_SamplesSet/18c2e0c374031239846b704cf76a6854.sol",
+  "baseName": "18c2e0c374031239846b704cf76a6854.sol",
+  "iter": 45,
+  "time": "32.025179",
+  "errMsg": null,
+  "result": [
+    {
+      "no": "1",
+      "kind": "IO",
+      "line": 35,
+      "signatures": [
+        {
+          "contractName": "WETH9",
+          "methodName": "@fallback",
+          "argTypes": []
+        },
+        { "contractName": "WETH9", "methodName": "deposit", "argTypes": [] }
+      ],
+      "exp": "(balanceOf[msg.sender] + msg.value)",
+      "status": "unproven"
+    },
+    {
+      "no": "2",
+      "kind": "IO",
+      "line": 40,
+      "signatures": [
+        {
+          "contractName": "WETH9",
+          "methodName": "withdraw",
+          "argTypes": [ "uint256" ]
+        }
+      ],
+      "exp": "(balanceOf[msg.sender] - wad)",
+      "status": "proven"
+    },
+    {
+      "no": "3",
+      "kind": "IO",
+      "line": 67,
+      "signatures": [
+        {
+          "contractName": "WETH9",
+          "methodName": "transfer",
+          "argTypes": [ "address", "uint256" ]
+        },
+        {
+          "contractName": "WETH9",
+          "methodName": "transferFrom",
+          "argTypes": [ "address", "address", "uint256" ]
+        }
+      ],
+      "exp": "(allowance[src][msg.sender] - wad)",
+      "status": "proven"
+    },
+    {
+      "no": "4",
+      "kind": "IO",
+      "line": 70,
+      "signatures": [
+        {
+          "contractName": "WETH9",
+          "methodName": "transfer",
+          "argTypes": [ "address", "uint256" ]
+        },
+        {
+          "contractName": "WETH9",
+          "methodName": "transferFrom",
+          "argTypes": [ "address", "address", "uint256" ]
+        }
+      ],
+      "exp": "(balanceOf[src] - wad)",
+      "status": "proven"
+    },
+    {
+      "no": "5",
+      "kind": "IO",
+      "line": 71,
+      "signatures": [
+        {
+          "contractName": "WETH9",
+          "methodName": "transfer",
+          "argTypes": [ "address", "uint256" ]
+        },
+        {
+          "contractName": "WETH9",
+          "methodName": "transferFrom",
+          "argTypes": [ "address", "address", "uint256" ]
+        }
+      ],
+      "exp": "(balanceOf[dst] + wad)",
+      "status": "unproven"
+    },
+    {
+      "no": "6",
+      "kind": "ETH_LEAK",
+      "line": 41,
+      "signatures": [
+        {
+          "contractName": "WETH9",
+          "methodName": "withdraw",
+          "argTypes": [ "uint256" ]
+        }
+      ],
+      "exp": "msg.sender.transfer(wad);",
+      "status": "proven"
+    }
+  ]
+}

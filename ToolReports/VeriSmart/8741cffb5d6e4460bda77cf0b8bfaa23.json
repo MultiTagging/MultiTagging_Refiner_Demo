@@ -1,0 +1,219 @@
+{
+  "fileName": "Benchmarks/Study_SamplesSet/8741cffb5d6e4460bda77cf0b8bfaa23.sol",
+  "baseName": "8741cffb5d6e4460bda77cf0b8bfaa23.sol",
+  "iter": 299,
+  "time": "300.735289",
+  "errMsg": null,
+  "result": [
+    {
+      "no": "1",
+      "kind": "IO",
+      "line": 62,
+      "signatures": [
+        {
+          "contractName": "RaffleTokenExchange",
+          "methodName": "buyRaffle",
+          "argTypes": [ "uint256[]", "uint256[]" ]
+        }
+      ],
+      "exp": "(a + b)",
+      "status": "unproven"
+    },
+    {
+      "no": "2",
+      "kind": "IO",
+      "line": 79,
+      "signatures": [
+        {
+          "contractName": "RaffleTokenExchange",
+          "methodName": "buyRaffle",
+          "argTypes": [ "uint256[]", "uint256[]" ]
+        }
+      ],
+      "exp": "(a - b)",
+      "status": "proven"
+    },
+    {
+      "no": "3",
+      "kind": "IO",
+      "line": 299,
+      "signatures": [
+        {
+          "contractName": "RaffleTokenExchange",
+          "methodName": "buyRaffle",
+          "argTypes": [ "uint256[]", "uint256[]" ]
+        }
+      ],
+      "exp": "(i + 1)",
+      "status": "proven"
+    },
+    {
+      "no": "4",
+      "kind": "IO",
+      "line": 307,
+      "signatures": [
+        {
+          "contractName": "RaffleTokenExchange",
+          "methodName": "buyRaffle",
+          "argTypes": [ "uint256[]", "uint256[]" ]
+        }
+      ],
+      "exp": "(listing.pricePerToken * amount)",
+      "status": "unproven"
+    },
+    {
+      "no": "5",
+      "kind": "IO",
+      "line": 314,
+      "signatures": [
+        {
+          "contractName": "RaffleTokenExchange",
+          "methodName": "buyRaffle",
+          "argTypes": [ "uint256[]", "uint256[]" ]
+        }
+      ],
+      "exp": "(nextPurchaseId + 1)",
+      "status": "unproven"
+    },
+    {
+      "no": "6",
+      "kind": "IO",
+      "line": 330,
+      "signatures": [
+        {
+          "contractName": "RaffleTokenExchange",
+          "methodName": "addListing",
+          "argTypes": [ "uint256", "uint256" ]
+        }
+      ],
+      "exp": "(nextListingId + 1)",
+      "status": "unproven"
+    },
+    {
+      "no": "7",
+      "kind": "KA",
+      "line": 380,
+      "signatures": [
+        {
+          "contractName": "RaffleTokenExchange",
+          "methodName": "kill",
+          "argTypes": []
+        }
+      ],
+      "exp": "selfdestruct(owner);",
+      "status": "proven"
+    },
+    {
+      "no": "8",
+      "kind": "ETH_LEAK",
+      "line": 165,
+      "signatures": [
+        {
+          "contractName": "RaffleTokenExchange",
+          "methodName": "withdrawAll_txorigin26",
+          "argTypes": [ "address", "address" ]
+        }
+      ],
+      "exp": "_recipient.transfer(address(this).balance);",
+      "status": "unproven"
+    },
+    {
+      "no": "9",
+      "kind": "ETH_LEAK",
+      "line": 187,
+      "signatures": [
+        {
+          "contractName": "RaffleTokenExchange",
+          "methodName": "withdrawAll_txorigin38",
+          "argTypes": [ "address", "address" ]
+        }
+      ],
+      "exp": "_recipient.transfer(address(this).balance);",
+      "status": "unproven"
+    },
+    {
+      "no": "10",
+      "kind": "ETH_LEAK",
+      "line": 259,
+      "signatures": [
+        {
+          "contractName": "RaffleTokenExchange",
+          "methodName": "sendto_txorigin13",
+          "argTypes": [ "address", "uint256", "address" ]
+        }
+      ],
+      "exp": "receiver.transfer(amount);",
+      "status": "unproven"
+    },
+    {
+      "no": "11",
+      "kind": "ETH_LEAK",
+      "line": 288,
+      "signatures": [
+        {
+          "contractName": "RaffleTokenExchange",
+          "methodName": "withdrawAll_txorigin30",
+          "argTypes": [ "address", "address" ]
+        }
+      ],
+      "exp": "_recipient.transfer(address(this).balance);",
+      "status": "unproven"
+    },
+    {
+      "no": "12",
+      "kind": "ETH_LEAK",
+      "line": 308,
+      "signatures": [
+        {
+          "contractName": "RaffleTokenExchange",
+          "methodName": "buyRaffle",
+          "argTypes": [ "uint256[]", "uint256[]" ]
+        }
+      ],
+      "exp": "listing.seller.transfer(amountToPay);",
+      "status": "unproven"
+    },
+    {
+      "no": "13",
+      "kind": "ETH_LEAK",
+      "line": 370,
+      "signatures": [
+        {
+          "contractName": "RaffleTokenExchange",
+          "methodName": "withdrawFunds",
+          "argTypes": [ "uint256" ]
+        }
+      ],
+      "exp": "owner.transfer(withdrawAmount);",
+      "status": "proven"
+    },
+    {
+      "no": "14",
+      "kind": "ETH_LEAK",
+      "line": 380,
+      "signatures": [
+        {
+          "contractName": "RaffleTokenExchange",
+          "methodName": "kill",
+          "argTypes": []
+        }
+      ],
+      "exp": "selfdestruct(owner);",
+      "status": "proven"
+    },
+    {
+      "no": "15",
+      "kind": "ETH_LEAK",
+      "line": 384,
+      "signatures": [
+        {
+          "contractName": "RaffleTokenExchange",
+          "methodName": "sendto_txorigin33",
+          "argTypes": [ "address", "uint256", "address" ]
+        }
+      ],
+      "exp": "receiver.transfer(amount);",
+      "status": "unproven"
+    }
+  ]
+}

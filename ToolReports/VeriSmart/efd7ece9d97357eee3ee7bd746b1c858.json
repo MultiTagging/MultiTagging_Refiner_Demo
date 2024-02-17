@@ -1,0 +1,666 @@
+{
+  "fileName": "Benchmarks/Study_SamplesSet/efd7ece9d97357eee3ee7bd746b1c858.sol",
+  "baseName": "efd7ece9d97357eee3ee7bd746b1c858.sol",
+  "iter": 128,
+  "time": "227.126414",
+  "errMsg": null,
+  "result": [
+    {
+      "no": "1",
+      "kind": "IO",
+      "line": 48,
+      "signatures": [
+        {
+          "contractName": "BitpayerDEX",
+          "methodName": "deposit",
+          "argTypes": []
+        },
+        {
+          "contractName": "BitpayerDEX",
+          "methodName": "depositToken",
+          "argTypes": [ "address", "uint256" ]
+        },
+        {
+          "contractName": "BitpayerDEX",
+          "methodName": "trade",
+          "argTypes": [
+            "address", "uint256", "address", "uint256", "uint256", "uint256",
+            "address", "uint8", "bytes32", "bytes32", "uint256"
+          ]
+        },
+        {
+          "contractName": "BitpayerDEX",
+          "methodName": "tradeBalances",
+          "argTypes": [
+            "address", "uint256", "address", "uint256", "address", "uint256"
+          ]
+        }
+      ],
+      "exp": "(a + b)",
+      "status": "unproven"
+    },
+    {
+      "no": "2",
+      "kind": "IO",
+      "line": 65,
+      "signatures": [
+        {
+          "contractName": "BitpayerDEX",
+          "methodName": "availableVolume",
+          "argTypes": [
+            "address", "uint256", "address", "uint256", "uint256", "uint256",
+            "address", "uint8", "bytes32", "bytes32"
+          ]
+        },
+        {
+          "contractName": "BitpayerDEX",
+          "methodName": "tradeBalances",
+          "argTypes": [
+            "address", "uint256", "address", "uint256", "address", "uint256"
+          ]
+        },
+        {
+          "contractName": "BitpayerDEX",
+          "methodName": "withdraw",
+          "argTypes": [ "uint256" ]
+        },
+        {
+          "contractName": "BitpayerDEX",
+          "methodName": "withdrawToken",
+          "argTypes": [ "address", "uint256" ]
+        }
+      ],
+      "exp": "(a - b)",
+      "status": "proven"
+    },
+    {
+      "no": "3",
+      "kind": "IO",
+      "line": 87,
+      "signatures": [
+        {
+          "contractName": "BitpayerDEX",
+          "methodName": "availableVolume",
+          "argTypes": [
+            "address", "uint256", "address", "uint256", "uint256", "uint256",
+            "address", "uint8", "bytes32", "bytes32"
+          ]
+        },
+        {
+          "contractName": "BitpayerDEX",
+          "methodName": "tradeBalances",
+          "argTypes": [
+            "address", "uint256", "address", "uint256", "address", "uint256"
+          ]
+        }
+      ],
+      "exp": "(a * b)",
+      "status": "unproven"
+    },
+    {
+      "no": "4",
+      "kind": "DZ",
+      "line": 88,
+      "signatures": [
+        {
+          "contractName": "BitpayerDEX",
+          "methodName": "availableVolume",
+          "argTypes": [
+            "address", "uint256", "address", "uint256", "uint256", "uint256",
+            "address", "uint8", "bytes32", "bytes32"
+          ]
+        },
+        {
+          "contractName": "BitpayerDEX",
+          "methodName": "tradeBalances",
+          "argTypes": [
+            "address", "uint256", "address", "uint256", "address", "uint256"
+          ]
+        }
+      ],
+      "exp": "(c / a)",
+      "status": "proven"
+    },
+    {
+      "no": "5",
+      "kind": "DZ",
+      "line": 107,
+      "signatures": [
+        {
+          "contractName": "BitpayerDEX",
+          "methodName": "tradeBalances",
+          "argTypes": [
+            "address", "uint256", "address", "uint256", "address", "uint256"
+          ]
+        }
+      ],
+      "exp": "(a / b)",
+      "status": "proven"
+    },
+    {
+      "no": "6",
+      "kind": "DZ",
+      "line": 370,
+      "signatures": [
+        {
+          "contractName": "BitpayerDEX",
+          "methodName": "tradeBalances",
+          "argTypes": [
+            "address", "uint256", "address", "uint256", "address", "uint256"
+          ]
+        }
+      ],
+      "exp": "(amountGive.mul(amount) / amountGet)",
+      "status": "unproven"
+    },
+    {
+      "no": "7",
+      "kind": "DZ",
+      "line": 371,
+      "signatures": [
+        {
+          "contractName": "BitpayerDEX",
+          "methodName": "tradeBalances",
+          "argTypes": [
+            "address", "uint256", "address", "uint256", "address", "uint256"
+          ]
+        }
+      ],
+      "exp": "(amountGive.mul(amount) / amountGet)",
+      "status": "proven"
+    },
+    {
+      "no": "8",
+      "kind": "DZ",
+      "line": 394,
+      "signatures": [
+        {
+          "contractName": "BitpayerDEX",
+          "methodName": "availableVolume",
+          "argTypes": [
+            "address", "uint256", "address", "uint256", "uint256", "uint256",
+            "address", "uint8", "bytes32", "bytes32"
+          ]
+        }
+      ],
+      "exp": "(tokens[tokenGive][user].mul(amountGet) / amountGive)",
+      "status": "unproven"
+    },
+    {
+      "no": "9",
+      "kind": "ETH_LEAK",
+      "line": 141,
+      "signatures": [
+        {
+          "contractName": "BitpayerDEX",
+          "methodName": "bug_unchk_send23",
+          "argTypes": []
+        }
+      ],
+      "exp": "msg.sender.transfer(1000000000000000000);",
+      "status": "unproven"
+    },
+    {
+      "no": "10",
+      "kind": "ETH_LEAK",
+      "line": 148,
+      "signatures": [
+        {
+          "contractName": "BitpayerDEX",
+          "methodName": "bug_unchk_send15",
+          "argTypes": []
+        }
+      ],
+      "exp": "msg.sender.transfer(1000000000000000000);",
+      "status": "unproven"
+    },
+    {
+      "no": "11",
+      "kind": "ETH_LEAK",
+      "line": 160,
+      "signatures": [
+        {
+          "contractName": "BitpayerDEX",
+          "methodName": "bug_unchk_send28",
+          "argTypes": []
+        }
+      ],
+      "exp": "msg.sender.transfer(1000000000000000000);",
+      "status": "unproven"
+    },
+    {
+      "no": "12",
+      "kind": "ETH_LEAK",
+      "line": 170,
+      "signatures": [
+        {
+          "contractName": "BitpayerDEX",
+          "methodName": "bug_unchk_send21",
+          "argTypes": []
+        }
+      ],
+      "exp": "msg.sender.transfer(1000000000000000000);",
+      "status": "unproven"
+    },
+    {
+      "no": "13",
+      "kind": "ETH_LEAK",
+      "line": 185,
+      "signatures": [
+        {
+          "contractName": "BitpayerDEX",
+          "methodName": "bug_unchk_send18",
+          "argTypes": []
+        }
+      ],
+      "exp": "msg.sender.transfer(1000000000000000000);",
+      "status": "unproven"
+    },
+    {
+      "no": "14",
+      "kind": "ETH_LEAK",
+      "line": 188,
+      "signatures": [
+        {
+          "contractName": "BitpayerDEX",
+          "methodName": "bug_unchk_send29",
+          "argTypes": []
+        }
+      ],
+      "exp": "msg.sender.transfer(1000000000000000000);",
+      "status": "unproven"
+    },
+    {
+      "no": "15",
+      "kind": "ETH_LEAK",
+      "line": 191,
+      "signatures": [
+        {
+          "contractName": "BitpayerDEX",
+          "methodName": "bug_unchk_send6",
+          "argTypes": []
+        }
+      ],
+      "exp": "msg.sender.transfer(1000000000000000000);",
+      "status": "unproven"
+    },
+    {
+      "no": "16",
+      "kind": "ETH_LEAK",
+      "line": 195,
+      "signatures": [
+        {
+          "contractName": "BitpayerDEX",
+          "methodName": "bug_unchk_send16",
+          "argTypes": []
+        }
+      ],
+      "exp": "msg.sender.transfer(1000000000000000000);",
+      "status": "unproven"
+    },
+    {
+      "no": "17",
+      "kind": "ETH_LEAK",
+      "line": 198,
+      "signatures": [
+        {
+          "contractName": "BitpayerDEX",
+          "methodName": "bug_unchk_send24",
+          "argTypes": []
+        }
+      ],
+      "exp": "msg.sender.transfer(1000000000000000000);",
+      "status": "unproven"
+    },
+    {
+      "no": "18",
+      "kind": "ETH_LEAK",
+      "line": 201,
+      "signatures": [
+        {
+          "contractName": "BitpayerDEX",
+          "methodName": "bug_unchk_send5",
+          "argTypes": []
+        }
+      ],
+      "exp": "msg.sender.transfer(1000000000000000000);",
+      "status": "unproven"
+    },
+    {
+      "no": "19",
+      "kind": "ETH_LEAK",
+      "line": 205,
+      "signatures": [
+        {
+          "contractName": "BitpayerDEX",
+          "methodName": "bug_unchk_send14",
+          "argTypes": []
+        }
+      ],
+      "exp": "msg.sender.transfer(1000000000000000000);",
+      "status": "unproven"
+    },
+    {
+      "no": "20",
+      "kind": "ETH_LEAK",
+      "line": 208,
+      "signatures": [
+        {
+          "contractName": "BitpayerDEX",
+          "methodName": "bug_unchk_send30",
+          "argTypes": []
+        }
+      ],
+      "exp": "msg.sender.transfer(1000000000000000000);",
+      "status": "unproven"
+    },
+    {
+      "no": "21",
+      "kind": "ETH_LEAK",
+      "line": 211,
+      "signatures": [
+        {
+          "contractName": "BitpayerDEX",
+          "methodName": "bug_unchk_send8",
+          "argTypes": []
+        }
+      ],
+      "exp": "msg.sender.transfer(1000000000000000000);",
+      "status": "unproven"
+    },
+    {
+      "no": "22",
+      "kind": "ETH_LEAK",
+      "line": 214,
+      "signatures": [
+        {
+          "contractName": "BitpayerDEX",
+          "methodName": "bug_unchk_send27",
+          "argTypes": []
+        }
+      ],
+      "exp": "msg.sender.transfer(1000000000000000000);",
+      "status": "unproven"
+    },
+    {
+      "no": "23",
+      "kind": "ETH_LEAK",
+      "line": 217,
+      "signatures": [
+        {
+          "contractName": "BitpayerDEX",
+          "methodName": "bug_unchk_send31",
+          "argTypes": []
+        }
+      ],
+      "exp": "msg.sender.transfer(1000000000000000000);",
+      "status": "unproven"
+    },
+    {
+      "no": "24",
+      "kind": "ETH_LEAK",
+      "line": 220,
+      "signatures": [
+        {
+          "contractName": "BitpayerDEX",
+          "methodName": "bug_unchk_send13",
+          "argTypes": []
+        }
+      ],
+      "exp": "msg.sender.transfer(1000000000000000000);",
+      "status": "unproven"
+    },
+    {
+      "no": "25",
+      "kind": "ETH_LEAK",
+      "line": 229,
+      "signatures": [
+        {
+          "contractName": "BitpayerDEX",
+          "methodName": "bug_unchk_send10",
+          "argTypes": []
+        }
+      ],
+      "exp": "msg.sender.transfer(1000000000000000000);",
+      "status": "unproven"
+    },
+    {
+      "no": "26",
+      "kind": "ETH_LEAK",
+      "line": 243,
+      "signatures": [
+        {
+          "contractName": "BitpayerDEX",
+          "methodName": "bug_unchk_send22",
+          "argTypes": []
+        }
+      ],
+      "exp": "msg.sender.transfer(1000000000000000000);",
+      "status": "unproven"
+    },
+    {
+      "no": "27",
+      "kind": "ETH_LEAK",
+      "line": 254,
+      "signatures": [
+        {
+          "contractName": "BitpayerDEX",
+          "methodName": "bug_unchk_send12",
+          "argTypes": []
+        }
+      ],
+      "exp": "msg.sender.transfer(1000000000000000000);",
+      "status": "unproven"
+    },
+    {
+      "no": "28",
+      "kind": "ETH_LEAK",
+      "line": 267,
+      "signatures": [
+        {
+          "contractName": "BitpayerDEX",
+          "methodName": "bug_unchk_send11",
+          "argTypes": []
+        }
+      ],
+      "exp": "msg.sender.transfer(1000000000000000000);",
+      "status": "unproven"
+    },
+    {
+      "no": "29",
+      "kind": "ETH_LEAK",
+      "line": 274,
+      "signatures": [
+        {
+          "contractName": "BitpayerDEX",
+          "methodName": "bug_unchk_send1",
+          "argTypes": []
+        }
+      ],
+      "exp": "msg.sender.transfer(1000000000000000000);",
+      "status": "unproven"
+    },
+    {
+      "no": "30",
+      "kind": "ETH_LEAK",
+      "line": 281,
+      "signatures": [
+        {
+          "contractName": "BitpayerDEX",
+          "methodName": "bug_unchk_send2",
+          "argTypes": []
+        }
+      ],
+      "exp": "msg.sender.transfer(1000000000000000000);",
+      "status": "unproven"
+    },
+    {
+      "no": "31",
+      "kind": "ETH_LEAK",
+      "line": 289,
+      "signatures": [
+        {
+          "contractName": "BitpayerDEX",
+          "methodName": "withdrawTradingFeeOwner",
+          "argTypes": []
+        }
+      ],
+      "exp": "msg.sender.transfer(amount);",
+      "status": "proven"
+    },
+    {
+      "no": "32",
+      "kind": "ETH_LEAK",
+      "line": 295,
+      "signatures": [
+        {
+          "contractName": "BitpayerDEX",
+          "methodName": "bug_unchk_send17",
+          "argTypes": []
+        }
+      ],
+      "exp": "msg.sender.transfer(1000000000000000000);",
+      "status": "unproven"
+    },
+    {
+      "no": "33",
+      "kind": "ETH_LEAK",
+      "line": 302,
+      "signatures": [
+        {
+          "contractName": "BitpayerDEX",
+          "methodName": "bug_unchk_send3",
+          "argTypes": []
+        }
+      ],
+      "exp": "msg.sender.transfer(1000000000000000000);",
+      "status": "unproven"
+    },
+    {
+      "no": "34",
+      "kind": "ETH_LEAK",
+      "line": 308,
+      "signatures": [
+        {
+          "contractName": "BitpayerDEX",
+          "methodName": "withdraw",
+          "argTypes": [ "uint256" ]
+        }
+      ],
+      "exp": "msg.sender.transfer(amount);",
+      "status": "unproven"
+    },
+    {
+      "no": "35",
+      "kind": "ETH_LEAK",
+      "line": 312,
+      "signatures": [
+        {
+          "contractName": "BitpayerDEX",
+          "methodName": "bug_unchk_send9",
+          "argTypes": []
+        }
+      ],
+      "exp": "msg.sender.transfer(1000000000000000000);",
+      "status": "unproven"
+    },
+    {
+      "no": "36",
+      "kind": "ETH_LEAK",
+      "line": 322,
+      "signatures": [
+        {
+          "contractName": "BitpayerDEX",
+          "methodName": "bug_unchk_send25",
+          "argTypes": []
+        }
+      ],
+      "exp": "msg.sender.transfer(1000000000000000000);",
+      "status": "unproven"
+    },
+    {
+      "no": "37",
+      "kind": "ETH_LEAK",
+      "line": 333,
+      "signatures": [
+        {
+          "contractName": "BitpayerDEX",
+          "methodName": "bug_unchk_send19",
+          "argTypes": []
+        }
+      ],
+      "exp": "msg.sender.transfer(1000000000000000000);",
+      "status": "unproven"
+    },
+    {
+      "no": "38",
+      "kind": "ETH_LEAK",
+      "line": 339,
+      "signatures": [
+        {
+          "contractName": "BitpayerDEX",
+          "methodName": "bug_unchk_send26",
+          "argTypes": []
+        }
+      ],
+      "exp": "msg.sender.transfer(1000000000000000000);",
+      "status": "unproven"
+    },
+    {
+      "no": "39",
+      "kind": "ETH_LEAK",
+      "line": 347,
+      "signatures": [
+        {
+          "contractName": "BitpayerDEX",
+          "methodName": "bug_unchk_send20",
+          "argTypes": []
+        }
+      ],
+      "exp": "msg.sender.transfer(1000000000000000000);",
+      "status": "unproven"
+    },
+    {
+      "no": "40",
+      "kind": "ETH_LEAK",
+      "line": 374,
+      "signatures": [
+        {
+          "contractName": "BitpayerDEX",
+          "methodName": "bug_unchk_send32",
+          "argTypes": []
+        }
+      ],
+      "exp": "msg.sender.transfer(1000000000000000000);",
+      "status": "unproven"
+    },
+    {
+      "no": "41",
+      "kind": "ETH_LEAK",
+      "line": 385,
+      "signatures": [
+        {
+          "contractName": "BitpayerDEX",
+          "methodName": "bug_unchk_send4",
+          "argTypes": []
+        }
+      ],
+      "exp": "msg.sender.transfer(1000000000000000000);",
+      "status": "unproven"
+    },
+    {
+      "no": "42",
+      "kind": "ETH_LEAK",
+      "line": 406,
+      "signatures": [
+        {
+          "contractName": "BitpayerDEX",
+          "methodName": "bug_unchk_send7",
+          "argTypes": []
+        }
+      ],
+      "exp": "msg.sender.transfer(1000000000000000000);",
+      "status": "unproven"
+    }
+  ]
+}

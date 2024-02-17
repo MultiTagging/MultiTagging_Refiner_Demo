@@ -1,0 +1,65 @@
+{
+  "fileName": "Benchmarks/Study_SamplesSet/43c992f0a867437ffa835673b23b1750.sol",
+  "baseName": "43c992f0a867437ffa835673b23b1750.sol",
+  "iter": 164,
+  "time": "300.247692",
+  "errMsg": null,
+  "result": [
+    {
+      "no": "1",
+      "kind": "IO",
+      "line": 42,
+      "signatures": [
+        {
+          "contractName": "ETH_ANONIM_TRANSFER",
+          "methodName": "MakeTransfer",
+          "argTypes": [ "address", "uint256" ]
+        }
+      ],
+      "exp": "(feePaid + creatorFee)",
+      "status": "unproven"
+    },
+    {
+      "no": "2",
+      "kind": "IO",
+      "line": 43,
+      "signatures": [
+        {
+          "contractName": "ETH_ANONIM_TRANSFER",
+          "methodName": "MakeTransfer",
+          "argTypes": [ "address", "uint256" ]
+        }
+      ],
+      "exp": "(totalTransfered + _am)",
+      "status": "unproven"
+    },
+    {
+      "no": "3",
+      "kind": "ETH_LEAK",
+      "line": 39,
+      "signatures": [
+        {
+          "contractName": "ETH_ANONIM_TRANSFER",
+          "methodName": "MakeTransfer",
+          "argTypes": [ "address", "uint256" ]
+        }
+      ],
+      "exp": "creator.send(creatorFee);",
+      "status": "proven"
+    },
+    {
+      "no": "4",
+      "kind": "ETH_LEAK",
+      "line": 40,
+      "signatures": [
+        {
+          "contractName": "ETH_ANONIM_TRANSFER",
+          "methodName": "MakeTransfer",
+          "argTypes": [ "address", "uint256" ]
+        }
+      ],
+      "exp": "_adr.send(_am);",
+      "status": "unproven"
+    }
+  ]
+}

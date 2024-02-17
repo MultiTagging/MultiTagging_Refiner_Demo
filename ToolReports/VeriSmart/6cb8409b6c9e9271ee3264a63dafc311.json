@@ -1,0 +1,37 @@
+{
+  "fileName": "Benchmarks/Study_SamplesSet/6cb8409b6c9e9271ee3264a63dafc311.sol",
+  "baseName": "6cb8409b6c9e9271ee3264a63dafc311.sol",
+  "iter": 6,
+  "time": "0.290181",
+  "errMsg": null,
+  "result": [
+    {
+      "no": "1",
+      "kind": "ETH_LEAK",
+      "line": 23,
+      "signatures": [
+        {
+          "contractName": "EthTxOrderDependenceMinimal",
+          "methodName": "setReward",
+          "argTypes": []
+        }
+      ],
+      "exp": "owner.transfer(reward);",
+      "status": "proven"
+    },
+    {
+      "no": "2",
+      "kind": "ETH_LEAK",
+      "line": 31,
+      "signatures": [
+        {
+          "contractName": "EthTxOrderDependenceMinimal",
+          "methodName": "claimReward",
+          "argTypes": [ "uint256" ]
+        }
+      ],
+      "exp": "msg.sender.transfer(reward);",
+      "status": "unproven"
+    }
+  ]
+}

@@ -1,0 +1,783 @@
+{
+  "fileName": "Benchmarks/Study_SamplesSet/d813e6a1d3f2a9f4978f49c8912ec63b.sol",
+  "baseName": "d813e6a1d3f2a9f4978f49c8912ec63b.sol",
+  "iter": 4,
+  "time": "324.253887",
+  "errMsg": null,
+  "result": [
+    {
+      "no": "1",
+      "kind": "IO",
+      "line": 35,
+      "signatures": [
+        {
+          "contractName": "StableDEX",
+          "methodName": "makeOrder",
+          "argTypes": [
+            "uint256[9]", "address[2]", "string", "uint8", "bytes32",
+            "bytes32"
+          ]
+        },
+        {
+          "contractName": "StableDEX",
+          "methodName": "verify",
+          "argTypes": [ "string", "uint8", "bytes32", "bytes32" ]
+        }
+      ],
+      "exp": "(a * b)",
+      "status": "unproven"
+    },
+    {
+      "no": "2",
+      "kind": "IO",
+      "line": 49,
+      "signatures": [
+        {
+          "contractName": "StableDEX",
+          "methodName": "makeOrder",
+          "argTypes": [
+            "uint256[9]", "address[2]", "string", "uint8", "bytes32",
+            "bytes32"
+          ]
+        },
+        {
+          "contractName": "StableDEX",
+          "methodName": "verify",
+          "argTypes": [ "string", "uint8", "bytes32", "bytes32" ]
+        },
+        {
+          "contractName": "StableDEX",
+          "methodName": "withdraw",
+          "argTypes": [ "uint8", "address", "uint256" ]
+        }
+      ],
+      "exp": "(a - b)",
+      "status": "proven"
+    },
+    {
+      "no": "3",
+      "kind": "IO",
+      "line": 54,
+      "signatures": [
+        {
+          "contractName": "StableDEX",
+          "methodName": "deposit",
+          "argTypes": []
+        },
+        {
+          "contractName": "StableDEX",
+          "methodName": "makeOrder",
+          "argTypes": [
+            "uint256[9]", "address[2]", "string", "uint8", "bytes32",
+            "bytes32"
+          ]
+        },
+        {
+          "contractName": "StableDEX",
+          "methodName": "tokenDeposit",
+          "argTypes": [ "address", "uint256" ]
+        },
+        {
+          "contractName": "StableDEX",
+          "methodName": "verify",
+          "argTypes": [ "string", "uint8", "bytes32", "bytes32" ]
+        },
+        {
+          "contractName": "StableDEX",
+          "methodName": "withdraw",
+          "argTypes": [ "uint8", "address", "uint256" ]
+        }
+      ],
+      "exp": "(a + b)",
+      "status": "unproven"
+    },
+    {
+      "no": "4",
+      "kind": "IO",
+      "line": 67,
+      "signatures": [
+        {
+          "contractName": "StableDEX",
+          "methodName": "increaseLockTime_intou13",
+          "argTypes": [ "uint256" ]
+        }
+      ],
+      "exp": "(lockTime_intou13[msg.sender] + _secondsToIncrease)",
+      "status": "unproven"
+    },
+    {
+      "no": "5",
+      "kind": "IO",
+      "line": 78,
+      "signatures": [
+        {
+          "contractName": "StableDEX",
+          "methodName": "bug_intou11",
+          "argTypes": []
+        }
+      ],
+      "exp": "(vundflw - 10)",
+      "status": "unproven"
+    },
+    {
+      "no": "6",
+      "kind": "IO",
+      "line": 85,
+      "signatures": [
+        {
+          "contractName": "StableDEX",
+          "methodName": "increaseLockTime_intou1",
+          "argTypes": [ "uint256" ]
+        }
+      ],
+      "exp": "(lockTime_intou1[msg.sender] + _secondsToIncrease)",
+      "status": "unproven"
+    },
+    {
+      "no": "7",
+      "kind": "IO",
+      "line": 97,
+      "signatures": [
+        {
+          "contractName": "StableDEX",
+          "methodName": "transfer_undrflow2",
+          "argTypes": [ "address", "uint256" ]
+        }
+      ],
+      "exp": "(balances_intou2[msg.sender] - _value)",
+      "status": "unproven"
+    },
+    {
+      "no": "8",
+      "kind": "IO",
+      "line": 98,
+      "signatures": [
+        {
+          "contractName": "StableDEX",
+          "methodName": "transfer_undrflow2",
+          "argTypes": [ "address", "uint256" ]
+        }
+      ],
+      "exp": "(balances_intou2[msg.sender] - _value)",
+      "status": "unproven"
+    },
+    {
+      "no": "9",
+      "kind": "IO",
+      "line": 99,
+      "signatures": [
+        {
+          "contractName": "StableDEX",
+          "methodName": "transfer_undrflow2",
+          "argTypes": [ "address", "uint256" ]
+        }
+      ],
+      "exp": "(balances_intou2[_to] + _value)",
+      "status": "unproven"
+    },
+    {
+      "no": "10",
+      "kind": "IO",
+      "line": 107,
+      "signatures": [
+        {
+          "contractName": "StableDEX",
+          "methodName": "increaseLockTime_intou17",
+          "argTypes": [ "uint256" ]
+        }
+      ],
+      "exp": "(lockTime_intou17[msg.sender] + _secondsToIncrease)",
+      "status": "unproven"
+    },
+    {
+      "no": "11",
+      "kind": "IO",
+      "line": 145,
+      "signatures": [
+        {
+          "contractName": "StableDEX",
+          "methodName": "bug_intou7",
+          "argTypes": []
+        }
+      ],
+      "exp": "(vundflw - 10)",
+      "status": "unproven"
+    },
+    {
+      "no": "12",
+      "kind": "IO",
+      "line": 152,
+      "signatures": [
+        {
+          "contractName": "StableDEX",
+          "methodName": "increaseLockTime_intou37",
+          "argTypes": [ "uint256" ]
+        }
+      ],
+      "exp": "(lockTime_intou37[msg.sender] + _secondsToIncrease)",
+      "status": "unproven"
+    },
+    {
+      "no": "13",
+      "kind": "IO",
+      "line": 163,
+      "signatures": [
+        {
+          "contractName": "StableDEX",
+          "methodName": "bug_intou3",
+          "argTypes": []
+        }
+      ],
+      "exp": "(vundflw - 10)",
+      "status": "unproven"
+    },
+    {
+      "no": "14",
+      "kind": "IO",
+      "line": 170,
+      "signatures": [
+        {
+          "contractName": "StableDEX",
+          "methodName": "increaseLockTime_intou9",
+          "argTypes": [ "uint256" ]
+        }
+      ],
+      "exp": "(lockTime_intou9[msg.sender] + _secondsToIncrease)",
+      "status": "unproven"
+    },
+    {
+      "no": "15",
+      "kind": "IO",
+      "line": 182,
+      "signatures": [
+        {
+          "contractName": "StableDEX",
+          "methodName": "increaseLockTime_intou25",
+          "argTypes": [ "uint256" ]
+        }
+      ],
+      "exp": "(lockTime_intou25[msg.sender] + _secondsToIncrease)",
+      "status": "unproven"
+    },
+    {
+      "no": "16",
+      "kind": "IO",
+      "line": 193,
+      "signatures": [
+        {
+          "contractName": "StableDEX",
+          "methodName": "bug_intou19",
+          "argTypes": []
+        }
+      ],
+      "exp": "(vundflw - 10)",
+      "status": "unproven"
+    },
+    {
+      "no": "17",
+      "kind": "IO",
+      "line": 200,
+      "signatures": [
+        {
+          "contractName": "StableDEX",
+          "methodName": "transfer_intou26",
+          "argTypes": [ "address", "uint256" ]
+        }
+      ],
+      "exp": "(balances_intou26[msg.sender] - _value)",
+      "status": "unproven"
+    },
+    {
+      "no": "18",
+      "kind": "IO",
+      "line": 201,
+      "signatures": [
+        {
+          "contractName": "StableDEX",
+          "methodName": "transfer_intou26",
+          "argTypes": [ "address", "uint256" ]
+        }
+      ],
+      "exp": "(balances_intou26[msg.sender] - _value)",
+      "status": "unproven"
+    },
+    {
+      "no": "19",
+      "kind": "IO",
+      "line": 202,
+      "signatures": [
+        {
+          "contractName": "StableDEX",
+          "methodName": "transfer_intou26",
+          "argTypes": [ "address", "uint256" ]
+        }
+      ],
+      "exp": "(balances_intou26[_to] + _value)",
+      "status": "unproven"
+    },
+    {
+      "no": "20",
+      "kind": "IO",
+      "line": 219,
+      "signatures": [
+        {
+          "contractName": "StableDEX",
+          "methodName": "bug_intou23",
+          "argTypes": []
+        }
+      ],
+      "exp": "(vundflw - 10)",
+      "status": "unproven"
+    },
+    {
+      "no": "21",
+      "kind": "IO",
+      "line": 232,
+      "signatures": [
+        {
+          "contractName": "StableDEX",
+          "methodName": "transfer_intou14",
+          "argTypes": [ "address", "uint256" ]
+        }
+      ],
+      "exp": "(balances_intou14[msg.sender] - _value)",
+      "status": "unproven"
+    },
+    {
+      "no": "22",
+      "kind": "IO",
+      "line": 233,
+      "signatures": [
+        {
+          "contractName": "StableDEX",
+          "methodName": "transfer_intou14",
+          "argTypes": [ "address", "uint256" ]
+        }
+      ],
+      "exp": "(balances_intou14[msg.sender] - _value)",
+      "status": "unproven"
+    },
+    {
+      "no": "23",
+      "kind": "IO",
+      "line": 234,
+      "signatures": [
+        {
+          "contractName": "StableDEX",
+          "methodName": "transfer_intou14",
+          "argTypes": [ "address", "uint256" ]
+        }
+      ],
+      "exp": "(balances_intou14[_to] + _value)",
+      "status": "unproven"
+    },
+    {
+      "no": "24",
+      "kind": "IO",
+      "line": 247,
+      "signatures": [
+        {
+          "contractName": "StableDEX",
+          "methodName": "transfer_intou30",
+          "argTypes": [ "address", "uint256" ]
+        }
+      ],
+      "exp": "(balances_intou30[msg.sender] - _value)",
+      "status": "unproven"
+    },
+    {
+      "no": "25",
+      "kind": "IO",
+      "line": 248,
+      "signatures": [
+        {
+          "contractName": "StableDEX",
+          "methodName": "transfer_intou30",
+          "argTypes": [ "address", "uint256" ]
+        }
+      ],
+      "exp": "(balances_intou30[msg.sender] - _value)",
+      "status": "unproven"
+    },
+    {
+      "no": "26",
+      "kind": "IO",
+      "line": 249,
+      "signatures": [
+        {
+          "contractName": "StableDEX",
+          "methodName": "transfer_intou30",
+          "argTypes": [ "address", "uint256" ]
+        }
+      ],
+      "exp": "(balances_intou30[_to] + _value)",
+      "status": "unproven"
+    },
+    {
+      "no": "27",
+      "kind": "IO",
+      "line": 265,
+      "signatures": [
+        {
+          "contractName": "StableDEX",
+          "methodName": "bug_intou8",
+          "argTypes": [ "uint8" ]
+        }
+      ],
+      "exp": "(vundflw1 + p_intou8)",
+      "status": "proven"
+    },
+    {
+      "no": "28",
+      "kind": "IO",
+      "line": 291,
+      "signatures": [
+        {
+          "contractName": "StableDEX",
+          "methodName": "bug_intou39",
+          "argTypes": []
+        }
+      ],
+      "exp": "(vundflw - 10)",
+      "status": "unproven"
+    },
+    {
+      "no": "29",
+      "kind": "IO",
+      "line": 313,
+      "signatures": [
+        {
+          "contractName": "StableDEX",
+          "methodName": "bug_intou36",
+          "argTypes": [ "uint8" ]
+        }
+      ],
+      "exp": "(vundflw1 + p_intou36)",
+      "status": "proven"
+    },
+    {
+      "no": "30",
+      "kind": "IO",
+      "line": 322,
+      "signatures": [
+        {
+          "contractName": "StableDEX",
+          "methodName": "setwithdrawfee",
+          "argTypes": [ "address[]", "uint256[]" ]
+        }
+      ],
+      "exp": "(i + 1)",
+      "status": "unproven"
+    },
+    {
+      "no": "31",
+      "kind": "IO",
+      "line": 329,
+      "signatures": [
+        {
+          "contractName": "StableDEX",
+          "methodName": "bug_intou35",
+          "argTypes": []
+        }
+      ],
+      "exp": "(vundflw - 10)",
+      "status": "unproven"
+    },
+    {
+      "no": "32",
+      "kind": "IO",
+      "line": 354,
+      "signatures": [
+        {
+          "contractName": "StableDEX",
+          "methodName": "verify",
+          "argTypes": [ "string", "uint8", "bytes32", "bytes32" ]
+        }
+      ],
+      "exp": "(lengthLength + 1)",
+      "status": "unproven"
+    },
+    {
+      "no": "33",
+      "kind": "IO",
+      "line": 358,
+      "signatures": [
+        {
+          "contractName": "StableDEX",
+          "methodName": "verify",
+          "argTypes": [ "string", "uint8", "bytes32", "bytes32" ]
+        }
+      ],
+      "exp": "(lengthOffset + 1)",
+      "status": "unproven"
+    },
+    {
+      "no": "34",
+      "kind": "IO",
+      "line": 364,
+      "signatures": [
+        {
+          "contractName": "StableDEX",
+          "methodName": "verify",
+          "argTypes": [ "string", "uint8", "bytes32", "bytes32" ]
+        }
+      ],
+      "exp": "((1 + 25) + 1)",
+      "status": "proven"
+    },
+    {
+      "no": "35",
+      "kind": "IO",
+      "line": 364,
+      "signatures": [
+        {
+          "contractName": "StableDEX",
+          "methodName": "verify",
+          "argTypes": [ "string", "uint8", "bytes32", "bytes32" ]
+        }
+      ],
+      "exp": "(1 + 25)",
+      "status": "proven"
+    },
+    {
+      "no": "36",
+      "kind": "IO",
+      "line": 366,
+      "signatures": [
+        {
+          "contractName": "StableDEX",
+          "methodName": "verify",
+          "argTypes": [ "string", "uint8", "bytes32", "bytes32" ]
+        }
+      ],
+      "exp": "(1 + 25)",
+      "status": "proven"
+    },
+    {
+      "no": "37",
+      "kind": "IO",
+      "line": 480,
+      "signatures": [
+        {
+          "contractName": "StableDEX",
+          "methodName": "bug_intou40",
+          "argTypes": [ "uint8" ]
+        }
+      ],
+      "exp": "(vundflw1 + p_intou40)",
+      "status": "proven"
+    },
+    {
+      "no": "38",
+      "kind": "IO",
+      "line": 498,
+      "signatures": [
+        {
+          "contractName": "StableDEX",
+          "methodName": "increaseLockTime_intou33",
+          "argTypes": [ "uint256" ]
+        }
+      ],
+      "exp": "(lockTime_intou33[msg.sender] + _secondsToIncrease)",
+      "status": "unproven"
+    },
+    {
+      "no": "39",
+      "kind": "IO",
+      "line": 512,
+      "signatures": [
+        {
+          "contractName": "StableDEX",
+          "methodName": "bug_intou27",
+          "argTypes": []
+        }
+      ],
+      "exp": "(vundflw - 10)",
+      "status": "unproven"
+    },
+    {
+      "no": "40",
+      "kind": "IO",
+      "line": 520,
+      "signatures": [
+        {
+          "contractName": "StableDEX",
+          "methodName": "bug_intou31",
+          "argTypes": []
+        }
+      ],
+      "exp": "(vundflw - 10)",
+      "status": "unproven"
+    },
+    {
+      "no": "41",
+      "kind": "DZ",
+      "line": 36,
+      "signatures": [
+        {
+          "contractName": "StableDEX",
+          "methodName": "makeOrder",
+          "argTypes": [
+            "uint256[9]", "address[2]", "string", "uint8", "bytes32",
+            "bytes32"
+          ]
+        },
+        {
+          "contractName": "StableDEX",
+          "methodName": "verify",
+          "argTypes": [ "string", "uint8", "bytes32", "bytes32" ]
+        }
+      ],
+      "exp": "(c / a)",
+      "status": "proven"
+    },
+    {
+      "no": "42",
+      "kind": "DZ",
+      "line": 42,
+      "signatures": [
+        {
+          "contractName": "StableDEX",
+          "methodName": "makeOrder",
+          "argTypes": [
+            "uint256[9]", "address[2]", "string", "uint8", "bytes32",
+            "bytes32"
+          ]
+        },
+        {
+          "contractName": "StableDEX",
+          "methodName": "verify",
+          "argTypes": [ "string", "uint8", "bytes32", "bytes32" ]
+        }
+      ],
+      "exp": "(a / b)",
+      "status": "unproven"
+    },
+    {
+      "no": "43",
+      "kind": "ETH_LEAK",
+      "line": 72,
+      "signatures": [
+        {
+          "contractName": "StableDEX",
+          "methodName": "withdraw_intou13",
+          "argTypes": []
+        }
+      ],
+      "exp": "msg.sender.transfer(transferValue_intou13);",
+      "status": "unproven"
+    },
+    {
+      "no": "44",
+      "kind": "ETH_LEAK",
+      "line": 90,
+      "signatures": [
+        {
+          "contractName": "StableDEX",
+          "methodName": "withdraw_ovrflow1",
+          "argTypes": []
+        }
+      ],
+      "exp": "msg.sender.transfer(transferValue_intou1);",
+      "status": "unproven"
+    },
+    {
+      "no": "45",
+      "kind": "ETH_LEAK",
+      "line": 112,
+      "signatures": [
+        {
+          "contractName": "StableDEX",
+          "methodName": "withdraw_intou17",
+          "argTypes": []
+        }
+      ],
+      "exp": "msg.sender.transfer(transferValue_intou17);",
+      "status": "unproven"
+    },
+    {
+      "no": "46",
+      "kind": "ETH_LEAK",
+      "line": 157,
+      "signatures": [
+        {
+          "contractName": "StableDEX",
+          "methodName": "withdraw_intou37",
+          "argTypes": []
+        }
+      ],
+      "exp": "msg.sender.transfer(transferValue_intou37);",
+      "status": "unproven"
+    },
+    {
+      "no": "47",
+      "kind": "ETH_LEAK",
+      "line": 175,
+      "signatures": [
+        {
+          "contractName": "StableDEX",
+          "methodName": "withdraw_intou9",
+          "argTypes": []
+        }
+      ],
+      "exp": "msg.sender.transfer(transferValue_intou9);",
+      "status": "unproven"
+    },
+    {
+      "no": "48",
+      "kind": "ETH_LEAK",
+      "line": 187,
+      "signatures": [
+        {
+          "contractName": "StableDEX",
+          "methodName": "withdraw_intou25",
+          "argTypes": []
+        }
+      ],
+      "exp": "msg.sender.transfer(transferValue_intou25);",
+      "status": "unproven"
+    },
+    {
+      "no": "49",
+      "kind": "ETH_LEAK",
+      "line": 274,
+      "signatures": [
+        {
+          "contractName": "StableDEX",
+          "methodName": "withdraw",
+          "argTypes": [ "uint8", "address", "uint256" ]
+        }
+      ],
+      "exp": "msg.sender.transfer(amount.sub(withdrawfee[address(0)]));",
+      "status": "proven"
+    },
+    {
+      "no": "50",
+      "kind": "ETH_LEAK",
+      "line": 298,
+      "signatures": [
+        {
+          "contractName": "StableDEX",
+          "methodName": "adminProfitWithdraw",
+          "argTypes": [ "uint8", "address" ]
+        }
+      ],
+      "exp": "admin.transfer(feeAmount[admin][address(0)]);",
+      "status": "unproven"
+    },
+    {
+      "no": "51",
+      "kind": "ETH_LEAK",
+      "line": 503,
+      "signatures": [
+        {
+          "contractName": "StableDEX",
+          "methodName": "withdraw_intou33",
+          "argTypes": []
+        }
+      ],
+      "exp": "msg.sender.transfer(transferValue_intou33);",
+      "status": "unproven"
+    }
+  ]
+}

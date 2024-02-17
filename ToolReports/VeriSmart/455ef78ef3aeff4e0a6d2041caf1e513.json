@@ -1,0 +1,332 @@
+{
+  "fileName": "Benchmarks/Study_SamplesSet/455ef78ef3aeff4e0a6d2041caf1e513.sol",
+  "baseName": "455ef78ef3aeff4e0a6d2041caf1e513.sol",
+  "iter": 1,
+  "time": "1369.420242",
+  "errMsg": null,
+  "result": [
+    {
+      "no": "1",
+      "kind": "IO",
+      "line": 12,
+      "signatures": [
+        {
+          "contractName": "Dogs",
+          "methodName": "buyToken",
+          "argTypes": [ "uint256" ]
+        },
+        {
+          "contractName": "Dogs",
+          "methodName": "getNextPrice",
+          "argTypes": [ "uint256", "uint256" ]
+        }
+      ],
+      "exp": "(a * b)",
+      "status": "unproven"
+    },
+    {
+      "no": "2",
+      "kind": "IO",
+      "line": 32,
+      "signatures": [
+        {
+          "contractName": "Dogs",
+          "methodName": "buyToken",
+          "argTypes": [ "uint256" ]
+        }
+      ],
+      "exp": "(a - b)",
+      "status": "proven"
+    },
+    {
+      "no": "3",
+      "kind": "IO",
+      "line": 39,
+      "signatures": [
+        {
+          "contractName": "Dogs",
+          "methodName": "balanceOf",
+          "argTypes": [ "address" ]
+        }
+      ],
+      "exp": "(a + b)",
+      "status": "unproven"
+    },
+    {
+      "no": "4",
+      "kind": "IO",
+      "line": 156,
+      "signatures": [
+        {
+          "contractName": "Dogs",
+          "methodName": "buyToken",
+          "argTypes": [ "uint256" ]
+        }
+      ],
+      "exp": "(feeOnce * 2)",
+      "status": "unproven"
+    },
+    {
+      "no": "5",
+      "kind": "IO",
+      "line": 159,
+      "signatures": [
+        {
+          "contractName": "Dogs",
+          "methodName": "buyToken",
+          "argTypes": [ "uint256" ]
+        }
+      ],
+      "exp": "(feeOnce * 2)",
+      "status": "unproven"
+    },
+    {
+      "no": "6",
+      "kind": "IO",
+      "line": 238,
+      "signatures": [
+        {
+          "contractName": "Dogs",
+          "methodName": "createPromoCollectible",
+          "argTypes": [ "uint256", "address", "uint256" ]
+        }
+      ],
+      "exp": "(promoCreatedCount + 1)",
+      "status": "proven"
+    },
+    {
+      "no": "7",
+      "kind": "IO",
+      "line": 409,
+      "signatures": [
+        {
+          "contractName": "Dogs",
+          "methodName": "balanceOf",
+          "argTypes": [ "address" ]
+        }
+      ],
+      "exp": "(tokenIndex + 1)",
+      "status": "proven"
+    },
+    {
+      "no": "8",
+      "kind": "IO",
+      "line": 451,
+      "signatures": [
+        {
+          "contractName": "Dogs",
+          "methodName": "tokensOfOwner",
+          "argTypes": [ "address" ]
+        }
+      ],
+      "exp": "(tokenIndex + 1)",
+      "status": "proven"
+    },
+    {
+      "no": "9",
+      "kind": "DZ",
+      "line": 13,
+      "signatures": [
+        {
+          "contractName": "Dogs",
+          "methodName": "buyToken",
+          "argTypes": [ "uint256" ]
+        },
+        {
+          "contractName": "Dogs",
+          "methodName": "getNextPrice",
+          "argTypes": [ "uint256", "uint256" ]
+        }
+      ],
+      "exp": "(c / a)",
+      "status": "proven"
+    },
+    {
+      "no": "10",
+      "kind": "DZ",
+      "line": 22,
+      "signatures": [
+        {
+          "contractName": "Dogs",
+          "methodName": "buyToken",
+          "argTypes": [ "uint256" ]
+        },
+        {
+          "contractName": "Dogs",
+          "methodName": "getNextPrice",
+          "argTypes": [ "uint256", "uint256" ]
+        }
+      ],
+      "exp": "(a / b)",
+      "status": "proven"
+    },
+    {
+      "no": "11",
+      "kind": "DZ",
+      "line": 148,
+      "signatures": [
+        {
+          "contractName": "Dogs",
+          "methodName": "buyToken",
+          "argTypes": [ "uint256" ]
+        }
+      ],
+      "exp": "(_tokenId % MAX_SETS_INDEX)",
+      "status": "proven"
+    },
+    {
+      "no": "12",
+      "kind": "DZ",
+      "line": 149,
+      "signatures": [
+        {
+          "contractName": "Dogs",
+          "methodName": "buyToken",
+          "argTypes": [ "uint256" ]
+        }
+      ],
+      "exp": "(_tokenId % MAX_SETS_INDEX)",
+      "status": "proven"
+    },
+    {
+      "no": "13",
+      "kind": "DZ",
+      "line": 154,
+      "signatures": [
+        {
+          "contractName": "Dogs",
+          "methodName": "buyToken",
+          "argTypes": [ "uint256" ]
+        }
+      ],
+      "exp": "(_tokenId % MAX_SETS_INDEX)",
+      "status": "proven"
+    },
+    {
+      "no": "14",
+      "kind": "ETH_LEAK",
+      "line": 146,
+      "signatures": [
+        {
+          "contractName": "Dogs",
+          "methodName": "buyToken",
+          "argTypes": [ "uint256" ]
+        }
+      ],
+      "exp": "collectibleIndexToOwner[BASE_TOKEN_ID].transfer(feeOnce);",
+      "status": "unproven"
+    },
+    {
+      "no": "15",
+      "kind": "ETH_LEAK",
+      "line": 149,
+      "signatures": [
+        {
+          "contractName": "Dogs",
+          "methodName": "buyToken",
+          "argTypes": [ "uint256" ]
+        }
+      ],
+      "exp": "collectibleIndexToOwner[(_tokenId % MAX_SETS_INDEX)].transfer(feeOnce);",
+      "status": "unproven"
+    },
+    {
+      "no": "16",
+      "kind": "ETH_LEAK",
+      "line": 151,
+      "signatures": [
+        {
+          "contractName": "Dogs",
+          "methodName": "buyToken",
+          "argTypes": [ "uint256" ]
+        }
+      ],
+      "exp": "subTokenCreator[_tokenId].transfer(feeOnce);",
+      "status": "unproven"
+    },
+    {
+      "no": "17",
+      "kind": "ETH_LEAK",
+      "line": 156,
+      "signatures": [
+        {
+          "contractName": "Dogs",
+          "methodName": "buyToken",
+          "argTypes": [ "uint256" ]
+        }
+      ],
+      "exp": "lastSubTokenBuyer[_tokenId].transfer((feeOnce * 2));",
+      "status": "unproven"
+    },
+    {
+      "no": "18",
+      "kind": "ETH_LEAK",
+      "line": 159,
+      "signatures": [
+        {
+          "contractName": "Dogs",
+          "methodName": "buyToken",
+          "argTypes": [ "uint256" ]
+        }
+      ],
+      "exp": "lastSubTokenBuyer[_tokenId].transfer((feeOnce * 2));",
+      "status": "unproven"
+    },
+    {
+      "no": "19",
+      "kind": "ETH_LEAK",
+      "line": 165,
+      "signatures": [
+        {
+          "contractName": "Dogs",
+          "methodName": "buyToken",
+          "argTypes": [ "uint256" ]
+        }
+      ],
+      "exp": "oldOwner.transfer(payment);",
+      "status": "unproven"
+    },
+    {
+      "no": "20",
+      "kind": "ETH_LEAK",
+      "line": 179,
+      "signatures": [
+        {
+          "contractName": "Dogs",
+          "methodName": "buyToken",
+          "argTypes": [ "uint256" ]
+        }
+      ],
+      "exp": "msg.sender.transfer(purchaseExcess);",
+      "status": "unproven"
+    },
+    {
+      "no": "21",
+      "kind": "ETH_LEAK",
+      "line": 395,
+      "signatures": [
+        {
+          "contractName": "Dogs",
+          "methodName": "payout",
+          "argTypes": [ "address" ]
+        }
+      ],
+      "exp": "ceoAddress.transfer(this.balance);",
+      "status": "unproven"
+    },
+    {
+      "no": "22",
+      "kind": "ETH_LEAK",
+      "line": 397,
+      "signatures": [
+        {
+          "contractName": "Dogs",
+          "methodName": "payout",
+          "argTypes": [ "address" ]
+        }
+      ],
+      "exp": "_to.transfer(this.balance);",
+      "status": "unproven"
+    }
+  ]
+}

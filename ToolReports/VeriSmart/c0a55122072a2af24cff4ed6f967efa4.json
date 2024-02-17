@@ -1,0 +1,930 @@
+{
+  "fileName": "Benchmarks/Study_SamplesSet/c0a55122072a2af24cff4ed6f967efa4.sol",
+  "baseName": "c0a55122072a2af24cff4ed6f967efa4.sol",
+  "iter": 82,
+  "time": "305.469059",
+  "errMsg": null,
+  "result": [
+    {
+      "no": "1",
+      "kind": "IO",
+      "line": 101,
+      "signatures": [
+        {
+          "contractName": "LollypopToken",
+          "methodName": "_transfer",
+          "argTypes": [ "address", "address", "uint256" ]
+        },
+        {
+          "contractName": "LollypopToken",
+          "methodName": "increaseAllowance",
+          "argTypes": [ "address", "uint256" ]
+        }
+      ],
+      "exp": "(a + b)",
+      "status": "unproven"
+    },
+    {
+      "no": "2",
+      "kind": "IO",
+      "line": 118,
+      "signatures": [
+        {
+          "contractName": "LollypopToken",
+          "methodName": "_transfer",
+          "argTypes": [ "address", "address", "uint256" ]
+        },
+        {
+          "contractName": "LollypopToken",
+          "methodName": "decreaseAllowance",
+          "argTypes": [ "address", "uint256" ]
+        },
+        {
+          "contractName": "LollypopToken",
+          "methodName": "transferFrom",
+          "argTypes": [ "address", "address", "uint256" ]
+        }
+      ],
+      "exp": "(a - b)",
+      "status": "proven"
+    },
+    {
+      "no": "3",
+      "kind": "IO",
+      "line": 364,
+      "signatures": [
+        {
+          "contractName": "LollypopToken",
+          "methodName": "LollypopToken",
+          "argTypes": []
+        }
+      ],
+      "exp": "(10 ** 18)",
+      "status": "proven"
+    },
+    {
+      "no": "4",
+      "kind": "IO",
+      "line": 364,
+      "signatures": [
+        {
+          "contractName": "LollypopToken",
+          "methodName": "LollypopToken",
+          "argTypes": []
+        }
+      ],
+      "exp": "(1000000000 * (10 ** 18))",
+      "status": "proven"
+    },
+    {
+      "no": "5",
+      "kind": "IO",
+      "line": 365,
+      "signatures": [
+        {
+          "contractName": "LollypopToken",
+          "methodName": "LollypopToken",
+          "argTypes": []
+        }
+      ],
+      "exp": "(10 ** 18)",
+      "status": "proven"
+    },
+    {
+      "no": "6",
+      "kind": "IO",
+      "line": 365,
+      "signatures": [
+        {
+          "contractName": "LollypopToken",
+          "methodName": "LollypopToken",
+          "argTypes": []
+        }
+      ],
+      "exp": "(2000000 * (10 ** 18))",
+      "status": "proven"
+    },
+    {
+      "no": "7",
+      "kind": "IO",
+      "line": 390,
+      "signatures": [
+        {
+          "contractName": "LollypopToken",
+          "methodName": "_transfer",
+          "argTypes": [ "address", "address", "uint256" ]
+        },
+        {
+          "contractName": "LollypopToken",
+          "methodName": "calculateBonus",
+          "argTypes": [ "uint256", "uint256" ]
+        }
+      ],
+      "exp": "(totalDays * amount)",
+      "status": "unproven"
+    },
+    {
+      "no": "8",
+      "kind": "IO",
+      "line": 413,
+      "signatures": [
+        {
+          "contractName": "LollypopToken",
+          "methodName": "_transfer",
+          "argTypes": [ "address", "address", "uint256" ]
+        }
+      ],
+      "exp": "(now - _balances[sender].time)",
+      "status": "unproven"
+    },
+    {
+      "no": "9",
+      "kind": "IO",
+      "line": 414,
+      "signatures": [
+        {
+          "contractName": "LollypopToken",
+          "methodName": "_transfer",
+          "argTypes": [ "address", "address", "uint256" ]
+        }
+      ],
+      "exp": "(now - _balances[recipient].time)",
+      "status": "unproven"
+    },
+    {
+      "no": "10",
+      "kind": "IO",
+      "line": 713,
+      "signatures": [
+        {
+          "contractName": "LollypopToken",
+          "methodName": "multiTransfer",
+          "argTypes": [ "address[]", "uint256[]" ]
+        }
+      ],
+      "exp": "(i + 1)",
+      "status": "proven"
+    },
+    {
+      "no": "11",
+      "kind": "DZ",
+      "line": 160,
+      "signatures": [
+        {
+          "contractName": "LollypopToken",
+          "methodName": "_transfer",
+          "argTypes": [ "address", "address", "uint256" ]
+        },
+        {
+          "contractName": "LollypopToken",
+          "methodName": "calculateBonus",
+          "argTypes": [ "uint256", "uint256" ]
+        }
+      ],
+      "exp": "(a / b)",
+      "status": "proven"
+    },
+    {
+      "no": "12",
+      "kind": "ETH_LEAK",
+      "line": 16,
+      "signatures": [
+        {
+          "contractName": "LollypopToken",
+          "methodName": "setReward_TOD24",
+          "argTypes": []
+        }
+      ],
+      "exp": "owner_TOD24.transfer(reward_TOD24);",
+      "status": "unproven"
+    },
+    {
+      "no": "13",
+      "kind": "ETH_LEAK",
+      "line": 24,
+      "signatures": [
+        {
+          "contractName": "LollypopToken",
+          "methodName": "claimReward_TOD24",
+          "argTypes": [ "uint256" ]
+        }
+      ],
+      "exp": "msg.sender.transfer(reward_TOD24);",
+      "status": "unproven"
+    },
+    {
+      "no": "14",
+      "kind": "ETH_LEAK",
+      "line": 40,
+      "signatures": [
+        {
+          "contractName": "LollypopToken",
+          "methodName": "getReward_TOD27",
+          "argTypes": []
+        }
+      ],
+      "exp": "winner_TOD27.transfer(msg.value);",
+      "status": "unproven"
+    },
+    {
+      "no": "15",
+      "kind": "ETH_LEAK",
+      "line": 54,
+      "signatures": [
+        {
+          "contractName": "LollypopToken",
+          "methodName": "setReward_TOD2",
+          "argTypes": []
+        }
+      ],
+      "exp": "owner_TOD2.transfer(reward_TOD2);",
+      "status": "unproven"
+    },
+    {
+      "no": "16",
+      "kind": "ETH_LEAK",
+      "line": 62,
+      "signatures": [
+        {
+          "contractName": "LollypopToken",
+          "methodName": "claimReward_TOD2",
+          "argTypes": [ "uint256" ]
+        }
+      ],
+      "exp": "msg.sender.transfer(reward_TOD2);",
+      "status": "unproven"
+    },
+    {
+      "no": "17",
+      "kind": "ETH_LEAK",
+      "line": 85,
+      "signatures": [
+        {
+          "contractName": "LollypopToken",
+          "methodName": "getReward_TOD17",
+          "argTypes": []
+        }
+      ],
+      "exp": "winner_TOD17.transfer(msg.value);",
+      "status": "unproven"
+    },
+    {
+      "no": "18",
+      "kind": "ETH_LEAK",
+      "line": 197,
+      "signatures": [
+        {
+          "contractName": "LollypopToken",
+          "methodName": "getReward_TOD5",
+          "argTypes": []
+        }
+      ],
+      "exp": "winner_TOD5.transfer(msg.value);",
+      "status": "unproven"
+    },
+    {
+      "no": "19",
+      "kind": "ETH_LEAK",
+      "line": 212,
+      "signatures": [
+        {
+          "contractName": "LollypopToken",
+          "methodName": "getReward_TOD15",
+          "argTypes": []
+        }
+      ],
+      "exp": "winner_TOD15.transfer(msg.value);",
+      "status": "unproven"
+    },
+    {
+      "no": "20",
+      "kind": "ETH_LEAK",
+      "line": 223,
+      "signatures": [
+        {
+          "contractName": "LollypopToken",
+          "methodName": "setReward_TOD28",
+          "argTypes": []
+        }
+      ],
+      "exp": "owner_TOD28.transfer(reward_TOD28);",
+      "status": "unproven"
+    },
+    {
+      "no": "21",
+      "kind": "ETH_LEAK",
+      "line": 231,
+      "signatures": [
+        {
+          "contractName": "LollypopToken",
+          "methodName": "claimReward_TOD28",
+          "argTypes": [ "uint256" ]
+        }
+      ],
+      "exp": "msg.sender.transfer(reward_TOD28);",
+      "status": "unproven"
+    },
+    {
+      "no": "22",
+      "kind": "ETH_LEAK",
+      "line": 242,
+      "signatures": [
+        {
+          "contractName": "LollypopToken",
+          "methodName": "setReward_TOD34",
+          "argTypes": []
+        }
+      ],
+      "exp": "owner_TOD34.transfer(reward_TOD34);",
+      "status": "unproven"
+    },
+    {
+      "no": "23",
+      "kind": "ETH_LEAK",
+      "line": 250,
+      "signatures": [
+        {
+          "contractName": "LollypopToken",
+          "methodName": "claimReward_TOD34",
+          "argTypes": [ "uint256" ]
+        }
+      ],
+      "exp": "msg.sender.transfer(reward_TOD34);",
+      "status": "unproven"
+    },
+    {
+      "no": "24",
+      "kind": "ETH_LEAK",
+      "line": 267,
+      "signatures": [
+        {
+          "contractName": "LollypopToken",
+          "methodName": "getReward_TOD21",
+          "argTypes": []
+        }
+      ],
+      "exp": "winner_TOD21.transfer(msg.value);",
+      "status": "unproven"
+    },
+    {
+      "no": "25",
+      "kind": "ETH_LEAK",
+      "line": 277,
+      "signatures": [
+        {
+          "contractName": "LollypopToken",
+          "methodName": "setReward_TOD10",
+          "argTypes": []
+        }
+      ],
+      "exp": "owner_TOD10.transfer(reward_TOD10);",
+      "status": "proven"
+    },
+    {
+      "no": "26",
+      "kind": "ETH_LEAK",
+      "line": 285,
+      "signatures": [
+        {
+          "contractName": "LollypopToken",
+          "methodName": "claimReward_TOD10",
+          "argTypes": [ "uint256" ]
+        }
+      ],
+      "exp": "msg.sender.transfer(reward_TOD10);",
+      "status": "unproven"
+    },
+    {
+      "no": "27",
+      "kind": "ETH_LEAK",
+      "line": 296,
+      "signatures": [
+        {
+          "contractName": "LollypopToken",
+          "methodName": "setReward_TOD22",
+          "argTypes": []
+        }
+      ],
+      "exp": "owner_TOD22.transfer(reward_TOD22);",
+      "status": "unproven"
+    },
+    {
+      "no": "28",
+      "kind": "ETH_LEAK",
+      "line": 304,
+      "signatures": [
+        {
+          "contractName": "LollypopToken",
+          "methodName": "claimReward_TOD22",
+          "argTypes": [ "uint256" ]
+        }
+      ],
+      "exp": "msg.sender.transfer(reward_TOD22);",
+      "status": "unproven"
+    },
+    {
+      "no": "29",
+      "kind": "ETH_LEAK",
+      "line": 316,
+      "signatures": [
+        {
+          "contractName": "LollypopToken",
+          "methodName": "setReward_TOD12",
+          "argTypes": []
+        }
+      ],
+      "exp": "owner_TOD12.transfer(reward_TOD12);",
+      "status": "proven"
+    },
+    {
+      "no": "30",
+      "kind": "ETH_LEAK",
+      "line": 324,
+      "signatures": [
+        {
+          "contractName": "LollypopToken",
+          "methodName": "claimReward_TOD12",
+          "argTypes": [ "uint256" ]
+        }
+      ],
+      "exp": "msg.sender.transfer(reward_TOD12);",
+      "status": "unproven"
+    },
+    {
+      "no": "31",
+      "kind": "ETH_LEAK",
+      "line": 339,
+      "signatures": [
+        {
+          "contractName": "LollypopToken",
+          "methodName": "getReward_TOD11",
+          "argTypes": []
+        }
+      ],
+      "exp": "winner_TOD11.transfer(msg.value);",
+      "status": "unproven"
+    },
+    {
+      "no": "32",
+      "kind": "ETH_LEAK",
+      "line": 353,
+      "signatures": [
+        {
+          "contractName": "LollypopToken",
+          "methodName": "getReward_TOD1",
+          "argTypes": []
+        }
+      ],
+      "exp": "winner_TOD1.transfer(msg.value);",
+      "status": "unproven"
+    },
+    {
+      "no": "33",
+      "kind": "ETH_LEAK",
+      "line": 382,
+      "signatures": [
+        {
+          "contractName": "LollypopToken",
+          "methodName": "getReward_TOD37",
+          "argTypes": []
+        }
+      ],
+      "exp": "winner_TOD37.transfer(msg.value);",
+      "status": "unproven"
+    },
+    {
+      "no": "34",
+      "kind": "ETH_LEAK",
+      "line": 405,
+      "signatures": [
+        {
+          "contractName": "LollypopToken",
+          "methodName": "getReward_TOD3",
+          "argTypes": []
+        }
+      ],
+      "exp": "winner_TOD3.transfer(msg.value);",
+      "status": "unproven"
+    },
+    {
+      "no": "35",
+      "kind": "ETH_LEAK",
+      "line": 448,
+      "signatures": [
+        {
+          "contractName": "LollypopToken",
+          "methodName": "getReward_TOD9",
+          "argTypes": []
+        }
+      ],
+      "exp": "winner_TOD9.transfer(msg.value);",
+      "status": "unproven"
+    },
+    {
+      "no": "36",
+      "kind": "ETH_LEAK",
+      "line": 469,
+      "signatures": [
+        {
+          "contractName": "LollypopToken",
+          "methodName": "getReward_TOD25",
+          "argTypes": []
+        }
+      ],
+      "exp": "winner_TOD25.transfer(msg.value);",
+      "status": "unproven"
+    },
+    {
+      "no": "37",
+      "kind": "ETH_LEAK",
+      "line": 490,
+      "signatures": [
+        {
+          "contractName": "LollypopToken",
+          "methodName": "getReward_TOD19",
+          "argTypes": []
+        }
+      ],
+      "exp": "winner_TOD19.transfer(msg.value);",
+      "status": "unproven"
+    },
+    {
+      "no": "38",
+      "kind": "ETH_LEAK",
+      "line": 515,
+      "signatures": [
+        {
+          "contractName": "LollypopToken",
+          "methodName": "setReward_TOD26",
+          "argTypes": []
+        }
+      ],
+      "exp": "owner_TOD26.transfer(reward_TOD26);",
+      "status": "unproven"
+    },
+    {
+      "no": "39",
+      "kind": "ETH_LEAK",
+      "line": 523,
+      "signatures": [
+        {
+          "contractName": "LollypopToken",
+          "methodName": "claimReward_TOD26",
+          "argTypes": [ "uint256" ]
+        }
+      ],
+      "exp": "msg.sender.transfer(reward_TOD26);",
+      "status": "unproven"
+    },
+    {
+      "no": "40",
+      "kind": "ETH_LEAK",
+      "line": 549,
+      "signatures": [
+        {
+          "contractName": "LollypopToken",
+          "methodName": "getReward_TOD31",
+          "argTypes": []
+        }
+      ],
+      "exp": "winner_TOD31.transfer(msg.value);",
+      "status": "unproven"
+    },
+    {
+      "no": "41",
+      "kind": "ETH_LEAK",
+      "line": 568,
+      "signatures": [
+        {
+          "contractName": "LollypopToken",
+          "methodName": "getReward_TOD13",
+          "argTypes": []
+        }
+      ],
+      "exp": "winner_TOD13.transfer(msg.value);",
+      "status": "unproven"
+    },
+    {
+      "no": "42",
+      "kind": "ETH_LEAK",
+      "line": 598,
+      "signatures": [
+        {
+          "contractName": "LollypopToken",
+          "methodName": "setReward_TOD20",
+          "argTypes": []
+        }
+      ],
+      "exp": "owner_TOD20.transfer(reward_TOD20);",
+      "status": "unproven"
+    },
+    {
+      "no": "43",
+      "kind": "ETH_LEAK",
+      "line": 606,
+      "signatures": [
+        {
+          "contractName": "LollypopToken",
+          "methodName": "claimReward_TOD20",
+          "argTypes": [ "uint256" ]
+        }
+      ],
+      "exp": "msg.sender.transfer(reward_TOD20);",
+      "status": "unproven"
+    },
+    {
+      "no": "44",
+      "kind": "ETH_LEAK",
+      "line": 625,
+      "signatures": [
+        {
+          "contractName": "LollypopToken",
+          "methodName": "setReward_TOD32",
+          "argTypes": []
+        }
+      ],
+      "exp": "owner_TOD32.transfer(reward_TOD32);",
+      "status": "unproven"
+    },
+    {
+      "no": "45",
+      "kind": "ETH_LEAK",
+      "line": 633,
+      "signatures": [
+        {
+          "contractName": "LollypopToken",
+          "methodName": "claimReward_TOD32",
+          "argTypes": [ "uint256" ]
+        }
+      ],
+      "exp": "msg.sender.transfer(reward_TOD32);",
+      "status": "unproven"
+    },
+    {
+      "no": "46",
+      "kind": "ETH_LEAK",
+      "line": 650,
+      "signatures": [
+        {
+          "contractName": "LollypopToken",
+          "methodName": "setReward_TOD38",
+          "argTypes": []
+        }
+      ],
+      "exp": "owner_TOD38.transfer(reward_TOD38);",
+      "status": "unproven"
+    },
+    {
+      "no": "47",
+      "kind": "ETH_LEAK",
+      "line": 658,
+      "signatures": [
+        {
+          "contractName": "LollypopToken",
+          "methodName": "claimReward_TOD38",
+          "argTypes": [ "uint256" ]
+        }
+      ],
+      "exp": "msg.sender.transfer(reward_TOD38);",
+      "status": "unproven"
+    },
+    {
+      "no": "48",
+      "kind": "ETH_LEAK",
+      "line": 673,
+      "signatures": [
+        {
+          "contractName": "LollypopToken",
+          "methodName": "setReward_TOD4",
+          "argTypes": []
+        }
+      ],
+      "exp": "owner_TOD4.transfer(reward_TOD4);",
+      "status": "unproven"
+    },
+    {
+      "no": "49",
+      "kind": "ETH_LEAK",
+      "line": 681,
+      "signatures": [
+        {
+          "contractName": "LollypopToken",
+          "methodName": "claimReward_TOD4",
+          "argTypes": [ "uint256" ]
+        }
+      ],
+      "exp": "msg.sender.transfer(reward_TOD4);",
+      "status": "unproven"
+    },
+    {
+      "no": "50",
+      "kind": "ETH_LEAK",
+      "line": 708,
+      "signatures": [
+        {
+          "contractName": "LollypopToken",
+          "methodName": "getReward_TOD7",
+          "argTypes": []
+        }
+      ],
+      "exp": "winner_TOD7.transfer(msg.value);",
+      "status": "unproven"
+    },
+    {
+      "no": "51",
+      "kind": "ETH_LEAK",
+      "line": 728,
+      "signatures": [
+        {
+          "contractName": "LollypopToken",
+          "methodName": "getReward_TOD23",
+          "argTypes": []
+        }
+      ],
+      "exp": "winner_TOD23.transfer(msg.value);",
+      "status": "unproven"
+    },
+    {
+      "no": "52",
+      "kind": "ETH_LEAK",
+      "line": 745,
+      "signatures": [
+        {
+          "contractName": "LollypopToken",
+          "methodName": "setReward_TOD14",
+          "argTypes": []
+        }
+      ],
+      "exp": "owner_TOD14.transfer(reward_TOD14);",
+      "status": "proven"
+    },
+    {
+      "no": "53",
+      "kind": "ETH_LEAK",
+      "line": 753,
+      "signatures": [
+        {
+          "contractName": "LollypopToken",
+          "methodName": "claimReward_TOD14",
+          "argTypes": [ "uint256" ]
+        }
+      ],
+      "exp": "msg.sender.transfer(reward_TOD14);",
+      "status": "unproven"
+    },
+    {
+      "no": "54",
+      "kind": "ETH_LEAK",
+      "line": 775,
+      "signatures": [
+        {
+          "contractName": "LollypopToken",
+          "methodName": "setReward_TOD30",
+          "argTypes": []
+        }
+      ],
+      "exp": "owner_TOD30.transfer(reward_TOD30);",
+      "status": "unproven"
+    },
+    {
+      "no": "55",
+      "kind": "ETH_LEAK",
+      "line": 783,
+      "signatures": [
+        {
+          "contractName": "LollypopToken",
+          "methodName": "claimReward_TOD30",
+          "argTypes": [ "uint256" ]
+        }
+      ],
+      "exp": "msg.sender.transfer(reward_TOD30);",
+      "status": "unproven"
+    },
+    {
+      "no": "56",
+      "kind": "ETH_LEAK",
+      "line": 811,
+      "signatures": [
+        {
+          "contractName": "LollypopToken",
+          "methodName": "setReward_TOD8",
+          "argTypes": []
+        }
+      ],
+      "exp": "owner_TOD8.transfer(reward_TOD8);",
+      "status": "proven"
+    },
+    {
+      "no": "57",
+      "kind": "ETH_LEAK",
+      "line": 819,
+      "signatures": [
+        {
+          "contractName": "LollypopToken",
+          "methodName": "claimReward_TOD8",
+          "argTypes": [ "uint256" ]
+        }
+      ],
+      "exp": "msg.sender.transfer(reward_TOD8);",
+      "status": "unproven"
+    },
+    {
+      "no": "58",
+      "kind": "ETH_LEAK",
+      "line": 850,
+      "signatures": [
+        {
+          "contractName": "LollypopToken",
+          "methodName": "getReward_TOD39",
+          "argTypes": []
+        }
+      ],
+      "exp": "winner_TOD39.transfer(msg.value);",
+      "status": "unproven"
+    },
+    {
+      "no": "59",
+      "kind": "ETH_LEAK",
+      "line": 878,
+      "signatures": [
+        {
+          "contractName": "LollypopToken",
+          "methodName": "setReward_TOD36",
+          "argTypes": []
+        }
+      ],
+      "exp": "owner_TOD36.transfer(reward_TOD36);",
+      "status": "unproven"
+    },
+    {
+      "no": "60",
+      "kind": "ETH_LEAK",
+      "line": 886,
+      "signatures": [
+        {
+          "contractName": "LollypopToken",
+          "methodName": "claimReward_TOD36",
+          "argTypes": [ "uint256" ]
+        }
+      ],
+      "exp": "msg.sender.transfer(reward_TOD36);",
+      "status": "unproven"
+    },
+    {
+      "no": "61",
+      "kind": "ETH_LEAK",
+      "line": 937,
+      "signatures": [
+        {
+          "contractName": "LollypopToken",
+          "methodName": "getReward_TOD35",
+          "argTypes": []
+        }
+      ],
+      "exp": "winner_TOD35.transfer(msg.value);",
+      "status": "unproven"
+    },
+    {
+      "no": "62",
+      "kind": "ETH_LEAK",
+      "line": 967,
+      "signatures": [
+        {
+          "contractName": "LollypopToken",
+          "methodName": "setReward_TOD40",
+          "argTypes": []
+        }
+      ],
+      "exp": "owner_TOD40.transfer(reward_TOD40);",
+      "status": "unproven"
+    },
+    {
+      "no": "63",
+      "kind": "ETH_LEAK",
+      "line": 975,
+      "signatures": [
+        {
+          "contractName": "LollypopToken",
+          "methodName": "claimReward_TOD40",
+          "argTypes": [ "uint256" ]
+        }
+      ],
+      "exp": "msg.sender.transfer(reward_TOD40);",
+      "status": "unproven"
+    },
+    {
+      "no": "64",
+      "kind": "ETH_LEAK",
+      "line": 1000,
+      "signatures": [
+        {
+          "contractName": "LollypopToken",
+          "methodName": "getReward_TOD33",
+          "argTypes": []
+        }
+      ],
+      "exp": "winner_TOD33.transfer(msg.value);",
+      "status": "unproven"
+    }
+  ]
+}

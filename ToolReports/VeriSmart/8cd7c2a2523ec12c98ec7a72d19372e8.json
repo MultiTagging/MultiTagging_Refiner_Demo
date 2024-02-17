@@ -1,0 +1,79 @@
+{
+  "fileName": "Benchmarks/Study_SamplesSet/8cd7c2a2523ec12c98ec7a72d19372e8.sol",
+  "baseName": "8cd7c2a2523ec12c98ec7a72d19372e8.sol",
+  "iter": 479,
+  "time": "300.156994",
+  "errMsg": null,
+  "result": [
+    {
+      "no": "1",
+      "kind": "IO",
+      "line": 25,
+      "signatures": [
+        {
+          "contractName": "TuneTokenSale",
+          "methodName": "TuneTokenSale",
+          "argTypes": []
+        }
+      ],
+      "exp": "(now + 5184900)",
+      "status": "unproven"
+    },
+    {
+      "no": "2",
+      "kind": "IO",
+      "line": 32,
+      "signatures": [
+        {
+          "contractName": "TuneTokenSale",
+          "methodName": "@fallback",
+          "argTypes": []
+        }
+      ],
+      "exp": "(balanceOf[msg.sender] + amount)",
+      "status": "unproven"
+    },
+    {
+      "no": "3",
+      "kind": "IO",
+      "line": 33,
+      "signatures": [
+        {
+          "contractName": "TuneTokenSale",
+          "methodName": "@fallback",
+          "argTypes": []
+        }
+      ],
+      "exp": "(amountRaised + amount)",
+      "status": "unproven"
+    },
+    {
+      "no": "4",
+      "kind": "IO",
+      "line": 34,
+      "signatures": [
+        {
+          "contractName": "TuneTokenSale",
+          "methodName": "@fallback",
+          "argTypes": []
+        }
+      ],
+      "exp": "(amount * price)",
+      "status": "unproven"
+    },
+    {
+      "no": "5",
+      "kind": "ETH_LEAK",
+      "line": 47,
+      "signatures": [
+        {
+          "contractName": "TuneTokenSale",
+          "methodName": "safeWithdrawal",
+          "argTypes": []
+        }
+      ],
+      "exp": "beneficiary.transfer(this.balance);",
+      "status": "proven"
+    }
+  ]
+}

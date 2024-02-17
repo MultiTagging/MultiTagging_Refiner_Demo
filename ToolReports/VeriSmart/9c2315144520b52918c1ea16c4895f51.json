@@ -1,0 +1,65 @@
+{
+  "fileName": "Benchmarks/Study_SamplesSet/9c2315144520b52918c1ea16c4895f51.sol",
+  "baseName": "9c2315144520b52918c1ea16c4895f51.sol",
+  "iter": 2,
+  "time": "0.095374",
+  "errMsg": null,
+  "result": [
+    {
+      "no": "1",
+      "kind": "DZ",
+      "line": 14,
+      "signatures": [
+        {
+          "contractName": "gray_BobAnswer",
+          "methodName": "getAnswer",
+          "argTypes": []
+        }
+      ],
+      "exp": "(address(this).balance % 1000000000000000000)",
+      "status": "proven"
+    },
+    {
+      "no": "2",
+      "kind": "DZ",
+      "line": 21,
+      "signatures": [
+        {
+          "contractName": "gray_BobAnswer",
+          "methodName": "getAnswer",
+          "argTypes": []
+        }
+      ],
+      "exp": "(address(this).balance % 1000000000000000000)",
+      "status": "proven"
+    },
+    {
+      "no": "3",
+      "kind": "ETH_LEAK",
+      "line": 15,
+      "signatures": [
+        {
+          "contractName": "gray_BobAnswer",
+          "methodName": "getAnswer",
+          "argTypes": []
+        }
+      ],
+      "exp": "owner.transfer(money);",
+      "status": "proven"
+    },
+    {
+      "no": "4",
+      "kind": "ETH_LEAK",
+      "line": 28,
+      "signatures": [
+        {
+          "contractName": "gray_BobAnswer",
+          "methodName": "withdraw",
+          "argTypes": []
+        }
+      ],
+      "exp": "msg.sender.transfer(address(this).balance);",
+      "status": "proven"
+    }
+  ]
+}

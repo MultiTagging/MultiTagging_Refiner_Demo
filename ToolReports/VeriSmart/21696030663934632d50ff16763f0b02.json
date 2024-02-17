@@ -1,0 +1,135 @@
+{
+  "fileName": "Benchmarks/Study_SamplesSet/21696030663934632d50ff16763f0b02.sol",
+  "baseName": "21696030663934632d50ff16763f0b02.sol",
+  "iter": 1192,
+  "time": "300.128233",
+  "errMsg": null,
+  "result": [
+    {
+      "no": "1",
+      "kind": "IO",
+      "line": 85,
+      "signatures": [
+        {
+          "contractName": "CratePreSale",
+          "methodName": "purchaseCrate",
+          "argTypes": []
+        }
+      ],
+      "exp": "(currentPrice + appreciationRateWei)",
+      "status": "unproven"
+    },
+    {
+      "no": "2",
+      "kind": "IO",
+      "line": 93,
+      "signatures": [
+        {
+          "contractName": "CratePreSale",
+          "methodName": "purchaseCrate",
+          "argTypes": []
+        }
+      ],
+      "exp": "(msg.value - currentPrice)",
+      "status": "proven"
+    },
+    {
+      "no": "3",
+      "kind": "IO",
+      "line": 95,
+      "signatures": [
+        {
+          "contractName": "CratePreSale",
+          "methodName": "purchaseCrate",
+          "argTypes": []
+        }
+      ],
+      "exp": "(userCrateCount[msg.sender] + 1)",
+      "status": "unproven"
+    },
+    {
+      "no": "4",
+      "kind": "IO",
+      "line": 96,
+      "signatures": [
+        {
+          "contractName": "CratePreSale",
+          "methodName": "purchaseCrate",
+          "argTypes": []
+        }
+      ],
+      "exp": "(cratesSold + 1)",
+      "status": "proven"
+    },
+    {
+      "no": "5",
+      "kind": "IO",
+      "line": 115,
+      "signatures": [
+        {
+          "contractName": "CratePreSale",
+          "methodName": "purchaseCrate",
+          "argTypes": []
+        }
+      ],
+      "exp": "(block.number - 1)",
+      "status": "unproven"
+    },
+    {
+      "no": "6",
+      "kind": "IO",
+      "line": 116,
+      "signatures": [
+        {
+          "contractName": "CratePreSale",
+          "methodName": "purchaseCrate",
+          "argTypes": []
+        }
+      ],
+      "exp": "(10 ** 20)",
+      "status": "proven"
+    },
+    {
+      "no": "7",
+      "kind": "DZ",
+      "line": 116,
+      "signatures": [
+        {
+          "contractName": "CratePreSale",
+          "methodName": "purchaseCrate",
+          "argTypes": []
+        }
+      ],
+      "exp": "(rand % (10 ** 20))",
+      "status": "proven"
+    },
+    {
+      "no": "8",
+      "kind": "ETH_LEAK",
+      "line": 93,
+      "signatures": [
+        {
+          "contractName": "CratePreSale",
+          "methodName": "purchaseCrate",
+          "argTypes": []
+        }
+      ],
+      "exp": "msg.sender.transfer((msg.value - currentPrice));",
+      "status": "proven"
+    },
+    {
+      "no": "9",
+      "kind": "ETH_LEAK",
+      "line": 121,
+      "signatures": [
+        {
+          "contractName": "CratePreSale",
+          "methodName": "withdraw",
+          "argTypes": []
+        }
+      ],
+      "exp": "owner.transfer(this.balance);",
+      "status": "proven"
+    }
+  ]
+}

@@ -1,0 +1,37 @@
+{
+  "fileName": "Benchmarks/Study_SamplesSet/ec3daf7826176e1719af886afdc202fd.sol",
+  "baseName": "ec3daf7826176e1719af886afdc202fd.sol",
+  "iter": 2,
+  "time": "0.16465",
+  "errMsg": null,
+  "result": [
+    {
+      "no": "1",
+      "kind": "IO",
+      "line": 26,
+      "signatures": [
+        {
+          "contractName": "OpenWallet",
+          "methodName": "deposit",
+          "argTypes": [ "uint256" ]
+        }
+      ],
+      "exp": "(wallets[_wallet].balance + msg.value)",
+      "status": "unproven"
+    },
+    {
+      "no": "2",
+      "kind": "ETH_LEAK",
+      "line": 32,
+      "signatures": [
+        {
+          "contractName": "OpenWallet",
+          "methodName": "withdraw",
+          "argTypes": [ "uint256", "bytes32", "uint256" ]
+        }
+      ],
+      "exp": "msg.sender.transfer(_value);",
+      "status": "unproven"
+    }
+  ]
+}

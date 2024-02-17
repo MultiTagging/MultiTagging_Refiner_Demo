@@ -1,0 +1,318 @@
+{
+  "fileName": "Benchmarks/Study_SamplesSet/1c59a8e31586848281fa3c90d1aec39f.sol",
+  "baseName": "1c59a8e31586848281fa3c90d1aec39f.sol",
+  "iter": 1089,
+  "time": "307.648659",
+  "errMsg": null,
+  "result": [
+    {
+      "no": "1",
+      "kind": "IO",
+      "line": 76,
+      "signatures": [
+        {
+          "contractName": "UTokenContract",
+          "methodName": "UTokenContract",
+          "argTypes": [ "uint256", "uint256" ]
+        }
+      ],
+      "exp": "(10 ** 18)",
+      "status": "proven"
+    },
+    {
+      "no": "2",
+      "kind": "IO",
+      "line": 93,
+      "signatures": [
+        {
+          "contractName": "UTokenContract",
+          "methodName": "@fallback",
+          "argTypes": []
+        }
+      ],
+      "exp": "((msg.value * UTExchangeRate) * (10 ** decimals))",
+      "status": "unproven"
+    },
+    {
+      "no": "3",
+      "kind": "IO",
+      "line": 93,
+      "signatures": [
+        {
+          "contractName": "UTokenContract",
+          "methodName": "@fallback",
+          "argTypes": []
+        }
+      ],
+      "exp": "(10 ** decimals)",
+      "status": "proven"
+    },
+    {
+      "no": "4",
+      "kind": "IO",
+      "line": 93,
+      "signatures": [
+        {
+          "contractName": "UTokenContract",
+          "methodName": "@fallback",
+          "argTypes": []
+        }
+      ],
+      "exp": "(msg.value * UTExchangeRate)",
+      "status": "unproven"
+    },
+    {
+      "no": "5",
+      "kind": "IO",
+      "line": 98,
+      "signatures": [
+        {
+          "contractName": "UTokenContract",
+          "methodName": "UTokenContract",
+          "argTypes": [ "uint256", "uint256" ]
+        }
+      ],
+      "exp": "(10 ** decimals)",
+      "status": "proven"
+    },
+    {
+      "no": "6",
+      "kind": "IO",
+      "line": 98,
+      "signatures": [
+        {
+          "contractName": "UTokenContract",
+          "methodName": "UTokenContract",
+          "argTypes": [ "uint256", "uint256" ]
+        }
+      ],
+      "exp": "(_totalSupply * (10 ** decimals))",
+      "status": "unproven"
+    },
+    {
+      "no": "7",
+      "kind": "IO",
+      "line": 113,
+      "signatures": [
+        {
+          "contractName": "UTokenContract",
+          "methodName": "UTTotalSupply",
+          "argTypes": []
+        }
+      ],
+      "exp": "(totalSupply - totalRemainSupply)",
+      "status": "unproven"
+    },
+    {
+      "no": "8",
+      "kind": "IO",
+      "line": 124,
+      "signatures": [
+        {
+          "contractName": "UTokenContract",
+          "methodName": "transfer",
+          "argTypes": [ "address", "uint256" ]
+        }
+      ],
+      "exp": "(balances[_to] + _value)",
+      "status": "unproven"
+    },
+    {
+      "no": "9",
+      "kind": "IO",
+      "line": 125,
+      "signatures": [
+        {
+          "contractName": "UTokenContract",
+          "methodName": "transfer",
+          "argTypes": [ "address", "uint256" ]
+        }
+      ],
+      "exp": "(balances[msg.sender] - _value)",
+      "status": "proven"
+    },
+    {
+      "no": "10",
+      "kind": "IO",
+      "line": 126,
+      "signatures": [
+        {
+          "contractName": "UTokenContract",
+          "methodName": "transfer",
+          "argTypes": [ "address", "uint256" ]
+        }
+      ],
+      "exp": "(balances[_to] + _value)",
+      "status": "proven"
+    },
+    {
+      "no": "11",
+      "kind": "IO",
+      "line": 149,
+      "signatures": [
+        {
+          "contractName": "UTokenContract",
+          "methodName": "transferFrom",
+          "argTypes": [ "address", "address", "uint256" ]
+        }
+      ],
+      "exp": "(balances[_to] + _value)",
+      "status": "unproven"
+    },
+    {
+      "no": "12",
+      "kind": "IO",
+      "line": 151,
+      "signatures": [
+        {
+          "contractName": "UTokenContract",
+          "methodName": "transferFrom",
+          "argTypes": [ "address", "address", "uint256" ]
+        }
+      ],
+      "exp": "(balances[_from] - _value)",
+      "status": "proven"
+    },
+    {
+      "no": "13",
+      "kind": "IO",
+      "line": 152,
+      "signatures": [
+        {
+          "contractName": "UTokenContract",
+          "methodName": "transferFrom",
+          "argTypes": [ "address", "address", "uint256" ]
+        }
+      ],
+      "exp": "(balances[_to] + _value)",
+      "status": "proven"
+    },
+    {
+      "no": "14",
+      "kind": "IO",
+      "line": 153,
+      "signatures": [
+        {
+          "contractName": "UTokenContract",
+          "methodName": "transferFrom",
+          "argTypes": [ "address", "address", "uint256" ]
+        }
+      ],
+      "exp": "(allowances[_from][msg.sender] - _value)",
+      "status": "unproven"
+    },
+    {
+      "no": "15",
+      "kind": "IO",
+      "line": 172,
+      "signatures": [
+        {
+          "contractName": "UTokenContract",
+          "methodName": "@fallback",
+          "argTypes": []
+        },
+        {
+          "contractName": "UTokenContract",
+          "methodName": "mintTokens",
+          "argTypes": [ "address", "uint256" ]
+        }
+      ],
+      "exp": "(balances[_to] + _amount)",
+      "status": "unproven"
+    },
+    {
+      "no": "16",
+      "kind": "IO",
+      "line": 174,
+      "signatures": [
+        {
+          "contractName": "UTokenContract",
+          "methodName": "@fallback",
+          "argTypes": []
+        },
+        {
+          "contractName": "UTokenContract",
+          "methodName": "mintTokens",
+          "argTypes": [ "address", "uint256" ]
+        }
+      ],
+      "exp": "(totalRemainSupply - _amount)",
+      "status": "proven"
+    },
+    {
+      "no": "17",
+      "kind": "IO",
+      "line": 175,
+      "signatures": [
+        {
+          "contractName": "UTokenContract",
+          "methodName": "@fallback",
+          "argTypes": []
+        },
+        {
+          "contractName": "UTokenContract",
+          "methodName": "mintTokens",
+          "argTypes": [ "address", "uint256" ]
+        }
+      ],
+      "exp": "(balances[_to] + _amount)",
+      "status": "proven"
+    },
+    {
+      "no": "18",
+      "kind": "IO",
+      "line": 187,
+      "signatures": [
+        {
+          "contractName": "UTokenContract",
+          "methodName": "burnTokens",
+          "argTypes": [ "address", "uint256" ]
+        }
+      ],
+      "exp": "(totalRemainSupply + _amount)",
+      "status": "unproven"
+    },
+    {
+      "no": "19",
+      "kind": "IO",
+      "line": 188,
+      "signatures": [
+        {
+          "contractName": "UTokenContract",
+          "methodName": "burnTokens",
+          "argTypes": [ "address", "uint256" ]
+        }
+      ],
+      "exp": "(balances[_addr] - _amount)",
+      "status": "unproven"
+    },
+    {
+      "no": "20",
+      "kind": "DZ",
+      "line": 93,
+      "signatures": [
+        {
+          "contractName": "UTokenContract",
+          "methodName": "@fallback",
+          "argTypes": []
+        }
+      ],
+      "exp": "(((msg.value * UTExchangeRate) * (10 ** decimals)) / etherChange)",
+      "status": "proven"
+    },
+    {
+      "no": "21",
+      "kind": "ETH_LEAK",
+      "line": 167,
+      "signatures": [
+        {
+          "contractName": "UTokenContract",
+          "methodName": "withdraw",
+          "argTypes": [ "address" ]
+        }
+      ],
+      "exp": "multisigAddress.transfer(this.balance);",
+      "status": "proven"
+    }
+  ]
+}

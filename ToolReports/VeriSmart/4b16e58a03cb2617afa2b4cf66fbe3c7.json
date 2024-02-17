@@ -1,0 +1,173 @@
+{
+  "fileName": "Benchmarks/Study_SamplesSet/4b16e58a03cb2617afa2b4cf66fbe3c7.sol",
+  "baseName": "4b16e58a03cb2617afa2b4cf66fbe3c7.sol",
+  "iter": 21,
+  "time": "300.38689",
+  "errMsg": null,
+  "result": [
+    {
+      "no": "1",
+      "kind": "IO",
+      "line": 35,
+      "signatures": [
+        {
+          "contractName": "Crowdsale",
+          "methodName": "purchase",
+          "argTypes": []
+        }
+      ],
+      "exp": "(a * b)",
+      "status": "unproven"
+    },
+    {
+      "no": "2",
+      "kind": "IO",
+      "line": 47,
+      "signatures": [
+        {
+          "contractName": "Crowdsale",
+          "methodName": "purchase",
+          "argTypes": []
+        },
+        {
+          "contractName": "Crowdsale",
+          "methodName": "withdraw",
+          "argTypes": []
+        }
+      ],
+      "exp": "(a - b)",
+      "status": "proven"
+    },
+    {
+      "no": "3",
+      "kind": "IO",
+      "line": 51,
+      "signatures": [
+        {
+          "contractName": "Crowdsale",
+          "methodName": "purchase",
+          "argTypes": []
+        },
+        {
+          "contractName": "SafeMath",
+          "methodName": "add",
+          "argTypes": [ "uint256", "uint256" ]
+        }
+      ],
+      "exp": "(a + b)",
+      "status": "unproven"
+    },
+    {
+      "no": "4",
+      "kind": "IO",
+      "line": 256,
+      "signatures": [
+        {
+          "contractName": "Crowdsale",
+          "methodName": "Crowdsale",
+          "argTypes": []
+        }
+      ],
+      "exp": "(20000000 * 1000000000000000000)",
+      "status": "proven"
+    },
+    {
+      "no": "5",
+      "kind": "IO",
+      "line": 280,
+      "signatures": [
+        {
+          "contractName": "Crowdsale",
+          "methodName": "purchase",
+          "argTypes": []
+        }
+      ],
+      "exp": "(10000 * 1000000000000000000)",
+      "status": "proven"
+    },
+    {
+      "no": "6",
+      "kind": "DZ",
+      "line": 36,
+      "signatures": [
+        {
+          "contractName": "Crowdsale",
+          "methodName": "purchase",
+          "argTypes": []
+        }
+      ],
+      "exp": "(c / a)",
+      "status": "unproven"
+    },
+    {
+      "no": "7",
+      "kind": "DZ",
+      "line": 41,
+      "signatures": [
+        {
+          "contractName": "Crowdsale",
+          "methodName": "purchase",
+          "argTypes": []
+        }
+      ],
+      "exp": "(a / b)",
+      "status": "unproven"
+    },
+    {
+      "no": "8",
+      "kind": "DZ",
+      "line": 257,
+      "signatures": [
+        {
+          "contractName": "Crowdsale",
+          "methodName": "Crowdsale",
+          "argTypes": []
+        }
+      ],
+      "exp": "(1000000000000000000 / 20)",
+      "status": "proven"
+    },
+    {
+      "no": "9",
+      "kind": "DZ",
+      "line": 274,
+      "signatures": [
+        {
+          "contractName": "Crowdsale",
+          "methodName": "setTokenPrice",
+          "argTypes": [ "uint256" ]
+        }
+      ],
+      "exp": "(1000000000000000000 / _value)",
+      "status": "unproven"
+    },
+    {
+      "no": "10",
+      "kind": "ETH_LEAK",
+      "line": 297,
+      "signatures": [
+        {
+          "contractName": "Crowdsale",
+          "methodName": "purchase",
+          "argTypes": []
+        }
+      ],
+      "exp": "beneficiary.transfer(sum);",
+      "status": "proven"
+    },
+    {
+      "no": "11",
+      "kind": "ETH_LEAK",
+      "line": 301,
+      "signatures": [
+        {
+          "contractName": "Crowdsale",
+          "methodName": "purchase",
+          "argTypes": []
+        }
+      ],
+      "exp": "msg.sender.transfer(retSum);",
+      "status": "unproven"
+    }
+  ]
+}

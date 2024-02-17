@@ -1,0 +1,83 @@
+{
+  "fileName": "Benchmarks/Study_SamplesSet/5734a4453bb917eb504f91c9686d73e2.sol",
+  "baseName": "5734a4453bb917eb504f91c9686d73e2.sol",
+  "iter": 148,
+  "time": "344.236761",
+  "errMsg": null,
+  "result": [
+    {
+      "no": "1",
+      "kind": "IO",
+      "line": 9,
+      "signatures": [
+        {
+          "contractName": "no_transaction_malleablity",
+          "methodName": "no_transaction_malleablity",
+          "argTypes": [ "address[]", "uint256[]" ]
+        }
+      ],
+      "exp": "(i + 1)",
+      "status": "proven"
+    },
+    {
+      "no": "2",
+      "kind": "IO",
+      "line": 29,
+      "signatures": [
+        {
+          "contractName": "no_transaction_malleablity",
+          "methodName": "transfer",
+          "argTypes": [
+            "dbytes", "address", "uint256", "uint256", "uint256"
+          ]
+        }
+      ],
+      "exp": "(balances[from] - _value)",
+      "status": "proven"
+    },
+    {
+      "no": "3",
+      "kind": "IO",
+      "line": 30,
+      "signatures": [
+        {
+          "contractName": "no_transaction_malleablity",
+          "methodName": "transfer",
+          "argTypes": [
+            "dbytes", "address", "uint256", "uint256", "uint256"
+          ]
+        }
+      ],
+      "exp": "(balances[_to] + _value)",
+      "status": "unproven"
+    },
+    {
+      "no": "4",
+      "kind": "IO",
+      "line": 82,
+      "signatures": [
+        {
+          "contractName": "no_transaction_malleablity",
+          "methodName": "ecrecoverFromSig",
+          "argTypes": [ "bytes32", "dbytes" ]
+        },
+        {
+          "contractName": "no_transaction_malleablity",
+          "methodName": "recoverTransferPreSigned",
+          "argTypes": [
+            "dbytes", "address", "uint256", "uint256", "uint256"
+          ]
+        },
+        {
+          "contractName": "no_transaction_malleablity",
+          "methodName": "transfer",
+          "argTypes": [
+            "dbytes", "address", "uint256", "uint256", "uint256"
+          ]
+        }
+      ],
+      "exp": "(v + 27)",
+      "status": "proven"
+    }
+  ]
+}

@@ -65,7 +65,7 @@ def parse(tool,reportsLocation,reportSource):
                                     codes.append(data['results']['detectors'][i]['check'])
                                 codes = list(dict.fromkeys(codes))
                             else:
-                                codes ='error'
+                                codes.append('error')
                             toolTags.loc[len(toolTags)]=[filename.rstrip().rsplit('.')[0],codes]
                         print(tool + " tags have been extracted successfully")
                         return toolTags
@@ -73,18 +73,22 @@ def parse(tool,reportsLocation,reportSource):
                         print("Path not exist")
                 case 'VeriSmart':
                     try:
+                        toolTags[tool+'_AnalysisTime'] = ''
                         for filename in os.listdir(path):
                             codes = []
                             if os.path.getsize(path/filename) != 0:
                                 file = open(path/filename,errors="ignore")
-                                data = file.readlines()
+                                data = json.load(file)
                                 file.close()
-                                for line in data:
-                                    if '"check"' in line and line.rstrip() not in codes:
-                                        codes.append(line.rstrip())
+                                if data['errMsg'] == None:
+                                    for i in range(0,len(data['result'])):
+                                        if data['result'][i]['status'] == 'unproven' and data['result'][i]['kind'] not in codes:
+                                            codes.append(data['result'][i]['kind'])
+                                else:
+                                  codes.append('error')  
                             else:
-                                codes ='error'
-                            toolTags.loc[len(toolTags)]=[filename.rstrip().rsplit('.')[0],codes]
+                                codes.append('error')
+                            toolTags.loc[len(toolTags)]=[filename.rstrip().rsplit('.')[0],codes,data['time']]
                         print(tool + " tags have been extracted successfully")
                         return toolTags
                     except IOError:

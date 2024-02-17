@@ -1,0 +1,65 @@
+{
+  "fileName": "Benchmarks/Study_SamplesSet/8075c737c6bc20ea94c0461a0972e438.sol",
+  "baseName": "8075c737c6bc20ea94c0461a0972e438.sol",
+  "iter": 5,
+  "time": "0.535812",
+  "errMsg": null,
+  "result": [
+    {
+      "no": "1",
+      "kind": "IO",
+      "line": 58,
+      "signatures": [
+        {
+          "contractName": "AirdropMeth",
+          "methodName": "startAirdropFrom",
+          "argTypes": [ "address", "address[]", "uint256" ]
+        }
+      ],
+      "exp": "(i + 1)",
+      "status": "proven"
+    },
+    {
+      "no": "2",
+      "kind": "IO",
+      "line": 67,
+      "signatures": [
+        {
+          "contractName": "AirdropMeth",
+          "methodName": "startAirdrop",
+          "argTypes": [ "address[]", "uint256" ]
+        }
+      ],
+      "exp": "(i + 1)",
+      "status": "proven"
+    },
+    {
+      "no": "3",
+      "kind": "KA",
+      "line": 72,
+      "signatures": [
+        {
+          "contractName": "AirdropMeth",
+          "methodName": "removeContract",
+          "argTypes": []
+        }
+      ],
+      "exp": "selfdestruct(msg.sender);",
+      "status": "proven"
+    },
+    {
+      "no": "4",
+      "kind": "ETH_LEAK",
+      "line": 72,
+      "signatures": [
+        {
+          "contractName": "AirdropMeth",
+          "methodName": "removeContract",
+          "argTypes": []
+        }
+      ],
+      "exp": "selfdestruct(msg.sender);",
+      "status": "proven"
+    }
+  ]
+}

@@ -1,0 +1,135 @@
+{
+  "fileName": "Benchmarks/Study_SamplesSet/a411ba3b97a17ab4d62c394c49d45d5b.sol",
+  "baseName": "a411ba3b97a17ab4d62c394c49d45d5b.sol",
+  "iter": 1077,
+  "time": "300.25228",
+  "errMsg": null,
+  "result": [
+    {
+      "no": "1",
+      "kind": "IO",
+      "line": 23,
+      "signatures": [
+        {
+          "contractName": "Mainsale",
+          "methodName": "@fallback",
+          "argTypes": []
+        }
+      ],
+      "exp": "(a - b)",
+      "status": "proven"
+    },
+    {
+      "no": "2",
+      "kind": "IO",
+      "line": 27,
+      "signatures": [
+        {
+          "contractName": "Mainsale",
+          "methodName": "@fallback",
+          "argTypes": []
+        }
+      ],
+      "exp": "(a + b)",
+      "status": "proven"
+    },
+    {
+      "no": "3",
+      "kind": "IO",
+      "line": 44,
+      "signatures": [
+        {
+          "contractName": "Mainsale",
+          "methodName": "Mainsale",
+          "argTypes": [ "address", "uint256" ]
+        }
+      ],
+      "exp": "(((60 * 60) * 24) * 30)",
+      "status": "proven"
+    },
+    {
+      "no": "4",
+      "kind": "IO",
+      "line": 44,
+      "signatures": [
+        {
+          "contractName": "Mainsale",
+          "methodName": "Mainsale",
+          "argTypes": [ "address", "uint256" ]
+        }
+      ],
+      "exp": "((60 * 60) * 24)",
+      "status": "proven"
+    },
+    {
+      "no": "5",
+      "kind": "IO",
+      "line": 44,
+      "signatures": [
+        {
+          "contractName": "Mainsale",
+          "methodName": "Mainsale",
+          "argTypes": [ "address", "uint256" ]
+        }
+      ],
+      "exp": "(60 * 60)",
+      "status": "proven"
+    },
+    {
+      "no": "6",
+      "kind": "IO",
+      "line": 62,
+      "signatures": [
+        {
+          "contractName": "Mainsale",
+          "methodName": "Mainsale",
+          "argTypes": [ "address", "uint256" ]
+        }
+      ],
+      "exp": "(block.timestamp + THIRTY_DAYS)",
+      "status": "unproven"
+    },
+    {
+      "no": "7",
+      "kind": "ETH_LEAK",
+      "line": 74,
+      "signatures": [
+        {
+          "contractName": "Mainsale",
+          "methodName": "@fallback",
+          "argTypes": []
+        }
+      ],
+      "exp": "msg.sender.transfer(refundAmount);",
+      "status": "proven"
+    },
+    {
+      "no": "8",
+      "kind": "ETH_LEAK",
+      "line": 79,
+      "signatures": [
+        {
+          "contractName": "Mainsale",
+          "methodName": "@fallback",
+          "argTypes": []
+        }
+      ],
+      "exp": "multisig.transfer(contribution);",
+      "status": "proven"
+    },
+    {
+      "no": "9",
+      "kind": "ETH_LEAK",
+      "line": 83,
+      "signatures": [
+        {
+          "contractName": "Mainsale",
+          "methodName": "withdrawStuck",
+          "argTypes": []
+        }
+      ],
+      "exp": "multisig.transfer(this.balance);",
+      "status": "proven"
+    }
+  ]
+}

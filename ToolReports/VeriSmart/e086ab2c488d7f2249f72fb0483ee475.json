@@ -1,0 +1,519 @@
+{
+  "fileName": "Benchmarks/Study_SamplesSet/e086ab2c488d7f2249f72fb0483ee475.sol",
+  "baseName": "e086ab2c488d7f2249f72fb0483ee475.sol",
+  "iter": 583,
+  "time": "300.110783",
+  "errMsg": null,
+  "result": [
+    {
+      "no": "1",
+      "kind": "IO",
+      "line": 10,
+      "signatures": [
+        {
+          "contractName": "UBBCToken",
+          "methodName": "increaseAllowance",
+          "argTypes": [ "address", "uint256" ]
+        },
+        {
+          "contractName": "UBBCToken",
+          "methodName": "transfer",
+          "argTypes": [ "address", "uint256" ]
+        },
+        {
+          "contractName": "UBBCToken",
+          "methodName": "transferFrom",
+          "argTypes": [ "address", "address", "uint256" ]
+        }
+      ],
+      "exp": "(a + b)",
+      "status": "unproven"
+    },
+    {
+      "no": "2",
+      "kind": "IO",
+      "line": 17,
+      "signatures": [
+        {
+          "contractName": "UBBCToken",
+          "methodName": "decreaseAllowance",
+          "argTypes": [ "address", "uint256" ]
+        },
+        {
+          "contractName": "UBBCToken",
+          "methodName": "transfer",
+          "argTypes": [ "address", "uint256" ]
+        },
+        {
+          "contractName": "UBBCToken",
+          "methodName": "transferFrom",
+          "argTypes": [ "address", "address", "uint256" ]
+        }
+      ],
+      "exp": "(a - b)",
+      "status": "proven"
+    },
+    {
+      "no": "3",
+      "kind": "ETH_LEAK",
+      "line": 74,
+      "signatures": [
+        {
+          "contractName": "UBBCToken",
+          "methodName": "getReward_TOD37",
+          "argTypes": []
+        }
+      ],
+      "exp": "winner_TOD37.transfer(msg.value);",
+      "status": "unproven"
+    },
+    {
+      "no": "4",
+      "kind": "ETH_LEAK",
+      "line": 88,
+      "signatures": [
+        {
+          "contractName": "UBBCToken",
+          "methodName": "getReward_TOD3",
+          "argTypes": []
+        }
+      ],
+      "exp": "winner_TOD3.transfer(msg.value);",
+      "status": "unproven"
+    },
+    {
+      "no": "5",
+      "kind": "ETH_LEAK",
+      "line": 102,
+      "signatures": [
+        {
+          "contractName": "UBBCToken",
+          "methodName": "getReward_TOD9",
+          "argTypes": []
+        }
+      ],
+      "exp": "winner_TOD9.transfer(msg.value);",
+      "status": "unproven"
+    },
+    {
+      "no": "6",
+      "kind": "ETH_LEAK",
+      "line": 116,
+      "signatures": [
+        {
+          "contractName": "UBBCToken",
+          "methodName": "getReward_TOD25",
+          "argTypes": []
+        }
+      ],
+      "exp": "winner_TOD25.transfer(msg.value);",
+      "status": "unproven"
+    },
+    {
+      "no": "7",
+      "kind": "ETH_LEAK",
+      "line": 130,
+      "signatures": [
+        {
+          "contractName": "UBBCToken",
+          "methodName": "getReward_TOD19",
+          "argTypes": []
+        }
+      ],
+      "exp": "winner_TOD19.transfer(msg.value);",
+      "status": "unproven"
+    },
+    {
+      "no": "8",
+      "kind": "ETH_LEAK",
+      "line": 140,
+      "signatures": [
+        {
+          "contractName": "UBBCToken",
+          "methodName": "setReward_TOD26",
+          "argTypes": []
+        }
+      ],
+      "exp": "owner_TOD26.transfer(reward_TOD26);",
+      "status": "proven"
+    },
+    {
+      "no": "9",
+      "kind": "ETH_LEAK",
+      "line": 148,
+      "signatures": [
+        {
+          "contractName": "UBBCToken",
+          "methodName": "claimReward_TOD26",
+          "argTypes": [ "uint256" ]
+        }
+      ],
+      "exp": "msg.sender.transfer(reward_TOD26);",
+      "status": "unproven"
+    },
+    {
+      "no": "10",
+      "kind": "ETH_LEAK",
+      "line": 166,
+      "signatures": [
+        {
+          "contractName": "UBBCToken",
+          "methodName": "setReward_TOD20",
+          "argTypes": []
+        }
+      ],
+      "exp": "owner_TOD20.transfer(reward_TOD20);",
+      "status": "proven"
+    },
+    {
+      "no": "11",
+      "kind": "ETH_LEAK",
+      "line": 174,
+      "signatures": [
+        {
+          "contractName": "UBBCToken",
+          "methodName": "claimReward_TOD20",
+          "argTypes": [ "uint256" ]
+        }
+      ],
+      "exp": "msg.sender.transfer(reward_TOD20);",
+      "status": "unproven"
+    },
+    {
+      "no": "12",
+      "kind": "ETH_LEAK",
+      "line": 188,
+      "signatures": [
+        {
+          "contractName": "UBBCToken",
+          "methodName": "getReward_TOD31",
+          "argTypes": []
+        }
+      ],
+      "exp": "winner_TOD31.transfer(msg.value);",
+      "status": "unproven"
+    },
+    {
+      "no": "13",
+      "kind": "ETH_LEAK",
+      "line": 203,
+      "signatures": [
+        {
+          "contractName": "UBBCToken",
+          "methodName": "getReward_TOD13",
+          "argTypes": []
+        }
+      ],
+      "exp": "winner_TOD13.transfer(msg.value);",
+      "status": "unproven"
+    },
+    {
+      "no": "14",
+      "kind": "ETH_LEAK",
+      "line": 217,
+      "signatures": [
+        {
+          "contractName": "UBBCToken",
+          "methodName": "setReward_TOD32",
+          "argTypes": []
+        }
+      ],
+      "exp": "owner_TOD32.transfer(reward_TOD32);",
+      "status": "proven"
+    },
+    {
+      "no": "15",
+      "kind": "ETH_LEAK",
+      "line": 225,
+      "signatures": [
+        {
+          "contractName": "UBBCToken",
+          "methodName": "claimReward_TOD32",
+          "argTypes": [ "uint256" ]
+        }
+      ],
+      "exp": "msg.sender.transfer(reward_TOD32);",
+      "status": "unproven"
+    },
+    {
+      "no": "16",
+      "kind": "ETH_LEAK",
+      "line": 239,
+      "signatures": [
+        {
+          "contractName": "UBBCToken",
+          "methodName": "setReward_TOD38",
+          "argTypes": []
+        }
+      ],
+      "exp": "owner_TOD38.transfer(reward_TOD38);",
+      "status": "proven"
+    },
+    {
+      "no": "17",
+      "kind": "ETH_LEAK",
+      "line": 247,
+      "signatures": [
+        {
+          "contractName": "UBBCToken",
+          "methodName": "claimReward_TOD38",
+          "argTypes": [ "uint256" ]
+        }
+      ],
+      "exp": "msg.sender.transfer(reward_TOD38);",
+      "status": "unproven"
+    },
+    {
+      "no": "18",
+      "kind": "ETH_LEAK",
+      "line": 260,
+      "signatures": [
+        {
+          "contractName": "UBBCToken",
+          "methodName": "setReward_TOD4",
+          "argTypes": []
+        }
+      ],
+      "exp": "owner_TOD4.transfer(reward_TOD4);",
+      "status": "proven"
+    },
+    {
+      "no": "19",
+      "kind": "ETH_LEAK",
+      "line": 268,
+      "signatures": [
+        {
+          "contractName": "UBBCToken",
+          "methodName": "claimReward_TOD4",
+          "argTypes": [ "uint256" ]
+        }
+      ],
+      "exp": "msg.sender.transfer(reward_TOD4);",
+      "status": "unproven"
+    },
+    {
+      "no": "20",
+      "kind": "ETH_LEAK",
+      "line": 286,
+      "signatures": [
+        {
+          "contractName": "UBBCToken",
+          "methodName": "getReward_TOD7",
+          "argTypes": []
+        }
+      ],
+      "exp": "winner_TOD7.transfer(msg.value);",
+      "status": "unproven"
+    },
+    {
+      "no": "21",
+      "kind": "ETH_LEAK",
+      "line": 303,
+      "signatures": [
+        {
+          "contractName": "UBBCToken",
+          "methodName": "getReward_TOD23",
+          "argTypes": []
+        }
+      ],
+      "exp": "winner_TOD23.transfer(msg.value);",
+      "status": "unproven"
+    },
+    {
+      "no": "22",
+      "kind": "ETH_LEAK",
+      "line": 317,
+      "signatures": [
+        {
+          "contractName": "UBBCToken",
+          "methodName": "setReward_TOD14",
+          "argTypes": []
+        }
+      ],
+      "exp": "owner_TOD14.transfer(reward_TOD14);",
+      "status": "proven"
+    },
+    {
+      "no": "23",
+      "kind": "ETH_LEAK",
+      "line": 325,
+      "signatures": [
+        {
+          "contractName": "UBBCToken",
+          "methodName": "claimReward_TOD14",
+          "argTypes": [ "uint256" ]
+        }
+      ],
+      "exp": "msg.sender.transfer(reward_TOD14);",
+      "status": "unproven"
+    },
+    {
+      "no": "24",
+      "kind": "ETH_LEAK",
+      "line": 339,
+      "signatures": [
+        {
+          "contractName": "UBBCToken",
+          "methodName": "setReward_TOD30",
+          "argTypes": []
+        }
+      ],
+      "exp": "owner_TOD30.transfer(reward_TOD30);",
+      "status": "proven"
+    },
+    {
+      "no": "25",
+      "kind": "ETH_LEAK",
+      "line": 347,
+      "signatures": [
+        {
+          "contractName": "UBBCToken",
+          "methodName": "claimReward_TOD30",
+          "argTypes": [ "uint256" ]
+        }
+      ],
+      "exp": "msg.sender.transfer(reward_TOD30);",
+      "status": "unproven"
+    },
+    {
+      "no": "26",
+      "kind": "ETH_LEAK",
+      "line": 362,
+      "signatures": [
+        {
+          "contractName": "UBBCToken",
+          "methodName": "setReward_TOD8",
+          "argTypes": []
+        }
+      ],
+      "exp": "owner_TOD8.transfer(reward_TOD8);",
+      "status": "proven"
+    },
+    {
+      "no": "27",
+      "kind": "ETH_LEAK",
+      "line": 370,
+      "signatures": [
+        {
+          "contractName": "UBBCToken",
+          "methodName": "claimReward_TOD8",
+          "argTypes": [ "uint256" ]
+        }
+      ],
+      "exp": "msg.sender.transfer(reward_TOD8);",
+      "status": "unproven"
+    },
+    {
+      "no": "28",
+      "kind": "ETH_LEAK",
+      "line": 390,
+      "signatures": [
+        {
+          "contractName": "UBBCToken",
+          "methodName": "getReward_TOD39",
+          "argTypes": []
+        }
+      ],
+      "exp": "winner_TOD39.transfer(msg.value);",
+      "status": "unproven"
+    },
+    {
+      "no": "29",
+      "kind": "ETH_LEAK",
+      "line": 404,
+      "signatures": [
+        {
+          "contractName": "UBBCToken",
+          "methodName": "setReward_TOD36",
+          "argTypes": []
+        }
+      ],
+      "exp": "owner_TOD36.transfer(reward_TOD36);",
+      "status": "proven"
+    },
+    {
+      "no": "30",
+      "kind": "ETH_LEAK",
+      "line": 412,
+      "signatures": [
+        {
+          "contractName": "UBBCToken",
+          "methodName": "claimReward_TOD36",
+          "argTypes": [ "uint256" ]
+        }
+      ],
+      "exp": "msg.sender.transfer(reward_TOD36);",
+      "status": "unproven"
+    },
+    {
+      "no": "31",
+      "kind": "ETH_LEAK",
+      "line": 431,
+      "signatures": [
+        {
+          "contractName": "UBBCToken",
+          "methodName": "getReward_TOD35",
+          "argTypes": []
+        }
+      ],
+      "exp": "winner_TOD35.transfer(msg.value);",
+      "status": "unproven"
+    },
+    {
+      "no": "32",
+      "kind": "ETH_LEAK",
+      "line": 449,
+      "signatures": [
+        {
+          "contractName": "UBBCToken",
+          "methodName": "setReward_TOD40",
+          "argTypes": []
+        }
+      ],
+      "exp": "owner_TOD40.transfer(reward_TOD40);",
+      "status": "proven"
+    },
+    {
+      "no": "33",
+      "kind": "ETH_LEAK",
+      "line": 457,
+      "signatures": [
+        {
+          "contractName": "UBBCToken",
+          "methodName": "claimReward_TOD40",
+          "argTypes": [ "uint256" ]
+        }
+      ],
+      "exp": "msg.sender.transfer(reward_TOD40);",
+      "status": "unproven"
+    },
+    {
+      "no": "34",
+      "kind": "ETH_LEAK",
+      "line": 478,
+      "signatures": [
+        {
+          "contractName": "UBBCToken",
+          "methodName": "getReward_TOD33",
+          "argTypes": []
+        }
+      ],
+      "exp": "winner_TOD33.transfer(msg.value);",
+      "status": "unproven"
+    },
+    {
+      "no": "35",
+      "kind": "ETH_LEAK",
+      "line": 494,
+      "signatures": [
+        {
+          "contractName": "UBBCToken",
+          "methodName": "getReward_TOD27",
+          "argTypes": []
+        }
+      ],
+      "exp": "winner_TOD27.transfer(msg.value);",
+      "status": "unproven"
+    }
+  ]
+}

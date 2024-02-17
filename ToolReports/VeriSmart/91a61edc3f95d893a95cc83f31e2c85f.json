@@ -1,0 +1,29 @@
+{
+  "fileName": "Benchmarks/Study_SamplesSet/91a61edc3f95d893a95cc83f31e2c85f.sol",
+  "baseName": "91a61edc3f95d893a95cc83f31e2c85f.sol",
+  "iter": 2,
+  "time": "0.024866",
+  "errMsg": null,
+  "result": [
+    {
+      "no": "1",
+      "kind": "KA",
+      "line": 39,
+      "signatures": [
+        { "contractName": "Wallet", "methodName": "Destroy", "argTypes": [] }
+      ],
+      "exp": "selfdestruct(msg.sender);",
+      "status": "proven"
+    },
+    {
+      "no": "2",
+      "kind": "ETH_LEAK",
+      "line": 39,
+      "signatures": [
+        { "contractName": "Wallet", "methodName": "Destroy", "argTypes": [] }
+      ],
+      "exp": "selfdestruct(msg.sender);",
+      "status": "proven"
+    }
+  ]
+}

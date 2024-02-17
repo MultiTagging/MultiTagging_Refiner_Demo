@@ -1,0 +1,471 @@
+{
+  "fileName": "Benchmarks/Study_SamplesSet/a2dff7010491759e2c1f399deb139cd4.sol",
+  "baseName": "a2dff7010491759e2c1f399deb139cd4.sol",
+  "iter": 7,
+  "time": "302.237549",
+  "errMsg": null,
+  "result": [
+    {
+      "no": "1",
+      "kind": "IO",
+      "line": 84,
+      "signatures": [
+        {
+          "contractName": "WhiteBetting",
+          "methodName": "callme_re_ent35",
+          "argTypes": []
+        }
+      ],
+      "exp": "(counter_re_ent35 + 1)",
+      "status": "proven"
+    },
+    {
+      "no": "2",
+      "kind": "IO",
+      "line": 123,
+      "signatures": [
+        {
+          "contractName": "WhiteBetting",
+          "methodName": "withdrawFunds_re_ent31",
+          "argTypes": [ "uint256" ]
+        }
+      ],
+      "exp": "(balances_re_ent31[msg.sender] - _weiToWithdraw)",
+      "status": "proven"
+    },
+    {
+      "no": "3",
+      "kind": "IO",
+      "line": 206,
+      "signatures": [
+        {
+          "contractName": "WhiteBetting",
+          "methodName": "withdrawFunds_re_ent38",
+          "argTypes": [ "uint256" ]
+        }
+      ],
+      "exp": "(balances_re_ent38[msg.sender] - _weiToWithdraw)",
+      "status": "proven"
+    },
+    {
+      "no": "4",
+      "kind": "IO",
+      "line": 241,
+      "signatures": [
+        {
+          "contractName": "WhiteBetting",
+          "methodName": "placeBet",
+          "argTypes": [ "uint64", "uint16", "uint32" ]
+        }
+      ],
+      "exp": "(gameList[_fixtureId].timestamp - 600)",
+      "status": "unproven"
+    },
+    {
+      "no": "5",
+      "kind": "IO",
+      "line": 267,
+      "signatures": [
+        {
+          "contractName": "WhiteBetting",
+          "methodName": "givePrizeMoney",
+          "argTypes": [ "uint64", "uint8", "uint8" ]
+        }
+      ],
+      "exp": "(i + 1)",
+      "status": "proven"
+    },
+    {
+      "no": "6",
+      "kind": "IO",
+      "line": 269,
+      "signatures": [
+        {
+          "contractName": "WhiteBetting",
+          "methodName": "givePrizeMoney",
+          "argTypes": [ "uint64", "uint8", "uint8" ]
+        }
+      ],
+      "exp": "(betList[_fixtureId][i].stake * betList[_fixtureId][i].odd)",
+      "status": "unproven"
+    },
+    {
+      "no": "7",
+      "kind": "IO",
+      "line": 296,
+      "signatures": [
+        {
+          "contractName": "WhiteBetting",
+          "methodName": "callme_re_ent7",
+          "argTypes": []
+        }
+      ],
+      "exp": "(counter_re_ent7 + 1)",
+      "status": "proven"
+    },
+    {
+      "no": "8",
+      "kind": "IO",
+      "line": 328,
+      "signatures": [
+        {
+          "contractName": "WhiteBetting",
+          "methodName": "callme_re_ent14",
+          "argTypes": []
+        }
+      ],
+      "exp": "(counter_re_ent14 + 1)",
+      "status": "proven"
+    },
+    {
+      "no": "9",
+      "kind": "DZ",
+      "line": 269,
+      "signatures": [
+        {
+          "contractName": "WhiteBetting",
+          "methodName": "givePrizeMoney",
+          "argTypes": [ "uint64", "uint8", "uint8" ]
+        }
+      ],
+      "exp": "((betList[_fixtureId][i].stake * betList[_fixtureId][i].odd) / 1000)",
+      "status": "proven"
+    },
+    {
+      "no": "10",
+      "kind": "ETH_LEAK",
+      "line": 16,
+      "signatures": [
+        {
+          "contractName": "WhiteBetting",
+          "methodName": "buyTicket_re_ent9",
+          "argTypes": []
+        }
+      ],
+      "exp": "(success,  ) = lastPlayer_re_ent9.call.value(jackpot_re_ent9)(\"\");",
+      "status": "unproven"
+    },
+    {
+      "no": "11",
+      "kind": "ETH_LEAK",
+      "line": 47,
+      "signatures": [
+        {
+          "contractName": "WhiteBetting",
+          "methodName": "claimReward_re_ent25",
+          "argTypes": []
+        }
+      ],
+      "exp": "msg.sender.transfer(transferValue_re_ent25);",
+      "status": "unproven"
+    },
+    {
+      "no": "12",
+      "kind": "ETH_LEAK",
+      "line": 64,
+      "signatures": [
+        {
+          "contractName": "WhiteBetting",
+          "methodName": "withdrawBalance_re_ent19",
+          "argTypes": []
+        }
+      ],
+      "exp": "msg.sender.send(userBalance_re_ent19[msg.sender])",
+      "status": "unproven"
+    },
+    {
+      "no": "13",
+      "kind": "ETH_LEAK",
+      "line": 74,
+      "signatures": [
+        {
+          "contractName": "WhiteBetting",
+          "methodName": "withdraw_balances_re_ent36",
+          "argTypes": []
+        }
+      ],
+      "exp": "msg.sender.send(balances_re_ent36[msg.sender])",
+      "status": "unproven"
+    },
+    {
+      "no": "14",
+      "kind": "ETH_LEAK",
+      "line": 81,
+      "signatures": [
+        {
+          "contractName": "WhiteBetting",
+          "methodName": "callme_re_ent35",
+          "argTypes": []
+        }
+      ],
+      "exp": "msg.sender.send(10000000000000000000)",
+      "status": "unproven"
+    },
+    {
+      "no": "15",
+      "kind": "ETH_LEAK",
+      "line": 91,
+      "signatures": [
+        {
+          "contractName": "WhiteBetting",
+          "methodName": "withdrawBalance_re_ent40",
+          "argTypes": []
+        }
+      ],
+      "exp": "(success,  ) = msg.sender.call.value(userBalance_re_ent40[msg.sender])(\"\");",
+      "status": "unproven"
+    },
+    {
+      "no": "16",
+      "kind": "ETH_LEAK",
+      "line": 102,
+      "signatures": [
+        {
+          "contractName": "WhiteBetting",
+          "methodName": "withdrawBalance_re_ent33",
+          "argTypes": []
+        }
+      ],
+      "exp": "(success,  ) = msg.sender.call.value(userBalance_re_ent33[msg.sender])(\"\");",
+      "status": "unproven"
+    },
+    {
+      "no": "17",
+      "kind": "ETH_LEAK",
+      "line": 112,
+      "signatures": [
+        {
+          "contractName": "WhiteBetting",
+          "methodName": "bug_re_ent27",
+          "argTypes": []
+        }
+      ],
+      "exp": "msg.sender.send(1000000000000000000)",
+      "status": "unproven"
+    },
+    {
+      "no": "18",
+      "kind": "ETH_LEAK",
+      "line": 122,
+      "signatures": [
+        {
+          "contractName": "WhiteBetting",
+          "methodName": "withdrawFunds_re_ent31",
+          "argTypes": [ "uint256" ]
+        }
+      ],
+      "exp": "msg.sender.send(_weiToWithdraw)",
+      "status": "unproven"
+    },
+    {
+      "no": "19",
+      "kind": "ETH_LEAK",
+      "line": 129,
+      "signatures": [
+        {
+          "contractName": "WhiteBetting",
+          "methodName": "bug_re_ent13",
+          "argTypes": []
+        }
+      ],
+      "exp": "(success,  ) = msg.sender.call.value(1000000000000000000)(\"\");",
+      "status": "unproven"
+    },
+    {
+      "no": "20",
+      "kind": "ETH_LEAK",
+      "line": 145,
+      "signatures": [
+        {
+          "contractName": "WhiteBetting",
+          "methodName": "withdrawBalance_re_ent26",
+          "argTypes": []
+        }
+      ],
+      "exp": "(success,  ) = msg.sender.call.value(userBalance_re_ent26[msg.sender])(\"\");",
+      "status": "unproven"
+    },
+    {
+      "no": "21",
+      "kind": "ETH_LEAK",
+      "line": 159,
+      "signatures": [
+        {
+          "contractName": "WhiteBetting",
+          "methodName": "bug_re_ent20",
+          "argTypes": []
+        }
+      ],
+      "exp": "msg.sender.send(1000000000000000000)",
+      "status": "unproven"
+    },
+    {
+      "no": "22",
+      "kind": "ETH_LEAK",
+      "line": 182,
+      "signatures": [
+        {
+          "contractName": "WhiteBetting",
+          "methodName": "claimReward_re_ent32",
+          "argTypes": []
+        }
+      ],
+      "exp": "msg.sender.transfer(transferValue_re_ent32);",
+      "status": "unproven"
+    },
+    {
+      "no": "23",
+      "kind": "ETH_LEAK",
+      "line": 205,
+      "signatures": [
+        {
+          "contractName": "WhiteBetting",
+          "methodName": "withdrawFunds_re_ent38",
+          "argTypes": [ "uint256" ]
+        }
+      ],
+      "exp": "msg.sender.send(_weiToWithdraw)",
+      "status": "unproven"
+    },
+    {
+      "no": "24",
+      "kind": "ETH_LEAK",
+      "line": 253,
+      "signatures": [
+        {
+          "contractName": "WhiteBetting",
+          "methodName": "claimReward_re_ent4",
+          "argTypes": []
+        }
+      ],
+      "exp": "msg.sender.transfer(transferValue_re_ent4);",
+      "status": "unproven"
+    },
+    {
+      "no": "25",
+      "kind": "ETH_LEAK",
+      "line": 279,
+      "signatures": [
+        {
+          "contractName": "WhiteBetting",
+          "methodName": "givePrizeMoney",
+          "argTypes": [ "uint64", "uint8", "uint8" ]
+        }
+      ],
+      "exp": "betList[_fixtureId][i].player.transfer(returnEth);",
+      "status": "unproven"
+    },
+    {
+      "no": "26",
+      "kind": "ETH_LEAK",
+      "line": 293,
+      "signatures": [
+        {
+          "contractName": "WhiteBetting",
+          "methodName": "callme_re_ent7",
+          "argTypes": []
+        }
+      ],
+      "exp": "msg.sender.send(10000000000000000000)",
+      "status": "unproven"
+    },
+    {
+      "no": "27",
+      "kind": "ETH_LEAK",
+      "line": 312,
+      "signatures": [
+        {
+          "contractName": "WhiteBetting",
+          "methodName": "buyTicket_re_ent23",
+          "argTypes": []
+        }
+      ],
+      "exp": "lastPlayer_re_ent23.send(jackpot_re_ent23)",
+      "status": "unproven"
+    },
+    {
+      "no": "28",
+      "kind": "ETH_LEAK",
+      "line": 325,
+      "signatures": [
+        {
+          "contractName": "WhiteBetting",
+          "methodName": "callme_re_ent14",
+          "argTypes": []
+        }
+      ],
+      "exp": "msg.sender.send(10000000000000000000)",
+      "status": "unproven"
+    },
+    {
+      "no": "29",
+      "kind": "ETH_LEAK",
+      "line": 338,
+      "signatures": [
+        {
+          "contractName": "WhiteBetting",
+          "methodName": "buyTicket_re_ent30",
+          "argTypes": []
+        }
+      ],
+      "exp": "lastPlayer_re_ent30.send(jackpot_re_ent30)",
+      "status": "unproven"
+    },
+    {
+      "no": "30",
+      "kind": "ETH_LEAK",
+      "line": 346,
+      "signatures": [
+        {
+          "contractName": "WhiteBetting",
+          "methodName": "@fallback",
+          "argTypes": []
+        }
+      ],
+      "exp": "owner.transfer(msg.value);",
+      "status": "proven"
+    },
+    {
+      "no": "31",
+      "kind": "ETH_LEAK",
+      "line": 350,
+      "signatures": [
+        {
+          "contractName": "WhiteBetting",
+          "methodName": "withdraw_balances_re_ent8",
+          "argTypes": []
+        }
+      ],
+      "exp": "(success,  ) = msg.sender.call.value(balances_re_ent8[msg.sender])(\"\");",
+      "status": "unproven"
+    },
+    {
+      "no": "32",
+      "kind": "ETH_LEAK",
+      "line": 358,
+      "signatures": [
+        {
+          "contractName": "WhiteBetting",
+          "methodName": "withdraw",
+          "argTypes": [ "uint256" ]
+        }
+      ],
+      "exp": "owner.transfer(_amount);",
+      "status": "proven"
+    },
+    {
+      "no": "33",
+      "kind": "ETH_LEAK",
+      "line": 366,
+      "signatures": [
+        {
+          "contractName": "WhiteBetting",
+          "methodName": "claimReward_re_ent39",
+          "argTypes": []
+        }
+      ],
+      "exp": "msg.sender.transfer(transferValue_re_ent39);",
+      "status": "unproven"
+    }
+  ]
+}

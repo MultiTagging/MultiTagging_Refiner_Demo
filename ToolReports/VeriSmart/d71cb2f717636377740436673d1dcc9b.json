@@ -1,0 +1,37 @@
+{
+  "fileName": "Benchmarks/Study_SamplesSet/d71cb2f717636377740436673d1dcc9b.sol",
+  "baseName": "d71cb2f717636377740436673d1dcc9b.sol",
+  "iter": 129,
+  "time": "300.47177",
+  "errMsg": null,
+  "result": [
+    {
+      "no": "1",
+      "kind": "IO",
+      "line": 19,
+      "signatures": [
+        {
+          "contractName": "Gray_refunder",
+          "methodName": "refundOne",
+          "argTypes": []
+        }
+      ],
+      "exp": "(x + 1)",
+      "status": "proven"
+    },
+    {
+      "no": "2",
+      "kind": "ETH_LEAK",
+      "line": 25,
+      "signatures": [
+        {
+          "contractName": "Gray_refunder",
+          "methodName": "refundOne",
+          "argTypes": []
+        }
+      ],
+      "exp": "msg.sender.transfer(refunds[msg.sender]);",
+      "status": "unproven"
+    }
+  ]
+}

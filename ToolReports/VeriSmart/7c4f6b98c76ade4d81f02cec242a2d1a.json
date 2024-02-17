@@ -1,0 +1,93 @@
+{
+  "fileName": "Benchmarks/Study_SamplesSet/7c4f6b98c76ade4d81f02cec242a2d1a.sol",
+  "baseName": "7c4f6b98c76ade4d81f02cec242a2d1a.sol",
+  "iter": 778,
+  "time": "300.093479",
+  "errMsg": null,
+  "result": [
+    {
+      "no": "1",
+      "kind": "IO",
+      "line": 210,
+      "signatures": [
+        {
+          "contractName": "FeeTransactionManager",
+          "methodName": "execute",
+          "argTypes": [ "address", "uint256", "uint256", "dbytes" ]
+        }
+      ],
+      "exp": "(_guardCounter + 1)",
+      "status": "unproven"
+    },
+    {
+      "no": "2",
+      "kind": "ETH_LEAK",
+      "line": 97,
+      "signatures": [
+        {
+          "contractName": "FeeTransactionManager",
+          "methodName": "withdrawAll_txorigin38",
+          "argTypes": [ "address", "address" ]
+        }
+      ],
+      "exp": "_recipient.transfer(address(this).balance);",
+      "status": "unproven"
+    },
+    {
+      "no": "3",
+      "kind": "ETH_LEAK",
+      "line": 116,
+      "signatures": [
+        {
+          "contractName": "FeeTransactionManager",
+          "methodName": "withdrawAll_txorigin14",
+          "argTypes": [ "address", "address" ]
+        }
+      ],
+      "exp": "_recipient.transfer(address(this).balance);",
+      "status": "unproven"
+    },
+    {
+      "no": "4",
+      "kind": "ETH_LEAK",
+      "line": 127,
+      "signatures": [
+        {
+          "contractName": "FeeTransactionManager",
+          "methodName": "withdrawAll_txorigin30",
+          "argTypes": [ "address", "address" ]
+        }
+      ],
+      "exp": "_recipient.transfer(address(this).balance);",
+      "status": "unproven"
+    },
+    {
+      "no": "5",
+      "kind": "ETH_LEAK",
+      "line": 232,
+      "signatures": [
+        {
+          "contractName": "FeeTransactionManager",
+          "methodName": "sendto_txorigin13",
+          "argTypes": [ "address", "uint256", "address" ]
+        }
+      ],
+      "exp": "receiver.transfer(amount);",
+      "status": "unproven"
+    },
+    {
+      "no": "6",
+      "kind": "ETH_LEAK",
+      "line": 265,
+      "signatures": [
+        {
+          "contractName": "FeeTransactionManager",
+          "methodName": "sendto_txorigin33",
+          "argTypes": [ "address", "uint256", "address" ]
+        }
+      ],
+      "exp": "receiver.transfer(amount);",
+      "status": "unproven"
+    }
+  ]
+}

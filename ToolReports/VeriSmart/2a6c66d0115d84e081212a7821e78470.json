@@ -1,0 +1,107 @@
+{
+  "fileName": "Benchmarks/Study_SamplesSet/2a6c66d0115d84e081212a7821e78470.sol",
+  "baseName": "2a6c66d0115d84e081212a7821e78470.sol",
+  "iter": 9,
+  "time": "5.037745",
+  "errMsg": null,
+  "result": [
+    {
+      "no": "1",
+      "kind": "IO",
+      "line": 48,
+      "signatures": [
+        {
+          "contractName": "ERH",
+          "methodName": "transfer",
+          "argTypes": [ "address", "uint256" ]
+        }
+      ],
+      "exp": "(balances[msg.sender] - _value)",
+      "status": "proven"
+    },
+    {
+      "no": "2",
+      "kind": "IO",
+      "line": 51,
+      "signatures": [
+        {
+          "contractName": "ERH",
+          "methodName": "transfer",
+          "argTypes": [ "address", "uint256" ]
+        }
+      ],
+      "exp": "(balances[_to] + _value)",
+      "status": "proven"
+    },
+    {
+      "no": "3",
+      "kind": "IO",
+      "line": 72,
+      "signatures": [
+        {
+          "contractName": "ERH",
+          "methodName": "transferFrom",
+          "argTypes": [ "address", "address", "uint256" ]
+        }
+      ],
+      "exp": "(balances[_to] + _value)",
+      "status": "proven"
+    },
+    {
+      "no": "4",
+      "kind": "IO",
+      "line": 75,
+      "signatures": [
+        {
+          "contractName": "ERH",
+          "methodName": "transferFrom",
+          "argTypes": [ "address", "address", "uint256" ]
+        }
+      ],
+      "exp": "(balances[_from] - _value)",
+      "status": "proven"
+    },
+    {
+      "no": "5",
+      "kind": "IO",
+      "line": 78,
+      "signatures": [
+        {
+          "contractName": "ERH",
+          "methodName": "transferFrom",
+          "argTypes": [ "address", "address", "uint256" ]
+        }
+      ],
+      "exp": "(allowed[_from][msg.sender] - _value)",
+      "status": "proven"
+    },
+    {
+      "no": "6",
+      "kind": "IO",
+      "line": 134,
+      "signatures": [
+        {
+          "contractName": "ERH",
+          "methodName": "ERH",
+          "argTypes": [ "address" ]
+        }
+      ],
+      "exp": "(10 ** decimals)",
+      "status": "proven"
+    },
+    {
+      "no": "7",
+      "kind": "IO",
+      "line": 134,
+      "signatures": [
+        {
+          "contractName": "ERH",
+          "methodName": "ERH",
+          "argTypes": [ "address" ]
+        }
+      ],
+      "exp": "(10000000000 * (10 ** decimals))",
+      "status": "proven"
+    }
+  ]
+}
