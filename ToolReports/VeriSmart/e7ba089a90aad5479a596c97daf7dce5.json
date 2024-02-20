@@ -1,0 +1,140 @@
+{
+  "fileName": "Benchmarks/Study_SamplesSet/e7ba089a90aad5479a596c97daf7dce5.sol",
+  "baseName": "e7ba089a90aad5479a596c97daf7dce5.sol",
+  "iter": 36,
+  "time": "36.796314",
+  "errMsg": null,
+  "result": [
+    {
+      "no": "1",
+      "kind": "IO",
+      "line": 46,
+      "signatures": [
+        {
+          "contractName": "CreditDepositBank",
+          "methodName": "@fallback",
+          "argTypes": []
+        },
+        {
+          "contractName": "CreditDepositBank",
+          "methodName": "deposit",
+          "argTypes": []
+        }
+      ],
+      "exp": "(balances[msg.sender] + msg.value)",
+      "status": "unproven"
+    },
+    {
+      "no": "2",
+      "kind": "IO",
+      "line": 58,
+      "signatures": [
+        {
+          "contractName": "CreditDepositBank",
+          "methodName": "credit",
+          "argTypes": []
+        }
+      ],
+      "exp": "(balances[msg.sender] - (this.balance + msg.value))",
+      "status": "unproven"
+    },
+    {
+      "no": "3",
+      "kind": "IO",
+      "line": 58,
+      "signatures": [
+        {
+          "contractName": "CreditDepositBank",
+          "methodName": "credit",
+          "argTypes": []
+        }
+      ],
+      "exp": "(this.balance + msg.value)",
+      "status": "unproven"
+    },
+    {
+      "no": "4",
+      "kind": "IO",
+      "line": 59,
+      "signatures": [
+        {
+          "contractName": "CreditDepositBank",
+          "methodName": "credit",
+          "argTypes": []
+        }
+      ],
+      "exp": "(this.balance + msg.value)",
+      "status": "unproven"
+    },
+    {
+      "no": "5",
+      "kind": "KA",
+      "line": 66,
+      "signatures": [
+        {
+          "contractName": "CreditDepositBank",
+          "methodName": "close",
+          "argTypes": []
+        }
+      ],
+      "exp": "selfdestruct(manager);",
+      "status": "proven"
+    },
+    {
+      "no": "6",
+      "kind": "ETH_LEAK",
+      "line": 53,
+      "signatures": [
+        {
+          "contractName": "CreditDepositBank",
+          "methodName": "withdraw",
+          "argTypes": [ "address" ]
+        }
+      ],
+      "exp": "msg.sender.send(balances[client]);",
+      "status": "proven"
+    },
+    {
+      "no": "7",
+      "kind": "ETH_LEAK",
+      "line": 59,
+      "signatures": [
+        {
+          "contractName": "CreditDepositBank",
+          "methodName": "credit",
+          "argTypes": []
+        }
+      ],
+      "exp": "msg.sender.send((this.balance + msg.value));",
+      "status": "proven"
+    },
+    {
+      "no": "8",
+      "kind": "ETH_LEAK",
+      "line": 64,
+      "signatures": [
+        {
+          "contractName": "CreditDepositBank",
+          "methodName": "close",
+          "argTypes": []
+        }
+      ],
+      "exp": "manager.send(this.balance);",
+      "status": "proven"
+    },
+    {
+      "no": "9",
+      "kind": "ETH_LEAK",
+      "line": 66,
+      "signatures": [
+        {
+          "contractName": "CreditDepositBank",
+          "methodName": "close",
+          "argTypes": []
+        }
+      ],
+      "exp": "selfdestruct(manager);",
+      "status": "proven"
+    }
+  ]
+}

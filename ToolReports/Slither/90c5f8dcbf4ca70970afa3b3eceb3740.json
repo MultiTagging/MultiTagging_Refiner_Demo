@@ -1,0 +1,1954 @@
+{
+  "success": true,
+  "error": null,
+  "results": {
+    "detectors": [
+      {
+        "elements": [
+          {
+            "type": "contract",
+            "name": "Seglos",
+            "source_mapping": {
+              "start": 25,
+              "length": 5024,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            }
+          },
+          {
+            "type": "node",
+            "name": "Timestamp.push(_time)",
+            "source_mapping": {
+              "start": 1446,
+              "length": 21,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "setPrice",
+                "source_mapping": {
+                  "start": 1313,
+                  "length": 190,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "Seglos",
+                    "source_mapping": {
+                      "start": 25,
+                      "length": 5024,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "setPrice(uint256,uint256)"
+                }
+              }
+            }
+          }
+        ],
+        "description": "Seglos () contract sets array length with a user-controlled value:\n\t- Timestamp.push(_time) ()\n",
+        "markdown": "[Seglos]() contract sets array length with a user-controlled value:\n\t- [Timestamp.push(_time)]()\n",
+        "first_markdown_element": "",
+        "id": "38be882091a745b00dec731ae89401163f294f5a863375ff42892501cfa573e6",
+        "check": "controlled-array-length",
+        "impact": "High",
+        "confidence": "Medium"
+      },
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "exitTrade",
+            "source_mapping": {
+              "start": 4299,
+              "length": 709,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "Seglos",
+                "source_mapping": {
+                  "start": 25,
+                  "length": 5024,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              },
+              "signature": "exitTrade(uint256)"
+            }
+          },
+          {
+            "type": "node",
+            "name": "Price[currentTimestamp()] <= trade.lock * (1 / trade.lev)",
+            "source_mapping": {
+              "start": 4653,
+              "length": 53,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "exitTrade",
+                "source_mapping": {
+                  "start": 4299,
+                  "length": 709,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "Seglos",
+                    "source_mapping": {
+                      "start": 25,
+                      "length": 5024,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "exitTrade(uint256)"
+                }
+              }
+            }
+          }
+        ],
+        "description": "Seglos.exitTrade(uint256) () performs a multiplication on the result of a division:\n\t- Price[currentTimestamp()] <= trade.lock * (1 / trade.lev) ()\n",
+        "markdown": "[Seglos.exitTrade(uint256)]() performs a multiplication on the result of a division:\n\t- [Price[currentTimestamp()] <= trade.lock * (1 / trade.lev)]()\n",
+        "first_markdown_element": "",
+        "id": "0a588ac823c92bf0452661058288192b2500f45a27293dc4a945e5f9684380c7",
+        "check": "divide-before-multiply",
+        "impact": "Medium",
+        "confidence": "Medium"
+      },
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "depositOffer",
+            "source_mapping": {
+              "start": 1686,
+              "length": 129,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "Seglos",
+                "source_mapping": {
+                  "start": 25,
+                  "length": 5024,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              },
+              "signature": "depositOffer()"
+            }
+          },
+          {
+            "type": "node",
+            "name": "offerPool = offerPool + msg.value",
+            "source_mapping": {
+              "start": 1775,
+              "length": 33,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "depositOffer",
+                "source_mapping": {
+                  "start": 1686,
+                  "length": 129,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "Seglos",
+                    "source_mapping": {
+                      "start": 25,
+                      "length": 5024,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "depositOffer()"
+                }
+              }
+            }
+          }
+        ],
+        "description": "Seglos.depositOffer() () should emit an event for: \n\t- offerPool = offerPool + msg.value () \n",
+        "markdown": "[Seglos.depositOffer()]() should emit an event for: \n\t- [offerPool = offerPool + msg.value]() \n",
+        "first_markdown_element": "",
+        "id": "3b5404eaaa430ea22dbf710d49fa50c94718a4140edbda799fc340572841ffb6",
+        "check": "events-maths",
+        "impact": "Low",
+        "confidence": "Medium"
+      },
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "setFee",
+            "source_mapping": {
+              "start": 1509,
+              "length": 171,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "Seglos",
+                "source_mapping": {
+                  "start": 25,
+                  "length": 5024,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              },
+              "signature": "setFee(uint256)"
+            }
+          },
+          {
+            "type": "node",
+            "name": "Fee = _fee",
+            "source_mapping": {
+              "start": 1663,
+              "length": 10,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "setFee",
+                "source_mapping": {
+                  "start": 1509,
+                  "length": 171,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "Seglos",
+                    "source_mapping": {
+                      "start": 25,
+                      "length": 5024,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "setFee(uint256)"
+                }
+              }
+            }
+          }
+        ],
+        "description": "Seglos.setFee(uint256) () should emit an event for: \n\t- Fee = _fee () \n",
+        "markdown": "[Seglos.setFee(uint256)]() should emit an event for: \n\t- [Fee = _fee]() \n",
+        "first_markdown_element": "",
+        "id": "4bb65d67cdf468ffc726dfd22bb8da64630726d98f7e57d4f5f0a338b4aa1546",
+        "check": "events-maths",
+        "impact": "Low",
+        "confidence": "Medium"
+      },
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "withdrawOffer",
+            "source_mapping": {
+              "start": 1821,
+              "length": 219,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "Seglos",
+                "source_mapping": {
+                  "start": 25,
+                  "length": 5024,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              },
+              "signature": "withdrawOffer(uint256)"
+            }
+          },
+          {
+            "type": "node",
+            "name": "offerPool = offerPool - _eth",
+            "source_mapping": {
+              "start": 1932,
+              "length": 28,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "withdrawOffer",
+                "source_mapping": {
+                  "start": 1821,
+                  "length": 219,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "Seglos",
+                    "source_mapping": {
+                      "start": 25,
+                      "length": 5024,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "withdrawOffer(uint256)"
+                }
+              }
+            }
+          }
+        ],
+        "description": "Seglos.withdrawOffer(uint256) () should emit an event for: \n\t- offerPool = offerPool - _eth () \n",
+        "markdown": "[Seglos.withdrawOffer(uint256)]() should emit an event for: \n\t- [offerPool = offerPool - _eth]() \n",
+        "first_markdown_element": "",
+        "id": "f87ec9f5168cc2b306b8232f9f242570a899239e66659862691ca1626cd92ae5",
+        "check": "events-maths",
+        "impact": "Low",
+        "confidence": "Medium"
+      },
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "exitTrade",
+            "source_mapping": {
+              "start": 4299,
+              "length": 709,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "Seglos",
+                "source_mapping": {
+                  "start": 25,
+                  "length": 5024,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              },
+              "signature": "exitTrade(uint256)"
+            }
+          },
+          {
+            "type": "node",
+            "name": "msg.sender == trade.trader && now < trade.time + 21600",
+            "source_mapping": {
+              "start": 4398,
+              "length": 56,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "exitTrade",
+                "source_mapping": {
+                  "start": 4299,
+                  "length": 709,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "Seglos",
+                    "source_mapping": {
+                      "start": 25,
+                      "length": 5024,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "exitTrade(uint256)"
+                }
+              }
+            }
+          },
+          {
+            "type": "node",
+            "name": "now > trade.time + 21600",
+            "source_mapping": {
+              "start": 4514,
+              "length": 26,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "exitTrade",
+                "source_mapping": {
+                  "start": 4299,
+                  "length": 709,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "Seglos",
+                    "source_mapping": {
+                      "start": 25,
+                      "length": 5024,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "exitTrade(uint256)"
+                }
+              }
+            }
+          }
+        ],
+        "description": "Seglos.exitTrade(uint256) () uses timestamp for comparisons\n\tDangerous comparisons:\n\t- msg.sender == trade.trader && now < trade.time + 21600 ()\n\t- now > trade.time + 21600 ()\n",
+        "markdown": "[Seglos.exitTrade(uint256)]() uses timestamp for comparisons\n\tDangerous comparisons:\n\t- [msg.sender == trade.trader && now < trade.time + 21600]()\n\t- [now > trade.time + 21600]()\n",
+        "first_markdown_element": "",
+        "id": "63161c356076f5ec0702009ad1e90153c802925e25d2d94f8a2ff10cd37d12ce",
+        "check": "timestamp",
+        "impact": "Low",
+        "confidence": "Medium"
+      },
+      {
+        "elements": [
+          {
+            "type": "node",
+            "name": "",
+            "source_mapping": {
+              "start": 1275,
+              "length": 5,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "Door",
+                "source_mapping": {
+                  "start": 1120,
+                  "length": 187,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "Seglos",
+                    "source_mapping": {
+                      "start": 25,
+                      "length": 5024,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "Door(bool)"
+                }
+              }
+            }
+          }
+        ],
+        "description": "Deprecated standard detected THROW ():\n\t- Usage of \"throw\" should be replaced with \"revert()\"\n",
+        "markdown": "Deprecated standard detected [THROW]():\n\t- Usage of \"throw\" should be replaced with \"revert()\"\n",
+        "first_markdown_element": "",
+        "id": "f5556cf1c70b64b9e4b1fc32044dd970b5f2c8b9fc21b7971fda01971033f2d5",
+        "check": "deprecated-standards",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "pragma",
+            "name": "^0.4.6",
+            "source_mapping": {
+              "start": 0,
+              "length": 23,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "directive": [
+                "solidity",
+                "^",
+                "0.4",
+                ".6"
+              ]
+            }
+          }
+        ],
+        "description": "Pragma version^0.4.6 () allows old versions\n",
+        "markdown": "Pragma version[^0.4.6]() allows old versions\n",
+        "first_markdown_element": "",
+        "id": "54eae9514d5e93f8fb467cb6e12380204cb269720316b950ba80b399a769bf71",
+        "check": "solc-version",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [],
+        "description": "solc-0.4.6 is not recommended for deployment\n",
+        "markdown": "solc-0.4.6 is not recommended for deployment\n",
+        "first_markdown_element": "",
+        "id": "b2e09ce9c0c37029707bd5645a9a2972adb1c4c04948009825bacc17fa383ec8",
+        "check": "solc-version",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "_price",
+            "source_mapping": {
+              "start": 1343,
+              "length": 11,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "setPrice",
+                "source_mapping": {
+                  "start": 1313,
+                  "length": 190,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "Seglos",
+                    "source_mapping": {
+                      "start": 25,
+                      "length": 5024,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "setPrice(uint256,uint256)"
+                }
+              }
+            },
+            "additional_fields": {
+              "target": "parameter",
+              "convention": "mixedCase"
+            }
+          }
+        ],
+        "description": "Parameter Seglos.setPrice(uint256,uint256)._price () is not in mixedCase\n",
+        "markdown": "Parameter [Seglos.setPrice(uint256,uint256)._price]() is not in mixedCase\n",
+        "first_markdown_element": "",
+        "id": "011fceb1ca43eb36e48c9f047071df3da4fb786ce431be7332542809e5fe87af",
+        "check": "naming-convention",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "Timestamp",
+            "source_mapping": {
+              "start": 398,
+              "length": 23,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "Seglos",
+                "source_mapping": {
+                  "start": 25,
+                  "length": 5024,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              }
+            },
+            "additional_fields": {
+              "target": "variable",
+              "convention": "mixedCase"
+            }
+          }
+        ],
+        "description": "Variable Seglos.Timestamp () is not in mixedCase\n",
+        "markdown": "Variable [Seglos.Timestamp]() is not in mixedCase\n",
+        "first_markdown_element": "",
+        "id": "09c32e8cc28778ba7cd0238fc21a08078238f953308e43e63e16e50c536ac00a",
+        "check": "naming-convention",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "_eth",
+            "source_mapping": {
+              "start": 1844,
+              "length": 9,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "withdrawOffer",
+                "source_mapping": {
+                  "start": 1821,
+                  "length": 219,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "Seglos",
+                    "source_mapping": {
+                      "start": 25,
+                      "length": 5024,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "withdrawOffer(uint256)"
+                }
+              }
+            },
+            "additional_fields": {
+              "target": "parameter",
+              "convention": "mixedCase"
+            }
+          }
+        ],
+        "description": "Parameter Seglos.withdrawOffer(uint256)._eth () is not in mixedCase\n",
+        "markdown": "Parameter [Seglos.withdrawOffer(uint256)._eth]() is not in mixedCase\n",
+        "first_markdown_element": "",
+        "id": "0a38a6b5efe58982e014e1065681ea031c5ff8202ad6bb0951b70158570c761b",
+        "check": "naming-convention",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "_time",
+            "source_mapping": {
+              "start": 1331,
+              "length": 10,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "setPrice",
+                "source_mapping": {
+                  "start": 1313,
+                  "length": 190,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "Seglos",
+                    "source_mapping": {
+                      "start": 25,
+                      "length": 5024,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "setPrice(uint256,uint256)"
+                }
+              }
+            },
+            "additional_fields": {
+              "target": "parameter",
+              "convention": "mixedCase"
+            }
+          }
+        ],
+        "description": "Parameter Seglos.setPrice(uint256,uint256)._time () is not in mixedCase\n",
+        "markdown": "Parameter [Seglos.setPrice(uint256,uint256)._time]() is not in mixedCase\n",
+        "first_markdown_element": "",
+        "id": "1c166549ca110c79aae66feec4030009205a1fbbf5a3c04dbdb91a5d85fba9e8",
+        "check": "naming-convention",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "Open",
+            "source_mapping": {
+              "start": 65,
+              "length": 16,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "Seglos",
+                "source_mapping": {
+                  "start": 25,
+                  "length": 5024,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              }
+            },
+            "additional_fields": {
+              "target": "variable",
+              "convention": "mixedCase"
+            }
+          }
+        ],
+        "description": "Variable Seglos.Open () is not in mixedCase\n",
+        "markdown": "Variable [Seglos.Open]() is not in mixedCase\n",
+        "first_markdown_element": "",
+        "id": "2bd22b1a6a234557dc845156198599c57ba8218c8fb735263502bf5716ee81ef",
+        "check": "naming-convention",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "_door",
+            "source_mapping": {
+              "start": 1134,
+              "length": 10,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "Door",
+                "source_mapping": {
+                  "start": 1120,
+                  "length": 187,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "Seglos",
+                    "source_mapping": {
+                      "start": 25,
+                      "length": 5024,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "Door(bool)"
+                }
+              }
+            },
+            "additional_fields": {
+              "target": "parameter",
+              "convention": "mixedCase"
+            }
+          }
+        ],
+        "description": "Parameter Seglos.Door(bool)._door () is not in mixedCase\n",
+        "markdown": "Parameter [Seglos.Door(bool)._door]() is not in mixedCase\n",
+        "first_markdown_element": "",
+        "id": "5ea28d1f4ab4c68e1db45e996dfd5c13397c966cf5ec24884f476dbb10bfa83c",
+        "check": "naming-convention",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "Door",
+            "source_mapping": {
+              "start": 1120,
+              "length": 187,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "Seglos",
+                "source_mapping": {
+                  "start": 25,
+                  "length": 5024,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              },
+              "signature": "Door(bool)"
+            },
+            "additional_fields": {
+              "target": "function",
+              "convention": "mixedCase"
+            }
+          }
+        ],
+        "description": "Function Seglos.Door(bool) () is not in mixedCase\n",
+        "markdown": "Function [Seglos.Door(bool)]() is not in mixedCase\n",
+        "first_markdown_element": "",
+        "id": "63cbc392b1ace74cd390e9cc5b4ec221f1e9766a8cad9c962dc34c2347195de8",
+        "check": "naming-convention",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "Deposit",
+            "source_mapping": {
+              "start": 3024,
+              "length": 144,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "Seglos",
+                "source_mapping": {
+                  "start": 25,
+                  "length": 5024,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              },
+              "signature": "Deposit()"
+            },
+            "additional_fields": {
+              "target": "function",
+              "convention": "mixedCase"
+            }
+          }
+        ],
+        "description": "Function Seglos.Deposit() () is not in mixedCase\n",
+        "markdown": "Function [Seglos.Deposit()]() is not in mixedCase\n",
+        "first_markdown_element": "",
+        "id": "6b507970d06014ea15730fbcde174366c55246d56190cba192fc00462d704c15",
+        "check": "naming-convention",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "_eth",
+            "source_mapping": {
+              "start": 3503,
+              "length": 9,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "createTrade",
+                "source_mapping": {
+                  "start": 3482,
+                  "length": 811,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "Seglos",
+                    "source_mapping": {
+                      "start": 25,
+                      "length": 5024,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "createTrade(uint256,uint256)"
+                }
+              }
+            },
+            "additional_fields": {
+              "target": "parameter",
+              "convention": "mixedCase"
+            }
+          }
+        ],
+        "description": "Parameter Seglos.createTrade(uint256,uint256)._eth () is not in mixedCase\n",
+        "markdown": "Parameter [Seglos.createTrade(uint256,uint256)._eth]() is not in mixedCase\n",
+        "first_markdown_element": "",
+        "id": "6c8db4c002a7d1dc4f42b8556935764f95cf0a549653690d07d8823e41610de8",
+        "check": "naming-convention",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "_trade",
+            "source_mapping": {
+              "start": 2679,
+              "length": 11,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "getTrade",
+                "source_mapping": {
+                  "start": 2661,
+                  "length": 197,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "Seglos",
+                    "source_mapping": {
+                      "start": 25,
+                      "length": 5024,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "getTrade(uint256)"
+                }
+              }
+            },
+            "additional_fields": {
+              "target": "parameter",
+              "convention": "mixedCase"
+            }
+          }
+        ],
+        "description": "Parameter Seglos.getTrade(uint256)._trade () is not in mixedCase\n",
+        "markdown": "Parameter [Seglos.getTrade(uint256)._trade]() is not in mixedCase\n",
+        "first_markdown_element": "",
+        "id": "7653b2cdb011c9eea28258913d5d3acff66bf6c699d15710e32bb2633453c7a5",
+        "check": "naming-convention",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "Fee",
+            "source_mapping": {
+              "start": 87,
+              "length": 15,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "Seglos",
+                "source_mapping": {
+                  "start": 25,
+                  "length": 5024,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              }
+            },
+            "additional_fields": {
+              "target": "variable",
+              "convention": "mixedCase"
+            }
+          }
+        ],
+        "description": "Variable Seglos.Fee () is not in mixedCase\n",
+        "markdown": "Variable [Seglos.Fee]() is not in mixedCase\n",
+        "first_markdown_element": "",
+        "id": "7746d31b032bb688bba054b9ba71da7176530061dbeffe961bacfb1822b2b895",
+        "check": "naming-convention",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "_trade",
+            "source_mapping": {
+              "start": 4318,
+              "length": 11,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "exitTrade",
+                "source_mapping": {
+                  "start": 4299,
+                  "length": 709,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "Seglos",
+                    "source_mapping": {
+                      "start": 25,
+                      "length": 5024,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "exitTrade(uint256)"
+                }
+              }
+            },
+            "additional_fields": {
+              "target": "parameter",
+              "convention": "mixedCase"
+            }
+          }
+        ],
+        "description": "Parameter Seglos.exitTrade(uint256)._trade () is not in mixedCase\n",
+        "markdown": "Parameter [Seglos.exitTrade(uint256)._trade]() is not in mixedCase\n",
+        "first_markdown_element": "",
+        "id": "79bf41291503836d3f47481f185b00308ddb32a21c649a2310e83fed49776f67",
+        "check": "naming-convention",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "Withdraw",
+            "source_mapping": {
+              "start": 3174,
+              "length": 302,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "Seglos",
+                "source_mapping": {
+                  "start": 25,
+                  "length": 5024,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              },
+              "signature": "Withdraw(uint256)"
+            },
+            "additional_fields": {
+              "target": "function",
+              "convention": "mixedCase"
+            }
+          }
+        ],
+        "description": "Function Seglos.Withdraw(uint256) () is not in mixedCase\n",
+        "markdown": "Function [Seglos.Withdraw(uint256)]() is not in mixedCase\n",
+        "first_markdown_element": "",
+        "id": "7ff1a7fbaf7ecf176b4b5daae64e8d1ed9776d645428e5e2c9149fc75e9c71ae",
+        "check": "naming-convention",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "_eth",
+            "source_mapping": {
+              "start": 3192,
+              "length": 9,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "Withdraw",
+                "source_mapping": {
+                  "start": 3174,
+                  "length": 302,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "Seglos",
+                    "source_mapping": {
+                      "start": 25,
+                      "length": 5024,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "Withdraw(uint256)"
+                }
+              }
+            },
+            "additional_fields": {
+              "target": "parameter",
+              "convention": "mixedCase"
+            }
+          }
+        ],
+        "description": "Parameter Seglos.Withdraw(uint256)._eth () is not in mixedCase\n",
+        "markdown": "Parameter [Seglos.Withdraw(uint256)._eth]() is not in mixedCase\n",
+        "first_markdown_element": "",
+        "id": "90150fc622a7bf8376a953080519f18a276c4efa30d660e08f6b7cbd32a734dc",
+        "check": "naming-convention",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "Admin",
+            "source_mapping": {
+              "start": 46,
+              "length": 13,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "Seglos",
+                "source_mapping": {
+                  "start": 25,
+                  "length": 5024,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              }
+            },
+            "additional_fields": {
+              "target": "variable",
+              "convention": "mixedCase"
+            }
+          }
+        ],
+        "description": "Variable Seglos.Admin () is not in mixedCase\n",
+        "markdown": "Variable [Seglos.Admin]() is not in mixedCase\n",
+        "first_markdown_element": "",
+        "id": "e95e23f993707e944f7d326563193bc69083e4954466f2bb8298cb2ef6370c11",
+        "check": "naming-convention",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "Price",
+            "source_mapping": {
+              "start": 917,
+              "length": 38,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "Seglos",
+                "source_mapping": {
+                  "start": 25,
+                  "length": 5024,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              }
+            },
+            "additional_fields": {
+              "target": "variable",
+              "convention": "mixedCase"
+            }
+          }
+        ],
+        "description": "Variable Seglos.Price () is not in mixedCase\n",
+        "markdown": "Variable [Seglos.Price]() is not in mixedCase\n",
+        "first_markdown_element": "",
+        "id": "ee16ff8dc0dc56733bccfff8ec11d003a612bd13c6ef8ca4dfbb1807c65b3946",
+        "check": "naming-convention",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "_timestamp",
+            "source_mapping": {
+              "start": 2244,
+              "length": 15,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "getPrice",
+                "source_mapping": {
+                  "start": 2226,
+                  "length": 125,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "Seglos",
+                    "source_mapping": {
+                      "start": 25,
+                      "length": 5024,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "getPrice(uint256)"
+                }
+              }
+            },
+            "additional_fields": {
+              "target": "parameter",
+              "convention": "mixedCase"
+            }
+          }
+        ],
+        "description": "Parameter Seglos.getPrice(uint256)._timestamp () is not in mixedCase\n",
+        "markdown": "Parameter [Seglos.getPrice(uint256)._timestamp]() is not in mixedCase\n",
+        "first_markdown_element": "",
+        "id": "f42aa7051bcfcc953dc72020a248a217c226b8069fb9e23692e1c0ef4eae1405",
+        "check": "naming-convention",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "_lev",
+            "source_mapping": {
+              "start": 3514,
+              "length": 9,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "createTrade",
+                "source_mapping": {
+                  "start": 3482,
+                  "length": 811,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "Seglos",
+                    "source_mapping": {
+                      "start": 25,
+                      "length": 5024,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "createTrade(uint256,uint256)"
+                }
+              }
+            },
+            "additional_fields": {
+              "target": "parameter",
+              "convention": "mixedCase"
+            }
+          }
+        ],
+        "description": "Parameter Seglos.createTrade(uint256,uint256)._lev () is not in mixedCase\n",
+        "markdown": "Parameter [Seglos.createTrade(uint256,uint256)._lev]() is not in mixedCase\n",
+        "first_markdown_element": "",
+        "id": "f7486a4bb07c880064e71a154f85cfe9cf159ed1c7aa67e2cbfc57200b0185a5",
+        "check": "naming-convention",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "_fee",
+            "source_mapping": {
+              "start": 1525,
+              "length": 9,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "setFee",
+                "source_mapping": {
+                  "start": 1509,
+                  "length": 171,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "Seglos",
+                    "source_mapping": {
+                      "start": 25,
+                      "length": 5024,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "setFee(uint256)"
+                }
+              }
+            },
+            "additional_fields": {
+              "target": "parameter",
+              "convention": "mixedCase"
+            }
+          }
+        ],
+        "description": "Parameter Seglos.setFee(uint256)._fee () is not in mixedCase\n",
+        "markdown": "Parameter [Seglos.setFee(uint256)._fee]() is not in mixedCase\n",
+        "first_markdown_element": "",
+        "id": "fcf34ca3b745b0aeb7daf55304db3f02a2df1446d946d0675386e3b6172e225d",
+        "check": "naming-convention",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "withdrawFee",
+            "source_mapping": {
+              "start": 2046,
+              "length": 174,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "Seglos",
+                "source_mapping": {
+                  "start": 25,
+                  "length": 5024,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              },
+              "signature": "withdrawFee()"
+            }
+          },
+          {
+            "type": "node",
+            "name": "sent = msg.sender.send(feePool)",
+            "source_mapping": {
+              "start": 2126,
+              "length": 36,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "withdrawFee",
+                "source_mapping": {
+                  "start": 2046,
+                  "length": 174,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "Seglos",
+                    "source_mapping": {
+                      "start": 25,
+                      "length": 5024,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "withdrawFee()"
+                }
+              }
+            },
+            "additional_fields": {
+              "underlying_type": "external_calls"
+            }
+          },
+          {
+            "type": "node",
+            "name": "feePool = 0",
+            "source_mapping": {
+              "start": 2170,
+              "length": 11,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "withdrawFee",
+                "source_mapping": {
+                  "start": 2046,
+                  "length": 174,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "Seglos",
+                    "source_mapping": {
+                      "start": 25,
+                      "length": 5024,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "withdrawFee()"
+                }
+              }
+            },
+            "additional_fields": {
+              "underlying_type": "variables_written",
+              "variable_name": "feePool"
+            }
+          }
+        ],
+        "description": "Reentrancy in Seglos.withdrawFee() ():\n\tExternal calls:\n\t- sent = msg.sender.send(feePool) ()\n\tState variables written after the call(s):\n\t- feePool = 0 ()\n",
+        "markdown": "Reentrancy in [Seglos.withdrawFee()]():\n\tExternal calls:\n\t- [sent = msg.sender.send(feePool)]()\n\tState variables written after the call(s):\n\t- [feePool = 0]()\n",
+        "first_markdown_element": "",
+        "id": "4a8edbd89f4a79f3561dacc51dc7c14d34cddfb621b7c1898c8d8814b41dfa2c",
+        "check": "reentrancy-unlimited-gas",
+        "impact": "Informational",
+        "confidence": "Medium"
+      }
+    ]
+  }
+}

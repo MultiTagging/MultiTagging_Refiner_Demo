@@ -1,0 +1,924 @@
+{
+  "success": true,
+  "error": null,
+  "results": {
+    "detectors": [
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "transferOwner",
+            "source_mapping": {
+              "start": 203,
+              "length": 91,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "Registrar",
+                "source_mapping": {
+                  "start": 26,
+                  "length": 2648,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              },
+              "signature": "transferOwner(address)"
+            }
+          },
+          {
+            "type": "node",
+            "name": "owner = newOwner",
+            "source_mapping": {
+              "start": 271,
+              "length": 16,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "transferOwner",
+                "source_mapping": {
+                  "start": 203,
+                  "length": 91,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "Registrar",
+                    "source_mapping": {
+                      "start": 26,
+                      "length": 2648,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "transferOwner(address)"
+                }
+              }
+            }
+          }
+        ],
+        "description": "Registrar.transferOwner(address) () should emit an event for: \n\t- owner = newOwner () \n",
+        "markdown": "[Registrar.transferOwner(address)]() should emit an event for: \n\t- [owner = newOwner]() \n",
+        "first_markdown_element": "",
+        "id": "f5d72a76341c7b90231912285d2219d6e0986696b59be74b639713d4d9a1cf29",
+        "check": "events-access",
+        "impact": "Low",
+        "confidence": "Medium"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "newOwner",
+            "source_mapping": {
+              "start": 226,
+              "length": 16,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "transferOwner",
+                "source_mapping": {
+                  "start": 203,
+                  "length": 91,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "Registrar",
+                    "source_mapping": {
+                      "start": 26,
+                      "length": 2648,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "transferOwner(address)"
+                }
+              }
+            }
+          },
+          {
+            "type": "node",
+            "name": "owner = newOwner",
+            "source_mapping": {
+              "start": 271,
+              "length": 16,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "transferOwner",
+                "source_mapping": {
+                  "start": 203,
+                  "length": 91,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "Registrar",
+                    "source_mapping": {
+                      "start": 26,
+                      "length": 2648,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "transferOwner(address)"
+                }
+              }
+            }
+          }
+        ],
+        "description": "Registrar.transferOwner(address).newOwner () lacks a zero-check on :\n\t\t- owner = newOwner ()\n",
+        "markdown": "[Registrar.transferOwner(address).newOwner]() lacks a zero-check on :\n\t\t- [owner = newOwner]()\n",
+        "first_markdown_element": "",
+        "id": "4c4c60d93d00b4c01dd3d8b0a10667cf9df9b8a283479666e8e7b0fd5eaf3275",
+        "check": "missing-zero-check",
+        "impact": "Low",
+        "confidence": "Medium"
+      },
+      {
+        "elements": [
+          {
+            "type": "node",
+            "name": "valueHash = sha3()(value)",
+            "source_mapping": {
+              "start": 2416,
+              "length": 31,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "setString",
+                "source_mapping": {
+                  "start": 2344,
+                  "length": 181,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "Registrar",
+                    "source_mapping": {
+                      "start": 26,
+                      "length": 2648,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "setString(string,string)"
+                }
+              }
+            }
+          }
+        ],
+        "description": "Deprecated standard detected valueHash = sha3()(value) ():\n\t- Usage of \"sha3()\" should be replaced with \"keccak256()\"\n",
+        "markdown": "Deprecated standard detected [valueHash = sha3()(value)]():\n\t- Usage of \"sha3()\" should be replaced with \"keccak256()\"\n",
+        "first_markdown_element": "",
+        "id": "805231743b2f5cad8e012efb40378cf2986d7e3484941e5a54575a23bdde3c9f",
+        "check": "deprecated-standards",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "node",
+            "name": "_key = sha3()(key)",
+            "source_mapping": {
+              "start": 687,
+              "length": 24,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "set",
+                "source_mapping": {
+                  "start": 580,
+                  "length": 230,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "Registrar",
+                    "source_mapping": {
+                      "start": 26,
+                      "length": 2648,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "set(string,bytes32)"
+                }
+              }
+            }
+          }
+        ],
+        "description": "Deprecated standard detected _key = sha3()(key) ():\n\t- Usage of \"sha3()\" should be replaced with \"keccak256()\"\n",
+        "markdown": "Deprecated standard detected [_key = sha3()(key)]():\n\t- Usage of \"sha3()\" should be replaced with \"keccak256()\"\n",
+        "first_markdown_element": "",
+        "id": "c5c8eb5cb89b5ff95d7600febe80da187bc093763666cde5708c3634dfb99b43",
+        "check": "deprecated-standards",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "node",
+            "name": "",
+            "source_mapping": {
+              "start": 1078,
+              "length": 5,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "get",
+                "source_mapping": {
+                  "start": 816,
+                  "length": 433,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "Registrar",
+                    "source_mapping": {
+                      "start": 26,
+                      "length": 2648,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "get(string)"
+                }
+              }
+            }
+          }
+        ],
+        "description": "Deprecated standard detected THROW ():\n\t- Usage of \"throw\" should be replaced with \"revert()\"\n",
+        "markdown": "Deprecated standard detected [THROW]():\n\t- Usage of \"throw\" should be replaced with \"revert()\"\n",
+        "first_markdown_element": "",
+        "id": "f5556cf1c70b64b9e4b1fc32044dd970b5f2c8b9fc21b7971fda01971033f2d5",
+        "check": "deprecated-standards",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [],
+        "description": "solc-0.4.0 is not recommended for deployment\n",
+        "markdown": "solc-0.4.0 is not recommended for deployment\n",
+        "first_markdown_element": "",
+        "id": "e676d9e89e623fa7675baecce41eb7ab21d1d8ec9e856bc5b047e6cfb50b37ca",
+        "check": "solc-version",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "pragma",
+            "name": "^0.4.0",
+            "source_mapping": {
+              "start": 0,
+              "length": 23,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "directive": [
+                "solidity",
+                "^",
+                "0.4",
+                ".0"
+              ]
+            }
+          }
+        ],
+        "description": "Pragma version^0.4.0 () allows old versions\n",
+        "markdown": "Pragma version[^0.4.0]() allows old versions\n",
+        "first_markdown_element": "",
+        "id": "f4d0f96f990510a571c7ae954763f848d217d6f86fa5953d251f28f5221969e2",
+        "check": "solc-version",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "getInt",
+            "source_mapping": {
+              "start": 1952,
+              "length": 88,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "Registrar",
+                "source_mapping": {
+                  "start": 26,
+                  "length": 2648,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              },
+              "signature": "getInt(string)"
+            }
+          }
+        ],
+        "description": "getInt(string) should be declared external:\n\t- Registrar.getInt(string) ()\n",
+        "markdown": "getInt(string) should be declared external:\n\t- [Registrar.getInt(string)]()\n",
+        "first_markdown_element": "",
+        "id": "04c04c2e9b182ba8b86f9fda8ab334199c39ebda8985b11dfbfd3c9cbb9cd4d8",
+        "check": "external-function",
+        "impact": "Optimization",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "setString",
+            "source_mapping": {
+              "start": 2344,
+              "length": 181,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "Registrar",
+                "source_mapping": {
+                  "start": 26,
+                  "length": 2648,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              },
+              "signature": "setString(string,string)"
+            }
+          }
+        ],
+        "description": "setString(string,string) should be declared external:\n\t- Registrar.setString(string,string) ()\n",
+        "markdown": "setString(string,string) should be declared external:\n\t- [Registrar.setString(string,string)]()\n",
+        "first_markdown_element": "",
+        "id": "072cd5d5f9e1fed9f732319272e2398796881506028df906fdcce331b8a38a32",
+        "check": "external-function",
+        "impact": "Optimization",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "setInt",
+            "source_mapping": {
+              "start": 1849,
+              "length": 97,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "Registrar",
+                "source_mapping": {
+                  "start": 26,
+                  "length": 2648,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              },
+              "signature": "setInt(string,int256)"
+            }
+          }
+        ],
+        "description": "setInt(string,int256) should be declared external:\n\t- Registrar.setInt(string,int256) ()\n",
+        "markdown": "setInt(string,int256) should be declared external:\n\t- [Registrar.setInt(string,int256)]()\n",
+        "first_markdown_element": "",
+        "id": "1039c5c0a2b3abd6a46d142584457dd33a432f79e444d3d8a1ba0f92e0439eed",
+        "check": "external-function",
+        "impact": "Optimization",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "exists",
+            "source_mapping": {
+              "start": 1255,
+              "length": 169,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "Registrar",
+                "source_mapping": {
+                  "start": 26,
+                  "length": 2648,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              },
+              "signature": "exists(string)"
+            }
+          }
+        ],
+        "description": "exists(string) should be declared external:\n\t- Registrar.exists(string) ()\n",
+        "markdown": "exists(string) should be declared external:\n\t- [Registrar.exists(string)]()\n",
+        "first_markdown_element": "",
+        "id": "242d494d453f78c2e75cad018157c3c28c1bcffd41bdbf76ec2157ad6568a552",
+        "check": "external-function",
+        "impact": "Optimization",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "setAddress",
+            "source_mapping": {
+              "start": 1430,
+              "length": 105,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "Registrar",
+                "source_mapping": {
+                  "start": 26,
+                  "length": 2648,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              },
+              "signature": "setAddress(string,address)"
+            }
+          }
+        ],
+        "description": "setAddress(string,address) should be declared external:\n\t- Registrar.setAddress(string,address) ()\n",
+        "markdown": "setAddress(string,address) should be declared external:\n\t- [Registrar.setAddress(string,address)]()\n",
+        "first_markdown_element": "",
+        "id": "2438c7f0c5f37648818f7fabde51afbc39241a62b0641d88994c4a7e63a9fc1a",
+        "check": "external-function",
+        "impact": "Optimization",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "setBool",
+            "source_mapping": {
+              "start": 2046,
+              "length": 185,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "Registrar",
+                "source_mapping": {
+                  "start": 26,
+                  "length": 2648,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              },
+              "signature": "setBool(string,bool)"
+            }
+          }
+        ],
+        "description": "setBool(string,bool) should be declared external:\n\t- Registrar.setBool(string,bool) ()\n",
+        "markdown": "setBool(string,bool) should be declared external:\n\t- [Registrar.setBool(string,bool)]()\n",
+        "first_markdown_element": "",
+        "id": "2561e4e161d41a7d6508512936891d391837c35e36e64f8e7233ef565779fbce",
+        "check": "external-function",
+        "impact": "Optimization",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "getBool",
+            "source_mapping": {
+              "start": 2237,
+              "length": 101,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "Registrar",
+                "source_mapping": {
+                  "start": 26,
+                  "length": 2648,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              },
+              "signature": "getBool(string)"
+            }
+          }
+        ],
+        "description": "getBool(string) should be declared external:\n\t- Registrar.getBool(string) ()\n",
+        "markdown": "getBool(string) should be declared external:\n\t- [Registrar.getBool(string)]()\n",
+        "first_markdown_element": "",
+        "id": "496c9b65ef28979fae5d0927750e42e72fc15f69714bbbe6a4406f68ff5cf5c4",
+        "check": "external-function",
+        "impact": "Optimization",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "getAddress",
+            "source_mapping": {
+              "start": 1541,
+              "length": 100,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "Registrar",
+                "source_mapping": {
+                  "start": 26,
+                  "length": 2648,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              },
+              "signature": "getAddress(string)"
+            }
+          }
+        ],
+        "description": "getAddress(string) should be declared external:\n\t- Registrar.getAddress(string) ()\n",
+        "markdown": "getAddress(string) should be declared external:\n\t- [Registrar.getAddress(string)]()\n",
+        "first_markdown_element": "",
+        "id": "5cd8459dc1c93e542ff6662a2bf74dbf1f9b27b9458aa91b8b1c42f207a45fcf",
+        "check": "external-function",
+        "impact": "Optimization",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "setUInt",
+            "source_mapping": {
+              "start": 1647,
+              "length": 99,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "Registrar",
+                "source_mapping": {
+                  "start": 26,
+                  "length": 2648,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              },
+              "signature": "setUInt(string,uint256)"
+            }
+          }
+        ],
+        "description": "setUInt(string,uint256) should be declared external:\n\t- Registrar.setUInt(string,uint256) ()\n",
+        "markdown": "setUInt(string,uint256) should be declared external:\n\t- [Registrar.setUInt(string,uint256)]()\n",
+        "first_markdown_element": "",
+        "id": "749fd43217ee15ecff925a64061945d49f283c6c95ec167ebd10e1ff21e1185a",
+        "check": "external-function",
+        "impact": "Optimization",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "getString",
+            "source_mapping": {
+              "start": 2531,
+              "length": 141,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "Registrar",
+                "source_mapping": {
+                  "start": 26,
+                  "length": 2648,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              },
+              "signature": "getString(string)"
+            }
+          }
+        ],
+        "description": "getString(string) should be declared external:\n\t- Registrar.getString(string) ()\n",
+        "markdown": "getString(string) should be declared external:\n\t- [Registrar.getString(string)]()\n",
+        "first_markdown_element": "",
+        "id": "83915ac33c7515a7b993e970cf69f0b2c18fd03212f432ad5903593b5ec7fbb3",
+        "check": "external-function",
+        "impact": "Optimization",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "getUInt",
+            "source_mapping": {
+              "start": 1752,
+              "length": 91,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "Registrar",
+                "source_mapping": {
+                  "start": 26,
+                  "length": 2648,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              },
+              "signature": "getUInt(string)"
+            }
+          }
+        ],
+        "description": "getUInt(string) should be declared external:\n\t- Registrar.getUInt(string) ()\n",
+        "markdown": "getUInt(string) should be declared external:\n\t- [Registrar.getUInt(string)]()\n",
+        "first_markdown_element": "",
+        "id": "9e6d2e0c241810eff703299a124d575dcbe072f361c00f5db53d8a0c6473dd44",
+        "check": "external-function",
+        "impact": "Optimization",
+        "confidence": "High"
+      }
+    ]
+  }
+}

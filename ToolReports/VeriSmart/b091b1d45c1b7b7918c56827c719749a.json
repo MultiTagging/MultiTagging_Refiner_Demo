@@ -1,0 +1,216 @@
+{
+  "fileName": "Benchmarks/Study_SamplesSet/b091b1d45c1b7b7918c56827c719749a.sol",
+  "baseName": "b091b1d45c1b7b7918c56827c719749a.sol",
+  "iter": 734,
+  "time": "300.115233",
+  "errMsg": null,
+  "result": [
+    {
+      "no": "1",
+      "kind": "IO",
+      "line": 21,
+      "signatures": [
+        {
+          "contractName": "TokenERC20",
+          "methodName": "TokenERC20",
+          "argTypes": [ "uint256", "string", "string" ]
+        }
+      ],
+      "exp": "(10 ** uint256(tokenDecimals))",
+      "status": "proven"
+    },
+    {
+      "no": "2",
+      "kind": "IO",
+      "line": 21,
+      "signatures": [
+        {
+          "contractName": "TokenERC20",
+          "methodName": "TokenERC20",
+          "argTypes": [ "uint256", "string", "string" ]
+        }
+      ],
+      "exp": "(initialSupply * (10 ** uint256(tokenDecimals)))",
+      "status": "unproven"
+    },
+    {
+      "no": "3",
+      "kind": "IO",
+      "line": 49,
+      "signatures": [
+        {
+          "contractName": "TokenERC20",
+          "methodName": "transfer",
+          "argTypes": [ "address", "uint256" ]
+        },
+        {
+          "contractName": "TokenERC20",
+          "methodName": "transferFrom",
+          "argTypes": [ "address", "address", "uint256" ]
+        }
+      ],
+      "exp": "(tokenBalanceOf[_to] + _value)",
+      "status": "unproven"
+    },
+    {
+      "no": "4",
+      "kind": "IO",
+      "line": 51,
+      "signatures": [
+        {
+          "contractName": "TokenERC20",
+          "methodName": "transfer",
+          "argTypes": [ "address", "uint256" ]
+        },
+        {
+          "contractName": "TokenERC20",
+          "methodName": "transferFrom",
+          "argTypes": [ "address", "address", "uint256" ]
+        }
+      ],
+      "exp": "(tokenBalanceOf[_from] + tokenBalanceOf[_to])",
+      "status": "unproven"
+    },
+    {
+      "no": "5",
+      "kind": "IO",
+      "line": 52,
+      "signatures": [
+        {
+          "contractName": "TokenERC20",
+          "methodName": "transfer",
+          "argTypes": [ "address", "uint256" ]
+        },
+        {
+          "contractName": "TokenERC20",
+          "methodName": "transferFrom",
+          "argTypes": [ "address", "address", "uint256" ]
+        }
+      ],
+      "exp": "(tokenBalanceOf[_from] - _value)",
+      "status": "proven"
+    },
+    {
+      "no": "6",
+      "kind": "IO",
+      "line": 53,
+      "signatures": [
+        {
+          "contractName": "TokenERC20",
+          "methodName": "transfer",
+          "argTypes": [ "address", "uint256" ]
+        },
+        {
+          "contractName": "TokenERC20",
+          "methodName": "transferFrom",
+          "argTypes": [ "address", "address", "uint256" ]
+        }
+      ],
+      "exp": "(tokenBalanceOf[_to] + _value)",
+      "status": "proven"
+    },
+    {
+      "no": "7",
+      "kind": "IO",
+      "line": 56,
+      "signatures": [
+        {
+          "contractName": "TokenERC20",
+          "methodName": "transfer",
+          "argTypes": [ "address", "uint256" ]
+        },
+        {
+          "contractName": "TokenERC20",
+          "methodName": "transferFrom",
+          "argTypes": [ "address", "address", "uint256" ]
+        }
+      ],
+      "exp": "(tokenBalanceOf[_from] + tokenBalanceOf[_to])",
+      "status": "unproven"
+    },
+    {
+      "no": "8",
+      "kind": "IO",
+      "line": 68,
+      "signatures": [
+        {
+          "contractName": "TokenERC20",
+          "methodName": "transferFrom",
+          "argTypes": [ "address", "address", "uint256" ]
+        }
+      ],
+      "exp": "(tokenAllowance[_from][msg.sender] - _value)",
+      "status": "unproven"
+    },
+    {
+      "no": "9",
+      "kind": "IO",
+      "line": 93,
+      "signatures": [
+        {
+          "contractName": "TokenERC20",
+          "methodName": "burn",
+          "argTypes": [ "uint256" ]
+        }
+      ],
+      "exp": "(tokenBalanceOf[msg.sender] - _value)",
+      "status": "proven"
+    },
+    {
+      "no": "10",
+      "kind": "IO",
+      "line": 94,
+      "signatures": [
+        {
+          "contractName": "TokenERC20",
+          "methodName": "burn",
+          "argTypes": [ "uint256" ]
+        }
+      ],
+      "exp": "(tokenTotalSupply - _value)",
+      "status": "proven"
+    },
+    {
+      "no": "11",
+      "kind": "IO",
+      "line": 102,
+      "signatures": [
+        {
+          "contractName": "TokenERC20",
+          "methodName": "burnFrom",
+          "argTypes": [ "address", "uint256" ]
+        }
+      ],
+      "exp": "(tokenBalanceOf[_from] - _value)",
+      "status": "proven"
+    },
+    {
+      "no": "12",
+      "kind": "IO",
+      "line": 103,
+      "signatures": [
+        {
+          "contractName": "TokenERC20",
+          "methodName": "burnFrom",
+          "argTypes": [ "address", "uint256" ]
+        }
+      ],
+      "exp": "(tokenAllowance[_from][msg.sender] - _value)",
+      "status": "proven"
+    },
+    {
+      "no": "13",
+      "kind": "IO",
+      "line": 104,
+      "signatures": [
+        {
+          "contractName": "TokenERC20",
+          "methodName": "burnFrom",
+          "argTypes": [ "address", "uint256" ]
+        }
+      ],
+      "exp": "(tokenTotalSupply - _value)",
+      "status": "proven"
+    }
+  ]
+}

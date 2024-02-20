@@ -1,0 +1,117 @@
+{
+  "success": true,
+  "error": null,
+  "results": {
+    "detectors": [
+      {
+        "elements": [
+          {
+            "type": "pragma",
+            "name": "^0.4.13",
+            "source_mapping": {
+              "start": 0,
+              "length": 24,
+              "filename_relative": "Benchmarks/Study_SamplesSet/e9ce02342a8af53fbbf5a22d8973a55a.sol",
+              "filename_absolute": "/home/shikah/Documents/PhD/VulDet/Benchmarks/Study_SamplesSet/e9ce02342a8af53fbbf5a22d8973a55a.sol",
+              "filename_short": "Benchmarks/Study_SamplesSet/e9ce02342a8af53fbbf5a22d8973a55a.sol",
+              "is_dependency": false,
+              "lines": [
+                1
+              ],
+              "starting_column": 1,
+              "ending_column": 25
+            },
+            "type_specific_fields": {
+              "directive": [
+                "solidity",
+                "^",
+                "0.4",
+                ".13"
+              ]
+            }
+          }
+        ],
+        "description": "Pragma version^0.4.13 (Benchmarks/Study_SamplesSet/e9ce02342a8af53fbbf5a22d8973a55a.sol#1) allows old versions\n",
+        "markdown": "Pragma version[^0.4.13](Benchmarks/Study_SamplesSet/e9ce02342a8af53fbbf5a22d8973a55a.sol#L1) allows old versions\n",
+        "first_markdown_element": "Benchmarks/Study_SamplesSet/e9ce02342a8af53fbbf5a22d8973a55a.sol#L1",
+        "id": "5c65e64c80810ee2f1b18f27559a3b5df03fd8ed058c0647c89aa2b4384e57af",
+        "check": "solc-version",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [],
+        "description": "solc-0.4.13 is not recommended for deployment\n",
+        "markdown": "solc-0.4.13 is not recommended for deployment\n",
+        "first_markdown_element": "",
+        "id": "b530e0d8705c8bba02e9b4f64f071ea97a25be63ed3b9a9bd5aa03d5f85c88b3",
+        "check": "solc-version",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "setData",
+            "source_mapping": {
+              "start": 207,
+              "length": 81,
+              "filename_relative": "Benchmarks/Study_SamplesSet/e9ce02342a8af53fbbf5a22d8973a55a.sol",
+              "filename_absolute": "/home/shikah/Documents/PhD/VulDet/Benchmarks/Study_SamplesSet/e9ce02342a8af53fbbf5a22d8973a55a.sol",
+              "filename_short": "Benchmarks/Study_SamplesSet/e9ce02342a8af53fbbf5a22d8973a55a.sol",
+              "is_dependency": false,
+              "lines": [
+                11,
+                12,
+                13
+              ],
+              "starting_column": 5,
+              "ending_column": 6
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "HelloWorld",
+                "source_mapping": {
+                  "start": 26,
+                  "length": 269,
+                  "filename_relative": "Benchmarks/Study_SamplesSet/e9ce02342a8af53fbbf5a22d8973a55a.sol",
+                  "filename_absolute": "/home/shikah/Documents/PhD/VulDet/Benchmarks/Study_SamplesSet/e9ce02342a8af53fbbf5a22d8973a55a.sol",
+                  "filename_short": "Benchmarks/Study_SamplesSet/e9ce02342a8af53fbbf5a22d8973a55a.sol",
+                  "is_dependency": false,
+                  "lines": [
+                    3,
+                    4,
+                    5,
+                    6,
+                    7,
+                    8,
+                    9,
+                    10,
+                    11,
+                    12,
+                    13,
+                    14,
+                    15,
+                    16
+                  ],
+                  "starting_column": 1,
+                  "ending_column": 0
+                }
+              },
+              "signature": "setData(string)"
+            }
+          }
+        ],
+        "description": "setData(string) should be declared external:\n\t- HelloWorld.setData(string) (Benchmarks/Study_SamplesSet/e9ce02342a8af53fbbf5a22d8973a55a.sol#11-13)\n",
+        "markdown": "setData(string) should be declared external:\n\t- [HelloWorld.setData(string)](Benchmarks/Study_SamplesSet/e9ce02342a8af53fbbf5a22d8973a55a.sol#L11-L13)\n",
+        "first_markdown_element": "Benchmarks/Study_SamplesSet/e9ce02342a8af53fbbf5a22d8973a55a.sol#L11-L13",
+        "id": "6f94755a878149884525e6a6257a9570e849dd08b26e4482235a5923134cac72",
+        "check": "external-function",
+        "impact": "Optimization",
+        "confidence": "High"
+      }
+    ]
+  }
+}

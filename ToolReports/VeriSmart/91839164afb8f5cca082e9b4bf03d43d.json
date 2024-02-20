@@ -1,0 +1,219 @@
+{
+  "fileName": "Benchmarks/Study_SamplesSet/91839164afb8f5cca082e9b4bf03d43d.sol",
+  "baseName": "91839164afb8f5cca082e9b4bf03d43d.sol",
+  "iter": 321,
+  "time": "300.150772",
+  "errMsg": null,
+  "result": [
+    {
+      "no": "1",
+      "kind": "IO",
+      "line": 5,
+      "signatures": [
+        {
+          "contractName": "XBORNID",
+          "methodName": "@fallback",
+          "argTypes": []
+        },
+        {
+          "contractName": "XBORNID",
+          "methodName": "getTokens",
+          "argTypes": []
+        }
+      ],
+      "exp": "(a * b)",
+      "status": "unproven"
+    },
+    {
+      "no": "2",
+      "kind": "IO",
+      "line": 17,
+      "signatures": [
+        {
+          "contractName": "XBORNID",
+          "methodName": "XBORNID",
+          "argTypes": []
+        },
+        {
+          "contractName": "XBORNID",
+          "methodName": "burn",
+          "argTypes": [ "uint256" ]
+        },
+        {
+          "contractName": "XBORNID",
+          "methodName": "distr",
+          "argTypes": [ "address", "uint256" ]
+        },
+        {
+          "contractName": "XBORNID",
+          "methodName": "getTokens",
+          "argTypes": []
+        },
+        {
+          "contractName": "XBORNID",
+          "methodName": "transfer",
+          "argTypes": [ "address", "uint256" ]
+        },
+        {
+          "contractName": "XBORNID",
+          "methodName": "transferFrom",
+          "argTypes": [ "address", "address", "uint256" ]
+        }
+      ],
+      "exp": "(a - b)",
+      "status": "proven"
+    },
+    {
+      "no": "3",
+      "kind": "IO",
+      "line": 21,
+      "signatures": [
+        {
+          "contractName": "XBORNID",
+          "methodName": "adminClaimAirdrop",
+          "argTypes": [ "address", "uint256" ]
+        },
+        {
+          "contractName": "XBORNID",
+          "methodName": "adminClaimAirdropMultiple",
+          "argTypes": [ "address[]", "uint256" ]
+        },
+        {
+          "contractName": "XBORNID",
+          "methodName": "distr",
+          "argTypes": [ "address", "uint256" ]
+        },
+        {
+          "contractName": "XBORNID",
+          "methodName": "getTokens",
+          "argTypes": []
+        },
+        {
+          "contractName": "XBORNID",
+          "methodName": "transfer",
+          "argTypes": [ "address", "uint256" ]
+        },
+        {
+          "contractName": "XBORNID",
+          "methodName": "transferFrom",
+          "argTypes": [ "address", "address", "uint256" ]
+        }
+      ],
+      "exp": "(a + b)",
+      "status": "unproven"
+    },
+    {
+      "no": "4",
+      "kind": "IO",
+      "line": 184,
+      "signatures": [
+        {
+          "contractName": "XBORNID",
+          "methodName": "adminClaimAirdropMultiple",
+          "argTypes": [ "address[]", "uint256" ]
+        }
+      ],
+      "exp": "(i + 1)",
+      "status": "proven"
+    },
+    {
+      "no": "5",
+      "kind": "IO",
+      "line": 192,
+      "signatures": [
+        {
+          "contractName": "XBORNID",
+          "methodName": "transfer",
+          "argTypes": [ "address", "uint256" ]
+        },
+        {
+          "contractName": "XBORNID",
+          "methodName": "transferFrom",
+          "argTypes": [ "address", "address", "uint256" ]
+        }
+      ],
+      "exp": "(size + 4)",
+      "status": "proven"
+    },
+    {
+      "no": "6",
+      "kind": "IO",
+      "line": 196,
+      "signatures": [
+        {
+          "contractName": "XBORNID",
+          "methodName": "transfer",
+          "argTypes": [ "address", "uint256" ]
+        }
+      ],
+      "exp": "(2 * 32)",
+      "status": "proven"
+    },
+    {
+      "no": "7",
+      "kind": "IO",
+      "line": 206,
+      "signatures": [
+        {
+          "contractName": "XBORNID",
+          "methodName": "transferFrom",
+          "argTypes": [ "address", "address", "uint256" ]
+        }
+      ],
+      "exp": "(3 * 32)",
+      "status": "proven"
+    },
+    {
+      "no": "8",
+      "kind": "DZ",
+      "line": 6,
+      "signatures": [
+        {
+          "contractName": "XBORNID",
+          "methodName": "@fallback",
+          "argTypes": []
+        },
+        {
+          "contractName": "XBORNID",
+          "methodName": "getTokens",
+          "argTypes": []
+        }
+      ],
+      "exp": "(c / a)",
+      "status": "unproven"
+    },
+    {
+      "no": "9",
+      "kind": "DZ",
+      "line": 11,
+      "signatures": [
+        {
+          "contractName": "XBORNID",
+          "methodName": "@fallback",
+          "argTypes": []
+        },
+        {
+          "contractName": "XBORNID",
+          "methodName": "getTokens",
+          "argTypes": []
+        }
+      ],
+      "exp": "(a / b)",
+      "status": "proven"
+    },
+    {
+      "no": "10",
+      "kind": "ETH_LEAK",
+      "line": 237,
+      "signatures": [
+        {
+          "contractName": "XBORNID",
+          "methodName": "withdraw",
+          "argTypes": []
+        }
+      ],
+      "exp": "owner.transfer(etherBalance);",
+      "status": "proven"
+    }
+  ]
+}

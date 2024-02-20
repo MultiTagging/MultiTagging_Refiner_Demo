@@ -1,0 +1,398 @@
+{
+  "fileName": "Benchmarks/Study_SamplesSet/21710e27b1c3edac6f77eab471f72c08.sol",
+  "baseName": "21710e27b1c3edac6f77eab471f72c08.sol",
+  "iter": 7,
+  "time": "411.865856",
+  "errMsg": null,
+  "result": [
+    {
+      "no": "1",
+      "kind": "IO",
+      "line": 175,
+      "signatures": [
+        {
+          "contractName": "DOTS",
+          "methodName": "transferFrom",
+          "argTypes": [ "address", "address", "uint256" ]
+        }
+      ],
+      "exp": "(allowed[_from][msg.sender] - _amount)",
+      "status": "proven"
+    },
+    {
+      "no": "2",
+      "kind": "IO",
+      "line": 212,
+      "signatures": [
+        {
+          "contractName": "DOTS",
+          "methodName": "doTransfer",
+          "argTypes": [ "address", "address", "uint256" ]
+        },
+        {
+          "contractName": "MiniMeToken",
+          "methodName": "doTransfer",
+          "argTypes": [ "address", "address", "uint256" ]
+        }
+      ],
+      "exp": "(previousBalanceFrom - _amount)",
+      "status": "proven"
+    },
+    {
+      "no": "3",
+      "kind": "IO",
+      "line": 217,
+      "signatures": [
+        {
+          "contractName": "DOTS",
+          "methodName": "doTransfer",
+          "argTypes": [ "address", "address", "uint256" ]
+        },
+        {
+          "contractName": "MiniMeToken",
+          "methodName": "doTransfer",
+          "argTypes": [ "address", "address", "uint256" ]
+        }
+      ],
+      "exp": "(previousBalanceTo + _amount)",
+      "status": "unproven"
+    },
+    {
+      "no": "4",
+      "kind": "IO",
+      "line": 218,
+      "signatures": [
+        {
+          "contractName": "DOTS",
+          "methodName": "doTransfer",
+          "argTypes": [ "address", "address", "uint256" ]
+        },
+        {
+          "contractName": "MiniMeToken",
+          "methodName": "doTransfer",
+          "argTypes": [ "address", "address", "uint256" ]
+        }
+      ],
+      "exp": "(previousBalanceTo + _amount)",
+      "status": "proven"
+    },
+    {
+      "no": "5",
+      "kind": "IO",
+      "line": 399,
+      "signatures": [
+        {
+          "contractName": "DOTS",
+          "methodName": "generateTokens",
+          "argTypes": [ "address", "uint256" ]
+        }
+      ],
+      "exp": "(curTotalSupply + _amount)",
+      "status": "unproven"
+    },
+    {
+      "no": "6",
+      "kind": "IO",
+      "line": 401,
+      "signatures": [
+        {
+          "contractName": "DOTS",
+          "methodName": "generateTokens",
+          "argTypes": [ "address", "uint256" ]
+        }
+      ],
+      "exp": "(previousBalanceTo + _amount)",
+      "status": "unproven"
+    },
+    {
+      "no": "7",
+      "kind": "IO",
+      "line": 402,
+      "signatures": [
+        {
+          "contractName": "DOTS",
+          "methodName": "generateTokens",
+          "argTypes": [ "address", "uint256" ]
+        }
+      ],
+      "exp": "(curTotalSupply + _amount)",
+      "status": "proven"
+    },
+    {
+      "no": "8",
+      "kind": "IO",
+      "line": 403,
+      "signatures": [
+        {
+          "contractName": "DOTS",
+          "methodName": "generateTokens",
+          "argTypes": [ "address", "uint256" ]
+        }
+      ],
+      "exp": "(previousBalanceTo + _amount)",
+      "status": "proven"
+    },
+    {
+      "no": "9",
+      "kind": "IO",
+      "line": 419,
+      "signatures": [
+        {
+          "contractName": "DOTS",
+          "methodName": "destroyTokens",
+          "argTypes": [ "address", "uint256" ]
+        }
+      ],
+      "exp": "(curTotalSupply - _amount)",
+      "status": "proven"
+    },
+    {
+      "no": "10",
+      "kind": "IO",
+      "line": 420,
+      "signatures": [
+        {
+          "contractName": "DOTS",
+          "methodName": "destroyTokens",
+          "argTypes": [ "address", "uint256" ]
+        }
+      ],
+      "exp": "(previousBalanceFrom - _amount)",
+      "status": "proven"
+    },
+    {
+      "no": "11",
+      "kind": "IO",
+      "line": 449,
+      "signatures": [
+        {
+          "contractName": "DOTS",
+          "methodName": "getValueAt",
+          "argTypes": [ "struct MiniMeToken.Checkpoint[]", "uint256" ]
+        },
+        {
+          "contractName": "MiniMeToken",
+          "methodName": "getValueAt",
+          "argTypes": [ "struct MiniMeToken.Checkpoint[]", "uint256" ]
+        }
+      ],
+      "exp": "(checkpoints.length - 1)",
+      "status": "proven"
+    },
+    {
+      "no": "12",
+      "kind": "IO",
+      "line": 450,
+      "signatures": [
+        {
+          "contractName": "DOTS",
+          "methodName": "getValueAt",
+          "argTypes": [ "struct MiniMeToken.Checkpoint[]", "uint256" ]
+        },
+        {
+          "contractName": "MiniMeToken",
+          "methodName": "getValueAt",
+          "argTypes": [ "struct MiniMeToken.Checkpoint[]", "uint256" ]
+        }
+      ],
+      "exp": "(checkpoints.length - 1)",
+      "status": "proven"
+    },
+    {
+      "no": "13",
+      "kind": "IO",
+      "line": 455,
+      "signatures": [
+        {
+          "contractName": "DOTS",
+          "methodName": "getValueAt",
+          "argTypes": [ "struct MiniMeToken.Checkpoint[]", "uint256" ]
+        },
+        {
+          "contractName": "MiniMeToken",
+          "methodName": "getValueAt",
+          "argTypes": [ "struct MiniMeToken.Checkpoint[]", "uint256" ]
+        }
+      ],
+      "exp": "(checkpoints.length - 1)",
+      "status": "proven"
+    },
+    {
+      "no": "14",
+      "kind": "IO",
+      "line": 457,
+      "signatures": [
+        {
+          "contractName": "DOTS",
+          "methodName": "getValueAt",
+          "argTypes": [ "struct MiniMeToken.Checkpoint[]", "uint256" ]
+        },
+        {
+          "contractName": "MiniMeToken",
+          "methodName": "getValueAt",
+          "argTypes": [ "struct MiniMeToken.Checkpoint[]", "uint256" ]
+        }
+      ],
+      "exp": "((max + min) + 1)",
+      "status": "unproven"
+    },
+    {
+      "no": "15",
+      "kind": "IO",
+      "line": 457,
+      "signatures": [
+        {
+          "contractName": "DOTS",
+          "methodName": "getValueAt",
+          "argTypes": [ "struct MiniMeToken.Checkpoint[]", "uint256" ]
+        },
+        {
+          "contractName": "MiniMeToken",
+          "methodName": "getValueAt",
+          "argTypes": [ "struct MiniMeToken.Checkpoint[]", "uint256" ]
+        }
+      ],
+      "exp": "(max + min)",
+      "status": "unproven"
+    },
+    {
+      "no": "16",
+      "kind": "IO",
+      "line": 461,
+      "signatures": [
+        {
+          "contractName": "DOTS",
+          "methodName": "getValueAt",
+          "argTypes": [ "struct MiniMeToken.Checkpoint[]", "uint256" ]
+        },
+        {
+          "contractName": "MiniMeToken",
+          "methodName": "getValueAt",
+          "argTypes": [ "struct MiniMeToken.Checkpoint[]", "uint256" ]
+        }
+      ],
+      "exp": "(mid - 1)",
+      "status": "unproven"
+    },
+    {
+      "no": "17",
+      "kind": "IO",
+      "line": 474,
+      "signatures": [
+        {
+          "contractName": "DOTS",
+          "methodName": "destroyTokens",
+          "argTypes": [ "address", "uint256" ]
+        },
+        {
+          "contractName": "DOTS",
+          "methodName": "doTransfer",
+          "argTypes": [ "address", "address", "uint256" ]
+        },
+        {
+          "contractName": "DOTS",
+          "methodName": "generateTokens",
+          "argTypes": [ "address", "uint256" ]
+        },
+        {
+          "contractName": "MiniMeToken",
+          "methodName": "doTransfer",
+          "argTypes": [ "address", "address", "uint256" ]
+        }
+      ],
+      "exp": "(checkpoints.length - 1)",
+      "status": "unproven"
+    },
+    {
+      "no": "18",
+      "kind": "IO",
+      "line": 475,
+      "signatures": [
+        {
+          "contractName": "DOTS",
+          "methodName": "destroyTokens",
+          "argTypes": [ "address", "uint256" ]
+        },
+        {
+          "contractName": "DOTS",
+          "methodName": "doTransfer",
+          "argTypes": [ "address", "address", "uint256" ]
+        },
+        {
+          "contractName": "DOTS",
+          "methodName": "generateTokens",
+          "argTypes": [ "address", "uint256" ]
+        },
+        {
+          "contractName": "MiniMeToken",
+          "methodName": "doTransfer",
+          "argTypes": [ "address", "address", "uint256" ]
+        }
+      ],
+      "exp": "(checkpoints.length + 1)",
+      "status": "unproven"
+    },
+    {
+      "no": "19",
+      "kind": "IO",
+      "line": 479,
+      "signatures": [
+        {
+          "contractName": "DOTS",
+          "methodName": "destroyTokens",
+          "argTypes": [ "address", "uint256" ]
+        },
+        {
+          "contractName": "DOTS",
+          "methodName": "doTransfer",
+          "argTypes": [ "address", "address", "uint256" ]
+        },
+        {
+          "contractName": "DOTS",
+          "methodName": "generateTokens",
+          "argTypes": [ "address", "uint256" ]
+        },
+        {
+          "contractName": "MiniMeToken",
+          "methodName": "doTransfer",
+          "argTypes": [ "address", "address", "uint256" ]
+        }
+      ],
+      "exp": "(checkpoints.length - 1)",
+      "status": "proven"
+    },
+    {
+      "no": "20",
+      "kind": "DZ",
+      "line": 457,
+      "signatures": [
+        {
+          "contractName": "DOTS",
+          "methodName": "getValueAt",
+          "argTypes": [ "struct MiniMeToken.Checkpoint[]", "uint256" ]
+        },
+        {
+          "contractName": "MiniMeToken",
+          "methodName": "getValueAt",
+          "argTypes": [ "struct MiniMeToken.Checkpoint[]", "uint256" ]
+        }
+      ],
+      "exp": "(((max + min) + 1) / 2)",
+      "status": "proven"
+    },
+    {
+      "no": "21",
+      "kind": "ETH_LEAK",
+      "line": 519,
+      "signatures": [
+        {
+          "contractName": "DOTS",
+          "methodName": "claimTokens",
+          "argTypes": [ "address" ]
+        }
+      ],
+      "exp": "controller.transfer(this.balance);",
+      "status": "proven"
+    }
+  ]
+}

@@ -1,0 +1,223 @@
+{
+  "fileName": "Benchmarks/Study_SamplesSet/284c0583e9b0ff55d0d9c9a74a12125d.sol",
+  "baseName": "284c0583e9b0ff55d0d9c9a74a12125d.sol",
+  "iter": 230,
+  "time": "300.107297",
+  "errMsg": null,
+  "result": [
+    {
+      "no": "1",
+      "kind": "IO",
+      "line": 16,
+      "signatures": [
+        { "contractName": "LEVT", "methodName": "getTokens", "argTypes": [] }
+      ],
+      "exp": "(a * b)",
+      "status": "unproven"
+    },
+    {
+      "no": "2",
+      "kind": "IO",
+      "line": 36,
+      "signatures": [
+        {
+          "contractName": "LEVT",
+          "methodName": "burn",
+          "argTypes": [ "uint256" ]
+        },
+        {
+          "contractName": "LEVT",
+          "methodName": "transfer",
+          "argTypes": [ "address", "uint256" ]
+        },
+        {
+          "contractName": "LEVT",
+          "methodName": "transferFrom",
+          "argTypes": [ "address", "address", "uint256" ]
+        }
+      ],
+      "exp": "(a - b)",
+      "status": "proven"
+    },
+    {
+      "no": "3",
+      "kind": "IO",
+      "line": 43,
+      "signatures": [
+        {
+          "contractName": "LEVT",
+          "methodName": "DistributeAirdrop",
+          "argTypes": [ "address", "uint256" ]
+        },
+        {
+          "contractName": "LEVT",
+          "methodName": "DistributeAirdropMultiple",
+          "argTypes": [ "address[]", "uint256" ]
+        },
+        { "contractName": "LEVT", "methodName": "LEVT", "argTypes": [] },
+        { "contractName": "LEVT", "methodName": "getTokens", "argTypes": [] },
+        {
+          "contractName": "LEVT",
+          "methodName": "transfer",
+          "argTypes": [ "address", "uint256" ]
+        },
+        {
+          "contractName": "LEVT",
+          "methodName": "transferFrom",
+          "argTypes": [ "address", "address", "uint256" ]
+        }
+      ],
+      "exp": "(a + b)",
+      "status": "unproven"
+    },
+    {
+      "no": "4",
+      "kind": "IO",
+      "line": 165,
+      "signatures": [
+        {
+          "contractName": "LEVT",
+          "methodName": "DistributeAirdropMultiple",
+          "argTypes": [ "address[]", "uint256" ]
+        }
+      ],
+      "exp": "(i + 1)",
+      "status": "proven"
+    },
+    {
+      "no": "5",
+      "kind": "IO",
+      "line": 175,
+      "signatures": [
+        { "contractName": "LEVT", "methodName": "@fallback", "argTypes": [] }
+      ],
+      "exp": "(totalDonation + msg.value)",
+      "status": "unproven"
+    },
+    {
+      "no": "6",
+      "kind": "IO",
+      "line": 187,
+      "signatures": [
+        { "contractName": "LEVT", "methodName": "getTokens", "argTypes": [] }
+      ],
+      "exp": "(tokens + countbonus)",
+      "status": "proven"
+    },
+    {
+      "no": "7",
+      "kind": "IO",
+      "line": 194,
+      "signatures": [
+        { "contractName": "LEVT", "methodName": "getTokens", "argTypes": [] }
+      ],
+      "exp": "(progress0drop + 1)",
+      "status": "proven"
+    },
+    {
+      "no": "8",
+      "kind": "IO",
+      "line": 218,
+      "signatures": [
+        {
+          "contractName": "LEVT",
+          "methodName": "transfer",
+          "argTypes": [ "address", "uint256" ]
+        },
+        {
+          "contractName": "LEVT",
+          "methodName": "transferFrom",
+          "argTypes": [ "address", "address", "uint256" ]
+        }
+      ],
+      "exp": "(size + 4)",
+      "status": "proven"
+    },
+    {
+      "no": "9",
+      "kind": "IO",
+      "line": 222,
+      "signatures": [
+        {
+          "contractName": "LEVT",
+          "methodName": "transfer",
+          "argTypes": [ "address", "uint256" ]
+        }
+      ],
+      "exp": "(2 * 32)",
+      "status": "proven"
+    },
+    {
+      "no": "10",
+      "kind": "IO",
+      "line": 233,
+      "signatures": [
+        {
+          "contractName": "LEVT",
+          "methodName": "transferFrom",
+          "argTypes": [ "address", "address", "uint256" ]
+        }
+      ],
+      "exp": "(3 * 32)",
+      "status": "proven"
+    },
+    {
+      "no": "11",
+      "kind": "DZ",
+      "line": 17,
+      "signatures": [
+        { "contractName": "LEVT", "methodName": "getTokens", "argTypes": [] }
+      ],
+      "exp": "(c / a)",
+      "status": "proven"
+    },
+    {
+      "no": "12",
+      "kind": "DZ",
+      "line": 83,
+      "signatures": [
+        { "contractName": "LEVT", "methodName": "LEVT", "argTypes": [] }
+      ],
+      "exp": "(1000000000000000000 / 100)",
+      "status": "proven"
+    },
+    {
+      "no": "13",
+      "kind": "DZ",
+      "line": 183,
+      "signatures": [
+        { "contractName": "LEVT", "methodName": "getTokens", "argTypes": [] }
+      ],
+      "exp": "(tokensPerEth.mul(msg.value) / 1000000000000000000)",
+      "status": "proven"
+    },
+    {
+      "no": "14",
+      "kind": "ETH_LEAK",
+      "line": 266,
+      "signatures": [
+        {
+          "contractName": "LEVT",
+          "methodName": "withdrawAll",
+          "argTypes": []
+        }
+      ],
+      "exp": "owner.transfer(etherBalance);",
+      "status": "proven"
+    },
+    {
+      "no": "15",
+      "kind": "ETH_LEAK",
+      "line": 271,
+      "signatures": [
+        {
+          "contractName": "LEVT",
+          "methodName": "withdraw",
+          "argTypes": [ "uint256" ]
+        }
+      ],
+      "exp": "owner.transfer(wantAmount);",
+      "status": "proven"
+    }
+  ]
+}

@@ -1,0 +1,83 @@
+{
+  "fileName": "Benchmarks/Study_SamplesSet/a55fc952b9b88bc6b2132fefa5bec42a.sol",
+  "baseName": "a55fc952b9b88bc6b2132fefa5bec42a.sol",
+  "iter": 148,
+  "time": "363.720285",
+  "errMsg": null,
+  "result": [
+    {
+      "no": "1",
+      "kind": "IO",
+      "line": 9,
+      "signatures": [
+        {
+          "contractName": "transaction_malleablity",
+          "methodName": "transaction_malleablity",
+          "argTypes": [ "address[]", "uint256[]" ]
+        }
+      ],
+      "exp": "(i + 1)",
+      "status": "proven"
+    },
+    {
+      "no": "2",
+      "kind": "IO",
+      "line": 30,
+      "signatures": [
+        {
+          "contractName": "transaction_malleablity",
+          "methodName": "transfer",
+          "argTypes": [
+            "dbytes", "address", "uint256", "uint256", "uint256"
+          ]
+        }
+      ],
+      "exp": "(balances[from] - _value)",
+      "status": "proven"
+    },
+    {
+      "no": "3",
+      "kind": "IO",
+      "line": 31,
+      "signatures": [
+        {
+          "contractName": "transaction_malleablity",
+          "methodName": "transfer",
+          "argTypes": [
+            "dbytes", "address", "uint256", "uint256", "uint256"
+          ]
+        }
+      ],
+      "exp": "(balances[_to] + _value)",
+      "status": "unproven"
+    },
+    {
+      "no": "4",
+      "kind": "IO",
+      "line": 84,
+      "signatures": [
+        {
+          "contractName": "transaction_malleablity",
+          "methodName": "ecrecoverFromSig",
+          "argTypes": [ "bytes32", "dbytes" ]
+        },
+        {
+          "contractName": "transaction_malleablity",
+          "methodName": "recoverTransferPreSigned",
+          "argTypes": [
+            "dbytes", "address", "uint256", "uint256", "uint256"
+          ]
+        },
+        {
+          "contractName": "transaction_malleablity",
+          "methodName": "transfer",
+          "argTypes": [
+            "dbytes", "address", "uint256", "uint256", "uint256"
+          ]
+        }
+      ],
+      "exp": "(v + 27)",
+      "status": "proven"
+    }
+  ]
+}

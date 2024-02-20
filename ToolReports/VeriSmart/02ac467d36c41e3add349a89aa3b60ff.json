@@ -1,0 +1,153 @@
+{
+  "fileName": "Benchmarks/Study_SamplesSet/02ac467d36c41e3add349a89aa3b60ff.sol",
+  "baseName": "02ac467d36c41e3add349a89aa3b60ff.sol",
+  "iter": 2,
+  "time": "8.275595",
+  "errMsg": null,
+  "result": [
+    {
+      "no": "1",
+      "kind": "IO",
+      "line": 24,
+      "signatures": [
+        {
+          "contractName": "AbstractToken",
+          "methodName": "transferFrom",
+          "argTypes": [ "address", "address", "uint256" ]
+        },
+        {
+          "contractName": "INSPromoToken",
+          "methodName": "balanceOf",
+          "argTypes": [ "address" ]
+        },
+        {
+          "contractName": "INSPromoToken",
+          "methodName": "materializeBalanceIfNeeded",
+          "argTypes": [ "address", "uint256" ]
+        },
+        {
+          "contractName": "INSPromoToken",
+          "methodName": "transfer",
+          "argTypes": [ "address", "uint256" ]
+        },
+        {
+          "contractName": "INSPromoToken",
+          "methodName": "transferFrom",
+          "argTypes": [ "address", "address", "uint256" ]
+        }
+      ],
+      "exp": "(MAX_UINT256 - y)",
+      "status": "proven"
+    },
+    {
+      "no": "2",
+      "kind": "IO",
+      "line": 25,
+      "signatures": [
+        {
+          "contractName": "AbstractToken",
+          "methodName": "transferFrom",
+          "argTypes": [ "address", "address", "uint256" ]
+        },
+        {
+          "contractName": "INSPromoToken",
+          "methodName": "balanceOf",
+          "argTypes": [ "address" ]
+        },
+        {
+          "contractName": "INSPromoToken",
+          "methodName": "materializeBalanceIfNeeded",
+          "argTypes": [ "address", "uint256" ]
+        },
+        {
+          "contractName": "INSPromoToken",
+          "methodName": "transfer",
+          "argTypes": [ "address", "uint256" ]
+        },
+        {
+          "contractName": "INSPromoToken",
+          "methodName": "transferFrom",
+          "argTypes": [ "address", "address", "uint256" ]
+        }
+      ],
+      "exp": "(x + y)",
+      "status": "proven"
+    },
+    {
+      "no": "3",
+      "kind": "IO",
+      "line": 39,
+      "signatures": [
+        {
+          "contractName": "AbstractToken",
+          "methodName": "transferFrom",
+          "argTypes": [ "address", "address", "uint256" ]
+        },
+        {
+          "contractName": "INSPromoToken",
+          "methodName": "balanceOf",
+          "argTypes": [ "address" ]
+        },
+        {
+          "contractName": "INSPromoToken",
+          "methodName": "getVirtualBalance",
+          "argTypes": [ "address" ]
+        },
+        {
+          "contractName": "INSPromoToken",
+          "methodName": "materializeBalanceIfNeeded",
+          "argTypes": [ "address", "uint256" ]
+        },
+        {
+          "contractName": "INSPromoToken",
+          "methodName": "transfer",
+          "argTypes": [ "address", "uint256" ]
+        }
+      ],
+      "exp": "(x - y)",
+      "status": "proven"
+    },
+    {
+      "no": "4",
+      "kind": "IO",
+      "line": 475,
+      "signatures": [
+        {
+          "contractName": "INSPromoToken",
+          "methodName": "massNotify",
+          "argTypes": [ "address[]" ]
+        }
+      ],
+      "exp": "(i + 1)",
+      "status": "proven"
+    },
+    {
+      "no": "5",
+      "kind": "KA",
+      "line": 484,
+      "signatures": [
+        {
+          "contractName": "INSPromoToken",
+          "methodName": "kill",
+          "argTypes": []
+        }
+      ],
+      "exp": "selfdestruct(owner);",
+      "status": "proven"
+    },
+    {
+      "no": "6",
+      "kind": "ETH_LEAK",
+      "line": 484,
+      "signatures": [
+        {
+          "contractName": "INSPromoToken",
+          "methodName": "kill",
+          "argTypes": []
+        }
+      ],
+      "exp": "selfdestruct(owner);",
+      "status": "proven"
+    }
+  ]
+}

@@ -1,0 +1,507 @@
+{
+  "success": true,
+  "error": null,
+  "results": {
+    "detectors": [
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "withdraw",
+            "source_mapping": {
+              "start": 241,
+              "length": 149,
+              "filename_relative": "Benchmarks/Study_SamplesSet/564597f346421e0ae96e92266374d8c5.sol",
+              "filename_absolute": "/home/shikah/Documents/PhD/VulDet/Benchmarks/Study_SamplesSet/564597f346421e0ae96e92266374d8c5.sol",
+              "filename_short": "Benchmarks/Study_SamplesSet/564597f346421e0ae96e92266374d8c5.sol",
+              "is_dependency": false,
+              "lines": [
+                12,
+                13,
+                14,
+                15
+              ],
+              "starting_column": 5,
+              "ending_column": 6
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "FunctionTypes",
+                "source_mapping": {
+                  "start": 140,
+                  "length": 592,
+                  "filename_relative": "Benchmarks/Study_SamplesSet/564597f346421e0ae96e92266374d8c5.sol",
+                  "filename_absolute": "/home/shikah/Documents/PhD/VulDet/Benchmarks/Study_SamplesSet/564597f346421e0ae96e92266374d8c5.sol",
+                  "filename_short": "Benchmarks/Study_SamplesSet/564597f346421e0ae96e92266374d8c5.sol",
+                  "is_dependency": false,
+                  "lines": [
+                    8,
+                    9,
+                    10,
+                    11,
+                    12,
+                    13,
+                    14,
+                    15,
+                    16,
+                    17,
+                    18,
+                    19,
+                    20,
+                    21,
+                    22,
+                    23,
+                    24,
+                    25,
+                    26,
+                    27,
+                    28,
+                    29
+                  ],
+                  "starting_column": 1,
+                  "ending_column": 2
+                }
+              },
+              "signature": "withdraw()"
+            }
+          },
+          {
+            "type": "node",
+            "name": "address(msg.sender).transfer(address(this).balance)",
+            "source_mapping": {
+              "start": 332,
+              "length": 51,
+              "filename_relative": "Benchmarks/Study_SamplesSet/564597f346421e0ae96e92266374d8c5.sol",
+              "filename_absolute": "/home/shikah/Documents/PhD/VulDet/Benchmarks/Study_SamplesSet/564597f346421e0ae96e92266374d8c5.sol",
+              "filename_short": "Benchmarks/Study_SamplesSet/564597f346421e0ae96e92266374d8c5.sol",
+              "is_dependency": false,
+              "lines": [
+                14
+              ],
+              "starting_column": 9,
+              "ending_column": 60
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "withdraw",
+                "source_mapping": {
+                  "start": 241,
+                  "length": 149,
+                  "filename_relative": "Benchmarks/Study_SamplesSet/564597f346421e0ae96e92266374d8c5.sol",
+                  "filename_absolute": "/home/shikah/Documents/PhD/VulDet/Benchmarks/Study_SamplesSet/564597f346421e0ae96e92266374d8c5.sol",
+                  "filename_short": "Benchmarks/Study_SamplesSet/564597f346421e0ae96e92266374d8c5.sol",
+                  "is_dependency": false,
+                  "lines": [
+                    12,
+                    13,
+                    14,
+                    15
+                  ],
+                  "starting_column": 5,
+                  "ending_column": 6
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "FunctionTypes",
+                    "source_mapping": {
+                      "start": 140,
+                      "length": 592,
+                      "filename_relative": "Benchmarks/Study_SamplesSet/564597f346421e0ae96e92266374d8c5.sol",
+                      "filename_absolute": "/home/shikah/Documents/PhD/VulDet/Benchmarks/Study_SamplesSet/564597f346421e0ae96e92266374d8c5.sol",
+                      "filename_short": "Benchmarks/Study_SamplesSet/564597f346421e0ae96e92266374d8c5.sol",
+                      "is_dependency": false,
+                      "lines": [
+                        8,
+                        9,
+                        10,
+                        11,
+                        12,
+                        13,
+                        14,
+                        15,
+                        16,
+                        17,
+                        18,
+                        19,
+                        20,
+                        21,
+                        22,
+                        23,
+                        24,
+                        25,
+                        26,
+                        27,
+                        28,
+                        29
+                      ],
+                      "starting_column": 1,
+                      "ending_column": 2
+                    }
+                  },
+                  "signature": "withdraw()"
+                }
+              }
+            }
+          }
+        ],
+        "description": "FunctionTypes.withdraw() (Benchmarks/Study_SamplesSet/564597f346421e0ae96e92266374d8c5.sol#12-15) sends eth to arbitrary user\n\tDangerous calls:\n\t- address(msg.sender).transfer(address(this).balance) (Benchmarks/Study_SamplesSet/564597f346421e0ae96e92266374d8c5.sol#14)\n",
+        "markdown": "[FunctionTypes.withdraw()](Benchmarks/Study_SamplesSet/564597f346421e0ae96e92266374d8c5.sol#L12-L15) sends eth to arbitrary user\n\tDangerous calls:\n\t- [address(msg.sender).transfer(address(this).balance)](Benchmarks/Study_SamplesSet/564597f346421e0ae96e92266374d8c5.sol#L14)\n",
+        "first_markdown_element": "Benchmarks/Study_SamplesSet/564597f346421e0ae96e92266374d8c5.sol#L12-L15",
+        "id": "aac49d95ad6f0d8523f0dc905d106a21f0bb11580fedfc9f6b0a9ac627b3770e",
+        "check": "arbitrary-send-eth",
+        "impact": "High",
+        "confidence": "Medium"
+      },
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "breakIt",
+            "source_mapping": {
+              "start": 511,
+              "length": 219,
+              "filename_relative": "Benchmarks/Study_SamplesSet/564597f346421e0ae96e92266374d8c5.sol",
+              "filename_absolute": "/home/shikah/Documents/PhD/VulDet/Benchmarks/Study_SamplesSet/564597f346421e0ae96e92266374d8c5.sol",
+              "filename_short": "Benchmarks/Study_SamplesSet/564597f346421e0ae96e92266374d8c5.sol",
+              "is_dependency": false,
+              "lines": [
+                22,
+                23,
+                24,
+                25,
+                26,
+                27,
+                28
+              ],
+              "starting_column": 5,
+              "ending_column": 6
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "FunctionTypes",
+                "source_mapping": {
+                  "start": 140,
+                  "length": 592,
+                  "filename_relative": "Benchmarks/Study_SamplesSet/564597f346421e0ae96e92266374d8c5.sol",
+                  "filename_absolute": "/home/shikah/Documents/PhD/VulDet/Benchmarks/Study_SamplesSet/564597f346421e0ae96e92266374d8c5.sol",
+                  "filename_short": "Benchmarks/Study_SamplesSet/564597f346421e0ae96e92266374d8c5.sol",
+                  "is_dependency": false,
+                  "lines": [
+                    8,
+                    9,
+                    10,
+                    11,
+                    12,
+                    13,
+                    14,
+                    15,
+                    16,
+                    17,
+                    18,
+                    19,
+                    20,
+                    21,
+                    22,
+                    23,
+                    24,
+                    25,
+                    26,
+                    27,
+                    28,
+                    29
+                  ],
+                  "starting_column": 1,
+                  "ending_column": 2
+                }
+              },
+              "signature": "breakIt()"
+            }
+          },
+          {
+            "type": "node",
+            "name": "",
+            "source_mapping": {
+              "start": 652,
+              "length": 67,
+              "filename_relative": "Benchmarks/Study_SamplesSet/564597f346421e0ae96e92266374d8c5.sol",
+              "filename_absolute": "/home/shikah/Documents/PhD/VulDet/Benchmarks/Study_SamplesSet/564597f346421e0ae96e92266374d8c5.sol",
+              "filename_short": "Benchmarks/Study_SamplesSet/564597f346421e0ae96e92266374d8c5.sol",
+              "is_dependency": false,
+              "lines": [
+                26,
+                27
+              ],
+              "starting_column": 9,
+              "ending_column": 13
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "breakIt",
+                "source_mapping": {
+                  "start": 511,
+                  "length": 219,
+                  "filename_relative": "Benchmarks/Study_SamplesSet/564597f346421e0ae96e92266374d8c5.sol",
+                  "filename_absolute": "/home/shikah/Documents/PhD/VulDet/Benchmarks/Study_SamplesSet/564597f346421e0ae96e92266374d8c5.sol",
+                  "filename_short": "Benchmarks/Study_SamplesSet/564597f346421e0ae96e92266374d8c5.sol",
+                  "is_dependency": false,
+                  "lines": [
+                    22,
+                    23,
+                    24,
+                    25,
+                    26,
+                    27,
+                    28
+                  ],
+                  "starting_column": 5,
+                  "ending_column": 6
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "FunctionTypes",
+                    "source_mapping": {
+                      "start": 140,
+                      "length": 592,
+                      "filename_relative": "Benchmarks/Study_SamplesSet/564597f346421e0ae96e92266374d8c5.sol",
+                      "filename_absolute": "/home/shikah/Documents/PhD/VulDet/Benchmarks/Study_SamplesSet/564597f346421e0ae96e92266374d8c5.sol",
+                      "filename_short": "Benchmarks/Study_SamplesSet/564597f346421e0ae96e92266374d8c5.sol",
+                      "is_dependency": false,
+                      "lines": [
+                        8,
+                        9,
+                        10,
+                        11,
+                        12,
+                        13,
+                        14,
+                        15,
+                        16,
+                        17,
+                        18,
+                        19,
+                        20,
+                        21,
+                        22,
+                        23,
+                        24,
+                        25,
+                        26,
+                        27,
+                        28,
+                        29
+                      ],
+                      "starting_column": 1,
+                      "ending_column": 2
+                    }
+                  },
+                  "signature": "breakIt()"
+                }
+              }
+            }
+          }
+        ],
+        "description": "FunctionTypes.breakIt() (Benchmarks/Study_SamplesSet/564597f346421e0ae96e92266374d8c5.sol#22-28) uses assembly\n\t- INLINE ASM (Benchmarks/Study_SamplesSet/564597f346421e0ae96e92266374d8c5.sol#26-27)\n",
+        "markdown": "[FunctionTypes.breakIt()](Benchmarks/Study_SamplesSet/564597f346421e0ae96e92266374d8c5.sol#L22-L28) uses assembly\n\t- [INLINE ASM](Benchmarks/Study_SamplesSet/564597f346421e0ae96e92266374d8c5.sol#L26-L27)\n",
+        "first_markdown_element": "Benchmarks/Study_SamplesSet/564597f346421e0ae96e92266374d8c5.sol#L22-L28",
+        "id": "7983bc08c8a18c07174aad3b5f542b8b1df3612c86ecd6e546875bf2724f934b",
+        "check": "assembly",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "frwd",
+            "source_mapping": {
+              "start": 400,
+              "length": 48,
+              "filename_relative": "Benchmarks/Study_SamplesSet/564597f346421e0ae96e92266374d8c5.sol",
+              "filename_absolute": "/home/shikah/Documents/PhD/VulDet/Benchmarks/Study_SamplesSet/564597f346421e0ae96e92266374d8c5.sol",
+              "filename_short": "Benchmarks/Study_SamplesSet/564597f346421e0ae96e92266374d8c5.sol",
+              "is_dependency": false,
+              "lines": [
+                17,
+                18
+              ],
+              "starting_column": 5,
+              "ending_column": 24
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "FunctionTypes",
+                "source_mapping": {
+                  "start": 140,
+                  "length": 592,
+                  "filename_relative": "Benchmarks/Study_SamplesSet/564597f346421e0ae96e92266374d8c5.sol",
+                  "filename_absolute": "/home/shikah/Documents/PhD/VulDet/Benchmarks/Study_SamplesSet/564597f346421e0ae96e92266374d8c5.sol",
+                  "filename_short": "Benchmarks/Study_SamplesSet/564597f346421e0ae96e92266374d8c5.sol",
+                  "is_dependency": false,
+                  "lines": [
+                    8,
+                    9,
+                    10,
+                    11,
+                    12,
+                    13,
+                    14,
+                    15,
+                    16,
+                    17,
+                    18,
+                    19,
+                    20,
+                    21,
+                    22,
+                    23,
+                    24,
+                    25,
+                    26,
+                    27,
+                    28,
+                    29
+                  ],
+                  "starting_column": 1,
+                  "ending_column": 2
+                }
+              },
+              "signature": "frwd()"
+            }
+          }
+        ],
+        "description": "FunctionTypes.frwd() (Benchmarks/Study_SamplesSet/564597f346421e0ae96e92266374d8c5.sol#17-18) is never used and should be removed\n",
+        "markdown": "[FunctionTypes.frwd()](Benchmarks/Study_SamplesSet/564597f346421e0ae96e92266374d8c5.sol#L17-L18) is never used and should be removed\n",
+        "first_markdown_element": "Benchmarks/Study_SamplesSet/564597f346421e0ae96e92266374d8c5.sol#L17-L18",
+        "id": "31cdb416ffbdea21983d55770f98295eef7ba1ff404e20d073c42a76ff38e6cc",
+        "check": "dead-code",
+        "impact": "Informational",
+        "confidence": "Medium"
+      },
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "withdraw",
+            "source_mapping": {
+              "start": 241,
+              "length": 149,
+              "filename_relative": "Benchmarks/Study_SamplesSet/564597f346421e0ae96e92266374d8c5.sol",
+              "filename_absolute": "/home/shikah/Documents/PhD/VulDet/Benchmarks/Study_SamplesSet/564597f346421e0ae96e92266374d8c5.sol",
+              "filename_short": "Benchmarks/Study_SamplesSet/564597f346421e0ae96e92266374d8c5.sol",
+              "is_dependency": false,
+              "lines": [
+                12,
+                13,
+                14,
+                15
+              ],
+              "starting_column": 5,
+              "ending_column": 6
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "FunctionTypes",
+                "source_mapping": {
+                  "start": 140,
+                  "length": 592,
+                  "filename_relative": "Benchmarks/Study_SamplesSet/564597f346421e0ae96e92266374d8c5.sol",
+                  "filename_absolute": "/home/shikah/Documents/PhD/VulDet/Benchmarks/Study_SamplesSet/564597f346421e0ae96e92266374d8c5.sol",
+                  "filename_short": "Benchmarks/Study_SamplesSet/564597f346421e0ae96e92266374d8c5.sol",
+                  "is_dependency": false,
+                  "lines": [
+                    8,
+                    9,
+                    10,
+                    11,
+                    12,
+                    13,
+                    14,
+                    15,
+                    16,
+                    17,
+                    18,
+                    19,
+                    20,
+                    21,
+                    22,
+                    23,
+                    24,
+                    25,
+                    26,
+                    27,
+                    28,
+                    29
+                  ],
+                  "starting_column": 1,
+                  "ending_column": 2
+                }
+              },
+              "signature": "withdraw()"
+            }
+          }
+        ],
+        "description": "FunctionTypes.withdraw() (Benchmarks/Study_SamplesSet/564597f346421e0ae96e92266374d8c5.sol#12-15) is never used and should be removed\n",
+        "markdown": "[FunctionTypes.withdraw()](Benchmarks/Study_SamplesSet/564597f346421e0ae96e92266374d8c5.sol#L12-L15) is never used and should be removed\n",
+        "first_markdown_element": "Benchmarks/Study_SamplesSet/564597f346421e0ae96e92266374d8c5.sol#L12-L15",
+        "id": "59d24fd2819cd9694a3a4b84708215372b62b44c1cbb609e7957721d42a1f71d",
+        "check": "dead-code",
+        "impact": "Informational",
+        "confidence": "Medium"
+      },
+      {
+        "elements": [],
+        "description": "solc-0.4.25 is not recommended for deployment\n",
+        "markdown": "solc-0.4.25 is not recommended for deployment\n",
+        "first_markdown_element": "",
+        "id": "4d64003d70a62b1c6963f871e841b6cbd633d07d95554e1a50e0f25d9b71ebb3",
+        "check": "solc-version",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "pragma",
+            "name": "^0.4.25",
+            "source_mapping": {
+              "start": 114,
+              "length": 24,
+              "filename_relative": "Benchmarks/Study_SamplesSet/564597f346421e0ae96e92266374d8c5.sol",
+              "filename_absolute": "/home/shikah/Documents/PhD/VulDet/Benchmarks/Study_SamplesSet/564597f346421e0ae96e92266374d8c5.sol",
+              "filename_short": "Benchmarks/Study_SamplesSet/564597f346421e0ae96e92266374d8c5.sol",
+              "is_dependency": false,
+              "lines": [
+                6
+              ],
+              "starting_column": 1,
+              "ending_column": 25
+            },
+            "type_specific_fields": {
+              "directive": [
+                "solidity",
+                "^",
+                "0.4",
+                ".25"
+              ]
+            }
+          }
+        ],
+        "description": "Pragma version^0.4.25 (Benchmarks/Study_SamplesSet/564597f346421e0ae96e92266374d8c5.sol#6) allows old versions\n",
+        "markdown": "Pragma version[^0.4.25](Benchmarks/Study_SamplesSet/564597f346421e0ae96e92266374d8c5.sol#L6) allows old versions\n",
+        "first_markdown_element": "Benchmarks/Study_SamplesSet/564597f346421e0ae96e92266374d8c5.sol#L6",
+        "id": "fe8ce12c28f315568144774410eb71de4c797394fad542645d96e3521093df51",
+        "check": "solc-version",
+        "impact": "Informational",
+        "confidence": "High"
+      }
+    ]
+  }
+}

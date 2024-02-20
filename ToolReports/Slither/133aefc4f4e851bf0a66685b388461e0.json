@@ -1,0 +1,359 @@
+{
+  "success": true,
+  "error": null,
+  "results": {
+    "detectors": [
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "strToBytes",
+            "source_mapping": {
+              "start": 3989,
+              "length": 239,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "Avatars",
+                "source_mapping": {
+                  "start": 25,
+                  "length": 4206,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              },
+              "signature": "strToBytes(string)"
+            }
+          }
+        ],
+        "description": "Avatars.strToBytes(string) () is declared view but contains assembly code\n",
+        "markdown": "[Avatars.strToBytes(string)]() is declared view but contains assembly code\n",
+        "first_markdown_element": "",
+        "id": "56b71e099e540b479f8f2b74603c46e6a709c76f6725dc44cd287cd6a2f3a85b",
+        "additional_fields": {
+          "contains_assembly": true
+        },
+        "check": "constant-function-asm",
+        "impact": "Medium",
+        "confidence": "Medium"
+      },
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "strToBytes",
+            "source_mapping": {
+              "start": 3989,
+              "length": 239,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "Avatars",
+                "source_mapping": {
+                  "start": 25,
+                  "length": 4206,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              },
+              "signature": "strToBytes(string)"
+            }
+          },
+          {
+            "type": "node",
+            "name": "",
+            "source_mapping": {
+              "start": 4163,
+              "length": 65,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "strToBytes",
+                "source_mapping": {
+                  "start": 3989,
+                  "length": 239,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "Avatars",
+                    "source_mapping": {
+                      "start": 25,
+                      "length": 4206,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "strToBytes(string)"
+                }
+              }
+            }
+          }
+        ],
+        "description": "Avatars.strToBytes(string) () uses assembly\n\t- INLINE ASM ()\n",
+        "markdown": "[Avatars.strToBytes(string)]() uses assembly\n\t- [INLINE ASM]()\n",
+        "first_markdown_element": "",
+        "id": "6a162ed6d7430beb2b45586a6e4085f2e572d6b19a38600097f1b38bd6a58e3e",
+        "check": "assembly",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "node",
+            "name": "hash = sha3()(shapes)",
+            "source_mapping": {
+              "start": 1998,
+              "length": 27,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "register",
+                "source_mapping": {
+                  "start": 1583,
+                  "length": 809,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "Avatars",
+                    "source_mapping": {
+                      "start": 25,
+                      "length": 4206,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "register(string,string,string,string)"
+                }
+              }
+            }
+          }
+        ],
+        "description": "Deprecated standard detected hash = sha3()(shapes) ():\n\t- Usage of \"sha3()\" should be replaced with \"keccak256()\"\n",
+        "markdown": "Deprecated standard detected [hash = sha3()(shapes)]():\n\t- Usage of \"sha3()\" should be replaced with \"keccak256()\"\n",
+        "first_markdown_element": "",
+        "id": "e5aea6bbf552ddc25fdcad25ebfbbe49c26947c7e92703de6e40eabab360098c",
+        "check": "deprecated-standards",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "node",
+            "name": "",
+            "source_mapping": {
+              "start": 2130,
+              "length": 5,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "register",
+                "source_mapping": {
+                  "start": 1583,
+                  "length": 809,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "Avatars",
+                    "source_mapping": {
+                      "start": 25,
+                      "length": 4206,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "register(string,string,string,string)"
+                }
+              }
+            }
+          }
+        ],
+        "description": "Deprecated standard detected THROW ():\n\t- Usage of \"throw\" should be replaced with \"revert()\"\n",
+        "markdown": "Deprecated standard detected [THROW]():\n\t- Usage of \"throw\" should be replaced with \"revert()\"\n",
+        "first_markdown_element": "",
+        "id": "f5556cf1c70b64b9e4b1fc32044dd970b5f2c8b9fc21b7971fda01971033f2d5",
+        "check": "deprecated-standards",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "pragma",
+            "name": "^0.4.3",
+            "source_mapping": {
+              "start": 0,
+              "length": 23,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "directive": [
+                "solidity",
+                "^",
+                "0.4",
+                ".3"
+              ]
+            }
+          }
+        ],
+        "description": "Pragma version^0.4.3 () allows old versions\n",
+        "markdown": "Pragma version[^0.4.3]() allows old versions\n",
+        "first_markdown_element": "",
+        "id": "2111d9c25ae6332b0d733972aa97825732916b01caeb1c91991cb81b1d60efc1",
+        "check": "solc-version",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [],
+        "description": "solc-0.4.3 is not recommended for deployment\n",
+        "markdown": "solc-0.4.3 is not recommended for deployment\n",
+        "first_markdown_element": "",
+        "id": "89e91481fa523edf3aa43d23e73ed1a70f5c4deb4f4c95ce14da494519ac4658",
+        "check": "solc-version",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "register",
+            "source_mapping": {
+              "start": 1583,
+              "length": 809,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "Avatars",
+                "source_mapping": {
+                  "start": 25,
+                  "length": 4206,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              },
+              "signature": "register(string,string,string,string)"
+            }
+          }
+        ],
+        "description": "register(string,string,string,string) should be declared external:\n\t- Avatars.register(string,string,string,string) ()\n",
+        "markdown": "register(string,string,string,string) should be declared external:\n\t- [Avatars.register(string,string,string,string)]()\n",
+        "first_markdown_element": "",
+        "id": "48cb840736605b9ee48723ad8cabe48958d6d8fb4d7780c6b6f5f3949aa21a3b",
+        "check": "external-function",
+        "impact": "Optimization",
+        "confidence": "High"
+      }
+    ]
+  }
+}

@@ -1,0 +1,1489 @@
+{
+  "success": true,
+  "error": null,
+  "results": {
+    "detectors": [
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "_newOwner",
+            "source_mapping": {
+              "start": 3090,
+              "length": 17,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "replaceOwner",
+                "source_mapping": {
+                  "start": 3068,
+                  "length": 144,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "BountyToken",
+                    "source_mapping": {
+                      "start": 145,
+                      "length": 3172,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "replaceOwner(address)"
+                }
+              }
+            }
+          },
+          {
+            "type": "node",
+            "name": "owner = _newOwner",
+            "source_mapping": {
+              "start": 3148,
+              "length": 17,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "replaceOwner",
+                "source_mapping": {
+                  "start": 3068,
+                  "length": 144,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "BountyToken",
+                    "source_mapping": {
+                      "start": 145,
+                      "length": 3172,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "replaceOwner(address)"
+                }
+              }
+            }
+          }
+        ],
+        "description": "BountyToken.replaceOwner(address)._newOwner () lacks a zero-check on :\n\t\t- owner = _newOwner ()\n",
+        "markdown": "[BountyToken.replaceOwner(address)._newOwner]() lacks a zero-check on :\n\t\t- [owner = _newOwner]()\n",
+        "first_markdown_element": "",
+        "id": "31d863f0e5b577c3b081ce7827dbbde791699fb54bc1dcd3bc675de372c8961f",
+        "check": "missing-zero-check",
+        "impact": "Low",
+        "confidence": "Medium"
+      },
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "onlyOwner",
+            "source_mapping": {
+              "start": 409,
+              "length": 70,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "BountyToken",
+                "source_mapping": {
+                  "start": 145,
+                  "length": 3172,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              },
+              "signature": "onlyOwner()"
+            }
+          }
+        ],
+        "description": "Modifier BountyToken.onlyOwner() () does not always execute _; or revert",
+        "markdown": "Modifier [BountyToken.onlyOwner()]() does not always execute _; or revert",
+        "first_markdown_element": "",
+        "id": "281da1b77ab53c086d953fdd770b39cd9c36bd7eb3a263bc856c761555e38dee",
+        "check": "incorrect-modifier",
+        "impact": "Low",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "blockLock",
+            "source_mapping": {
+              "start": 483,
+              "length": 99,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "BountyToken",
+                "source_mapping": {
+                  "start": 145,
+                  "length": 3172,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              },
+              "signature": "blockLock(address)"
+            }
+          }
+        ],
+        "description": "Modifier BountyToken.blockLock(address) () does not always execute _; or revert",
+        "markdown": "Modifier [BountyToken.blockLock(address)]() does not always execute _; or revert",
+        "first_markdown_element": "",
+        "id": "33af6f3a1c5576531fb8e583a024b296110d816dd1e25ad8808bfa479edec20f",
+        "check": "incorrect-modifier",
+        "impact": "Low",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "checkIfToContract",
+            "source_mapping": {
+              "start": 586,
+              "length": 92,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "BountyToken",
+                "source_mapping": {
+                  "start": 145,
+                  "length": 3172,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              },
+              "signature": "checkIfToContract(address)"
+            }
+          }
+        ],
+        "description": "Modifier BountyToken.checkIfToContract(address) () does not always execute _; or revert",
+        "markdown": "Modifier [BountyToken.checkIfToContract(address)]() does not always execute _; or revert",
+        "first_markdown_element": "",
+        "id": "61de0afeef06601a630decbc8f160aef9c30288f9610e1218eab58be72f9176c",
+        "check": "incorrect-modifier",
+        "impact": "Low",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "pragma",
+            "name": "^0.4.2",
+            "source_mapping": {
+              "start": 0,
+              "length": 23,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "directive": [
+                "solidity",
+                "^",
+                "0.4",
+                ".2"
+              ]
+            }
+          }
+        ],
+        "description": "Pragma version^0.4.2 () allows old versions\n",
+        "markdown": "Pragma version[^0.4.2]() allows old versions\n",
+        "first_markdown_element": "",
+        "id": "684a56cd27e54ff2efdccacdc31c1f9807e03d1014a0a136c00240d60a2f3a67",
+        "check": "solc-version",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [],
+        "description": "solc-0.4.2 is not recommended for deployment\n",
+        "markdown": "solc-0.4.2 is not recommended for deployment\n",
+        "first_markdown_element": "",
+        "id": "707dbfcfdf84b6816d84949bbe947a3701cd8aa49952e3db1879e122f1f0990d",
+        "check": "solc-version",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "_from",
+            "source_mapping": {
+              "start": 1934,
+              "length": 13,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "transferFrom",
+                "source_mapping": {
+                  "start": 1912,
+                  "length": 427,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "BountyToken",
+                    "source_mapping": {
+                      "start": 145,
+                      "length": 3172,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "transferFrom(address,address,uint256)"
+                }
+              }
+            },
+            "additional_fields": {
+              "target": "parameter",
+              "convention": "mixedCase"
+            }
+          }
+        ],
+        "description": "Parameter BountyToken.transferFrom(address,address,uint256)._from () is not in mixedCase\n",
+        "markdown": "Parameter [BountyToken.transferFrom(address,address,uint256)._from]() is not in mixedCase\n",
+        "first_markdown_element": "",
+        "id": "069db11d3ac902a4cb89606fb9a88299f3fe6030a0344ca016f9f8d92bd02375",
+        "check": "naming-convention",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "_owner",
+            "source_mapping": {
+              "start": 2362,
+              "length": 14,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "balanceOf",
+                "source_mapping": {
+                  "start": 2343,
+                  "length": 104,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "BountyToken",
+                    "source_mapping": {
+                      "start": 145,
+                      "length": 3172,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "balanceOf(address)"
+                }
+              }
+            },
+            "additional_fields": {
+              "target": "parameter",
+              "convention": "mixedCase"
+            }
+          }
+        ],
+        "description": "Parameter BountyToken.balanceOf(address)._owner () is not in mixedCase\n",
+        "markdown": "Parameter [BountyToken.balanceOf(address)._owner]() is not in mixedCase\n",
+        "first_markdown_element": "",
+        "id": "1db80061a92984f38d0681bc06f526ee54814bc85d5e0ff726bab2de869e72e5",
+        "check": "naming-convention",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "_spender",
+            "source_mapping": {
+              "start": 1294,
+              "length": 16,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "approveAndCall",
+                "source_mapping": {
+                  "start": 1270,
+                  "length": 290,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "BountyToken",
+                    "source_mapping": {
+                      "start": 145,
+                      "length": 3172,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "approveAndCall(address,uint256,bytes)"
+                }
+              }
+            },
+            "additional_fields": {
+              "target": "parameter",
+              "convention": "mixedCase"
+            }
+          }
+        ],
+        "description": "Parameter BountyToken.approveAndCall(address,uint256,bytes)._spender () is not in mixedCase\n",
+        "markdown": "Parameter [BountyToken.approveAndCall(address,uint256,bytes)._spender]() is not in mixedCase\n",
+        "first_markdown_element": "",
+        "id": "1f210618ef066bb156a1ef86025ec81560b4ecc41a5d1f167961ebfe5c36e9fc",
+        "check": "naming-convention",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "contract",
+            "name": "tokenRecipient",
+            "source_mapping": {
+              "start": 25,
+              "length": 118,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "additional_fields": {
+              "target": "contract",
+              "convention": "CapWords"
+            }
+          }
+        ],
+        "description": "Contract tokenRecipient () is not in CapWords\n",
+        "markdown": "Contract [tokenRecipient]() is not in CapWords\n",
+        "first_markdown_element": "",
+        "id": "2b490d093e8774391ae7b7880a9192319b34e7b392e95de10bb460182ae054a0",
+        "check": "naming-convention",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "_value",
+            "source_mapping": {
+              "start": 2486,
+              "length": 14,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "approve",
+                "source_mapping": {
+                  "start": 2451,
+                  "length": 184,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "BountyToken",
+                    "source_mapping": {
+                      "start": 145,
+                      "length": 3172,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "approve(address,uint256)"
+                }
+              }
+            },
+            "additional_fields": {
+              "target": "parameter",
+              "convention": "mixedCase"
+            }
+          }
+        ],
+        "description": "Parameter BountyToken.approve(address,uint256)._value () is not in mixedCase\n",
+        "markdown": "Parameter [BountyToken.approve(address,uint256)._value]() is not in mixedCase\n",
+        "first_markdown_element": "",
+        "id": "3e0f02bd29c35f6cd3e550dc08b4da915dc9b02c9d10bff024f68b2f00715b81",
+        "check": "naming-convention",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "_lockedUntilBlock",
+            "source_mapping": {
+              "start": 2798,
+              "length": 25,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "setBlockLock",
+                "source_mapping": {
+                  "start": 2776,
+                  "length": 183,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "BountyToken",
+                    "source_mapping": {
+                      "start": 145,
+                      "length": 3172,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "setBlockLock(uint256)"
+                }
+              }
+            },
+            "additional_fields": {
+              "target": "parameter",
+              "convention": "mixedCase"
+            }
+          }
+        ],
+        "description": "Parameter BountyToken.setBlockLock(uint256)._lockedUntilBlock () is not in mixedCase\n",
+        "markdown": "Parameter [BountyToken.setBlockLock(uint256)._lockedUntilBlock]() is not in mixedCase\n",
+        "first_markdown_element": "",
+        "id": "6091e1a771c28b78ef4f11e4ee7d7a8b38e0280a56771a29e11ae040985b261b",
+        "check": "naming-convention",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "_newOwner",
+            "source_mapping": {
+              "start": 3090,
+              "length": 17,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "replaceOwner",
+                "source_mapping": {
+                  "start": 3068,
+                  "length": 144,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "BountyToken",
+                    "source_mapping": {
+                      "start": 145,
+                      "length": 3172,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "replaceOwner(address)"
+                }
+              }
+            },
+            "additional_fields": {
+              "target": "parameter",
+              "convention": "mixedCase"
+            }
+          }
+        ],
+        "description": "Parameter BountyToken.replaceOwner(address)._newOwner () is not in mixedCase\n",
+        "markdown": "Parameter [BountyToken.replaceOwner(address)._newOwner]() is not in mixedCase\n",
+        "first_markdown_element": "",
+        "id": "66378d4e9c85edcc2c121bf98c964d31090ed16753aa2605fe4a0468116a8c2e",
+        "check": "naming-convention",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "_to",
+            "source_mapping": {
+              "start": 1949,
+              "length": 11,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "transferFrom",
+                "source_mapping": {
+                  "start": 1912,
+                  "length": 427,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "BountyToken",
+                    "source_mapping": {
+                      "start": 145,
+                      "length": 3172,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "transferFrom(address,address,uint256)"
+                }
+              }
+            },
+            "additional_fields": {
+              "target": "parameter",
+              "convention": "mixedCase"
+            }
+          }
+        ],
+        "description": "Parameter BountyToken.transferFrom(address,address,uint256)._to () is not in mixedCase\n",
+        "markdown": "Parameter [BountyToken.transferFrom(address,address,uint256)._to]() is not in mixedCase\n",
+        "first_markdown_element": "",
+        "id": "7597c59c577ece9f5ccc1bcfa610e690b6a0590cf9ae7643f39ee57fd9cbeef6",
+        "check": "naming-convention",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "_to",
+            "source_mapping": {
+              "start": 1582,
+              "length": 11,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "transfer",
+                "source_mapping": {
+                  "start": 1564,
+                  "length": 344,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "BountyToken",
+                    "source_mapping": {
+                      "start": 145,
+                      "length": 3172,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "transfer(address,uint256)"
+                }
+              }
+            },
+            "additional_fields": {
+              "target": "parameter",
+              "convention": "mixedCase"
+            }
+          }
+        ],
+        "description": "Parameter BountyToken.transfer(address,uint256)._to () is not in mixedCase\n",
+        "markdown": "Parameter [BountyToken.transfer(address,uint256)._to]() is not in mixedCase\n",
+        "first_markdown_element": "",
+        "id": "933f7b1e9b27b7a13186c55079efeb51ef27e96ddcb48b8d09894d0618d22194",
+        "check": "naming-convention",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "_value",
+            "source_mapping": {
+              "start": 1312,
+              "length": 14,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "approveAndCall",
+                "source_mapping": {
+                  "start": 1270,
+                  "length": 290,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "BountyToken",
+                    "source_mapping": {
+                      "start": 145,
+                      "length": 3172,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "approveAndCall(address,uint256,bytes)"
+                }
+              }
+            },
+            "additional_fields": {
+              "target": "parameter",
+              "convention": "mixedCase"
+            }
+          }
+        ],
+        "description": "Parameter BountyToken.approveAndCall(address,uint256,bytes)._value () is not in mixedCase\n",
+        "markdown": "Parameter [BountyToken.approveAndCall(address,uint256,bytes)._value]() is not in mixedCase\n",
+        "first_markdown_element": "",
+        "id": "97d7451858572198b2cf9570ff2176703e46bd3aa996fba5d4ede6b37d01366f",
+        "check": "naming-convention",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "_value",
+            "source_mapping": {
+              "start": 1595,
+              "length": 14,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "transfer",
+                "source_mapping": {
+                  "start": 1564,
+                  "length": 344,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "BountyToken",
+                    "source_mapping": {
+                      "start": 145,
+                      "length": 3172,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "transfer(address,uint256)"
+                }
+              }
+            },
+            "additional_fields": {
+              "target": "parameter",
+              "convention": "mixedCase"
+            }
+          }
+        ],
+        "description": "Parameter BountyToken.transfer(address,uint256)._value () is not in mixedCase\n",
+        "markdown": "Parameter [BountyToken.transfer(address,uint256)._value]() is not in mixedCase\n",
+        "first_markdown_element": "",
+        "id": "9bd082213aa3a53cb15219b19b13b7ff34b7c5d2aa5c3ed9ebeb580f17c655a2",
+        "check": "naming-convention",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "_owner",
+            "source_mapping": {
+              "start": 2658,
+              "length": 14,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "allowance",
+                "source_mapping": {
+                  "start": 2639,
+                  "length": 133,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "BountyToken",
+                    "source_mapping": {
+                      "start": 145,
+                      "length": 3172,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "allowance(address,address)"
+                }
+              }
+            },
+            "additional_fields": {
+              "target": "parameter",
+              "convention": "mixedCase"
+            }
+          }
+        ],
+        "description": "Parameter BountyToken.allowance(address,address)._owner () is not in mixedCase\n",
+        "markdown": "Parameter [BountyToken.allowance(address,address)._owner]() is not in mixedCase\n",
+        "first_markdown_element": "",
+        "id": "b3ce39d07847134fbc9d1424a3b82e90ac89b35e0875dd0b0c9dd96daf54951c",
+        "check": "naming-convention",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "_value",
+            "source_mapping": {
+              "start": 1962,
+              "length": 14,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "transferFrom",
+                "source_mapping": {
+                  "start": 1912,
+                  "length": 427,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "BountyToken",
+                    "source_mapping": {
+                      "start": 145,
+                      "length": 3172,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "transferFrom(address,address,uint256)"
+                }
+              }
+            },
+            "additional_fields": {
+              "target": "parameter",
+              "convention": "mixedCase"
+            }
+          }
+        ],
+        "description": "Parameter BountyToken.transferFrom(address,address,uint256)._value () is not in mixedCase\n",
+        "markdown": "Parameter [BountyToken.transferFrom(address,address,uint256)._value]() is not in mixedCase\n",
+        "first_markdown_element": "",
+        "id": "b41b19911666e99a9e190631a196747d533466992fce4479651d4ef6a2a8f3c1",
+        "check": "naming-convention",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "_spender",
+            "source_mapping": {
+              "start": 2674,
+              "length": 16,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "allowance",
+                "source_mapping": {
+                  "start": 2639,
+                  "length": 133,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "BountyToken",
+                    "source_mapping": {
+                      "start": 145,
+                      "length": 3172,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "allowance(address,address)"
+                }
+              }
+            },
+            "additional_fields": {
+              "target": "parameter",
+              "convention": "mixedCase"
+            }
+          }
+        ],
+        "description": "Parameter BountyToken.allowance(address,address)._spender () is not in mixedCase\n",
+        "markdown": "Parameter [BountyToken.allowance(address,address)._spender]() is not in mixedCase\n",
+        "first_markdown_element": "",
+        "id": "de92506f7850d5f7e7be3d1a5f9902b4c0a90dcba80a03ef0bb5fbd2fc2dad14",
+        "check": "naming-convention",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "_extraData",
+            "source_mapping": {
+              "start": 1328,
+              "length": 16,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "approveAndCall",
+                "source_mapping": {
+                  "start": 1270,
+                  "length": 290,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "BountyToken",
+                    "source_mapping": {
+                      "start": 145,
+                      "length": 3172,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "approveAndCall(address,uint256,bytes)"
+                }
+              }
+            },
+            "additional_fields": {
+              "target": "parameter",
+              "convention": "mixedCase"
+            }
+          }
+        ],
+        "description": "Parameter BountyToken.approveAndCall(address,uint256,bytes)._extraData () is not in mixedCase\n",
+        "markdown": "Parameter [BountyToken.approveAndCall(address,uint256,bytes)._extraData]() is not in mixedCase\n",
+        "first_markdown_element": "",
+        "id": "e27117ec9b8f4b09ef14b0bc765c7ccc5f300e7089dc245486ab09d9fcbf83fb",
+        "check": "naming-convention",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "_spender",
+            "source_mapping": {
+              "start": 2468,
+              "length": 16,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "approve",
+                "source_mapping": {
+                  "start": 2451,
+                  "length": 184,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "BountyToken",
+                    "source_mapping": {
+                      "start": 145,
+                      "length": 3172,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "approve(address,uint256)"
+                }
+              }
+            },
+            "additional_fields": {
+              "target": "parameter",
+              "convention": "mixedCase"
+            }
+          }
+        ],
+        "description": "Parameter BountyToken.approve(address,uint256)._spender () is not in mixedCase\n",
+        "markdown": "Parameter [BountyToken.approve(address,uint256)._spender]() is not in mixedCase\n",
+        "first_markdown_element": "",
+        "id": "e90dba039fc88807f8093255137d306771f2a60bf048ecfca9612e6bb12e7d65",
+        "check": "naming-convention",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "version",
+            "source_mapping": {
+              "start": 783,
+              "length": 31,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "BountyToken",
+                "source_mapping": {
+                  "start": 145,
+                  "length": 3172,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              }
+            }
+          },
+          {
+            "type": "contract",
+            "name": "BountyToken",
+            "source_mapping": {
+              "start": 145,
+              "length": 3172,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            }
+          }
+        ],
+        "description": "BountyToken.version () is never used in BountyToken ()\n",
+        "markdown": "[BountyToken.version]() is never used in [BountyToken]()\n",
+        "first_markdown_element": "",
+        "id": "6c106c9f0e056acf8aff2a1b26e325254e5d2326362e8510c824685a636831f3",
+        "check": "unused-state",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "version",
+            "source_mapping": {
+              "start": 783,
+              "length": 31,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "BountyToken",
+                "source_mapping": {
+                  "start": 145,
+                  "length": 3172,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              }
+            }
+          }
+        ],
+        "description": "BountyToken.version () should be constant \n",
+        "markdown": "[BountyToken.version]() should be constant \n",
+        "first_markdown_element": "",
+        "id": "01118a06f67bdffadc1d53249a8d27bfec5a5d8a6de7cfce29e16a40ad5e415c",
+        "check": "constable-states",
+        "impact": "Optimization",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "approveAndCall",
+            "source_mapping": {
+              "start": 1270,
+              "length": 290,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "BountyToken",
+                "source_mapping": {
+                  "start": 145,
+                  "length": 3172,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              },
+              "signature": "approveAndCall(address,uint256,bytes)"
+            }
+          }
+        ],
+        "description": "approveAndCall(address,uint256,bytes) should be declared external:\n\t- BountyToken.approveAndCall(address,uint256,bytes) ()\n",
+        "markdown": "approveAndCall(address,uint256,bytes) should be declared external:\n\t- [BountyToken.approveAndCall(address,uint256,bytes)]()\n",
+        "first_markdown_element": "",
+        "id": "0085cb4e9ace6ae217122a3dde292f6ec773fe40e9d30df43b37f937e15979cf",
+        "check": "external-function",
+        "impact": "Optimization",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "receiveApproval",
+            "source_mapping": {
+              "start": 51,
+              "length": 90,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "tokenRecipient",
+                "source_mapping": {
+                  "start": 25,
+                  "length": 118,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              },
+              "signature": "receiveApproval(address,uint256,address,bytes)"
+            }
+          }
+        ],
+        "description": "receiveApproval(address,uint256,address,bytes) should be declared external:\n\t- tokenRecipient.receiveApproval(address,uint256,address,bytes) ()\n",
+        "markdown": "receiveApproval(address,uint256,address,bytes) should be declared external:\n\t- [tokenRecipient.receiveApproval(address,uint256,address,bytes)]()\n",
+        "first_markdown_element": "",
+        "id": "5bf8032db6d08275d0001914f4bdb19064612f8be1a79083db009c885f9d9f3e",
+        "check": "external-function",
+        "impact": "Optimization",
+        "confidence": "High"
+      }
+    ]
+  }
+}

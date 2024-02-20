@@ -1,0 +1,163 @@
+{
+  "fileName": "Benchmarks/Study_SamplesSet/3fb9f97e818279b8b05cb0fb8c277388.sol",
+  "baseName": "3fb9f97e818279b8b05cb0fb8c277388.sol",
+  "iter": 1640,
+  "time": "300.146501",
+  "errMsg": null,
+  "result": [
+    {
+      "no": "1",
+      "kind": "IO",
+      "line": 22,
+      "signatures": [
+        {
+          "contractName": "Paramount",
+          "methodName": "Paramount",
+          "argTypes": []
+        }
+      ],
+      "exp": "(10 ** decimals)",
+      "status": "proven"
+    },
+    {
+      "no": "2",
+      "kind": "IO",
+      "line": 35,
+      "signatures": [
+        {
+          "contractName": "Paramount",
+          "methodName": "@fallback",
+          "argTypes": []
+        }
+      ],
+      "exp": "(lastBidBlock + blocksDelta)",
+      "status": "unproven"
+    },
+    {
+      "no": "3",
+      "kind": "IO",
+      "line": 44,
+      "signatures": [
+        {
+          "contractName": "Paramount",
+          "methodName": "@fallback",
+          "argTypes": []
+        }
+      ],
+      "exp": "(currentBid + minBid)",
+      "status": "unproven"
+    },
+    {
+      "no": "4",
+      "kind": "IO",
+      "line": 59,
+      "signatures": [
+        {
+          "contractName": "Paramount",
+          "methodName": "blocksUntilWin",
+          "argTypes": []
+        }
+      ],
+      "exp": "(lastBidBlock + blocksDelta)",
+      "status": "unproven"
+    },
+    {
+      "no": "5",
+      "kind": "IO",
+      "line": 60,
+      "signatures": [
+        {
+          "contractName": "Paramount",
+          "methodName": "blocksUntilWin",
+          "argTypes": []
+        }
+      ],
+      "exp": "((lastBidBlock + blocksDelta) - block.number)",
+      "status": "proven"
+    },
+    {
+      "no": "6",
+      "kind": "IO",
+      "line": 60,
+      "signatures": [
+        {
+          "contractName": "Paramount",
+          "methodName": "blocksUntilWin",
+          "argTypes": []
+        }
+      ],
+      "exp": "(lastBidBlock + blocksDelta)",
+      "status": "unproven"
+    },
+    {
+      "no": "7",
+      "kind": "DZ",
+      "line": 22,
+      "signatures": [
+        {
+          "contractName": "Paramount",
+          "methodName": "Paramount",
+          "argTypes": []
+        }
+      ],
+      "exp": "((10 ** decimals) / 100)",
+      "status": "proven"
+    },
+    {
+      "no": "8",
+      "kind": "DZ",
+      "line": 41,
+      "signatures": [
+        {
+          "contractName": "Paramount",
+          "methodName": "@fallback",
+          "argTypes": []
+        }
+      ],
+      "exp": "(msg.value / 20)",
+      "status": "proven"
+    },
+    {
+      "no": "9",
+      "kind": "ETH_LEAK",
+      "line": 36,
+      "signatures": [
+        {
+          "contractName": "Paramount",
+          "methodName": "@fallback",
+          "argTypes": []
+        }
+      ],
+      "exp": "lastBidder.transfer(address(this).balance);",
+      "status": "unproven"
+    },
+    {
+      "no": "10",
+      "kind": "ETH_LEAK",
+      "line": 41,
+      "signatures": [
+        {
+          "contractName": "Paramount",
+          "methodName": "@fallback",
+          "argTypes": []
+        }
+      ],
+      "exp": "owner.transfer((msg.value / 20));",
+      "status": "proven"
+    },
+    {
+      "no": "11",
+      "kind": "ETH_LEAK",
+      "line": 46,
+      "signatures": [
+        {
+          "contractName": "Paramount",
+          "methodName": "@fallback",
+          "argTypes": []
+        }
+      ],
+      "exp": "owner.transfer(msg.value);",
+      "status": "proven"
+    }
+  ]
+}

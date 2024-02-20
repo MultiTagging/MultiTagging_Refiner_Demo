@@ -1,0 +1,244 @@
+{
+  "fileName": "Benchmarks/Study_SamplesSet/0915cc5a3af79fd77f0e6fa6f9cea662.sol",
+  "baseName": "0915cc5a3af79fd77f0e6fa6f9cea662.sol",
+  "iter": 6903,
+  "time": "300.017592",
+  "errMsg": null,
+  "result": [
+    {
+      "no": "1",
+      "kind": "IO",
+      "line": 24,
+      "signatures": [
+        {
+          "contractName": "SusanTokenERC20",
+          "methodName": "SusanTokenERC20",
+          "argTypes": []
+        }
+      ],
+      "exp": "(10 ** uint256(decimals))",
+      "status": "proven"
+    },
+    {
+      "no": "2",
+      "kind": "IO",
+      "line": 24,
+      "signatures": [
+        {
+          "contractName": "SusanTokenERC20",
+          "methodName": "SusanTokenERC20",
+          "argTypes": []
+        }
+      ],
+      "exp": "(100000000 * (10 ** uint256(decimals)))",
+      "status": "proven"
+    },
+    {
+      "no": "3",
+      "kind": "IO",
+      "line": 39,
+      "signatures": [
+        {
+          "contractName": "SusanTokenERC20",
+          "methodName": "transfer",
+          "argTypes": [ "address", "uint256" ]
+        },
+        {
+          "contractName": "SusanTokenERC20",
+          "methodName": "transferFrom",
+          "argTypes": [ "address", "address", "uint256" ]
+        }
+      ],
+      "exp": "(balanceOf[_to] + _value)",
+      "status": "unproven"
+    },
+    {
+      "no": "4",
+      "kind": "IO",
+      "line": 42,
+      "signatures": [
+        {
+          "contractName": "SusanTokenERC20",
+          "methodName": "transfer",
+          "argTypes": [ "address", "uint256" ]
+        },
+        {
+          "contractName": "SusanTokenERC20",
+          "methodName": "transferFrom",
+          "argTypes": [ "address", "address", "uint256" ]
+        }
+      ],
+      "exp": "(balanceOf[_from] + balanceOf[_to])",
+      "status": "unproven"
+    },
+    {
+      "no": "5",
+      "kind": "IO",
+      "line": 44,
+      "signatures": [
+        {
+          "contractName": "SusanTokenERC20",
+          "methodName": "transfer",
+          "argTypes": [ "address", "uint256" ]
+        },
+        {
+          "contractName": "SusanTokenERC20",
+          "methodName": "transferFrom",
+          "argTypes": [ "address", "address", "uint256" ]
+        }
+      ],
+      "exp": "(balanceOf[_from] - _value)",
+      "status": "proven"
+    },
+    {
+      "no": "6",
+      "kind": "IO",
+      "line": 46,
+      "signatures": [
+        {
+          "contractName": "SusanTokenERC20",
+          "methodName": "transfer",
+          "argTypes": [ "address", "uint256" ]
+        },
+        {
+          "contractName": "SusanTokenERC20",
+          "methodName": "transferFrom",
+          "argTypes": [ "address", "address", "uint256" ]
+        }
+      ],
+      "exp": "(balanceOf[_to] + _value)",
+      "status": "proven"
+    },
+    {
+      "no": "7",
+      "kind": "IO",
+      "line": 50,
+      "signatures": [
+        {
+          "contractName": "SusanTokenERC20",
+          "methodName": "transfer",
+          "argTypes": [ "address", "uint256" ]
+        },
+        {
+          "contractName": "SusanTokenERC20",
+          "methodName": "transferFrom",
+          "argTypes": [ "address", "address", "uint256" ]
+        }
+      ],
+      "exp": "(balanceOf[_from] + balanceOf[_to])",
+      "status": "unproven"
+    },
+    {
+      "no": "8",
+      "kind": "IO",
+      "line": 72,
+      "signatures": [
+        {
+          "contractName": "SusanTokenERC20",
+          "methodName": "transferFrom",
+          "argTypes": [ "address", "address", "uint256" ]
+        }
+      ],
+      "exp": "(allowance[_from][msg.sender] - _value)",
+      "status": "proven"
+    },
+    {
+      "no": "9",
+      "kind": "IO",
+      "line": 97,
+      "signatures": [
+        {
+          "contractName": "SusanTokenERC20",
+          "methodName": "burn",
+          "argTypes": [ "uint256" ]
+        }
+      ],
+      "exp": "(balanceOf[msg.sender] - _value)",
+      "status": "proven"
+    },
+    {
+      "no": "10",
+      "kind": "IO",
+      "line": 98,
+      "signatures": [
+        {
+          "contractName": "SusanTokenERC20",
+          "methodName": "burn",
+          "argTypes": [ "uint256" ]
+        }
+      ],
+      "exp": "(totalSupply - _value)",
+      "status": "unproven"
+    },
+    {
+      "no": "11",
+      "kind": "IO",
+      "line": 114,
+      "signatures": [
+        {
+          "contractName": "SusanTokenERC20",
+          "methodName": "burnFrom",
+          "argTypes": [ "address", "uint256" ]
+        }
+      ],
+      "exp": "(balanceOf[_from] - _value)",
+      "status": "proven"
+    },
+    {
+      "no": "12",
+      "kind": "IO",
+      "line": 115,
+      "signatures": [
+        {
+          "contractName": "SusanTokenERC20",
+          "methodName": "burnFrom",
+          "argTypes": [ "address", "uint256" ]
+        }
+      ],
+      "exp": "(allowance[_from][msg.sender] - _value)",
+      "status": "proven"
+    },
+    {
+      "no": "13",
+      "kind": "IO",
+      "line": 116,
+      "signatures": [
+        {
+          "contractName": "SusanTokenERC20",
+          "methodName": "burnFrom",
+          "argTypes": [ "address", "uint256" ]
+        }
+      ],
+      "exp": "(totalSupply - _value)",
+      "status": "unproven"
+    },
+    {
+      "no": "14",
+      "kind": "IO",
+      "line": 123,
+      "signatures": [
+        {
+          "contractName": "SusanTokenERC20",
+          "methodName": "mintToken",
+          "argTypes": [ "address", "uint256" ]
+        }
+      ],
+      "exp": "(balanceOf[target] + initialSupply)",
+      "status": "unproven"
+    },
+    {
+      "no": "15",
+      "kind": "IO",
+      "line": 124,
+      "signatures": [
+        {
+          "contractName": "SusanTokenERC20",
+          "methodName": "mintToken",
+          "argTypes": [ "address", "uint256" ]
+        }
+      ],
+      "exp": "(totalSupply + initialSupply)",
+      "status": "unproven"
+    }
+  ]
+}

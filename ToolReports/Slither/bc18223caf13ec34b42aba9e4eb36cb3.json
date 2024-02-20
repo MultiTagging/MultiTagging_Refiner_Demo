@@ -1,0 +1,2486 @@
+{
+  "success": true,
+  "error": null,
+  "results": {
+    "detectors": [
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "receiveApproval",
+            "source_mapping": {
+              "start": 3990,
+              "length": 245,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "Recipient",
+                "source_mapping": {
+                  "start": 3121,
+                  "length": 1247,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              },
+              "signature": "receiveApproval(address,uint256,ERC20,bytes)"
+            }
+          },
+          {
+            "type": "node",
+            "name": "! _token.transferFrom(_from,this,_value)",
+            "source_mapping": {
+              "start": 4121,
+              "length": 41,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "receiveApproval",
+                "source_mapping": {
+                  "start": 3990,
+                  "length": 245,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "Recipient",
+                    "source_mapping": {
+                      "start": 3121,
+                      "length": 1247,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "receiveApproval(address,uint256,ERC20,bytes)"
+                }
+              }
+            }
+          }
+        ],
+        "description": "Recipient.receiveApproval(address,uint256,ERC20,bytes) () uses arbitrary from in transferFrom: ! _token.transferFrom(_from,this,_value) ()\n",
+        "markdown": "[Recipient.receiveApproval(address,uint256,ERC20,bytes)]() uses arbitrary from in transferFrom: [! _token.transferFrom(_from,this,_value)]()\n",
+        "first_markdown_element": "",
+        "id": "54a1790ebfea6a8a0a490568542e769287b44bf47abb6647cebdbdc8f4d5b9ce",
+        "check": "arbitrary-send-erc20",
+        "impact": "High",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "executeProposal",
+            "source_mapping": {
+              "start": 12968,
+              "length": 1149,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "Congress",
+                "source_mapping": {
+                  "start": 4500,
+                  "length": 9619,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              },
+              "signature": "executeProposal(uint256,bytes)"
+            }
+          },
+          {
+            "type": "node",
+            "name": "! p.recipient.call.value(p.amount)(transactionBytecode)",
+            "source_mapping": {
+              "start": 13843,
+              "length": 54,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "executeProposal",
+                "source_mapping": {
+                  "start": 12968,
+                  "length": 1149,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "Congress",
+                    "source_mapping": {
+                      "start": 4500,
+                      "length": 9619,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "executeProposal(uint256,bytes)"
+                }
+              }
+            },
+            "additional_fields": {
+              "underlying_type": "external_calls"
+            }
+          },
+          {
+            "type": "node",
+            "name": "p.proposalPassed = true",
+            "source_mapping": {
+              "start": 13935,
+              "length": 23,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "executeProposal",
+                "source_mapping": {
+                  "start": 12968,
+                  "length": 1149,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "Congress",
+                    "source_mapping": {
+                      "start": 4500,
+                      "length": 9619,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "executeProposal(uint256,bytes)"
+                }
+              }
+            },
+            "additional_fields": {
+              "underlying_type": "variables_written",
+              "variable_name": "proposals"
+            }
+          }
+        ],
+        "description": "Reentrancy in Congress.executeProposal(uint256,bytes) ():\n\tExternal calls:\n\t- ! p.recipient.call.value(p.amount)(transactionBytecode) ()\n\tState variables written after the call(s):\n\t- p.proposalPassed = true ()\n\tCongress.proposals () can be used in cross function reentrancies:\n\t- Congress.checkProposalCode(uint256,address,uint256,bytes) ()\n\t- Congress.executeProposal(uint256,bytes) ()\n\t- Congress.newProposal(address,uint256,string,bytes) ()\n\t- Congress.numProposals() ()\n\t- Congress.vote(uint256,bool,string) ()\n",
+        "markdown": "Reentrancy in [Congress.executeProposal(uint256,bytes)]():\n\tExternal calls:\n\t- [! p.recipient.call.value(p.amount)(transactionBytecode)]()\n\tState variables written after the call(s):\n\t- [p.proposalPassed = true]()\n\t[Congress.proposals]() can be used in cross function reentrancies:\n\t- [Congress.checkProposalCode(uint256,address,uint256,bytes)]()\n\t- [Congress.executeProposal(uint256,bytes)]()\n\t- [Congress.newProposal(address,uint256,string,bytes)]()\n\t- [Congress.numProposals()]()\n\t- [Congress.vote(uint256,bool,string)]()\n",
+        "first_markdown_element": "",
+        "id": "b93e2b57385e06cfddbcc1a33aaa5bd212d4f48d430dcc36a4701a35bcf03b78",
+        "check": "reentrancy-eth",
+        "impact": "High",
+        "confidence": "Medium"
+      },
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "checkProposalCode",
+            "source_mapping": {
+              "start": 11443,
+              "length": 313,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "Congress",
+                "source_mapping": {
+                  "start": 4500,
+                  "length": 9619,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              },
+              "signature": "checkProposalCode(uint256,address,uint256,bytes)"
+            }
+          },
+          {
+            "type": "node",
+            "name": "proposals[id].proposalHash == sha3()(beneficiary,amount,transactionBytecode)",
+            "source_mapping": {
+              "start": 11654,
+              "length": 95,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "checkProposalCode",
+                "source_mapping": {
+                  "start": 11443,
+                  "length": 313,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "Congress",
+                    "source_mapping": {
+                      "start": 4500,
+                      "length": 9619,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "checkProposalCode(uint256,address,uint256,bytes)"
+                }
+              }
+            }
+          }
+        ],
+        "description": "Congress.checkProposalCode(uint256,address,uint256,bytes) () uses a dangerous strict equality:\n\t- proposals[id].proposalHash == sha3()(beneficiary,amount,transactionBytecode) ()\n",
+        "markdown": "[Congress.checkProposalCode(uint256,address,uint256,bytes)]() uses a dangerous strict equality:\n\t- [proposals[id].proposalHash == sha3()(beneficiary,amount,transactionBytecode)]()\n",
+        "first_markdown_element": "",
+        "id": "bdbbc3986d950b0e935d22dc23c240c0b0d5cdfb83cf90c6e5b99527b9f87431",
+        "check": "incorrect-equality",
+        "impact": "Medium",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "vote",
+            "source_mapping": {
+              "start": 12089,
+              "length": 12,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "vote",
+                "source_mapping": {
+                  "start": 11943,
+                  "length": 879,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "Congress",
+                    "source_mapping": {
+                      "start": 4500,
+                      "length": 9619,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "vote(uint256,bool,string)"
+                }
+              }
+            }
+          },
+          {
+            "type": "function",
+            "name": "vote",
+            "source_mapping": {
+              "start": 11943,
+              "length": 879,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "Congress",
+                "source_mapping": {
+                  "start": 4500,
+                  "length": 9619,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              },
+              "signature": "vote(uint256,bool,string)"
+            }
+          }
+        ],
+        "description": "Congress.vote(uint256,bool,string).vote () shadows:\n\t- Congress.vote(uint256,bool,string) () (function)\n",
+        "markdown": "[Congress.vote(uint256,bool,string).vote]() shadows:\n\t- [Congress.vote(uint256,bool,string)]() (function)\n",
+        "first_markdown_element": "",
+        "id": "77ae1d4592468d5c261af061e6ee35f6bed2a6f26c3f268dc48724644a3ceb48",
+        "check": "shadowing-local",
+        "impact": "Low",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "setOwner",
+            "source_mapping": {
+              "start": 280,
+              "length": 67,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "Owned",
+                "source_mapping": {
+                  "start": 82,
+                  "length": 379,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              },
+              "signature": "setOwner(address)"
+            }
+          },
+          {
+            "type": "node",
+            "name": "owner = _owner",
+            "source_mapping": {
+              "start": 330,
+              "length": 14,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "setOwner",
+                "source_mapping": {
+                  "start": 280,
+                  "length": 67,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "Owned",
+                    "source_mapping": {
+                      "start": 82,
+                      "length": 379,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "setOwner(address)"
+                }
+              }
+            }
+          }
+        ],
+        "description": "Owned.setOwner(address) () should emit an event for: \n\t- owner = _owner () \n",
+        "markdown": "[Owned.setOwner(address)]() should emit an event for: \n\t- [owner = _owner]() \n",
+        "first_markdown_element": "",
+        "id": "9b54dcfbd5e47b65e761503779b9b1bc8da826d688573c7eb97d92449582c098",
+        "check": "events-access",
+        "impact": "Low",
+        "confidence": "Medium"
+      },
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "setHammer",
+            "source_mapping": {
+              "start": 661,
+              "length": 72,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "Destroyable",
+                "source_mapping": {
+                  "start": 523,
+                  "length": 493,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              },
+              "signature": "setHammer(address)"
+            }
+          },
+          {
+            "type": "node",
+            "name": "hammer = _hammer",
+            "source_mapping": {
+              "start": 714,
+              "length": 16,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "setHammer",
+                "source_mapping": {
+                  "start": 661,
+                  "length": 72,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "Destroyable",
+                    "source_mapping": {
+                      "start": 523,
+                      "length": 493,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "setHammer(address)"
+                }
+              }
+            }
+          }
+        ],
+        "description": "Destroyable.setHammer(address) () should emit an event for: \n\t- hammer = _hammer () \n",
+        "markdown": "[Destroyable.setHammer(address)]() should emit an event for: \n\t- [hammer = _hammer]() \n",
+        "first_markdown_element": "",
+        "id": "e1f5c56c9a5d130ec9c9b659d8891a83c60ba0811c7b307da1308401db6bc8a3",
+        "check": "events-access",
+        "impact": "Low",
+        "confidence": "Medium"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "_hammer",
+            "source_mapping": {
+              "start": 680,
+              "length": 15,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "setHammer",
+                "source_mapping": {
+                  "start": 661,
+                  "length": 72,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "Destroyable",
+                    "source_mapping": {
+                      "start": 523,
+                      "length": 493,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "setHammer(address)"
+                }
+              }
+            }
+          },
+          {
+            "type": "node",
+            "name": "hammer = _hammer",
+            "source_mapping": {
+              "start": 714,
+              "length": 16,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "setHammer",
+                "source_mapping": {
+                  "start": 661,
+                  "length": 72,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "Destroyable",
+                    "source_mapping": {
+                      "start": 523,
+                      "length": 493,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "setHammer(address)"
+                }
+              }
+            }
+          }
+        ],
+        "description": "Destroyable.setHammer(address)._hammer () lacks a zero-check on :\n\t\t- hammer = _hammer ()\n",
+        "markdown": "[Destroyable.setHammer(address)._hammer]() lacks a zero-check on :\n\t\t- [hammer = _hammer]()\n",
+        "first_markdown_element": "",
+        "id": "0121d30372cd7003203782180c56cdb2bd4cfc03e9e8671cf33b44f0c2b58180",
+        "check": "missing-zero-check",
+        "impact": "Low",
+        "confidence": "Medium"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "_owner",
+            "source_mapping": {
+              "start": 298,
+              "length": 14,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "setOwner",
+                "source_mapping": {
+                  "start": 280,
+                  "length": 67,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "Owned",
+                    "source_mapping": {
+                      "start": 82,
+                      "length": 379,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "setOwner(address)"
+                }
+              }
+            }
+          },
+          {
+            "type": "node",
+            "name": "owner = _owner",
+            "source_mapping": {
+              "start": 330,
+              "length": 14,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "setOwner",
+                "source_mapping": {
+                  "start": 280,
+                  "length": 67,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "Owned",
+                    "source_mapping": {
+                      "start": 82,
+                      "length": 379,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "setOwner(address)"
+                }
+              }
+            }
+          }
+        ],
+        "description": "Owned.setOwner(address)._owner () lacks a zero-check on :\n\t\t- owner = _owner ()\n",
+        "markdown": "[Owned.setOwner(address)._owner]() lacks a zero-check on :\n\t\t- [owner = _owner]()\n",
+        "first_markdown_element": "",
+        "id": "3675ebada8ce1d9971bc054ef224347350d8b06ca8993b0707347714f3c78dd3",
+        "check": "missing-zero-check",
+        "impact": "Low",
+        "confidence": "Medium"
+      },
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "receiveApproval",
+            "source_mapping": {
+              "start": 3990,
+              "length": 245,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "Recipient",
+                "source_mapping": {
+                  "start": 3121,
+                  "length": 1247,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              },
+              "signature": "receiveApproval(address,uint256,ERC20,bytes)"
+            }
+          },
+          {
+            "type": "node",
+            "name": "! _token.transferFrom(_from,this,_value)",
+            "source_mapping": {
+              "start": 4121,
+              "length": 41,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "receiveApproval",
+                "source_mapping": {
+                  "start": 3990,
+                  "length": 245,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "Recipient",
+                    "source_mapping": {
+                      "start": 3121,
+                      "length": 1247,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "receiveApproval(address,uint256,ERC20,bytes)"
+                }
+              }
+            },
+            "additional_fields": {
+              "underlying_type": "external_calls"
+            }
+          },
+          {
+            "type": "node",
+            "name": "ReceivedTokens(_from,_value,_token,_extraData)",
+            "source_mapping": {
+              "start": 4179,
+              "length": 49,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "receiveApproval",
+                "source_mapping": {
+                  "start": 3990,
+                  "length": 245,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "Recipient",
+                    "source_mapping": {
+                      "start": 3121,
+                      "length": 1247,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "receiveApproval(address,uint256,ERC20,bytes)"
+                }
+              }
+            },
+            "additional_fields": {
+              "underlying_type": "event"
+            }
+          }
+        ],
+        "description": "Reentrancy in Recipient.receiveApproval(address,uint256,ERC20,bytes) ():\n\tExternal calls:\n\t- ! _token.transferFrom(_from,this,_value) ()\n\tEvent emitted after the call(s):\n\t- ReceivedTokens(_from,_value,_token,_extraData) ()\n",
+        "markdown": "Reentrancy in [Recipient.receiveApproval(address,uint256,ERC20,bytes)]():\n\tExternal calls:\n\t- [! _token.transferFrom(_from,this,_value)]()\n\tEvent emitted after the call(s):\n\t- [ReceivedTokens(_from,_value,_token,_extraData)]()\n",
+        "first_markdown_element": "",
+        "id": "be5abb6b10790e3b4ec6888518d363a1d08db988c8eca87107736b9f24f68822",
+        "check": "reentrancy-events",
+        "impact": "Low",
+        "confidence": "Medium"
+      },
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "executeProposal",
+            "source_mapping": {
+              "start": 12968,
+              "length": 1149,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "Congress",
+                "source_mapping": {
+                  "start": 4500,
+                  "length": 9619,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              },
+              "signature": "executeProposal(uint256,bytes)"
+            }
+          },
+          {
+            "type": "node",
+            "name": "! p.recipient.call.value(p.amount)(transactionBytecode)",
+            "source_mapping": {
+              "start": 13843,
+              "length": 54,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "executeProposal",
+                "source_mapping": {
+                  "start": 12968,
+                  "length": 1149,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "Congress",
+                    "source_mapping": {
+                      "start": 4500,
+                      "length": 9619,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "executeProposal(uint256,bytes)"
+                }
+              }
+            },
+            "additional_fields": {
+              "underlying_type": "external_calls"
+            }
+          },
+          {
+            "type": "node",
+            "name": "ProposalTallied(id,p.numberOfVotes,p.proposalPassed)",
+            "source_mapping": {
+              "start": 14056,
+              "length": 54,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "executeProposal",
+                "source_mapping": {
+                  "start": 12968,
+                  "length": 1149,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "Congress",
+                    "source_mapping": {
+                      "start": 4500,
+                      "length": 9619,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "executeProposal(uint256,bytes)"
+                }
+              }
+            },
+            "additional_fields": {
+              "underlying_type": "event"
+            }
+          }
+        ],
+        "description": "Reentrancy in Congress.executeProposal(uint256,bytes) ():\n\tExternal calls:\n\t- ! p.recipient.call.value(p.amount)(transactionBytecode) ()\n\tEvent emitted after the call(s):\n\t- ProposalTallied(id,p.numberOfVotes,p.proposalPassed) ()\n",
+        "markdown": "Reentrancy in [Congress.executeProposal(uint256,bytes)]():\n\tExternal calls:\n\t- [! p.recipient.call.value(p.amount)(transactionBytecode)]()\n\tEvent emitted after the call(s):\n\t- [ProposalTallied(id,p.numberOfVotes,p.proposalPassed)]()\n",
+        "first_markdown_element": "",
+        "id": "c4b81feb9c963308139361c9e3fc9d14ae428203f56810fd59847bf6fee87e56",
+        "check": "reentrancy-events",
+        "impact": "Low",
+        "confidence": "Medium"
+      },
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "checkProposalCode",
+            "source_mapping": {
+              "start": 11443,
+              "length": 313,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "Congress",
+                "source_mapping": {
+                  "start": 4500,
+                  "length": 9619,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              },
+              "signature": "checkProposalCode(uint256,address,uint256,bytes)"
+            }
+          },
+          {
+            "type": "node",
+            "name": "proposals[id].proposalHash == sha3()(beneficiary,amount,transactionBytecode)",
+            "source_mapping": {
+              "start": 11654,
+              "length": 95,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "checkProposalCode",
+                "source_mapping": {
+                  "start": 11443,
+                  "length": 313,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "Congress",
+                    "source_mapping": {
+                      "start": 4500,
+                      "length": 9619,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "checkProposalCode(uint256,address,uint256,bytes)"
+                }
+              }
+            }
+          }
+        ],
+        "description": "Congress.checkProposalCode(uint256,address,uint256,bytes) () uses timestamp for comparisons\n\tDangerous comparisons:\n\t- proposals[id].proposalHash == sha3()(beneficiary,amount,transactionBytecode) ()\n",
+        "markdown": "[Congress.checkProposalCode(uint256,address,uint256,bytes)]() uses timestamp for comparisons\n\tDangerous comparisons:\n\t- [proposals[id].proposalHash == sha3()(beneficiary,amount,transactionBytecode)]()\n",
+        "first_markdown_element": "",
+        "id": "24ce9e7c8574e95a59b0295cd1fd85b2608e79da3a7c22af4b6f6c60c6516342",
+        "check": "timestamp",
+        "impact": "Low",
+        "confidence": "Medium"
+      },
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "executeProposal",
+            "source_mapping": {
+              "start": 12968,
+              "length": 1149,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "Congress",
+                "source_mapping": {
+                  "start": 4500,
+                  "length": 9619,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              },
+              "signature": "executeProposal(uint256,bytes)"
+            }
+          },
+          {
+            "type": "node",
+            "name": "now < p.votingDeadline || p.executed || p.proposalHash != sha3()(p.recipient,p.amount,transactionBytecode) || p.numberOfVotes < minimumQuorum",
+            "source_mapping": {
+              "start": 13399,
+              "length": 177,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "executeProposal",
+                "source_mapping": {
+                  "start": 12968,
+                  "length": 1149,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "Congress",
+                    "source_mapping": {
+                      "start": 4500,
+                      "length": 9619,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "executeProposal(uint256,bytes)"
+                }
+              }
+            }
+          }
+        ],
+        "description": "Congress.executeProposal(uint256,bytes) () uses timestamp for comparisons\n\tDangerous comparisons:\n\t- now < p.votingDeadline || p.executed || p.proposalHash != sha3()(p.recipient,p.amount,transactionBytecode) || p.numberOfVotes < minimumQuorum ()\n",
+        "markdown": "[Congress.executeProposal(uint256,bytes)]() uses timestamp for comparisons\n\tDangerous comparisons:\n\t- [now < p.votingDeadline || p.executed || p.proposalHash != sha3()(p.recipient,p.amount,transactionBytecode) || p.numberOfVotes < minimumQuorum]()\n",
+        "first_markdown_element": "",
+        "id": "cf8bd31b60025894d7f5cb7acc890c0fd98a4fa49376ccab8057c8d0237cdcfb",
+        "check": "timestamp",
+        "impact": "Low",
+        "confidence": "Medium"
+      },
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "vote",
+            "source_mapping": {
+              "start": 11943,
+              "length": 879,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "Congress",
+                "source_mapping": {
+                  "start": 4500,
+                  "length": 9619,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              },
+              "signature": "vote(uint256,bool,string)"
+            }
+          },
+          {
+            "type": "node",
+            "name": "p.voted[msg.sender] == true",
+            "source_mapping": {
+              "start": 12189,
+              "length": 27,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "vote",
+                "source_mapping": {
+                  "start": 11943,
+                  "length": 879,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "Congress",
+                    "source_mapping": {
+                      "start": 4500,
+                      "length": 9619,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "vote(uint256,bool,string)"
+                }
+              }
+            }
+          }
+        ],
+        "description": "Congress.vote(uint256,bool,string) () compares to a boolean constant:\n\t-p.voted[msg.sender] == true ()\n",
+        "markdown": "[Congress.vote(uint256,bool,string)]() compares to a boolean constant:\n\t-[p.voted[msg.sender] == true]()\n",
+        "first_markdown_element": "",
+        "id": "5e69f7197464f0f4e690eb18a1689ffecb3be096bd2e8855017173e1297d95dc",
+        "check": "boolean-equal",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "node",
+            "name": "suicide(address)(msg.sender)",
+            "source_mapping": {
+              "start": 877,
+              "length": 19,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "destroy",
+                "source_mapping": {
+                  "start": 841,
+                  "length": 58,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "Destroyable",
+                    "source_mapping": {
+                      "start": 523,
+                      "length": 493,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "destroy()"
+                }
+              }
+            }
+          }
+        ],
+        "description": "Deprecated standard detected suicide(address)(msg.sender) ():\n\t- Usage of \"suicide()\" should be replaced with \"selfdestruct()\"\n",
+        "markdown": "Deprecated standard detected [suicide(address)(msg.sender)]():\n\t- Usage of \"suicide()\" should be replaced with \"selfdestruct()\"\n",
+        "first_markdown_element": "",
+        "id": "81fe040732b5fc7983ad4832524724972e58f2ff403fd9fb7ee5322cfd6060d6",
+        "check": "deprecated-standards",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "node",
+            "name": "p.proposalHash = sha3()(beneficiary,amount,transactionBytecode)",
+            "source_mapping": {
+              "start": 10876,
+              "length": 65,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "newProposal",
+                "source_mapping": {
+                  "start": 10457,
+                  "length": 723,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "Congress",
+                    "source_mapping": {
+                      "start": 4500,
+                      "length": 9619,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "newProposal(address,uint256,string,bytes)"
+                }
+              }
+            }
+          }
+        ],
+        "description": "Deprecated standard detected p.proposalHash = sha3()(beneficiary,amount,transactionBytecode) ():\n\t- Usage of \"sha3()\" should be replaced with \"keccak256()\"\n",
+        "markdown": "Deprecated standard detected [p.proposalHash = sha3()(beneficiary,amount,transactionBytecode)]():\n\t- Usage of \"sha3()\" should be replaced with \"keccak256()\"\n",
+        "first_markdown_element": "",
+        "id": "93fb14fd25744d481bcdc91b1a7d02937e9b9378a86abe488e75a5a9a0010174",
+        "check": "deprecated-standards",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "node",
+            "name": "now < p.votingDeadline || p.executed || p.proposalHash != sha3()(p.recipient,p.amount,transactionBytecode) || p.numberOfVotes < minimumQuorum",
+            "source_mapping": {
+              "start": 13399,
+              "length": 177,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "executeProposal",
+                "source_mapping": {
+                  "start": 12968,
+                  "length": 1149,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "Congress",
+                    "source_mapping": {
+                      "start": 4500,
+                      "length": 9619,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "executeProposal(uint256,bytes)"
+                }
+              }
+            }
+          }
+        ],
+        "description": "Deprecated standard detected now < p.votingDeadline || p.executed || p.proposalHash != sha3()(p.recipient,p.amount,transactionBytecode) || p.numberOfVotes < minimumQuorum ():\n\t- Usage of \"sha3()\" should be replaced with \"keccak256()\"\n",
+        "markdown": "Deprecated standard detected [now < p.votingDeadline || p.executed || p.proposalHash != sha3()(p.recipient,p.amount,transactionBytecode) || p.numberOfVotes < minimumQuorum]():\n\t- Usage of \"sha3()\" should be replaced with \"keccak256()\"\n",
+        "first_markdown_element": "",
+        "id": "b560c47aa1417e75f4c8ad36f2def83ebb2a7cba3e683270863dce1dfc5e0992",
+        "check": "deprecated-standards",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "node",
+            "name": "proposals[id].proposalHash == sha3()(beneficiary,amount,transactionBytecode)",
+            "source_mapping": {
+              "start": 11654,
+              "length": 95,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "checkProposalCode",
+                "source_mapping": {
+                  "start": 11443,
+                  "length": 313,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "Congress",
+                    "source_mapping": {
+                      "start": 4500,
+                      "length": 9619,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "checkProposalCode(uint256,address,uint256,bytes)"
+                }
+              }
+            }
+          }
+        ],
+        "description": "Deprecated standard detected proposals[id].proposalHash == sha3()(beneficiary,amount,transactionBytecode) ():\n\t- Usage of \"sha3()\" should be replaced with \"keccak256()\"\n",
+        "markdown": "Deprecated standard detected [proposals[id].proposalHash == sha3()(beneficiary,amount,transactionBytecode)]():\n\t- Usage of \"sha3()\" should be replaced with \"keccak256()\"\n",
+        "first_markdown_element": "",
+        "id": "ded2a79299388f0b34e335e9f257e7acfe1dee059ba583362da35bbed8fa7a67",
+        "check": "deprecated-standards",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "node",
+            "name": "",
+            "source_mapping": {
+              "start": 448,
+              "length": 5,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "onlyOwner",
+                "source_mapping": {
+                  "start": 402,
+                  "length": 57,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "Owned",
+                    "source_mapping": {
+                      "start": 82,
+                      "length": 379,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "onlyOwner()"
+                }
+              }
+            }
+          }
+        ],
+        "description": "Deprecated standard detected THROW ():\n\t- Usage of \"throw\" should be replaced with \"revert()\"\n",
+        "markdown": "Deprecated standard detected [THROW]():\n\t- Usage of \"throw\" should be replaced with \"revert()\"\n",
+        "first_markdown_element": "",
+        "id": "f5556cf1c70b64b9e4b1fc32044dd970b5f2c8b9fc21b7971fda01971033f2d5",
+        "check": "deprecated-standards",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "pragma",
+            "name": "^0.4.4",
+            "source_mapping": {
+              "start": 0,
+              "length": 23,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "directive": [
+                "solidity",
+                "^",
+                "0.4",
+                ".4"
+              ]
+            }
+          }
+        ],
+        "description": "Pragma version^0.4.4 () allows old versions\n",
+        "markdown": "Pragma version[^0.4.4]() allows old versions\n",
+        "first_markdown_element": "",
+        "id": "c524dbac81447218cdcc218b1e615718838db5d05e8e9dedd1312462097ce552",
+        "check": "solc-version",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [],
+        "description": "solc-0.4.4 is not recommended for deployment\n",
+        "markdown": "solc-0.4.4 is not recommended for deployment\n",
+        "first_markdown_element": "",
+        "id": "d3c9a9a2694f771324145f36235e7a11e1b0352ba5bffd7634afad1f93f9692b",
+        "check": "solc-version",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "executeProposal",
+            "source_mapping": {
+              "start": 12968,
+              "length": 1149,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "Congress",
+                "source_mapping": {
+                  "start": 4500,
+                  "length": 9619,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              },
+              "signature": "executeProposal(uint256,bytes)"
+            }
+          },
+          {
+            "type": "node",
+            "name": "! p.recipient.call.value(p.amount)(transactionBytecode)",
+            "source_mapping": {
+              "start": 13843,
+              "length": 54,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "executeProposal",
+                "source_mapping": {
+                  "start": 12968,
+                  "length": 1149,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "Congress",
+                    "source_mapping": {
+                      "start": 4500,
+                      "length": 9619,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "executeProposal(uint256,bytes)"
+                }
+              }
+            }
+          }
+        ],
+        "description": "Low level call in Congress.executeProposal(uint256,bytes) ():\n\t- ! p.recipient.call.value(p.amount)(transactionBytecode) ()\n",
+        "markdown": "Low level call in [Congress.executeProposal(uint256,bytes)]():\n\t- [! p.recipient.call.value(p.amount)(transactionBytecode)]()\n",
+        "first_markdown_element": "",
+        "id": "abff4c6dd15e89e9d879846a3bc4f52d0e1da70b57445df4a7ddb01479977b0f",
+        "check": "low-level-calls",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "_value",
+            "source_mapping": {
+              "start": 4030,
+              "length": 14,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "receiveApproval",
+                "source_mapping": {
+                  "start": 3990,
+                  "length": 245,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "Recipient",
+                    "source_mapping": {
+                      "start": 3121,
+                      "length": 1247,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "receiveApproval(address,uint256,ERC20,bytes)"
+                }
+              }
+            },
+            "additional_fields": {
+              "target": "parameter",
+              "convention": "mixedCase"
+            }
+          }
+        ],
+        "description": "Parameter Recipient.receiveApproval(address,uint256,ERC20,bytes)._value () is not in mixedCase\n",
+        "markdown": "Parameter [Recipient.receiveApproval(address,uint256,ERC20,bytes)._value]() is not in mixedCase\n",
+        "first_markdown_element": "",
+        "id": "10e7427382ba4a46d1474bd3c5055b176e9664ff4aa39ff74476d0c2513b7511",
+        "check": "naming-convention",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "_owner",
+            "source_mapping": {
+              "start": 298,
+              "length": 14,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "setOwner",
+                "source_mapping": {
+                  "start": 280,
+                  "length": 67,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "Owned",
+                    "source_mapping": {
+                      "start": 82,
+                      "length": 379,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "setOwner(address)"
+                }
+              }
+            },
+            "additional_fields": {
+              "target": "parameter",
+              "convention": "mixedCase"
+            }
+          }
+        ],
+        "description": "Parameter Owned.setOwner(address)._owner () is not in mixedCase\n",
+        "markdown": "Parameter [Owned.setOwner(address)._owner]() is not in mixedCase\n",
+        "first_markdown_element": "",
+        "id": "2a146a98baf32eac816e696169220b30b74c5e3b7682cc8cee5a040c90b8bf1e",
+        "check": "naming-convention",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "_extraData",
+            "source_mapping": {
+              "start": 4089,
+              "length": 16,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "receiveApproval",
+                "source_mapping": {
+                  "start": 3990,
+                  "length": 245,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "Recipient",
+                    "source_mapping": {
+                      "start": 3121,
+                      "length": 1247,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "receiveApproval(address,uint256,ERC20,bytes)"
+                }
+              }
+            },
+            "additional_fields": {
+              "target": "parameter",
+              "convention": "mixedCase"
+            }
+          }
+        ],
+        "description": "Parameter Recipient.receiveApproval(address,uint256,ERC20,bytes)._extraData () is not in mixedCase\n",
+        "markdown": "Parameter [Recipient.receiveApproval(address,uint256,ERC20,bytes)._extraData]() is not in mixedCase\n",
+        "first_markdown_element": "",
+        "id": "6c1531395f3d9524735cb71d2bea22497803269280a685960f4ce1b6d49ba85f",
+        "check": "naming-convention",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "_from",
+            "source_mapping": {
+              "start": 4015,
+              "length": 13,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "receiveApproval",
+                "source_mapping": {
+                  "start": 3990,
+                  "length": 245,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "Recipient",
+                    "source_mapping": {
+                      "start": 3121,
+                      "length": 1247,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "receiveApproval(address,uint256,ERC20,bytes)"
+                }
+              }
+            },
+            "additional_fields": {
+              "target": "parameter",
+              "convention": "mixedCase"
+            }
+          }
+        ],
+        "description": "Parameter Recipient.receiveApproval(address,uint256,ERC20,bytes)._from () is not in mixedCase\n",
+        "markdown": "Parameter [Recipient.receiveApproval(address,uint256,ERC20,bytes)._from]() is not in mixedCase\n",
+        "first_markdown_element": "",
+        "id": "74f75a1f450517c476c13d32bf31ab834396c5974b88ead91f89b6d6e7b359b0",
+        "check": "naming-convention",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "_hammer",
+            "source_mapping": {
+              "start": 680,
+              "length": 15,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "setHammer",
+                "source_mapping": {
+                  "start": 661,
+                  "length": 72,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "Destroyable",
+                    "source_mapping": {
+                      "start": 523,
+                      "length": 493,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "setHammer(address)"
+                }
+              }
+            },
+            "additional_fields": {
+              "target": "parameter",
+              "convention": "mixedCase"
+            }
+          }
+        ],
+        "description": "Parameter Destroyable.setHammer(address)._hammer () is not in mixedCase\n",
+        "markdown": "Parameter [Destroyable.setHammer(address)._hammer]() is not in mixedCase\n",
+        "first_markdown_element": "",
+        "id": "ed946cf5d8186f24e32562f88579c9f6f0280fd70145eb6b284d23537d668cc1",
+        "check": "naming-convention",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "_token",
+            "source_mapping": {
+              "start": 4075,
+              "length": 12,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "receiveApproval",
+                "source_mapping": {
+                  "start": 3990,
+                  "length": 245,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "Recipient",
+                    "source_mapping": {
+                      "start": 3121,
+                      "length": 1247,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "receiveApproval(address,uint256,ERC20,bytes)"
+                }
+              }
+            },
+            "additional_fields": {
+              "target": "parameter",
+              "convention": "mixedCase"
+            }
+          }
+        ],
+        "description": "Parameter Recipient.receiveApproval(address,uint256,ERC20,bytes)._token () is not in mixedCase\n",
+        "markdown": "Parameter [Recipient.receiveApproval(address,uint256,ERC20,bytes)._token]() is not in mixedCase\n",
+        "first_markdown_element": "",
+        "id": "fe7f9deffe12aa42a7c437b1b246f97372c238b18663d90fdc308910b47af424",
+        "check": "naming-convention",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "newProposal",
+            "source_mapping": {
+              "start": 10457,
+              "length": 723,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "Congress",
+                "source_mapping": {
+                  "start": 4500,
+                  "length": 9619,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              },
+              "signature": "newProposal(address,uint256,string,bytes)"
+            }
+          }
+        ],
+        "description": "newProposal(address,uint256,string,bytes) should be declared external:\n\t- Congress.newProposal(address,uint256,string,bytes) ()\n",
+        "markdown": "newProposal(address,uint256,string,bytes) should be declared external:\n\t- [Congress.newProposal(address,uint256,string,bytes)]()\n",
+        "first_markdown_element": "",
+        "id": "50e3b6d20de5e981e52ba6d0ba0e57dc0ec5312d60ee4925e380a898b5e256ad",
+        "check": "external-function",
+        "impact": "Optimization",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "receiveApproval",
+            "source_mapping": {
+              "start": 3990,
+              "length": 245,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "Recipient",
+                "source_mapping": {
+                  "start": 3121,
+                  "length": 1247,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              },
+              "signature": "receiveApproval(address,uint256,ERC20,bytes)"
+            }
+          }
+        ],
+        "description": "receiveApproval(address,uint256,ERC20,bytes) should be declared external:\n\t- Recipient.receiveApproval(address,uint256,ERC20,bytes) ()\n",
+        "markdown": "receiveApproval(address,uint256,ERC20,bytes) should be declared external:\n\t- [Recipient.receiveApproval(address,uint256,ERC20,bytes)]()\n",
+        "first_markdown_element": "",
+        "id": "86e86b736746a9136c4f9b6f085c275926981e9cfcd7f8df8e0f31b82e0c2dc3",
+        "check": "external-function",
+        "impact": "Optimization",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "checkProposalCode",
+            "source_mapping": {
+              "start": 11443,
+              "length": 313,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "Congress",
+                "source_mapping": {
+                  "start": 4500,
+                  "length": 9619,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              },
+              "signature": "checkProposalCode(uint256,address,uint256,bytes)"
+            }
+          }
+        ],
+        "description": "checkProposalCode(uint256,address,uint256,bytes) should be declared external:\n\t- Congress.checkProposalCode(uint256,address,uint256,bytes) ()\n",
+        "markdown": "checkProposalCode(uint256,address,uint256,bytes) should be declared external:\n\t- [Congress.checkProposalCode(uint256,address,uint256,bytes)]()\n",
+        "first_markdown_element": "",
+        "id": "a63f9969bf0335535f2fdadba34e86d9187a4c64a1dd993517c5e792e1a9ca0a",
+        "check": "external-function",
+        "impact": "Optimization",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "executeProposal",
+            "source_mapping": {
+              "start": 12968,
+              "length": 1149,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "Congress",
+                "source_mapping": {
+                  "start": 4500,
+                  "length": 9619,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              },
+              "signature": "executeProposal(uint256,bytes)"
+            }
+          }
+        ],
+        "description": "executeProposal(uint256,bytes) should be declared external:\n\t- Congress.executeProposal(uint256,bytes) ()\n",
+        "markdown": "executeProposal(uint256,bytes) should be declared external:\n\t- [Congress.executeProposal(uint256,bytes)]()\n",
+        "first_markdown_element": "",
+        "id": "b2a8bd3a90e64ec47af8916a2fe6736b3d8497428420932f3f6d787cb42a689e",
+        "check": "external-function",
+        "impact": "Optimization",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "vote",
+            "source_mapping": {
+              "start": 11943,
+              "length": 879,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "Congress",
+                "source_mapping": {
+                  "start": 4500,
+                  "length": 9619,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              },
+              "signature": "vote(uint256,bool,string)"
+            }
+          }
+        ],
+        "description": "vote(uint256,bool,string) should be declared external:\n\t- Congress.vote(uint256,bool,string) ()\n",
+        "markdown": "vote(uint256,bool,string) should be declared external:\n\t- [Congress.vote(uint256,bool,string)]()\n",
+        "first_markdown_element": "",
+        "id": "ea17e081bd09033e429a2c3e1ab17d56870131488f84f412bbd968af2c4519cd",
+        "check": "external-function",
+        "impact": "Optimization",
+        "confidence": "High"
+      }
+    ]
+  }
+}

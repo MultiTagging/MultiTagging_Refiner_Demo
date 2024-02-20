@@ -1,0 +1,108 @@
+{
+  "fileName": "Benchmarks/Study_SamplesSet/855222da5dfcf3ecdb7d4cd2d510ee8f.sol",
+  "baseName": "855222da5dfcf3ecdb7d4cd2d510ee8f.sol",
+  "iter": 304,
+  "time": "304.428281",
+  "errMsg": null,
+  "result": [
+    {
+      "no": "1",
+      "kind": "IO",
+      "line": 16,
+      "signatures": [
+        {
+          "contractName": "EthDickMeasuringGamev3",
+          "methodName": "@fallback",
+          "argTypes": []
+        },
+        {
+          "contractName": "EthDickMeasuringGamev3",
+          "methodName": "withdraw",
+          "argTypes": []
+        }
+      ],
+      "exp": "(a * b)",
+      "status": "unproven"
+    },
+    {
+      "no": "2",
+      "kind": "DZ",
+      "line": 17,
+      "signatures": [
+        {
+          "contractName": "EthDickMeasuringGamev3",
+          "methodName": "@fallback",
+          "argTypes": []
+        },
+        {
+          "contractName": "EthDickMeasuringGamev3",
+          "methodName": "withdraw",
+          "argTypes": []
+        }
+      ],
+      "exp": "(c / a)",
+      "status": "proven"
+    },
+    {
+      "no": "3",
+      "kind": "DZ",
+      "line": 26,
+      "signatures": [
+        {
+          "contractName": "EthDickMeasuringGamev3",
+          "methodName": "@fallback",
+          "argTypes": []
+        },
+        {
+          "contractName": "EthDickMeasuringGamev3",
+          "methodName": "withdraw",
+          "argTypes": []
+        }
+      ],
+      "exp": "(a / b)",
+      "status": "proven"
+    },
+    {
+      "no": "4",
+      "kind": "ETH_LEAK",
+      "line": 80,
+      "signatures": [
+        {
+          "contractName": "EthDickMeasuringGamev3",
+          "methodName": "@fallback",
+          "argTypes": []
+        }
+      ],
+      "exp": "prevOwner.transfer(SafeMath.div(SafeMath.mul(prevSize, 80), 100));",
+      "status": "unproven"
+    },
+    {
+      "no": "5",
+      "kind": "ETH_LEAK",
+      "line": 94,
+      "signatures": [
+        {
+          "contractName": "EthDickMeasuringGamev3",
+          "methodName": "withdraw",
+          "argTypes": []
+        }
+      ],
+      "exp": "owner.transfer(SafeMath.div(SafeMath.mul(this.balance, 1), 100));",
+      "status": "proven"
+    },
+    {
+      "no": "6",
+      "kind": "ETH_LEAK",
+      "line": 97,
+      "signatures": [
+        {
+          "contractName": "EthDickMeasuringGamev3",
+          "methodName": "withdraw",
+          "argTypes": []
+        }
+      ],
+      "exp": "roundWinner.transfer(this.balance);",
+      "status": "unproven"
+    }
+  ]
+}

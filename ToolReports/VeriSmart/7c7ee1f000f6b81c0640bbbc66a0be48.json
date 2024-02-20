@@ -1,0 +1,664 @@
+{
+  "fileName": "Benchmarks/Study_SamplesSet/7c7ee1f000f6b81c0640bbbc66a0be48.sol",
+  "baseName": "7c7ee1f000f6b81c0640bbbc66a0be48.sol",
+  "iter": 30,
+  "time": "347.371787",
+  "errMsg": null,
+  "result": [
+    {
+      "no": "1",
+      "kind": "IO",
+      "line": 57,
+      "signatures": [
+        {
+          "contractName": "LollypopToken",
+          "methodName": "_transfer",
+          "argTypes": [ "address", "address", "uint256" ]
+        },
+        {
+          "contractName": "LollypopToken",
+          "methodName": "increaseAllowance",
+          "argTypes": [ "address", "uint256" ]
+        }
+      ],
+      "exp": "(a + b)",
+      "status": "unproven"
+    },
+    {
+      "no": "2",
+      "kind": "IO",
+      "line": 74,
+      "signatures": [
+        {
+          "contractName": "LollypopToken",
+          "methodName": "_transfer",
+          "argTypes": [ "address", "address", "uint256" ]
+        },
+        {
+          "contractName": "LollypopToken",
+          "methodName": "decreaseAllowance",
+          "argTypes": [ "address", "uint256" ]
+        },
+        {
+          "contractName": "LollypopToken",
+          "methodName": "transferFrom",
+          "argTypes": [ "address", "address", "uint256" ]
+        }
+      ],
+      "exp": "(a - b)",
+      "status": "proven"
+    },
+    {
+      "no": "3",
+      "kind": "IO",
+      "line": 166,
+      "signatures": [
+        {
+          "contractName": "LollypopToken",
+          "methodName": "bug_unchk42",
+          "argTypes": []
+        }
+      ],
+      "exp": "(receivers_unchk42 + 1)",
+      "status": "proven"
+    },
+    {
+      "no": "4",
+      "kind": "IO",
+      "line": 202,
+      "signatures": [
+        {
+          "contractName": "LollypopToken",
+          "methodName": "LollypopToken",
+          "argTypes": []
+        }
+      ],
+      "exp": "(10 ** 18)",
+      "status": "proven"
+    },
+    {
+      "no": "5",
+      "kind": "IO",
+      "line": 202,
+      "signatures": [
+        {
+          "contractName": "LollypopToken",
+          "methodName": "LollypopToken",
+          "argTypes": []
+        }
+      ],
+      "exp": "(1000000000 * (10 ** 18))",
+      "status": "proven"
+    },
+    {
+      "no": "6",
+      "kind": "IO",
+      "line": 203,
+      "signatures": [
+        {
+          "contractName": "LollypopToken",
+          "methodName": "LollypopToken",
+          "argTypes": []
+        }
+      ],
+      "exp": "(10 ** 18)",
+      "status": "proven"
+    },
+    {
+      "no": "7",
+      "kind": "IO",
+      "line": 203,
+      "signatures": [
+        {
+          "contractName": "LollypopToken",
+          "methodName": "LollypopToken",
+          "argTypes": []
+        }
+      ],
+      "exp": "(2000000 * (10 ** 18))",
+      "status": "proven"
+    },
+    {
+      "no": "8",
+      "kind": "IO",
+      "line": 218,
+      "signatures": [
+        {
+          "contractName": "LollypopToken",
+          "methodName": "_transfer",
+          "argTypes": [ "address", "address", "uint256" ]
+        },
+        {
+          "contractName": "LollypopToken",
+          "methodName": "calculateBonus",
+          "argTypes": [ "uint256", "uint256" ]
+        }
+      ],
+      "exp": "(totalDays * amount)",
+      "status": "unproven"
+    },
+    {
+      "no": "9",
+      "kind": "IO",
+      "line": 233,
+      "signatures": [
+        {
+          "contractName": "LollypopToken",
+          "methodName": "_transfer",
+          "argTypes": [ "address", "address", "uint256" ]
+        }
+      ],
+      "exp": "(now - _balances[sender].time)",
+      "status": "unproven"
+    },
+    {
+      "no": "10",
+      "kind": "IO",
+      "line": 234,
+      "signatures": [
+        {
+          "contractName": "LollypopToken",
+          "methodName": "_transfer",
+          "argTypes": [ "address", "address", "uint256" ]
+        }
+      ],
+      "exp": "(now - _balances[recipient].time)",
+      "status": "unproven"
+    },
+    {
+      "no": "11",
+      "kind": "IO",
+      "line": 423,
+      "signatures": [
+        {
+          "contractName": "LollypopToken",
+          "methodName": "multiTransfer",
+          "argTypes": [ "address[]", "uint256[]" ]
+        }
+      ],
+      "exp": "(i + 1)",
+      "status": "proven"
+    },
+    {
+      "no": "12",
+      "kind": "IO",
+      "line": 431,
+      "signatures": [
+        {
+          "contractName": "LollypopToken",
+          "methodName": "bug_unchk30",
+          "argTypes": []
+        }
+      ],
+      "exp": "(receivers_unchk30 + 1)",
+      "status": "proven"
+    },
+    {
+      "no": "13",
+      "kind": "DZ",
+      "line": 116,
+      "signatures": [
+        {
+          "contractName": "LollypopToken",
+          "methodName": "_transfer",
+          "argTypes": [ "address", "address", "uint256" ]
+        },
+        {
+          "contractName": "LollypopToken",
+          "methodName": "calculateBonus",
+          "argTypes": [ "uint256", "uint256" ]
+        }
+      ],
+      "exp": "(a / b)",
+      "status": "proven"
+    },
+    {
+      "no": "14",
+      "kind": "ETH_LEAK",
+      "line": 11,
+      "signatures": [
+        {
+          "contractName": "LollypopToken",
+          "methodName": "cash_unchk22",
+          "argTypes": [ "uint256", "uint256", "address" ]
+        }
+      ],
+      "exp": "winner_unchk22.send(subpot_unchk22);",
+      "status": "unproven"
+    },
+    {
+      "no": "15",
+      "kind": "ETH_LEAK",
+      "line": 18,
+      "signatures": [
+        {
+          "contractName": "LollypopToken",
+          "methodName": "bug_unchk31",
+          "argTypes": []
+        }
+      ],
+      "exp": "addr_unchk31.send(10000000000000000000)",
+      "status": "proven"
+    },
+    {
+      "no": "16",
+      "kind": "ETH_LEAK",
+      "line": 27,
+      "signatures": [
+        {
+          "contractName": "LollypopToken",
+          "methodName": "bug_unchk3",
+          "argTypes": [ "address" ]
+        }
+      ],
+      "exp": "addr.send(42000000000000000000);",
+      "status": "unproven"
+    },
+    {
+      "no": "17",
+      "kind": "ETH_LEAK",
+      "line": 41,
+      "signatures": [
+        {
+          "contractName": "LollypopToken",
+          "methodName": "withdrawLeftOver_unchk9",
+          "argTypes": []
+        }
+      ],
+      "exp": "msg.sender.send(address(this).balance);",
+      "status": "unproven"
+    },
+    {
+      "no": "18",
+      "kind": "ETH_LEAK",
+      "line": 143,
+      "signatures": [
+        {
+          "contractName": "LollypopToken",
+          "methodName": "my_func_uncheck12",
+          "argTypes": [ "address" ]
+        }
+      ],
+      "exp": "dst.call.value(msg.value)(\"\");",
+      "status": "proven"
+    },
+    {
+      "no": "19",
+      "kind": "ETH_LEAK",
+      "line": 148,
+      "signatures": [
+        {
+          "contractName": "LollypopToken",
+          "methodName": "my_func_unchk11",
+          "argTypes": [ "address" ]
+        }
+      ],
+      "exp": "dst.send(msg.value);",
+      "status": "proven"
+    },
+    {
+      "no": "20",
+      "kind": "ETH_LEAK",
+      "line": 158,
+      "signatures": [
+        {
+          "contractName": "LollypopToken",
+          "methodName": "withdrawBal_unchk41",
+          "argTypes": []
+        }
+      ],
+      "exp": "msg.sender.send(Balances_unchk41);",
+      "status": "proven"
+    },
+    {
+      "no": "21",
+      "kind": "ETH_LEAK",
+      "line": 165,
+      "signatures": [
+        {
+          "contractName": "LollypopToken",
+          "methodName": "bug_unchk42",
+          "argTypes": []
+        }
+      ],
+      "exp": "addr_unchk42.send(42000000000000000000)",
+      "status": "proven"
+    },
+    {
+      "no": "22",
+      "kind": "ETH_LEAK",
+      "line": 172,
+      "signatures": [
+        {
+          "contractName": "LollypopToken",
+          "methodName": "unhandledsend_unchk2",
+          "argTypes": [ "address" ]
+        }
+      ],
+      "exp": "callee.send(5000000000000000000);",
+      "status": "unproven"
+    },
+    {
+      "no": "23",
+      "kind": "ETH_LEAK",
+      "line": 177,
+      "signatures": [
+        {
+          "contractName": "LollypopToken",
+          "methodName": "bug_unchk43",
+          "argTypes": []
+        }
+      ],
+      "exp": "addr_unchk43.send(10000000000000000000)",
+      "status": "proven"
+    },
+    {
+      "no": "24",
+      "kind": "ETH_LEAK",
+      "line": 183,
+      "signatures": [
+        {
+          "contractName": "LollypopToken",
+          "methodName": "my_func_uncheck48",
+          "argTypes": [ "address" ]
+        }
+      ],
+      "exp": "dst.call.value(msg.value)(\"\");",
+      "status": "proven"
+    },
+    {
+      "no": "25",
+      "kind": "ETH_LEAK",
+      "line": 188,
+      "signatures": [
+        {
+          "contractName": "LollypopToken",
+          "methodName": "withdrawBal_unchk17",
+          "argTypes": []
+        }
+      ],
+      "exp": "msg.sender.send(Balances_unchk17);",
+      "status": "proven"
+    },
+    {
+      "no": "26",
+      "kind": "ETH_LEAK",
+      "line": 224,
+      "signatures": [
+        {
+          "contractName": "LollypopToken",
+          "methodName": "bug_unchk19",
+          "argTypes": []
+        }
+      ],
+      "exp": "addr_unchk19.send(10000000000000000000)",
+      "status": "proven"
+    },
+    {
+      "no": "27",
+      "kind": "ETH_LEAK",
+      "line": 258,
+      "signatures": [
+        {
+          "contractName": "LollypopToken",
+          "methodName": "unhandledsend_unchk26",
+          "argTypes": [ "address" ]
+        }
+      ],
+      "exp": "callee.send(5000000000000000000);",
+      "status": "unproven"
+    },
+    {
+      "no": "28",
+      "kind": "ETH_LEAK",
+      "line": 274,
+      "signatures": [
+        {
+          "contractName": "LollypopToken",
+          "methodName": "sendToWinner_unchk20",
+          "argTypes": []
+        }
+      ],
+      "exp": "winner_unchk20.send(winAmount_unchk20);",
+      "status": "proven"
+    },
+    {
+      "no": "29",
+      "kind": "ETH_LEAK",
+      "line": 291,
+      "signatures": [
+        {
+          "contractName": "LollypopToken",
+          "methodName": "sendToWinner_unchk32",
+          "argTypes": []
+        }
+      ],
+      "exp": "winner_unchk32.send(winAmount_unchk32);",
+      "status": "proven"
+    },
+    {
+      "no": "30",
+      "kind": "ETH_LEAK",
+      "line": 311,
+      "signatures": [
+        {
+          "contractName": "LollypopToken",
+          "methodName": "unhandledsend_unchk38",
+          "argTypes": [ "address" ]
+        }
+      ],
+      "exp": "callee.send(5000000000000000000);",
+      "status": "unproven"
+    },
+    {
+      "no": "31",
+      "kind": "ETH_LEAK",
+      "line": 329,
+      "signatures": [
+        {
+          "contractName": "LollypopToken",
+          "methodName": "withdrawLeftOver_unchk45",
+          "argTypes": []
+        }
+      ],
+      "exp": "msg.sender.send(address(this).balance);",
+      "status": "unproven"
+    },
+    {
+      "no": "32",
+      "kind": "ETH_LEAK",
+      "line": 363,
+      "signatures": [
+        {
+          "contractName": "LollypopToken",
+          "methodName": "cash_unchk46",
+          "argTypes": [ "uint256", "uint256", "address" ]
+        }
+      ],
+      "exp": "winner_unchk46.send(subpot_unchk46);",
+      "status": "unproven"
+    },
+    {
+      "no": "33",
+      "kind": "ETH_LEAK",
+      "line": 377,
+      "signatures": [
+        {
+          "contractName": "LollypopToken",
+          "methodName": "UncheckedExternalCall_unchk4",
+          "argTypes": []
+        }
+      ],
+      "exp": "addr_unchk4.send(42000000000000000000)",
+      "status": "proven"
+    },
+    {
+      "no": "34",
+      "kind": "ETH_LEAK",
+      "line": 393,
+      "signatures": [
+        {
+          "contractName": "LollypopToken",
+          "methodName": "bug_unchk7",
+          "argTypes": []
+        }
+      ],
+      "exp": "addr_unchk7.send(10000000000000000000)",
+      "status": "proven"
+    },
+    {
+      "no": "35",
+      "kind": "ETH_LEAK",
+      "line": 402,
+      "signatures": [
+        {
+          "contractName": "LollypopToken",
+          "methodName": "my_func_unchk23",
+          "argTypes": [ "address" ]
+        }
+      ],
+      "exp": "dst.send(msg.value);",
+      "status": "proven"
+    },
+    {
+      "no": "36",
+      "kind": "ETH_LEAK",
+      "line": 418,
+      "signatures": [
+        {
+          "contractName": "LollypopToken",
+          "methodName": "unhandledsend_unchk14",
+          "argTypes": [ "address" ]
+        }
+      ],
+      "exp": "callee.send(5000000000000000000);",
+      "status": "unproven"
+    },
+    {
+      "no": "37",
+      "kind": "ETH_LEAK",
+      "line": 430,
+      "signatures": [
+        {
+          "contractName": "LollypopToken",
+          "methodName": "bug_unchk30",
+          "argTypes": []
+        }
+      ],
+      "exp": "addr_unchk30.send(42000000000000000000)",
+      "status": "proven"
+    },
+    {
+      "no": "38",
+      "kind": "ETH_LEAK",
+      "line": 449,
+      "signatures": [
+        {
+          "contractName": "LollypopToken",
+          "methodName": "sendToWinner_unchk8",
+          "argTypes": []
+        }
+      ],
+      "exp": "winner_unchk8.send(winAmount_unchk8);",
+      "status": "proven"
+    },
+    {
+      "no": "39",
+      "kind": "ETH_LEAK",
+      "line": 465,
+      "signatures": [
+        {
+          "contractName": "LollypopToken",
+          "methodName": "bug_unchk39",
+          "argTypes": [ "address" ]
+        }
+      ],
+      "exp": "addr.send(4000000000000000000);",
+      "status": "unproven"
+    },
+    {
+      "no": "40",
+      "kind": "ETH_LEAK",
+      "line": 485,
+      "signatures": [
+        {
+          "contractName": "LollypopToken",
+          "methodName": "my_func_uncheck36",
+          "argTypes": [ "address" ]
+        }
+      ],
+      "exp": "dst.call.value(msg.value)(\"\");",
+      "status": "proven"
+    },
+    {
+      "no": "41",
+      "kind": "ETH_LEAK",
+      "line": 505,
+      "signatures": [
+        {
+          "contractName": "LollypopToken",
+          "methodName": "my_func_unchk35",
+          "argTypes": [ "address" ]
+        }
+      ],
+      "exp": "dst.send(msg.value);",
+      "status": "proven"
+    },
+    {
+      "no": "42",
+      "kind": "ETH_LEAK",
+      "line": 532,
+      "signatures": [
+        {
+          "contractName": "LollypopToken",
+          "methodName": "sendToWinner_unchk44",
+          "argTypes": []
+        }
+      ],
+      "exp": "winner_unchk44.send(winAmount_unchk44);",
+      "status": "proven"
+    },
+    {
+      "no": "43",
+      "kind": "ETH_LEAK",
+      "line": 574,
+      "signatures": [
+        {
+          "contractName": "LollypopToken",
+          "methodName": "UncheckedExternalCall_unchk40",
+          "argTypes": []
+        }
+      ],
+      "exp": "addr_unchk40.send(2000000000000000000)",
+      "status": "proven"
+    },
+    {
+      "no": "44",
+      "kind": "ETH_LEAK",
+      "line": 606,
+      "signatures": [
+        {
+          "contractName": "LollypopToken",
+          "methodName": "withdrawLeftOver_unchk33",
+          "argTypes": []
+        }
+      ],
+      "exp": "msg.sender.send(address(this).balance);",
+      "status": "unproven"
+    },
+    {
+      "no": "45",
+      "kind": "ETH_LEAK",
+      "line": 620,
+      "signatures": [
+        {
+          "contractName": "LollypopToken",
+          "methodName": "bug_unchk27",
+          "argTypes": [ "address" ]
+        }
+      ],
+      "exp": "addr.send(42000000000000000000);",
+      "status": "unproven"
+    }
+  ]
+}

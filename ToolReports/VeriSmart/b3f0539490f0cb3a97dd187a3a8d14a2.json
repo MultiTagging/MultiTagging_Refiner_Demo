@@ -1,0 +1,303 @@
+{
+  "fileName": "Benchmarks/Study_SamplesSet/b3f0539490f0cb3a97dd187a3a8d14a2.sol",
+  "baseName": "b3f0539490f0cb3a97dd187a3a8d14a2.sol",
+  "iter": 83,
+  "time": "321.73374",
+  "errMsg": null,
+  "result": [
+    {
+      "no": "1",
+      "kind": "IO",
+      "line": 23,
+      "signatures": [
+        {
+          "contractName": "LifetimeLottery",
+          "methodName": "LifetimeLottery",
+          "argTypes": []
+        }
+      ],
+      "exp": "(uint256(msg.sender) + block.timestamp)",
+      "status": "unproven"
+    },
+    {
+      "no": "2",
+      "kind": "IO",
+      "line": 32,
+      "signatures": [
+        {
+          "contractName": "LifetimeLottery",
+          "methodName": "@fallback",
+          "argTypes": []
+        }
+      ],
+      "exp": "(nonce + 1)",
+      "status": "unproven"
+    },
+    {
+      "no": "3",
+      "kind": "IO",
+      "line": 33,
+      "signatures": [
+        {
+          "contractName": "LifetimeLottery",
+          "methodName": "@fallback",
+          "argTypes": []
+        }
+      ],
+      "exp": "(((block.timestamp + block.number) + uint256(msg.sender)) + nonce)",
+      "status": "unproven"
+    },
+    {
+      "no": "4",
+      "kind": "IO",
+      "line": 33,
+      "signatures": [
+        {
+          "contractName": "LifetimeLottery",
+          "methodName": "@fallback",
+          "argTypes": []
+        }
+      ],
+      "exp": "((block.timestamp + block.number) + uint256(msg.sender))",
+      "status": "unproven"
+    },
+    {
+      "no": "5",
+      "kind": "IO",
+      "line": 33,
+      "signatures": [
+        {
+          "contractName": "LifetimeLottery",
+          "methodName": "@fallback",
+          "argTypes": []
+        }
+      ],
+      "exp": "(block.timestamp + block.number)",
+      "status": "unproven"
+    },
+    {
+      "no": "6",
+      "kind": "IO",
+      "line": 35,
+      "signatures": [
+        {
+          "contractName": "LifetimeLottery",
+          "methodName": "@fallback",
+          "argTypes": []
+        }
+      ],
+      "exp": "((block.timestamp + block.number) + random)",
+      "status": "unproven"
+    },
+    {
+      "no": "7",
+      "kind": "IO",
+      "line": 35,
+      "signatures": [
+        {
+          "contractName": "LifetimeLottery",
+          "methodName": "@fallback",
+          "argTypes": []
+        }
+      ],
+      "exp": "(block.timestamp + block.number)",
+      "status": "unproven"
+    },
+    {
+      "no": "8",
+      "kind": "IO",
+      "line": 38,
+      "signatures": [
+        {
+          "contractName": "LifetimeLottery",
+          "methodName": "@fallback",
+          "argTypes": []
+        }
+      ],
+      "exp": "(msg.value + jackpot)",
+      "status": "unproven"
+    },
+    {
+      "no": "9",
+      "kind": "IO",
+      "line": 42,
+      "signatures": [
+        {
+          "contractName": "LifetimeLottery",
+          "methodName": "@fallback",
+          "argTypes": []
+        }
+      ],
+      "exp": "(jackpot + JACKPOT_INC)",
+      "status": "unproven"
+    },
+    {
+      "no": "10",
+      "kind": "IO",
+      "line": 43,
+      "signatures": [
+        {
+          "contractName": "LifetimeLottery",
+          "methodName": "@fallback",
+          "argTypes": []
+        }
+      ],
+      "exp": "(msg.value - JACKPOT_INC)",
+      "status": "proven"
+    },
+    {
+      "no": "11",
+      "kind": "IO",
+      "line": 78,
+      "signatures": [
+        {
+          "contractName": "LifetimeLottery",
+          "methodName": "withdraw",
+          "argTypes": []
+        }
+      ],
+      "exp": "(this.balance - jackpot)",
+      "status": "unproven"
+    },
+    {
+      "no": "12",
+      "kind": "DZ",
+      "line": 23,
+      "signatures": [
+        {
+          "contractName": "LifetimeLottery",
+          "methodName": "LifetimeLottery",
+          "argTypes": []
+        }
+      ],
+      "exp": "((uint256(msg.sender) + block.timestamp) % 100)",
+      "status": "proven"
+    },
+    {
+      "no": "13",
+      "kind": "DZ",
+      "line": 33,
+      "signatures": [
+        {
+          "contractName": "LifetimeLottery",
+          "methodName": "@fallback",
+          "argTypes": []
+        }
+      ],
+      "exp": "(uint256(keccak256((((block.timestamp + block.number) + uint256(msg.sender)) + nonce))) % lotteryList.length)",
+      "status": "unproven"
+    },
+    {
+      "no": "14",
+      "kind": "DZ",
+      "line": 35,
+      "signatures": [
+        {
+          "contractName": "LifetimeLottery",
+          "methodName": "@fallback",
+          "argTypes": []
+        }
+      ],
+      "exp": "(uint256(keccak256(((block.timestamp + block.number) + random))) % 100)",
+      "status": "proven"
+    },
+    {
+      "no": "15",
+      "kind": "KA",
+      "line": 82,
+      "signatures": [
+        {
+          "contractName": "LifetimeLottery",
+          "methodName": "die",
+          "argTypes": []
+        }
+      ],
+      "exp": "selfdestruct(deployer);",
+      "status": "proven"
+    },
+    {
+      "no": "16",
+      "kind": "ETH_LEAK",
+      "line": 38,
+      "signatures": [
+        {
+          "contractName": "LifetimeLottery",
+          "methodName": "@fallback",
+          "argTypes": []
+        }
+      ],
+      "exp": "lastJackpotWinner.transfer((msg.value + jackpot));",
+      "status": "unproven"
+    },
+    {
+      "no": "17",
+      "kind": "ETH_LEAK",
+      "line": 43,
+      "signatures": [
+        {
+          "contractName": "LifetimeLottery",
+          "methodName": "@fallback",
+          "argTypes": []
+        }
+      ],
+      "exp": "lastWinner.transfer((msg.value - JACKPOT_INC));",
+      "status": "unproven"
+    },
+    {
+      "no": "18",
+      "kind": "ETH_LEAK",
+      "line": 47,
+      "signatures": [
+        {
+          "contractName": "LifetimeLottery",
+          "methodName": "@fallback",
+          "argTypes": []
+        }
+      ],
+      "exp": "msg.sender.transfer(msg.value);",
+      "status": "proven"
+    },
+    {
+      "no": "19",
+      "kind": "ETH_LEAK",
+      "line": 51,
+      "signatures": [
+        {
+          "contractName": "LifetimeLottery",
+          "methodName": "@fallback",
+          "argTypes": []
+        }
+      ],
+      "exp": "msg.sender.transfer(msg.value);",
+      "status": "proven"
+    },
+    {
+      "no": "20",
+      "kind": "ETH_LEAK",
+      "line": 78,
+      "signatures": [
+        {
+          "contractName": "LifetimeLottery",
+          "methodName": "withdraw",
+          "argTypes": []
+        }
+      ],
+      "exp": "deployer.transfer((this.balance - jackpot));",
+      "status": "proven"
+    },
+    {
+      "no": "21",
+      "kind": "ETH_LEAK",
+      "line": 82,
+      "signatures": [
+        {
+          "contractName": "LifetimeLottery",
+          "methodName": "die",
+          "argTypes": []
+        }
+      ],
+      "exp": "selfdestruct(deployer);",
+      "status": "proven"
+    }
+  ]
+}

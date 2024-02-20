@@ -1,0 +1,681 @@
+{
+  "success": true,
+  "error": null,
+  "results": {
+    "detectors": [
+      {
+        "elements": [
+          {
+            "type": "contract",
+            "name": "Investment",
+            "source_mapping": {
+              "start": 511,
+              "length": 1561,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            }
+          },
+          {
+            "type": "node",
+            "name": "investors.push(msg.sender)",
+            "source_mapping": {
+              "start": 867,
+              "length": 26,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "fallback",
+                "source_mapping": {
+                  "start": 813,
+                  "length": 126,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "Investment",
+                    "source_mapping": {
+                      "start": 511,
+                      "length": 1561,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "fallback()"
+                }
+              }
+            }
+          }
+        ],
+        "description": "Investment () contract sets array length with a user-controlled value:\n\t- investors.push(msg.sender) ()\n",
+        "markdown": "[Investment]() contract sets array length with a user-controlled value:\n\t- [investors.push(msg.sender)]()\n",
+        "first_markdown_element": "",
+        "id": "b27af83d338c03d01fa2dbd7cdccd1fa202d2843f805a371cec8f50e1624e818",
+        "check": "controlled-array-length",
+        "impact": "High",
+        "confidence": "Medium"
+      },
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "buyTokens",
+            "source_mapping": {
+              "start": 1428,
+              "length": 305,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "Investment",
+                "source_mapping": {
+                  "start": 511,
+                  "length": 1561,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              },
+              "signature": "buyTokens(uint256,uint256)"
+            }
+          },
+          {
+            "type": "node",
+            "name": "ico.invest.value(amount)(investors[i])",
+            "source_mapping": {
+              "start": 1682,
+              "length": 38,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "buyTokens",
+                "source_mapping": {
+                  "start": 1428,
+                  "length": 305,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "Investment",
+                    "source_mapping": {
+                      "start": 511,
+                      "length": 1561,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "buyTokens(uint256,uint256)"
+                }
+              }
+            },
+            "additional_fields": {
+              "underlying_type": "external_calls"
+            }
+          },
+          {
+            "type": "node",
+            "name": "delete balanceOf[investors[i]]",
+            "source_mapping": {
+              "start": 1646,
+              "length": 30,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "buyTokens",
+                "source_mapping": {
+                  "start": 1428,
+                  "length": 305,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "Investment",
+                    "source_mapping": {
+                      "start": 511,
+                      "length": 1561,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "buyTokens(uint256,uint256)"
+                }
+              }
+            },
+            "additional_fields": {
+              "underlying_type": "variables_written",
+              "variable_name": "balanceOf"
+            }
+          }
+        ],
+        "description": "Reentrancy in Investment.buyTokens(uint256,uint256) ():\n\tExternal calls:\n\t- ico.invest.value(amount)(investors[i]) ()\n\tState variables written after the call(s):\n\t- delete balanceOf[investors[i]] ()\n\tInvestment.balanceOf () can be used in cross function reentrancies:\n\t- Investment.buyTokens(uint256,uint256) ()\n\t- Investment.fallback() ()\n\t- Investment.withdraw() ()\n",
+        "markdown": "Reentrancy in [Investment.buyTokens(uint256,uint256)]():\n\tExternal calls:\n\t- [ico.invest.value(amount)(investors[i])]()\n\tState variables written after the call(s):\n\t- [delete balanceOf[investors[i]]]()\n\t[Investment.balanceOf]() can be used in cross function reentrancies:\n\t- [Investment.buyTokens(uint256,uint256)]()\n\t- [Investment.fallback()]()\n\t- [Investment.withdraw()]()\n",
+        "first_markdown_element": "",
+        "id": "e1e9096819c87873b495f7b85f8864820a953706ccdc27e0114948ddedf2293d",
+        "check": "reentrancy-eth",
+        "impact": "High",
+        "confidence": "Medium"
+      },
+      {
+        "elements": [
+          {
+            "type": "contract",
+            "name": "Crowdsale",
+            "source_mapping": {
+              "start": 442,
+              "length": 67,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            }
+          },
+          {
+            "type": "function",
+            "name": "invest",
+            "source_mapping": {
+              "start": 464,
+              "length": 43,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "Crowdsale",
+                "source_mapping": {
+                  "start": 442,
+                  "length": 67,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              },
+              "signature": "invest(address)"
+            }
+          }
+        ],
+        "description": "Contract locking ether found:\n\tContract Crowdsale () has payable functions:\n\t - Crowdsale.invest(address) ()\n\tBut does not have a function to withdraw the ether\n",
+        "markdown": "Contract locking ether found:\n\tContract [Crowdsale]() has payable functions:\n\t - [Crowdsale.invest(address)]()\n\tBut does not have a function to withdraw the ether\n",
+        "first_markdown_element": "",
+        "id": "93728727dc3ee971ab9acd399783a3cdb72cb0cde74c78e43a3e375ede520993",
+        "check": "locked-ether",
+        "impact": "Medium",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "withdraw",
+            "source_mapping": {
+              "start": 1880,
+              "length": 65,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "Investment",
+                "source_mapping": {
+                  "start": 511,
+                  "length": 1561,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              },
+              "signature": "withdraw()"
+            }
+          },
+          {
+            "type": "node",
+            "name": "msg.sender.send(balanceOf[msg.sender])",
+            "source_mapping": {
+              "start": 1903,
+              "length": 38,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "withdraw",
+                "source_mapping": {
+                  "start": 1880,
+                  "length": 65,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "Investment",
+                    "source_mapping": {
+                      "start": 511,
+                      "length": 1561,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "withdraw()"
+                }
+              }
+            }
+          }
+        ],
+        "description": "Investment.withdraw() () ignores return value by msg.sender.send(balanceOf[msg.sender]) ()\n",
+        "markdown": "[Investment.withdraw()]() ignores return value by [msg.sender.send(balanceOf[msg.sender])]()\n",
+        "first_markdown_element": "",
+        "id": "609dbd2f62d4c55c42cf68cf93d8eac888470ea9366ff6eb844cd867caf3f190",
+        "check": "unchecked-send",
+        "impact": "Medium",
+        "confidence": "Medium"
+      },
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "buyTokens",
+            "source_mapping": {
+              "start": 1428,
+              "length": 305,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "Investment",
+                "source_mapping": {
+                  "start": 511,
+                  "length": 1561,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              },
+              "signature": "buyTokens(uint256,uint256)"
+            }
+          },
+          {
+            "type": "node",
+            "name": "ico.invest.value(amount)(investors[i])",
+            "source_mapping": {
+              "start": 1682,
+              "length": 38,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "buyTokens",
+                "source_mapping": {
+                  "start": 1428,
+                  "length": 305,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "Investment",
+                    "source_mapping": {
+                      "start": 511,
+                      "length": 1561,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "buyTokens(uint256,uint256)"
+                }
+              }
+            }
+          }
+        ],
+        "description": "Investment.buyTokens(uint256,uint256) () has external calls inside a loop: ico.invest.value(amount)(investors[i]) ()\n",
+        "markdown": "[Investment.buyTokens(uint256,uint256)]() has external calls inside a loop: [ico.invest.value(amount)(investors[i])]()\n",
+        "first_markdown_element": "",
+        "id": "5b0b48d5ef38021661735ae0f8316104a74d418cc172cc714082dc58091c00ee",
+        "check": "calls-loop",
+        "impact": "Low",
+        "confidence": "Medium"
+      },
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "buyTokens",
+            "source_mapping": {
+              "start": 1428,
+              "length": 305,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "Investment",
+                "source_mapping": {
+                  "start": 511,
+                  "length": 1561,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              },
+              "signature": "buyTokens(uint256,uint256)"
+            }
+          },
+          {
+            "type": "node",
+            "name": "delete balanceOf[investors[i]]",
+            "source_mapping": {
+              "start": 1646,
+              "length": 30,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "buyTokens",
+                "source_mapping": {
+                  "start": 1428,
+                  "length": 305,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "Investment",
+                    "source_mapping": {
+                      "start": 511,
+                      "length": 1561,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "buyTokens(uint256,uint256)"
+                }
+              }
+            }
+          }
+        ],
+        "description": "Investment.buyTokens(uint256,uint256) () has costly operations inside a loop:\n\t- delete balanceOf[investors[i]] ()\n",
+        "markdown": "[Investment.buyTokens(uint256,uint256)]() has costly operations inside a loop:\n\t- [delete balanceOf[investors[i]]]()\n",
+        "first_markdown_element": "",
+        "id": "eea756c593e744e0b3928dea3861c60bf263849706a4d2f811957feabc3e4f9c",
+        "check": "costly-loop",
+        "impact": "Informational",
+        "confidence": "Medium"
+      },
+      {
+        "elements": [
+          {
+            "type": "pragma",
+            "name": "^0.4.8",
+            "source_mapping": {
+              "start": 417,
+              "length": 23,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "directive": [
+                "solidity",
+                "^",
+                "0.4",
+                ".8"
+              ]
+            }
+          }
+        ],
+        "description": "Pragma version^0.4.8 () allows old versions\n",
+        "markdown": "Pragma version[^0.4.8]() allows old versions\n",
+        "first_markdown_element": "",
+        "id": "dd43bca9b08bc1fa7b94a3e619671f3c2c98a72b8b3bf0caf1e1f86665ec4569",
+        "check": "solc-version",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [],
+        "description": "solc-0.4.8 is not recommended for deployment\n",
+        "markdown": "solc-0.4.8 is not recommended for deployment\n",
+        "first_markdown_element": "",
+        "id": "ebbd8e423b3c73a93e118f8daed7c9ac33b0d525351f79b5ea41076caa3c1bc5",
+        "check": "solc-version",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "node",
+            "name": "i < investors.length",
+            "source_mapping": {
+              "start": 1057,
+              "length": 19,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "isInvestor",
+                "source_mapping": {
+                  "start": 990,
+                  "length": 155,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "Investment",
+                    "source_mapping": {
+                      "start": 511,
+                      "length": 1561,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "isInvestor(address)"
+                }
+              }
+            }
+          }
+        ],
+        "description": "Loop condition i < investors.length () should use cached array length instead of referencing `length` member of the storage array.\n ",
+        "markdown": "Loop condition [i < investors.length]() should use cached array length instead of referencing `length` member of the storage array.\n ",
+        "first_markdown_element": "",
+        "id": "9331f739a57c5e57296f01dd978da5a074181313ed59667d7a571b9f651cd680",
+        "check": "cache-array-length",
+        "impact": "Optimization",
+        "confidence": "High"
+      }
+    ]
+  }
+}

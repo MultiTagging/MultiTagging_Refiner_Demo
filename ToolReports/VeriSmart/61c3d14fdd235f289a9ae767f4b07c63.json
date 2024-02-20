@@ -1,0 +1,37 @@
+{
+  "fileName": "Benchmarks/Study_SamplesSet/61c3d14fdd235f289a9ae767f4b07c63.sol",
+  "baseName": "61c3d14fdd235f289a9ae767f4b07c63.sol",
+  "iter": 4,
+  "time": "0.368989",
+  "errMsg": null,
+  "result": [
+    {
+      "no": "1",
+      "kind": "ETH_LEAK",
+      "line": 33,
+      "signatures": [
+        {
+          "contractName": "AdminInterface",
+          "methodName": "transfer",
+          "argTypes": [ "address" ]
+        }
+      ],
+      "exp": "multisig.transfer(msg.value);",
+      "status": "proven"
+    },
+    {
+      "no": "2",
+      "kind": "ETH_LEAK",
+      "line": 44,
+      "signatures": [
+        {
+          "contractName": "AdminInterface",
+          "methodName": "addOwner",
+          "argTypes": [ "address" ]
+        }
+      ],
+      "exp": "newAddr.transfer(this.balance);",
+      "status": "unproven"
+    }
+  ]
+}

@@ -1,0 +1,51 @@
+{
+  "fileName": "Benchmarks/Study_SamplesSet/31eeb099e77105315e7837c7b9296a18.sol",
+  "baseName": "31eeb099e77105315e7837c7b9296a18.sol",
+  "iter": 444,
+  "time": "65.365674",
+  "errMsg": null,
+  "result": [
+    {
+      "no": "1",
+      "kind": "IO",
+      "line": 30,
+      "signatures": [
+        {
+          "contractName": "RichestTakeAll",
+          "methodName": "@fallback",
+          "argTypes": []
+        }
+      ],
+      "exp": "(block.timestamp + 432000)",
+      "status": "unproven"
+    },
+    {
+      "no": "2",
+      "kind": "IO",
+      "line": 33,
+      "signatures": [
+        {
+          "contractName": "RichestTakeAll",
+          "methodName": "@fallback",
+          "argTypes": []
+        }
+      ],
+      "exp": "(jackpot + msg.value)",
+      "status": "unproven"
+    },
+    {
+      "no": "3",
+      "kind": "ETH_LEAK",
+      "line": 39,
+      "signatures": [
+        {
+          "contractName": "RichestTakeAll",
+          "methodName": "takeAll",
+          "argTypes": []
+        }
+      ],
+      "exp": "msg.sender.transfer(jackpot);",
+      "status": "proven"
+    }
+  ]
+}

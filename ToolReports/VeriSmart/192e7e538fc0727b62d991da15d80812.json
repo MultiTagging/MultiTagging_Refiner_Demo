@@ -1,0 +1,79 @@
+{
+  "fileName": "Benchmarks/Study_SamplesSet/192e7e538fc0727b62d991da15d80812.sol",
+  "baseName": "192e7e538fc0727b62d991da15d80812.sol",
+  "iter": 2478,
+  "time": "300.12899",
+  "errMsg": null,
+  "result": [
+    {
+      "no": "1",
+      "kind": "IO",
+      "line": 58,
+      "signatures": [
+        {
+          "contractName": "Bank",
+          "methodName": "GetNextWithFunds",
+          "argTypes": [ "uint256", "uint256" ]
+        }
+      ],
+      "exp": "(i + 1)",
+      "status": "unproven"
+    },
+    {
+      "no": "2",
+      "kind": "IO",
+      "line": 59,
+      "signatures": [
+        {
+          "contractName": "Bank",
+          "methodName": "GetNextWithFunds",
+          "argTypes": [ "uint256", "uint256" ]
+        }
+      ],
+      "exp": "(j + 1)",
+      "status": "proven"
+    },
+    {
+      "no": "3",
+      "kind": "IO",
+      "line": 60,
+      "signatures": [
+        {
+          "contractName": "Bank",
+          "methodName": "GetNextWithFunds",
+          "argTypes": [ "uint256", "uint256" ]
+        }
+      ],
+      "exp": "(counter + 1)",
+      "status": "proven"
+    },
+    {
+      "no": "4",
+      "kind": "IO",
+      "line": 114,
+      "signatures": [
+        {
+          "contractName": "Bank",
+          "methodName": "AssignAddress",
+          "argTypes": [ "uint256" ]
+        }
+      ],
+      "exp": "(availableAddresses.length - firstFreeAddressIndex)",
+      "status": "unproven"
+    },
+    {
+      "no": "5",
+      "kind": "IO",
+      "line": 127,
+      "signatures": [
+        {
+          "contractName": "Bank",
+          "methodName": "AssignAddress",
+          "argTypes": [ "uint256" ]
+        }
+      ],
+      "exp": "(firstFreeAddressIndex + 1)",
+      "status": "proven"
+    }
+  ]
+}

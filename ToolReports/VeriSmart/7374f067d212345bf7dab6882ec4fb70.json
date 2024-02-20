@@ -1,0 +1,33 @@
+{
+  "fileName": "Benchmarks/Study_SamplesSet/7374f067d212345bf7dab6882ec4fb70.sol",
+  "baseName": "7374f067d212345bf7dab6882ec4fb70.sol",
+  "iter": 3,
+  "time": "10.078265",
+  "errMsg": null,
+  "result": [
+    {
+      "no": "1",
+      "kind": "IO",
+      "line": 20,
+      "signatures": [
+        {
+          "contractName": "Proxy",
+          "methodName": "forward",
+          "argTypes": [ "address" ]
+        }
+      ],
+      "exp": "(i + 1)",
+      "status": "proven"
+    },
+    {
+      "no": "2",
+      "kind": "ETH_LEAK",
+      "line": 49,
+      "signatures": [
+        { "contractName": "Proxy", "methodName": "withdraw", "argTypes": [] }
+      ],
+      "exp": "msg.sender.transfer(address(this).balance);",
+      "status": "proven"
+    }
+  ]
+}

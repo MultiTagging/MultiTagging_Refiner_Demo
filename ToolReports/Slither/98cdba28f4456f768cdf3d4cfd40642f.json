@@ -1,0 +1,1418 @@
+{
+  "success": true,
+  "error": null,
+  "results": {
+    "detectors": [
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "randomGen",
+            "source_mapping": {
+              "start": 2757,
+              "length": 204,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "DiceRoll",
+                "source_mapping": {
+                  "start": 306,
+                  "length": 3329,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              },
+              "signature": "randomGen(address)"
+            }
+          },
+          {
+            "type": "node",
+            "name": "uint256(uint256(keccak256()(block.blockhash(b),player,timestamp)) % 10000)",
+            "source_mapping": {
+              "start": 2879,
+              "length": 78,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "randomGen",
+                "source_mapping": {
+                  "start": 2757,
+                  "length": 204,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "DiceRoll",
+                    "source_mapping": {
+                      "start": 306,
+                      "length": 3329,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "randomGen(address)"
+                }
+              }
+            }
+          }
+        ],
+        "description": "DiceRoll.randomGen(address) () uses a weak PRNG: \"uint256(uint256(keccak256()(block.blockhash(b),player,timestamp)) % 10000) ()\" \n",
+        "markdown": "[DiceRoll.randomGen(address)]() uses a weak PRNG: \"[uint256(uint256(keccak256()(block.blockhash(b),player,timestamp)) % 10000)]()\" \n",
+        "first_markdown_element": "",
+        "id": "039953c1bdf58163c116e0141e6acc1b7dcdb0d579f3ce701908fa2d4586e699",
+        "check": "weak-prng",
+        "impact": "High",
+        "confidence": "Medium"
+      },
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "roll",
+            "source_mapping": {
+              "start": 1615,
+              "length": 1138,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "DiceRoll",
+                "source_mapping": {
+                  "start": 306,
+                  "length": 3329,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              },
+              "signature": "roll(uint256)"
+            }
+          },
+          {
+            "type": "node",
+            "name": "payout = bet * ((10000 - 100) / value)",
+            "source_mapping": {
+              "start": 2106,
+              "length": 37,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "roll",
+                "source_mapping": {
+                  "start": 1615,
+                  "length": 1138,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "DiceRoll",
+                    "source_mapping": {
+                      "start": 306,
+                      "length": 3329,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "roll(uint256)"
+                }
+              }
+            }
+          }
+        ],
+        "description": "DiceRoll.roll(uint256) () performs a multiplication on the result of a division:\n\t- payout = bet * ((10000 - 100) / value) ()\n",
+        "markdown": "[DiceRoll.roll(uint256)]() performs a multiplication on the result of a division:\n\t- [payout = bet * ((10000 - 100) / value)]()\n",
+        "first_markdown_element": "",
+        "id": "abdce197dfc988e1593311742412127cc1215db77f7e34e4f888838e08e046f7",
+        "check": "divide-before-multiply",
+        "impact": "Medium",
+        "confidence": "Medium"
+      },
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "transferOwnership",
+            "source_mapping": {
+              "start": 214,
+              "length": 88,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "owned",
+                "source_mapping": {
+                  "start": 25,
+                  "length": 279,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              },
+              "signature": "transferOwnership(address)"
+            }
+          },
+          {
+            "type": "node",
+            "name": "owner = newOwner",
+            "source_mapping": {
+              "start": 279,
+              "length": 16,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "transferOwnership",
+                "source_mapping": {
+                  "start": 214,
+                  "length": 88,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "owned",
+                    "source_mapping": {
+                      "start": 25,
+                      "length": 279,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "transferOwnership(address)"
+                }
+              }
+            }
+          }
+        ],
+        "description": "owned.transferOwnership(address) () should emit an event for: \n\t- owner = newOwner () \n",
+        "markdown": "[owned.transferOwnership(address)]() should emit an event for: \n\t- [owner = newOwner]() \n",
+        "first_markdown_element": "",
+        "id": "29ddc47c9a6cf73c00f1ec316c1e02e5b0f22e31f161c050b57903c618001f90",
+        "check": "events-access",
+        "impact": "Low",
+        "confidence": "Medium"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "newOwner",
+            "source_mapping": {
+              "start": 241,
+              "length": 16,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "transferOwnership",
+                "source_mapping": {
+                  "start": 214,
+                  "length": 88,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "owned",
+                    "source_mapping": {
+                      "start": 25,
+                      "length": 279,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "transferOwnership(address)"
+                }
+              }
+            }
+          },
+          {
+            "type": "node",
+            "name": "owner = newOwner",
+            "source_mapping": {
+              "start": 279,
+              "length": 16,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "transferOwnership",
+                "source_mapping": {
+                  "start": 214,
+                  "length": 88,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "owned",
+                    "source_mapping": {
+                      "start": 25,
+                      "length": 279,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "transferOwnership(address)"
+                }
+              }
+            }
+          }
+        ],
+        "description": "owned.transferOwnership(address).newOwner () lacks a zero-check on :\n\t\t- owner = newOwner ()\n",
+        "markdown": "[owned.transferOwnership(address).newOwner]() lacks a zero-check on :\n\t\t- [owner = newOwner]()\n",
+        "first_markdown_element": "",
+        "id": "56ae5fb489c97f085c417ca6a38a34a62ae29f3598d339c7b49181087ad6a166",
+        "check": "missing-zero-check",
+        "impact": "Low",
+        "confidence": "Medium"
+      },
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "roll",
+            "source_mapping": {
+              "start": 1615,
+              "length": 1138,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "DiceRoll",
+                "source_mapping": {
+                  "start": 306,
+                  "length": 3329,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              },
+              "signature": "roll(uint256)"
+            }
+          },
+          {
+            "type": "node",
+            "name": "rnd > value",
+            "source_mapping": {
+              "start": 2310,
+              "length": 11,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "roll",
+                "source_mapping": {
+                  "start": 1615,
+                  "length": 1138,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "DiceRoll",
+                    "source_mapping": {
+                      "start": 306,
+                      "length": 3329,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "roll(uint256)"
+                }
+              }
+            }
+          }
+        ],
+        "description": "DiceRoll.roll(uint256) () uses timestamp for comparisons\n\tDangerous comparisons:\n\t- rnd > value ()\n",
+        "markdown": "[DiceRoll.roll(uint256)]() uses timestamp for comparisons\n\tDangerous comparisons:\n\t- [rnd > value]()\n",
+        "first_markdown_element": "",
+        "id": "d54d73230eb50c78e1f0bf00d92e645f388fc4e31f750d4bf45bb59bdb09c214",
+        "check": "timestamp",
+        "impact": "Low",
+        "confidence": "Medium"
+      },
+      {
+        "elements": [
+          {
+            "type": "node",
+            "name": "uint256(uint256(keccak256()(block.blockhash(b),player,timestamp)) % 10000)",
+            "source_mapping": {
+              "start": 2879,
+              "length": 78,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "randomGen",
+                "source_mapping": {
+                  "start": 2757,
+                  "length": 204,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "DiceRoll",
+                    "source_mapping": {
+                      "start": 306,
+                      "length": 3329,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "randomGen(address)"
+                }
+              }
+            }
+          }
+        ],
+        "description": "Deprecated standard detected uint256(uint256(keccak256()(block.blockhash(b),player,timestamp)) % 10000) ():\n\t- Usage of \"block.blockhash()\" should be replaced with \"blockhash()\"\n",
+        "markdown": "Deprecated standard detected [uint256(uint256(keccak256()(block.blockhash(b),player,timestamp)) % 10000)]():\n\t- Usage of \"block.blockhash()\" should be replaced with \"blockhash()\"\n",
+        "first_markdown_element": "",
+        "id": "029c032c63a712f64091518c01328655b1b0785deb5c34163619231e63390323",
+        "check": "deprecated-standards",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "node",
+            "name": "",
+            "source_mapping": {
+              "start": 185,
+              "length": 5,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "onlyOwner",
+                "source_mapping": {
+                  "start": 131,
+                  "length": 77,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "owned",
+                    "source_mapping": {
+                      "start": 25,
+                      "length": 279,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "onlyOwner()"
+                }
+              }
+            }
+          }
+        ],
+        "description": "Deprecated standard detected THROW ():\n\t- Usage of \"throw\" should be replaced with \"revert()\"\n",
+        "markdown": "Deprecated standard detected [THROW]():\n\t- Usage of \"throw\" should be replaced with \"revert()\"\n",
+        "first_markdown_element": "",
+        "id": "f5556cf1c70b64b9e4b1fc32044dd970b5f2c8b9fc21b7971fda01971033f2d5",
+        "check": "deprecated-standards",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "pragma",
+            "name": "^0.4.9",
+            "source_mapping": {
+              "start": 0,
+              "length": 23,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "directive": [
+                "solidity",
+                "^",
+                "0.4",
+                ".9"
+              ]
+            }
+          }
+        ],
+        "description": "Pragma version^0.4.9 () allows old versions\n",
+        "markdown": "Pragma version[^0.4.9]() allows old versions\n",
+        "first_markdown_element": "",
+        "id": "3c5ff4f844f57b89efd6e4b54c2f202ca55c1f958c7074785f69d87ba6721a7e",
+        "check": "solc-version",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [],
+        "description": "solc-0.4.9 is not recommended for deployment\n",
+        "markdown": "solc-0.4.9 is not recommended for deployment\n",
+        "first_markdown_element": "",
+        "id": "8c74976b741e43fce2257e92f2bfb4a12e0d13318de6b2af88024745746120b1",
+        "check": "solc-version",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "contract",
+            "name": "owned",
+            "source_mapping": {
+              "start": 25,
+              "length": 279,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "additional_fields": {
+              "target": "contract",
+              "convention": "CapWords"
+            }
+          }
+        ],
+        "description": "Contract owned () is not in CapWords\n",
+        "markdown": "Contract [owned]() is not in CapWords\n",
+        "first_markdown_element": "",
+        "id": "01bc58369f2fd81680c634b453fa427ba4b0127f990d30f7be7154dc8da22427",
+        "check": "naming-convention",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "event",
+            "name": "logClassic",
+            "source_mapping": {
+              "start": 791,
+              "length": 64,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "DiceRoll",
+                "source_mapping": {
+                  "start": 306,
+                  "length": 3329,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              },
+              "signature": "logClassic(string,uint8)"
+            },
+            "additional_fields": {
+              "target": "event",
+              "convention": "CapWords"
+            }
+          }
+        ],
+        "description": "Event DiceRoll.logClassic(string,uint8) () is not in CapWords\n",
+        "markdown": "Event [DiceRoll.logClassic(string,uint8)]() is not in CapWords\n",
+        "first_markdown_element": "",
+        "id": "1fa265bf243b29a2df25e769959898eefa943d46b7aea3f88ff487dab7b10404",
+        "check": "naming-convention",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "event",
+            "name": "logState",
+            "source_mapping": {
+              "start": 857,
+              "length": 66,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "DiceRoll",
+                "source_mapping": {
+                  "start": 306,
+                  "length": 3329,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              },
+              "signature": "logState(string,DiceRoll.GameState)"
+            },
+            "additional_fields": {
+              "target": "event",
+              "convention": "CapWords"
+            }
+          }
+        ],
+        "description": "Event DiceRoll.logState(string,DiceRoll.GameState) () is not in CapWords\n",
+        "markdown": "Event [DiceRoll.logState(string,DiceRoll.GameState)]() is not in CapWords\n",
+        "first_markdown_element": "",
+        "id": "77b36168c4c9fd5119dc867b564e59d82c85f64e4d1b089427d15f0c1d1f2cfd",
+        "check": "naming-convention",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "event",
+            "name": "log256",
+            "source_mapping": {
+              "start": 750,
+              "length": 39,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "DiceRoll",
+                "source_mapping": {
+                  "start": 306,
+                  "length": 3329,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              },
+              "signature": "log256(uint256)"
+            },
+            "additional_fields": {
+              "target": "event",
+              "convention": "CapWords"
+            }
+          }
+        ],
+        "description": "Event DiceRoll.log256(uint256) () is not in CapWords\n",
+        "markdown": "Event [DiceRoll.log256(uint256)]() is not in CapWords\n",
+        "first_markdown_element": "",
+        "id": "78efde1e53daa0f96890e8f8cb0d7be416d6abc28bdc8c6a32bebcd638aac8af",
+        "check": "naming-convention",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "event",
+            "name": "logCheck",
+            "source_mapping": {
+              "start": 925,
+              "length": 84,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "DiceRoll",
+                "source_mapping": {
+                  "start": 306,
+                  "length": 3329,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              },
+              "signature": "logCheck(uint256,string,uint256)"
+            },
+            "additional_fields": {
+              "target": "event",
+              "convention": "CapWords"
+            }
+          }
+        ],
+        "description": "Event DiceRoll.logCheck(uint256,string,uint256) () is not in CapWords\n",
+        "markdown": "Event [DiceRoll.logCheck(uint256,string,uint256)]() is not in CapWords\n",
+        "first_markdown_element": "",
+        "id": "7ebe1938963482e3b1d7e80aaef91a138fdc2946581611b61628a3adfad3edcf",
+        "check": "naming-convention",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "event",
+            "name": "logAdr",
+            "source_mapping": {
+              "start": 585,
+              "length": 40,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "DiceRoll",
+                "source_mapping": {
+                  "start": 306,
+                  "length": 3329,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              },
+              "signature": "logAdr(address)"
+            },
+            "additional_fields": {
+              "target": "event",
+              "convention": "CapWords"
+            }
+          }
+        ],
+        "description": "Event DiceRoll.logAdr(address) () is not in CapWords\n",
+        "markdown": "Event [DiceRoll.logAdr(address)]() is not in CapWords\n",
+        "first_markdown_element": "",
+        "id": "8dd1f53a87421039b96e4209da1b2c5b8ee418c94d749f3ba5a8769843fe28b8",
+        "check": "naming-convention",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "event",
+            "name": "logStr",
+            "source_mapping": {
+              "start": 627,
+              "length": 39,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "DiceRoll",
+                "source_mapping": {
+                  "start": 306,
+                  "length": 3329,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              },
+              "signature": "logStr(string)"
+            },
+            "additional_fields": {
+              "target": "event",
+              "convention": "CapWords"
+            }
+          }
+        ],
+        "description": "Event DiceRoll.logStr(string) () is not in CapWords\n",
+        "markdown": "Event [DiceRoll.logStr(string)]() is not in CapWords\n",
+        "first_markdown_element": "",
+        "id": "ce8f1a738f8e941dca45132eda3c5312f9c43005bde56e0d01db0e11358bd1b4",
+        "check": "naming-convention",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "event",
+            "name": "log32",
+            "source_mapping": {
+              "start": 708,
+              "length": 40,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "DiceRoll",
+                "source_mapping": {
+                  "start": 306,
+                  "length": 3329,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              },
+              "signature": "log32(uint32)"
+            },
+            "additional_fields": {
+              "target": "event",
+              "convention": "CapWords"
+            }
+          }
+        ],
+        "description": "Event DiceRoll.log32(uint32) () is not in CapWords\n",
+        "markdown": "Event [DiceRoll.log32(uint32)]() is not in CapWords\n",
+        "first_markdown_element": "",
+        "id": "dcc94abcc39b75c4fe80ee7d0dc65999a664e2e5484be60ef7268e9ce1c759cf",
+        "check": "naming-convention",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "event",
+            "name": "log8",
+            "source_mapping": {
+              "start": 668,
+              "length": 38,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "DiceRoll",
+                "source_mapping": {
+                  "start": 306,
+                  "length": 3329,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              },
+              "signature": "log8(uint8)"
+            },
+            "additional_fields": {
+              "target": "event",
+              "convention": "CapWords"
+            }
+          }
+        ],
+        "description": "Event DiceRoll.log8(uint8) () is not in CapWords\n",
+        "markdown": "Event [DiceRoll.log8(uint8)]() is not in CapWords\n",
+        "first_markdown_element": "",
+        "id": "ea07027a711a3a654cbfe9435404ab8541d6061a567fc5b7355644093d1e8fe5",
+        "check": "naming-convention",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "roll",
+            "source_mapping": {
+              "start": 1615,
+              "length": 1138,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "DiceRoll",
+                "source_mapping": {
+                  "start": 306,
+                  "length": 3329,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              },
+              "signature": "roll(uint256)"
+            }
+          },
+          {
+            "type": "node",
+            "name": "msg.sender.send(payout)",
+            "source_mapping": {
+              "start": 2506,
+              "length": 23,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "roll",
+                "source_mapping": {
+                  "start": 1615,
+                  "length": 1138,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "DiceRoll",
+                    "source_mapping": {
+                      "start": 306,
+                      "length": 3329,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "roll(uint256)"
+                }
+              }
+            },
+            "additional_fields": {
+              "underlying_type": "external_calls"
+            }
+          },
+          {
+            "type": "node",
+            "name": "totalEthSended += payout",
+            "source_mapping": {
+              "start": 2546,
+              "length": 24,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "roll",
+                "source_mapping": {
+                  "start": 1615,
+                  "length": 1138,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "DiceRoll",
+                    "source_mapping": {
+                      "start": 306,
+                      "length": 3329,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "roll(uint256)"
+                }
+              }
+            },
+            "additional_fields": {
+              "underlying_type": "variables_written",
+              "variable_name": "totalEthSended"
+            }
+          },
+          {
+            "type": "node",
+            "name": "logCheck(rnd,>,value)",
+            "source_mapping": {
+              "start": 2671,
+              "length": 25,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "roll",
+                "source_mapping": {
+                  "start": 1615,
+                  "length": 1138,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "DiceRoll",
+                    "source_mapping": {
+                      "start": 306,
+                      "length": 3329,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "roll(uint256)"
+                }
+              }
+            },
+            "additional_fields": {
+              "underlying_type": "event"
+            }
+          },
+          {
+            "type": "node",
+            "name": "logState(state:,games[msg.sender].state)",
+            "source_mapping": {
+              "start": 2706,
+              "length": 43,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "roll",
+                "source_mapping": {
+                  "start": 1615,
+                  "length": 1138,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "DiceRoll",
+                    "source_mapping": {
+                      "start": 306,
+                      "length": 3329,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "roll(uint256)"
+                }
+              }
+            },
+            "additional_fields": {
+              "underlying_type": "event"
+            }
+          }
+        ],
+        "description": "Reentrancy in DiceRoll.roll(uint256) ():\n\tExternal calls:\n\t- msg.sender.send(payout) ()\n\tState variables written after the call(s):\n\t- totalEthSended += payout ()\n\tEvent emitted after the call(s):\n\t- logCheck(rnd,>,value) ()\n\t- logState(state:,games[msg.sender].state) ()\n",
+        "markdown": "Reentrancy in [DiceRoll.roll(uint256)]():\n\tExternal calls:\n\t- [msg.sender.send(payout)]()\n\tState variables written after the call(s):\n\t- [totalEthSended += payout]()\n\tEvent emitted after the call(s):\n\t- [logCheck(rnd,>,value)]()\n\t- [logState(state:,games[msg.sender].state)]()\n",
+        "first_markdown_element": "",
+        "id": "be146e28f822036cd41daa6ccea0497807216b004465535614c3848648ebb15f",
+        "check": "reentrancy-unlimited-gas",
+        "impact": "Informational",
+        "confidence": "Medium"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "maxBet",
+            "source_mapping": {
+              "start": 369,
+              "length": 28,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "DiceRoll",
+                "source_mapping": {
+                  "start": 306,
+                  "length": 3329,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              }
+            }
+          }
+        ],
+        "description": "DiceRoll.maxBet () should be constant \n",
+        "markdown": "[DiceRoll.maxBet]() should be constant \n",
+        "first_markdown_element": "",
+        "id": "6ab924355f67482aa73a159fe19709f1b955677a5bd47b803fd620a82389b833",
+        "check": "constable-states",
+        "impact": "Optimization",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "minBet",
+            "source_mapping": {
+              "start": 336,
+              "length": 30,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "DiceRoll",
+                "source_mapping": {
+                  "start": 306,
+                  "length": 3329,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              }
+            }
+          }
+        ],
+        "description": "DiceRoll.minBet () should be constant \n",
+        "markdown": "[DiceRoll.minBet]() should be constant \n",
+        "first_markdown_element": "",
+        "id": "dd79d16838691ad140b0ced26fafdf8662d7e2a97829c34e01047f09befed637",
+        "check": "constable-states",
+        "impact": "Optimization",
+        "confidence": "High"
+      }
+    ]
+  }
+}

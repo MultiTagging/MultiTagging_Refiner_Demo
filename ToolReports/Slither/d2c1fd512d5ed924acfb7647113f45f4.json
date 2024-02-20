@@ -1,0 +1,2327 @@
+{
+  "success": true,
+  "error": null,
+  "results": {
+    "detectors": [
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "totalSupply",
+            "source_mapping": {
+              "start": 3901,
+              "length": 26,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "MyAdvancedToken",
+                "source_mapping": {
+                  "start": 3824,
+                  "length": 4589,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              }
+            }
+          },
+          {
+            "type": "variable",
+            "name": "totalSupply",
+            "source_mapping": {
+              "start": 605,
+              "length": 26,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "token",
+                "source_mapping": {
+                  "start": 425,
+                  "length": 3397,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              }
+            }
+          }
+        ],
+        "description": "MyAdvancedToken.totalSupply () shadows:\n\t- token.totalSupply ()\n",
+        "markdown": "[MyAdvancedToken.totalSupply]() shadows:\n\t- [token.totalSupply]()\n",
+        "first_markdown_element": "",
+        "id": "482041d010e27767b21c608400f3c80742a3af6a738b4eeb552a8f4802b546c2",
+        "check": "shadowing-state",
+        "impact": "High",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "contract",
+            "name": "MyAdvancedToken",
+            "source_mapping": {
+              "start": 3824,
+              "length": 4589,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            }
+          },
+          {
+            "type": "function",
+            "name": "transfer",
+            "source_mapping": {
+              "start": 4784,
+              "length": 614,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "MyAdvancedToken",
+                "source_mapping": {
+                  "start": 3824,
+                  "length": 4589,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              },
+              "signature": "transfer(address,uint256)"
+            }
+          }
+        ],
+        "description": "MyAdvancedToken () has incorrect ERC20 function interface:MyAdvancedToken.transfer(address,uint256) ()\n",
+        "markdown": "[MyAdvancedToken]() has incorrect ERC20 function interface:[MyAdvancedToken.transfer(address,uint256)]()\n",
+        "first_markdown_element": "",
+        "id": "2f7be3a8cdcbb83ae315f77793686b7e316122a0a5ad10855936d82757538914",
+        "check": "erc20-interface",
+        "impact": "Medium",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "contract",
+            "name": "MyAdvancedToken",
+            "source_mapping": {
+              "start": 3824,
+              "length": 4589,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            }
+          },
+          {
+            "type": "function",
+            "name": "transfer",
+            "source_mapping": {
+              "start": 1715,
+              "length": 534,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "token",
+                "source_mapping": {
+                  "start": 425,
+                  "length": 3397,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              },
+              "signature": "transfer(address,uint256)"
+            }
+          }
+        ],
+        "description": "MyAdvancedToken () has incorrect ERC20 function interface:token.transfer(address,uint256) ()\n",
+        "markdown": "[MyAdvancedToken]() has incorrect ERC20 function interface:[token.transfer(address,uint256)]()\n",
+        "first_markdown_element": "",
+        "id": "c12800330fc4988ff95e43a8b168c486b8d1f60286077a0366dce5b8d780add9",
+        "check": "erc20-interface",
+        "impact": "Medium",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "transferOwnership",
+            "source_mapping": {
+              "start": 213,
+              "length": 88,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "owned",
+                "source_mapping": {
+                  "start": 24,
+                  "length": 279,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              },
+              "signature": "transferOwnership(address)"
+            }
+          },
+          {
+            "type": "node",
+            "name": "owner = newOwner",
+            "source_mapping": {
+              "start": 278,
+              "length": 16,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "transferOwnership",
+                "source_mapping": {
+                  "start": 213,
+                  "length": 88,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "owned",
+                    "source_mapping": {
+                      "start": 24,
+                      "length": 279,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "transferOwnership(address)"
+                }
+              }
+            }
+          }
+        ],
+        "description": "owned.transferOwnership(address) () should emit an event for: \n\t- owner = newOwner () \n",
+        "markdown": "[owned.transferOwnership(address)]() should emit an event for: \n\t- [owner = newOwner]() \n",
+        "first_markdown_element": "",
+        "id": "29ddc47c9a6cf73c00f1ec316c1e02e5b0f22e31f161c050b57903c618001f90",
+        "check": "events-access",
+        "impact": "Low",
+        "confidence": "Medium"
+      },
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "setPrices",
+            "source_mapping": {
+              "start": 6598,
+              "length": 89,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "MyAdvancedToken",
+                "source_mapping": {
+                  "start": 3824,
+                  "length": 4589,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              },
+              "signature": "setPrices(uint256)"
+            }
+          },
+          {
+            "type": "node",
+            "name": "buyPrice = newBuyPrice",
+            "source_mapping": {
+              "start": 6658,
+              "length": 22,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "setPrices",
+                "source_mapping": {
+                  "start": 6598,
+                  "length": 89,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "MyAdvancedToken",
+                    "source_mapping": {
+                      "start": 3824,
+                      "length": 4589,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "setPrices(uint256)"
+                }
+              }
+            }
+          }
+        ],
+        "description": "MyAdvancedToken.setPrices(uint256) () should emit an event for: \n\t- buyPrice = newBuyPrice () \n",
+        "markdown": "[MyAdvancedToken.setPrices(uint256)]() should emit an event for: \n\t- [buyPrice = newBuyPrice]() \n",
+        "first_markdown_element": "",
+        "id": "2da0eb04681ef05da43bcc2f3c1579d251691a49e22256c272999cfcc942e798",
+        "check": "events-maths",
+        "impact": "Low",
+        "confidence": "Medium"
+      },
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "setClaim",
+            "source_mapping": {
+              "start": 7242,
+              "length": 75,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "MyAdvancedToken",
+                "source_mapping": {
+                  "start": 3824,
+                  "length": 4589,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              },
+              "signature": "setClaim(uint256)"
+            }
+          },
+          {
+            "type": "node",
+            "name": "claim = _claim",
+            "source_mapping": {
+              "start": 7296,
+              "length": 14,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "setClaim",
+                "source_mapping": {
+                  "start": 7242,
+                  "length": 75,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "MyAdvancedToken",
+                    "source_mapping": {
+                      "start": 3824,
+                      "length": 4589,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "setClaim(uint256)"
+                }
+              }
+            }
+          }
+        ],
+        "description": "MyAdvancedToken.setClaim(uint256) () should emit an event for: \n\t- claim = _claim () \n",
+        "markdown": "[MyAdvancedToken.setClaim(uint256)]() should emit an event for: \n\t- [claim = _claim]() \n",
+        "first_markdown_element": "",
+        "id": "3d6d9112d0222f456cad4bc4ccc70a41be0281e8899e09150bb1a9ac57d57c3e",
+        "check": "events-maths",
+        "impact": "Low",
+        "confidence": "Medium"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "newOwner",
+            "source_mapping": {
+              "start": 240,
+              "length": 16,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "transferOwnership",
+                "source_mapping": {
+                  "start": 213,
+                  "length": 88,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "owned",
+                    "source_mapping": {
+                      "start": 24,
+                      "length": 279,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "transferOwnership(address)"
+                }
+              }
+            }
+          },
+          {
+            "type": "node",
+            "name": "owner = newOwner",
+            "source_mapping": {
+              "start": 278,
+              "length": 16,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "transferOwnership",
+                "source_mapping": {
+                  "start": 213,
+                  "length": 88,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "owned",
+                    "source_mapping": {
+                      "start": 24,
+                      "length": 279,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "transferOwnership(address)"
+                }
+              }
+            }
+          }
+        ],
+        "description": "owned.transferOwnership(address).newOwner () lacks a zero-check on :\n\t\t- owner = newOwner ()\n",
+        "markdown": "[owned.transferOwnership(address).newOwner]() lacks a zero-check on :\n\t\t- [owner = newOwner]()\n",
+        "first_markdown_element": "",
+        "id": "56ae5fb489c97f085c417ca6a38a34a62ae29f3598d339c7b49181087ad6a166",
+        "check": "missing-zero-check",
+        "impact": "Low",
+        "confidence": "Medium"
+      },
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "sell",
+            "source_mapping": {
+              "start": 7631,
+              "length": 780,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "MyAdvancedToken",
+                "source_mapping": {
+                  "start": 3824,
+                  "length": 4589,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              },
+              "signature": "sell(uint256)"
+            }
+          },
+          {
+            "type": "node",
+            "name": "getClaimStatus() == false",
+            "source_mapping": {
+              "start": 7674,
+              "length": 25,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "sell",
+                "source_mapping": {
+                  "start": 7631,
+                  "length": 780,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "MyAdvancedToken",
+                    "source_mapping": {
+                      "start": 3824,
+                      "length": 4589,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "sell(uint256)"
+                }
+              }
+            }
+          }
+        ],
+        "description": "MyAdvancedToken.sell(uint256) () compares to a boolean constant:\n\t-getClaimStatus() == false ()\n",
+        "markdown": "[MyAdvancedToken.sell(uint256)]() compares to a boolean constant:\n\t-[getClaimStatus() == false]()\n",
+        "first_markdown_element": "",
+        "id": "913790243caaa012ab34489fc622cc631f4fafbd95321f42512bdd0bd93fa01e",
+        "check": "boolean-equal",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "node",
+            "name": "",
+            "source_mapping": {
+              "start": 184,
+              "length": 5,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "onlyOwner",
+                "source_mapping": {
+                  "start": 130,
+                  "length": 77,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "owned",
+                    "source_mapping": {
+                      "start": 24,
+                      "length": 279,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "onlyOwner()"
+                }
+              }
+            }
+          }
+        ],
+        "description": "Deprecated standard detected THROW ():\n\t- Usage of \"throw\" should be replaced with \"revert()\"\n",
+        "markdown": "Deprecated standard detected [THROW]():\n\t- Usage of \"throw\" should be replaced with \"revert()\"\n",
+        "first_markdown_element": "",
+        "id": "f5556cf1c70b64b9e4b1fc32044dd970b5f2c8b9fc21b7971fda01971033f2d5",
+        "check": "deprecated-standards",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "pragma",
+            "name": "^0.4.6",
+            "source_mapping": {
+              "start": 0,
+              "length": 23,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "directive": [
+                "solidity",
+                "^",
+                "0.4",
+                ".6"
+              ]
+            }
+          }
+        ],
+        "description": "Pragma version^0.4.6 () allows old versions\n",
+        "markdown": "Pragma version[^0.4.6]() allows old versions\n",
+        "first_markdown_element": "",
+        "id": "54eae9514d5e93f8fb467cb6e12380204cb269720316b950ba80b399a769bf71",
+        "check": "solc-version",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [],
+        "description": "solc-0.4.6 is not recommended for deployment\n",
+        "markdown": "solc-0.4.6 is not recommended for deployment\n",
+        "first_markdown_element": "",
+        "id": "b2e09ce9c0c37029707bd5645a9a2972adb1c4c04948009825bacc17fa383ec8",
+        "check": "solc-version",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "contract",
+            "name": "owned",
+            "source_mapping": {
+              "start": 24,
+              "length": 279,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "additional_fields": {
+              "target": "contract",
+              "convention": "CapWords"
+            }
+          }
+        ],
+        "description": "Contract owned () is not in CapWords\n",
+        "markdown": "Contract [owned]() is not in CapWords\n",
+        "first_markdown_element": "",
+        "id": "01bc58369f2fd81680c634b453fa427ba4b0127f990d30f7be7154dc8da22427",
+        "check": "naming-convention",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "_to",
+            "source_mapping": {
+              "start": 3042,
+              "length": 11,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "transferFrom",
+                "source_mapping": {
+                  "start": 3005,
+                  "length": 646,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "token",
+                    "source_mapping": {
+                      "start": 425,
+                      "length": 3397,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "transferFrom(address,address,uint256)"
+                }
+              }
+            },
+            "additional_fields": {
+              "target": "parameter",
+              "convention": "mixedCase"
+            }
+          }
+        ],
+        "description": "Parameter token.transferFrom(address,address,uint256)._to () is not in mixedCase\n",
+        "markdown": "Parameter [token.transferFrom(address,address,uint256)._to]() is not in mixedCase\n",
+        "first_markdown_element": "",
+        "id": "037c3b699ddc2bb2e1229ba23882766db0cd65c6dd28338f35a0aa7f9184178c",
+        "check": "naming-convention",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "_from",
+            "source_mapping": {
+              "start": 5474,
+              "length": 13,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "transferFrom",
+                "source_mapping": {
+                  "start": 5452,
+                  "length": 741,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "MyAdvancedToken",
+                    "source_mapping": {
+                      "start": 3824,
+                      "length": 4589,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "transferFrom(address,address,uint256)"
+                }
+              }
+            },
+            "additional_fields": {
+              "target": "parameter",
+              "convention": "mixedCase"
+            }
+          }
+        ],
+        "description": "Parameter MyAdvancedToken.transferFrom(address,address,uint256)._from () is not in mixedCase\n",
+        "markdown": "Parameter [MyAdvancedToken.transferFrom(address,address,uint256)._from]() is not in mixedCase\n",
+        "first_markdown_element": "",
+        "id": "0f87bc907400603132df973225631c90947241b1215fd07dfde698dfd3e86e02",
+        "check": "naming-convention",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "_spender",
+            "source_mapping": {
+              "start": 2648,
+              "length": 16,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "approveAndCall",
+                "source_mapping": {
+                  "start": 2624,
+                  "length": 328,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "token",
+                    "source_mapping": {
+                      "start": 425,
+                      "length": 3397,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "approveAndCall(address,uint256,bytes)"
+                }
+              }
+            },
+            "additional_fields": {
+              "target": "parameter",
+              "convention": "mixedCase"
+            }
+          }
+        ],
+        "description": "Parameter token.approveAndCall(address,uint256,bytes)._spender () is not in mixedCase\n",
+        "markdown": "Parameter [token.approveAndCall(address,uint256,bytes)._spender]() is not in mixedCase\n",
+        "first_markdown_element": "",
+        "id": "128816f82946ad4e416f0b17651a948fcffed9259ad8ccf4e4bae2681872b974",
+        "check": "naming-convention",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "_value",
+            "source_mapping": {
+              "start": 5502,
+              "length": 14,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "transferFrom",
+                "source_mapping": {
+                  "start": 5452,
+                  "length": 741,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "MyAdvancedToken",
+                    "source_mapping": {
+                      "start": 3824,
+                      "length": 4589,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "transferFrom(address,address,uint256)"
+                }
+              }
+            },
+            "additional_fields": {
+              "target": "parameter",
+              "convention": "mixedCase"
+            }
+          }
+        ],
+        "description": "Parameter MyAdvancedToken.transferFrom(address,address,uint256)._value () is not in mixedCase\n",
+        "markdown": "Parameter [MyAdvancedToken.transferFrom(address,address,uint256)._value]() is not in mixedCase\n",
+        "first_markdown_element": "",
+        "id": "131dc76933cb4865d7ed0d7a0adca89888bf470c4a599a1f4da63240b31cd046",
+        "check": "naming-convention",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "_value",
+            "source_mapping": {
+              "start": 2359,
+              "length": 14,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "approve",
+                "source_mapping": {
+                  "start": 2324,
+                  "length": 219,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "token",
+                    "source_mapping": {
+                      "start": 425,
+                      "length": 3397,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "approve(address,uint256)"
+                }
+              }
+            },
+            "additional_fields": {
+              "target": "parameter",
+              "convention": "mixedCase"
+            }
+          }
+        ],
+        "description": "Parameter token.approve(address,uint256)._value () is not in mixedCase\n",
+        "markdown": "Parameter [token.approve(address,uint256)._value]() is not in mixedCase\n",
+        "first_markdown_element": "",
+        "id": "1ddf68d7178def8551c688eb441f5bd633a515deaea97331dd2f585dab0198b2",
+        "check": "naming-convention",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "contract",
+            "name": "token",
+            "source_mapping": {
+              "start": 425,
+              "length": 3397,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "additional_fields": {
+              "target": "contract",
+              "convention": "CapWords"
+            }
+          }
+        ],
+        "description": "Contract token () is not in CapWords\n",
+        "markdown": "Contract [token]() is not in CapWords\n",
+        "first_markdown_element": "",
+        "id": "2afda56fc17f0ac73dfec0bb7bea77446a3764109f6a2f037b6ad634de37842b",
+        "check": "naming-convention",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "contract",
+            "name": "tokenRecipient",
+            "source_mapping": {
+              "start": 305,
+              "length": 118,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "additional_fields": {
+              "target": "contract",
+              "convention": "CapWords"
+            }
+          }
+        ],
+        "description": "Contract tokenRecipient () is not in CapWords\n",
+        "markdown": "Contract [tokenRecipient]() is not in CapWords\n",
+        "first_markdown_element": "",
+        "id": "2b490d093e8774391ae7b7880a9192319b34e7b392e95de10bb460182ae054a0",
+        "check": "naming-convention",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "_extraData",
+            "source_mapping": {
+              "start": 2682,
+              "length": 16,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "approveAndCall",
+                "source_mapping": {
+                  "start": 2624,
+                  "length": 328,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "token",
+                    "source_mapping": {
+                      "start": 425,
+                      "length": 3397,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "approveAndCall(address,uint256,bytes)"
+                }
+              }
+            },
+            "additional_fields": {
+              "target": "parameter",
+              "convention": "mixedCase"
+            }
+          }
+        ],
+        "description": "Parameter token.approveAndCall(address,uint256,bytes)._extraData () is not in mixedCase\n",
+        "markdown": "Parameter [token.approveAndCall(address,uint256,bytes)._extraData]() is not in mixedCase\n",
+        "first_markdown_element": "",
+        "id": "34f77f35fe484ab9b25d77315776a740352114cf6ab5fcea77f3ae19cab643b2",
+        "check": "naming-convention",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "_to",
+            "source_mapping": {
+              "start": 5489,
+              "length": 11,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "transferFrom",
+                "source_mapping": {
+                  "start": 5452,
+                  "length": 741,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "MyAdvancedToken",
+                    "source_mapping": {
+                      "start": 3824,
+                      "length": 4589,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "transferFrom(address,address,uint256)"
+                }
+              }
+            },
+            "additional_fields": {
+              "target": "parameter",
+              "convention": "mixedCase"
+            }
+          }
+        ],
+        "description": "Parameter MyAdvancedToken.transferFrom(address,address,uint256)._to () is not in mixedCase\n",
+        "markdown": "Parameter [MyAdvancedToken.transferFrom(address,address,uint256)._to]() is not in mixedCase\n",
+        "first_markdown_element": "",
+        "id": "3dcda6082a71f01be0f24671f860c64bc9cea8c3f8553a43b827a5dcf538a82d",
+        "check": "naming-convention",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "_status",
+            "source_mapping": {
+              "start": 7431,
+              "length": 12,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "setClaimStatus",
+                "source_mapping": {
+                  "start": 7407,
+                  "length": 86,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "MyAdvancedToken",
+                    "source_mapping": {
+                      "start": 3824,
+                      "length": 4589,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "setClaimStatus(bool)"
+                }
+              }
+            },
+            "additional_fields": {
+              "target": "parameter",
+              "convention": "mixedCase"
+            }
+          }
+        ],
+        "description": "Parameter MyAdvancedToken.setClaimStatus(bool)._status () is not in mixedCase\n",
+        "markdown": "Parameter [MyAdvancedToken.setClaimStatus(bool)._status]() is not in mixedCase\n",
+        "first_markdown_element": "",
+        "id": "407e945849d2bba0d5029b72c615e5f30b36369e3570ca7477a5ecc0294ee193",
+        "check": "naming-convention",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "_from",
+            "source_mapping": {
+              "start": 3027,
+              "length": 13,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "transferFrom",
+                "source_mapping": {
+                  "start": 3005,
+                  "length": 646,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "token",
+                    "source_mapping": {
+                      "start": 425,
+                      "length": 3397,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "transferFrom(address,address,uint256)"
+                }
+              }
+            },
+            "additional_fields": {
+              "target": "parameter",
+              "convention": "mixedCase"
+            }
+          }
+        ],
+        "description": "Parameter token.transferFrom(address,address,uint256)._from () is not in mixedCase\n",
+        "markdown": "Parameter [token.transferFrom(address,address,uint256)._from]() is not in mixedCase\n",
+        "first_markdown_element": "",
+        "id": "626aa222c2fd85646379253bc1be605327f60f4c4751db567b5fe39f7628bdcd",
+        "check": "naming-convention",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "_to",
+            "source_mapping": {
+              "start": 4802,
+              "length": 11,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "transfer",
+                "source_mapping": {
+                  "start": 4784,
+                  "length": 614,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "MyAdvancedToken",
+                    "source_mapping": {
+                      "start": 3824,
+                      "length": 4589,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "transfer(address,uint256)"
+                }
+              }
+            },
+            "additional_fields": {
+              "target": "parameter",
+              "convention": "mixedCase"
+            }
+          }
+        ],
+        "description": "Parameter MyAdvancedToken.transfer(address,uint256)._to () is not in mixedCase\n",
+        "markdown": "Parameter [MyAdvancedToken.transfer(address,uint256)._to]() is not in mixedCase\n",
+        "first_markdown_element": "",
+        "id": "705b19f765faa1025e1baa0dcc6412c70dc1df5b2963ed2748521a39c8e053cd",
+        "check": "naming-convention",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "_value",
+            "source_mapping": {
+              "start": 2666,
+              "length": 14,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "approveAndCall",
+                "source_mapping": {
+                  "start": 2624,
+                  "length": 328,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "token",
+                    "source_mapping": {
+                      "start": 425,
+                      "length": 3397,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "approveAndCall(address,uint256,bytes)"
+                }
+              }
+            },
+            "additional_fields": {
+              "target": "parameter",
+              "convention": "mixedCase"
+            }
+          }
+        ],
+        "description": "Parameter token.approveAndCall(address,uint256,bytes)._value () is not in mixedCase\n",
+        "markdown": "Parameter [token.approveAndCall(address,uint256,bytes)._value]() is not in mixedCase\n",
+        "first_markdown_element": "",
+        "id": "71cf873187c9f1ee1610ab767f3e07a4ec7a9e991d4639193f4ac194bac1dfa6",
+        "check": "naming-convention",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "_claim",
+            "source_mapping": {
+              "start": 7260,
+              "length": 14,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "setClaim",
+                "source_mapping": {
+                  "start": 7242,
+                  "length": 75,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "MyAdvancedToken",
+                    "source_mapping": {
+                      "start": 3824,
+                      "length": 4589,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "setClaim(uint256)"
+                }
+              }
+            },
+            "additional_fields": {
+              "target": "parameter",
+              "convention": "mixedCase"
+            }
+          }
+        ],
+        "description": "Parameter MyAdvancedToken.setClaim(uint256)._claim () is not in mixedCase\n",
+        "markdown": "Parameter [MyAdvancedToken.setClaim(uint256)._claim]() is not in mixedCase\n",
+        "first_markdown_element": "",
+        "id": "7cefdb99a63e40362ef0f8b2504ad0ee8314c4192adf5f863562d9d01a28ddba",
+        "check": "naming-convention",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "_value",
+            "source_mapping": {
+              "start": 3055,
+              "length": 14,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "transferFrom",
+                "source_mapping": {
+                  "start": 3005,
+                  "length": 646,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "token",
+                    "source_mapping": {
+                      "start": 425,
+                      "length": 3397,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "transferFrom(address,address,uint256)"
+                }
+              }
+            },
+            "additional_fields": {
+              "target": "parameter",
+              "convention": "mixedCase"
+            }
+          }
+        ],
+        "description": "Parameter token.transferFrom(address,address,uint256)._value () is not in mixedCase\n",
+        "markdown": "Parameter [token.transferFrom(address,address,uint256)._value]() is not in mixedCase\n",
+        "first_markdown_element": "",
+        "id": "8b8939c50beb551b5f417a01d52c60be81b5c5de40c54fd468d793aa6dd58aff",
+        "check": "naming-convention",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "_spender",
+            "source_mapping": {
+              "start": 2341,
+              "length": 16,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "approve",
+                "source_mapping": {
+                  "start": 2324,
+                  "length": 219,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "token",
+                    "source_mapping": {
+                      "start": 425,
+                      "length": 3397,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "approve(address,uint256)"
+                }
+              }
+            },
+            "additional_fields": {
+              "target": "parameter",
+              "convention": "mixedCase"
+            }
+          }
+        ],
+        "description": "Parameter token.approve(address,uint256)._spender () is not in mixedCase\n",
+        "markdown": "Parameter [token.approve(address,uint256)._spender]() is not in mixedCase\n",
+        "first_markdown_element": "",
+        "id": "9fc1b9cf219f0fc8755be8a2228b8e2f0360d244b108b64429e5c67d12e8b3cd",
+        "check": "naming-convention",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "_to",
+            "source_mapping": {
+              "start": 1733,
+              "length": 11,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "transfer",
+                "source_mapping": {
+                  "start": 1715,
+                  "length": 534,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "token",
+                    "source_mapping": {
+                      "start": 425,
+                      "length": 3397,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "transfer(address,uint256)"
+                }
+              }
+            },
+            "additional_fields": {
+              "target": "parameter",
+              "convention": "mixedCase"
+            }
+          }
+        ],
+        "description": "Parameter token.transfer(address,uint256)._to () is not in mixedCase\n",
+        "markdown": "Parameter [token.transfer(address,uint256)._to]() is not in mixedCase\n",
+        "first_markdown_element": "",
+        "id": "adcb3a3ade482bb9d70238d4d52fd9c98e1e9a90d511cd657c212f1595561013",
+        "check": "naming-convention",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "_value",
+            "source_mapping": {
+              "start": 1746,
+              "length": 14,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "transfer",
+                "source_mapping": {
+                  "start": 1715,
+                  "length": 534,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "token",
+                    "source_mapping": {
+                      "start": 425,
+                      "length": 3397,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "transfer(address,uint256)"
+                }
+              }
+            },
+            "additional_fields": {
+              "target": "parameter",
+              "convention": "mixedCase"
+            }
+          }
+        ],
+        "description": "Parameter token.transfer(address,uint256)._value () is not in mixedCase\n",
+        "markdown": "Parameter [token.transfer(address,uint256)._value]() is not in mixedCase\n",
+        "first_markdown_element": "",
+        "id": "bf6e133ef4aa75b8d78a74e312c88cc335505ff1b230c096a5af312c34af68ca",
+        "check": "naming-convention",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "_value",
+            "source_mapping": {
+              "start": 4815,
+              "length": 14,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "transfer",
+                "source_mapping": {
+                  "start": 4784,
+                  "length": 614,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "MyAdvancedToken",
+                    "source_mapping": {
+                      "start": 3824,
+                      "length": 4589,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "transfer(address,uint256)"
+                }
+              }
+            },
+            "additional_fields": {
+              "target": "parameter",
+              "convention": "mixedCase"
+            }
+          }
+        ],
+        "description": "Parameter MyAdvancedToken.transfer(address,uint256)._value () is not in mixedCase\n",
+        "markdown": "Parameter [MyAdvancedToken.transfer(address,uint256)._value]() is not in mixedCase\n",
+        "first_markdown_element": "",
+        "id": "e89e976e4fdba93ceeb7147d2ed62da25f6260be444efff57c27b382377216b5",
+        "check": "naming-convention",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "sell",
+            "source_mapping": {
+              "start": 7631,
+              "length": 780,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "MyAdvancedToken",
+                "source_mapping": {
+                  "start": 3824,
+                  "length": 4589,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              },
+              "signature": "sell(uint256)"
+            }
+          },
+          {
+            "type": "node",
+            "name": "! msg.sender.send(claim)",
+            "source_mapping": {
+              "start": 8075,
+              "length": 23,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "sell",
+                "source_mapping": {
+                  "start": 7631,
+                  "length": 780,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "MyAdvancedToken",
+                    "source_mapping": {
+                      "start": 3824,
+                      "length": 4589,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "sell(uint256)"
+                }
+              }
+            },
+            "additional_fields": {
+              "underlying_type": "external_calls"
+            }
+          },
+          {
+            "type": "node",
+            "name": "Transfer(msg.sender,this,amount)",
+            "source_mapping": {
+              "start": 8288,
+              "length": 34,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "sell",
+                "source_mapping": {
+                  "start": 7631,
+                  "length": 780,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "MyAdvancedToken",
+                    "source_mapping": {
+                      "start": 3824,
+                      "length": 4589,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "sell(uint256)"
+                }
+              }
+            },
+            "additional_fields": {
+              "underlying_type": "event"
+            }
+          }
+        ],
+        "description": "Reentrancy in MyAdvancedToken.sell(uint256) ():\n\tExternal calls:\n\t- ! msg.sender.send(claim) ()\n\tEvent emitted after the call(s):\n\t- Transfer(msg.sender,this,amount) ()\n",
+        "markdown": "Reentrancy in [MyAdvancedToken.sell(uint256)]():\n\tExternal calls:\n\t- [! msg.sender.send(claim)]()\n\tEvent emitted after the call(s):\n\t- [Transfer(msg.sender,this,amount)]()\n",
+        "first_markdown_element": "",
+        "id": "e46028882a2cdf3845da5b0524fbfdd99d814100e47ed4fb68b07ced357669fe",
+        "check": "reentrancy-unlimited-gas",
+        "impact": "Informational",
+        "confidence": "Medium"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "standard",
+            "source_mapping": {
+              "start": 486,
+              "length": 36,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "token",
+                "source_mapping": {
+                  "start": 425,
+                  "length": 3397,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              }
+            }
+          },
+          {
+            "type": "contract",
+            "name": "MyAdvancedToken",
+            "source_mapping": {
+              "start": 3824,
+              "length": 4589,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            }
+          }
+        ],
+        "description": "token.standard () is never used in MyAdvancedToken ()\n",
+        "markdown": "[token.standard]() is never used in [MyAdvancedToken]()\n",
+        "first_markdown_element": "",
+        "id": "5cc523678f2d418c156c0de52a2052ccd647c397728f1eb1df6b5f60f90ff5ab",
+        "check": "unused-state",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "standard",
+            "source_mapping": {
+              "start": 486,
+              "length": 36,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "token",
+                "source_mapping": {
+                  "start": 425,
+                  "length": 3397,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              }
+            }
+          }
+        ],
+        "description": "token.standard () should be constant \n",
+        "markdown": "[token.standard]() should be constant \n",
+        "first_markdown_element": "",
+        "id": "57a54bcd47f09b8a108ac92ae5167faaffc53139176b3e61dfbf11107384a136",
+        "check": "constable-states",
+        "impact": "Optimization",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "approveAndCall",
+            "source_mapping": {
+              "start": 2624,
+              "length": 328,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "token",
+                "source_mapping": {
+                  "start": 425,
+                  "length": 3397,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              },
+              "signature": "approveAndCall(address,uint256,bytes)"
+            }
+          }
+        ],
+        "description": "approveAndCall(address,uint256,bytes) should be declared external:\n\t- token.approveAndCall(address,uint256,bytes) ()\n",
+        "markdown": "approveAndCall(address,uint256,bytes) should be declared external:\n\t- [token.approveAndCall(address,uint256,bytes)]()\n",
+        "first_markdown_element": "",
+        "id": "366ec7a608e44627f0077c5f6846e0d70484a1287a3c9f4a774b85f612b3d36d",
+        "check": "external-function",
+        "impact": "Optimization",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "receiveApproval",
+            "source_mapping": {
+              "start": 331,
+              "length": 90,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "tokenRecipient",
+                "source_mapping": {
+                  "start": 305,
+                  "length": 118,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              },
+              "signature": "receiveApproval(address,uint256,address,bytes)"
+            }
+          }
+        ],
+        "description": "receiveApproval(address,uint256,address,bytes) should be declared external:\n\t- tokenRecipient.receiveApproval(address,uint256,address,bytes) ()\n",
+        "markdown": "receiveApproval(address,uint256,address,bytes) should be declared external:\n\t- [tokenRecipient.receiveApproval(address,uint256,address,bytes)]()\n",
+        "first_markdown_element": "",
+        "id": "5bf8032db6d08275d0001914f4bdb19064612f8be1a79083db009c885f9d9f3e",
+        "check": "external-function",
+        "impact": "Optimization",
+        "confidence": "High"
+      }
+    ]
+  }
+}

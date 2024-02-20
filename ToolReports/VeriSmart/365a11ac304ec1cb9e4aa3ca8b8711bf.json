@@ -1,0 +1,51 @@
+{
+  "fileName": "Benchmarks/Study_SamplesSet/365a11ac304ec1cb9e4aa3ca8b8711bf.sol",
+  "baseName": "365a11ac304ec1cb9e4aa3ca8b8711bf.sol",
+  "iter": 3,
+  "time": "0.168656",
+  "errMsg": null,
+  "result": [
+    {
+      "no": "1",
+      "kind": "KA",
+      "line": 16,
+      "signatures": [
+        {
+          "contractName": "HumpDayPlay",
+          "methodName": "close",
+          "argTypes": []
+        }
+      ],
+      "exp": "selfdestruct(tx.origin);",
+      "status": "unproven"
+    },
+    {
+      "no": "2",
+      "kind": "ETH_LEAK",
+      "line": 11,
+      "signatures": [
+        {
+          "contractName": "HumpDayPlay",
+          "methodName": "play",
+          "argTypes": []
+        }
+      ],
+      "exp": "tx.origin.transfer(this.balance);",
+      "status": "unproven"
+    },
+    {
+      "no": "3",
+      "kind": "ETH_LEAK",
+      "line": 16,
+      "signatures": [
+        {
+          "contractName": "HumpDayPlay",
+          "methodName": "close",
+          "argTypes": []
+        }
+      ],
+      "exp": "selfdestruct(tx.origin);",
+      "status": "unproven"
+    }
+  ]
+}

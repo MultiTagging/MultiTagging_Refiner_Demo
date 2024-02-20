@@ -1,0 +1,56 @@
+{
+  "fileName": "Benchmarks/Study_SamplesSet/67724334ad1966a4773dbef819254de9.sol",
+  "baseName": "67724334ad1966a4773dbef819254de9.sol",
+  "iter": 2484,
+  "time": "300.061169",
+  "errMsg": null,
+  "result": [
+    {
+      "no": "1",
+      "kind": "IO",
+      "line": 25,
+      "signatures": [
+        {
+          "contractName": "NoWrongOpe",
+          "methodName": "addOne",
+          "argTypes": []
+        }
+      ],
+      "exp": "(myNum + opeNum)",
+      "status": "unproven"
+    },
+    {
+      "no": "2",
+      "kind": "IO",
+      "line": 31,
+      "signatures": [
+        {
+          "contractName": "NoWrongOpe",
+          "methodName": "subOne",
+          "argTypes": []
+        }
+      ],
+      "exp": "(myNum - opeNum)",
+      "status": "unproven"
+    },
+    {
+      "no": "3",
+      "kind": "ETH_LEAK",
+      "line": 37,
+      "signatures": [
+        {
+          "contractName": "NoWrongOpe",
+          "methodName": "addOne",
+          "argTypes": []
+        },
+        {
+          "contractName": "NoWrongOpe",
+          "methodName": "subOne",
+          "argTypes": []
+        }
+      ],
+      "exp": "msg.sender.transfer(address(this).balance);",
+      "status": "unproven"
+    }
+  ]
+}

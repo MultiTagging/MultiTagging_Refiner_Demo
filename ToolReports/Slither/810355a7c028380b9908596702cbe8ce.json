@@ -1,0 +1,754 @@
+{
+  "success": true,
+  "error": null,
+  "results": {
+    "detectors": [
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "tx",
+            "source_mapping": {
+              "start": 5490,
+              "length": 46,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "executeTransaction",
+                "source_mapping": {
+                  "start": 5323,
+                  "length": 388,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "MultiSigWallet",
+                    "source_mapping": {
+                      "start": 186,
+                      "length": 7916,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "executeTransaction(bytes32)"
+                }
+              }
+            }
+          }
+        ],
+        "description": "MultiSigWallet.executeTransaction(bytes32).tx () (local variable) shadows built-in symbol\"\n",
+        "markdown": "[MultiSigWallet.executeTransaction(bytes32).tx]() (local variable) shadows built-in symbol\"\n",
+        "first_markdown_element": "",
+        "id": "6b245a9cc42668b37fc1f1772679761cafb399636a400e558bb663f4aec9bdfc",
+        "check": "shadowing-builtin",
+        "impact": "Low",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "executeTransaction",
+            "source_mapping": {
+              "start": 5323,
+              "length": 388,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "MultiSigWallet",
+                "source_mapping": {
+                  "start": 186,
+                  "length": 7916,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              },
+              "signature": "executeTransaction(bytes32)"
+            }
+          },
+          {
+            "type": "node",
+            "name": "! tx.destination.call.value(tx.value)(tx.data)",
+            "source_mapping": {
+              "start": 5586,
+              "length": 45,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "executeTransaction",
+                "source_mapping": {
+                  "start": 5323,
+                  "length": 388,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "MultiSigWallet",
+                    "source_mapping": {
+                      "start": 186,
+                      "length": 7916,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "executeTransaction(bytes32)"
+                }
+              }
+            },
+            "additional_fields": {
+              "underlying_type": "external_calls"
+            }
+          },
+          {
+            "type": "node",
+            "name": "Execution(transactionHash)",
+            "source_mapping": {
+              "start": 5668,
+              "length": 26,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "executeTransaction",
+                "source_mapping": {
+                  "start": 5323,
+                  "length": 388,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "MultiSigWallet",
+                    "source_mapping": {
+                      "start": 186,
+                      "length": 7916,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "executeTransaction(bytes32)"
+                }
+              }
+            },
+            "additional_fields": {
+              "underlying_type": "event"
+            }
+          }
+        ],
+        "description": "Reentrancy in MultiSigWallet.executeTransaction(bytes32) ():\n\tExternal calls:\n\t- ! tx.destination.call.value(tx.value)(tx.data) ()\n\tEvent emitted after the call(s):\n\t- Execution(transactionHash) ()\n",
+        "markdown": "Reentrancy in [MultiSigWallet.executeTransaction(bytes32)]():\n\tExternal calls:\n\t- [! tx.destination.call.value(tx.value)(tx.data)]()\n\tEvent emitted after the call(s):\n\t- [Execution(transactionHash)]()\n",
+        "first_markdown_element": "",
+        "id": "38f80ea0e8a11273fa61fc4e64d8a95c19bbc6fb088bee291da8768242bd5b59",
+        "check": "reentrancy-events",
+        "impact": "Low",
+        "confidence": "Medium"
+      },
+      {
+        "elements": [
+          {
+            "type": "node",
+            "name": "transactionHash = sha3()(destination,value,data,nonce)",
+            "source_mapping": {
+              "start": 3409,
+              "length": 55,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "addTransaction",
+                "source_mapping": {
+                  "start": 3227,
+                  "length": 644,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "MultiSigWallet",
+                    "source_mapping": {
+                      "start": 186,
+                      "length": 7916,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "addTransaction(address,uint256,bytes,uint256)"
+                }
+              }
+            }
+          }
+        ],
+        "description": "Deprecated standard detected transactionHash = sha3()(destination,value,data,nonce) ():\n\t- Usage of \"sha3()\" should be replaced with \"keccak256()\"\n",
+        "markdown": "Deprecated standard detected [transactionHash = sha3()(destination,value,data,nonce)]():\n\t- Usage of \"sha3()\" should be replaced with \"keccak256()\"\n",
+        "first_markdown_element": "",
+        "id": "6d1176af8d7dc6b7082184e15a4dae152f18a221a811ea0942f84fe14aa3ab3a",
+        "check": "deprecated-standards",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "node",
+            "name": "",
+            "source_mapping": {
+              "start": 5649,
+              "length": 5,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "executeTransaction",
+                "source_mapping": {
+                  "start": 5323,
+                  "length": 388,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "MultiSigWallet",
+                    "source_mapping": {
+                      "start": 186,
+                      "length": 7916,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "executeTransaction(bytes32)"
+                }
+              }
+            }
+          }
+        ],
+        "description": "Deprecated standard detected THROW ():\n\t- Usage of \"throw\" should be replaced with \"revert()\"\n",
+        "markdown": "Deprecated standard detected [THROW]():\n\t- Usage of \"throw\" should be replaced with \"revert()\"\n",
+        "first_markdown_element": "",
+        "id": "f5556cf1c70b64b9e4b1fc32044dd970b5f2c8b9fc21b7971fda01971033f2d5",
+        "check": "deprecated-standards",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "pragma",
+            "name": "^0.4.4",
+            "source_mapping": {
+              "start": 0,
+              "length": 23,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "directive": [
+                "solidity",
+                "^",
+                "0.4",
+                ".4"
+              ]
+            }
+          }
+        ],
+        "description": "Pragma version^0.4.4 () allows old versions\n",
+        "markdown": "Pragma version[^0.4.4]() allows old versions\n",
+        "first_markdown_element": "",
+        "id": "c524dbac81447218cdcc218b1e615718838db5d05e8e9dedd1312462097ce552",
+        "check": "solc-version",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [],
+        "description": "solc-0.4.4 is not recommended for deployment\n",
+        "markdown": "solc-0.4.4 is not recommended for deployment\n",
+        "first_markdown_element": "",
+        "id": "d3c9a9a2694f771324145f36235e7a11e1b0352ba5bffd7634afad1f93f9692b",
+        "check": "solc-version",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "executeTransaction",
+            "source_mapping": {
+              "start": 5323,
+              "length": 388,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "MultiSigWallet",
+                "source_mapping": {
+                  "start": 186,
+                  "length": 7916,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              },
+              "signature": "executeTransaction(bytes32)"
+            }
+          },
+          {
+            "type": "node",
+            "name": "! tx.destination.call.value(tx.value)(tx.data)",
+            "source_mapping": {
+              "start": 5586,
+              "length": 45,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "executeTransaction",
+                "source_mapping": {
+                  "start": 5323,
+                  "length": 388,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "MultiSigWallet",
+                    "source_mapping": {
+                      "start": 186,
+                      "length": 7916,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "executeTransaction(bytes32)"
+                }
+              }
+            }
+          }
+        ],
+        "description": "Low level call in MultiSigWallet.executeTransaction(bytes32) ():\n\t- ! tx.destination.call.value(tx.value)(tx.data) ()\n",
+        "markdown": "Low level call in [MultiSigWallet.executeTransaction(bytes32)]():\n\t- [! tx.destination.call.value(tx.value)(tx.data)]()\n",
+        "first_markdown_element": "",
+        "id": "0d81a019283f487e9797b57e71803f3ff3f90369f260275e7fd39adc73976440",
+        "check": "low-level-calls",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "_required",
+            "source_mapping": {
+              "start": 3047,
+              "length": 14,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "updateRequired",
+                "source_mapping": {
+                  "start": 3023,
+                  "length": 198,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "MultiSigWallet",
+                    "source_mapping": {
+                      "start": 186,
+                      "length": 7916,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "updateRequired(uint256)"
+                }
+              }
+            },
+            "additional_fields": {
+              "target": "parameter",
+              "convention": "mixedCase"
+            }
+          }
+        ],
+        "description": "Parameter MultiSigWallet.updateRequired(uint256)._required () is not in mixedCase\n",
+        "markdown": "Parameter [MultiSigWallet.updateRequired(uint256)._required]() is not in mixedCase\n",
+        "first_markdown_element": "",
+        "id": "4b322e0760a8344836e9504fd9159aa74cfc3eab5c2202e178af4a0643839bee",
+        "check": "naming-convention",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "node",
+            "name": "i < owners.length",
+            "source_mapping": {
+              "start": 6893,
+              "length": 15,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "confirmationCount",
+                "source_mapping": {
+                  "start": 6749,
+                  "length": 258,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "MultiSigWallet",
+                    "source_mapping": {
+                      "start": 186,
+                      "length": 7916,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "confirmationCount(bytes32)"
+                }
+              }
+            }
+          }
+        ],
+        "description": "Loop condition i < owners.length () should use cached array length instead of referencing `length` member of the storage array.\n ",
+        "markdown": "Loop condition [i < owners.length]() should use cached array length instead of referencing `length` member of the storage array.\n ",
+        "first_markdown_element": "",
+        "id": "54ad968e5de8fc87a879429b514c5fef486bacc4b248643ac20b367f076801f7",
+        "check": "cache-array-length",
+        "impact": "Optimization",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "node",
+            "name": "i < transactionList.length",
+            "source_mapping": {
+              "start": 7258,
+              "length": 24,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "filterTransactions",
+                "source_mapping": {
+                  "start": 7013,
+                  "length": 743,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "MultiSigWallet",
+                    "source_mapping": {
+                      "start": 186,
+                      "length": 7916,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "filterTransactions(bool)"
+                }
+              }
+            }
+          }
+        ],
+        "description": "Loop condition i < transactionList.length () should use cached array length instead of referencing `length` member of the storage array.\n ",
+        "markdown": "Loop condition [i < transactionList.length]() should use cached array length instead of referencing `length` member of the storage array.\n ",
+        "first_markdown_element": "",
+        "id": "5f5eef02bff966445d8b9f0095f602feb34a4627ddb0562c3dc5272f242d512c",
+        "check": "cache-array-length",
+        "impact": "Optimization",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "submitTransaction",
+            "source_mapping": {
+              "start": 3877,
+              "length": 274,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "MultiSigWallet",
+                "source_mapping": {
+                  "start": 186,
+                  "length": 7916,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              },
+              "signature": "submitTransaction(address,uint256,bytes,uint256)"
+            }
+          }
+        ],
+        "description": "submitTransaction(address,uint256,bytes,uint256) should be declared external:\n\t- MultiSigWallet.submitTransaction(address,uint256,bytes,uint256) ()\n",
+        "markdown": "submitTransaction(address,uint256,bytes,uint256) should be declared external:\n\t- [MultiSigWallet.submitTransaction(address,uint256,bytes,uint256)]()\n",
+        "first_markdown_element": "",
+        "id": "315aa1bb39a3e4caaa4f647584e1257c98131c2796e41c5cd3e5455fec1ccce5",
+        "check": "external-function",
+        "impact": "Optimization",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "submitTransactionWithSignatures",
+            "source_mapping": {
+              "start": 4157,
+              "length": 334,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "MultiSigWallet",
+                "source_mapping": {
+                  "start": 186,
+                  "length": 7916,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              },
+              "signature": "submitTransactionWithSignatures(address,uint256,bytes,uint256,uint8[],bytes32[])"
+            }
+          }
+        ],
+        "description": "submitTransactionWithSignatures(address,uint256,bytes,uint256,uint8[],bytes32[]) should be declared external:\n\t- MultiSigWallet.submitTransactionWithSignatures(address,uint256,bytes,uint256,uint8[],bytes32[]) ()\n",
+        "markdown": "submitTransactionWithSignatures(address,uint256,bytes,uint256,uint8[],bytes32[]) should be declared external:\n\t- [MultiSigWallet.submitTransactionWithSignatures(address,uint256,bytes,uint256,uint8[],bytes32[])]()\n",
+        "first_markdown_element": "",
+        "id": "49810cf81e7ad1c1b99faea47f50fb9fd4455b64dd44764032ed7726d60e4f56",
+        "check": "external-function",
+        "impact": "Optimization",
+        "confidence": "High"
+      }
+    ]
+  }
+}

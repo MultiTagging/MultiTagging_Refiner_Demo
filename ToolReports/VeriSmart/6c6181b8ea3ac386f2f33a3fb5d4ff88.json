@@ -1,0 +1,1194 @@
+{
+  "fileName": "Benchmarks/Study_SamplesSet/6c6181b8ea3ac386f2f33a3fb5d4ff88.sol",
+  "baseName": "6c6181b8ea3ac386f2f33a3fb5d4ff88.sol",
+  "iter": 39,
+  "time": "314.510981",
+  "errMsg": null,
+  "result": [
+    {
+      "no": "1",
+      "kind": "IO",
+      "line": 56,
+      "signatures": [
+        {
+          "contractName": "UnilotPrizeCalculator",
+          "methodName": "getPrizeAmount",
+          "argTypes": [ "uint256" ]
+        }
+      ],
+      "exp": "((gameCommision + bonusGameCommision) + tokenHolerGameCommision)",
+      "status": "unproven"
+    },
+    {
+      "no": "2",
+      "kind": "IO",
+      "line": 56,
+      "signatures": [
+        {
+          "contractName": "UnilotPrizeCalculator",
+          "methodName": "getPrizeAmount",
+          "argTypes": [ "uint256" ]
+        }
+      ],
+      "exp": "(gameCommision + bonusGameCommision)",
+      "status": "unproven"
+    },
+    {
+      "no": "3",
+      "kind": "IO",
+      "line": 62,
+      "signatures": [
+        {
+          "contractName": "UnilotPrizeCalculator",
+          "methodName": "getPrizeAmount",
+          "argTypes": [ "uint256" ]
+        }
+      ],
+      "exp": "(totalAmount * totalCommision)",
+      "status": "unproven"
+    },
+    {
+      "no": "4",
+      "kind": "IO",
+      "line": 62,
+      "signatures": [
+        {
+          "contractName": "UnilotPrizeCalculator",
+          "methodName": "getPrizeAmount",
+          "argTypes": [ "uint256" ]
+        }
+      ],
+      "exp": "(totalAmount - ((totalAmount * totalCommision) / 100))",
+      "status": "unproven"
+    },
+    {
+      "no": "5",
+      "kind": "IO",
+      "line": 74,
+      "signatures": [
+        {
+          "contractName": "UnilotPrizeCalculator",
+          "methodName": "getNumWinners",
+          "argTypes": [ "uint256" ]
+        }
+      ],
+      "exp": "(100 - percentOfWinners)",
+      "status": "unproven"
+    },
+    {
+      "no": "6",
+      "kind": "IO",
+      "line": 74,
+      "signatures": [
+        {
+          "contractName": "UnilotPrizeCalculator",
+          "methodName": "getNumWinners",
+          "argTypes": [ "uint256" ]
+        }
+      ],
+      "exp": "(numPlayers * (100 - percentOfWinners))",
+      "status": "unproven"
+    },
+    {
+      "no": "7",
+      "kind": "IO",
+      "line": 74,
+      "signatures": [
+        {
+          "contractName": "UnilotPrizeCalculator",
+          "methodName": "getNumWinners",
+          "argTypes": [ "uint256" ]
+        }
+      ],
+      "exp": "(numPlayers - ((numPlayers * (100 - percentOfWinners)) / 100))",
+      "status": "unproven"
+    },
+    {
+      "no": "8",
+      "kind": "IO",
+      "line": 77,
+      "signatures": [
+        {
+          "contractName": "UnilotPrizeCalculator",
+          "methodName": "getNumWinners",
+          "argTypes": [ "uint256" ]
+        }
+      ],
+      "exp": "(totaNumlWinners * percentOfFixedPrizeWinners)",
+      "status": "unproven"
+    },
+    {
+      "no": "9",
+      "kind": "IO",
+      "line": 78,
+      "signatures": [
+        {
+          "contractName": "UnilotPrizeCalculator",
+          "methodName": "getNumWinners",
+          "argTypes": [ "uint256" ]
+        }
+      ],
+      "exp": "(totaNumlWinners - numFixedAmountWinners)",
+      "status": "unproven"
+    },
+    {
+      "no": "10",
+      "kind": "IO",
+      "line": 90,
+      "signatures": [
+        {
+          "contractName": "UnilotPrizeCalculator",
+          "methodName": "calcaultePrizes",
+          "argTypes": [ "uint256", "uint256" ]
+        }
+      ],
+      "exp": "(numWinners + numFixedAmountWinners)",
+      "status": "unproven"
+    },
+    {
+      "no": "11",
+      "kind": "IO",
+      "line": 92,
+      "signatures": [
+        {
+          "contractName": "UnilotPrizeCalculator",
+          "methodName": "calcaultePrizes",
+          "argTypes": [ "uint256", "uint256" ]
+        }
+      ],
+      "exp": "(numWinners - 1)",
+      "status": "unproven"
+    },
+    {
+      "no": "12",
+      "kind": "IO",
+      "line": 96,
+      "signatures": [
+        {
+          "contractName": "UnilotPrizeCalculator",
+          "methodName": "calcaultePrizes",
+          "argTypes": [ "uint256", "uint256" ]
+        }
+      ],
+      "exp": "(bet * numPlayers)",
+      "status": "unproven"
+    },
+    {
+      "no": "13",
+      "kind": "IO",
+      "line": 103,
+      "signatures": [
+        {
+          "contractName": "UnilotPrizeCalculator",
+          "methodName": "calcaultePrizes",
+          "argTypes": [ "uint256", "uint256" ]
+        }
+      ],
+      "exp": "(i + 1)",
+      "status": "proven"
+    },
+    {
+      "no": "14",
+      "kind": "IO",
+      "line": 104,
+      "signatures": [
+        {
+          "contractName": "UnilotPrizeCalculator",
+          "methodName": "calcaultePrizes",
+          "argTypes": [ "uint256", "uint256" ]
+        }
+      ],
+      "exp": "(calculateStep(numWinners) * i)",
+      "status": "unproven"
+    },
+    {
+      "no": "15",
+      "kind": "IO",
+      "line": 105,
+      "signatures": [
+        {
+          "contractName": "UnilotPrizeCalculator",
+          "methodName": "calcaultePrizes",
+          "argTypes": [ "uint256", "uint256" ]
+        }
+      ],
+      "exp": "(z + y[i])",
+      "status": "unproven"
+    },
+    {
+      "no": "16",
+      "kind": "IO",
+      "line": 110,
+      "signatures": [
+        {
+          "contractName": "UnilotPrizeCalculator",
+          "methodName": "calcaultePrizes",
+          "argTypes": [ "uint256", "uint256" ]
+        }
+      ],
+      "exp": "(i + 1)",
+      "status": "unproven"
+    },
+    {
+      "no": "17",
+      "kind": "IO",
+      "line": 114,
+      "signatures": [
+        {
+          "contractName": "UnilotPrizeCalculator",
+          "methodName": "calcaultePrizes",
+          "argTypes": [ "uint256", "uint256" ]
+        }
+      ],
+      "exp": "(j + 1)",
+      "status": "proven"
+    },
+    {
+      "no": "18",
+      "kind": "IO",
+      "line": 115,
+      "signatures": [
+        {
+          "contractName": "UnilotPrizeCalculator",
+          "methodName": "calcaultePrizes",
+          "argTypes": [ "uint256", "uint256" ]
+        }
+      ],
+      "exp": "((i * chunk.length) + j)",
+      "status": "unproven"
+    },
+    {
+      "no": "19",
+      "kind": "IO",
+      "line": 115,
+      "signatures": [
+        {
+          "contractName": "UnilotPrizeCalculator",
+          "methodName": "calcaultePrizes",
+          "argTypes": [ "uint256", "uint256" ]
+        }
+      ],
+      "exp": "(i * chunk.length)",
+      "status": "unproven"
+    },
+    {
+      "no": "20",
+      "kind": "IO",
+      "line": 115,
+      "signatures": [
+        {
+          "contractName": "UnilotPrizeCalculator",
+          "methodName": "calcaultePrizes",
+          "argTypes": [ "uint256", "uint256" ]
+        }
+      ],
+      "exp": "(numWinners + numFixedAmountWinners)",
+      "status": "unproven"
+    },
+    {
+      "no": "21",
+      "kind": "IO",
+      "line": 120,
+      "signatures": [
+        {
+          "contractName": "UnilotPrizeCalculator",
+          "methodName": "calcaultePrizes",
+          "argTypes": [ "uint256", "uint256" ]
+        }
+      ],
+      "exp": "((i * chunk.length) + j)",
+      "status": "unproven"
+    },
+    {
+      "no": "22",
+      "kind": "IO",
+      "line": 120,
+      "signatures": [
+        {
+          "contractName": "UnilotPrizeCalculator",
+          "methodName": "calcaultePrizes",
+          "argTypes": [ "uint256", "uint256" ]
+        }
+      ],
+      "exp": "(i * chunk.length)",
+      "status": "unproven"
+    },
+    {
+      "no": "23",
+      "kind": "IO",
+      "line": 137,
+      "signatures": [
+        {
+          "contractName": "UnilotPrizeCalculator",
+          "methodName": "distributePrizeCalculation",
+          "argTypes": [
+            "uint256", "uint256", "uint256[]", "uint256", "uint256"
+          ]
+        }
+      ],
+      "exp": "(totalNumPlayers * bet)",
+      "status": "unproven"
+    },
+    {
+      "no": "24",
+      "kind": "IO",
+      "line": 138,
+      "signatures": [
+        {
+          "contractName": "UnilotPrizeCalculator",
+          "methodName": "distributePrizeCalculation",
+          "argTypes": [
+            "uint256", "uint256", "uint256[]", "uint256", "uint256"
+          ]
+        }
+      ],
+      "exp": "((bet * minPrizeCoeficent) * uint256((numWinners + numFixedAmountWinners)))",
+      "status": "unproven"
+    },
+    {
+      "no": "25",
+      "kind": "IO",
+      "line": 138,
+      "signatures": [
+        {
+          "contractName": "UnilotPrizeCalculator",
+          "methodName": "distributePrizeCalculation",
+          "argTypes": [
+            "uint256", "uint256", "uint256[]", "uint256", "uint256"
+          ]
+        }
+      ],
+      "exp": "(bet * minPrizeCoeficent)",
+      "status": "unproven"
+    },
+    {
+      "no": "26",
+      "kind": "IO",
+      "line": 138,
+      "signatures": [
+        {
+          "contractName": "UnilotPrizeCalculator",
+          "methodName": "distributePrizeCalculation",
+          "argTypes": [
+            "uint256", "uint256", "uint256[]", "uint256", "uint256"
+          ]
+        }
+      ],
+      "exp": "(numWinners + numFixedAmountWinners)",
+      "status": "unproven"
+    },
+    {
+      "no": "27",
+      "kind": "IO",
+      "line": 138,
+      "signatures": [
+        {
+          "contractName": "UnilotPrizeCalculator",
+          "methodName": "distributePrizeCalculation",
+          "argTypes": [
+            "uint256", "uint256", "uint256[]", "uint256", "uint256"
+          ]
+        }
+      ],
+      "exp": "(prizeAmountForDeligation - uint256(((bet * minPrizeCoeficent) * uint256((numWinners + numFixedAmountWinners)))))",
+      "status": "unproven"
+    },
+    {
+      "no": "28",
+      "kind": "IO",
+      "line": 140,
+      "signatures": [
+        {
+          "contractName": "UnilotPrizeCalculator",
+          "methodName": "distributePrizeCalculation",
+          "argTypes": [
+            "uint256", "uint256", "uint256[]", "uint256", "uint256"
+          ]
+        }
+      ],
+      "exp": "(((z * accuracy) / (2 * y[0])) + (1 * accuracy))",
+      "status": "unproven"
+    },
+    {
+      "no": "29",
+      "kind": "IO",
+      "line": 140,
+      "signatures": [
+        {
+          "contractName": "UnilotPrizeCalculator",
+          "methodName": "distributePrizeCalculation",
+          "argTypes": [
+            "uint256", "uint256", "uint256[]", "uint256", "uint256"
+          ]
+        }
+      ],
+      "exp": "(1 * accuracy)",
+      "status": "unproven"
+    },
+    {
+      "no": "30",
+      "kind": "IO",
+      "line": 140,
+      "signatures": [
+        {
+          "contractName": "UnilotPrizeCalculator",
+          "methodName": "distributePrizeCalculation",
+          "argTypes": [
+            "uint256", "uint256", "uint256[]", "uint256", "uint256"
+          ]
+        }
+      ],
+      "exp": "(2 * y[0])",
+      "status": "unproven"
+    },
+    {
+      "no": "31",
+      "kind": "IO",
+      "line": 140,
+      "signatures": [
+        {
+          "contractName": "UnilotPrizeCalculator",
+          "methodName": "distributePrizeCalculation",
+          "argTypes": [
+            "uint256", "uint256", "uint256[]", "uint256", "uint256"
+          ]
+        }
+      ],
+      "exp": "(prizeAmountForDeligation * accuracy)",
+      "status": "unproven"
+    },
+    {
+      "no": "32",
+      "kind": "IO",
+      "line": 140,
+      "signatures": [
+        {
+          "contractName": "UnilotPrizeCalculator",
+          "methodName": "distributePrizeCalculation",
+          "argTypes": [
+            "uint256", "uint256", "uint256[]", "uint256", "uint256"
+          ]
+        }
+      ],
+      "exp": "(z * accuracy)",
+      "status": "unproven"
+    },
+    {
+      "no": "33",
+      "kind": "IO",
+      "line": 143,
+      "signatures": [
+        {
+          "contractName": "UnilotPrizeCalculator",
+          "methodName": "distributePrizeCalculation",
+          "argTypes": [
+            "uint256", "uint256", "uint256[]", "uint256", "uint256"
+          ]
+        }
+      ],
+      "exp": "(chunkNumber * prizes.length)",
+      "status": "unproven"
+    },
+    {
+      "no": "34",
+      "kind": "IO",
+      "line": 145,
+      "signatures": [
+        {
+          "contractName": "UnilotPrizeCalculator",
+          "methodName": "distributePrizeCalculation",
+          "argTypes": [
+            "uint256", "uint256", "uint256[]", "uint256", "uint256"
+          ]
+        }
+      ],
+      "exp": "(i + 1)",
+      "status": "proven"
+    },
+    {
+      "no": "35",
+      "kind": "IO",
+      "line": 146,
+      "signatures": [
+        {
+          "contractName": "UnilotPrizeCalculator",
+          "methodName": "distributePrizeCalculation",
+          "argTypes": [
+            "uint256", "uint256", "uint256[]", "uint256", "uint256"
+          ]
+        }
+      ],
+      "exp": "(numWinners + numFixedAmountWinners)",
+      "status": "unproven"
+    },
+    {
+      "no": "36",
+      "kind": "IO",
+      "line": 149,
+      "signatures": [
+        {
+          "contractName": "UnilotPrizeCalculator",
+          "methodName": "distributePrizeCalculation",
+          "argTypes": [
+            "uint256", "uint256", "uint256[]", "uint256", "uint256"
+          ]
+        }
+      ],
+      "exp": "(bet * minPrizeCoeficent)",
+      "status": "unproven"
+    },
+    {
+      "no": "37",
+      "kind": "IO",
+      "line": 152,
+      "signatures": [
+        {
+          "contractName": "UnilotPrizeCalculator",
+          "methodName": "distributePrizeCalculation",
+          "argTypes": [
+            "uint256", "uint256", "uint256[]", "uint256", "uint256"
+          ]
+        }
+      ],
+      "exp": "(numWinners - 1)",
+      "status": "unproven"
+    },
+    {
+      "no": "38",
+      "kind": "IO",
+      "line": 156,
+      "signatures": [
+        {
+          "contractName": "UnilotPrizeCalculator",
+          "methodName": "distributePrizeCalculation",
+          "argTypes": [
+            "uint256", "uint256", "uint256[]", "uint256", "uint256"
+          ]
+        }
+      ],
+      "exp": "(startPoint + i)",
+      "status": "unproven"
+    },
+    {
+      "no": "39",
+      "kind": "IO",
+      "line": 157,
+      "signatures": [
+        {
+          "contractName": "UnilotPrizeCalculator",
+          "methodName": "distributePrizeCalculation",
+          "argTypes": [
+            "uint256", "uint256", "uint256[]", "uint256", "uint256"
+          ]
+        }
+      ],
+      "exp": "((startPoint + i) - 1)",
+      "status": "unproven"
+    },
+    {
+      "no": "40",
+      "kind": "IO",
+      "line": 157,
+      "signatures": [
+        {
+          "contractName": "UnilotPrizeCalculator",
+          "methodName": "distributePrizeCalculation",
+          "argTypes": [
+            "uint256", "uint256", "uint256[]", "uint256", "uint256"
+          ]
+        }
+      ],
+      "exp": "(prizeAmountForDeligation - mainWinnerBaseAmount)",
+      "status": "unproven"
+    },
+    {
+      "no": "41",
+      "kind": "IO",
+      "line": 157,
+      "signatures": [
+        {
+          "contractName": "UnilotPrizeCalculator",
+          "methodName": "distributePrizeCalculation",
+          "argTypes": [
+            "uint256", "uint256", "uint256[]", "uint256", "uint256"
+          ]
+        }
+      ],
+      "exp": "(startPoint + i)",
+      "status": "unproven"
+    },
+    {
+      "no": "42",
+      "kind": "IO",
+      "line": 157,
+      "signatures": [
+        {
+          "contractName": "UnilotPrizeCalculator",
+          "methodName": "distributePrizeCalculation",
+          "argTypes": [
+            "uint256", "uint256", "uint256[]", "uint256", "uint256"
+          ]
+        }
+      ],
+      "exp": "(y[((startPoint + i) - 1)] * (prizeAmountForDeligation - mainWinnerBaseAmount))",
+      "status": "unproven"
+    },
+    {
+      "no": "43",
+      "kind": "IO",
+      "line": 160,
+      "signatures": [
+        {
+          "contractName": "UnilotPrizeCalculator",
+          "methodName": "distributePrizeCalculation",
+          "argTypes": [
+            "uint256", "uint256", "uint256[]", "uint256", "uint256"
+          ]
+        }
+      ],
+      "exp": "(prizes[i] + extraPrize)",
+      "status": "unproven"
+    },
+    {
+      "no": "44",
+      "kind": "IO",
+      "line": 161,
+      "signatures": [
+        {
+          "contractName": "UnilotPrizeCalculator",
+          "methodName": "distributePrizeCalculation",
+          "argTypes": [
+            "uint256", "uint256", "uint256[]", "uint256", "uint256"
+          ]
+        }
+      ],
+      "exp": "(undeligatedAmount - extraPrize)",
+      "status": "unproven"
+    },
+    {
+      "no": "45",
+      "kind": "IO",
+      "line": 172,
+      "signatures": [
+        {
+          "contractName": "UnilotPrizeCalculator",
+          "methodName": "formula",
+          "argTypes": [ "uint256" ]
+        }
+      ],
+      "exp": "(((1 * (accuracy ** 2)) / (x + ((5 * accuracy) / 10))) - ((5 * accuracy) / 100))",
+      "status": "unproven"
+    },
+    {
+      "no": "46",
+      "kind": "IO",
+      "line": 172,
+      "signatures": [
+        {
+          "contractName": "UnilotPrizeCalculator",
+          "methodName": "formula",
+          "argTypes": [ "uint256" ]
+        }
+      ],
+      "exp": "(1 * (accuracy ** 2))",
+      "status": "unproven"
+    },
+    {
+      "no": "47",
+      "kind": "IO",
+      "line": 172,
+      "signatures": [
+        {
+          "contractName": "UnilotPrizeCalculator",
+          "methodName": "formula",
+          "argTypes": [ "uint256" ]
+        }
+      ],
+      "exp": "(5 * accuracy)",
+      "status": "unproven"
+    },
+    {
+      "no": "48",
+      "kind": "IO",
+      "line": 172,
+      "signatures": [
+        {
+          "contractName": "UnilotPrizeCalculator",
+          "methodName": "formula",
+          "argTypes": [ "uint256" ]
+        }
+      ],
+      "exp": "(accuracy ** 2)",
+      "status": "unproven"
+    },
+    {
+      "no": "49",
+      "kind": "IO",
+      "line": 172,
+      "signatures": [
+        {
+          "contractName": "UnilotPrizeCalculator",
+          "methodName": "formula",
+          "argTypes": [ "uint256" ]
+        }
+      ],
+      "exp": "(x + ((5 * accuracy) / 10))",
+      "status": "unproven"
+    },
+    {
+      "no": "50",
+      "kind": "IO",
+      "line": 182,
+      "signatures": [
+        {
+          "contractName": "UnilotPrizeCalculator",
+          "methodName": "calculateStep",
+          "argTypes": [ "uint256" ]
+        }
+      ],
+      "exp": "(MAX_X_FOR_Y * accuracy)",
+      "status": "unproven"
+    },
+    {
+      "no": "51",
+      "kind": "IO",
+      "line": 296,
+      "signatures": [
+        {
+          "contractName": "UnilotTailEther",
+          "methodName": "getWinners",
+          "argTypes": []
+        }
+      ],
+      "exp": "(numWinners + numFixedAmountWinners)",
+      "status": "unproven"
+    },
+    {
+      "no": "52",
+      "kind": "IO",
+      "line": 302,
+      "signatures": [
+        {
+          "contractName": "UnilotTailEther",
+          "methodName": "getWinners",
+          "argTypes": []
+        }
+      ],
+      "exp": "(i + 1)",
+      "status": "proven"
+    },
+    {
+      "no": "53",
+      "kind": "IO",
+      "line": 306,
+      "signatures": [
+        {
+          "contractName": "UnilotTailEther",
+          "methodName": "getWinners",
+          "argTypes": []
+        }
+      ],
+      "exp": "(index + 1)",
+      "status": "proven"
+    },
+    {
+      "no": "54",
+      "kind": "IO",
+      "line": 331,
+      "signatures": [
+        {
+          "contractName": "UnilotTailEther",
+          "methodName": "@fallback",
+          "argTypes": []
+        },
+        {
+          "contractName": "UnilotTailEther",
+          "methodName": "getPrizeAmount",
+          "argTypes": []
+        },
+        {
+          "contractName": "UnilotTailEther",
+          "methodName": "getStat",
+          "argTypes": []
+        },
+        {
+          "contractName": "UnilotTailEther",
+          "methodName": "play",
+          "argTypes": []
+        }
+      ],
+      "exp": "(bet * ticketIndex.length)",
+      "status": "unproven"
+    },
+    {
+      "no": "55",
+      "kind": "IO",
+      "line": 345,
+      "signatures": [
+        {
+          "contractName": "UnilotTailEther",
+          "methodName": "getStat",
+          "argTypes": []
+        }
+      ],
+      "exp": "(numWinners + numFixedAmountWinners)",
+      "status": "unproven"
+    },
+    {
+      "no": "56",
+      "kind": "IO",
+      "line": 353,
+      "signatures": [
+        {
+          "contractName": "UnilotTailEther",
+          "methodName": "calcaultePrizes",
+          "argTypes": []
+        }
+      ],
+      "exp": "(numWinners + numFixedAmountWinners)",
+      "status": "unproven"
+    },
+    {
+      "no": "57",
+      "kind": "IO",
+      "line": 360,
+      "signatures": [
+        {
+          "contractName": "UnilotTailEther",
+          "methodName": "calcaultePrizes",
+          "argTypes": []
+        }
+      ],
+      "exp": "(i + 1)",
+      "status": "proven"
+    },
+    {
+      "no": "58",
+      "kind": "IO",
+      "line": 372,
+      "signatures": [
+        {
+          "contractName": "UnilotTailEther",
+          "methodName": "revoke",
+          "argTypes": []
+        }
+      ],
+      "exp": "(i + 1)",
+      "status": "proven"
+    },
+    {
+      "no": "59",
+      "kind": "IO",
+      "line": 425,
+      "signatures": [
+        {
+          "contractName": "UnilotTailEther",
+          "methodName": "finish",
+          "argTypes": []
+        }
+      ],
+      "exp": "(i + 1)",
+      "status": "proven"
+    },
+    {
+      "no": "60",
+      "kind": "IO",
+      "line": 427,
+      "signatures": [
+        {
+          "contractName": "UnilotTailEther",
+          "methodName": "finish",
+          "argTypes": []
+        }
+      ],
+      "exp": "((ticket.block_number * ticket.block_time) + uint256(ticketIndex[i]))",
+      "status": "unproven"
+    },
+    {
+      "no": "61",
+      "kind": "IO",
+      "line": 427,
+      "signatures": [
+        {
+          "contractName": "UnilotTailEther",
+          "methodName": "finish",
+          "argTypes": []
+        }
+      ],
+      "exp": "(ticket.block_number * ticket.block_time)",
+      "status": "unproven"
+    },
+    {
+      "no": "62",
+      "kind": "IO",
+      "line": 429,
+      "signatures": [
+        {
+          "contractName": "UnilotTailEther",
+          "methodName": "finish",
+          "argTypes": []
+        }
+      ],
+      "exp": "(tickets[ticketIndex[vote]].num_votes + 1)",
+      "status": "unproven"
+    },
+    {
+      "no": "63",
+      "kind": "IO",
+      "line": 442,
+      "signatures": [
+        {
+          "contractName": "UnilotTailEther",
+          "methodName": "finish",
+          "argTypes": []
+        }
+      ],
+      "exp": "(i + 1)",
+      "status": "unproven"
+    },
+    {
+      "no": "64",
+      "kind": "IO",
+      "line": 448,
+      "signatures": [
+        {
+          "contractName": "UnilotTailEther",
+          "methodName": "finish",
+          "argTypes": []
+        }
+      ],
+      "exp": "(i - 1)",
+      "status": "unproven"
+    },
+    {
+      "no": "65",
+      "kind": "IO",
+      "line": 455,
+      "signatures": [
+        {
+          "contractName": "UnilotTailEther",
+          "methodName": "finish",
+          "argTypes": []
+        }
+      ],
+      "exp": "(lastId - 1)",
+      "status": "proven"
+    },
+    {
+      "no": "66",
+      "kind": "DZ",
+      "line": 62,
+      "signatures": [
+        {
+          "contractName": "UnilotPrizeCalculator",
+          "methodName": "getPrizeAmount",
+          "argTypes": [ "uint256" ]
+        }
+      ],
+      "exp": "((totalAmount * totalCommision) / 100)",
+      "status": "proven"
+    },
+    {
+      "no": "67",
+      "kind": "DZ",
+      "line": 74,
+      "signatures": [
+        {
+          "contractName": "UnilotPrizeCalculator",
+          "methodName": "getNumWinners",
+          "argTypes": [ "uint256" ]
+        }
+      ],
+      "exp": "((numPlayers * (100 - percentOfWinners)) / 100)",
+      "status": "proven"
+    },
+    {
+      "no": "68",
+      "kind": "DZ",
+      "line": 77,
+      "signatures": [
+        {
+          "contractName": "UnilotPrizeCalculator",
+          "methodName": "getNumWinners",
+          "argTypes": [ "uint256" ]
+        }
+      ],
+      "exp": "((totaNumlWinners * percentOfFixedPrizeWinners) / 100)",
+      "status": "proven"
+    },
+    {
+      "no": "69",
+      "kind": "DZ",
+      "line": 140,
+      "signatures": [
+        {
+          "contractName": "UnilotPrizeCalculator",
+          "methodName": "distributePrizeCalculation",
+          "argTypes": [
+            "uint256", "uint256", "uint256[]", "uint256", "uint256"
+          ]
+        }
+      ],
+      "exp": "((prizeAmountForDeligation * accuracy) / (((z * accuracy) / (2 * y[0])) + (1 * accuracy)))",
+      "status": "unproven"
+    },
+    {
+      "no": "70",
+      "kind": "DZ",
+      "line": 140,
+      "signatures": [
+        {
+          "contractName": "UnilotPrizeCalculator",
+          "methodName": "distributePrizeCalculation",
+          "argTypes": [
+            "uint256", "uint256", "uint256[]", "uint256", "uint256"
+          ]
+        }
+      ],
+      "exp": "((z * accuracy) / (2 * y[0]))",
+      "status": "unproven"
+    },
+    {
+      "no": "71",
+      "kind": "DZ",
+      "line": 157,
+      "signatures": [
+        {
+          "contractName": "UnilotPrizeCalculator",
+          "methodName": "distributePrizeCalculation",
+          "argTypes": [
+            "uint256", "uint256", "uint256[]", "uint256", "uint256"
+          ]
+        }
+      ],
+      "exp": "((y[((startPoint + i) - 1)] * (prizeAmountForDeligation - mainWinnerBaseAmount)) / z)",
+      "status": "unproven"
+    },
+    {
+      "no": "72",
+      "kind": "DZ",
+      "line": 172,
+      "signatures": [
+        {
+          "contractName": "UnilotPrizeCalculator",
+          "methodName": "formula",
+          "argTypes": [ "uint256" ]
+        }
+      ],
+      "exp": "((1 * (accuracy ** 2)) / (x + ((5 * accuracy) / 10)))",
+      "status": "unproven"
+    },
+    {
+      "no": "73",
+      "kind": "DZ",
+      "line": 172,
+      "signatures": [
+        {
+          "contractName": "UnilotPrizeCalculator",
+          "methodName": "formula",
+          "argTypes": [ "uint256" ]
+        }
+      ],
+      "exp": "((5 * accuracy) / 10)",
+      "status": "proven"
+    },
+    {
+      "no": "74",
+      "kind": "DZ",
+      "line": 172,
+      "signatures": [
+        {
+          "contractName": "UnilotPrizeCalculator",
+          "methodName": "formula",
+          "argTypes": [ "uint256" ]
+        }
+      ],
+      "exp": "((5 * accuracy) / 100)",
+      "status": "proven"
+    },
+    {
+      "no": "75",
+      "kind": "DZ",
+      "line": 182,
+      "signatures": [
+        {
+          "contractName": "UnilotPrizeCalculator",
+          "methodName": "calculateStep",
+          "argTypes": [ "uint256" ]
+        }
+      ],
+      "exp": "(((MAX_X_FOR_Y * accuracy) / 10) / numWinners)",
+      "status": "unproven"
+    },
+    {
+      "no": "76",
+      "kind": "DZ",
+      "line": 182,
+      "signatures": [
+        {
+          "contractName": "UnilotPrizeCalculator",
+          "methodName": "calculateStep",
+          "argTypes": [ "uint256" ]
+        }
+      ],
+      "exp": "((MAX_X_FOR_Y * accuracy) / 10)",
+      "status": "proven"
+    },
+    {
+      "no": "77",
+      "kind": "DZ",
+      "line": 427,
+      "signatures": [
+        {
+          "contractName": "UnilotTailEther",
+          "methodName": "finish",
+          "argTypes": []
+        }
+      ],
+      "exp": "(((ticket.block_number * ticket.block_time) + uint256(ticketIndex[i])) % ticketIndex.length)",
+      "status": "proven"
+    },
+    {
+      "no": "78",
+      "kind": "ETH_LEAK",
+      "line": 374,
+      "signatures": [
+        {
+          "contractName": "UnilotTailEther",
+          "methodName": "revoke",
+          "argTypes": []
+        }
+      ],
+      "exp": "ticketIndex[i].transfer(bet);",
+      "status": "unproven"
+    },
+    {
+      "no": "79",
+      "kind": "ETH_LEAK",
+      "line": 446,
+      "signatures": [
+        {
+          "contractName": "UnilotTailEther",
+          "methodName": "finish",
+          "argTypes": []
+        }
+      ],
+      "exp": "ticketIndex[lastId].transfer(prizes[i]);",
+      "status": "unproven"
+    },
+    {
+      "no": "80",
+      "kind": "ETH_LEAK",
+      "line": 458,
+      "signatures": [
+        {
+          "contractName": "UnilotTailEther",
+          "methodName": "finish",
+          "argTypes": []
+        }
+      ],
+      "exp": "administrator.transfer(this.balance);",
+      "status": "proven"
+    }
+  ]
+}

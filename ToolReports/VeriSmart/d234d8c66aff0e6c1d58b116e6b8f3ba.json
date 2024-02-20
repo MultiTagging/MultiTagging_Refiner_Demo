@@ -1,0 +1,795 @@
+{
+  "fileName": "Benchmarks/Study_SamplesSet/d234d8c66aff0e6c1d58b116e6b8f3ba.sol",
+  "baseName": "d234d8c66aff0e6c1d58b116e6b8f3ba.sol",
+  "iter": 119,
+  "time": "300.570213",
+  "errMsg": null,
+  "result": [
+    {
+      "no": "1",
+      "kind": "IO",
+      "line": 12,
+      "signatures": [
+        {
+          "contractName": "ZupplyToken",
+          "methodName": "transfer",
+          "argTypes": [ "address", "uint256" ]
+        },
+        {
+          "contractName": "ZupplyToken",
+          "methodName": "transferFrom",
+          "argTypes": [ "address", "address", "uint256" ]
+        }
+      ],
+      "exp": "(a - b)",
+      "status": "proven"
+    },
+    {
+      "no": "2",
+      "kind": "IO",
+      "line": 16,
+      "signatures": [
+        {
+          "contractName": "ZupplyToken",
+          "methodName": "transfer",
+          "argTypes": [ "address", "uint256" ]
+        },
+        {
+          "contractName": "ZupplyToken",
+          "methodName": "transferFrom",
+          "argTypes": [ "address", "address", "uint256" ]
+        }
+      ],
+      "exp": "(a + b)",
+      "status": "proven"
+    },
+    {
+      "no": "3",
+      "kind": "IO",
+      "line": 70,
+      "signatures": [
+        {
+          "contractName": "ZupplyToken",
+          "methodName": "transfer",
+          "argTypes": [ "address", "uint256" ]
+        }
+      ],
+      "exp": "(balances[_to] + _value)",
+      "status": "unproven"
+    },
+    {
+      "no": "4",
+      "kind": "IO",
+      "line": 82,
+      "signatures": [
+        {
+          "contractName": "ZupplyToken",
+          "methodName": "transferFrom",
+          "argTypes": [ "address", "address", "uint256" ]
+        }
+      ],
+      "exp": "(balances[_to] + _value)",
+      "status": "unproven"
+    },
+    {
+      "no": "5",
+      "kind": "IO",
+      "line": 126,
+      "signatures": [
+        {
+          "contractName": "ZupplyToken",
+          "methodName": "ZupplyToken",
+          "argTypes": [ "address", "address", "address", "address" ]
+        }
+      ],
+      "exp": "(750000000 * (1000000000000000000 / 1))",
+      "status": "proven"
+    },
+    {
+      "no": "6",
+      "kind": "IO",
+      "line": 127,
+      "signatures": [
+        {
+          "contractName": "ZupplyToken",
+          "methodName": "ZupplyToken",
+          "argTypes": [ "address", "address", "address", "address" ]
+        }
+      ],
+      "exp": "(100000000 * (1000000000000000000 / 1))",
+      "status": "proven"
+    },
+    {
+      "no": "7",
+      "kind": "IO",
+      "line": 128,
+      "signatures": [
+        {
+          "contractName": "ZupplyToken",
+          "methodName": "ZupplyToken",
+          "argTypes": [ "address", "address", "address", "address" ]
+        }
+      ],
+      "exp": "(50000000 * (1000000000000000000 / 1))",
+      "status": "proven"
+    },
+    {
+      "no": "8",
+      "kind": "IO",
+      "line": 133,
+      "signatures": [
+        {
+          "contractName": "ZupplyToken",
+          "methodName": "ZupplyToken",
+          "argTypes": [ "address", "address", "address", "address" ]
+        }
+      ],
+      "exp": "((PRESALE_PRICE * PRESALE_MAX_ETH) * (1000000000000000000 / 1))",
+      "status": "proven"
+    },
+    {
+      "no": "9",
+      "kind": "IO",
+      "line": 133,
+      "signatures": [
+        {
+          "contractName": "ZupplyToken",
+          "methodName": "ZupplyToken",
+          "argTypes": [ "address", "address", "address", "address" ]
+        }
+      ],
+      "exp": "(PRESALE_PRICE * PRESALE_MAX_ETH)",
+      "status": "proven"
+    },
+    {
+      "no": "10",
+      "kind": "IO",
+      "line": 138,
+      "signatures": [
+        {
+          "contractName": "ZupplyToken",
+          "methodName": "ZupplyToken",
+          "argTypes": [ "address", "address", "address", "address" ]
+        }
+      ],
+      "exp": "(600000000 * (1000000000000000000 / 1))",
+      "status": "proven"
+    },
+    {
+      "no": "11",
+      "kind": "IO",
+      "line": 198,
+      "signatures": [
+        {
+          "contractName": "ZupplyToken",
+          "methodName": "ZupplyToken",
+          "argTypes": [ "address", "address", "address", "address" ]
+        }
+      ],
+      "exp": "(balances[_teamTokenBonus] + teamBonus)",
+      "status": "proven"
+    },
+    {
+      "no": "12",
+      "kind": "IO",
+      "line": 200,
+      "signatures": [
+        {
+          "contractName": "ZupplyToken",
+          "methodName": "ZupplyToken",
+          "argTypes": [ "address", "address", "address", "address" ]
+        }
+      ],
+      "exp": "(balances[_eralyInvestorBonus] + earlyBonus)",
+      "status": "proven"
+    },
+    {
+      "no": "13",
+      "kind": "IO",
+      "line": 201,
+      "signatures": [
+        {
+          "contractName": "ZupplyToken",
+          "methodName": "ZupplyToken",
+          "argTypes": [ "address", "address", "address", "address" ]
+        }
+      ],
+      "exp": "(supply + teamBonus)",
+      "status": "proven"
+    },
+    {
+      "no": "14",
+      "kind": "IO",
+      "line": 202,
+      "signatures": [
+        {
+          "contractName": "ZupplyToken",
+          "methodName": "ZupplyToken",
+          "argTypes": [ "address", "address", "address", "address" ]
+        }
+      ],
+      "exp": "(supply + earlyBonus)",
+      "status": "proven"
+    },
+    {
+      "no": "15",
+      "kind": "IO",
+      "line": 204,
+      "signatures": [
+        {
+          "contractName": "ZupplyToken",
+          "methodName": "ZupplyToken",
+          "argTypes": [ "address", "address", "address", "address" ]
+        }
+      ],
+      "exp": "(100000000 * (1000000000000000000 / 1))",
+      "status": "proven"
+    },
+    {
+      "no": "16",
+      "kind": "IO",
+      "line": 205,
+      "signatures": [
+        {
+          "contractName": "ZupplyToken",
+          "methodName": "ZupplyToken",
+          "argTypes": [ "address", "address", "address", "address" ]
+        }
+      ],
+      "exp": "(600000000 * (1000000000000000000 / 1))",
+      "status": "proven"
+    },
+    {
+      "no": "17",
+      "kind": "IO",
+      "line": 223,
+      "signatures": [
+        {
+          "contractName": "ZupplyToken",
+          "methodName": "@fallback",
+          "argTypes": []
+        },
+        {
+          "contractName": "ZupplyToken",
+          "methodName": "buyTokens",
+          "argTypes": []
+        },
+        {
+          "contractName": "ZupplyToken",
+          "methodName": "buyTokensPresale",
+          "argTypes": []
+        }
+      ],
+      "exp": "(msg.value * PRESALE_PRICE)",
+      "status": "unproven"
+    },
+    {
+      "no": "18",
+      "kind": "IO",
+      "line": 225,
+      "signatures": [
+        {
+          "contractName": "ZupplyToken",
+          "methodName": "@fallback",
+          "argTypes": []
+        },
+        {
+          "contractName": "ZupplyToken",
+          "methodName": "buyTokens",
+          "argTypes": []
+        },
+        {
+          "contractName": "ZupplyToken",
+          "methodName": "buyTokensPresale",
+          "argTypes": []
+        }
+      ],
+      "exp": "((presaleSoldTokens + newTokens) + totalWitdrowedToken)",
+      "status": "unproven"
+    },
+    {
+      "no": "19",
+      "kind": "IO",
+      "line": 225,
+      "signatures": [
+        {
+          "contractName": "ZupplyToken",
+          "methodName": "@fallback",
+          "argTypes": []
+        },
+        {
+          "contractName": "ZupplyToken",
+          "methodName": "buyTokens",
+          "argTypes": []
+        },
+        {
+          "contractName": "ZupplyToken",
+          "methodName": "buyTokensPresale",
+          "argTypes": []
+        }
+      ],
+      "exp": "(presaleSoldTokens + newTokens)",
+      "status": "unproven"
+    },
+    {
+      "no": "20",
+      "kind": "IO",
+      "line": 227,
+      "signatures": [
+        {
+          "contractName": "ZupplyToken",
+          "methodName": "@fallback",
+          "argTypes": []
+        },
+        {
+          "contractName": "ZupplyToken",
+          "methodName": "buyTokens",
+          "argTypes": []
+        },
+        {
+          "contractName": "ZupplyToken",
+          "methodName": "buyTokensPresale",
+          "argTypes": []
+        }
+      ],
+      "exp": "(balances[msg.sender] + newTokens)",
+      "status": "unproven"
+    },
+    {
+      "no": "21",
+      "kind": "IO",
+      "line": 228,
+      "signatures": [
+        {
+          "contractName": "ZupplyToken",
+          "methodName": "@fallback",
+          "argTypes": []
+        },
+        {
+          "contractName": "ZupplyToken",
+          "methodName": "buyTokens",
+          "argTypes": []
+        },
+        {
+          "contractName": "ZupplyToken",
+          "methodName": "buyTokensPresale",
+          "argTypes": []
+        }
+      ],
+      "exp": "(supply + newTokens)",
+      "status": "unproven"
+    },
+    {
+      "no": "22",
+      "kind": "IO",
+      "line": 229,
+      "signatures": [
+        {
+          "contractName": "ZupplyToken",
+          "methodName": "@fallback",
+          "argTypes": []
+        },
+        {
+          "contractName": "ZupplyToken",
+          "methodName": "buyTokens",
+          "argTypes": []
+        },
+        {
+          "contractName": "ZupplyToken",
+          "methodName": "buyTokensPresale",
+          "argTypes": []
+        }
+      ],
+      "exp": "(presaleSoldTokens + newTokens)",
+      "status": "unproven"
+    },
+    {
+      "no": "23",
+      "kind": "IO",
+      "line": 230,
+      "signatures": [
+        {
+          "contractName": "ZupplyToken",
+          "methodName": "@fallback",
+          "argTypes": []
+        },
+        {
+          "contractName": "ZupplyToken",
+          "methodName": "buyTokens",
+          "argTypes": []
+        },
+        {
+          "contractName": "ZupplyToken",
+          "methodName": "buyTokensPresale",
+          "argTypes": []
+        }
+      ],
+      "exp": "(totalSoldTokens + newTokens)",
+      "status": "unproven"
+    },
+    {
+      "no": "24",
+      "kind": "IO",
+      "line": 239,
+      "signatures": [
+        {
+          "contractName": "ZupplyToken",
+          "methodName": "buyTokensICO",
+          "argTypes": []
+        }
+      ],
+      "exp": "(msg.value * getPrice())",
+      "status": "unproven"
+    },
+    {
+      "no": "25",
+      "kind": "IO",
+      "line": 241,
+      "signatures": [
+        {
+          "contractName": "ZupplyToken",
+          "methodName": "buyTokensICO",
+          "argTypes": []
+        }
+      ],
+      "exp": "((totalSoldTokens + newTokens) + totalWitdrowedToken)",
+      "status": "unproven"
+    },
+    {
+      "no": "26",
+      "kind": "IO",
+      "line": 241,
+      "signatures": [
+        {
+          "contractName": "ZupplyToken",
+          "methodName": "buyTokensICO",
+          "argTypes": []
+        }
+      ],
+      "exp": "(totalSoldTokens + newTokens)",
+      "status": "unproven"
+    },
+    {
+      "no": "27",
+      "kind": "IO",
+      "line": 243,
+      "signatures": [
+        {
+          "contractName": "ZupplyToken",
+          "methodName": "buyTokensICO",
+          "argTypes": []
+        }
+      ],
+      "exp": "(balances[msg.sender] + newTokens)",
+      "status": "unproven"
+    },
+    {
+      "no": "28",
+      "kind": "IO",
+      "line": 244,
+      "signatures": [
+        {
+          "contractName": "ZupplyToken",
+          "methodName": "buyTokensICO",
+          "argTypes": []
+        }
+      ],
+      "exp": "(supply + newTokens)",
+      "status": "unproven"
+    },
+    {
+      "no": "29",
+      "kind": "IO",
+      "line": 245,
+      "signatures": [
+        {
+          "contractName": "ZupplyToken",
+          "methodName": "buyTokensICO",
+          "argTypes": []
+        }
+      ],
+      "exp": "(icoSoldTokens + newTokens)",
+      "status": "unproven"
+    },
+    {
+      "no": "30",
+      "kind": "IO",
+      "line": 246,
+      "signatures": [
+        {
+          "contractName": "ZupplyToken",
+          "methodName": "buyTokensICO",
+          "argTypes": []
+        }
+      ],
+      "exp": "(totalSoldTokens + newTokens)",
+      "status": "unproven"
+    },
+    {
+      "no": "31",
+      "kind": "IO",
+      "line": 283,
+      "signatures": [
+        {
+          "contractName": "ZupplyToken",
+          "methodName": "withdrawTokens",
+          "argTypes": [ "uint256" ]
+        }
+      ],
+      "exp": "((totalSoldTokens + totalWitdrowedToken) + _value)",
+      "status": "unproven"
+    },
+    {
+      "no": "32",
+      "kind": "IO",
+      "line": 283,
+      "signatures": [
+        {
+          "contractName": "ZupplyToken",
+          "methodName": "withdrawTokens",
+          "argTypes": [ "uint256" ]
+        }
+      ],
+      "exp": "(totalSoldTokens + totalWitdrowedToken)",
+      "status": "unproven"
+    },
+    {
+      "no": "33",
+      "kind": "IO",
+      "line": 285,
+      "signatures": [
+        {
+          "contractName": "ZupplyToken",
+          "methodName": "withdrawTokens",
+          "argTypes": [ "uint256" ]
+        }
+      ],
+      "exp": "((TOTAL_SOLD_TOKEN_SUPPLY_LIMIT - totalSoldTokens) - totalWitdrowedToken)",
+      "status": "unproven"
+    },
+    {
+      "no": "34",
+      "kind": "IO",
+      "line": 285,
+      "signatures": [
+        {
+          "contractName": "ZupplyToken",
+          "methodName": "withdrawTokens",
+          "argTypes": [ "uint256" ]
+        }
+      ],
+      "exp": "(TOTAL_SOLD_TOKEN_SUPPLY_LIMIT - totalSoldTokens)",
+      "status": "unproven"
+    },
+    {
+      "no": "35",
+      "kind": "IO",
+      "line": 287,
+      "signatures": [
+        {
+          "contractName": "ZupplyToken",
+          "methodName": "withdrawTokens",
+          "argTypes": [ "uint256" ]
+        }
+      ],
+      "exp": "(balances[escrow] + _value)",
+      "status": "unproven"
+    },
+    {
+      "no": "36",
+      "kind": "IO",
+      "line": 289,
+      "signatures": [
+        {
+          "contractName": "ZupplyToken",
+          "methodName": "withdrawTokens",
+          "argTypes": [ "uint256" ]
+        }
+      ],
+      "exp": "(totalWitdrowedToken + _value)",
+      "status": "unproven"
+    },
+    {
+      "no": "37",
+      "kind": "IO",
+      "line": 290,
+      "signatures": [
+        {
+          "contractName": "ZupplyToken",
+          "methodName": "withdrawTokens",
+          "argTypes": [ "uint256" ]
+        }
+      ],
+      "exp": "(supply + _value)",
+      "status": "unproven"
+    },
+    {
+      "no": "38",
+      "kind": "DZ",
+      "line": 126,
+      "signatures": [
+        {
+          "contractName": "ZupplyToken",
+          "methodName": "ZupplyToken",
+          "argTypes": [ "address", "address", "address", "address" ]
+        }
+      ],
+      "exp": "(1000000000000000000 / 1)",
+      "status": "proven"
+    },
+    {
+      "no": "39",
+      "kind": "DZ",
+      "line": 127,
+      "signatures": [
+        {
+          "contractName": "ZupplyToken",
+          "methodName": "ZupplyToken",
+          "argTypes": [ "address", "address", "address", "address" ]
+        }
+      ],
+      "exp": "(1000000000000000000 / 1)",
+      "status": "proven"
+    },
+    {
+      "no": "40",
+      "kind": "DZ",
+      "line": 128,
+      "signatures": [
+        {
+          "contractName": "ZupplyToken",
+          "methodName": "ZupplyToken",
+          "argTypes": [ "address", "address", "address", "address" ]
+        }
+      ],
+      "exp": "(1000000000000000000 / 1)",
+      "status": "proven"
+    },
+    {
+      "no": "41",
+      "kind": "DZ",
+      "line": 133,
+      "signatures": [
+        {
+          "contractName": "ZupplyToken",
+          "methodName": "ZupplyToken",
+          "argTypes": [ "address", "address", "address", "address" ]
+        }
+      ],
+      "exp": "(1000000000000000000 / 1)",
+      "status": "proven"
+    },
+    {
+      "no": "42",
+      "kind": "DZ",
+      "line": 138,
+      "signatures": [
+        {
+          "contractName": "ZupplyToken",
+          "methodName": "ZupplyToken",
+          "argTypes": [ "address", "address", "address", "address" ]
+        }
+      ],
+      "exp": "(1000000000000000000 / 1)",
+      "status": "proven"
+    },
+    {
+      "no": "43",
+      "kind": "DZ",
+      "line": 204,
+      "signatures": [
+        {
+          "contractName": "ZupplyToken",
+          "methodName": "ZupplyToken",
+          "argTypes": [ "address", "address", "address", "address" ]
+        }
+      ],
+      "exp": "(1000000000000000000 / 1)",
+      "status": "proven"
+    },
+    {
+      "no": "44",
+      "kind": "DZ",
+      "line": 205,
+      "signatures": [
+        {
+          "contractName": "ZupplyToken",
+          "methodName": "ZupplyToken",
+          "argTypes": [ "address", "address", "address", "address" ]
+        }
+      ],
+      "exp": "(1000000000000000000 / 1)",
+      "status": "proven"
+    },
+    {
+      "no": "45",
+      "kind": "DZ",
+      "line": 222,
+      "signatures": [
+        {
+          "contractName": "ZupplyToken",
+          "methodName": "@fallback",
+          "argTypes": []
+        },
+        {
+          "contractName": "ZupplyToken",
+          "methodName": "buyTokens",
+          "argTypes": []
+        },
+        {
+          "contractName": "ZupplyToken",
+          "methodName": "buyTokensPresale",
+          "argTypes": []
+        }
+      ],
+      "exp": "((1000000000000000000 / 1) / 10)",
+      "status": "proven"
+    },
+    {
+      "no": "46",
+      "kind": "DZ",
+      "line": 222,
+      "signatures": [
+        {
+          "contractName": "ZupplyToken",
+          "methodName": "@fallback",
+          "argTypes": []
+        },
+        {
+          "contractName": "ZupplyToken",
+          "methodName": "buyTokens",
+          "argTypes": []
+        },
+        {
+          "contractName": "ZupplyToken",
+          "methodName": "buyTokensPresale",
+          "argTypes": []
+        }
+      ],
+      "exp": "(1000000000000000000 / 1)",
+      "status": "proven"
+    },
+    {
+      "no": "47",
+      "kind": "DZ",
+      "line": 238,
+      "signatures": [
+        {
+          "contractName": "ZupplyToken",
+          "methodName": "buyTokensICO",
+          "argTypes": []
+        }
+      ],
+      "exp": "((1000000000000000000 / 1) / 100)",
+      "status": "proven"
+    },
+    {
+      "no": "48",
+      "kind": "DZ",
+      "line": 238,
+      "signatures": [
+        {
+          "contractName": "ZupplyToken",
+          "methodName": "buyTokensICO",
+          "argTypes": []
+        }
+      ],
+      "exp": "(1000000000000000000 / 1)",
+      "status": "proven"
+    },
+    {
+      "no": "49",
+      "kind": "ETH_LEAK",
+      "line": 275,
+      "signatures": [
+        {
+          "contractName": "ZupplyToken",
+          "methodName": "withdrawETH",
+          "argTypes": []
+        }
+      ],
+      "exp": "escrow.send(this.balance)",
+      "status": "proven"
+    }
+  ]
+}

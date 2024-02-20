@@ -1,0 +1,47 @@
+{
+  "fileName": "Benchmarks/Study_SamplesSet/eaabb2462aaf56d4cdc0752243b1d0e3.sol",
+  "baseName": "eaabb2462aaf56d4cdc0752243b1d0e3.sol",
+  "iter": 2,
+  "time": "0.111453",
+  "errMsg": null,
+  "result": [
+    {
+      "no": "1",
+      "kind": "IO",
+      "line": 38,
+      "signatures": [
+        {
+          "contractName": "X_GAME",
+          "methodName": "X_GAME",
+          "argTypes": [ "bytes32[]" ]
+        }
+      ],
+      "exp": "(i + 1)",
+      "status": "proven"
+    },
+    {
+      "no": "2",
+      "kind": "ETH_LEAK",
+      "line": 11,
+      "signatures": [
+        {
+          "contractName": "X_GAME",
+          "methodName": "Try",
+          "argTypes": [ "string" ]
+        }
+      ],
+      "exp": "msg.sender.transfer(this.balance);",
+      "status": "unproven"
+    },
+    {
+      "no": "3",
+      "kind": "ETH_LEAK",
+      "line": 29,
+      "signatures": [
+        { "contractName": "X_GAME", "methodName": "Stop", "argTypes": [] }
+      ],
+      "exp": "msg.sender.transfer(this.balance);",
+      "status": "unproven"
+    }
+  ]
+}

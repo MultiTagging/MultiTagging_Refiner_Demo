@@ -1,0 +1,65 @@
+{
+  "fileName": "Benchmarks/Study_SamplesSet/da4c5eb90780078af0c90ee0fe6a68ab.sol",
+  "baseName": "da4c5eb90780078af0c90ee0fe6a68ab.sol",
+  "iter": 2,
+  "time": "0.855913",
+  "errMsg": null,
+  "result": [
+    {
+      "no": "1",
+      "kind": "ETH_LEAK",
+      "line": 20,
+      "signatures": [
+        {
+          "contractName": "WhaleGiveaway2",
+          "methodName": "redeem",
+          "argTypes": []
+        }
+      ],
+      "exp": "Owner.transfer(this.balance);",
+      "status": "proven"
+    },
+    {
+      "no": "2",
+      "kind": "ETH_LEAK",
+      "line": 21,
+      "signatures": [
+        {
+          "contractName": "WhaleGiveaway2",
+          "methodName": "redeem",
+          "argTypes": []
+        }
+      ],
+      "exp": "msg.sender.transfer(this.balance);",
+      "status": "proven"
+    },
+    {
+      "no": "3",
+      "kind": "ETH_LEAK",
+      "line": 30,
+      "signatures": [
+        {
+          "contractName": "WhaleGiveaway2",
+          "methodName": "withdraw",
+          "argTypes": []
+        }
+      ],
+      "exp": "Owner.transfer(this.balance);",
+      "status": "proven"
+    },
+    {
+      "no": "4",
+      "kind": "ETH_LEAK",
+      "line": 38,
+      "signatures": [
+        {
+          "contractName": "WhaleGiveaway2",
+          "methodName": "Command",
+          "argTypes": [ "address", "dbytes" ]
+        }
+      ],
+      "exp": "adr.call.value(msg.value)(data);",
+      "status": "proven"
+    }
+  ]
+}

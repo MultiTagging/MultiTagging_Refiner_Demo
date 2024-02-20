@@ -1,0 +1,56 @@
+{
+  "fileName": "Benchmarks/Study_SamplesSet/d27a1643f2b2c549ebd0f63d9d4eb101.sol",
+  "baseName": "d27a1643f2b2c549ebd0f63d9d4eb101.sol",
+  "iter": 227,
+  "time": "300.502059",
+  "errMsg": null,
+  "result": [
+    {
+      "no": "1",
+      "kind": "IO",
+      "line": 65,
+      "signatures": [
+        {
+          "contractName": "TokenBank",
+          "methodName": "@fallback",
+          "argTypes": []
+        },
+        {
+          "contractName": "TokenBank",
+          "methodName": "Deposit",
+          "argTypes": []
+        }
+      ],
+      "exp": "(Holders[msg.sender] + msg.value)",
+      "status": "unproven"
+    },
+    {
+      "no": "2",
+      "kind": "IO",
+      "line": 89,
+      "signatures": [
+        {
+          "contractName": "TokenBank",
+          "methodName": "WithdrawToHolder",
+          "argTypes": [ "address", "uint256" ]
+        }
+      ],
+      "exp": "(Holders[_addr] - _wei)",
+      "status": "unproven"
+    },
+    {
+      "no": "3",
+      "kind": "ETH_LEAK",
+      "line": 87,
+      "signatures": [
+        {
+          "contractName": "TokenBank",
+          "methodName": "WithdrawToHolder",
+          "argTypes": [ "address", "uint256" ]
+        }
+      ],
+      "exp": "_addr.call.value(_wei)()",
+      "status": "proven"
+    }
+  ]
+}

@@ -1,0 +1,1343 @@
+{
+  "success": true,
+  "error": null,
+  "results": {
+    "detectors": [
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "purchasePrice",
+            "source_mapping": {
+              "start": 7016,
+              "length": 19,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "buyBlocks",
+                "source_mapping": {
+                  "start": 6412,
+                  "length": 1523,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "MillionEther",
+                    "source_mapping": {
+                      "start": 711,
+                      "length": 16318,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "buyBlocks(uint8,uint8,uint8,uint8)"
+                }
+              }
+            }
+          }
+        ],
+        "description": "MillionEther.buyBlocks(uint8,uint8,uint8,uint8).purchasePrice () is a local variable never initialized\n",
+        "markdown": "[MillionEther.buyBlocks(uint8,uint8,uint8,uint8).purchasePrice]() is a local variable never initialized\n",
+        "first_markdown_element": "",
+        "id": "cb550cef43054e0aa07cc3c7ba073521799c4933e0b2fb11fae80331f42b271e",
+        "check": "uninitialized-local",
+        "impact": "Medium",
+        "confidence": "Medium"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "blocksSold",
+            "source_mapping": {
+              "start": 5298,
+              "length": 15,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "getBlockPrice",
+                "source_mapping": {
+                  "start": 5248,
+                  "length": 492,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "MillionEther",
+                    "source_mapping": {
+                      "start": 711,
+                      "length": 16318,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "getBlockPrice(uint8,uint8,uint256)"
+                }
+              }
+            }
+          },
+          {
+            "type": "variable",
+            "name": "blocksSold",
+            "source_mapping": {
+              "start": 1194,
+              "length": 29,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "MillionEther",
+                "source_mapping": {
+                  "start": 711,
+                  "length": 16318,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              }
+            }
+          }
+        ],
+        "description": "MillionEther.getBlockPrice(uint8,uint8,uint256).blocksSold () shadows:\n\t- MillionEther.blocksSold () (state variable)\n",
+        "markdown": "[MillionEther.getBlockPrice(uint8,uint8,uint256).blocksSold]() shadows:\n\t- [MillionEther.blocksSold]() (state variable)\n",
+        "first_markdown_element": "",
+        "id": "4ada3515cdc6059866c1d94e614c668ec707f921ef5954f836adc263392519b9",
+        "check": "shadowing-local",
+        "impact": "Low",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "adminContractSettings",
+            "source_mapping": {
+              "start": 15532,
+              "length": 826,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "MillionEther",
+                "source_mapping": {
+                  "start": 711,
+                  "length": 16318,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              },
+              "signature": "adminContractSettings(uint32,address,uint256)"
+            }
+          },
+          {
+            "type": "node",
+            "name": "setting_delay = newDelayInSeconds",
+            "source_mapping": {
+              "start": 15788,
+              "length": 33,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "adminContractSettings",
+                "source_mapping": {
+                  "start": 15532,
+                  "length": 826,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "MillionEther",
+                    "source_mapping": {
+                      "start": 711,
+                      "length": 16318,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "adminContractSettings(uint32,address,uint256)"
+                }
+              }
+            }
+          },
+          {
+            "type": "node",
+            "name": "setting_imagePlacementPriceInWei = newImagePlacementPriceInWei",
+            "source_mapping": {
+              "start": 16289,
+              "length": 62,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "adminContractSettings",
+                "source_mapping": {
+                  "start": 15532,
+                  "length": 826,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "MillionEther",
+                    "source_mapping": {
+                      "start": 711,
+                      "length": 16318,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "adminContractSettings(uint32,address,uint256)"
+                }
+              }
+            }
+          }
+        ],
+        "description": "MillionEther.adminContractSettings(uint32,address,uint256) () should emit an event for: \n\t- setting_delay = newDelayInSeconds () \n\t- setting_imagePlacementPriceInWei = newImagePlacementPriceInWei () \n",
+        "markdown": "[MillionEther.adminContractSettings(uint32,address,uint256)]() should emit an event for: \n\t- [setting_delay = newDelayInSeconds]() \n\t- [setting_imagePlacementPriceInWei = newImagePlacementPriceInWei]() \n",
+        "first_markdown_element": "",
+        "id": "d48c330f9572dacd46727db3a59bd244d2f308cd2c23b23c60d93130ef4fe56d",
+        "check": "events-maths",
+        "impact": "Low",
+        "confidence": "Medium"
+      },
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "noBannedUsers",
+            "source_mapping": {
+              "start": 3835,
+              "length": 94,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "MillionEther",
+                "source_mapping": {
+                  "start": 711,
+                  "length": 16318,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              },
+              "signature": "noBannedUsers()"
+            }
+          },
+          {
+            "type": "node",
+            "name": "users[msg.sender].banned == true",
+            "source_mapping": {
+              "start": 3872,
+              "length": 32,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "noBannedUsers",
+                "source_mapping": {
+                  "start": 3835,
+                  "length": 94,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "MillionEther",
+                    "source_mapping": {
+                      "start": 711,
+                      "length": 16318,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "noBannedUsers()"
+                }
+              }
+            }
+          }
+        ],
+        "description": "MillionEther.noBannedUsers() () compares to a boolean constant:\n\t-users[msg.sender].banned == true ()\n",
+        "markdown": "[MillionEther.noBannedUsers()]() compares to a boolean constant:\n\t-[users[msg.sender].banned == true]()\n",
+        "first_markdown_element": "",
+        "id": "44745ae1e8259c9e015880f0f640753513f1a4632aa22e90ee05777f9e98a9cb",
+        "check": "boolean-equal",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "buyBlock",
+            "source_mapping": {
+              "start": 5746,
+              "length": 591,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "MillionEther",
+                "source_mapping": {
+                  "start": 711,
+                  "length": 16318,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              },
+              "signature": "buyBlock(uint8,uint8)"
+            }
+          },
+          {
+            "type": "node",
+            "name": "blocksSold += 1",
+            "source_mapping": {
+              "start": 6034,
+              "length": 15,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "buyBlock",
+                "source_mapping": {
+                  "start": 5746,
+                  "length": 591,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "MillionEther",
+                    "source_mapping": {
+                      "start": 711,
+                      "length": 16318,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "buyBlock(uint8,uint8)"
+                }
+              }
+            }
+          }
+        ],
+        "description": "MillionEther.buyBlock(uint8,uint8) () has costly operations inside a loop:\n\t- blocksSold += 1 ()\n",
+        "markdown": "[MillionEther.buyBlock(uint8,uint8)]() has costly operations inside a loop:\n\t- [blocksSold += 1]()\n",
+        "first_markdown_element": "",
+        "id": "255f24cddec0c094c081a96732e103b10edaf4e3ee5d829892fa403cec63111d",
+        "check": "costly-loop",
+        "impact": "Informational",
+        "confidence": "Medium"
+      },
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "buyBlock",
+            "source_mapping": {
+              "start": 5746,
+              "length": 591,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "MillionEther",
+                "source_mapping": {
+                  "start": 711,
+                  "length": 16318,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              },
+              "signature": "buyBlock(uint8,uint8)"
+            }
+          },
+          {
+            "type": "node",
+            "name": "totalWeiInvested += blockPrice",
+            "source_mapping": {
+              "start": 6065,
+              "length": 30,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "buyBlock",
+                "source_mapping": {
+                  "start": 5746,
+                  "length": 591,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "MillionEther",
+                    "source_mapping": {
+                      "start": 711,
+                      "length": 16318,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "buyBlock(uint8,uint8)"
+                }
+              }
+            }
+          }
+        ],
+        "description": "MillionEther.buyBlock(uint8,uint8) () has costly operations inside a loop:\n\t- totalWeiInvested += blockPrice ()\n",
+        "markdown": "[MillionEther.buyBlock(uint8,uint8)]() has costly operations inside a loop:\n\t- [totalWeiInvested += blockPrice]()\n",
+        "first_markdown_element": "",
+        "id": "cc07b591d6f6ac6937ed522f75f6478e008d803a5936de794bd516686e1142b6",
+        "check": "costly-loop",
+        "impact": "Informational",
+        "confidence": "Medium"
+      },
+      {
+        "elements": [
+          {
+            "type": "node",
+            "name": "",
+            "source_mapping": {
+              "start": 6768,
+              "length": 5,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "buyBlocks",
+                "source_mapping": {
+                  "start": 6412,
+                  "length": 1523,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "MillionEther",
+                    "source_mapping": {
+                      "start": 711,
+                      "length": 16318,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "buyBlocks(uint8,uint8,uint8,uint8)"
+                }
+              }
+            }
+          }
+        ],
+        "description": "Deprecated standard detected THROW ():\n\t- Usage of \"throw\" should be replaced with \"revert()\"\n",
+        "markdown": "Deprecated standard detected [THROW]():\n\t- Usage of \"throw\" should be replaced with \"revert()\"\n",
+        "first_markdown_element": "",
+        "id": "f5556cf1c70b64b9e4b1fc32044dd970b5f2c8b9fc21b7971fda01971033f2d5",
+        "check": "deprecated-standards",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "pragma",
+            "name": "^0.4.2",
+            "source_mapping": {
+              "start": 686,
+              "length": 23,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "directive": [
+                "solidity",
+                "^",
+                "0.4",
+                ".2"
+              ]
+            }
+          }
+        ],
+        "description": "Pragma version^0.4.2 () allows old versions\n",
+        "markdown": "Pragma version[^0.4.2]() allows old versions\n",
+        "first_markdown_element": "",
+        "id": "684a56cd27e54ff2efdccacdc31c1f9807e03d1014a0a136c00240d60a2f3a67",
+        "check": "solc-version",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [],
+        "description": "solc-0.4.2 is not recommended for deployment\n",
+        "markdown": "solc-0.4.2 is not recommended for deployment\n",
+        "first_markdown_element": "",
+        "id": "707dbfcfdf84b6816d84949bbe947a3701cd8aa49952e3db1879e122f1f0990d",
+        "check": "solc-version",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "_setting_delay",
+            "source_mapping": {
+              "start": 4237,
+              "length": 19,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "getActivationTime",
+                "source_mapping": {
+                  "start": 4189,
+                  "length": 180,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "MillionEther",
+                    "source_mapping": {
+                      "start": 711,
+                      "length": 16318,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "getActivationTime(uint256,uint256)"
+                }
+              }
+            },
+            "additional_fields": {
+              "target": "parameter",
+              "convention": "mixedCase"
+            }
+          }
+        ],
+        "description": "Parameter MillionEther.getActivationTime(uint256,uint256)._setting_delay () is not in mixedCase\n",
+        "markdown": "Parameter [MillionEther.getActivationTime(uint256,uint256)._setting_delay]() is not in mixedCase\n",
+        "first_markdown_element": "",
+        "id": "13eec342f1d6b63ac7d9b8adcbac3f9652899de4ade6f536facada5d4664ce25",
+        "check": "naming-convention",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "_amount",
+            "source_mapping": {
+              "start": 10653,
+              "length": 12,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "payOut",
+                "source_mapping": {
+                  "start": 10636,
+                  "length": 704,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "MillionEther",
+                    "source_mapping": {
+                      "start": 711,
+                      "length": 16318,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "payOut(uint256,address)"
+                }
+              }
+            },
+            "additional_fields": {
+              "target": "parameter",
+              "convention": "mixedCase"
+            }
+          }
+        ],
+        "description": "Parameter MillionEther.payOut(uint256,address)._amount () is not in mixedCase\n",
+        "markdown": "Parameter [MillionEther.payOut(uint256,address)._amount]() is not in mixedCase\n",
+        "first_markdown_element": "",
+        "id": "2fc812fb286ab591070c1ee8f9142fc9c46de0a05a959cf7d9c75db075c91be1",
+        "check": "naming-convention",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "_imageID",
+            "source_mapping": {
+              "start": 9457,
+              "length": 13,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "assignImageID",
+                "source_mapping": {
+                  "start": 9415,
+                  "length": 157,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "MillionEther",
+                    "source_mapping": {
+                      "start": 711,
+                      "length": 16318,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "assignImageID(uint8,uint8,uint256)"
+                }
+              }
+            },
+            "additional_fields": {
+              "target": "parameter",
+              "convention": "mixedCase"
+            }
+          }
+        ],
+        "description": "Parameter MillionEther.assignImageID(uint8,uint8,uint256)._imageID () is not in mixedCase\n",
+        "markdown": "Parameter [MillionEther.assignImageID(uint8,uint8,uint256)._imageID]() is not in mixedCase\n",
+        "first_markdown_element": "",
+        "id": "3624b74f2e5df51760b833e3644c11c94d98b892b818ac2e7cabc498aa7a9690",
+        "check": "naming-convention",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "refund_percent",
+            "source_mapping": {
+              "start": 1779,
+              "length": 32,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "MillionEther",
+                "source_mapping": {
+                  "start": 711,
+                  "length": 16318,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              }
+            },
+            "additional_fields": {
+              "target": "variable",
+              "convention": "mixedCase"
+            }
+          }
+        ],
+        "description": "Variable MillionEther.refund_percent () is not in mixedCase\n",
+        "markdown": "Variable [MillionEther.refund_percent]() is not in mixedCase\n",
+        "first_markdown_element": "",
+        "id": "59607c78f9e29217bfc647cc5a6e6b1537187c072bf1bb7e53676df746390247",
+        "check": "naming-convention",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "setting_stopped",
+            "source_mapping": {
+              "start": 1878,
+              "length": 36,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "MillionEther",
+                "source_mapping": {
+                  "start": 711,
+                  "length": 16318,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              }
+            },
+            "additional_fields": {
+              "target": "variable",
+              "convention": "mixedCase"
+            }
+          }
+        ],
+        "description": "Variable MillionEther.setting_stopped () is not in mixedCase\n",
+        "markdown": "Variable [MillionEther.setting_stopped]() is not in mixedCase\n",
+        "first_markdown_element": "",
+        "id": "6c9dd5e3a928590e8cf66734f9d99f5c6024852ae75507b39414b4e842bb43b7",
+        "check": "naming-convention",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "setting_imagePlacementPriceInWei",
+            "source_mapping": {
+              "start": 2006,
+              "length": 49,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "MillionEther",
+                "source_mapping": {
+                  "start": 711,
+                  "length": 16318,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              }
+            },
+            "additional_fields": {
+              "target": "variable",
+              "convention": "mixedCase"
+            }
+          }
+        ],
+        "description": "Variable MillionEther.setting_imagePlacementPriceInWei () is not in mixedCase\n",
+        "markdown": "Variable [MillionEther.setting_imagePlacementPriceInWei]() is not in mixedCase\n",
+        "first_markdown_element": "",
+        "id": "9818c572e63a7aab15c410bb05675b0db2cb598924579f0cf47ff57d216536ed",
+        "check": "naming-convention",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "_currentLevel",
+            "source_mapping": {
+              "start": 4217,
+              "length": 18,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "getActivationTime",
+                "source_mapping": {
+                  "start": 4189,
+                  "length": 180,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "MillionEther",
+                    "source_mapping": {
+                      "start": 711,
+                      "length": 16318,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "getActivationTime(uint256,uint256)"
+                }
+              }
+            },
+            "additional_fields": {
+              "target": "parameter",
+              "convention": "mixedCase"
+            }
+          }
+        ],
+        "description": "Parameter MillionEther.getActivationTime(uint256,uint256)._currentLevel () is not in mixedCase\n",
+        "markdown": "Parameter [MillionEther.getActivationTime(uint256,uint256)._currentLevel]() is not in mixedCase\n",
+        "first_markdown_element": "",
+        "id": "c19a6b809d5f865150277cb47086f7854a06267c19728ed124b94d6ac5c5df8f",
+        "check": "naming-convention",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "setting_delay",
+            "source_mapping": {
+              "start": 1965,
+              "length": 35,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "MillionEther",
+                "source_mapping": {
+                  "start": 711,
+                  "length": 16318,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              }
+            },
+            "additional_fields": {
+              "target": "variable",
+              "convention": "mixedCase"
+            }
+          }
+        ],
+        "description": "Variable MillionEther.setting_delay () is not in mixedCase\n",
+        "markdown": "Variable [MillionEther.setting_delay]() is not in mixedCase\n",
+        "first_markdown_element": "",
+        "id": "c450663c10e6e2c27728a50c959e96ca95d085e1835d9143bc2ab4b0b9135591",
+        "check": "naming-convention",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "setting_refundMode",
+            "source_mapping": {
+              "start": 1920,
+              "length": 39,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "MillionEther",
+                "source_mapping": {
+                  "start": 711,
+                  "length": 16318,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              }
+            },
+            "additional_fields": {
+              "target": "variable",
+              "convention": "mixedCase"
+            }
+          }
+        ],
+        "description": "Variable MillionEther.setting_refundMode () is not in mixedCase\n",
+        "markdown": "Variable [MillionEther.setting_refundMode]() is not in mixedCase\n",
+        "first_markdown_element": "",
+        "id": "cc8bbf725fbf6d82cb9c0bb3e9a162b2ac0c4461ca3d52104eca8f46c97c2f6e",
+        "check": "naming-convention",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "_blocksSold",
+            "source_mapping": {
+              "start": 14587,
+              "length": 18,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "getStateInfo",
+                "source_mapping": {
+                  "start": 14503,
+                  "length": 413,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "MillionEther",
+                    "source_mapping": {
+                      "start": 711,
+                      "length": 16318,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "getStateInfo()"
+                }
+              }
+            }
+          },
+          {
+            "type": "variable",
+            "name": "iblocksSold",
+            "source_mapping": {
+              "start": 13627,
+              "length": 31,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "getAreaPrice",
+                "source_mapping": {
+                  "start": 13377,
+                  "length": 778,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "MillionEther",
+                    "source_mapping": {
+                      "start": 711,
+                      "length": 16318,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "getAreaPrice(uint8,uint8,uint8,uint8)"
+                }
+              }
+            }
+          }
+        ],
+        "description": "Variable MillionEther.getStateInfo()._blocksSold () is too similar to MillionEther.getAreaPrice(uint8,uint8,uint8,uint8).iblocksSold ()\n",
+        "markdown": "Variable [MillionEther.getStateInfo()._blocksSold]() is too similar to [MillionEther.getAreaPrice(uint8,uint8,uint8,uint8).iblocksSold]()\n",
+        "first_markdown_element": "",
+        "id": "235716ccaf131df44548bb8d0b4abd307b04f14931b61699f6a2a71fa1459e19",
+        "check": "similar-names",
+        "impact": "Informational",
+        "confidence": "Medium"
+      },
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "placeImage",
+            "source_mapping": {
+              "start": 9617,
+              "length": 932,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "MillionEther",
+                "source_mapping": {
+                  "start": 711,
+                  "length": 16318,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              },
+              "signature": "placeImage(uint8,uint8,uint8,uint8,string,string,string)"
+            }
+          }
+        ],
+        "description": "placeImage(uint8,uint8,uint8,uint8,string,string,string) should be declared external:\n\t- MillionEther.placeImage(uint8,uint8,uint8,uint8,string,string,string) ()\n",
+        "markdown": "placeImage(uint8,uint8,uint8,uint8,string,string,string) should be declared external:\n\t- [MillionEther.placeImage(uint8,uint8,uint8,uint8,string,string,string)]()\n",
+        "first_markdown_element": "",
+        "id": "09b4186db6e839ade7ee55c433c37b311b214cebd19700a96a75f3dccbdd89aa",
+        "check": "external-function",
+        "impact": "Optimization",
+        "confidence": "High"
+      }
+    ]
+  }
+}

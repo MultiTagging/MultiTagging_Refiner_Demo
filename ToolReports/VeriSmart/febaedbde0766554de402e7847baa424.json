@@ -1,0 +1,37 @@
+{
+  "fileName": "Benchmarks/Study_SamplesSet/febaedbde0766554de402e7847baa424.sol",
+  "baseName": "febaedbde0766554de402e7847baa424.sol",
+  "iter": 5,
+  "time": "0.137123",
+  "errMsg": null,
+  "result": [
+    {
+      "no": "1",
+      "kind": "IO",
+      "line": 11,
+      "signatures": [
+        {
+          "contractName": "GIFT_CARD",
+          "methodName": "Put",
+          "argTypes": [ "bytes32", "uint256" ]
+        }
+      ],
+      "exp": "(now + _unlockTime)",
+      "status": "unproven"
+    },
+    {
+      "no": "2",
+      "kind": "ETH_LEAK",
+      "line": 23,
+      "signatures": [
+        {
+          "contractName": "GIFT_CARD",
+          "methodName": "Take",
+          "argTypes": [ "dbytes" ]
+        }
+      ],
+      "exp": "msg.sender.transfer(this.balance);",
+      "status": "unproven"
+    }
+  ]
+}

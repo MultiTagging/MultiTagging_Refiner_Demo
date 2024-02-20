@@ -1,0 +1,105 @@
+{
+  "fileName": "Benchmarks/Study_SamplesSet/c7d7e3ab9bc9b667e83e36f9355f6c31.sol",
+  "baseName": "c7d7e3ab9bc9b667e83e36f9355f6c31.sol",
+  "iter": 804,
+  "time": "300.4083",
+  "errMsg": null,
+  "result": [
+    {
+      "no": "1",
+      "kind": "IO",
+      "line": 20,
+      "signatures": [
+        {
+          "contractName": "Bitway",
+          "methodName": "@fallback",
+          "argTypes": []
+        },
+        {
+          "contractName": "Bitway",
+          "methodName": "createTokens",
+          "argTypes": []
+        }
+      ],
+      "exp": "(a * b)",
+      "status": "unproven"
+    },
+    {
+      "no": "2",
+      "kind": "IO",
+      "line": 29,
+      "signatures": [
+        {
+          "contractName": "Bitway",
+          "methodName": "transfer",
+          "argTypes": [ "address", "uint256" ]
+        },
+        {
+          "contractName": "Bitway",
+          "methodName": "transferFrom",
+          "argTypes": [ "address", "address", "uint256" ]
+        }
+      ],
+      "exp": "(a - b)",
+      "status": "proven"
+    },
+    {
+      "no": "3",
+      "kind": "IO",
+      "line": 33,
+      "signatures": [
+        {
+          "contractName": "Bitway",
+          "methodName": "@fallback",
+          "argTypes": []
+        },
+        {
+          "contractName": "Bitway",
+          "methodName": "createTokens",
+          "argTypes": []
+        }
+      ],
+      "exp": "(a + b)",
+      "status": "unproven"
+    },
+    {
+      "no": "4",
+      "kind": "IO",
+      "line": 46,
+      "signatures": [
+        { "contractName": "Bitway", "methodName": "Bitway", "argTypes": [] }
+      ],
+      "exp": "(10 ** uint256(decimals))",
+      "status": "proven"
+    },
+    {
+      "no": "5",
+      "kind": "IO",
+      "line": 46,
+      "signatures": [
+        { "contractName": "Bitway", "methodName": "Bitway", "argTypes": [] }
+      ],
+      "exp": "(22000000 * (10 ** uint256(decimals)))",
+      "status": "proven"
+    },
+    {
+      "no": "6",
+      "kind": "DZ",
+      "line": 21,
+      "signatures": [
+        {
+          "contractName": "Bitway",
+          "methodName": "@fallback",
+          "argTypes": []
+        },
+        {
+          "contractName": "Bitway",
+          "methodName": "createTokens",
+          "argTypes": []
+        }
+      ],
+      "exp": "(c / a)",
+      "status": "proven"
+    }
+  ]
+}

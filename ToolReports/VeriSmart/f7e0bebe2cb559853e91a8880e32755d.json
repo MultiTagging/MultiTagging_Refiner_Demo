@@ -1,0 +1,62 @@
+{
+  "fileName": "Benchmarks/Study_SamplesSet/f7e0bebe2cb559853e91a8880e32755d.sol",
+  "baseName": "f7e0bebe2cb559853e91a8880e32755d.sol",
+  "iter": 2292,
+  "time": "227.182838",
+  "errMsg": null,
+  "result": [
+    {
+      "no": "1",
+      "kind": "IO",
+      "line": 22,
+      "signatures": [
+        {
+          "contractName": "LeafToken",
+          "methodName": "decreaseApproval",
+          "argTypes": [ "address", "uint256" ]
+        },
+        {
+          "contractName": "LeafToken",
+          "methodName": "transfer",
+          "argTypes": [ "address", "uint256" ]
+        },
+        {
+          "contractName": "LeafToken",
+          "methodName": "transferFrom",
+          "argTypes": [ "address", "address", "uint256" ]
+        }
+      ],
+      "exp": "(a - b)",
+      "status": "proven"
+    },
+    {
+      "no": "2",
+      "kind": "IO",
+      "line": 26,
+      "signatures": [
+        {
+          "contractName": "LeafToken",
+          "methodName": "increaseApproval",
+          "argTypes": [ "address", "uint256" ]
+        },
+        {
+          "contractName": "LeafToken",
+          "methodName": "mint",
+          "argTypes": [ "address", "uint256" ]
+        },
+        {
+          "contractName": "LeafToken",
+          "methodName": "transfer",
+          "argTypes": [ "address", "uint256" ]
+        },
+        {
+          "contractName": "LeafToken",
+          "methodName": "transferFrom",
+          "argTypes": [ "address", "address", "uint256" ]
+        }
+      ],
+      "exp": "(a + b)",
+      "status": "unproven"
+    }
+  ]
+}

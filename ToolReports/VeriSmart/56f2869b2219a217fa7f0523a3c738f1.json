@@ -1,0 +1,29 @@
+{
+  "fileName": "Benchmarks/Study_SamplesSet/56f2869b2219a217fa7f0523a3c738f1.sol",
+  "baseName": "56f2869b2219a217fa7f0523a3c738f1.sol",
+  "iter": 2,
+  "time": "0.294218",
+  "errMsg": null,
+  "result": [
+    {
+      "no": "1",
+      "kind": "ETH_LEAK",
+      "line": 9,
+      "signatures": [
+        { "contractName": "B", "methodName": "go", "argTypes": [] }
+      ],
+      "exp": "target.call.value(msg.value)();",
+      "status": "proven"
+    },
+    {
+      "no": "2",
+      "kind": "ETH_LEAK",
+      "line": 10,
+      "signatures": [
+        { "contractName": "B", "methodName": "go", "argTypes": [] }
+      ],
+      "exp": "owner.transfer(address(this).balance);",
+      "status": "proven"
+    }
+  ]
+}

@@ -1,0 +1,1746 @@
+{
+  "success": true,
+  "error": null,
+  "results": {
+    "detectors": [
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "complete",
+            "source_mapping": {
+              "start": 728,
+              "length": 557,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "Atomic",
+                "source_mapping": {
+                  "start": 25,
+                  "length": 4716,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              },
+              "signature": "complete(bytes32[])"
+            }
+          },
+          {
+            "type": "node",
+            "name": "! holds[hold_id].company.send(holds[hold_id].price)",
+            "source_mapping": {
+              "start": 1054,
+              "length": 50,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "complete",
+                "source_mapping": {
+                  "start": 728,
+                  "length": 557,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "Atomic",
+                    "source_mapping": {
+                      "start": 25,
+                      "length": 4716,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "complete(bytes32[])"
+                }
+              }
+            }
+          }
+        ],
+        "description": "Atomic.complete(bytes32[]) () sends eth to arbitrary user\n\tDangerous calls:\n\t- ! holds[hold_id].company.send(holds[hold_id].price) ()\n",
+        "markdown": "[Atomic.complete(bytes32[])]() sends eth to arbitrary user\n\tDangerous calls:\n\t- [! holds[hold_id].company.send(holds[hold_id].price)]()\n",
+        "first_markdown_element": "",
+        "id": "80d2a7966503a5e38e53bab4e60d23a7c96764430772ca2daf24bb36faf08cf5",
+        "check": "arbitrary-send-eth",
+        "impact": "High",
+        "confidence": "Medium"
+      },
+      {
+        "elements": [
+          {
+            "type": "contract",
+            "name": "Atomic",
+            "source_mapping": {
+              "start": 25,
+              "length": 4716,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            }
+          },
+          {
+            "type": "node",
+            "name": "user_holds[msg.sender].push(hold_id)",
+            "source_mapping": {
+              "start": 2530,
+              "length": 36,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "createHold",
+                "source_mapping": {
+                  "start": 2136,
+                  "length": 591,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "Atomic",
+                    "source_mapping": {
+                      "start": 25,
+                      "length": 4716,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "createHold(address,uint256,uint256,bytes32)"
+                }
+              }
+            }
+          }
+        ],
+        "description": "Atomic () contract sets array length with a user-controlled value:\n\t- user_holds[msg.sender].push(hold_id) ()\n",
+        "markdown": "[Atomic]() contract sets array length with a user-controlled value:\n\t- [user_holds[msg.sender].push(hold_id)]()\n",
+        "first_markdown_element": "",
+        "id": "118c1ed74c7c7df6fb6615c6618e11997f1c31a8218d317de7f2316f0446448b",
+        "check": "controlled-array-length",
+        "impact": "High",
+        "confidence": "Medium"
+      },
+      {
+        "elements": [
+          {
+            "type": "contract",
+            "name": "Atomic",
+            "source_mapping": {
+              "start": 25,
+              "length": 4716,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            }
+          },
+          {
+            "type": "node",
+            "name": "company_holds[company].push(hold_id)",
+            "source_mapping": {
+              "start": 2576,
+              "length": 36,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "createHold",
+                "source_mapping": {
+                  "start": 2136,
+                  "length": 591,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "Atomic",
+                    "source_mapping": {
+                      "start": 25,
+                      "length": 4716,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "createHold(address,uint256,uint256,bytes32)"
+                }
+              }
+            }
+          }
+        ],
+        "description": "Atomic () contract sets array length with a user-controlled value:\n\t- company_holds[company].push(hold_id) ()\n",
+        "markdown": "[Atomic]() contract sets array length with a user-controlled value:\n\t- [company_holds[company].push(hold_id)]()\n",
+        "first_markdown_element": "",
+        "id": "d61347c2760c6562596aae7c630bccc33f7c4035d0d19eb6a36c73905ebfc552",
+        "check": "controlled-array-length",
+        "impact": "High",
+        "confidence": "Medium"
+      },
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "complete",
+            "source_mapping": {
+              "start": 728,
+              "length": 557,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "Atomic",
+                "source_mapping": {
+                  "start": 25,
+                  "length": 4716,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              },
+              "signature": "complete(bytes32[])"
+            }
+          },
+          {
+            "type": "node",
+            "name": "! holds[hold_id].company.send(holds[hold_id].price)",
+            "source_mapping": {
+              "start": 1054,
+              "length": 50,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "complete",
+                "source_mapping": {
+                  "start": 728,
+                  "length": 557,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "Atomic",
+                    "source_mapping": {
+                      "start": 25,
+                      "length": 4716,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "complete(bytes32[])"
+                }
+              }
+            }
+          }
+        ],
+        "description": "Atomic.complete(bytes32[]) () has external calls inside a loop: ! holds[hold_id].company.send(holds[hold_id].price) ()\n",
+        "markdown": "[Atomic.complete(bytes32[])]() has external calls inside a loop: [! holds[hold_id].company.send(holds[hold_id].price)]()\n",
+        "first_markdown_element": "",
+        "id": "e1770390e77032da730bf01a0bd44c3b8468c2ff19799073a8a5f4f7825717ea",
+        "check": "calls-loop",
+        "impact": "Low",
+        "confidence": "Medium"
+      },
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "complete",
+            "source_mapping": {
+              "start": 728,
+              "length": 557,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "Atomic",
+                "source_mapping": {
+                  "start": 25,
+                  "length": 4716,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              },
+              "signature": "complete(bytes32[])"
+            }
+          },
+          {
+            "type": "node",
+            "name": "holds[hold_id].expiry < now",
+            "source_mapping": {
+              "start": 963,
+              "length": 27,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "complete",
+                "source_mapping": {
+                  "start": 728,
+                  "length": 557,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "Atomic",
+                    "source_mapping": {
+                      "start": 25,
+                      "length": 4716,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "complete(bytes32[])"
+                }
+              }
+            }
+          }
+        ],
+        "description": "Atomic.complete(bytes32[]) () uses timestamp for comparisons\n\tDangerous comparisons:\n\t- holds[hold_id].expiry < now ()\n",
+        "markdown": "[Atomic.complete(bytes32[])]() uses timestamp for comparisons\n\tDangerous comparisons:\n\t- [holds[hold_id].expiry < now]()\n",
+        "first_markdown_element": "",
+        "id": "01784f35ae1c7fc0f9c6d4cea663daa7cba7b02878590688eb92456e513d3c40",
+        "check": "timestamp",
+        "impact": "Low",
+        "confidence": "Medium"
+      },
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "balancePayable",
+            "source_mapping": {
+              "start": 1619,
+              "length": 384,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "Atomic",
+                "source_mapping": {
+                  "start": 25,
+                  "length": 4716,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              },
+              "signature": "balancePayable(bytes32[])"
+            }
+          },
+          {
+            "type": "node",
+            "name": "(holds[hold_id].status == 1) && (holds[hold_id].expiry > now)",
+            "source_mapping": {
+              "start": 1839,
+              "length": 61,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "balancePayable",
+                "source_mapping": {
+                  "start": 1619,
+                  "length": 384,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "Atomic",
+                    "source_mapping": {
+                      "start": 25,
+                      "length": 4716,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "balancePayable(bytes32[])"
+                }
+              }
+            }
+          }
+        ],
+        "description": "Atomic.balancePayable(bytes32[]) () uses timestamp for comparisons\n\tDangerous comparisons:\n\t- (holds[hold_id].status == 1) && (holds[hold_id].expiry > now) ()\n",
+        "markdown": "[Atomic.balancePayable(bytes32[])]() uses timestamp for comparisons\n\tDangerous comparisons:\n\t- [(holds[hold_id].status == 1) && (holds[hold_id].expiry > now)]()\n",
+        "first_markdown_element": "",
+        "id": "a10d965cd0759f023c1a27cae8d7088ac856a5eb65518cb813004e188480882e",
+        "check": "timestamp",
+        "impact": "Low",
+        "confidence": "Medium"
+      },
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "isValid",
+            "source_mapping": {
+              "start": 1291,
+              "length": 321,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "Atomic",
+                "source_mapping": {
+                  "start": 25,
+                  "length": 4716,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              },
+              "signature": "isValid(bytes32[])"
+            }
+          },
+          {
+            "type": "node",
+            "name": "holds[hold_id].expiry < now",
+            "source_mapping": {
+              "start": 1533,
+              "length": 27,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "isValid",
+                "source_mapping": {
+                  "start": 1291,
+                  "length": 321,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "Atomic",
+                    "source_mapping": {
+                      "start": 25,
+                      "length": 4716,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "isValid(bytes32[])"
+                }
+              }
+            }
+          }
+        ],
+        "description": "Atomic.isValid(bytes32[]) () uses timestamp for comparisons\n\tDangerous comparisons:\n\t- holds[hold_id].expiry < now ()\n",
+        "markdown": "[Atomic.isValid(bytes32[])]() uses timestamp for comparisons\n\tDangerous comparisons:\n\t- [holds[hold_id].expiry < now]()\n",
+        "first_markdown_element": "",
+        "id": "bcec048b76f63ff2b885fcad72b0924e92dc310245dac762f1b638f891426d62",
+        "check": "timestamp",
+        "impact": "Low",
+        "confidence": "Medium"
+      },
+      {
+        "elements": [
+          {
+            "type": "node",
+            "name": "sha3()(user,company,price,expiry,external_id)",
+            "source_mapping": {
+              "start": 2881,
+              "length": 54,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "holdIDForParameters",
+                "source_mapping": {
+                  "start": 2733,
+                  "length": 209,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "Atomic",
+                    "source_mapping": {
+                      "start": 25,
+                      "length": 4716,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "holdIDForParameters(address,address,uint256,uint256,bytes32)"
+                }
+              }
+            }
+          }
+        ],
+        "description": "Deprecated standard detected sha3()(user,company,price,expiry,external_id) ():\n\t- Usage of \"sha3()\" should be replaced with \"keccak256()\"\n",
+        "markdown": "Deprecated standard detected [sha3()(user,company,price,expiry,external_id)]():\n\t- Usage of \"sha3()\" should be replaced with \"keccak256()\"\n",
+        "first_markdown_element": "",
+        "id": "cfbe8434c188e5744941088739acef552d1503583d6b67e03dd9657fcbcbd3f3",
+        "check": "deprecated-standards",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "node",
+            "name": "",
+            "source_mapping": {
+              "start": 940,
+              "length": 5,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "complete",
+                "source_mapping": {
+                  "start": 728,
+                  "length": 557,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "Atomic",
+                    "source_mapping": {
+                      "start": 25,
+                      "length": 4716,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "complete(bytes32[])"
+                }
+              }
+            }
+          }
+        ],
+        "description": "Deprecated standard detected THROW ():\n\t- Usage of \"throw\" should be replaced with \"revert()\"\n",
+        "markdown": "Deprecated standard detected [THROW]():\n\t- Usage of \"throw\" should be replaced with \"revert()\"\n",
+        "first_markdown_element": "",
+        "id": "f5556cf1c70b64b9e4b1fc32044dd970b5f2c8b9fc21b7971fda01971033f2d5",
+        "check": "deprecated-standards",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "pragma",
+            "name": "^0.4.6",
+            "source_mapping": {
+              "start": 0,
+              "length": 23,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "directive": [
+                "solidity",
+                "^",
+                "0.4",
+                ".6"
+              ]
+            }
+          }
+        ],
+        "description": "Pragma version^0.4.6 () allows old versions\n",
+        "markdown": "Pragma version[^0.4.6]() allows old versions\n",
+        "first_markdown_element": "",
+        "id": "54eae9514d5e93f8fb467cb6e12380204cb269720316b950ba80b399a769bf71",
+        "check": "solc-version",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [],
+        "description": "solc-0.4.6 is not recommended for deployment\n",
+        "markdown": "solc-0.4.6 is not recommended for deployment\n",
+        "first_markdown_element": "",
+        "id": "b2e09ce9c0c37029707bd5645a9a2972adb1c4c04948009825bacc17fa383ec8",
+        "check": "solc-version",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "external_id",
+            "source_mapping": {
+              "start": 2824,
+              "length": 19,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "holdIDForParameters",
+                "source_mapping": {
+                  "start": 2733,
+                  "length": 209,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "Atomic",
+                    "source_mapping": {
+                      "start": 25,
+                      "length": 4716,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "holdIDForParameters(address,address,uint256,uint256,bytes32)"
+                }
+              }
+            },
+            "additional_fields": {
+              "target": "parameter",
+              "convention": "mixedCase"
+            }
+          }
+        ],
+        "description": "Parameter Atomic.holdIDForParameters(address,address,uint256,uint256,bytes32).external_id () is not in mixedCase\n",
+        "markdown": "Parameter [Atomic.holdIDForParameters(address,address,uint256,uint256,bytes32).external_id]() is not in mixedCase\n",
+        "first_markdown_element": "",
+        "id": "031076b5f31c38885ad7b0e029f151cb6f63bc744c3a016231642769ac0b98d0",
+        "check": "naming-convention",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "hold_id",
+            "source_mapping": {
+              "start": 3434,
+              "length": 15,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "removeHoldByUser",
+                "source_mapping": {
+                  "start": 3408,
+                  "length": 448,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "Atomic",
+                    "source_mapping": {
+                      "start": 25,
+                      "length": 4716,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "removeHoldByUser(bytes32)"
+                }
+              }
+            },
+            "additional_fields": {
+              "target": "parameter",
+              "convention": "mixedCase"
+            }
+          }
+        ],
+        "description": "Parameter Atomic.removeHoldByUser(bytes32).hold_id () is not in mixedCase\n",
+        "markdown": "Parameter [Atomic.removeHoldByUser(bytes32).hold_id]() is not in mixedCase\n",
+        "first_markdown_element": "",
+        "id": "389b6cd4fa112edd4a450037e48fc545278c27ff6510b39b812871091d546afe",
+        "check": "naming-convention",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "hold_id",
+            "source_mapping": {
+              "start": 2977,
+              "length": 15,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "removeHoldByCompany",
+                "source_mapping": {
+                  "start": 2948,
+                  "length": 454,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "Atomic",
+                    "source_mapping": {
+                      "start": 25,
+                      "length": 4716,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "removeHoldByCompany(bytes32)"
+                }
+              }
+            },
+            "additional_fields": {
+              "target": "parameter",
+              "convention": "mixedCase"
+            }
+          }
+        ],
+        "description": "Parameter Atomic.removeHoldByCompany(bytes32).hold_id () is not in mixedCase\n",
+        "markdown": "Parameter [Atomic.removeHoldByCompany(bytes32).hold_id]() is not in mixedCase\n",
+        "first_markdown_element": "",
+        "id": "8836d0a2fc8efa90025f999c88a77de23f5dbc60bf12f53f273ad3da861d8d1d",
+        "check": "naming-convention",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "hold_ids",
+            "source_mapping": {
+              "start": 1643,
+              "length": 18,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "balancePayable",
+                "source_mapping": {
+                  "start": 1619,
+                  "length": 384,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "Atomic",
+                    "source_mapping": {
+                      "start": 25,
+                      "length": 4716,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "balancePayable(bytes32[])"
+                }
+              }
+            },
+            "additional_fields": {
+              "target": "parameter",
+              "convention": "mixedCase"
+            }
+          }
+        ],
+        "description": "Parameter Atomic.balancePayable(bytes32[]).hold_ids () is not in mixedCase\n",
+        "markdown": "Parameter [Atomic.balancePayable(bytes32[]).hold_ids]() is not in mixedCase\n",
+        "first_markdown_element": "",
+        "id": "88d80ba0ecebf25e0f9823c9ece8df949ce5d5ebcfd1941b70b108531ce49b1e",
+        "check": "naming-convention",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "user_holds",
+            "source_mapping": {
+              "start": 580,
+              "length": 45,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "Atomic",
+                "source_mapping": {
+                  "start": 25,
+                  "length": 4716,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              }
+            },
+            "additional_fields": {
+              "target": "variable",
+              "convention": "mixedCase"
+            }
+          }
+        ],
+        "description": "Variable Atomic.user_holds () is not in mixedCase\n",
+        "markdown": "Variable [Atomic.user_holds]() is not in mixedCase\n",
+        "first_markdown_element": "",
+        "id": "96d7f7c7596af770fde1dc01e22b6f44b8c60bbc8388c38218063c07d1a357a3",
+        "check": "naming-convention",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "company_holds",
+            "source_mapping": {
+              "start": 631,
+              "length": 48,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "Atomic",
+                "source_mapping": {
+                  "start": 25,
+                  "length": 4716,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              }
+            },
+            "additional_fields": {
+              "target": "variable",
+              "convention": "mixedCase"
+            }
+          }
+        ],
+        "description": "Variable Atomic.company_holds () is not in mixedCase\n",
+        "markdown": "Variable [Atomic.company_holds]() is not in mixedCase\n",
+        "first_markdown_element": "",
+        "id": "be4825a1dceedd9c26e61ad96865b2932bc8a28780e65caba0ba3390c234d2da",
+        "check": "naming-convention",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "hold_ids",
+            "source_mapping": {
+              "start": 746,
+              "length": 18,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "complete",
+                "source_mapping": {
+                  "start": 728,
+                  "length": 557,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "Atomic",
+                    "source_mapping": {
+                      "start": 25,
+                      "length": 4716,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "complete(bytes32[])"
+                }
+              }
+            },
+            "additional_fields": {
+              "target": "parameter",
+              "convention": "mixedCase"
+            }
+          }
+        ],
+        "description": "Parameter Atomic.complete(bytes32[]).hold_ids () is not in mixedCase\n",
+        "markdown": "Parameter [Atomic.complete(bytes32[]).hold_ids]() is not in mixedCase\n",
+        "first_markdown_element": "",
+        "id": "c50008ade054d07142ed90b0b53b102ca470bb221a35f1321e5ef7ee6bdc267c",
+        "check": "naming-convention",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "hold_ids",
+            "source_mapping": {
+              "start": 1308,
+              "length": 18,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "isValid",
+                "source_mapping": {
+                  "start": 1291,
+                  "length": 321,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "Atomic",
+                    "source_mapping": {
+                      "start": 25,
+                      "length": 4716,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "isValid(bytes32[])"
+                }
+              }
+            },
+            "additional_fields": {
+              "target": "parameter",
+              "convention": "mixedCase"
+            }
+          }
+        ],
+        "description": "Parameter Atomic.isValid(bytes32[]).hold_ids () is not in mixedCase\n",
+        "markdown": "Parameter [Atomic.isValid(bytes32[]).hold_ids]() is not in mixedCase\n",
+        "first_markdown_element": "",
+        "id": "d73dd44c1392c4899a4e234a8c505a5589dd8c01857d69ca454741c02f65a743",
+        "check": "naming-convention",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "hold_id",
+            "source_mapping": {
+              "start": 3885,
+              "length": 15,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "getHoldStatus",
+                "source_mapping": {
+                  "start": 3862,
+                  "length": 112,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "Atomic",
+                    "source_mapping": {
+                      "start": 25,
+                      "length": 4716,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "getHoldStatus(bytes32)"
+                }
+              }
+            },
+            "additional_fields": {
+              "target": "parameter",
+              "convention": "mixedCase"
+            }
+          }
+        ],
+        "description": "Parameter Atomic.getHoldStatus(bytes32).hold_id () is not in mixedCase\n",
+        "markdown": "Parameter [Atomic.getHoldStatus(bytes32).hold_id]() is not in mixedCase\n",
+        "first_markdown_element": "",
+        "id": "dc0ee3fd21c882ad79311e55bd056ba912e1ec280d8a4a55bf102c719a06e356",
+        "check": "naming-convention",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "external_id",
+            "source_mapping": {
+              "start": 2204,
+              "length": 19,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "createHold",
+                "source_mapping": {
+                  "start": 2136,
+                  "length": 591,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "Atomic",
+                    "source_mapping": {
+                      "start": 25,
+                      "length": 4716,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "createHold(address,uint256,uint256,bytes32)"
+                }
+              }
+            },
+            "additional_fields": {
+              "target": "parameter",
+              "convention": "mixedCase"
+            }
+          }
+        ],
+        "description": "Parameter Atomic.createHold(address,uint256,uint256,bytes32).external_id () is not in mixedCase\n",
+        "markdown": "Parameter [Atomic.createHold(address,uint256,uint256,bytes32).external_id]() is not in mixedCase\n",
+        "first_markdown_element": "",
+        "id": "ede7407f8a0e4427804526d99e346b225585a481ae04b98789bf50a9391463eb",
+        "check": "naming-convention",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "complete",
+            "source_mapping": {
+              "start": 728,
+              "length": 557,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "Atomic",
+                "source_mapping": {
+                  "start": 25,
+                  "length": 4716,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              },
+              "signature": "complete(bytes32[])"
+            }
+          },
+          {
+            "type": "node",
+            "name": "! holds[hold_id].company.send(holds[hold_id].price)",
+            "source_mapping": {
+              "start": 1054,
+              "length": 50,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "complete",
+                "source_mapping": {
+                  "start": 728,
+                  "length": 557,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "Atomic",
+                    "source_mapping": {
+                      "start": 25,
+                      "length": 4716,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "complete(bytes32[])"
+                }
+              }
+            },
+            "additional_fields": {
+              "underlying_type": "external_calls"
+            }
+          },
+          {
+            "type": "node",
+            "name": "holds[hold_id].status = 2",
+            "source_mapping": {
+              "start": 1011,
+              "length": 25,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "complete",
+                "source_mapping": {
+                  "start": 728,
+                  "length": 557,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "Atomic",
+                    "source_mapping": {
+                      "start": 25,
+                      "length": 4716,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "complete(bytes32[])"
+                }
+              }
+            },
+            "additional_fields": {
+              "underlying_type": "variables_written",
+              "variable_name": "holds"
+            }
+          },
+          {
+            "type": "node",
+            "name": "LogHoldChange(hold_id,holds[hold_id].user,holds[hold_id].company,holds[hold_id].price,holds[hold_id].expiry,holds[hold_id].external_id,2)",
+            "source_mapping": {
+              "start": 1125,
+              "length": 143,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "complete",
+                "source_mapping": {
+                  "start": 728,
+                  "length": 557,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "Atomic",
+                    "source_mapping": {
+                      "start": 25,
+                      "length": 4716,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "complete(bytes32[])"
+                }
+              }
+            },
+            "additional_fields": {
+              "underlying_type": "event"
+            }
+          }
+        ],
+        "description": "Reentrancy in Atomic.complete(bytes32[]) ():\n\tExternal calls:\n\t- ! holds[hold_id].company.send(holds[hold_id].price) ()\n\tState variables written after the call(s):\n\t- holds[hold_id].status = 2 ()\n\tEvent emitted after the call(s):\n\t- LogHoldChange(hold_id,holds[hold_id].user,holds[hold_id].company,holds[hold_id].price,holds[hold_id].expiry,holds[hold_id].external_id,2) ()\n",
+        "markdown": "Reentrancy in [Atomic.complete(bytes32[])]():\n\tExternal calls:\n\t- [! holds[hold_id].company.send(holds[hold_id].price)]()\n\tState variables written after the call(s):\n\t- [holds[hold_id].status = 2]()\n\tEvent emitted after the call(s):\n\t- [LogHoldChange(hold_id,holds[hold_id].user,holds[hold_id].company,holds[hold_id].price,holds[hold_id].expiry,holds[hold_id].external_id,2)]()\n",
+        "first_markdown_element": "",
+        "id": "3d7bcd7407784774b7ac27338a7815d1bfa2d6f02f7898cebd6fd82b9a59e5c2",
+        "check": "reentrancy-unlimited-gas",
+        "impact": "Informational",
+        "confidence": "Medium"
+      },
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "isValid",
+            "source_mapping": {
+              "start": 1291,
+              "length": 321,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "Atomic",
+                "source_mapping": {
+                  "start": 25,
+                  "length": 4716,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              },
+              "signature": "isValid(bytes32[])"
+            }
+          }
+        ],
+        "description": "isValid(bytes32[]) should be declared external:\n\t- Atomic.isValid(bytes32[]) ()\n",
+        "markdown": "isValid(bytes32[]) should be declared external:\n\t- [Atomic.isValid(bytes32[])]()\n",
+        "first_markdown_element": "",
+        "id": "87e0e07b964109cad3d23368a05340a3ad0b562ffeb617755f0a7f990f9a865a",
+        "check": "external-function",
+        "impact": "Optimization",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "complete",
+            "source_mapping": {
+              "start": 728,
+              "length": 557,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "Atomic",
+                "source_mapping": {
+                  "start": 25,
+                  "length": 4716,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              },
+              "signature": "complete(bytes32[])"
+            }
+          }
+        ],
+        "description": "complete(bytes32[]) should be declared external:\n\t- Atomic.complete(bytes32[]) ()\n",
+        "markdown": "complete(bytes32[]) should be declared external:\n\t- [Atomic.complete(bytes32[])]()\n",
+        "first_markdown_element": "",
+        "id": "db8038377a6d76e49b6653fc54fe8e93eec063900691ccab98c5bfc5a4f477de",
+        "check": "external-function",
+        "impact": "Optimization",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "balancePayable",
+            "source_mapping": {
+              "start": 1619,
+              "length": 384,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "Atomic",
+                "source_mapping": {
+                  "start": 25,
+                  "length": 4716,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              },
+              "signature": "balancePayable(bytes32[])"
+            }
+          }
+        ],
+        "description": "balancePayable(bytes32[]) should be declared external:\n\t- Atomic.balancePayable(bytes32[]) ()\n",
+        "markdown": "balancePayable(bytes32[]) should be declared external:\n\t- [Atomic.balancePayable(bytes32[])]()\n",
+        "first_markdown_element": "",
+        "id": "e772fe1febec3ea6f5acb915992589e76b456bb72482a0a052a1be1632b48961",
+        "check": "external-function",
+        "impact": "Optimization",
+        "confidence": "High"
+      }
+    ]
+  }
+}

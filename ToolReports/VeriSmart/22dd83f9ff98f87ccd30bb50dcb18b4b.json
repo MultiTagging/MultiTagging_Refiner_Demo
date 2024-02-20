@@ -1,0 +1,65 @@
+{
+  "fileName": "Benchmarks/Study_SamplesSet/22dd83f9ff98f87ccd30bb50dcb18b4b.sol",
+  "baseName": "22dd83f9ff98f87ccd30bb50dcb18b4b.sol",
+  "iter": 99,
+  "time": "303.785132",
+  "errMsg": null,
+  "result": [
+    {
+      "no": "1",
+      "kind": "IO",
+      "line": 24,
+      "signatures": [
+        {
+          "contractName": "gray_varIsNotSafe",
+          "methodName": "refund",
+          "argTypes": [ "uint256" ]
+        }
+      ],
+      "exp": "(index + _length)",
+      "status": "unproven"
+    },
+    {
+      "no": "2",
+      "kind": "IO",
+      "line": 27,
+      "signatures": [
+        {
+          "contractName": "gray_varIsNotSafe",
+          "methodName": "refund",
+          "argTypes": [ "uint256" ]
+        }
+      ],
+      "exp": "(i + 1)",
+      "status": "proven"
+    },
+    {
+      "no": "3",
+      "kind": "IO",
+      "line": 36,
+      "signatures": [
+        {
+          "contractName": "gray_varIsNotSafe",
+          "methodName": "refund",
+          "argTypes": [ "uint256" ]
+        }
+      ],
+      "exp": "(index + _length)",
+      "status": "unproven"
+    },
+    {
+      "no": "4",
+      "kind": "ETH_LEAK",
+      "line": 28,
+      "signatures": [
+        {
+          "contractName": "gray_varIsNotSafe",
+          "methodName": "refund",
+          "argTypes": [ "uint256" ]
+        }
+      ],
+      "exp": "flag = user[i].send(balances[i]);",
+      "status": "unproven"
+    }
+  ]
+}

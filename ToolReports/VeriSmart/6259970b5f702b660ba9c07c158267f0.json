@@ -1,0 +1,233 @@
+{
+  "fileName": "Benchmarks/Study_SamplesSet/6259970b5f702b660ba9c07c158267f0.sol",
+  "baseName": "6259970b5f702b660ba9c07c158267f0.sol",
+  "iter": 44,
+  "time": "300.058228",
+  "errMsg": null,
+  "result": [
+    {
+      "no": "1",
+      "kind": "IO",
+      "line": 68,
+      "signatures": [
+        {
+          "contractName": "EBAYCrowdsale",
+          "methodName": "@fallback",
+          "argTypes": []
+        }
+      ],
+      "exp": "(msg.value * price)",
+      "status": "unproven"
+    },
+    {
+      "no": "2",
+      "kind": "IO",
+      "line": 71,
+      "signatures": [
+        {
+          "contractName": "EBAYCrowdsale",
+          "methodName": "@fallback",
+          "argTypes": []
+        }
+      ],
+      "exp": "(startDate + 172800)",
+      "status": "unproven"
+    },
+    {
+      "no": "3",
+      "kind": "IO",
+      "line": 72,
+      "signatures": [
+        {
+          "contractName": "EBAYCrowdsale",
+          "methodName": "@fallback",
+          "argTypes": []
+        }
+      ],
+      "exp": "(amount + (amount / 4))",
+      "status": "unproven"
+    },
+    {
+      "no": "4",
+      "kind": "IO",
+      "line": 76,
+      "signatures": [
+        {
+          "contractName": "EBAYCrowdsale",
+          "methodName": "@fallback",
+          "argTypes": []
+        }
+      ],
+      "exp": "(startDate + 172800)",
+      "status": "unproven"
+    },
+    {
+      "no": "5",
+      "kind": "IO",
+      "line": 76,
+      "signatures": [
+        {
+          "contractName": "EBAYCrowdsale",
+          "methodName": "@fallback",
+          "argTypes": []
+        }
+      ],
+      "exp": "(startDate + 777600)",
+      "status": "unproven"
+    },
+    {
+      "no": "6",
+      "kind": "IO",
+      "line": 78,
+      "signatures": [
+        {
+          "contractName": "EBAYCrowdsale",
+          "methodName": "@fallback",
+          "argTypes": []
+        }
+      ],
+      "exp": "(_amount * 3)",
+      "status": "unproven"
+    },
+    {
+      "no": "7",
+      "kind": "IO",
+      "line": 78,
+      "signatures": [
+        {
+          "contractName": "EBAYCrowdsale",
+          "methodName": "@fallback",
+          "argTypes": []
+        }
+      ],
+      "exp": "(amount + (_amount * 3))",
+      "status": "unproven"
+    },
+    {
+      "no": "8",
+      "kind": "IO",
+      "line": 82,
+      "signatures": [
+        {
+          "contractName": "EBAYCrowdsale",
+          "methodName": "@fallback",
+          "argTypes": []
+        }
+      ],
+      "exp": "(startDate + 1987200)",
+      "status": "unproven"
+    },
+    {
+      "no": "9",
+      "kind": "IO",
+      "line": 82,
+      "signatures": [
+        {
+          "contractName": "EBAYCrowdsale",
+          "methodName": "@fallback",
+          "argTypes": []
+        }
+      ],
+      "exp": "(startDate + 777600)",
+      "status": "unproven"
+    },
+    {
+      "no": "10",
+      "kind": "IO",
+      "line": 83,
+      "signatures": [
+        {
+          "contractName": "EBAYCrowdsale",
+          "methodName": "@fallback",
+          "argTypes": []
+        }
+      ],
+      "exp": "(amount + (amount / 10))",
+      "status": "unproven"
+    },
+    {
+      "no": "11",
+      "kind": "DZ",
+      "line": 72,
+      "signatures": [
+        {
+          "contractName": "EBAYCrowdsale",
+          "methodName": "@fallback",
+          "argTypes": []
+        }
+      ],
+      "exp": "(amount / 4)",
+      "status": "proven"
+    },
+    {
+      "no": "12",
+      "kind": "DZ",
+      "line": 77,
+      "signatures": [
+        {
+          "contractName": "EBAYCrowdsale",
+          "methodName": "@fallback",
+          "argTypes": []
+        }
+      ],
+      "exp": "(amount / 20)",
+      "status": "proven"
+    },
+    {
+      "no": "13",
+      "kind": "DZ",
+      "line": 83,
+      "signatures": [
+        {
+          "contractName": "EBAYCrowdsale",
+          "methodName": "@fallback",
+          "argTypes": []
+        }
+      ],
+      "exp": "(amount / 10)",
+      "status": "proven"
+    },
+    {
+      "no": "14",
+      "kind": "KA",
+      "line": 61,
+      "signatures": [
+        {
+          "contractName": "EBAYCrowdsale",
+          "methodName": "kill",
+          "argTypes": []
+        }
+      ],
+      "exp": "selfdestruct(owner);",
+      "status": "proven"
+    },
+    {
+      "no": "15",
+      "kind": "ETH_LEAK",
+      "line": 61,
+      "signatures": [
+        {
+          "contractName": "EBAYCrowdsale",
+          "methodName": "kill",
+          "argTypes": []
+        }
+      ],
+      "exp": "selfdestruct(owner);",
+      "status": "proven"
+    },
+    {
+      "no": "16",
+      "kind": "ETH_LEAK",
+      "line": 88,
+      "signatures": [
+        {
+          "contractName": "EBAYCrowdsale",
+          "methodName": "@fallback",
+          "argTypes": []
+        }
+      ],
+      "exp": "owner.transfer(msg.value);",
+      "status": "proven"
+    }
+  ]
+}

@@ -1,0 +1,767 @@
+{
+  "fileName": "Benchmarks/Study_SamplesSet/a3a7cfb4593ae9ba54c03ba0f52dee06.sol",
+  "baseName": "a3a7cfb4593ae9ba54c03ba0f52dee06.sol",
+  "iter": 75,
+  "time": "302.87076",
+  "errMsg": null,
+  "result": [
+    {
+      "no": "1",
+      "kind": "IO",
+      "line": 130,
+      "signatures": [
+        {
+          "contractName": "SKYBITToken",
+          "methodName": "SKYBITToken",
+          "argTypes": [ "uint256", "address[]" ]
+        },
+        {
+          "contractName": "SKYBITToken",
+          "methodName": "_move",
+          "argTypes": [
+            "address", "address", "address", "uint256", "dbytes", "dbytes"
+          ]
+        },
+        {
+          "contractName": "SKYBITToken",
+          "methodName": "mint",
+          "argTypes": [ "address", "address", "uint256", "dbytes", "dbytes" ]
+        },
+        {
+          "contractName": "SKYBITToken",
+          "methodName": "transfer",
+          "argTypes": [ "address", "uint256" ]
+        },
+        {
+          "contractName": "SKYBITToken",
+          "methodName": "transferFrom",
+          "argTypes": [ "address", "address", "uint256" ]
+        }
+      ],
+      "exp": "(a + b)",
+      "status": "unproven"
+    },
+    {
+      "no": "2",
+      "kind": "IO",
+      "line": 139,
+      "signatures": [
+        {
+          "contractName": "SKYBITToken",
+          "methodName": "_move",
+          "argTypes": [
+            "address", "address", "address", "uint256", "dbytes", "dbytes"
+          ]
+        },
+        {
+          "contractName": "SKYBITToken",
+          "methodName": "burn",
+          "argTypes": [ "uint256", "dbytes" ]
+        },
+        {
+          "contractName": "SKYBITToken",
+          "methodName": "operatorBurn",
+          "argTypes": [ "address", "uint256", "dbytes", "dbytes" ]
+        },
+        {
+          "contractName": "SKYBITToken",
+          "methodName": "transfer",
+          "argTypes": [ "address", "uint256" ]
+        },
+        {
+          "contractName": "SKYBITToken",
+          "methodName": "transferFrom",
+          "argTypes": [ "address", "address", "uint256" ]
+        }
+      ],
+      "exp": "(a - b)",
+      "status": "proven"
+    },
+    {
+      "no": "3",
+      "kind": "IO",
+      "line": 267,
+      "signatures": [
+        {
+          "contractName": "SKYBITToken",
+          "methodName": "SKYBITToken",
+          "argTypes": [ "uint256", "address[]" ]
+        }
+      ],
+      "exp": "(i + 1)",
+      "status": "proven"
+    },
+    {
+      "no": "4",
+      "kind": "IO",
+      "line": 289,
+      "signatures": [
+        {
+          "contractName": "SKYBITToken",
+          "methodName": "bug_unchk18",
+          "argTypes": []
+        }
+      ],
+      "exp": "(receivers_unchk18 + 1)",
+      "status": "proven"
+    },
+    {
+      "no": "5",
+      "kind": "IO",
+      "line": 310,
+      "signatures": [
+        {
+          "contractName": "SKYBITToken",
+          "methodName": "bug_unchk6",
+          "argTypes": []
+        }
+      ],
+      "exp": "(receivers_unchk6 + 1)",
+      "status": "proven"
+    },
+    {
+      "no": "6",
+      "kind": "IO",
+      "line": 527,
+      "signatures": [
+        {
+          "contractName": "SKYBITToken",
+          "methodName": "bug_unchk42",
+          "argTypes": []
+        }
+      ],
+      "exp": "(receivers_unchk42 + 1)",
+      "status": "proven"
+    },
+    {
+      "no": "7",
+      "kind": "IO",
+      "line": 875,
+      "signatures": [
+        {
+          "contractName": "SKYBITToken",
+          "methodName": "bug_unchk30",
+          "argTypes": []
+        }
+      ],
+      "exp": "(receivers_unchk30 + 1)",
+      "status": "proven"
+    },
+    {
+      "no": "8",
+      "kind": "ETH_LEAK",
+      "line": 288,
+      "signatures": [
+        {
+          "contractName": "SKYBITToken",
+          "methodName": "bug_unchk18",
+          "argTypes": []
+        }
+      ],
+      "exp": "addr_unchk18.send(42000000000000000000)",
+      "status": "proven"
+    },
+    {
+      "no": "9",
+      "kind": "ETH_LEAK",
+      "line": 300,
+      "signatures": [
+        {
+          "contractName": "SKYBITToken",
+          "methodName": "withdrawBal_unchk29",
+          "argTypes": []
+        }
+      ],
+      "exp": "msg.sender.send(Balances_unchk29);",
+      "status": "proven"
+    },
+    {
+      "no": "10",
+      "kind": "ETH_LEAK",
+      "line": 309,
+      "signatures": [
+        {
+          "contractName": "SKYBITToken",
+          "methodName": "bug_unchk6",
+          "argTypes": []
+        }
+      ],
+      "exp": "addr_unchk6.send(42000000000000000000)",
+      "status": "proven"
+    },
+    {
+      "no": "11",
+      "kind": "ETH_LEAK",
+      "line": 321,
+      "signatures": [
+        {
+          "contractName": "SKYBITToken",
+          "methodName": "UncheckedExternalCall_unchk16",
+          "argTypes": []
+        }
+      ],
+      "exp": "addr_unchk16.send(42000000000000000000)",
+      "status": "proven"
+    },
+    {
+      "no": "12",
+      "kind": "ETH_LEAK",
+      "line": 334,
+      "signatures": [
+        {
+          "contractName": "SKYBITToken",
+          "methodName": "my_func_uncheck24",
+          "argTypes": [ "address" ]
+        }
+      ],
+      "exp": "dst.call.value(msg.value)(\"\");",
+      "status": "proven"
+    },
+    {
+      "no": "13",
+      "kind": "ETH_LEAK",
+      "line": 343,
+      "signatures": [
+        {
+          "contractName": "SKYBITToken",
+          "methodName": "withdrawBal_unchk5",
+          "argTypes": []
+        }
+      ],
+      "exp": "msg.sender.send(Balances_unchk5);",
+      "status": "proven"
+    },
+    {
+      "no": "14",
+      "kind": "ETH_LEAK",
+      "line": 360,
+      "signatures": [
+        {
+          "contractName": "SKYBITToken",
+          "methodName": "bug_unchk15",
+          "argTypes": [ "address" ]
+        }
+      ],
+      "exp": "addr.send(42000000000000000000);",
+      "status": "unproven"
+    },
+    {
+      "no": "15",
+      "kind": "ETH_LEAK",
+      "line": 368,
+      "signatures": [
+        {
+          "contractName": "SKYBITToken",
+          "methodName": "UncheckedExternalCall_unchk28",
+          "argTypes": []
+        }
+      ],
+      "exp": "addr_unchk28.send(42000000000000000000)",
+      "status": "proven"
+    },
+    {
+      "no": "16",
+      "kind": "ETH_LEAK",
+      "line": 387,
+      "signatures": [
+        {
+          "contractName": "SKYBITToken",
+          "methodName": "cash_unchk34",
+          "argTypes": [ "uint256", "uint256", "address" ]
+        }
+      ],
+      "exp": "winner_unchk34.send(subpot_unchk34);",
+      "status": "unproven"
+    },
+    {
+      "no": "17",
+      "kind": "ETH_LEAK",
+      "line": 407,
+      "signatures": [
+        {
+          "contractName": "SKYBITToken",
+          "methodName": "withdrawLeftOver_unchk21",
+          "argTypes": []
+        }
+      ],
+      "exp": "msg.sender.send(address(this).balance);",
+      "status": "unproven"
+    },
+    {
+      "no": "18",
+      "kind": "ETH_LEAK",
+      "line": 424,
+      "signatures": [
+        {
+          "contractName": "SKYBITToken",
+          "methodName": "cash_unchk10",
+          "argTypes": [ "uint256", "uint256", "address" ]
+        }
+      ],
+      "exp": "winner_unchk10.send(subpot_unchk10);",
+      "status": "unproven"
+    },
+    {
+      "no": "19",
+      "kind": "ETH_LEAK",
+      "line": 433,
+      "signatures": [
+        {
+          "contractName": "SKYBITToken",
+          "methodName": "my_func_unchk47",
+          "argTypes": [ "address" ]
+        }
+      ],
+      "exp": "dst.send(msg.value);",
+      "status": "proven"
+    },
+    {
+      "no": "20",
+      "kind": "ETH_LEAK",
+      "line": 451,
+      "signatures": [
+        {
+          "contractName": "SKYBITToken",
+          "methodName": "cash_unchk22",
+          "argTypes": [ "uint256", "uint256", "address" ]
+        }
+      ],
+      "exp": "winner_unchk22.send(subpot_unchk22);",
+      "status": "unproven"
+    },
+    {
+      "no": "21",
+      "kind": "ETH_LEAK",
+      "line": 461,
+      "signatures": [
+        {
+          "contractName": "SKYBITToken",
+          "methodName": "my_func_uncheck12",
+          "argTypes": [ "address" ]
+        }
+      ],
+      "exp": "dst.call.value(msg.value)(\"\");",
+      "status": "proven"
+    },
+    {
+      "no": "22",
+      "kind": "ETH_LEAK",
+      "line": 469,
+      "signatures": [
+        {
+          "contractName": "SKYBITToken",
+          "methodName": "my_func_unchk11",
+          "argTypes": [ "address" ]
+        }
+      ],
+      "exp": "dst.send(msg.value);",
+      "status": "proven"
+    },
+    {
+      "no": "23",
+      "kind": "ETH_LEAK",
+      "line": 500,
+      "signatures": [
+        {
+          "contractName": "SKYBITToken",
+          "methodName": "withdrawBal_unchk41",
+          "argTypes": []
+        }
+      ],
+      "exp": "msg.sender.send(Balances_unchk41);",
+      "status": "proven"
+    },
+    {
+      "no": "24",
+      "kind": "ETH_LEAK",
+      "line": 526,
+      "signatures": [
+        {
+          "contractName": "SKYBITToken",
+          "methodName": "bug_unchk42",
+          "argTypes": []
+        }
+      ],
+      "exp": "addr_unchk42.send(42000000000000000000)",
+      "status": "proven"
+    },
+    {
+      "no": "25",
+      "kind": "ETH_LEAK",
+      "line": 554,
+      "signatures": [
+        {
+          "contractName": "SKYBITToken",
+          "methodName": "unhandledsend_unchk2",
+          "argTypes": [ "address" ]
+        }
+      ],
+      "exp": "callee.send(5000000000000000000);",
+      "status": "unproven"
+    },
+    {
+      "no": "26",
+      "kind": "ETH_LEAK",
+      "line": 580,
+      "signatures": [
+        {
+          "contractName": "SKYBITToken",
+          "methodName": "bug_unchk43",
+          "argTypes": []
+        }
+      ],
+      "exp": "addr_unchk43.send(10000000000000000000)",
+      "status": "proven"
+    },
+    {
+      "no": "27",
+      "kind": "ETH_LEAK",
+      "line": 601,
+      "signatures": [
+        {
+          "contractName": "SKYBITToken",
+          "methodName": "my_func_uncheck48",
+          "argTypes": [ "address" ]
+        }
+      ],
+      "exp": "dst.call.value(msg.value)(\"\");",
+      "status": "proven"
+    },
+    {
+      "no": "28",
+      "kind": "ETH_LEAK",
+      "line": 615,
+      "signatures": [
+        {
+          "contractName": "SKYBITToken",
+          "methodName": "withdrawBal_unchk17",
+          "argTypes": []
+        }
+      ],
+      "exp": "msg.sender.send(Balances_unchk17);",
+      "status": "proven"
+    },
+    {
+      "no": "29",
+      "kind": "ETH_LEAK",
+      "line": 657,
+      "signatures": [
+        {
+          "contractName": "SKYBITToken",
+          "methodName": "bug_unchk3",
+          "argTypes": [ "address" ]
+        }
+      ],
+      "exp": "addr.send(42000000000000000000);",
+      "status": "unproven"
+    },
+    {
+      "no": "30",
+      "kind": "ETH_LEAK",
+      "line": 689,
+      "signatures": [
+        {
+          "contractName": "SKYBITToken",
+          "methodName": "UncheckedExternalCall_unchk40",
+          "argTypes": []
+        }
+      ],
+      "exp": "addr_unchk40.send(2000000000000000000)",
+      "status": "proven"
+    },
+    {
+      "no": "31",
+      "kind": "ETH_LEAK",
+      "line": 701,
+      "signatures": [
+        {
+          "contractName": "SKYBITToken",
+          "methodName": "withdrawLeftOver_unchk33",
+          "argTypes": []
+        }
+      ],
+      "exp": "msg.sender.send(address(this).balance);",
+      "status": "unproven"
+    },
+    {
+      "no": "32",
+      "kind": "ETH_LEAK",
+      "line": 714,
+      "signatures": [
+        {
+          "contractName": "SKYBITToken",
+          "methodName": "withdrawLeftOver_unchk9",
+          "argTypes": []
+        }
+      ],
+      "exp": "msg.sender.send(address(this).balance);",
+      "status": "unproven"
+    },
+    {
+      "no": "33",
+      "kind": "ETH_LEAK",
+      "line": 734,
+      "signatures": [
+        {
+          "contractName": "SKYBITToken",
+          "methodName": "bug_unchk19",
+          "argTypes": []
+        }
+      ],
+      "exp": "addr_unchk19.send(10000000000000000000)",
+      "status": "proven"
+    },
+    {
+      "no": "34",
+      "kind": "ETH_LEAK",
+      "line": 742,
+      "signatures": [
+        {
+          "contractName": "SKYBITToken",
+          "methodName": "unhandledsend_unchk26",
+          "argTypes": [ "address" ]
+        }
+      ],
+      "exp": "callee.send(5000000000000000000);",
+      "status": "unproven"
+    },
+    {
+      "no": "35",
+      "kind": "ETH_LEAK",
+      "line": 755,
+      "signatures": [
+        {
+          "contractName": "SKYBITToken",
+          "methodName": "sendToWinner_unchk20",
+          "argTypes": []
+        }
+      ],
+      "exp": "winner_unchk20.send(winAmount_unchk20);",
+      "status": "proven"
+    },
+    {
+      "no": "36",
+      "kind": "ETH_LEAK",
+      "line": 769,
+      "signatures": [
+        {
+          "contractName": "SKYBITToken",
+          "methodName": "sendToWinner_unchk32",
+          "argTypes": []
+        }
+      ],
+      "exp": "winner_unchk32.send(winAmount_unchk32);",
+      "status": "proven"
+    },
+    {
+      "no": "37",
+      "kind": "ETH_LEAK",
+      "line": 778,
+      "signatures": [
+        {
+          "contractName": "SKYBITToken",
+          "methodName": "bug_unchk27",
+          "argTypes": [ "address" ]
+        }
+      ],
+      "exp": "addr.send(42000000000000000000);",
+      "status": "unproven"
+    },
+    {
+      "no": "38",
+      "kind": "ETH_LEAK",
+      "line": 782,
+      "signatures": [
+        {
+          "contractName": "SKYBITToken",
+          "methodName": "bug_unchk31",
+          "argTypes": []
+        }
+      ],
+      "exp": "addr_unchk31.send(10000000000000000000)",
+      "status": "proven"
+    },
+    {
+      "no": "39",
+      "kind": "ETH_LEAK",
+      "line": 793,
+      "signatures": [
+        {
+          "contractName": "SKYBITToken",
+          "methodName": "unhandledsend_unchk38",
+          "argTypes": [ "address" ]
+        }
+      ],
+      "exp": "callee.send(5000000000000000000);",
+      "status": "unproven"
+    },
+    {
+      "no": "40",
+      "kind": "ETH_LEAK",
+      "line": 806,
+      "signatures": [
+        {
+          "contractName": "SKYBITToken",
+          "methodName": "cash_unchk46",
+          "argTypes": [ "uint256", "uint256", "address" ]
+        }
+      ],
+      "exp": "winner_unchk46.send(subpot_unchk46);",
+      "status": "unproven"
+    },
+    {
+      "no": "41",
+      "kind": "ETH_LEAK",
+      "line": 815,
+      "signatures": [
+        {
+          "contractName": "SKYBITToken",
+          "methodName": "UncheckedExternalCall_unchk4",
+          "argTypes": []
+        }
+      ],
+      "exp": "addr_unchk4.send(42000000000000000000)",
+      "status": "proven"
+    },
+    {
+      "no": "42",
+      "kind": "ETH_LEAK",
+      "line": 828,
+      "signatures": [
+        {
+          "contractName": "SKYBITToken",
+          "methodName": "bug_unchk7",
+          "argTypes": []
+        }
+      ],
+      "exp": "addr_unchk7.send(10000000000000000000)",
+      "status": "proven"
+    },
+    {
+      "no": "43",
+      "kind": "ETH_LEAK",
+      "line": 837,
+      "signatures": [
+        {
+          "contractName": "SKYBITToken",
+          "methodName": "my_func_unchk23",
+          "argTypes": [ "address" ]
+        }
+      ],
+      "exp": "dst.send(msg.value);",
+      "status": "proven"
+    },
+    {
+      "no": "44",
+      "kind": "ETH_LEAK",
+      "line": 845,
+      "signatures": [
+        {
+          "contractName": "SKYBITToken",
+          "methodName": "unhandledsend_unchk14",
+          "argTypes": [ "address" ]
+        }
+      ],
+      "exp": "callee.send(5000000000000000000);",
+      "status": "unproven"
+    },
+    {
+      "no": "45",
+      "kind": "ETH_LEAK",
+      "line": 855,
+      "signatures": [
+        {
+          "contractName": "SKYBITToken",
+          "methodName": "withdrawLeftOver_unchk45",
+          "argTypes": []
+        }
+      ],
+      "exp": "msg.sender.send(address(this).balance);",
+      "status": "unproven"
+    },
+    {
+      "no": "46",
+      "kind": "ETH_LEAK",
+      "line": 874,
+      "signatures": [
+        {
+          "contractName": "SKYBITToken",
+          "methodName": "bug_unchk30",
+          "argTypes": []
+        }
+      ],
+      "exp": "addr_unchk30.send(42000000000000000000)",
+      "status": "proven"
+    },
+    {
+      "no": "47",
+      "kind": "ETH_LEAK",
+      "line": 890,
+      "signatures": [
+        {
+          "contractName": "SKYBITToken",
+          "methodName": "sendToWinner_unchk8",
+          "argTypes": []
+        }
+      ],
+      "exp": "winner_unchk8.send(winAmount_unchk8);",
+      "status": "proven"
+    },
+    {
+      "no": "48",
+      "kind": "ETH_LEAK",
+      "line": 912,
+      "signatures": [
+        {
+          "contractName": "SKYBITToken",
+          "methodName": "bug_unchk39",
+          "argTypes": [ "address" ]
+        }
+      ],
+      "exp": "addr.send(4000000000000000000);",
+      "status": "unproven"
+    },
+    {
+      "no": "49",
+      "kind": "ETH_LEAK",
+      "line": 920,
+      "signatures": [
+        {
+          "contractName": "SKYBITToken",
+          "methodName": "my_func_uncheck36",
+          "argTypes": [ "address" ]
+        }
+      ],
+      "exp": "dst.call.value(msg.value)(\"\");",
+      "status": "proven"
+    },
+    {
+      "no": "50",
+      "kind": "ETH_LEAK",
+      "line": 935,
+      "signatures": [
+        {
+          "contractName": "SKYBITToken",
+          "methodName": "my_func_unchk35",
+          "argTypes": [ "address" ]
+        }
+      ],
+      "exp": "dst.send(msg.value);",
+      "status": "proven"
+    },
+    {
+      "no": "51",
+      "kind": "ETH_LEAK",
+      "line": 948,
+      "signatures": [
+        {
+          "contractName": "SKYBITToken",
+          "methodName": "sendToWinner_unchk44",
+          "argTypes": []
+        }
+      ],
+      "exp": "winner_unchk44.send(winAmount_unchk44);",
+      "status": "proven"
+    }
+  ]
+}

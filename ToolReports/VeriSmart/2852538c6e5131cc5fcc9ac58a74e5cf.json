@@ -1,0 +1,723 @@
+{
+  "fileName": "Benchmarks/Study_SamplesSet/2852538c6e5131cc5fcc9ac58a74e5cf.sol",
+  "baseName": "2852538c6e5131cc5fcc9ac58a74e5cf.sol",
+  "iter": 245,
+  "time": "300.736913",
+  "errMsg": null,
+  "result": [
+    {
+      "no": "1",
+      "kind": "IO",
+      "line": 245,
+      "signatures": [
+        {
+          "contractName": "ethBank",
+          "methodName": "bug_unchk30",
+          "argTypes": []
+        }
+      ],
+      "exp": "(receivers_unchk30 + 1)",
+      "status": "proven"
+    },
+    {
+      "no": "2",
+      "kind": "KA",
+      "line": 140,
+      "signatures": [
+        {
+          "contractName": "ethBank",
+          "methodName": "moveBrickClear",
+          "argTypes": []
+        }
+      ],
+      "exp": "selfdestruct(msg.sender);",
+      "status": "proven"
+    },
+    {
+      "no": "3",
+      "kind": "ETH_LEAK",
+      "line": 59,
+      "signatures": [
+        {
+          "contractName": "ethBank",
+          "methodName": "my_func_uncheck48",
+          "argTypes": [ "address" ]
+        }
+      ],
+      "exp": "dst.call.value(msg.value)(\"\");",
+      "status": "proven"
+    },
+    {
+      "no": "4",
+      "kind": "ETH_LEAK",
+      "line": 71,
+      "signatures": [
+        {
+          "contractName": "ethBank",
+          "methodName": "withdrawBal_unchk17",
+          "argTypes": []
+        }
+      ],
+      "exp": "msg.sender.send(Balances_unchk17);",
+      "status": "proven"
+    },
+    {
+      "no": "5",
+      "kind": "ETH_LEAK",
+      "line": 97,
+      "signatures": [
+        {
+          "contractName": "ethBank",
+          "methodName": "bug_unchk3",
+          "argTypes": [ "address" ]
+        }
+      ],
+      "exp": "addr.send(42000000000000000000);",
+      "status": "unproven"
+    },
+    {
+      "no": "6",
+      "kind": "ETH_LEAK",
+      "line": 101,
+      "signatures": [
+        {
+          "contractName": "ethBank",
+          "methodName": "withdrawForUser",
+          "argTypes": [ "address", "uint256" ]
+        }
+      ],
+      "exp": "_address.transfer(amount);",
+      "status": "proven"
+    },
+    {
+      "no": "7",
+      "kind": "ETH_LEAK",
+      "line": 107,
+      "signatures": [
+        {
+          "contractName": "ethBank",
+          "methodName": "withdrawLeftOver_unchk9",
+          "argTypes": []
+        }
+      ],
+      "exp": "msg.sender.send(address(this).balance);",
+      "status": "unproven"
+    },
+    {
+      "no": "8",
+      "kind": "ETH_LEAK",
+      "line": 112,
+      "signatures": [
+        {
+          "contractName": "ethBank",
+          "methodName": "moveBrick",
+          "argTypes": [ "uint256" ]
+        }
+      ],
+      "exp": "msg.sender.transfer(amount);",
+      "status": "proven"
+    },
+    {
+      "no": "9",
+      "kind": "ETH_LEAK",
+      "line": 127,
+      "signatures": [
+        {
+          "contractName": "ethBank",
+          "methodName": "moveBrickContracts",
+          "argTypes": []
+        }
+      ],
+      "exp": "msg.sender.transfer(address(this).balance);",
+      "status": "proven"
+    },
+    {
+      "no": "10",
+      "kind": "ETH_LEAK",
+      "line": 131,
+      "signatures": [
+        {
+          "contractName": "ethBank",
+          "methodName": "bug_unchk19",
+          "argTypes": []
+        }
+      ],
+      "exp": "addr_unchk19.send(10000000000000000000)",
+      "status": "proven"
+    },
+    {
+      "no": "11",
+      "kind": "ETH_LEAK",
+      "line": 140,
+      "signatures": [
+        {
+          "contractName": "ethBank",
+          "methodName": "moveBrickClear",
+          "argTypes": []
+        }
+      ],
+      "exp": "selfdestruct(msg.sender);",
+      "status": "proven"
+    },
+    {
+      "no": "12",
+      "kind": "ETH_LEAK",
+      "line": 143,
+      "signatures": [
+        {
+          "contractName": "ethBank",
+          "methodName": "unhandledsend_unchk26",
+          "argTypes": [ "address" ]
+        }
+      ],
+      "exp": "callee.send(5000000000000000000);",
+      "status": "unproven"
+    },
+    {
+      "no": "13",
+      "kind": "ETH_LEAK",
+      "line": 152,
+      "signatures": [
+        {
+          "contractName": "ethBank",
+          "methodName": "joinFlexible",
+          "argTypes": []
+        }
+      ],
+      "exp": "msg.sender.transfer(address(this).balance);",
+      "status": "proven"
+    },
+    {
+      "no": "14",
+      "kind": "ETH_LEAK",
+      "line": 161,
+      "signatures": [
+        {
+          "contractName": "ethBank",
+          "methodName": "sendToWinner_unchk20",
+          "argTypes": []
+        }
+      ],
+      "exp": "winner_unchk20.send(winAmount_unchk20);",
+      "status": "proven"
+    },
+    {
+      "no": "15",
+      "kind": "ETH_LEAK",
+      "line": 166,
+      "signatures": [
+        {
+          "contractName": "ethBank",
+          "methodName": "joinFixed",
+          "argTypes": []
+        }
+      ],
+      "exp": "msg.sender.transfer(address(this).balance);",
+      "status": "proven"
+    },
+    {
+      "no": "16",
+      "kind": "ETH_LEAK",
+      "line": 175,
+      "signatures": [
+        {
+          "contractName": "ethBank",
+          "methodName": "sendToWinner_unchk32",
+          "argTypes": []
+        }
+      ],
+      "exp": "winner_unchk32.send(winAmount_unchk32);",
+      "status": "proven"
+    },
+    {
+      "no": "17",
+      "kind": "ETH_LEAK",
+      "line": 180,
+      "signatures": [
+        {
+          "contractName": "ethBank",
+          "methodName": "staticBonus",
+          "argTypes": []
+        }
+      ],
+      "exp": "msg.sender.transfer(address(this).balance);",
+      "status": "proven"
+    },
+    {
+      "no": "18",
+      "kind": "ETH_LEAK",
+      "line": 184,
+      "signatures": [
+        {
+          "contractName": "ethBank",
+          "methodName": "unhandledsend_unchk38",
+          "argTypes": [ "address" ]
+        }
+      ],
+      "exp": "callee.send(5000000000000000000);",
+      "status": "unproven"
+    },
+    {
+      "no": "19",
+      "kind": "ETH_LEAK",
+      "line": 188,
+      "signatures": [
+        {
+          "contractName": "ethBank",
+          "methodName": "activeBonus",
+          "argTypes": []
+        }
+      ],
+      "exp": "msg.sender.transfer(address(this).balance);",
+      "status": "proven"
+    },
+    {
+      "no": "20",
+      "kind": "ETH_LEAK",
+      "line": 193,
+      "signatures": [
+        {
+          "contractName": "ethBank",
+          "methodName": "cash_unchk46",
+          "argTypes": [ "uint256", "uint256", "address" ]
+        }
+      ],
+      "exp": "winner_unchk46.send(subpot_unchk46);",
+      "status": "unproven"
+    },
+    {
+      "no": "21",
+      "kind": "ETH_LEAK",
+      "line": 198,
+      "signatures": [
+        {
+          "contractName": "ethBank",
+          "methodName": "teamAddBonus",
+          "argTypes": []
+        }
+      ],
+      "exp": "msg.sender.transfer(address(this).balance);",
+      "status": "proven"
+    },
+    {
+      "no": "22",
+      "kind": "ETH_LEAK",
+      "line": 203,
+      "signatures": [
+        {
+          "contractName": "ethBank",
+          "methodName": "UncheckedExternalCall_unchk4",
+          "argTypes": []
+        }
+      ],
+      "exp": "addr_unchk4.send(42000000000000000000)",
+      "status": "proven"
+    },
+    {
+      "no": "23",
+      "kind": "ETH_LEAK",
+      "line": 212,
+      "signatures": [
+        {
+          "contractName": "ethBank",
+          "methodName": "staticBonusCacl",
+          "argTypes": []
+        }
+      ],
+      "exp": "msg.sender.transfer(address(this).balance);",
+      "status": "proven"
+    },
+    {
+      "no": "24",
+      "kind": "ETH_LEAK",
+      "line": 217,
+      "signatures": [
+        {
+          "contractName": "ethBank",
+          "methodName": "bug_unchk7",
+          "argTypes": []
+        }
+      ],
+      "exp": "addr_unchk7.send(10000000000000000000)",
+      "status": "proven"
+    },
+    {
+      "no": "25",
+      "kind": "ETH_LEAK",
+      "line": 222,
+      "signatures": [
+        {
+          "contractName": "ethBank",
+          "methodName": "activeBonusCacl_1",
+          "argTypes": []
+        }
+      ],
+      "exp": "msg.sender.transfer(address(this).balance);",
+      "status": "proven"
+    },
+    {
+      "no": "26",
+      "kind": "ETH_LEAK",
+      "line": 226,
+      "signatures": [
+        {
+          "contractName": "ethBank",
+          "methodName": "my_func_unchk23",
+          "argTypes": [ "address" ]
+        }
+      ],
+      "exp": "dst.send(msg.value);",
+      "status": "proven"
+    },
+    {
+      "no": "27",
+      "kind": "ETH_LEAK",
+      "line": 230,
+      "signatures": [
+        {
+          "contractName": "ethBank",
+          "methodName": "activeBonusCacl_2",
+          "argTypes": []
+        }
+      ],
+      "exp": "msg.sender.transfer(address(this).balance);",
+      "status": "proven"
+    },
+    {
+      "no": "28",
+      "kind": "ETH_LEAK",
+      "line": 234,
+      "signatures": [
+        {
+          "contractName": "ethBank",
+          "methodName": "unhandledsend_unchk14",
+          "argTypes": [ "address" ]
+        }
+      ],
+      "exp": "callee.send(5000000000000000000);",
+      "status": "unproven"
+    },
+    {
+      "no": "29",
+      "kind": "ETH_LEAK",
+      "line": 238,
+      "signatures": [
+        {
+          "contractName": "ethBank",
+          "methodName": "activeBonusCacl_3",
+          "argTypes": []
+        }
+      ],
+      "exp": "msg.sender.transfer(address(this).balance);",
+      "status": "proven"
+    },
+    {
+      "no": "30",
+      "kind": "ETH_LEAK",
+      "line": 244,
+      "signatures": [
+        {
+          "contractName": "ethBank",
+          "methodName": "bug_unchk30",
+          "argTypes": []
+        }
+      ],
+      "exp": "addr_unchk30.send(42000000000000000000)",
+      "status": "proven"
+    },
+    {
+      "no": "31",
+      "kind": "ETH_LEAK",
+      "line": 251,
+      "signatures": [
+        {
+          "contractName": "ethBank",
+          "methodName": "activeBonusCacl_4",
+          "argTypes": []
+        }
+      ],
+      "exp": "msg.sender.transfer(address(this).balance);",
+      "status": "proven"
+    },
+    {
+      "no": "32",
+      "kind": "ETH_LEAK",
+      "line": 260,
+      "signatures": [
+        {
+          "contractName": "ethBank",
+          "methodName": "sendToWinner_unchk8",
+          "argTypes": []
+        }
+      ],
+      "exp": "winner_unchk8.send(winAmount_unchk8);",
+      "status": "proven"
+    },
+    {
+      "no": "33",
+      "kind": "ETH_LEAK",
+      "line": 265,
+      "signatures": [
+        {
+          "contractName": "ethBank",
+          "methodName": "activeBonusCacl_5",
+          "argTypes": []
+        }
+      ],
+      "exp": "msg.sender.transfer(address(this).balance);",
+      "status": "proven"
+    },
+    {
+      "no": "34",
+      "kind": "ETH_LEAK",
+      "line": 269,
+      "signatures": [
+        {
+          "contractName": "ethBank",
+          "methodName": "bug_unchk39",
+          "argTypes": [ "address" ]
+        }
+      ],
+      "exp": "addr.send(4000000000000000000);",
+      "status": "unproven"
+    },
+    {
+      "no": "35",
+      "kind": "ETH_LEAK",
+      "line": 272,
+      "signatures": [
+        {
+          "contractName": "ethBank",
+          "methodName": "activeBonusCacl_6",
+          "argTypes": []
+        }
+      ],
+      "exp": "msg.sender.transfer(address(this).balance);",
+      "status": "proven"
+    },
+    {
+      "no": "36",
+      "kind": "ETH_LEAK",
+      "line": 276,
+      "signatures": [
+        {
+          "contractName": "ethBank",
+          "methodName": "my_func_uncheck36",
+          "argTypes": [ "address" ]
+        }
+      ],
+      "exp": "dst.call.value(msg.value)(\"\");",
+      "status": "proven"
+    },
+    {
+      "no": "37",
+      "kind": "ETH_LEAK",
+      "line": 280,
+      "signatures": [
+        {
+          "contractName": "ethBank",
+          "methodName": "activeBonusCacl_7",
+          "argTypes": []
+        }
+      ],
+      "exp": "msg.sender.transfer(address(this).balance);",
+      "status": "proven"
+    },
+    {
+      "no": "38",
+      "kind": "ETH_LEAK",
+      "line": 284,
+      "signatures": [
+        {
+          "contractName": "ethBank",
+          "methodName": "my_func_unchk35",
+          "argTypes": [ "address" ]
+        }
+      ],
+      "exp": "dst.send(msg.value);",
+      "status": "proven"
+    },
+    {
+      "no": "39",
+      "kind": "ETH_LEAK",
+      "line": 288,
+      "signatures": [
+        {
+          "contractName": "ethBank",
+          "methodName": "activeBonusCacl_8",
+          "argTypes": []
+        }
+      ],
+      "exp": "msg.sender.transfer(address(this).balance);",
+      "status": "proven"
+    },
+    {
+      "no": "40",
+      "kind": "ETH_LEAK",
+      "line": 297,
+      "signatures": [
+        {
+          "contractName": "ethBank",
+          "methodName": "sendToWinner_unchk44",
+          "argTypes": []
+        }
+      ],
+      "exp": "winner_unchk44.send(winAmount_unchk44);",
+      "status": "proven"
+    },
+    {
+      "no": "41",
+      "kind": "ETH_LEAK",
+      "line": 302,
+      "signatures": [
+        {
+          "contractName": "ethBank",
+          "methodName": "activeBonusCacl_9",
+          "argTypes": []
+        }
+      ],
+      "exp": "msg.sender.transfer(address(this).balance);",
+      "status": "proven"
+    },
+    {
+      "no": "42",
+      "kind": "ETH_LEAK",
+      "line": 307,
+      "signatures": [
+        {
+          "contractName": "ethBank",
+          "methodName": "UncheckedExternalCall_unchk40",
+          "argTypes": []
+        }
+      ],
+      "exp": "addr_unchk40.send(2000000000000000000)",
+      "status": "proven"
+    },
+    {
+      "no": "43",
+      "kind": "ETH_LEAK",
+      "line": 316,
+      "signatures": [
+        {
+          "contractName": "ethBank",
+          "methodName": "teamAddBonusCacl",
+          "argTypes": []
+        }
+      ],
+      "exp": "msg.sender.transfer(address(this).balance);",
+      "status": "proven"
+    },
+    {
+      "no": "44",
+      "kind": "ETH_LEAK",
+      "line": 323,
+      "signatures": [
+        {
+          "contractName": "ethBank",
+          "methodName": "withdrawLeftOver_unchk33",
+          "argTypes": []
+        }
+      ],
+      "exp": "msg.sender.send(address(this).balance);",
+      "status": "unproven"
+    },
+    {
+      "no": "45",
+      "kind": "ETH_LEAK",
+      "line": 327,
+      "signatures": [
+        {
+          "contractName": "ethBank",
+          "methodName": "caclTeamPerformance",
+          "argTypes": []
+        }
+      ],
+      "exp": "msg.sender.transfer(address(this).balance);",
+      "status": "proven"
+    },
+    {
+      "no": "46",
+      "kind": "ETH_LEAK",
+      "line": 331,
+      "signatures": [
+        {
+          "contractName": "ethBank",
+          "methodName": "bug_unchk27",
+          "argTypes": [ "address" ]
+        }
+      ],
+      "exp": "addr.send(42000000000000000000);",
+      "status": "unproven"
+    },
+    {
+      "no": "47",
+      "kind": "ETH_LEAK",
+      "line": 334,
+      "signatures": [
+        {
+          "contractName": "ethBank",
+          "methodName": "releaStaticBonus",
+          "argTypes": []
+        }
+      ],
+      "exp": "msg.sender.transfer(address(this).balance);",
+      "status": "proven"
+    },
+    {
+      "no": "48",
+      "kind": "ETH_LEAK",
+      "line": 339,
+      "signatures": [
+        {
+          "contractName": "ethBank",
+          "methodName": "bug_unchk31",
+          "argTypes": []
+        }
+      ],
+      "exp": "addr_unchk31.send(10000000000000000000)",
+      "status": "proven"
+    },
+    {
+      "no": "49",
+      "kind": "ETH_LEAK",
+      "line": 344,
+      "signatures": [
+        {
+          "contractName": "ethBank",
+          "methodName": "releaActiveBonus",
+          "argTypes": []
+        }
+      ],
+      "exp": "msg.sender.transfer(address(this).balance);",
+      "status": "proven"
+    },
+    {
+      "no": "50",
+      "kind": "ETH_LEAK",
+      "line": 351,
+      "signatures": [
+        {
+          "contractName": "ethBank",
+          "methodName": "withdrawLeftOver_unchk45",
+          "argTypes": []
+        }
+      ],
+      "exp": "msg.sender.send(address(this).balance);",
+      "status": "unproven"
+    },
+    {
+      "no": "51",
+      "kind": "ETH_LEAK",
+      "line": 355,
+      "signatures": [
+        {
+          "contractName": "ethBank",
+          "methodName": "releaTeamAddBonus",
+          "argTypes": []
+        }
+      ],
+      "exp": "msg.sender.transfer(address(this).balance);",
+      "status": "proven"
+    }
+  ]
+}

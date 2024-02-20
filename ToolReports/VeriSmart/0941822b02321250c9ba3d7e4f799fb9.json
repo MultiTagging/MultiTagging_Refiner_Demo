@@ -1,0 +1,255 @@
+{
+  "fileName": "Benchmarks/Study_SamplesSet/0941822b02321250c9ba3d7e4f799fb9.sol",
+  "baseName": "0941822b02321250c9ba3d7e4f799fb9.sol",
+  "iter": 261,
+  "time": "300.382161",
+  "errMsg": null,
+  "result": [
+    {
+      "no": "1",
+      "kind": "IO",
+      "line": 5,
+      "signatures": [
+        {
+          "contractName": "UCashBank",
+          "methodName": "@fallback",
+          "argTypes": []
+        },
+        {
+          "contractName": "UCashBank",
+          "methodName": "getTokens",
+          "argTypes": []
+        }
+      ],
+      "exp": "(a * b)",
+      "status": "unproven"
+    },
+    {
+      "no": "2",
+      "kind": "IO",
+      "line": 17,
+      "signatures": [
+        {
+          "contractName": "UCashBank",
+          "methodName": "UCashBank",
+          "argTypes": []
+        },
+        {
+          "contractName": "UCashBank",
+          "methodName": "burn",
+          "argTypes": [ "uint256" ]
+        },
+        {
+          "contractName": "UCashBank",
+          "methodName": "distr",
+          "argTypes": [ "address", "uint256" ]
+        },
+        {
+          "contractName": "UCashBank",
+          "methodName": "transfer",
+          "argTypes": [ "address", "uint256" ]
+        },
+        {
+          "contractName": "UCashBank",
+          "methodName": "transferFrom",
+          "argTypes": [ "address", "address", "uint256" ]
+        }
+      ],
+      "exp": "(a - b)",
+      "status": "proven"
+    },
+    {
+      "no": "3",
+      "kind": "IO",
+      "line": 21,
+      "signatures": [
+        {
+          "contractName": "UCashBank",
+          "methodName": "distr",
+          "argTypes": [ "address", "uint256" ]
+        },
+        {
+          "contractName": "UCashBank",
+          "methodName": "transfer",
+          "argTypes": [ "address", "uint256" ]
+        },
+        {
+          "contractName": "UCashBank",
+          "methodName": "transferFrom",
+          "argTypes": [ "address", "address", "uint256" ]
+        }
+      ],
+      "exp": "(a + b)",
+      "status": "unproven"
+    },
+    {
+      "no": "4",
+      "kind": "IO",
+      "line": 110,
+      "signatures": [
+        {
+          "contractName": "UCashBank",
+          "methodName": "enableWhitelist",
+          "argTypes": [ "address[]" ]
+        }
+      ],
+      "exp": "(i + 1)",
+      "status": "proven"
+    },
+    {
+      "no": "5",
+      "kind": "IO",
+      "line": 116,
+      "signatures": [
+        {
+          "contractName": "UCashBank",
+          "methodName": "disableWhitelist",
+          "argTypes": [ "address[]" ]
+        }
+      ],
+      "exp": "(i + 1)",
+      "status": "proven"
+    },
+    {
+      "no": "6",
+      "kind": "IO",
+      "line": 145,
+      "signatures": [
+        {
+          "contractName": "UCashBank",
+          "methodName": "airdrop",
+          "argTypes": [ "address[]" ]
+        }
+      ],
+      "exp": "(i + 1)",
+      "status": "proven"
+    },
+    {
+      "no": "7",
+      "kind": "IO",
+      "line": 160,
+      "signatures": [
+        {
+          "contractName": "UCashBank",
+          "methodName": "distribution",
+          "argTypes": [ "address[]", "uint256" ]
+        }
+      ],
+      "exp": "(i + 1)",
+      "status": "proven"
+    },
+    {
+      "no": "8",
+      "kind": "IO",
+      "line": 175,
+      "signatures": [
+        {
+          "contractName": "UCashBank",
+          "methodName": "distributeAmounts",
+          "argTypes": [ "address[]", "uint256[]" ]
+        }
+      ],
+      "exp": "(i + 1)",
+      "status": "unproven"
+    },
+    {
+      "no": "9",
+      "kind": "IO",
+      "line": 219,
+      "signatures": [
+        {
+          "contractName": "UCashBank",
+          "methodName": "transfer",
+          "argTypes": [ "address", "uint256" ]
+        },
+        {
+          "contractName": "UCashBank",
+          "methodName": "transferFrom",
+          "argTypes": [ "address", "address", "uint256" ]
+        }
+      ],
+      "exp": "(size + 4)",
+      "status": "proven"
+    },
+    {
+      "no": "10",
+      "kind": "IO",
+      "line": 223,
+      "signatures": [
+        {
+          "contractName": "UCashBank",
+          "methodName": "transfer",
+          "argTypes": [ "address", "uint256" ]
+        }
+      ],
+      "exp": "(2 * 32)",
+      "status": "proven"
+    },
+    {
+      "no": "11",
+      "kind": "IO",
+      "line": 234,
+      "signatures": [
+        {
+          "contractName": "UCashBank",
+          "methodName": "transferFrom",
+          "argTypes": [ "address", "address", "uint256" ]
+        }
+      ],
+      "exp": "(3 * 32)",
+      "status": "proven"
+    },
+    {
+      "no": "12",
+      "kind": "DZ",
+      "line": 6,
+      "signatures": [
+        {
+          "contractName": "UCashBank",
+          "methodName": "@fallback",
+          "argTypes": []
+        },
+        {
+          "contractName": "UCashBank",
+          "methodName": "getTokens",
+          "argTypes": []
+        }
+      ],
+      "exp": "(c / a)",
+      "status": "unproven"
+    },
+    {
+      "no": "13",
+      "kind": "DZ",
+      "line": 11,
+      "signatures": [
+        {
+          "contractName": "UCashBank",
+          "methodName": "@fallback",
+          "argTypes": []
+        },
+        {
+          "contractName": "UCashBank",
+          "methodName": "getTokens",
+          "argTypes": []
+        }
+      ],
+      "exp": "(a / b)",
+      "status": "proven"
+    },
+    {
+      "no": "14",
+      "kind": "ETH_LEAK",
+      "line": 267,
+      "signatures": [
+        {
+          "contractName": "UCashBank",
+          "methodName": "withdraw",
+          "argTypes": []
+        }
+      ],
+      "exp": "owner.transfer(etherBalance);",
+      "status": "proven"
+    }
+  ]
+}

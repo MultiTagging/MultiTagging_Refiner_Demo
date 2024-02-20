@@ -1,0 +1,604 @@
+{
+  "fileName": "Benchmarks/Study_SamplesSet/0f455b192d1356519b25a44a5a8651c1.sol",
+  "baseName": "0f455b192d1356519b25a44a5a8651c1.sol",
+  "iter": 23,
+  "time": "303.579999",
+  "errMsg": null,
+  "result": [
+    {
+      "no": "1",
+      "kind": "IO",
+      "line": 37,
+      "signatures": [
+        {
+          "contractName": "Avalanche",
+          "methodName": "transfer",
+          "argTypes": [ "address", "uint256" ]
+        }
+      ],
+      "exp": "(balances[msg.sender] - _value)",
+      "status": "proven"
+    },
+    {
+      "no": "2",
+      "kind": "IO",
+      "line": 38,
+      "signatures": [
+        {
+          "contractName": "Avalanche",
+          "methodName": "transfer",
+          "argTypes": [ "address", "uint256" ]
+        }
+      ],
+      "exp": "(balances[_to] + _value)",
+      "status": "unproven"
+    },
+    {
+      "no": "3",
+      "kind": "IO",
+      "line": 42,
+      "signatures": [
+        {
+          "contractName": "Avalanche",
+          "methodName": "transfer",
+          "argTypes": [ "address", "uint256" ]
+        }
+      ],
+      "exp": "(gas + 1158)",
+      "status": "unproven"
+    },
+    {
+      "no": "4",
+      "kind": "IO",
+      "line": 58,
+      "signatures": [
+        {
+          "contractName": "Avalanche",
+          "methodName": "transferFrom",
+          "argTypes": [ "address", "address", "uint256" ]
+        }
+      ],
+      "exp": "(balances[_to] + _value)",
+      "status": "unproven"
+    },
+    {
+      "no": "5",
+      "kind": "IO",
+      "line": 59,
+      "signatures": [
+        {
+          "contractName": "Avalanche",
+          "methodName": "transferFrom",
+          "argTypes": [ "address", "address", "uint256" ]
+        }
+      ],
+      "exp": "(balances[_from] - _value)",
+      "status": "unproven"
+    },
+    {
+      "no": "6",
+      "kind": "IO",
+      "line": 60,
+      "signatures": [
+        {
+          "contractName": "Avalanche",
+          "methodName": "transferFrom",
+          "argTypes": [ "address", "address", "uint256" ]
+        }
+      ],
+      "exp": "(allowed[_from][msg.sender] - _value)",
+      "status": "proven"
+    },
+    {
+      "no": "7",
+      "kind": "IO",
+      "line": 100,
+      "signatures": [
+        {
+          "contractName": "Avalanche",
+          "methodName": "@fallback",
+          "argTypes": []
+        },
+        {
+          "contractName": "Avalanche",
+          "methodName": "leakEther",
+          "argTypes": []
+        },
+        {
+          "contractName": "Avalanche",
+          "methodName": "sendEther",
+          "argTypes": [ "address" ]
+        },
+        {
+          "contractName": "Avalanche",
+          "methodName": "transfer",
+          "argTypes": [ "address", "uint256" ]
+        },
+        {
+          "contractName": "Avalanche",
+          "methodName": "transferFrom",
+          "argTypes": [ "address", "address", "uint256" ]
+        }
+      ],
+      "exp": "(((gas - msg.gas) + 36120) * tx.gasprice)",
+      "status": "unproven"
+    },
+    {
+      "no": "8",
+      "kind": "IO",
+      "line": 100,
+      "signatures": [
+        {
+          "contractName": "Avalanche",
+          "methodName": "@fallback",
+          "argTypes": []
+        },
+        {
+          "contractName": "Avalanche",
+          "methodName": "leakEther",
+          "argTypes": []
+        },
+        {
+          "contractName": "Avalanche",
+          "methodName": "sendEther",
+          "argTypes": [ "address" ]
+        },
+        {
+          "contractName": "Avalanche",
+          "methodName": "transfer",
+          "argTypes": [ "address", "uint256" ]
+        },
+        {
+          "contractName": "Avalanche",
+          "methodName": "transferFrom",
+          "argTypes": [ "address", "address", "uint256" ]
+        }
+      ],
+      "exp": "((gas - msg.gas) + 36120)",
+      "status": "proven"
+    },
+    {
+      "no": "9",
+      "kind": "IO",
+      "line": 100,
+      "signatures": [
+        {
+          "contractName": "Avalanche",
+          "methodName": "@fallback",
+          "argTypes": []
+        },
+        {
+          "contractName": "Avalanche",
+          "methodName": "leakEther",
+          "argTypes": []
+        },
+        {
+          "contractName": "Avalanche",
+          "methodName": "sendEther",
+          "argTypes": [ "address" ]
+        },
+        {
+          "contractName": "Avalanche",
+          "methodName": "transfer",
+          "argTypes": [ "address", "uint256" ]
+        }
+      ],
+      "exp": "(gas - msg.gas)",
+      "status": "unproven"
+    },
+    {
+      "no": "10",
+      "kind": "IO",
+      "line": 109,
+      "signatures": [
+        {
+          "contractName": "Avalanche",
+          "methodName": "@fallback",
+          "argTypes": []
+        },
+        {
+          "contractName": "Avalanche",
+          "methodName": "leakEther",
+          "argTypes": []
+        },
+        {
+          "contractName": "Avalanche",
+          "methodName": "sendEther",
+          "argTypes": [ "address" ]
+        },
+        {
+          "contractName": "Avalanche",
+          "methodName": "transfer",
+          "argTypes": [ "address", "uint256" ]
+        },
+        {
+          "contractName": "Avalanche",
+          "methodName": "transferFrom",
+          "argTypes": [ "address", "address", "uint256" ]
+        }
+      ],
+      "exp": "(goo[msg.sender] - amount)",
+      "status": "proven"
+    },
+    {
+      "no": "11",
+      "kind": "IO",
+      "line": 129,
+      "signatures": [
+        {
+          "contractName": "Avalanche",
+          "methodName": "Avalanche",
+          "argTypes": []
+        }
+      ],
+      "exp": "(1000000 * oneavl)",
+      "status": "proven"
+    },
+    {
+      "no": "12",
+      "kind": "IO",
+      "line": 137,
+      "signatures": [
+        {
+          "contractName": "Avalanche",
+          "methodName": "Avalanche",
+          "argTypes": []
+        }
+      ],
+      "exp": "(10000 * oneavl)",
+      "status": "proven"
+    },
+    {
+      "no": "13",
+      "kind": "IO",
+      "line": 138,
+      "signatures": [
+        {
+          "contractName": "Avalanche",
+          "methodName": "Avalanche",
+          "argTypes": []
+        }
+      ],
+      "exp": "(10000 * oneavl)",
+      "status": "proven"
+    },
+    {
+      "no": "14",
+      "kind": "IO",
+      "line": 146,
+      "signatures": [
+        {
+          "contractName": "Avalanche",
+          "methodName": "@fallback",
+          "argTypes": []
+        }
+      ],
+      "exp": "(msg.value * oneavl)",
+      "status": "unproven"
+    },
+    {
+      "no": "15",
+      "kind": "IO",
+      "line": 148,
+      "signatures": [
+        {
+          "contractName": "Avalanche",
+          "methodName": "@fallback",
+          "argTypes": []
+        }
+      ],
+      "exp": "(incirculation + generateamount)",
+      "status": "unproven"
+    },
+    {
+      "no": "16",
+      "kind": "IO",
+      "line": 153,
+      "signatures": [
+        {
+          "contractName": "Avalanche",
+          "methodName": "@fallback",
+          "argTypes": []
+        }
+      ],
+      "exp": "(incirculation + generateamount)",
+      "status": "unproven"
+    },
+    {
+      "no": "17",
+      "kind": "IO",
+      "line": 154,
+      "signatures": [
+        {
+          "contractName": "Avalanche",
+          "methodName": "@fallback",
+          "argTypes": []
+        }
+      ],
+      "exp": "(balances[msg.sender] + generateamount)",
+      "status": "unproven"
+    },
+    {
+      "no": "18",
+      "kind": "IO",
+      "line": 155,
+      "signatures": [
+        {
+          "contractName": "Avalanche",
+          "methodName": "@fallback",
+          "argTypes": []
+        }
+      ],
+      "exp": "(goo[msg.sender] + msg.value)",
+      "status": "unproven"
+    },
+    {
+      "no": "19",
+      "kind": "IO",
+      "line": 168,
+      "signatures": [
+        {
+          "contractName": "Avalanche",
+          "methodName": "sendEther",
+          "argTypes": [ "address" ]
+        }
+      ],
+      "exp": "(gas + 1715)",
+      "status": "unproven"
+    },
+    {
+      "no": "20",
+      "kind": "IO",
+      "line": 177,
+      "signatures": [
+        {
+          "contractName": "Avalanche",
+          "methodName": "leakEther",
+          "argTypes": []
+        }
+      ],
+      "exp": "(now - lastleak[msg.sender])",
+      "status": "unproven"
+    },
+    {
+      "no": "21",
+      "kind": "IO",
+      "line": 197,
+      "signatures": [
+        {
+          "contractName": "Avalanche",
+          "methodName": "leakEther",
+          "argTypes": []
+        }
+      ],
+      "exp": "(goo[msg.sender] - amount)",
+      "status": "proven"
+    },
+    {
+      "no": "22",
+      "kind": "IO",
+      "line": 201,
+      "signatures": [
+        {
+          "contractName": "Avalanche",
+          "methodName": "leakEther",
+          "argTypes": []
+        }
+      ],
+      "exp": "(gas + 359)",
+      "status": "unproven"
+    },
+    {
+      "no": "23",
+      "kind": "IO",
+      "line": 214,
+      "signatures": [
+        {
+          "contractName": "Avalanche",
+          "methodName": "@fallback",
+          "argTypes": []
+        },
+        {
+          "contractName": "Avalanche",
+          "methodName": "getPrice",
+          "argTypes": [ "bytes1" ]
+        }
+      ],
+      "exp": "(pieceprice * (uint256(addrLevel) + 1))",
+      "status": "unproven"
+    },
+    {
+      "no": "24",
+      "kind": "IO",
+      "line": 214,
+      "signatures": [
+        {
+          "contractName": "Avalanche",
+          "methodName": "@fallback",
+          "argTypes": []
+        },
+        {
+          "contractName": "Avalanche",
+          "methodName": "getPrice",
+          "argTypes": [ "bytes1" ]
+        }
+      ],
+      "exp": "(uint256(addrLevel) + 1)",
+      "status": "proven"
+    },
+    {
+      "no": "25",
+      "kind": "IO",
+      "line": 226,
+      "signatures": [
+        {
+          "contractName": "Avalanche",
+          "methodName": "getAddressLevel",
+          "argTypes": []
+        }
+      ],
+      "exp": "(i + 1)",
+      "status": "proven"
+    },
+    {
+      "no": "26",
+      "kind": "IO",
+      "line": 228,
+      "signatures": [
+        {
+          "contractName": "Avalanche",
+          "methodName": "getAddressLevel",
+          "argTypes": []
+        }
+      ],
+      "exp": "(19 - i)",
+      "status": "proven"
+    },
+    {
+      "no": "27",
+      "kind": "IO",
+      "line": 228,
+      "signatures": [
+        {
+          "contractName": "Avalanche",
+          "methodName": "getAddressLevel",
+          "argTypes": []
+        }
+      ],
+      "exp": "(2 ** (8 * (19 - i)))",
+      "status": "unproven"
+    },
+    {
+      "no": "28",
+      "kind": "IO",
+      "line": 228,
+      "signatures": [
+        {
+          "contractName": "Avalanche",
+          "methodName": "getAddressLevel",
+          "argTypes": []
+        }
+      ],
+      "exp": "(8 * (19 - i))",
+      "status": "unproven"
+    },
+    {
+      "no": "29",
+      "kind": "DZ",
+      "line": 127,
+      "signatures": [
+        {
+          "contractName": "Avalanche",
+          "methodName": "Avalanche",
+          "argTypes": []
+        }
+      ],
+      "exp": "(1000000000000000000 / 256)",
+      "status": "proven"
+    },
+    {
+      "no": "30",
+      "kind": "DZ",
+      "line": 146,
+      "signatures": [
+        {
+          "contractName": "Avalanche",
+          "methodName": "@fallback",
+          "argTypes": []
+        }
+      ],
+      "exp": "((msg.value * oneavl) / generateprice)",
+      "status": "unproven"
+    },
+    {
+      "no": "31",
+      "kind": "DZ",
+      "line": 186,
+      "signatures": [
+        {
+          "contractName": "Avalanche",
+          "methodName": "leakEther",
+          "argTypes": []
+        }
+      ],
+      "exp": "(goo[msg.sender] / uint256(getAddressLevel()))",
+      "status": "unproven"
+    },
+    {
+      "no": "32",
+      "kind": "DZ",
+      "line": 228,
+      "signatures": [
+        {
+          "contractName": "Avalanche",
+          "methodName": "getAddressLevel",
+          "argTypes": []
+        }
+      ],
+      "exp": "(uint256(msg.sender) / (2 ** (8 * (19 - i))))",
+      "status": "unproven"
+    },
+    {
+      "no": "33",
+      "kind": "ETH_LEAK",
+      "line": 111,
+      "signatures": [
+        {
+          "contractName": "Avalanche",
+          "methodName": "@fallback",
+          "argTypes": []
+        },
+        {
+          "contractName": "Avalanche",
+          "methodName": "leakEther",
+          "argTypes": []
+        },
+        {
+          "contractName": "Avalanche",
+          "methodName": "sendEther",
+          "argTypes": [ "address" ]
+        },
+        {
+          "contractName": "Avalanche",
+          "methodName": "transfer",
+          "argTypes": [ "address", "uint256" ]
+        },
+        {
+          "contractName": "Avalanche",
+          "methodName": "transferFrom",
+          "argTypes": [ "address", "address", "uint256" ]
+        }
+      ],
+      "exp": "msg.sender.transfer(amount);",
+      "status": "unproven"
+    },
+    {
+      "no": "34",
+      "kind": "ETH_LEAK",
+      "line": 166,
+      "signatures": [
+        {
+          "contractName": "Avalanche",
+          "methodName": "sendEther",
+          "argTypes": [ "address" ]
+        }
+      ],
+      "exp": "x.transfer(msg.value);",
+      "status": "proven"
+    },
+    {
+      "no": "35",
+      "kind": "ETH_LEAK",
+      "line": 199,
+      "signatures": [
+        {
+          "contractName": "Avalanche",
+          "methodName": "leakEther",
+          "argTypes": []
+        }
+      ],
+      "exp": "msg.sender.transfer(amount);",
+      "status": "unproven"
+    }
+  ]
+}

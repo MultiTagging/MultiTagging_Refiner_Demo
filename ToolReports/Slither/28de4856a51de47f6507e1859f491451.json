@@ -1,0 +1,873 @@
+{
+  "success": true,
+  "error": null,
+  "results": {
+    "detectors": [
+      {
+        "elements": [
+          {
+            "type": "contract",
+            "name": "BullionExchangeToken",
+            "source_mapping": {
+              "start": 24,
+              "length": 1489,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            }
+          },
+          {
+            "type": "function",
+            "name": "transfer",
+            "source_mapping": {
+              "start": 1003,
+              "length": 284,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "BullionExchangeToken",
+                "source_mapping": {
+                  "start": 24,
+                  "length": 1489,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              },
+              "signature": "transfer(address,uint256)"
+            }
+          }
+        ],
+        "description": "BullionExchangeToken () has incorrect ERC20 function interface:BullionExchangeToken.transfer(address,uint256) ()\n",
+        "markdown": "[BullionExchangeToken]() has incorrect ERC20 function interface:[BullionExchangeToken.transfer(address,uint256)]()\n",
+        "first_markdown_element": "",
+        "id": "72792813ff14107e936b08b5e8fc34a2a0a1e4d7a17b763b17b53363b53196ef",
+        "check": "erc20-interface",
+        "impact": "Medium",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "BullionExchangeToken",
+            "source_mapping": {
+              "start": 621,
+              "length": 376,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "BullionExchangeToken",
+                "source_mapping": {
+                  "start": 24,
+                  "length": 1489,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              },
+              "signature": "BullionExchangeToken()"
+            }
+          },
+          {
+            "type": "node",
+            "name": "msg.sender.send(msg.value)",
+            "source_mapping": {
+              "start": 964,
+              "length": 26,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "BullionExchangeToken",
+                "source_mapping": {
+                  "start": 621,
+                  "length": 376,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "BullionExchangeToken",
+                    "source_mapping": {
+                      "start": 24,
+                      "length": 1489,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "BullionExchangeToken()"
+                }
+              }
+            }
+          }
+        ],
+        "description": "BullionExchangeToken.BullionExchangeToken() () ignores return value by msg.sender.send(msg.value) ()\n",
+        "markdown": "[BullionExchangeToken.BullionExchangeToken()]() ignores return value by [msg.sender.send(msg.value)]()\n",
+        "first_markdown_element": "",
+        "id": "a1d2730be99348fb090fa006ec5f3ee64cc3bf6282e958211ae707946bb23722",
+        "check": "unchecked-send",
+        "impact": "Medium",
+        "confidence": "Medium"
+      },
+      {
+        "elements": [
+          {
+            "type": "node",
+            "name": "",
+            "source_mapping": {
+              "start": 1096,
+              "length": 5,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "transfer",
+                "source_mapping": {
+                  "start": 1003,
+                  "length": 284,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "BullionExchangeToken",
+                    "source_mapping": {
+                      "start": 24,
+                      "length": 1489,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "transfer(address,uint256)"
+                }
+              }
+            }
+          }
+        ],
+        "description": "Deprecated standard detected THROW ():\n\t- Usage of \"throw\" should be replaced with \"revert()\"\n",
+        "markdown": "Deprecated standard detected [THROW]():\n\t- Usage of \"throw\" should be replaced with \"revert()\"\n",
+        "first_markdown_element": "",
+        "id": "f5556cf1c70b64b9e4b1fc32044dd970b5f2c8b9fc21b7971fda01971033f2d5",
+        "check": "deprecated-standards",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "pragma",
+            "name": "^0.4.2",
+            "source_mapping": {
+              "start": 0,
+              "length": 23,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "directive": [
+                "solidity",
+                "^",
+                "0.4",
+                ".2"
+              ]
+            }
+          }
+        ],
+        "description": "Pragma version^0.4.2 () allows old versions\n",
+        "markdown": "Pragma version[^0.4.2]() allows old versions\n",
+        "first_markdown_element": "",
+        "id": "684a56cd27e54ff2efdccacdc31c1f9807e03d1014a0a136c00240d60a2f3a67",
+        "check": "solc-version",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [],
+        "description": "solc-0.4.2 is not recommended for deployment\n",
+        "markdown": "solc-0.4.2 is not recommended for deployment\n",
+        "first_markdown_element": "",
+        "id": "707dbfcfdf84b6816d84949bbe947a3701cd8aa49952e3db1879e122f1f0990d",
+        "check": "solc-version",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "_spender",
+            "source_mapping": {
+              "start": 1310,
+              "length": 16,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "approve",
+                "source_mapping": {
+                  "start": 1293,
+                  "length": 151,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "BullionExchangeToken",
+                    "source_mapping": {
+                      "start": 24,
+                      "length": 1489,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "approve(address,uint256)"
+                }
+              }
+            },
+            "additional_fields": {
+              "target": "parameter",
+              "convention": "mixedCase"
+            }
+          }
+        ],
+        "description": "Parameter BullionExchangeToken.approve(address,uint256)._spender () is not in mixedCase\n",
+        "markdown": "Parameter [BullionExchangeToken.approve(address,uint256)._spender]() is not in mixedCase\n",
+        "first_markdown_element": "",
+        "id": "8da447a80ed88f19045b79f6cff5d98ee378b7be0633b23c1aefb35915271908",
+        "check": "naming-convention",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "_value",
+            "source_mapping": {
+              "start": 1034,
+              "length": 14,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "transfer",
+                "source_mapping": {
+                  "start": 1003,
+                  "length": 284,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "BullionExchangeToken",
+                    "source_mapping": {
+                      "start": 24,
+                      "length": 1489,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "transfer(address,uint256)"
+                }
+              }
+            },
+            "additional_fields": {
+              "target": "parameter",
+              "convention": "mixedCase"
+            }
+          }
+        ],
+        "description": "Parameter BullionExchangeToken.transfer(address,uint256)._value () is not in mixedCase\n",
+        "markdown": "Parameter [BullionExchangeToken.transfer(address,uint256)._value]() is not in mixedCase\n",
+        "first_markdown_element": "",
+        "id": "e60cc956c7d0311808ec3a13420cc04bb77176a4c0b533970b9466179312cd68",
+        "check": "naming-convention",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "_value",
+            "source_mapping": {
+              "start": 1328,
+              "length": 14,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "approve",
+                "source_mapping": {
+                  "start": 1293,
+                  "length": 151,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "BullionExchangeToken",
+                    "source_mapping": {
+                      "start": 24,
+                      "length": 1489,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "approve(address,uint256)"
+                }
+              }
+            },
+            "additional_fields": {
+              "target": "parameter",
+              "convention": "mixedCase"
+            }
+          }
+        ],
+        "description": "Parameter BullionExchangeToken.approve(address,uint256)._value () is not in mixedCase\n",
+        "markdown": "Parameter [BullionExchangeToken.approve(address,uint256)._value]() is not in mixedCase\n",
+        "first_markdown_element": "",
+        "id": "f043d2c8c103ecfe910d96b86383fd8acca7b1d0e7b45c574a026b6cee6e767a",
+        "check": "naming-convention",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "_to",
+            "source_mapping": {
+              "start": 1021,
+              "length": 11,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "transfer",
+                "source_mapping": {
+                  "start": 1003,
+                  "length": 284,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "BullionExchangeToken",
+                    "source_mapping": {
+                      "start": 24,
+                      "length": 1489,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "transfer(address,uint256)"
+                }
+              }
+            },
+            "additional_fields": {
+              "target": "parameter",
+              "convention": "mixedCase"
+            }
+          }
+        ],
+        "description": "Parameter BullionExchangeToken.transfer(address,uint256)._to () is not in mixedCase\n",
+        "markdown": "Parameter [BullionExchangeToken.transfer(address,uint256)._to]() is not in mixedCase\n",
+        "first_markdown_element": "",
+        "id": "ff5ce59a50ec0340b77417ec8947e55040957c04201d8561467c7ff1a8990b70",
+        "check": "naming-convention",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "BullionExchangeToken",
+            "source_mapping": {
+              "start": 621,
+              "length": 376,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "BullionExchangeToken",
+                "source_mapping": {
+                  "start": 24,
+                  "length": 1489,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              },
+              "signature": "BullionExchangeToken()"
+            }
+          },
+          {
+            "type": "node",
+            "name": "totalSupply = 100000000000000000",
+            "source_mapping": {
+              "start": 812,
+              "length": 32,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "BullionExchangeToken",
+                "source_mapping": {
+                  "start": 621,
+                  "length": 376,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "BullionExchangeToken",
+                    "source_mapping": {
+                      "start": 24,
+                      "length": 1489,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "BullionExchangeToken()"
+                }
+              }
+            }
+          }
+        ],
+        "description": "BullionExchangeToken.BullionExchangeToken() () uses literals with too many digits:\n\t- totalSupply = 100000000000000000 ()\n",
+        "markdown": "[BullionExchangeToken.BullionExchangeToken()]() uses literals with too many digits:\n\t- [totalSupply = 100000000000000000]()\n",
+        "first_markdown_element": "",
+        "id": "1a7da89ccb4479007b31a6cb98628ff0bf8dfb8a346647c170fd1be93884452b",
+        "check": "too-many-digits",
+        "impact": "Informational",
+        "confidence": "Medium"
+      },
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "BullionExchangeToken",
+            "source_mapping": {
+              "start": 621,
+              "length": 376,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "BullionExchangeToken",
+                "source_mapping": {
+                  "start": 24,
+                  "length": 1489,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              },
+              "signature": "BullionExchangeToken()"
+            }
+          },
+          {
+            "type": "node",
+            "name": "balanceOf[firstOwner] = 100000000000000000",
+            "source_mapping": {
+              "start": 760,
+              "length": 42,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "BullionExchangeToken",
+                "source_mapping": {
+                  "start": 621,
+                  "length": 376,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "BullionExchangeToken",
+                    "source_mapping": {
+                      "start": 24,
+                      "length": 1489,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "BullionExchangeToken()"
+                }
+              }
+            }
+          }
+        ],
+        "description": "BullionExchangeToken.BullionExchangeToken() () uses literals with too many digits:\n\t- balanceOf[firstOwner] = 100000000000000000 ()\n",
+        "markdown": "[BullionExchangeToken.BullionExchangeToken()]() uses literals with too many digits:\n\t- [balanceOf[firstOwner] = 100000000000000000]()\n",
+        "first_markdown_element": "",
+        "id": "bb551a1b0541b8567d6ed336eb52a8e5395a90a325b12238d9dda5d0976ee7b0",
+        "check": "too-many-digits",
+        "impact": "Informational",
+        "confidence": "Medium"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "users",
+            "source_mapping": {
+              "start": 238,
+              "length": 22,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "BullionExchangeToken",
+                "source_mapping": {
+                  "start": 24,
+                  "length": 1489,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              }
+            }
+          },
+          {
+            "type": "contract",
+            "name": "BullionExchangeToken",
+            "source_mapping": {
+              "start": 24,
+              "length": 1489,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            }
+          }
+        ],
+        "description": "BullionExchangeToken.users () is never used in BullionExchangeToken ()\n",
+        "markdown": "[BullionExchangeToken.users]() is never used in [BullionExchangeToken]()\n",
+        "first_markdown_element": "",
+        "id": "48a119635cd644b6a55e4a7326818340a755ada9408d9a6d742b664cc8ca7c7c",
+        "check": "unused-state",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "standard",
+            "source_mapping": {
+              "start": 61,
+              "length": 36,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "BullionExchangeToken",
+                "source_mapping": {
+                  "start": 24,
+                  "length": 1489,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              }
+            }
+          },
+          {
+            "type": "contract",
+            "name": "BullionExchangeToken",
+            "source_mapping": {
+              "start": 24,
+              "length": 1489,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            }
+          }
+        ],
+        "description": "BullionExchangeToken.standard () is never used in BullionExchangeToken ()\n",
+        "markdown": "[BullionExchangeToken.standard]() is never used in [BullionExchangeToken]()\n",
+        "first_markdown_element": "",
+        "id": "6af43ec1a68ae1678571dc5684ad011ee6f7d65c42820dc47894e2999b33a695",
+        "check": "unused-state",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "standard",
+            "source_mapping": {
+              "start": 61,
+              "length": 36,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "BullionExchangeToken",
+                "source_mapping": {
+                  "start": 24,
+                  "length": 1489,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              }
+            }
+          }
+        ],
+        "description": "BullionExchangeToken.standard () should be constant \n",
+        "markdown": "[BullionExchangeToken.standard]() should be constant \n",
+        "first_markdown_element": "",
+        "id": "0a24539a9093ae1005a05d5433b3fb1f68249344fc609f663139c7100fc4f462",
+        "check": "constable-states",
+        "impact": "Optimization",
+        "confidence": "High"
+      }
+    ]
+  }
+}

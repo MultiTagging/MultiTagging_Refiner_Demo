@@ -1,0 +1,65 @@
+{
+  "fileName": "Benchmarks/Study_SamplesSet/5779579f9ba8cd1df1d151db09b2ace5.sol",
+  "baseName": "5779579f9ba8cd1df1d151db09b2ace5.sol",
+  "iter": 49,
+  "time": "39.857978",
+  "errMsg": null,
+  "result": [
+    {
+      "no": "1",
+      "kind": "IO",
+      "line": 16,
+      "signatures": [
+        {
+          "contractName": "ReentrancyDAO",
+          "methodName": "withdrawAll",
+          "argTypes": []
+        }
+      ],
+      "exp": "(balance - oCredit)",
+      "status": "unproven"
+    },
+    {
+      "no": "2",
+      "kind": "IO",
+      "line": 25,
+      "signatures": [
+        {
+          "contractName": "ReentrancyDAO",
+          "methodName": "deposit",
+          "argTypes": []
+        }
+      ],
+      "exp": "(credit[msg.sender] + msg.value)",
+      "status": "unproven"
+    },
+    {
+      "no": "3",
+      "kind": "IO",
+      "line": 26,
+      "signatures": [
+        {
+          "contractName": "ReentrancyDAO",
+          "methodName": "deposit",
+          "argTypes": []
+        }
+      ],
+      "exp": "(balance + msg.value)",
+      "status": "unproven"
+    },
+    {
+      "no": "4",
+      "kind": "ETH_LEAK",
+      "line": 18,
+      "signatures": [
+        {
+          "contractName": "ReentrancyDAO",
+          "methodName": "withdrawAll",
+          "argTypes": []
+        }
+      ],
+      "exp": "callResult = msg.sender.call.value(oCredit)();",
+      "status": "unproven"
+    }
+  ]
+}

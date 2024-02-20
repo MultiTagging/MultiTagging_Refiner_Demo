@@ -1,0 +1,976 @@
+{
+  "success": true,
+  "error": null,
+  "results": {
+    "detectors": [
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "payOut",
+            "source_mapping": {
+              "start": 3295,
+              "length": 122,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "Vote",
+                "source_mapping": {
+                  "start": 2894,
+                  "length": 525,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              },
+              "signature": "payOut()"
+            }
+          },
+          {
+            "type": "node",
+            "name": "msg.sender.send(this.balance)",
+            "source_mapping": {
+              "start": 3381,
+              "length": 29,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "payOut",
+                "source_mapping": {
+                  "start": 3295,
+                  "length": 122,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "Vote",
+                    "source_mapping": {
+                      "start": 2894,
+                      "length": 525,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "payOut()"
+                }
+              }
+            }
+          }
+        ],
+        "description": "Vote.payOut() () sends eth to arbitrary user\n\tDangerous calls:\n\t- msg.sender.send(this.balance) ()\n",
+        "markdown": "[Vote.payOut()]() sends eth to arbitrary user\n\tDangerous calls:\n\t- [msg.sender.send(this.balance)]()\n",
+        "first_markdown_element": "",
+        "id": "e5b5d47edf7a3659b1ff6ede62bb2ca2a721591d4afefaec84b3968d192743f4",
+        "check": "arbitrary-send-eth",
+        "impact": "High",
+        "confidence": "Medium"
+      },
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "payOut",
+            "source_mapping": {
+              "start": 3295,
+              "length": 122,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "Vote",
+                "source_mapping": {
+                  "start": 2894,
+                  "length": 525,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              },
+              "signature": "payOut()"
+            }
+          },
+          {
+            "type": "node",
+            "name": "msg.sender.send(this.balance)",
+            "source_mapping": {
+              "start": 3381,
+              "length": 29,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "payOut",
+                "source_mapping": {
+                  "start": 3295,
+                  "length": 122,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "Vote",
+                    "source_mapping": {
+                      "start": 2894,
+                      "length": 525,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "payOut()"
+                }
+              }
+            }
+          }
+        ],
+        "description": "Vote.payOut() () ignores return value by msg.sender.send(this.balance) ()\n",
+        "markdown": "[Vote.payOut()]() ignores return value by [msg.sender.send(this.balance)]()\n",
+        "first_markdown_element": "",
+        "id": "bde6653ea98baa7f99c68f2d109e8d0d861192aa4830dc277357b85444660f04",
+        "check": "unchecked-send",
+        "impact": "Medium",
+        "confidence": "Medium"
+      },
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "payOut",
+            "source_mapping": {
+              "start": 1014,
+              "length": 157,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "VoteFactory",
+                "source_mapping": {
+                  "start": 26,
+                  "length": 2866,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              },
+              "signature": "payOut()"
+            }
+          },
+          {
+            "type": "node",
+            "name": "owner.send(this.balance)",
+            "source_mapping": {
+              "start": 1140,
+              "length": 24,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "payOut",
+                "source_mapping": {
+                  "start": 1014,
+                  "length": 157,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "VoteFactory",
+                    "source_mapping": {
+                      "start": 26,
+                      "length": 2866,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "payOut()"
+                }
+              }
+            }
+          }
+        ],
+        "description": "VoteFactory.payOut() () ignores return value by owner.send(this.balance) ()\n",
+        "markdown": "[VoteFactory.payOut()]() ignores return value by [owner.send(this.balance)]()\n",
+        "first_markdown_element": "",
+        "id": "cb55214deb722050d16d88531537879b08e8bc32c8945281e5666e615d834506",
+        "check": "unchecked-send",
+        "impact": "Medium",
+        "confidence": "Medium"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "newOwner",
+            "source_mapping": {
+              "start": 911,
+              "length": 16,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "transferOwner",
+                "source_mapping": {
+                  "start": 888,
+                  "length": 120,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "VoteFactory",
+                    "source_mapping": {
+                      "start": 26,
+                      "length": 2866,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "transferOwner(address)"
+                }
+              }
+            }
+          },
+          {
+            "type": "node",
+            "name": "owner = newOwner",
+            "source_mapping": {
+              "start": 949,
+              "length": 16,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "transferOwner",
+                "source_mapping": {
+                  "start": 888,
+                  "length": 120,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "VoteFactory",
+                    "source_mapping": {
+                      "start": 26,
+                      "length": 2866,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "transferOwner(address)"
+                }
+              }
+            }
+          }
+        ],
+        "description": "VoteFactory.transferOwner(address).newOwner () lacks a zero-check on :\n\t\t- owner = newOwner ()\n",
+        "markdown": "[VoteFactory.transferOwner(address).newOwner]() lacks a zero-check on :\n\t\t- [owner = newOwner]()\n",
+        "first_markdown_element": "",
+        "id": "dabf458d83c35990b7ea1b19f062d6b1e41e89aa3ff4d4e94152c734a1ae11ec",
+        "check": "missing-zero-check",
+        "impact": "Low",
+        "confidence": "Medium"
+      },
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "vote",
+            "source_mapping": {
+              "start": 2165,
+              "length": 725,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "VoteFactory",
+                "source_mapping": {
+                  "start": 26,
+                  "length": 2866,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              },
+              "signature": "vote(bool,address)"
+            }
+          },
+          {
+            "type": "node",
+            "name": "now > nextEndTime",
+            "source_mapping": {
+              "start": 2459,
+              "length": 17,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "vote",
+                "source_mapping": {
+                  "start": 2165,
+                  "length": 725,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "VoteFactory",
+                    "source_mapping": {
+                      "start": 26,
+                      "length": 2866,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "vote(bool,address)"
+                }
+              }
+            }
+          }
+        ],
+        "description": "VoteFactory.vote(bool,address) () uses timestamp for comparisons\n\tDangerous comparisons:\n\t- now > nextEndTime ()\n",
+        "markdown": "[VoteFactory.vote(bool,address)]() uses timestamp for comparisons\n\tDangerous comparisons:\n\t- [now > nextEndTime]()\n",
+        "first_markdown_element": "",
+        "id": "0bfe355fcb76d78e1d36dc0afa5cecd0f7cf210e739a3f3d85ef12bdeb88df12",
+        "check": "timestamp",
+        "impact": "Low",
+        "confidence": "Medium"
+      },
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "startNewVote",
+            "source_mapping": {
+              "start": 1796,
+              "length": 359,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "VoteFactory",
+                "source_mapping": {
+                  "start": 26,
+                  "length": 2866,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              },
+              "signature": "startNewVote(uint256,string)"
+            }
+          },
+          {
+            "type": "node",
+            "name": "now <= nextEndTime",
+            "source_mapping": {
+              "start": 1953,
+              "length": 18,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "startNewVote",
+                "source_mapping": {
+                  "start": 1796,
+                  "length": 359,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "VoteFactory",
+                    "source_mapping": {
+                      "start": 26,
+                      "length": 2866,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "startNewVote(uint256,string)"
+                }
+              }
+            }
+          }
+        ],
+        "description": "VoteFactory.startNewVote(uint256,string) () uses timestamp for comparisons\n\tDangerous comparisons:\n\t- now <= nextEndTime ()\n",
+        "markdown": "[VoteFactory.startNewVote(uint256,string)]() uses timestamp for comparisons\n\tDangerous comparisons:\n\t- [now <= nextEndTime]()\n",
+        "first_markdown_element": "",
+        "id": "9511524767a65fa8091fc3086637e315f710483fcc4b9b14a3ca694f66618a9f",
+        "check": "timestamp",
+        "impact": "Low",
+        "confidence": "Medium"
+      },
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "fallback",
+            "source_mapping": {
+              "start": 1363,
+              "length": 231,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "VoteFactory",
+                "source_mapping": {
+                  "start": 26,
+                  "length": 2866,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              },
+              "signature": "fallback()"
+            }
+          },
+          {
+            "type": "node",
+            "name": "nextEndTime < now + 600",
+            "source_mapping": {
+              "start": 1489,
+              "length": 30,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "fallback",
+                "source_mapping": {
+                  "start": 1363,
+                  "length": 231,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "VoteFactory",
+                    "source_mapping": {
+                      "start": 26,
+                      "length": 2866,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "fallback()"
+                }
+              }
+            }
+          }
+        ],
+        "description": "VoteFactory.fallback() () uses timestamp for comparisons\n\tDangerous comparisons:\n\t- nextEndTime < now + 600 ()\n",
+        "markdown": "[VoteFactory.fallback()]() uses timestamp for comparisons\n\tDangerous comparisons:\n\t- [nextEndTime < now + 600]()\n",
+        "first_markdown_element": "",
+        "id": "ee9096365258e6b8f26b3a3beb7170ed27588734df9e0c4de638d84389aef867",
+        "check": "timestamp",
+        "impact": "Low",
+        "confidence": "Medium"
+      },
+      {
+        "elements": [
+          {
+            "type": "node",
+            "name": "",
+            "source_mapping": {
+              "start": 1985,
+              "length": 5,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "startNewVote",
+                "source_mapping": {
+                  "start": 1796,
+                  "length": 359,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "VoteFactory",
+                    "source_mapping": {
+                      "start": 26,
+                      "length": 2866,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "startNewVote(uint256,string)"
+                }
+              }
+            }
+          }
+        ],
+        "description": "Deprecated standard detected THROW ():\n\t- Usage of \"throw\" should be replaced with \"revert()\"\n",
+        "markdown": "Deprecated standard detected [THROW]():\n\t- Usage of \"throw\" should be replaced with \"revert()\"\n",
+        "first_markdown_element": "",
+        "id": "f5556cf1c70b64b9e4b1fc32044dd970b5f2c8b9fc21b7971fda01971033f2d5",
+        "check": "deprecated-standards",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [],
+        "description": "solc-0.4.10 is not recommended for deployment\n",
+        "markdown": "solc-0.4.10 is not recommended for deployment\n",
+        "first_markdown_element": "",
+        "id": "0eb2863571dc5faae5942bcb279abacd3e70424aa95146384321c9743a3cf58c",
+        "check": "solc-version",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "pragma",
+            "name": "^0.4.10",
+            "source_mapping": {
+              "start": 0,
+              "length": 24,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "directive": [
+                "solidity",
+                "^",
+                "0.4",
+                ".10"
+              ]
+            }
+          }
+        ],
+        "description": "Pragma version^0.4.10 () allows old versions\n",
+        "markdown": "Pragma version[^0.4.10]() allows old versions\n",
+        "first_markdown_element": "",
+        "id": "585d0efb95cc5ddba951b2df4d1064a238c383e91df65f88a41cec6cca3a639d",
+        "check": "solc-version",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "event",
+            "name": "transferredOwner",
+            "source_mapping": {
+              "start": 601,
+              "length": 41,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "VoteFactory",
+                "source_mapping": {
+                  "start": 26,
+                  "length": 2866,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              },
+              "signature": "transferredOwner(address)"
+            },
+            "additional_fields": {
+              "target": "event",
+              "convention": "CapWords"
+            }
+          }
+        ],
+        "description": "Event VoteFactory.transferredOwner(address) () is not in CapWords\n",
+        "markdown": "Event [VoteFactory.transferredOwner(address)]() is not in CapWords\n",
+        "first_markdown_element": "",
+        "id": "5b7006c516f5a99519ce3a47a0bd94501b62753f182715de29527ffd355023ca",
+        "check": "naming-convention",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "event",
+            "name": "startedNewVote",
+            "source_mapping": {
+              "start": 647,
+              "length": 88,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "VoteFactory",
+                "source_mapping": {
+                  "start": 26,
+                  "length": 2866,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              },
+              "signature": "startedNewVote(address,uint256,string,uint256)"
+            },
+            "additional_fields": {
+              "target": "event",
+              "convention": "CapWords"
+            }
+          }
+        ],
+        "description": "Event VoteFactory.startedNewVote(address,uint256,string,uint256) () is not in CapWords\n",
+        "markdown": "Event [VoteFactory.startedNewVote(address,uint256,string,uint256)]() is not in CapWords\n",
+        "first_markdown_element": "",
+        "id": "647b6fd8bf549e88b0792c39244b5f328906e035b498c04eaac80aa25742bdb1",
+        "check": "naming-convention",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "event",
+            "name": "voted",
+            "source_mapping": {
+              "start": 740,
+              "length": 39,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "VoteFactory",
+                "source_mapping": {
+                  "start": 26,
+                  "length": 2866,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              },
+              "signature": "voted(address,bool)"
+            },
+            "additional_fields": {
+              "target": "event",
+              "convention": "CapWords"
+            }
+          }
+        ],
+        "description": "Event VoteFactory.voted(address,bool) () is not in CapWords\n",
+        "markdown": "Event [VoteFactory.voted(address,bool)]() is not in CapWords\n",
+        "first_markdown_element": "",
+        "id": "8eee200bfbba745ffad06048ccdbbfc7cea2117d5b703b8c4b45be42598b6c99",
+        "check": "naming-convention",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "newVote",
+            "source_mapping": {
+              "start": 1604,
+              "length": 182,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "VoteFactory",
+                "source_mapping": {
+                  "start": 26,
+                  "length": 2866,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              },
+              "signature": "newVote(uint256,string)"
+            }
+          }
+        ],
+        "description": "newVote(uint256,string) should be declared external:\n\t- VoteFactory.newVote(uint256,string) ()\n",
+        "markdown": "newVote(uint256,string) should be declared external:\n\t- [VoteFactory.newVote(uint256,string)]()\n",
+        "first_markdown_element": "",
+        "id": "fb3f7317669bc6f5b77831cf7c61366fcd5282c1a108930d239e33875e71a3a7",
+        "check": "external-function",
+        "impact": "Optimization",
+        "confidence": "High"
+      }
+    ]
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "fileName": "Benchmarks/Study_SamplesSet/9f21db84a1e54a13119c26153a2b7637.sol",
+  "baseName": "9f21db84a1e54a13119c26153a2b7637.sol",
+  "iter": 3,
+  "time": "0.0957",
+  "errMsg": null,
+  "result": [
+    {
+      "no": "1",
+      "kind": "IO",
+      "line": 14,
+      "signatures": [
+        {
+          "contractName": "NoHiddenBuiltinSymbols",
+          "methodName": "getMoney",
+          "argTypes": [ "uint256" ]
+        }
+      ],
+      "exp": "(money + 10)",
+      "status": "unproven"
+    },
+    {
+      "no": "2",
+      "kind": "ETH_LEAK",
+      "line": 20,
+      "signatures": [
+        {
+          "contractName": "NoHiddenBuiltinSymbols",
+          "methodName": "withdraw",
+          "argTypes": []
+        }
+      ],
+      "exp": "msg.sender.transfer(address(this).balance);",
+      "status": "proven"
+    }
+  ]
+}

@@ -1,0 +1,37 @@
+{
+  "fileName": "Benchmarks/Study_SamplesSet/ad89904519b1b25971fe6b3047868836.sol",
+  "baseName": "ad89904519b1b25971fe6b3047868836.sol",
+  "iter": 9,
+  "time": "14.320896",
+  "errMsg": null,
+  "result": [
+    {
+      "no": "1",
+      "kind": "IO",
+      "line": 22,
+      "signatures": [
+        {
+          "contractName": "gray_varIsNotSafe",
+          "methodName": "refundAll",
+          "argTypes": []
+        }
+      ],
+      "exp": "(i - 1)",
+      "status": "proven"
+    },
+    {
+      "no": "2",
+      "kind": "ETH_LEAK",
+      "line": 23,
+      "signatures": [
+        {
+          "contractName": "gray_varIsNotSafe",
+          "methodName": "refundAll",
+          "argTypes": []
+        }
+      ],
+      "exp": "flag = user[i].send(balances[i]);",
+      "status": "proven"
+    }
+  ]
+}

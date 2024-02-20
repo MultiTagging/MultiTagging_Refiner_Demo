@@ -1,0 +1,999 @@
+{
+  "success": true,
+  "error": null,
+  "results": {
+    "detectors": [
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "bezout",
+            "source_mapping": {
+              "start": 1395,
+              "length": 469,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "RSALib",
+                "source_mapping": {
+                  "start": 757,
+                  "length": 1109,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              },
+              "signature": "bezout(int256,int256)"
+            }
+          },
+          {
+            "type": "node",
+            "name": "q = rA / rB",
+            "source_mapping": {
+              "start": 1723,
+              "length": 13,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "bezout",
+                "source_mapping": {
+                  "start": 1395,
+                  "length": 469,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "RSALib",
+                    "source_mapping": {
+                      "start": 757,
+                      "length": 1109,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "bezout(int256,int256)"
+                }
+              }
+            }
+          },
+          {
+            "type": "node",
+            "name": "(rA,uA,vA,rB,uB,vB) = (rB,uB,vB,rA - q * rB,uA - q * uB,vA - q * vB)",
+            "source_mapping": {
+              "start": 1749,
+              "length": 73,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "bezout",
+                "source_mapping": {
+                  "start": 1395,
+                  "length": 469,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "RSALib",
+                    "source_mapping": {
+                      "start": 757,
+                      "length": 1109,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "bezout(int256,int256)"
+                }
+              }
+            }
+          }
+        ],
+        "description": "RSALib.bezout(int256,int256) () performs a multiplication on the result of a division:\n\t- q = rA / rB ()\n\t- (rA,uA,vA,rB,uB,vB) = (rB,uB,vB,rA - q * rB,uA - q * uB,vA - q * vB) ()\n",
+        "markdown": "[RSALib.bezout(int256,int256)]() performs a multiplication on the result of a division:\n\t- [q = rA / rB]()\n\t- [(rA,uA,vA,rB,uB,vB) = (rB,uB,vB,rA - q * rB,uA - q * uB,vA - q * vB)]()\n",
+        "first_markdown_element": "",
+        "id": "d734e73d63ac7f50cf9a540b5940e63fa8b7aae2da660cf150581ed460b2f8cc",
+        "check": "divide-before-multiply",
+        "impact": "Medium",
+        "confidence": "Medium"
+      },
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "mod",
+            "source_mapping": {
+              "start": 937,
+              "length": 74,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "RSALib",
+                "source_mapping": {
+                  "start": 757,
+                  "length": 1109,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              },
+              "signature": "mod(int256,int256)"
+            }
+          },
+          {
+            "type": "node",
+            "name": "a - n * (a / n)",
+            "source_mapping": {
+              "start": 986,
+              "length": 18,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "mod",
+                "source_mapping": {
+                  "start": 937,
+                  "length": 74,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "RSALib",
+                    "source_mapping": {
+                      "start": 757,
+                      "length": 1109,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "mod(int256,int256)"
+                }
+              }
+            }
+          }
+        ],
+        "description": "RSALib.mod(int256,int256) () performs a multiplication on the result of a division:\n\t- a - n * (a / n) ()\n",
+        "markdown": "[RSALib.mod(int256,int256)]() performs a multiplication on the result of a division:\n\t- [a - n * (a / n)]()\n",
+        "first_markdown_element": "",
+        "id": "ffbd0ba2db925e5a978d7acab4c02a572aa79ccb13b43105cdc46fbde17ab06b",
+        "check": "divide-before-multiply",
+        "impact": "Medium",
+        "confidence": "Medium"
+      },
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "checkSol",
+            "source_mapping": {
+              "start": 3401,
+              "length": 248,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "LocalB",
+                "source_mapping": {
+                  "start": 3019,
+                  "length": 632,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              },
+              "signature": "checkSol(address)"
+            }
+          },
+          {
+            "type": "node",
+            "name": "message == iDContract.solution(this)",
+            "source_mapping": {
+              "start": 3517,
+              "length": 36,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "checkSol",
+                "source_mapping": {
+                  "start": 3401,
+                  "length": 248,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "LocalB",
+                    "source_mapping": {
+                      "start": 3019,
+                      "length": 632,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "checkSol(address)"
+                }
+              }
+            },
+            "additional_fields": {
+              "underlying_type": "external_calls"
+            }
+          },
+          {
+            "type": "node",
+            "name": "message == iDContract.solution(this)",
+            "source_mapping": {
+              "start": 3517,
+              "length": 36,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "checkSol",
+                "source_mapping": {
+                  "start": 3401,
+                  "length": 248,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "LocalB",
+                    "source_mapping": {
+                      "start": 3019,
+                      "length": 632,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "checkSol(address)"
+                }
+              }
+            },
+            "additional_fields": {
+              "underlying_type": "external_calls_sending_eth"
+            }
+          },
+          {
+            "type": "node",
+            "name": "succeed = true",
+            "source_mapping": {
+              "start": 3568,
+              "length": 15,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "checkSol",
+                "source_mapping": {
+                  "start": 3401,
+                  "length": 248,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "LocalB",
+                    "source_mapping": {
+                      "start": 3019,
+                      "length": 632,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "checkSol(address)"
+                }
+              }
+            },
+            "additional_fields": {
+              "underlying_type": "variables_written",
+              "variable_name": "succeed"
+            }
+          }
+        ],
+        "description": "Reentrancy in LocalB.checkSol(address) ():\n\tExternal calls:\n\t- message == iDContract.solution(this) ()\n\tState variables written after the call(s):\n\t- succeed = true ()\n",
+        "markdown": "Reentrancy in [LocalB.checkSol(address)]():\n\tExternal calls:\n\t- [message == iDContract.solution(this)]()\n\tState variables written after the call(s):\n\t- [succeed = true]()\n",
+        "first_markdown_element": "",
+        "id": "58633a6f8553d38c91a0584d18d8130f1ed8fceb07e62deacd04802c1f6ab31d",
+        "check": "reentrancy-benign",
+        "impact": "Low",
+        "confidence": "Medium"
+      },
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "generateD",
+            "source_mapping": {
+              "start": 2317,
+              "length": 467,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "LocalA",
+                "source_mapping": {
+                  "start": 1868,
+                  "length": 1149,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              },
+              "signature": "generateD()"
+            }
+          },
+          {
+            "type": "node",
+            "name": "d = mod(int256(sha3()(ref)),p * q)",
+            "source_mapping": {
+              "start": 2468,
+              "length": 28,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "generateD",
+                "source_mapping": {
+                  "start": 2317,
+                  "length": 467,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "LocalA",
+                    "source_mapping": {
+                      "start": 1868,
+                      "length": 1149,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "generateD()"
+                }
+              }
+            }
+          }
+        ],
+        "description": "LocalA.generateD() () has costly operations inside a loop:\n\t- d = mod(int256(sha3()(ref)),p * q) ()\n",
+        "markdown": "[LocalA.generateD()]() has costly operations inside a loop:\n\t- [d = mod(int256(sha3()(ref)),p * q)]()\n",
+        "first_markdown_element": "",
+        "id": "0a21f2b5b0eb8786d48089cd219c6fa1f8e578e83c4277a050e65deba3f8d007",
+        "check": "costly-loop",
+        "impact": "Informational",
+        "confidence": "Medium"
+      },
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "generateD",
+            "source_mapping": {
+              "start": 2317,
+              "length": 467,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "LocalA",
+                "source_mapping": {
+                  "start": 1868,
+                  "length": 1149,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              },
+              "signature": "generateD()"
+            }
+          },
+          {
+            "type": "node",
+            "name": "e = b",
+            "source_mapping": {
+              "start": 2639,
+              "length": 5,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "generateD",
+                "source_mapping": {
+                  "start": 2317,
+                  "length": 467,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "LocalA",
+                    "source_mapping": {
+                      "start": 1868,
+                      "length": 1149,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "generateD()"
+                }
+              }
+            }
+          }
+        ],
+        "description": "LocalA.generateD() () has costly operations inside a loop:\n\t- e = b ()\n",
+        "markdown": "[LocalA.generateD()]() has costly operations inside a loop:\n\t- [e = b]()\n",
+        "first_markdown_element": "",
+        "id": "48368c4574cf3c5d368fcbcfac2c6bc350df1244e68b63b41bfb693bec45bc2c",
+        "check": "costly-loop",
+        "impact": "Informational",
+        "confidence": "Medium"
+      },
+      {
+        "elements": [
+          {
+            "type": "node",
+            "name": "d = mod(int256(sha3()(ref)),p * q)",
+            "source_mapping": {
+              "start": 2468,
+              "length": 28,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "generateD",
+                "source_mapping": {
+                  "start": 2317,
+                  "length": 467,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "LocalA",
+                    "source_mapping": {
+                      "start": 1868,
+                      "length": 1149,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "generateD()"
+                }
+              }
+            }
+          }
+        ],
+        "description": "Deprecated standard detected d = mod(int256(sha3()(ref)),p * q) ():\n\t- Usage of \"sha3()\" should be replaced with \"keccak256()\"\n",
+        "markdown": "Deprecated standard detected [d = mod(int256(sha3()(ref)),p * q)]():\n\t- Usage of \"sha3()\" should be replaced with \"keccak256()\"\n",
+        "first_markdown_element": "",
+        "id": "a2c91990a53e51878e751b3b10866b1adc77a3356afb4e4dfe22a85447fcd443",
+        "check": "deprecated-standards",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "node",
+            "name": "",
+            "source_mapping": {
+              "start": 520,
+              "length": 5,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "onlyBy",
+                "source_mapping": {
+                  "start": 398,
+                  "length": 143,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "IDCaseD",
+                    "source_mapping": {
+                      "start": 25,
+                      "length": 730,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "onlyBy(address)"
+                }
+              }
+            }
+          }
+        ],
+        "description": "Deprecated standard detected THROW ():\n\t- Usage of \"throw\" should be replaced with \"revert()\"\n",
+        "markdown": "Deprecated standard detected [THROW]():\n\t- Usage of \"throw\" should be replaced with \"revert()\"\n",
+        "first_markdown_element": "",
+        "id": "f5556cf1c70b64b9e4b1fc32044dd970b5f2c8b9fc21b7971fda01971033f2d5",
+        "check": "deprecated-standards",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "pragma",
+            "name": "^0.4.2",
+            "source_mapping": {
+              "start": 0,
+              "length": 23,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "directive": [
+                "solidity",
+                "^",
+                "0.4",
+                ".2"
+              ]
+            }
+          }
+        ],
+        "description": "Pragma version^0.4.2 () allows old versions\n",
+        "markdown": "Pragma version[^0.4.2]() allows old versions\n",
+        "first_markdown_element": "",
+        "id": "684a56cd27e54ff2efdccacdc31c1f9807e03d1014a0a136c00240d60a2f3a67",
+        "check": "solc-version",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [],
+        "description": "solc-0.4.2 is not recommended for deployment\n",
+        "markdown": "solc-0.4.2 is not recommended for deployment\n",
+        "first_markdown_element": "",
+        "id": "707dbfcfdf84b6816d84949bbe947a3701cd8aa49952e3db1879e122f1f0990d",
+        "check": "solc-version",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "_iDContract",
+            "source_mapping": {
+              "start": 3419,
+              "length": 19,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "checkSol",
+                "source_mapping": {
+                  "start": 3401,
+                  "length": 248,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "LocalB",
+                    "source_mapping": {
+                      "start": 3019,
+                      "length": 632,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "checkSol(address)"
+                }
+              }
+            },
+            "additional_fields": {
+              "target": "parameter",
+              "convention": "mixedCase"
+            }
+          }
+        ],
+        "description": "Parameter LocalB.checkSol(address)._iDContract () is not in mixedCase\n",
+        "markdown": "Parameter [LocalB.checkSol(address)._iDContract]() is not in mixedCase\n",
+        "first_markdown_element": "",
+        "id": "31aae7053b607f8df3d0788dc0d60aecd336735314c5c8c972362ba0a52673e1",
+        "check": "naming-convention",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "_iDContract",
+            "source_mapping": {
+              "start": 2156,
+              "length": 19,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "setIDAddress",
+                "source_mapping": {
+                  "start": 2134,
+                  "length": 101,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "LocalA",
+                    "source_mapping": {
+                      "start": 1868,
+                      "length": 1149,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "setIDAddress(address)"
+                }
+              }
+            },
+            "additional_fields": {
+              "target": "parameter",
+              "convention": "mixedCase"
+            }
+          }
+        ],
+        "description": "Parameter LocalA.setIDAddress(address)._iDContract () is not in mixedCase\n",
+        "markdown": "Parameter [LocalA.setIDAddress(address)._iDContract]() is not in mixedCase\n",
+        "first_markdown_element": "",
+        "id": "b50fad59f3846a0bc5393cd0f406918bfe113d0cdbd8dc453b9d94ca4c729556",
+        "check": "naming-convention",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "_iDContract",
+            "source_mapping": {
+              "start": 3196,
+              "length": 19,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "sendChallengeTo",
+                "source_mapping": {
+                  "start": 3171,
+                  "length": 220,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "LocalB",
+                    "source_mapping": {
+                      "start": 3019,
+                      "length": 632,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "sendChallengeTo(address)"
+                }
+              }
+            },
+            "additional_fields": {
+              "target": "parameter",
+              "convention": "mixedCase"
+            }
+          }
+        ],
+        "description": "Parameter LocalB.sendChallengeTo(address)._iDContract () is not in mixedCase\n",
+        "markdown": "Parameter [LocalB.sendChallengeTo(address)._iDContract]() is not in mixedCase\n",
+        "first_markdown_element": "",
+        "id": "f6c5bc981213ce1d49d0a48a9b703472181a8b14cf6596b4c941faf98f05813a",
+        "check": "naming-convention",
+        "impact": "Informational",
+        "confidence": "High"
+      }
+    ]
+  }
+}

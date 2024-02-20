@@ -1,0 +1,121 @@
+{
+  "fileName": "Benchmarks/Study_SamplesSet/443bcfa03f35f2811129e99e67cd443d.sol",
+  "baseName": "443bcfa03f35f2811129e99e67cd443d.sol",
+  "iter": 479,
+  "time": "399.546787",
+  "errMsg": null,
+  "result": [
+    {
+      "no": "1",
+      "kind": "IO",
+      "line": 50,
+      "signatures": [
+        {
+          "contractName": "IQNSecondPreICO",
+          "methodName": "IQNSecondPreICO",
+          "argTypes": [ "address", "address", "address" ]
+        }
+      ],
+      "exp": "(10 ** 18)",
+      "status": "proven"
+    },
+    {
+      "no": "2",
+      "kind": "IO",
+      "line": 50,
+      "signatures": [
+        {
+          "contractName": "IQNSecondPreICO",
+          "methodName": "IQNSecondPreICO",
+          "argTypes": [ "address", "address", "address" ]
+        }
+      ],
+      "exp": "(800000 * (10 ** 18))",
+      "status": "proven"
+    },
+    {
+      "no": "3",
+      "kind": "IO",
+      "line": 53,
+      "signatures": [
+        {
+          "contractName": "IQNSecondPreICO",
+          "methodName": "IQNSecondPreICO",
+          "argTypes": [ "address", "address", "address" ]
+        }
+      ],
+      "exp": "(START + 604800)",
+      "status": "proven"
+    },
+    {
+      "no": "4",
+      "kind": "IO",
+      "line": 66,
+      "signatures": [
+        {
+          "contractName": "IQNSecondPreICO",
+          "methodName": "@fallback",
+          "argTypes": []
+        }
+      ],
+      "exp": "(balanceOf[msg.sender] + amount)",
+      "status": "unproven"
+    },
+    {
+      "no": "5",
+      "kind": "IO",
+      "line": 67,
+      "signatures": [
+        {
+          "contractName": "IQNSecondPreICO",
+          "methodName": "@fallback",
+          "argTypes": []
+        }
+      ],
+      "exp": "(amountRaised + amount)",
+      "status": "unproven"
+    },
+    {
+      "no": "6",
+      "kind": "IO",
+      "line": 68,
+      "signatures": [
+        {
+          "contractName": "IQNSecondPreICO",
+          "methodName": "@fallback",
+          "argTypes": []
+        }
+      ],
+      "exp": "(availableTokens - amount)",
+      "status": "unproven"
+    },
+    {
+      "no": "7",
+      "kind": "IO",
+      "line": 69,
+      "signatures": [
+        {
+          "contractName": "IQNSecondPreICO",
+          "methodName": "@fallback",
+          "argTypes": []
+        }
+      ],
+      "exp": "(amount * EXCHANGE_RATE)",
+      "status": "unproven"
+    },
+    {
+      "no": "8",
+      "kind": "ETH_LEAK",
+      "line": 70,
+      "signatures": [
+        {
+          "contractName": "IQNSecondPreICO",
+          "methodName": "@fallback",
+          "argTypes": []
+        }
+      ],
+      "exp": "addressToSendEthereum.transfer(amount);",
+      "status": "proven"
+    }
+  ]
+}

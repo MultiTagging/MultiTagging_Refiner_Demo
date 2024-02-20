@@ -1,0 +1,3038 @@
+{
+  "success": true,
+  "error": null,
+  "results": {
+    "detectors": [
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "jrecover_y",
+            "source_mapping": {
+              "start": 7327,
+              "length": 323,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "ArithLib",
+                "source_mapping": {
+                  "start": 2817,
+                  "length": 5702,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              },
+              "signature": "jrecover_y(uint256,uint256)"
+            }
+          },
+          {
+            "type": "node",
+            "name": "y_is_positive = _y_bit ^ (beta % 2) ^ 1",
+            "source_mapping": {
+              "start": 7526,
+              "length": 44,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "jrecover_y",
+                "source_mapping": {
+                  "start": 7327,
+                  "length": 323,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "ArithLib",
+                    "source_mapping": {
+                      "start": 2817,
+                      "length": 5702,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "jrecover_y(uint256,uint256)"
+                }
+              }
+            }
+          }
+        ],
+        "description": "ArithLib.jrecover_y(uint256,uint256) () has bitwise-xor operator ^ instead of the exponentiation operator **: \n\t - y_is_positive = _y_bit ^ (beta % 2) ^ 1 ()\n",
+        "markdown": "[ArithLib.jrecover_y(uint256,uint256)]() has bitwise-xor operator ^ instead of the exponentiation operator **: \n\t - [y_is_positive = _y_bit ^ (beta % 2) ^ 1]()\n",
+        "first_markdown_element": "",
+        "id": "d10d1d3ef8f9dc9e50071b192aefe9a4b294d04f38747519c12d62e8b19d487e",
+        "check": "incorrect-exp",
+        "impact": "High",
+        "confidence": "Medium"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "M",
+            "source_mapping": {
+              "start": 3771,
+              "length": 79,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "jdouble",
+                "source_mapping": {
+                  "start": 3508,
+                  "length": 791,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "ArithLib",
+                    "source_mapping": {
+                      "start": 2817,
+                      "length": 5702,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "jdouble(uint256,uint256,uint256)"
+                }
+              }
+            }
+          },
+          {
+            "type": "variable",
+            "name": "M",
+            "source_mapping": {
+              "start": 3064,
+              "length": 104,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "ArithLib",
+                "source_mapping": {
+                  "start": 2817,
+                  "length": 5702,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              }
+            }
+          }
+        ],
+        "description": "ArithLib.jdouble(uint256,uint256,uint256).M () shadows:\n\t- ArithLib.M () (state variable)\n",
+        "markdown": "[ArithLib.jdouble(uint256,uint256,uint256).M]() shadows:\n\t- [ArithLib.M]() (state variable)\n",
+        "first_markdown_element": "",
+        "id": "b5e6d1b397cbaa8cf13e0860b0c69a278f09d922377c60684c689a8da82d88a5",
+        "check": "shadowing-local",
+        "impact": "Low",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "node",
+            "name": "x = uint256(sha3()(_pub1,_pub2))",
+            "source_mapping": {
+              "start": 8101,
+              "length": 33,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "hash_pubkey_to_pubkey",
+                "source_mapping": {
+                  "start": 8006,
+                  "length": 467,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "ArithLib",
+                    "source_mapping": {
+                      "start": 2817,
+                      "length": 5702,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "hash_pubkey_to_pubkey(uint256,uint256)"
+                }
+              }
+            }
+          }
+        ],
+        "description": "Deprecated standard detected x = uint256(sha3()(_pub1,_pub2)) ():\n\t- Usage of \"sha3()\" should be replaced with \"keccak256()\"\n",
+        "markdown": "Deprecated standard detected [x = uint256(sha3()(_pub1,_pub2))]():\n\t- Usage of \"sha3()\" should be replaced with \"keccak256()\"\n",
+        "first_markdown_element": "",
+        "id": "4ab7b6f4fab12c0416c6bc76b8c5c6a83769fa59213352eacf6330f284bec28e",
+        "check": "deprecated-standards",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "node",
+            "name": "",
+            "source_mapping": {
+              "start": 8505,
+              "length": 5,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "fallback",
+                "source_mapping": {
+                  "start": 8483,
+                  "length": 34,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "ArithLib",
+                    "source_mapping": {
+                      "start": 2817,
+                      "length": 5702,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "fallback()"
+                }
+              }
+            }
+          }
+        ],
+        "description": "Deprecated standard detected THROW ():\n\t- Usage of \"throw\" should be replaced with \"revert()\"\n",
+        "markdown": "Deprecated standard detected [THROW]():\n\t- Usage of \"throw\" should be replaced with \"revert()\"\n",
+        "first_markdown_element": "",
+        "id": "f5556cf1c70b64b9e4b1fc32044dd970b5f2c8b9fc21b7971fda01971033f2d5",
+        "check": "deprecated-standards",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [],
+        "description": "solc-0.4.0 is not recommended for deployment\n",
+        "markdown": "solc-0.4.0 is not recommended for deployment\n",
+        "first_markdown_element": "",
+        "id": "e676d9e89e623fa7675baecce41eb7ab21d1d8ec9e856bc5b047e6cfb50b37ca",
+        "check": "solc-version",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "pragma",
+            "name": "^0.4.0",
+            "source_mapping": {
+              "start": 2792,
+              "length": 23,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "directive": [
+                "solidity",
+                "^",
+                "0.4",
+                ".0"
+              ]
+            }
+          }
+        ],
+        "description": "Pragma version^0.4.0 () allows old versions\n",
+        "markdown": "Pragma version[^0.4.0]() allows old versions\n",
+        "first_markdown_element": "",
+        "id": "f4d0f96f990510a571c7ae954763f848d217d6f86fa5953d251f28f5221969e2",
+        "check": "solc-version",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "Gx",
+            "source_mapping": {
+              "start": 3174,
+              "length": 105,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "ArithLib",
+                "source_mapping": {
+                  "start": 2817,
+                  "length": 5702,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              }
+            },
+            "additional_fields": {
+              "target": "variable",
+              "convention": "mixedCase"
+            }
+          }
+        ],
+        "description": "Variable ArithLib.Gx () is not in mixedCase\n",
+        "markdown": "Variable [ArithLib.Gx]() is not in mixedCase\n",
+        "first_markdown_element": "",
+        "id": "042a7d538d9124bd6be0cec7594a2be29ca83a4121eb7b163a2d6b390b4f76e9",
+        "check": "naming-convention",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "_q0",
+            "source_mapping": {
+              "start": 7676,
+              "length": 8,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "jdecompose",
+                "source_mapping": {
+                  "start": 7656,
+                  "length": 221,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "ArithLib",
+                    "source_mapping": {
+                      "start": 2817,
+                      "length": 5702,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "jdecompose(uint256,uint256,uint256)"
+                }
+              }
+            },
+            "additional_fields": {
+              "target": "parameter",
+              "convention": "mixedCase"
+            }
+          }
+        ],
+        "description": "Parameter ArithLib.jdecompose(uint256,uint256,uint256)._q0 () is not in mixedCase\n",
+        "markdown": "Parameter [ArithLib.jdecompose(uint256,uint256,uint256)._q0]() is not in mixedCase\n",
+        "first_markdown_element": "",
+        "id": "0f8d70168a38f1bb3fe80bd01b4a1a8f025682c9d465b7d4983699ad7095232c",
+        "check": "naming-convention",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "_e",
+            "source_mapping": {
+              "start": 6610,
+              "length": 7,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "jexp",
+                "source_mapping": {
+                  "start": 6587,
+                  "length": 730,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "ArithLib",
+                    "source_mapping": {
+                      "start": 2817,
+                      "length": 5702,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "jexp(uint256,uint256,uint256)"
+                }
+              }
+            },
+            "additional_fields": {
+              "target": "parameter",
+              "convention": "mixedCase"
+            }
+          }
+        ],
+        "description": "Parameter ArithLib.jexp(uint256,uint256,uint256)._e () is not in mixedCase\n",
+        "markdown": "Parameter [ArithLib.jexp(uint256,uint256,uint256)._e]() is not in mixedCase\n",
+        "first_markdown_element": "",
+        "id": "113cdf286b41f980f10ce0d9fb5fe1d838ba67f5ed80b3fa9b78a877267a12d5",
+        "check": "naming-convention",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "jrecover_y",
+            "source_mapping": {
+              "start": 7327,
+              "length": 323,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "ArithLib",
+                "source_mapping": {
+                  "start": 2817,
+                  "length": 5702,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              },
+              "signature": "jrecover_y(uint256,uint256)"
+            },
+            "additional_fields": {
+              "target": "function",
+              "convention": "mixedCase"
+            }
+          }
+        ],
+        "description": "Function ArithLib.jrecover_y(uint256,uint256) () is not in mixedCase\n",
+        "markdown": "Function [ArithLib.jrecover_y(uint256,uint256)]() is not in mixedCase\n",
+        "first_markdown_element": "",
+        "id": "1a6a0d14076d25c0ec8fd580ccd49776e40363630a48993355e2b81ac71be27e",
+        "check": "naming-convention",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "_bz",
+            "source_mapping": {
+              "start": 4369,
+              "length": 8,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "jadd",
+                "source_mapping": {
+                  "start": 4305,
+                  "length": 1444,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "ArithLib",
+                    "source_mapping": {
+                      "start": 2817,
+                      "length": 5702,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "jadd(uint256,uint256,uint256,uint256,uint256,uint256)"
+                }
+              }
+            },
+            "additional_fields": {
+              "target": "parameter",
+              "convention": "mixedCase"
+            }
+          }
+        ],
+        "description": "Parameter ArithLib.jadd(uint256,uint256,uint256,uint256,uint256,uint256)._bz () is not in mixedCase\n",
+        "markdown": "Parameter [ArithLib.jadd(uint256,uint256,uint256,uint256,uint256,uint256)._bz]() is not in mixedCase\n",
+        "first_markdown_element": "",
+        "id": "27c6d8b7ad4a0f0ad5d57e78716f33359b54baecb019b021a6a982d6efefb7f4",
+        "check": "naming-convention",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "_by",
+            "source_mapping": {
+              "start": 5961,
+              "length": 8,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "jmul",
+                "source_mapping": {
+                  "start": 5937,
+                  "length": 640,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "ArithLib",
+                    "source_mapping": {
+                      "start": 2817,
+                      "length": 5702,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "jmul(uint256,uint256,uint256,uint256)"
+                }
+              }
+            },
+            "additional_fields": {
+              "target": "parameter",
+              "convention": "mixedCase"
+            }
+          }
+        ],
+        "description": "Parameter ArithLib.jmul(uint256,uint256,uint256,uint256)._by () is not in mixedCase\n",
+        "markdown": "Parameter [ArithLib.jmul(uint256,uint256,uint256,uint256)._by]() is not in mixedCase\n",
+        "first_markdown_element": "",
+        "id": "2b03afe04060e3c9cba366eba024afb9cddcd98ecacfbd6a6eb8657094d6f126",
+        "check": "naming-convention",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "M",
+            "source_mapping": {
+              "start": 3064,
+              "length": 104,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "ArithLib",
+                "source_mapping": {
+                  "start": 2817,
+                  "length": 5702,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              }
+            },
+            "additional_fields": {
+              "target": "variable",
+              "convention": "mixedCase"
+            }
+          }
+        ],
+        "description": "Variable ArithLib.M () is not in mixedCase\n",
+        "markdown": "Variable [ArithLib.M]() is not in mixedCase\n",
+        "first_markdown_element": "",
+        "id": "3d979aade276fe68257af08ae5e0f4a238fe72cac2e009e1b8f714b6fc60d130",
+        "check": "naming-convention",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "_bx",
+            "source_mapping": {
+              "start": 5803,
+              "length": 8,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "jsub",
+                "source_mapping": {
+                  "start": 5759,
+                  "length": 172,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "ArithLib",
+                    "source_mapping": {
+                      "start": 2817,
+                      "length": 5702,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "jsub(uint256,uint256,uint256,uint256,uint256,uint256)"
+                }
+              }
+            },
+            "additional_fields": {
+              "target": "parameter",
+              "convention": "mixedCase"
+            }
+          }
+        ],
+        "description": "Parameter ArithLib.jsub(uint256,uint256,uint256,uint256,uint256,uint256)._bx () is not in mixedCase\n",
+        "markdown": "Parameter [ArithLib.jsub(uint256,uint256,uint256,uint256,uint256,uint256)._bx]() is not in mixedCase\n",
+        "first_markdown_element": "",
+        "id": "3e40fd62993fd192abb05d1fb17200c0f8c7645df71362b2276b76bd75982a8b",
+        "check": "naming-convention",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "_ax",
+            "source_mapping": {
+              "start": 5773,
+              "length": 8,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "jsub",
+                "source_mapping": {
+                  "start": 5759,
+                  "length": 172,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "ArithLib",
+                    "source_mapping": {
+                      "start": 2817,
+                      "length": 5702,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "jsub(uint256,uint256,uint256,uint256,uint256,uint256)"
+                }
+              }
+            },
+            "additional_fields": {
+              "target": "parameter",
+              "convention": "mixedCase"
+            }
+          }
+        ],
+        "description": "Parameter ArithLib.jsub(uint256,uint256,uint256,uint256,uint256,uint256)._ax () is not in mixedCase\n",
+        "markdown": "Parameter [ArithLib.jsub(uint256,uint256,uint256,uint256,uint256,uint256)._ax]() is not in mixedCase\n",
+        "first_markdown_element": "",
+        "id": "42a8f8f77bca949800ffc4028a1625035a2ef907a729c14d2350c7241423d9b5",
+        "check": "naming-convention",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "hash_pubkey_to_pubkey",
+            "source_mapping": {
+              "start": 8006,
+              "length": 467,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "ArithLib",
+                "source_mapping": {
+                  "start": 2817,
+                  "length": 5702,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              },
+              "signature": "hash_pubkey_to_pubkey(uint256,uint256)"
+            },
+            "additional_fields": {
+              "target": "function",
+              "convention": "mixedCase"
+            }
+          }
+        ],
+        "description": "Function ArithLib.hash_pubkey_to_pubkey(uint256,uint256) () is not in mixedCase\n",
+        "markdown": "Function [ArithLib.hash_pubkey_to_pubkey(uint256,uint256)]() is not in mixedCase\n",
+        "first_markdown_element": "",
+        "id": "47c0aefec629705dea07bf38852c3a6b6a1f8c3e8a8ec5b5e76cc5e5b60ab05e",
+        "check": "naming-convention",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "_b",
+            "source_mapping": {
+              "start": 6601,
+              "length": 7,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "jexp",
+                "source_mapping": {
+                  "start": 6587,
+                  "length": 730,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "ArithLib",
+                    "source_mapping": {
+                      "start": 2817,
+                      "length": 5702,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "jexp(uint256,uint256,uint256)"
+                }
+              }
+            },
+            "additional_fields": {
+              "target": "parameter",
+              "convention": "mixedCase"
+            }
+          }
+        ],
+        "description": "Parameter ArithLib.jexp(uint256,uint256,uint256)._b () is not in mixedCase\n",
+        "markdown": "Parameter [ArithLib.jexp(uint256,uint256,uint256)._b]() is not in mixedCase\n",
+        "first_markdown_element": "",
+        "id": "549951b5cae24df101b69875add9841253a977264397484de6e31f8bf5223f9d",
+        "check": "naming-convention",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "_bit",
+            "source_mapping": {
+              "start": 7914,
+              "length": 9,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "isbit",
+                "source_mapping": {
+                  "start": 7887,
+                  "length": 113,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "ArithLib",
+                    "source_mapping": {
+                      "start": 2817,
+                      "length": 5702,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "isbit(uint256,uint256)"
+                }
+              }
+            },
+            "additional_fields": {
+              "target": "parameter",
+              "convention": "mixedCase"
+            }
+          }
+        ],
+        "description": "Parameter ArithLib.isbit(uint256,uint256)._bit () is not in mixedCase\n",
+        "markdown": "Parameter [ArithLib.isbit(uint256,uint256)._bit]() is not in mixedCase\n",
+        "first_markdown_element": "",
+        "id": "64e588230e743e4383dd7edb6808539279059a1e35b9a77d10c9296882334920",
+        "check": "naming-convention",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "_m",
+            "source_mapping": {
+              "start": 6619,
+              "length": 7,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "jexp",
+                "source_mapping": {
+                  "start": 6587,
+                  "length": 730,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "ArithLib",
+                    "source_mapping": {
+                      "start": 2817,
+                      "length": 5702,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "jexp(uint256,uint256,uint256)"
+                }
+              }
+            },
+            "additional_fields": {
+              "target": "parameter",
+              "convention": "mixedCase"
+            }
+          }
+        ],
+        "description": "Parameter ArithLib.jexp(uint256,uint256,uint256)._m () is not in mixedCase\n",
+        "markdown": "Parameter [ArithLib.jexp(uint256,uint256,uint256)._m]() is not in mixedCase\n",
+        "first_markdown_element": "",
+        "id": "6c1f65de000288c31e9e134ccffa5c35ca5b5f9c25b3db9a80dce0da881d5f28",
+        "check": "naming-convention",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "_bx",
+            "source_mapping": {
+              "start": 5951,
+              "length": 8,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "jmul",
+                "source_mapping": {
+                  "start": 5937,
+                  "length": 640,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "ArithLib",
+                    "source_mapping": {
+                      "start": 2817,
+                      "length": 5702,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "jmul(uint256,uint256,uint256,uint256)"
+                }
+              }
+            },
+            "additional_fields": {
+              "target": "parameter",
+              "convention": "mixedCase"
+            }
+          }
+        ],
+        "description": "Parameter ArithLib.jmul(uint256,uint256,uint256,uint256)._bx () is not in mixedCase\n",
+        "markdown": "Parameter [ArithLib.jmul(uint256,uint256,uint256,uint256)._bx]() is not in mixedCase\n",
+        "first_markdown_element": "",
+        "id": "8808a70a69791142fd8e25d6cbd38210a9cf69652e28d3eeca4dd259c74ca4d7",
+        "check": "naming-convention",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "_by",
+            "source_mapping": {
+              "start": 4359,
+              "length": 8,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "jadd",
+                "source_mapping": {
+                  "start": 4305,
+                  "length": 1444,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "ArithLib",
+                    "source_mapping": {
+                      "start": 2817,
+                      "length": 5702,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "jadd(uint256,uint256,uint256,uint256,uint256,uint256)"
+                }
+              }
+            },
+            "additional_fields": {
+              "target": "parameter",
+              "convention": "mixedCase"
+            }
+          }
+        ],
+        "description": "Parameter ArithLib.jadd(uint256,uint256,uint256,uint256,uint256,uint256)._by () is not in mixedCase\n",
+        "markdown": "Parameter [ArithLib.jadd(uint256,uint256,uint256,uint256,uint256,uint256)._by]() is not in mixedCase\n",
+        "first_markdown_element": "",
+        "id": "89a4fcfc9867a03cc114081acd3bfe8356548b415389ef53016df4bf6d53c829",
+        "check": "naming-convention",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "_ay",
+            "source_mapping": {
+              "start": 3535,
+              "length": 8,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "jdouble",
+                "source_mapping": {
+                  "start": 3508,
+                  "length": 791,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "ArithLib",
+                    "source_mapping": {
+                      "start": 2817,
+                      "length": 5702,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "jdouble(uint256,uint256,uint256)"
+                }
+              }
+            },
+            "additional_fields": {
+              "target": "parameter",
+              "convention": "mixedCase"
+            }
+          }
+        ],
+        "description": "Parameter ArithLib.jdouble(uint256,uint256,uint256)._ay () is not in mixedCase\n",
+        "markdown": "Parameter [ArithLib.jdouble(uint256,uint256,uint256)._ay]() is not in mixedCase\n",
+        "first_markdown_element": "",
+        "id": "8d58eb3ab05c67af9588d17db86e91e2be8babe013d09d1b37774c42a592ace4",
+        "check": "naming-convention",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "_az",
+            "source_mapping": {
+              "start": 4339,
+              "length": 8,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "jadd",
+                "source_mapping": {
+                  "start": 4305,
+                  "length": 1444,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "ArithLib",
+                    "source_mapping": {
+                      "start": 2817,
+                      "length": 5702,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "jadd(uint256,uint256,uint256,uint256,uint256,uint256)"
+                }
+              }
+            },
+            "additional_fields": {
+              "target": "parameter",
+              "convention": "mixedCase"
+            }
+          }
+        ],
+        "description": "Parameter ArithLib.jadd(uint256,uint256,uint256,uint256,uint256,uint256)._az () is not in mixedCase\n",
+        "markdown": "Parameter [ArithLib.jadd(uint256,uint256,uint256,uint256,uint256,uint256)._az]() is not in mixedCase\n",
+        "first_markdown_element": "",
+        "id": "8fa97144e0fd3225d3f3d403d6b61a577602da88ab6c8460df0ab08da30f633e",
+        "check": "naming-convention",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "N",
+            "source_mapping": {
+              "start": 2953,
+              "length": 105,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "ArithLib",
+                "source_mapping": {
+                  "start": 2817,
+                  "length": 5702,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              }
+            },
+            "additional_fields": {
+              "target": "variable",
+              "convention": "mixedCase"
+            }
+          }
+        ],
+        "description": "Variable ArithLib.N () is not in mixedCase\n",
+        "markdown": "Variable [ArithLib.N]() is not in mixedCase\n",
+        "first_markdown_element": "",
+        "id": "92d0b452ccf42c6ff7b3bbf8b28aa64e1c040c8bcdf95f14ce3dfffe7718f74a",
+        "check": "naming-convention",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "P",
+            "source_mapping": {
+              "start": 2842,
+              "length": 105,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "ArithLib",
+                "source_mapping": {
+                  "start": 2817,
+                  "length": 5702,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              }
+            },
+            "additional_fields": {
+              "target": "variable",
+              "convention": "mixedCase"
+            }
+          }
+        ],
+        "description": "Variable ArithLib.P () is not in mixedCase\n",
+        "markdown": "Variable [ArithLib.P]() is not in mixedCase\n",
+        "first_markdown_element": "",
+        "id": "9477db556f3f86c5a197425151f3033bfed4d41e22821d8e4585c90bfaf04373",
+        "check": "naming-convention",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "_ax",
+            "source_mapping": {
+              "start": 3525,
+              "length": 8,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "jdouble",
+                "source_mapping": {
+                  "start": 3508,
+                  "length": 791,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "ArithLib",
+                    "source_mapping": {
+                      "start": 2817,
+                      "length": 5702,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "jdouble(uint256,uint256,uint256)"
+                }
+              }
+            },
+            "additional_fields": {
+              "target": "parameter",
+              "convention": "mixedCase"
+            }
+          }
+        ],
+        "description": "Parameter ArithLib.jdouble(uint256,uint256,uint256)._ax () is not in mixedCase\n",
+        "markdown": "Parameter [ArithLib.jdouble(uint256,uint256,uint256)._ax]() is not in mixedCase\n",
+        "first_markdown_element": "",
+        "id": "97ac7f023af3b2383276e7527c4701962e108cdce4bbb96a924da0f25f29cba1",
+        "check": "naming-convention",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "_by",
+            "source_mapping": {
+              "start": 5813,
+              "length": 8,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "jsub",
+                "source_mapping": {
+                  "start": 5759,
+                  "length": 172,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "ArithLib",
+                    "source_mapping": {
+                      "start": 2817,
+                      "length": 5702,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "jsub(uint256,uint256,uint256,uint256,uint256,uint256)"
+                }
+              }
+            },
+            "additional_fields": {
+              "target": "parameter",
+              "convention": "mixedCase"
+            }
+          }
+        ],
+        "description": "Parameter ArithLib.jsub(uint256,uint256,uint256,uint256,uint256,uint256)._by () is not in mixedCase\n",
+        "markdown": "Parameter [ArithLib.jsub(uint256,uint256,uint256,uint256,uint256,uint256)._by]() is not in mixedCase\n",
+        "first_markdown_element": "",
+        "id": "9965f765dbf504715415c90c058e9013cccb2f5fec2d752204d57519ec9a4ee9",
+        "check": "naming-convention",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "_az",
+            "source_mapping": {
+              "start": 5793,
+              "length": 8,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "jsub",
+                "source_mapping": {
+                  "start": 5759,
+                  "length": 172,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "ArithLib",
+                    "source_mapping": {
+                      "start": 2817,
+                      "length": 5702,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "jsub(uint256,uint256,uint256,uint256,uint256,uint256)"
+                }
+              }
+            },
+            "additional_fields": {
+              "target": "parameter",
+              "convention": "mixedCase"
+            }
+          }
+        ],
+        "description": "Parameter ArithLib.jsub(uint256,uint256,uint256,uint256,uint256,uint256)._az () is not in mixedCase\n",
+        "markdown": "Parameter [ArithLib.jsub(uint256,uint256,uint256,uint256,uint256,uint256)._az]() is not in mixedCase\n",
+        "first_markdown_element": "",
+        "id": "a25bd24f45c5cee49578d6d8ce459bb1f43dee7ac8c5f95210586babd6587fa4",
+        "check": "naming-convention",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "_pub2",
+            "source_mapping": {
+              "start": 8049,
+              "length": 10,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "hash_pubkey_to_pubkey",
+                "source_mapping": {
+                  "start": 8006,
+                  "length": 467,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "ArithLib",
+                    "source_mapping": {
+                      "start": 2817,
+                      "length": 5702,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "hash_pubkey_to_pubkey(uint256,uint256)"
+                }
+              }
+            },
+            "additional_fields": {
+              "target": "parameter",
+              "convention": "mixedCase"
+            }
+          }
+        ],
+        "description": "Parameter ArithLib.hash_pubkey_to_pubkey(uint256,uint256)._pub2 () is not in mixedCase\n",
+        "markdown": "Parameter [ArithLib.hash_pubkey_to_pubkey(uint256,uint256)._pub2]() is not in mixedCase\n",
+        "first_markdown_element": "",
+        "id": "a590f8c3e1191a6e3efc78b3837a27a6a6ee6154cb573b5584492e5563a89ab1",
+        "check": "naming-convention",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "_y_bit",
+            "source_mapping": {
+              "start": 7356,
+              "length": 11,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "jrecover_y",
+                "source_mapping": {
+                  "start": 7327,
+                  "length": 323,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "ArithLib",
+                    "source_mapping": {
+                      "start": 2817,
+                      "length": 5702,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "jrecover_y(uint256,uint256)"
+                }
+              }
+            },
+            "additional_fields": {
+              "target": "parameter",
+              "convention": "mixedCase"
+            }
+          }
+        ],
+        "description": "Parameter ArithLib.jrecover_y(uint256,uint256)._y_bit () is not in mixedCase\n",
+        "markdown": "Parameter [ArithLib.jrecover_y(uint256,uint256)._y_bit]() is not in mixedCase\n",
+        "first_markdown_element": "",
+        "id": "b1a1ea71d39cadc6da3d31a172932323dee713b4bf76b13d9f44493671aedc6d",
+        "check": "naming-convention",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "_x",
+            "source_mapping": {
+              "start": 7347,
+              "length": 7,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "jrecover_y",
+                "source_mapping": {
+                  "start": 7327,
+                  "length": 323,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "ArithLib",
+                    "source_mapping": {
+                      "start": 2817,
+                      "length": 5702,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "jrecover_y(uint256,uint256)"
+                }
+              }
+            },
+            "additional_fields": {
+              "target": "parameter",
+              "convention": "mixedCase"
+            }
+          }
+        ],
+        "description": "Parameter ArithLib.jrecover_y(uint256,uint256)._x () is not in mixedCase\n",
+        "markdown": "Parameter [ArithLib.jrecover_y(uint256,uint256)._x]() is not in mixedCase\n",
+        "first_markdown_element": "",
+        "id": "b3a0892d3b3e59893decab80a9cbc3bbbce4ff27913a12bd0e662d4ebd176992",
+        "check": "naming-convention",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "_ay",
+            "source_mapping": {
+              "start": 5783,
+              "length": 8,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "jsub",
+                "source_mapping": {
+                  "start": 5759,
+                  "length": 172,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "ArithLib",
+                    "source_mapping": {
+                      "start": 2817,
+                      "length": 5702,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "jsub(uint256,uint256,uint256,uint256,uint256,uint256)"
+                }
+              }
+            },
+            "additional_fields": {
+              "target": "parameter",
+              "convention": "mixedCase"
+            }
+          }
+        ],
+        "description": "Parameter ArithLib.jsub(uint256,uint256,uint256,uint256,uint256,uint256)._ay () is not in mixedCase\n",
+        "markdown": "Parameter [ArithLib.jsub(uint256,uint256,uint256,uint256,uint256,uint256)._ay]() is not in mixedCase\n",
+        "first_markdown_element": "",
+        "id": "b7392fb0b0658479d8015675ea65afddf54b10d7a80e45c4e2c1f0c286bc4f1a",
+        "check": "naming-convention",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "_n",
+            "source_mapping": {
+              "start": 5981,
+              "length": 7,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "jmul",
+                "source_mapping": {
+                  "start": 5937,
+                  "length": 640,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "ArithLib",
+                    "source_mapping": {
+                      "start": 2817,
+                      "length": 5702,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "jmul(uint256,uint256,uint256,uint256)"
+                }
+              }
+            },
+            "additional_fields": {
+              "target": "parameter",
+              "convention": "mixedCase"
+            }
+          }
+        ],
+        "description": "Parameter ArithLib.jmul(uint256,uint256,uint256,uint256)._n () is not in mixedCase\n",
+        "markdown": "Parameter [ArithLib.jmul(uint256,uint256,uint256,uint256)._n]() is not in mixedCase\n",
+        "first_markdown_element": "",
+        "id": "bbec11066416f100620edf153ce1d1435d7646cc3ea27b51faf0bc40716b061d",
+        "check": "naming-convention",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "_bz",
+            "source_mapping": {
+              "start": 5823,
+              "length": 8,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "jsub",
+                "source_mapping": {
+                  "start": 5759,
+                  "length": 172,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "ArithLib",
+                    "source_mapping": {
+                      "start": 2817,
+                      "length": 5702,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "jsub(uint256,uint256,uint256,uint256,uint256,uint256)"
+                }
+              }
+            },
+            "additional_fields": {
+              "target": "parameter",
+              "convention": "mixedCase"
+            }
+          }
+        ],
+        "description": "Parameter ArithLib.jsub(uint256,uint256,uint256,uint256,uint256,uint256)._bz () is not in mixedCase\n",
+        "markdown": "Parameter [ArithLib.jsub(uint256,uint256,uint256,uint256,uint256,uint256)._bz]() is not in mixedCase\n",
+        "first_markdown_element": "",
+        "id": "c4be727ec8b5aa5a29c854b6c66aa5ce7812b4c1124d78eae9014f908f160b6c",
+        "check": "naming-convention",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "_data",
+            "source_mapping": {
+              "start": 7902,
+              "length": 10,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "isbit",
+                "source_mapping": {
+                  "start": 7887,
+                  "length": 113,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "ArithLib",
+                    "source_mapping": {
+                      "start": 2817,
+                      "length": 5702,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "isbit(uint256,uint256)"
+                }
+              }
+            },
+            "additional_fields": {
+              "target": "parameter",
+              "convention": "mixedCase"
+            }
+          }
+        ],
+        "description": "Parameter ArithLib.isbit(uint256,uint256)._data () is not in mixedCase\n",
+        "markdown": "Parameter [ArithLib.isbit(uint256,uint256)._data]() is not in mixedCase\n",
+        "first_markdown_element": "",
+        "id": "c62c718abdbe31443b069c31e0b4718b4e64f2a1d41df136ddaf7a9692a379b2",
+        "check": "naming-convention",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "_bx",
+            "source_mapping": {
+              "start": 4349,
+              "length": 8,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "jadd",
+                "source_mapping": {
+                  "start": 4305,
+                  "length": 1444,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "ArithLib",
+                    "source_mapping": {
+                      "start": 2817,
+                      "length": 5702,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "jadd(uint256,uint256,uint256,uint256,uint256,uint256)"
+                }
+              }
+            },
+            "additional_fields": {
+              "target": "parameter",
+              "convention": "mixedCase"
+            }
+          }
+        ],
+        "description": "Parameter ArithLib.jadd(uint256,uint256,uint256,uint256,uint256,uint256)._bx () is not in mixedCase\n",
+        "markdown": "Parameter [ArithLib.jadd(uint256,uint256,uint256,uint256,uint256,uint256)._bx]() is not in mixedCase\n",
+        "first_markdown_element": "",
+        "id": "c713de36860b9b77b05ebc968dac05e152117376952ccccc7e87d3208e184e2b",
+        "check": "naming-convention",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "_q1",
+            "source_mapping": {
+              "start": 7686,
+              "length": 8,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "jdecompose",
+                "source_mapping": {
+                  "start": 7656,
+                  "length": 221,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "ArithLib",
+                    "source_mapping": {
+                      "start": 2817,
+                      "length": 5702,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "jdecompose(uint256,uint256,uint256)"
+                }
+              }
+            },
+            "additional_fields": {
+              "target": "parameter",
+              "convention": "mixedCase"
+            }
+          }
+        ],
+        "description": "Parameter ArithLib.jdecompose(uint256,uint256,uint256)._q1 () is not in mixedCase\n",
+        "markdown": "Parameter [ArithLib.jdecompose(uint256,uint256,uint256)._q1]() is not in mixedCase\n",
+        "first_markdown_element": "",
+        "id": "ca976fa0747e5bc09c8418b5768df7a9ccbe1ec67d6214be4785f08b28095860",
+        "check": "naming-convention",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "_pub1",
+            "source_mapping": {
+              "start": 8037,
+              "length": 10,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "hash_pubkey_to_pubkey",
+                "source_mapping": {
+                  "start": 8006,
+                  "length": 467,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "ArithLib",
+                    "source_mapping": {
+                      "start": 2817,
+                      "length": 5702,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "hash_pubkey_to_pubkey(uint256,uint256)"
+                }
+              }
+            },
+            "additional_fields": {
+              "target": "parameter",
+              "convention": "mixedCase"
+            }
+          }
+        ],
+        "description": "Parameter ArithLib.hash_pubkey_to_pubkey(uint256,uint256)._pub1 () is not in mixedCase\n",
+        "markdown": "Parameter [ArithLib.hash_pubkey_to_pubkey(uint256,uint256)._pub1]() is not in mixedCase\n",
+        "first_markdown_element": "",
+        "id": "cf17a9c432cd4271fbc497cd28e63cb118fe451615385dc5fdaa7db4c9451f0d",
+        "check": "naming-convention",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "_ay",
+            "source_mapping": {
+              "start": 4329,
+              "length": 8,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "jadd",
+                "source_mapping": {
+                  "start": 4305,
+                  "length": 1444,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "ArithLib",
+                    "source_mapping": {
+                      "start": 2817,
+                      "length": 5702,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "jadd(uint256,uint256,uint256,uint256,uint256,uint256)"
+                }
+              }
+            },
+            "additional_fields": {
+              "target": "parameter",
+              "convention": "mixedCase"
+            }
+          }
+        ],
+        "description": "Parameter ArithLib.jadd(uint256,uint256,uint256,uint256,uint256,uint256)._ay () is not in mixedCase\n",
+        "markdown": "Parameter [ArithLib.jadd(uint256,uint256,uint256,uint256,uint256,uint256)._ay]() is not in mixedCase\n",
+        "first_markdown_element": "",
+        "id": "dfd02e708142982d94052ee405a40dbd613b189139e3b285a68eeece5d204009",
+        "check": "naming-convention",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "Gy",
+            "source_mapping": {
+              "start": 3285,
+              "length": 105,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "ArithLib",
+                "source_mapping": {
+                  "start": 2817,
+                  "length": 5702,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              }
+            },
+            "additional_fields": {
+              "target": "variable",
+              "convention": "mixedCase"
+            }
+          }
+        ],
+        "description": "Variable ArithLib.Gy () is not in mixedCase\n",
+        "markdown": "Variable [ArithLib.Gy]() is not in mixedCase\n",
+        "first_markdown_element": "",
+        "id": "e34db953eb103dd0f167157620e0dbf605bb0f36f7a86da475d53660a16732d1",
+        "check": "naming-convention",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "_bz",
+            "source_mapping": {
+              "start": 5971,
+              "length": 8,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "jmul",
+                "source_mapping": {
+                  "start": 5937,
+                  "length": 640,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "ArithLib",
+                    "source_mapping": {
+                      "start": 2817,
+                      "length": 5702,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "jmul(uint256,uint256,uint256,uint256)"
+                }
+              }
+            },
+            "additional_fields": {
+              "target": "parameter",
+              "convention": "mixedCase"
+            }
+          }
+        ],
+        "description": "Parameter ArithLib.jmul(uint256,uint256,uint256,uint256)._bz () is not in mixedCase\n",
+        "markdown": "Parameter [ArithLib.jmul(uint256,uint256,uint256,uint256)._bz]() is not in mixedCase\n",
+        "first_markdown_element": "",
+        "id": "e36e461c855485b539c3dc0bb21fea3ce9bc59fa67ae4820e495179a6e9c07a7",
+        "check": "naming-convention",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "_ax",
+            "source_mapping": {
+              "start": 4319,
+              "length": 8,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "jadd",
+                "source_mapping": {
+                  "start": 4305,
+                  "length": 1444,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "ArithLib",
+                    "source_mapping": {
+                      "start": 2817,
+                      "length": 5702,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "jadd(uint256,uint256,uint256,uint256,uint256,uint256)"
+                }
+              }
+            },
+            "additional_fields": {
+              "target": "parameter",
+              "convention": "mixedCase"
+            }
+          }
+        ],
+        "description": "Parameter ArithLib.jadd(uint256,uint256,uint256,uint256,uint256,uint256)._ax () is not in mixedCase\n",
+        "markdown": "Parameter [ArithLib.jadd(uint256,uint256,uint256,uint256,uint256,uint256)._ax]() is not in mixedCase\n",
+        "first_markdown_element": "",
+        "id": "e3e6a8aa24af1e28891fd2b6812b60b4d7ea631c59c70ff79de88ff477ad6666",
+        "check": "naming-convention",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "_q2",
+            "source_mapping": {
+              "start": 7696,
+              "length": 8,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "jdecompose",
+                "source_mapping": {
+                  "start": 7656,
+                  "length": 221,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "ArithLib",
+                    "source_mapping": {
+                      "start": 2817,
+                      "length": 5702,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "jdecompose(uint256,uint256,uint256)"
+                }
+              }
+            },
+            "additional_fields": {
+              "target": "parameter",
+              "convention": "mixedCase"
+            }
+          }
+        ],
+        "description": "Parameter ArithLib.jdecompose(uint256,uint256,uint256)._q2 () is not in mixedCase\n",
+        "markdown": "Parameter [ArithLib.jdecompose(uint256,uint256,uint256)._q2]() is not in mixedCase\n",
+        "first_markdown_element": "",
+        "id": "e9df8afc56c76b0f7fcbda0c74e36919523262ac89ed864139be5ee271e7fa80",
+        "check": "naming-convention",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "_az",
+            "source_mapping": {
+              "start": 3545,
+              "length": 8,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "jdouble",
+                "source_mapping": {
+                  "start": 3508,
+                  "length": 791,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "ArithLib",
+                    "source_mapping": {
+                      "start": 2817,
+                      "length": 5702,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "jdouble(uint256,uint256,uint256)"
+                }
+              }
+            },
+            "additional_fields": {
+              "target": "parameter",
+              "convention": "mixedCase"
+            }
+          }
+        ],
+        "description": "Parameter ArithLib.jdouble(uint256,uint256,uint256)._az () is not in mixedCase\n",
+        "markdown": "Parameter [ArithLib.jdouble(uint256,uint256,uint256)._az]() is not in mixedCase\n",
+        "first_markdown_element": "",
+        "id": "eb15ecdb6b33db6773d8ccb88cc982900c61e5734b2fa68f9a07a1b88fafd8c5",
+        "check": "naming-convention",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "Gx",
+            "source_mapping": {
+              "start": 3174,
+              "length": 105,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "ArithLib",
+                "source_mapping": {
+                  "start": 2817,
+                  "length": 5702,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              }
+            }
+          },
+          {
+            "type": "contract",
+            "name": "ArithLib",
+            "source_mapping": {
+              "start": 2817,
+              "length": 5702,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            }
+          }
+        ],
+        "description": "ArithLib.Gx () is never used in ArithLib ()\n",
+        "markdown": "[ArithLib.Gx]() is never used in [ArithLib]()\n",
+        "first_markdown_element": "",
+        "id": "a61546f2aeb1fccb7a90ddec90d6f3587fdbbebaf5939d43cad5bde1a8385196",
+        "check": "unused-state",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "Gy",
+            "source_mapping": {
+              "start": 3285,
+              "length": 105,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "ArithLib",
+                "source_mapping": {
+                  "start": 2817,
+                  "length": 5702,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              }
+            }
+          },
+          {
+            "type": "contract",
+            "name": "ArithLib",
+            "source_mapping": {
+              "start": 2817,
+              "length": 5702,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            }
+          }
+        ],
+        "description": "ArithLib.Gy () is never used in ArithLib ()\n",
+        "markdown": "[ArithLib.Gy]() is never used in [ArithLib]()\n",
+        "first_markdown_element": "",
+        "id": "c93faad857b373a461f9598c6181c0ab924ed53733ecf3222a0a4ff37a598021",
+        "check": "unused-state",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "P",
+            "source_mapping": {
+              "start": 2842,
+              "length": 105,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "ArithLib",
+                "source_mapping": {
+                  "start": 2817,
+                  "length": 5702,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              }
+            }
+          }
+        ],
+        "description": "ArithLib.P () should be constant \n",
+        "markdown": "[ArithLib.P]() should be constant \n",
+        "first_markdown_element": "",
+        "id": "497eff3fd6269cd4f61c4c9885c24c2a833d94481238db23e2b02f477d2741c4",
+        "check": "constable-states",
+        "impact": "Optimization",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "Gy",
+            "source_mapping": {
+              "start": 3285,
+              "length": 105,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "ArithLib",
+                "source_mapping": {
+                  "start": 2817,
+                  "length": 5702,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              }
+            }
+          }
+        ],
+        "description": "ArithLib.Gy () should be constant \n",
+        "markdown": "[ArithLib.Gy]() should be constant \n",
+        "first_markdown_element": "",
+        "id": "7b7317446ab48b8cf0059eaa9fa2e8e96545b6b63014cacbb7f277d1cacdc856",
+        "check": "constable-states",
+        "impact": "Optimization",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "Gx",
+            "source_mapping": {
+              "start": 3174,
+              "length": 105,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "ArithLib",
+                "source_mapping": {
+                  "start": 2817,
+                  "length": 5702,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              }
+            }
+          }
+        ],
+        "description": "ArithLib.Gx () should be constant \n",
+        "markdown": "[ArithLib.Gx]() should be constant \n",
+        "first_markdown_element": "",
+        "id": "851513c3d2663c527aa254cba34d99474aa80b0d8339d88136353d79139e451c",
+        "check": "constable-states",
+        "impact": "Optimization",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "M",
+            "source_mapping": {
+              "start": 3064,
+              "length": 104,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "ArithLib",
+                "source_mapping": {
+                  "start": 2817,
+                  "length": 5702,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              }
+            }
+          }
+        ],
+        "description": "ArithLib.M () should be constant \n",
+        "markdown": "[ArithLib.M]() should be constant \n",
+        "first_markdown_element": "",
+        "id": "dd116c24f72269a612b5740efeaada627476f30520f115c5c5acdabf45ca7209",
+        "check": "constable-states",
+        "impact": "Optimization",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "N",
+            "source_mapping": {
+              "start": 2953,
+              "length": 105,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "ArithLib",
+                "source_mapping": {
+                  "start": 2817,
+                  "length": 5702,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              }
+            }
+          }
+        ],
+        "description": "ArithLib.N () should be constant \n",
+        "markdown": "[ArithLib.N]() should be constant \n",
+        "first_markdown_element": "",
+        "id": "e760bd3fdc76f7b4b2a311f1281df1947d1daf7a67672dae20c65aedd09d1b8a",
+        "check": "constable-states",
+        "impact": "Optimization",
+        "confidence": "High"
+      }
+    ]
+  }
+}

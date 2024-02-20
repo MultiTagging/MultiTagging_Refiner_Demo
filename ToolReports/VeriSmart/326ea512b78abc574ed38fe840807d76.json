@@ -1,0 +1,73 @@
+{
+  "fileName": "Benchmarks/Study_SamplesSet/326ea512b78abc574ed38fe840807d76.sol",
+  "baseName": "326ea512b78abc574ed38fe840807d76.sol",
+  "iter": 1,
+  "time": "0.084324",
+  "errMsg": null,
+  "result": [
+    {
+      "no": "1",
+      "kind": "ETH_LEAK",
+      "line": 158,
+      "signatures": [
+        {
+          "contractName": "Bob",
+          "methodName": "bobClaimsDeposit",
+          "argTypes": [
+            "bytes32", "uint256", "bytes32", "address", "address"
+          ]
+        }
+      ],
+      "exp": "msg.sender.transfer(_amount);",
+      "status": "proven"
+    },
+    {
+      "no": "2",
+      "kind": "ETH_LEAK",
+      "line": 183,
+      "signatures": [
+        {
+          "contractName": "Bob",
+          "methodName": "aliceClaimsDeposit",
+          "argTypes": [
+            "bytes32", "uint256", "address", "address", "bytes20"
+          ]
+        }
+      ],
+      "exp": "msg.sender.transfer(_amount);",
+      "status": "proven"
+    },
+    {
+      "no": "3",
+      "kind": "ETH_LEAK",
+      "line": 259,
+      "signatures": [
+        {
+          "contractName": "Bob",
+          "methodName": "bobClaimsPayment",
+          "argTypes": [
+            "bytes32", "uint256", "address", "address", "bytes20"
+          ]
+        }
+      ],
+      "exp": "msg.sender.transfer(_amount);",
+      "status": "proven"
+    },
+    {
+      "no": "4",
+      "kind": "ETH_LEAK",
+      "line": 284,
+      "signatures": [
+        {
+          "contractName": "Bob",
+          "methodName": "aliceClaimsPayment",
+          "argTypes": [
+            "bytes32", "uint256", "bytes32", "address", "address"
+          ]
+        }
+      ],
+      "exp": "msg.sender.transfer(_amount);",
+      "status": "proven"
+    }
+  ]
+}

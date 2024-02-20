@@ -1,0 +1,189 @@
+{
+  "fileName": "Benchmarks/Study_SamplesSet/98c5843db6cd7301cce0bcdaa611f10d.sol",
+  "baseName": "98c5843db6cd7301cce0bcdaa611f10d.sol",
+  "iter": 1564,
+  "time": "300.069774",
+  "errMsg": null,
+  "result": [
+    {
+      "no": "1",
+      "kind": "IO",
+      "line": 64,
+      "signatures": [
+        {
+          "contractName": "TuniuToken",
+          "methodName": "TuniuToken",
+          "argTypes": [ "uint256", "string", "string" ]
+        }
+      ],
+      "exp": "(10 ** uint256(decimals))",
+      "status": "proven"
+    },
+    {
+      "no": "2",
+      "kind": "IO",
+      "line": 64,
+      "signatures": [
+        {
+          "contractName": "TuniuToken",
+          "methodName": "TuniuToken",
+          "argTypes": [ "uint256", "string", "string" ]
+        }
+      ],
+      "exp": "(initialSupply * (10 ** uint256(decimals)))",
+      "status": "unproven"
+    },
+    {
+      "no": "3",
+      "kind": "IO",
+      "line": 86,
+      "signatures": [
+        {
+          "contractName": "TuniuToken",
+          "methodName": "transfer",
+          "argTypes": [ "address", "uint256" ]
+        },
+        {
+          "contractName": "TuniuToken",
+          "methodName": "transferFrom",
+          "argTypes": [ "address", "address", "uint256" ]
+        },
+        {
+          "contractName": "TuniuToken",
+          "methodName": "transferOwnershipWithBalance",
+          "argTypes": [ "address" ]
+        }
+      ],
+      "exp": "(balanceOf[_to] + _value)",
+      "status": "unproven"
+    },
+    {
+      "no": "4",
+      "kind": "IO",
+      "line": 89,
+      "signatures": [
+        {
+          "contractName": "TuniuToken",
+          "methodName": "transfer",
+          "argTypes": [ "address", "uint256" ]
+        },
+        {
+          "contractName": "TuniuToken",
+          "methodName": "transferFrom",
+          "argTypes": [ "address", "address", "uint256" ]
+        }
+      ],
+      "exp": "(balanceOf[_from] + balanceOf[_to])",
+      "status": "unproven"
+    },
+    {
+      "no": "5",
+      "kind": "IO",
+      "line": 90,
+      "signatures": [
+        {
+          "contractName": "TuniuToken",
+          "methodName": "transfer",
+          "argTypes": [ "address", "uint256" ]
+        },
+        {
+          "contractName": "TuniuToken",
+          "methodName": "transferFrom",
+          "argTypes": [ "address", "address", "uint256" ]
+        },
+        {
+          "contractName": "TuniuToken",
+          "methodName": "transferOwnershipWithBalance",
+          "argTypes": [ "address" ]
+        }
+      ],
+      "exp": "(balanceOf[_from] - _value)",
+      "status": "proven"
+    },
+    {
+      "no": "6",
+      "kind": "IO",
+      "line": 91,
+      "signatures": [
+        {
+          "contractName": "TuniuToken",
+          "methodName": "transfer",
+          "argTypes": [ "address", "uint256" ]
+        },
+        {
+          "contractName": "TuniuToken",
+          "methodName": "transferFrom",
+          "argTypes": [ "address", "address", "uint256" ]
+        },
+        {
+          "contractName": "TuniuToken",
+          "methodName": "transferOwnershipWithBalance",
+          "argTypes": [ "address" ]
+        }
+      ],
+      "exp": "(balanceOf[_to] + _value)",
+      "status": "proven"
+    },
+    {
+      "no": "7",
+      "kind": "IO",
+      "line": 95,
+      "signatures": [
+        {
+          "contractName": "TuniuToken",
+          "methodName": "transfer",
+          "argTypes": [ "address", "uint256" ]
+        },
+        {
+          "contractName": "TuniuToken",
+          "methodName": "transferFrom",
+          "argTypes": [ "address", "address", "uint256" ]
+        }
+      ],
+      "exp": "(balanceOf[_from] + balanceOf[_to])",
+      "status": "unproven"
+    },
+    {
+      "no": "8",
+      "kind": "IO",
+      "line": 123,
+      "signatures": [
+        {
+          "contractName": "TuniuToken",
+          "methodName": "transferFrom",
+          "argTypes": [ "address", "address", "uint256" ]
+        }
+      ],
+      "exp": "(allowance[_from][msg.sender] - _value)",
+      "status": "proven"
+    },
+    {
+      "no": "9",
+      "kind": "KA",
+      "line": 29,
+      "signatures": [
+        {
+          "contractName": "TuniuToken",
+          "methodName": "kill",
+          "argTypes": []
+        }
+      ],
+      "exp": "selfdestruct(owner);",
+      "status": "proven"
+    },
+    {
+      "no": "10",
+      "kind": "ETH_LEAK",
+      "line": 29,
+      "signatures": [
+        {
+          "contractName": "TuniuToken",
+          "methodName": "kill",
+          "argTypes": []
+        }
+      ],
+      "exp": "selfdestruct(owner);",
+      "status": "proven"
+    }
+  ]
+}

@@ -1,0 +1,367 @@
+{
+  "success": true,
+  "error": null,
+  "results": {
+    "detectors": [
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "send",
+            "source_mapping": {
+              "start": 205,
+              "length": 227,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "testingToken",
+                "source_mapping": {
+                  "start": 25,
+                  "length": 409,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              },
+              "signature": "send(address,uint256)"
+            }
+          },
+          {
+            "type": "node",
+            "name": "_value < 0",
+            "source_mapping": {
+              "start": 350,
+              "length": 8,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "send",
+                "source_mapping": {
+                  "start": 205,
+                  "length": 227,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "testingToken",
+                    "source_mapping": {
+                      "start": 25,
+                      "length": 409,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "send(address,uint256)"
+                }
+              }
+            }
+          }
+        ],
+        "description": "testingToken.send(address,uint256) () contains a tautology or contradiction:\n\t- _value < 0 ()\n",
+        "markdown": "[testingToken.send(address,uint256)]() contains a tautology or contradiction:\n\t- [_value < 0]()\n",
+        "first_markdown_element": "",
+        "id": "bbd832545cfc238564510d6404a6b7a1c176a3fd89163dba72148d29c481d7e2",
+        "check": "tautology",
+        "impact": "Medium",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "node",
+            "name": "",
+            "source_mapping": {
+              "start": 286,
+              "length": 5,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "send",
+                "source_mapping": {
+                  "start": 205,
+                  "length": 227,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "testingToken",
+                    "source_mapping": {
+                      "start": 25,
+                      "length": 409,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "send(address,uint256)"
+                }
+              }
+            }
+          }
+        ],
+        "description": "Deprecated standard detected THROW ():\n\t- Usage of \"throw\" should be replaced with \"revert()\"\n",
+        "markdown": "Deprecated standard detected [THROW]():\n\t- Usage of \"throw\" should be replaced with \"revert()\"\n",
+        "first_markdown_element": "",
+        "id": "f5556cf1c70b64b9e4b1fc32044dd970b5f2c8b9fc21b7971fda01971033f2d5",
+        "check": "deprecated-standards",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "pragma",
+            "name": "^0.4.8",
+            "source_mapping": {
+              "start": 0,
+              "length": 23,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "directive": [
+                "solidity",
+                "^",
+                "0.4",
+                ".8"
+              ]
+            }
+          }
+        ],
+        "description": "Pragma version^0.4.8 () allows old versions\n",
+        "markdown": "Pragma version[^0.4.8]() allows old versions\n",
+        "first_markdown_element": "",
+        "id": "dd43bca9b08bc1fa7b94a3e619671f3c2c98a72b8b3bf0caf1e1f86665ec4569",
+        "check": "solc-version",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [],
+        "description": "solc-0.4.8 is not recommended for deployment\n",
+        "markdown": "solc-0.4.8 is not recommended for deployment\n",
+        "first_markdown_element": "",
+        "id": "ebbd8e423b3c73a93e118f8daed7c9ac33b0d525351f79b5ea41076caa3c1bc5",
+        "check": "solc-version",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "contract",
+            "name": "testingToken",
+            "source_mapping": {
+              "start": 25,
+              "length": 409,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "additional_fields": {
+              "target": "contract",
+              "convention": "CapWords"
+            }
+          }
+        ],
+        "description": "Contract testingToken () is not in CapWords\n",
+        "markdown": "Contract [testingToken]() is not in CapWords\n",
+        "first_markdown_element": "",
+        "id": "24a6701252f85bf892e90386c62ddf0185d21c0e41b340f4a667d83ffa8b5033",
+        "check": "naming-convention",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "_to",
+            "source_mapping": {
+              "start": 219,
+              "length": 11,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "send",
+                "source_mapping": {
+                  "start": 205,
+                  "length": 227,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "testingToken",
+                    "source_mapping": {
+                      "start": 25,
+                      "length": 409,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "send(address,uint256)"
+                }
+              }
+            },
+            "additional_fields": {
+              "target": "parameter",
+              "convention": "mixedCase"
+            }
+          }
+        ],
+        "description": "Parameter testingToken.send(address,uint256)._to () is not in mixedCase\n",
+        "markdown": "Parameter [testingToken.send(address,uint256)._to]() is not in mixedCase\n",
+        "first_markdown_element": "",
+        "id": "c0ae1e6195a288bd214794beb7a538a48c65ce9d669b6edecc3754d844eebeca",
+        "check": "naming-convention",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "_value",
+            "source_mapping": {
+              "start": 232,
+              "length": 14,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "send",
+                "source_mapping": {
+                  "start": 205,
+                  "length": 227,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "testingToken",
+                    "source_mapping": {
+                      "start": 25,
+                      "length": 409,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "send(address,uint256)"
+                }
+              }
+            },
+            "additional_fields": {
+              "target": "parameter",
+              "convention": "mixedCase"
+            }
+          }
+        ],
+        "description": "Parameter testingToken.send(address,uint256)._value () is not in mixedCase\n",
+        "markdown": "Parameter [testingToken.send(address,uint256)._value]() is not in mixedCase\n",
+        "first_markdown_element": "",
+        "id": "caae542b24d839f6149758d57379cb672634ec34caab9425b6bd1ad7d7945649",
+        "check": "naming-convention",
+        "impact": "Informational",
+        "confidence": "High"
+      }
+    ]
+  }
+}

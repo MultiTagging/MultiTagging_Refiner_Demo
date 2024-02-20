@@ -1,0 +1,835 @@
+{
+  "success": true,
+  "error": null,
+  "results": {
+    "detectors": [
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "_projectAddress",
+            "source_mapping": {
+              "start": 4132,
+              "length": 23,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "addMetaProject",
+                "source_mapping": {
+                  "start": 4108,
+                  "length": 118,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "PassDao",
+                    "source_mapping": {
+                      "start": 851,
+                      "length": 3956,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "addMetaProject(address)"
+                }
+              }
+            }
+          },
+          {
+            "type": "node",
+            "name": "metaProject = _projectAddress",
+            "source_mapping": {
+              "start": 4190,
+              "length": 29,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "addMetaProject",
+                "source_mapping": {
+                  "start": 4108,
+                  "length": 118,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "PassDao",
+                    "source_mapping": {
+                      "start": 851,
+                      "length": 3956,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "addMetaProject(address)"
+                }
+              }
+            }
+          }
+        ],
+        "description": "PassDao.addMetaProject(address)._projectAddress () lacks a zero-check on :\n\t\t- metaProject = _projectAddress ()\n",
+        "markdown": "[PassDao.addMetaProject(address)._projectAddress]() lacks a zero-check on :\n\t\t- [metaProject = _projectAddress]()\n",
+        "first_markdown_element": "",
+        "id": "83dba337d05eee1d87706c5c1e8a63196789ba30e38957160b0afe0186bf14ab",
+        "check": "missing-zero-check",
+        "impact": "Low",
+        "confidence": "Medium"
+      },
+      {
+        "elements": [
+          {
+            "type": "node",
+            "name": "",
+            "source_mapping": {
+              "start": 2667,
+              "length": 5,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "onlyPassCommitteeRoom",
+                "source_mapping": {
+                  "start": 2544,
+                  "length": 133,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "PassDao",
+                    "source_mapping": {
+                      "start": 851,
+                      "length": 3956,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "onlyPassCommitteeRoom()"
+                }
+              }
+            }
+          }
+        ],
+        "description": "Deprecated standard detected THROW ():\n\t- Usage of \"throw\" should be replaced with \"revert()\"\n",
+        "markdown": "Deprecated standard detected [THROW]():\n\t- Usage of \"throw\" should be replaced with \"revert()\"\n",
+        "first_markdown_element": "",
+        "id": "f5556cf1c70b64b9e4b1fc32044dd970b5f2c8b9fc21b7971fda01971033f2d5",
+        "check": "deprecated-standards",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "pragma",
+            "name": "^0.4.8",
+            "source_mapping": {
+              "start": 0,
+              "length": 23,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "directive": [
+                "solidity",
+                "^",
+                "0.4",
+                ".8"
+              ]
+            }
+          }
+        ],
+        "description": "Pragma version^0.4.8 () allows old versions\n",
+        "markdown": "Pragma version[^0.4.8]() allows old versions\n",
+        "first_markdown_element": "",
+        "id": "dd43bca9b08bc1fa7b94a3e619671f3c2c98a72b8b3bf0caf1e1f86665ec4569",
+        "check": "solc-version",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [],
+        "description": "solc-0.4.8 is not recommended for deployment\n",
+        "markdown": "solc-0.4.8 is not recommended for deployment\n",
+        "first_markdown_element": "",
+        "id": "ebbd8e423b3c73a93e118f8daed7c9ac33b0d525351f79b5ea41076caa3c1bc5",
+        "check": "solc-version",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "_newShareManager",
+            "source_mapping": {
+              "start": 3226,
+              "length": 24,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "upgrade",
+                "source_mapping": {
+                  "start": 3164,
+                  "length": 829,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "PassDao",
+                    "source_mapping": {
+                      "start": 851,
+                      "length": 3956,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "upgrade(address,address,address)"
+                }
+              }
+            },
+            "additional_fields": {
+              "target": "parameter",
+              "convention": "mixedCase"
+            }
+          }
+        ],
+        "description": "Parameter PassDao.upgrade(address,address,address)._newShareManager () is not in mixedCase\n",
+        "markdown": "Parameter [PassDao.upgrade(address,address,address)._newShareManager]() is not in mixedCase\n",
+        "first_markdown_element": "",
+        "id": "17eb1f9c31ef63f776760efccd67329046f47e55faa21c04e35f79a55499ed50",
+        "check": "naming-convention",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "ActualCommitteeRoom",
+            "source_mapping": {
+              "start": 1976,
+              "length": 108,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "PassDao",
+                "source_mapping": {
+                  "start": 851,
+                  "length": 3956,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              },
+              "signature": "ActualCommitteeRoom()"
+            },
+            "additional_fields": {
+              "target": "function",
+              "convention": "mixedCase"
+            }
+          }
+        ],
+        "description": "Function PassDao.ActualCommitteeRoom() () is not in mixedCase\n",
+        "markdown": "Function [PassDao.ActualCommitteeRoom()]() is not in mixedCase\n",
+        "first_markdown_element": "",
+        "id": "1b73adc9bc6cf4ee07bb34159c7d15ed384b7b109cd754b0292a71bef7bd5c18",
+        "check": "naming-convention",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "struct",
+            "name": "revision",
+            "source_mapping": {
+              "start": 879,
+              "length": 361,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "PassDao",
+                "source_mapping": {
+                  "start": 851,
+                  "length": 3956,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              }
+            },
+            "additional_fields": {
+              "target": "structure",
+              "convention": "CapWords"
+            }
+          }
+        ],
+        "description": "Struct PassDao.revision () is not in CapWords\n",
+        "markdown": "Struct [PassDao.revision]() is not in CapWords\n",
+        "first_markdown_element": "",
+        "id": "264f96ce9f7aa83325b3cd90422989430caefb556e20620b61785dfe99c9832c",
+        "check": "naming-convention",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "MetaProject",
+            "source_mapping": {
+              "start": 2127,
+              "length": 85,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "PassDao",
+                "source_mapping": {
+                  "start": 851,
+                  "length": 3956,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              },
+              "signature": "MetaProject()"
+            },
+            "additional_fields": {
+              "target": "function",
+              "convention": "mixedCase"
+            }
+          }
+        ],
+        "description": "Function PassDao.MetaProject() () is not in mixedCase\n",
+        "markdown": "Function [PassDao.MetaProject()]() is not in mixedCase\n",
+        "first_markdown_element": "",
+        "id": "3a8e1e46e668bdda2c0d6035ef5e078460c010b1eb04e769dfe2140571b667fc",
+        "check": "naming-convention",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "_projectAddress",
+            "source_mapping": {
+              "start": 4395,
+              "length": 23,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "addProject",
+                "source_mapping": {
+                  "start": 4375,
+                  "length": 425,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "PassDao",
+                    "source_mapping": {
+                      "start": 851,
+                      "length": 3956,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "addProject(address)"
+                }
+              }
+            },
+            "additional_fields": {
+              "target": "parameter",
+              "convention": "mixedCase"
+            }
+          }
+        ],
+        "description": "Parameter PassDao.addProject(address)._projectAddress () is not in mixedCase\n",
+        "markdown": "Parameter [PassDao.addProject(address)._projectAddress]() is not in mixedCase\n",
+        "first_markdown_element": "",
+        "id": "53f95b721f3eaedfcd170c2c3a042b68c76eab978965b8e55b3c02ab792d3bb7",
+        "check": "naming-convention",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "struct",
+            "name": "project",
+            "source_mapping": {
+              "start": 1331,
+              "length": 181,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "PassDao",
+                "source_mapping": {
+                  "start": 851,
+                  "length": 3956,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              }
+            },
+            "additional_fields": {
+              "target": "structure",
+              "convention": "CapWords"
+            }
+          }
+        ],
+        "description": "Struct PassDao.project () is not in CapWords\n",
+        "markdown": "Struct [PassDao.project]() is not in CapWords\n",
+        "first_markdown_element": "",
+        "id": "9c07e63f202c03a087cb2afa2e1659d888be86330d125149be59179e42a7a921",
+        "check": "naming-convention",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "_newTokenManager",
+            "source_mapping": {
+              "start": 3261,
+              "length": 24,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "upgrade",
+                "source_mapping": {
+                  "start": 3164,
+                  "length": 829,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "PassDao",
+                    "source_mapping": {
+                      "start": 851,
+                      "length": 3956,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "upgrade(address,address,address)"
+                }
+              }
+            },
+            "additional_fields": {
+              "target": "parameter",
+              "convention": "mixedCase"
+            }
+          }
+        ],
+        "description": "Parameter PassDao.upgrade(address,address,address)._newTokenManager () is not in mixedCase\n",
+        "markdown": "Parameter [PassDao.upgrade(address,address,address)._newTokenManager]() is not in mixedCase\n",
+        "first_markdown_element": "",
+        "id": "ba09a7c239bcef335b8a27324d43b79725c2e06eb2bac4b18645a1151af1ef5d",
+        "check": "naming-convention",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "_newCommitteeRoom",
+            "source_mapping": {
+              "start": 3190,
+              "length": 25,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "upgrade",
+                "source_mapping": {
+                  "start": 3164,
+                  "length": 829,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "PassDao",
+                    "source_mapping": {
+                      "start": 851,
+                      "length": 3956,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "upgrade(address,address,address)"
+                }
+              }
+            },
+            "additional_fields": {
+              "target": "parameter",
+              "convention": "mixedCase"
+            }
+          }
+        ],
+        "description": "Parameter PassDao.upgrade(address,address,address)._newCommitteeRoom () is not in mixedCase\n",
+        "markdown": "Parameter [PassDao.upgrade(address,address,address)._newCommitteeRoom]() is not in mixedCase\n",
+        "first_markdown_element": "",
+        "id": "ba8e9c592c8a4d617f5ebd41bf814a1173797016c3ac07e2146213b28ebb97c3",
+        "check": "naming-convention",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "ActualShareManager",
+            "source_mapping": {
+              "start": 2262,
+              "length": 106,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "PassDao",
+                "source_mapping": {
+                  "start": 851,
+                  "length": 3956,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              },
+              "signature": "ActualShareManager()"
+            },
+            "additional_fields": {
+              "target": "function",
+              "convention": "mixedCase"
+            }
+          }
+        ],
+        "description": "Function PassDao.ActualShareManager() () is not in mixedCase\n",
+        "markdown": "Function [PassDao.ActualShareManager()]() is not in mixedCase\n",
+        "first_markdown_element": "",
+        "id": "c9eb7d6ea9cb9de9b13384cb7697df251ea8890b5c0a8473e62653040324bdf6",
+        "check": "naming-convention",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "_projectAddress",
+            "source_mapping": {
+              "start": 4132,
+              "length": 23,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "addMetaProject",
+                "source_mapping": {
+                  "start": 4108,
+                  "length": 118,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "PassDao",
+                    "source_mapping": {
+                      "start": 851,
+                      "length": 3956,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "addMetaProject(address)"
+                }
+              }
+            },
+            "additional_fields": {
+              "target": "parameter",
+              "convention": "mixedCase"
+            }
+          }
+        ],
+        "description": "Parameter PassDao.addMetaProject(address)._projectAddress () is not in mixedCase\n",
+        "markdown": "Parameter [PassDao.addMetaProject(address)._projectAddress]() is not in mixedCase\n",
+        "first_markdown_element": "",
+        "id": "e9df6b81162f994ac2d4a216bbe1e2a11deb13753e1a91938d92cff67e0b195c",
+        "check": "naming-convention",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "ActualTokenManager",
+            "source_mapping": {
+              "start": 2418,
+              "length": 106,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "PassDao",
+                "source_mapping": {
+                  "start": 851,
+                  "length": 3956,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              },
+              "signature": "ActualTokenManager()"
+            },
+            "additional_fields": {
+              "target": "function",
+              "convention": "mixedCase"
+            }
+          }
+        ],
+        "description": "Function PassDao.ActualTokenManager() () is not in mixedCase\n",
+        "markdown": "Function [PassDao.ActualTokenManager()]() is not in mixedCase\n",
+        "first_markdown_element": "",
+        "id": "fd7fa73d2c8cfd5f420b70b339df873c05f6abe86a5672fd8510cf2611ae32f2",
+        "check": "naming-convention",
+        "impact": "Informational",
+        "confidence": "High"
+      }
+    ]
+  }
+}

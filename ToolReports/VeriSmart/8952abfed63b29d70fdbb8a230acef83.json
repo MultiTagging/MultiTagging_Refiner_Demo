@@ -1,0 +1,195 @@
+{
+  "fileName": "Benchmarks/Study_SamplesSet/8952abfed63b29d70fdbb8a230acef83.sol",
+  "baseName": "8952abfed63b29d70fdbb8a230acef83.sol",
+  "iter": 211,
+  "time": "301.776603",
+  "errMsg": null,
+  "result": [
+    {
+      "no": "1",
+      "kind": "IO",
+      "line": 13,
+      "signatures": [
+        {
+          "contractName": "CryptoCurrencyNetwork",
+          "methodName": "@fallback",
+          "argTypes": []
+        },
+        {
+          "contractName": "CryptoCurrencyNetwork",
+          "methodName": "getTokens",
+          "argTypes": []
+        }
+      ],
+      "exp": "(a * b)",
+      "status": "unproven"
+    },
+    {
+      "no": "2",
+      "kind": "IO",
+      "line": 25,
+      "signatures": [
+        {
+          "contractName": "CryptoCurrencyNetwork",
+          "methodName": "CryptoCurrencyNetwork",
+          "argTypes": []
+        },
+        {
+          "contractName": "CryptoCurrencyNetwork",
+          "methodName": "burn",
+          "argTypes": [ "uint256" ]
+        },
+        {
+          "contractName": "CryptoCurrencyNetwork",
+          "methodName": "distr",
+          "argTypes": [ "address", "uint256" ]
+        },
+        {
+          "contractName": "CryptoCurrencyNetwork",
+          "methodName": "getTokens",
+          "argTypes": []
+        },
+        {
+          "contractName": "CryptoCurrencyNetwork",
+          "methodName": "transfer",
+          "argTypes": [ "address", "uint256" ]
+        },
+        {
+          "contractName": "CryptoCurrencyNetwork",
+          "methodName": "transferFrom",
+          "argTypes": [ "address", "address", "uint256" ]
+        }
+      ],
+      "exp": "(a - b)",
+      "status": "proven"
+    },
+    {
+      "no": "3",
+      "kind": "IO",
+      "line": 29,
+      "signatures": [
+        {
+          "contractName": "CryptoCurrencyNetwork",
+          "methodName": "distr",
+          "argTypes": [ "address", "uint256" ]
+        },
+        {
+          "contractName": "CryptoCurrencyNetwork",
+          "methodName": "getTokens",
+          "argTypes": []
+        },
+        {
+          "contractName": "CryptoCurrencyNetwork",
+          "methodName": "transfer",
+          "argTypes": [ "address", "uint256" ]
+        },
+        {
+          "contractName": "CryptoCurrencyNetwork",
+          "methodName": "transferFrom",
+          "argTypes": [ "address", "address", "uint256" ]
+        }
+      ],
+      "exp": "(a + b)",
+      "status": "unproven"
+    },
+    {
+      "no": "4",
+      "kind": "IO",
+      "line": 172,
+      "signatures": [
+        {
+          "contractName": "CryptoCurrencyNetwork",
+          "methodName": "transfer",
+          "argTypes": [ "address", "uint256" ]
+        },
+        {
+          "contractName": "CryptoCurrencyNetwork",
+          "methodName": "transferFrom",
+          "argTypes": [ "address", "address", "uint256" ]
+        }
+      ],
+      "exp": "(size + 4)",
+      "status": "proven"
+    },
+    {
+      "no": "5",
+      "kind": "IO",
+      "line": 176,
+      "signatures": [
+        {
+          "contractName": "CryptoCurrencyNetwork",
+          "methodName": "transfer",
+          "argTypes": [ "address", "uint256" ]
+        }
+      ],
+      "exp": "(2 * 32)",
+      "status": "proven"
+    },
+    {
+      "no": "6",
+      "kind": "IO",
+      "line": 186,
+      "signatures": [
+        {
+          "contractName": "CryptoCurrencyNetwork",
+          "methodName": "transferFrom",
+          "argTypes": [ "address", "address", "uint256" ]
+        }
+      ],
+      "exp": "(3 * 32)",
+      "status": "proven"
+    },
+    {
+      "no": "7",
+      "kind": "DZ",
+      "line": 14,
+      "signatures": [
+        {
+          "contractName": "CryptoCurrencyNetwork",
+          "methodName": "@fallback",
+          "argTypes": []
+        },
+        {
+          "contractName": "CryptoCurrencyNetwork",
+          "methodName": "getTokens",
+          "argTypes": []
+        }
+      ],
+      "exp": "(c / a)",
+      "status": "unproven"
+    },
+    {
+      "no": "8",
+      "kind": "DZ",
+      "line": 19,
+      "signatures": [
+        {
+          "contractName": "CryptoCurrencyNetwork",
+          "methodName": "@fallback",
+          "argTypes": []
+        },
+        {
+          "contractName": "CryptoCurrencyNetwork",
+          "methodName": "getTokens",
+          "argTypes": []
+        }
+      ],
+      "exp": "(a / b)",
+      "status": "proven"
+    },
+    {
+      "no": "9",
+      "kind": "ETH_LEAK",
+      "line": 217,
+      "signatures": [
+        {
+          "contractName": "CryptoCurrencyNetwork",
+          "methodName": "withdraw",
+          "argTypes": []
+        }
+      ],
+      "exp": "owner.transfer(etherBalance);",
+      "status": "unproven"
+    }
+  ]
+}

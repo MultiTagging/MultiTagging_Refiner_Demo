@@ -1,0 +1,177 @@
+{
+  "fileName": "Benchmarks/Study_SamplesSet/7346dff085b523d2820f65c1f9065fb0.sol",
+  "baseName": "7346dff085b523d2820f65c1f9065fb0.sol",
+  "iter": 30,
+  "time": "306.292667",
+  "errMsg": null,
+  "result": [
+    {
+      "no": "1",
+      "kind": "IO",
+      "line": 75,
+      "signatures": [
+        {
+          "contractName": "EthMashTower",
+          "methodName": "userRegister",
+          "argTypes": []
+        }
+      ],
+      "exp": "(registered + 1)",
+      "status": "proven"
+    },
+    {
+      "no": "2",
+      "kind": "IO",
+      "line": 77,
+      "signatures": [
+        {
+          "contractName": "EthMashTower",
+          "methodName": "userRegister",
+          "argTypes": []
+        }
+      ],
+      "exp": "(round + 1)",
+      "status": "unproven"
+    },
+    {
+      "no": "3",
+      "kind": "IO",
+      "line": 83,
+      "signatures": [
+        {
+          "contractName": "EthMashTower",
+          "methodName": "userRegister",
+          "argTypes": []
+        }
+      ],
+      "exp": "((uint256(blockhash((block.number - 1))) + uint256(participants[round][first])) + uint256(participants[round][second]))",
+      "status": "unproven"
+    },
+    {
+      "no": "4",
+      "kind": "IO",
+      "line": 83,
+      "signatures": [
+        {
+          "contractName": "EthMashTower",
+          "methodName": "userRegister",
+          "argTypes": []
+        }
+      ],
+      "exp": "(block.number - 1)",
+      "status": "unproven"
+    },
+    {
+      "no": "5",
+      "kind": "IO",
+      "line": 83,
+      "signatures": [
+        {
+          "contractName": "EthMashTower",
+          "methodName": "userRegister",
+          "argTypes": []
+        }
+      ],
+      "exp": "(uint256(blockhash((block.number - 1))) + uint256(participants[round][first]))",
+      "status": "unproven"
+    },
+    {
+      "no": "6",
+      "kind": "IO",
+      "line": 87,
+      "signatures": [
+        {
+          "contractName": "EthMashTower",
+          "methodName": "userRegister",
+          "argTypes": []
+        }
+      ],
+      "exp": "(withdrawals[participants[round][first]] + reward)",
+      "status": "unproven"
+    },
+    {
+      "no": "7",
+      "kind": "IO",
+      "line": 91,
+      "signatures": [
+        {
+          "contractName": "EthMashTower",
+          "methodName": "userRegister",
+          "argTypes": []
+        }
+      ],
+      "exp": "(withdrawals[participants[round][second]] + reward)",
+      "status": "unproven"
+    },
+    {
+      "no": "8",
+      "kind": "DZ",
+      "line": 85,
+      "signatures": [
+        {
+          "contractName": "EthMashTower",
+          "methodName": "userRegister",
+          "argTypes": []
+        }
+      ],
+      "exp": "(random % 2)",
+      "status": "proven"
+    },
+    {
+      "no": "9",
+      "kind": "KA",
+      "line": 30,
+      "signatures": [
+        {
+          "contractName": "EthMashTower",
+          "methodName": "ownerDestroy",
+          "argTypes": []
+        }
+      ],
+      "exp": "selfdestruct(owner);",
+      "status": "proven"
+    },
+    {
+      "no": "10",
+      "kind": "ETH_LEAK",
+      "line": 26,
+      "signatures": [
+        {
+          "contractName": "EthMashTower",
+          "methodName": "ownerWithdraw",
+          "argTypes": [ "uint256" ]
+        }
+      ],
+      "exp": "owner.transfer(amount);",
+      "status": "proven"
+    },
+    {
+      "no": "11",
+      "kind": "ETH_LEAK",
+      "line": 30,
+      "signatures": [
+        {
+          "contractName": "EthMashTower",
+          "methodName": "ownerDestroy",
+          "argTypes": []
+        }
+      ],
+      "exp": "selfdestruct(owner);",
+      "status": "proven"
+    },
+    {
+      "no": "12",
+      "kind": "ETH_LEAK",
+      "line": 49,
+      "signatures": [
+        {
+          "contractName": "EthMashTower",
+          "methodName": "userWithdraw",
+          "argTypes": []
+        }
+      ],
+      "exp": "msg.sender.transfer(amount);",
+      "status": "unproven"
+    }
+  ]
+}

@@ -1,0 +1,468 @@
+{
+  "fileName": "Benchmarks/Study_SamplesSet/7492b42303855e72ec58f4750580ffc3.sol",
+  "baseName": "7492b42303855e72ec58f4750580ffc3.sol",
+  "iter": 115,
+  "time": "312.029345",
+  "errMsg": null,
+  "result": [
+    {
+      "no": "1",
+      "kind": "IO",
+      "line": 71,
+      "signatures": [
+        {
+          "contractName": "SmartPyramid",
+          "methodName": "getInfo",
+          "argTypes": [ "address" ]
+        },
+        {
+          "contractName": "SmartPyramid",
+          "methodName": "withdraw",
+          "argTypes": []
+        }
+      ],
+      "exp": "(_a * _b)",
+      "status": "unproven"
+    },
+    {
+      "no": "2",
+      "kind": "IO",
+      "line": 86,
+      "signatures": [
+        {
+          "contractName": "SmartPyramid",
+          "methodName": "getInfo",
+          "argTypes": [ "address" ]
+        },
+        {
+          "contractName": "SmartPyramid",
+          "methodName": "payDay",
+          "argTypes": []
+        },
+        {
+          "contractName": "SmartPyramid",
+          "methodName": "withdraw",
+          "argTypes": []
+        }
+      ],
+      "exp": "(_a - _b)",
+      "status": "proven"
+    },
+    {
+      "no": "3",
+      "kind": "IO",
+      "line": 92,
+      "signatures": [
+        {
+          "contractName": "SmartPyramid",
+          "methodName": "payDay",
+          "argTypes": []
+        }
+      ],
+      "exp": "(_a + _b)",
+      "status": "unproven"
+    },
+    {
+      "no": "4",
+      "kind": "IO",
+      "line": 125,
+      "signatures": [
+        {
+          "contractName": "InvestorsStorage",
+          "methodName": "updateInfo",
+          "argTypes": [ "address", "uint256" ]
+        }
+      ],
+      "exp": "(investors[_address].deposit + _value)",
+      "status": "unproven"
+    },
+    {
+      "no": "5",
+      "kind": "IO",
+      "line": 139,
+      "signatures": [
+        {
+          "contractName": "InvestorsStorage",
+          "methodName": "getInterest",
+          "argTypes": [ "address" ]
+        }
+      ],
+      "exp": "(123 + ((block.timestamp - investors[_address].checkpoint) / 86400))",
+      "status": "proven"
+    },
+    {
+      "no": "6",
+      "kind": "IO",
+      "line": 139,
+      "signatures": [
+        {
+          "contractName": "InvestorsStorage",
+          "methodName": "getInterest",
+          "argTypes": [ "address" ]
+        }
+      ],
+      "exp": "(block.timestamp - investors[_address].checkpoint)",
+      "status": "unproven"
+    },
+    {
+      "no": "7",
+      "kind": "IO",
+      "line": 207,
+      "signatures": [
+        {
+          "contractName": "SmartPyramid",
+          "methodName": "getInfo",
+          "argTypes": [ "address" ]
+        }
+      ],
+      "exp": "(x.c(_address) + 600)",
+      "status": "unproven"
+    },
+    {
+      "no": "8",
+      "kind": "IO",
+      "line": 228,
+      "signatures": [
+        {
+          "contractName": "SmartPyramid",
+          "methodName": "invest",
+          "argTypes": []
+        }
+      ],
+      "exp": "(msg.value * 4)",
+      "status": "unproven"
+    },
+    {
+      "no": "9",
+      "kind": "IO",
+      "line": 254,
+      "signatures": [
+        {
+          "contractName": "SmartPyramid",
+          "methodName": "withdraw",
+          "argTypes": []
+        }
+      ],
+      "exp": "(x.c(msg.sender) + 600)",
+      "status": "unproven"
+    },
+    {
+      "no": "10",
+      "kind": "IO",
+      "line": 288,
+      "signatures": [
+        {
+          "contractName": "SmartPyramid",
+          "methodName": "payDay",
+          "argTypes": []
+        }
+      ],
+      "exp": "(block.timestamp - 1538388000)",
+      "status": "unproven"
+    },
+    {
+      "no": "11",
+      "kind": "IO",
+      "line": 292,
+      "signatures": [
+        {
+          "contractName": "SmartPyramid",
+          "methodName": "payDay",
+          "argTypes": []
+        }
+      ],
+      "exp": "(i + 1)",
+      "status": "proven"
+    },
+    {
+      "no": "12",
+      "kind": "IO",
+      "line": 293,
+      "signatures": [
+        {
+          "contractName": "SmartPyramid",
+          "methodName": "payDay",
+          "argTypes": []
+        }
+      ],
+      "exp": "(i + 1)",
+      "status": "proven"
+    },
+    {
+      "no": "13",
+      "kind": "IO",
+      "line": 294,
+      "signatures": [
+        {
+          "contractName": "SmartPyramid",
+          "methodName": "payDay",
+          "argTypes": []
+        }
+      ],
+      "exp": "(2 ** i)",
+      "status": "proven"
+    },
+    {
+      "no": "14",
+      "kind": "IO",
+      "line": 294,
+      "signatures": [
+        {
+          "contractName": "SmartPyramid",
+          "methodName": "payDay",
+          "argTypes": []
+        }
+      ],
+      "exp": "(i + 1)",
+      "status": "unproven"
+    },
+    {
+      "no": "15",
+      "kind": "IO",
+      "line": 295,
+      "signatures": [
+        {
+          "contractName": "SmartPyramid",
+          "methodName": "payDay",
+          "argTypes": []
+        }
+      ],
+      "exp": "(i + 1)",
+      "status": "proven"
+    },
+    {
+      "no": "16",
+      "kind": "IO",
+      "line": 301,
+      "signatures": [
+        {
+          "contractName": "SmartPyramid",
+          "methodName": "nextWave",
+          "argTypes": []
+        }
+      ],
+      "exp": "(i + 1)",
+      "status": "proven"
+    },
+    {
+      "no": "17",
+      "kind": "IO",
+      "line": 302,
+      "signatures": [
+        {
+          "contractName": "SmartPyramid",
+          "methodName": "nextWave",
+          "argTypes": []
+        }
+      ],
+      "exp": "(i + 1)",
+      "status": "proven"
+    },
+    {
+      "no": "18",
+      "kind": "IO",
+      "line": 305,
+      "signatures": [
+        {
+          "contractName": "SmartPyramid",
+          "methodName": "nextWave",
+          "argTypes": []
+        }
+      ],
+      "exp": "(block.timestamp + 604800)",
+      "status": "unproven"
+    },
+    {
+      "no": "19",
+      "kind": "DZ",
+      "line": 72,
+      "signatures": [
+        {
+          "contractName": "SmartPyramid",
+          "methodName": "getInfo",
+          "argTypes": [ "address" ]
+        },
+        {
+          "contractName": "SmartPyramid",
+          "methodName": "withdraw",
+          "argTypes": []
+        }
+      ],
+      "exp": "(c / _a)",
+      "status": "proven"
+    },
+    {
+      "no": "20",
+      "kind": "DZ",
+      "line": 79,
+      "signatures": [
+        {
+          "contractName": "SmartPyramid",
+          "methodName": "getInfo",
+          "argTypes": [ "address" ]
+        },
+        {
+          "contractName": "SmartPyramid",
+          "methodName": "withdraw",
+          "argTypes": []
+        }
+      ],
+      "exp": "(_a / _b)",
+      "status": "proven"
+    },
+    {
+      "no": "21",
+      "kind": "DZ",
+      "line": 100,
+      "signatures": [
+        {
+          "contractName": "SmartPyramid",
+          "methodName": "payDay",
+          "argTypes": []
+        }
+      ],
+      "exp": "(a % b)",
+      "status": "proven"
+    },
+    {
+      "no": "22",
+      "kind": "DZ",
+      "line": 139,
+      "signatures": [
+        {
+          "contractName": "InvestorsStorage",
+          "methodName": "getInterest",
+          "argTypes": [ "address" ]
+        }
+      ],
+      "exp": "((block.timestamp - investors[_address].checkpoint) / 86400)",
+      "status": "proven"
+    },
+    {
+      "no": "23",
+      "kind": "DZ",
+      "line": 194,
+      "signatures": [
+        {
+          "contractName": "SmartPyramid",
+          "methodName": "invest",
+          "argTypes": []
+        }
+      ],
+      "exp": "(_value / 20)",
+      "status": "proven"
+    },
+    {
+      "no": "24",
+      "kind": "DZ",
+      "line": 228,
+      "signatures": [
+        {
+          "contractName": "SmartPyramid",
+          "methodName": "invest",
+          "argTypes": []
+        }
+      ],
+      "exp": "((msg.value * 4) / 25)",
+      "status": "proven"
+    },
+    {
+      "no": "25",
+      "kind": "DZ",
+      "line": 241,
+      "signatures": [
+        {
+          "contractName": "SmartPyramid",
+          "methodName": "invest",
+          "argTypes": []
+        }
+      ],
+      "exp": "(msg.value / 20)",
+      "status": "proven"
+    },
+    {
+      "no": "26",
+      "kind": "DZ",
+      "line": 294,
+      "signatures": [
+        {
+          "contractName": "SmartPyramid",
+          "methodName": "payDay",
+          "argTypes": []
+        }
+      ],
+      "exp": "(2000000000000000000 / (2 ** i))",
+      "status": "unproven"
+    },
+    {
+      "no": "27",
+      "kind": "ETH_LEAK",
+      "line": 194,
+      "signatures": [
+        {
+          "contractName": "SmartPyramid",
+          "methodName": "invest",
+          "argTypes": []
+        }
+      ],
+      "exp": "x.r(msg.sender).transfer((_value / 20));",
+      "status": "proven"
+    },
+    {
+      "no": "28",
+      "kind": "ETH_LEAK",
+      "line": 228,
+      "signatures": [
+        {
+          "contractName": "SmartPyramid",
+          "methodName": "invest",
+          "argTypes": []
+        }
+      ],
+      "exp": "admin.transfer(((msg.value * 4) / 25));",
+      "status": "proven"
+    },
+    {
+      "no": "29",
+      "kind": "ETH_LEAK",
+      "line": 241,
+      "signatures": [
+        {
+          "contractName": "SmartPyramid",
+          "methodName": "invest",
+          "argTypes": []
+        }
+      ],
+      "exp": "x.r(msg.sender).transfer((msg.value / 20));",
+      "status": "unproven"
+    },
+    {
+      "no": "30",
+      "kind": "ETH_LEAK",
+      "line": 266,
+      "signatures": [
+        {
+          "contractName": "SmartPyramid",
+          "methodName": "withdraw",
+          "argTypes": []
+        }
+      ],
+      "exp": "msg.sender.transfer(_payout);",
+      "status": "unproven"
+    },
+    {
+      "no": "31",
+      "kind": "ETH_LEAK",
+      "line": 294,
+      "signatures": [
+        {
+          "contractName": "SmartPyramid",
+          "methodName": "payDay",
+          "argTypes": []
+        }
+      ],
+      "exp": "top[(i + 1)].addr.transfer((2000000000000000000 / (2 ** i)));",
+      "status": "unproven"
+    }
+  ]
+}

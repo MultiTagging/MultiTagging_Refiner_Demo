@@ -1,0 +1,485 @@
+{
+  "success": true,
+  "error": null,
+  "results": {
+    "detectors": [
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "_payer",
+            "source_mapping": {
+              "start": 1391,
+              "length": 14,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "BurnableOpenPayment",
+                "source_mapping": {
+                  "start": 1362,
+                  "length": 166,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "BurnableOpenPayment",
+                    "source_mapping": {
+                      "start": 699,
+                      "length": 2004,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "BurnableOpenPayment(address,uint256)"
+                }
+              }
+            }
+          },
+          {
+            "type": "node",
+            "name": "payer = _payer",
+            "source_mapping": {
+              "start": 1463,
+              "length": 14,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "BurnableOpenPayment",
+                "source_mapping": {
+                  "start": 1362,
+                  "length": 166,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "BurnableOpenPayment",
+                    "source_mapping": {
+                      "start": 699,
+                      "length": 2004,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "BurnableOpenPayment(address,uint256)"
+                }
+              }
+            }
+          }
+        ],
+        "description": "BurnableOpenPayment.BurnableOpenPayment(address,uint256)._payer () lacks a zero-check on :\n\t\t- payer = _payer ()\n",
+        "markdown": "[BurnableOpenPayment.BurnableOpenPayment(address,uint256)._payer]() lacks a zero-check on :\n\t\t- [payer = _payer]()\n",
+        "first_markdown_element": "",
+        "id": "373b1b3391b5cfa6f452e5d4cda5fd0e6570069d611a6a5f3c04f3eaea8ed33e",
+        "check": "missing-zero-check",
+        "impact": "Low",
+        "confidence": "Medium"
+      },
+      {
+        "elements": [
+          {
+            "type": "node",
+            "name": "",
+            "source_mapping": {
+              "start": 2088,
+              "length": 5,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "commit",
+                "source_mapping": {
+                  "start": 1973,
+                  "length": 159,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "BurnableOpenPayment",
+                    "source_mapping": {
+                      "start": 699,
+                      "length": 2004,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "commit()"
+                }
+              }
+            }
+          }
+        ],
+        "description": "Deprecated standard detected THROW ():\n\t- Usage of \"throw\" should be replaced with \"revert()\"\n",
+        "markdown": "Deprecated standard detected [THROW]():\n\t- Usage of \"throw\" should be replaced with \"revert()\"\n",
+        "first_markdown_element": "",
+        "id": "f5556cf1c70b64b9e4b1fc32044dd970b5f2c8b9fc21b7971fda01971033f2d5",
+        "check": "deprecated-standards",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [],
+        "description": "solc-0.4.1 is not recommended for deployment\n",
+        "markdown": "solc-0.4.1 is not recommended for deployment\n",
+        "first_markdown_element": "",
+        "id": "5f358785dc4df92a048a5fc84402e36cf62b579fef6cf958ffdcbfbb1adaec9e",
+        "check": "solc-version",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "pragma",
+            "name": "^0.4.1",
+            "source_mapping": {
+              "start": 674,
+              "length": 23,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "directive": [
+                "solidity",
+                "^",
+                "0.4",
+                ".1"
+              ]
+            }
+          }
+        ],
+        "description": "Pragma version^0.4.1 () allows old versions\n",
+        "markdown": "Pragma version[^0.4.1]() allows old versions\n",
+        "first_markdown_element": "",
+        "id": "7e5f39572985ae5b079b47280cf47e2c2ce61d305c41927c88e2763b6317d832",
+        "check": "solc-version",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "_string",
+            "source_mapping": {
+              "start": 2485,
+              "length": 14,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "setPayerString",
+                "source_mapping": {
+                  "start": 2461,
+                  "length": 109,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "BurnableOpenPayment",
+                    "source_mapping": {
+                      "start": 699,
+                      "length": 2004,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "setPayerString(string)"
+                }
+              }
+            },
+            "additional_fields": {
+              "target": "parameter",
+              "convention": "mixedCase"
+            }
+          }
+        ],
+        "description": "Parameter BurnableOpenPayment.setPayerString(string)._string () is not in mixedCase\n",
+        "markdown": "Parameter [BurnableOpenPayment.setPayerString(string)._string]() is not in mixedCase\n",
+        "first_markdown_element": "",
+        "id": "39c51fa3584893187b25fdbd870bd7817e4b620587939678a11dbb0fdc6399ab",
+        "check": "naming-convention",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "_string",
+            "source_mapping": {
+              "start": 2608,
+              "length": 14,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "setRecipientString",
+                "source_mapping": {
+                  "start": 2580,
+                  "length": 121,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "BurnableOpenPayment",
+                    "source_mapping": {
+                      "start": 699,
+                      "length": 2004,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "setRecipientString(string)"
+                }
+              }
+            },
+            "additional_fields": {
+              "target": "parameter",
+              "convention": "mixedCase"
+            }
+          }
+        ],
+        "description": "Parameter BurnableOpenPayment.setRecipientString(string)._string () is not in mixedCase\n",
+        "markdown": "Parameter [BurnableOpenPayment.setRecipientString(string)._string]() is not in mixedCase\n",
+        "first_markdown_element": "",
+        "id": "5eed025fc283964e4a3ee33649a1efbf7e69d9da991be7aa954da7f3b040b267",
+        "check": "naming-convention",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "burnAddress",
+            "source_mapping": {
+              "start": 790,
+              "length": 35,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "BurnableOpenPayment",
+                "source_mapping": {
+                  "start": 699,
+                  "length": 2004,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              }
+            }
+          }
+        ],
+        "description": "BurnableOpenPayment.burnAddress () should be constant \n",
+        "markdown": "[BurnableOpenPayment.burnAddress]() should be constant \n",
+        "first_markdown_element": "",
+        "id": "446408ef5e63eb6812d5aa83d6d19a0ff7016c1f9f0eb1e1f7d48e37b86d97a3",
+        "check": "constable-states",
+        "impact": "Optimization",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "setPayerString",
+            "source_mapping": {
+              "start": 2461,
+              "length": 109,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "BurnableOpenPayment",
+                "source_mapping": {
+                  "start": 699,
+                  "length": 2004,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              },
+              "signature": "setPayerString(string)"
+            }
+          }
+        ],
+        "description": "setPayerString(string) should be declared external:\n\t- BurnableOpenPayment.setPayerString(string) ()\n",
+        "markdown": "setPayerString(string) should be declared external:\n\t- [BurnableOpenPayment.setPayerString(string)]()\n",
+        "first_markdown_element": "",
+        "id": "e01ea747f1c25d8e232e3bcb9ba6310324298b95ea91ea4ffe91c7566d416e87",
+        "check": "external-function",
+        "impact": "Optimization",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "setRecipientString",
+            "source_mapping": {
+              "start": 2580,
+              "length": 121,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "BurnableOpenPayment",
+                "source_mapping": {
+                  "start": 699,
+                  "length": 2004,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              },
+              "signature": "setRecipientString(string)"
+            }
+          }
+        ],
+        "description": "setRecipientString(string) should be declared external:\n\t- BurnableOpenPayment.setRecipientString(string) ()\n",
+        "markdown": "setRecipientString(string) should be declared external:\n\t- [BurnableOpenPayment.setRecipientString(string)]()\n",
+        "first_markdown_element": "",
+        "id": "ec7b2235e743bd207db15821c52c587a3088dd4acd40f6ad81071d1109db4bb8",
+        "check": "external-function",
+        "impact": "Optimization",
+        "confidence": "High"
+      }
+    ]
+  }
+}

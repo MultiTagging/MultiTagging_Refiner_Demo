@@ -1,0 +1,4313 @@
+{
+  "success": true,
+  "error": null,
+  "results": {
+    "detectors": [
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "finishPresale",
+            "source_mapping": {
+              "start": 5200,
+              "length": 294,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "Presale",
+                "source_mapping": {
+                  "start": 2310,
+                  "length": 3311,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              },
+              "signature": "finishPresale()"
+            }
+          },
+          {
+            "type": "node",
+            "name": "require(bool)(presaleOwner.call.gas(3000000).value(this.balance)())",
+            "source_mapping": {
+              "start": 5369,
+              "length": 61,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "finishPresale",
+                "source_mapping": {
+                  "start": 5200,
+                  "length": 294,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "Presale",
+                    "source_mapping": {
+                      "start": 2310,
+                      "length": 3311,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "finishPresale()"
+                }
+              }
+            },
+            "additional_fields": {
+              "underlying_type": "external_calls"
+            }
+          },
+          {
+            "type": "node",
+            "name": "state = State.Finished",
+            "source_mapping": {
+              "start": 5440,
+              "length": 22,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "finishPresale",
+                "source_mapping": {
+                  "start": 5200,
+                  "length": 294,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "Presale",
+                    "source_mapping": {
+                      "start": 2310,
+                      "length": 3311,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "finishPresale()"
+                }
+              }
+            },
+            "additional_fields": {
+              "underlying_type": "variables_written",
+              "variable_name": "state"
+            }
+          }
+        ],
+        "description": "Reentrancy in Presale.finishPresale() ():\n\tExternal calls:\n\t- require(bool)(presaleOwner.call.gas(3000000).value(this.balance)()) ()\n\tState variables written after the call(s):\n\t- state = State.Finished ()\n\tPresale.state () can be used in cross function reentrancies:\n\t- Presale.fallback() ()\n\t- Presale.finishPresale() ()\n\t- Presale.startPresale(address,uint256) ()\n\t- Presale.timeToFinishPresale() ()\n",
+        "markdown": "Reentrancy in [Presale.finishPresale()]():\n\tExternal calls:\n\t- [require(bool)(presaleOwner.call.gas(3000000).value(this.balance)())]()\n\tState variables written after the call(s):\n\t- [state = State.Finished]()\n\t[Presale.state]() can be used in cross function reentrancies:\n\t- [Presale.fallback()]()\n\t- [Presale.finishPresale()]()\n\t- [Presale.startPresale(address,uint256)]()\n\t- [Presale.timeToFinishPresale()]()\n",
+        "first_markdown_element": "",
+        "id": "5554bb3d40781b37473c44443907d6e0e078c3cab30b9e85f725e2bc3c6253c5",
+        "check": "reentrancy-eth",
+        "impact": "High",
+        "confidence": "Medium"
+      },
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "fallback",
+            "source_mapping": {
+              "start": 2953,
+              "length": 1570,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "Presale",
+                "source_mapping": {
+                  "start": 2310,
+                  "length": 3311,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              },
+              "signature": "fallback()"
+            }
+          },
+          {
+            "type": "node",
+            "name": "require(bool)(msg.sender.call.gas(3000000).value(msg.value - valueWei)())",
+            "source_mapping": {
+              "start": 3444,
+              "length": 67,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "fallback",
+                "source_mapping": {
+                  "start": 2953,
+                  "length": 1570,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "Presale",
+                    "source_mapping": {
+                      "start": 2310,
+                      "length": 3311,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "fallback()"
+                }
+              }
+            },
+            "additional_fields": {
+              "underlying_type": "external_calls"
+            }
+          },
+          {
+            "type": "node",
+            "name": "collectedUSD = totalLimitUSD",
+            "source_mapping": {
+              "start": 3525,
+              "length": 28,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "fallback",
+                "source_mapping": {
+                  "start": 2953,
+                  "length": 1570,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "Presale",
+                    "source_mapping": {
+                      "start": 2310,
+                      "length": 3311,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "fallback()"
+                }
+              }
+            },
+            "additional_fields": {
+              "underlying_type": "variables_written",
+              "variable_name": "collectedUSD"
+            }
+          }
+        ],
+        "description": "Reentrancy in Presale.fallback() ():\n\tExternal calls:\n\t- require(bool)(msg.sender.call.gas(3000000).value(msg.value - valueWei)()) ()\n\tState variables written after the call(s):\n\t- collectedUSD = totalLimitUSD ()\n\tPresale.collectedUSD () can be used in cross function reentrancies:\n\t- Presale.fallback() ()\n\t- Presale.finishPresale() ()\n",
+        "markdown": "Reentrancy in [Presale.fallback()]():\n\tExternal calls:\n\t- [require(bool)(msg.sender.call.gas(3000000).value(msg.value - valueWei)())]()\n\tState variables written after the call(s):\n\t- [collectedUSD = totalLimitUSD]()\n\t[Presale.collectedUSD]() can be used in cross function reentrancies:\n\t- [Presale.fallback()]()\n\t- [Presale.finishPresale()]()\n",
+        "first_markdown_element": "",
+        "id": "80e56d1924df73788b152636fd3c21179c7974af758ad387029645c76a65a1da",
+        "check": "reentrancy-eth",
+        "impact": "High",
+        "confidence": "Medium"
+      },
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "fallback",
+            "source_mapping": {
+              "start": 2953,
+              "length": 1570,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "Presale",
+                "source_mapping": {
+                  "start": 2310,
+                  "length": 3311,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              },
+              "signature": "fallback()"
+            }
+          },
+          {
+            "type": "node",
+            "name": "valueUSD = valueWei * etherPrice / 1000000000000000000",
+            "source_mapping": {
+              "start": 3167,
+              "length": 59,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "fallback",
+                "source_mapping": {
+                  "start": 2953,
+                  "length": 1570,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "Presale",
+                    "source_mapping": {
+                      "start": 2310,
+                      "length": 3311,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "fallback()"
+                }
+              }
+            }
+          },
+          {
+            "type": "node",
+            "name": "tokens = tokensPer10USD * valueUSD / 10",
+            "source_mapping": {
+              "start": 4043,
+              "length": 47,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "fallback",
+                "source_mapping": {
+                  "start": 2953,
+                  "length": 1570,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "Presale",
+                    "source_mapping": {
+                      "start": 2310,
+                      "length": 3311,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "fallback()"
+                }
+              }
+            }
+          }
+        ],
+        "description": "Presale.fallback() () performs a multiplication on the result of a division:\n\t- valueUSD = valueWei * etherPrice / 1000000000000000000 ()\n\t- tokens = tokensPer10USD * valueUSD / 10 ()\n",
+        "markdown": "[Presale.fallback()]() performs a multiplication on the result of a division:\n\t- [valueUSD = valueWei * etherPrice / 1000000000000000000]()\n\t- [tokens = tokensPer10USD * valueUSD / 10]()\n",
+        "first_markdown_element": "",
+        "id": "3cef92523cad2cb735aa2eb77f873aed83712c55f767e8bb9f192cd1f3f84355",
+        "check": "divide-before-multiply",
+        "impact": "Medium",
+        "confidence": "Medium"
+      },
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "fallback",
+            "source_mapping": {
+              "start": 2953,
+              "length": 1570,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "Presale",
+                "source_mapping": {
+                  "start": 2310,
+                  "length": 3311,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              },
+              "signature": "fallback()"
+            }
+          },
+          {
+            "type": "node",
+            "name": "valueUSD = valueWei * etherPrice / 1000000000000000000",
+            "source_mapping": {
+              "start": 3167,
+              "length": 59,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "fallback",
+                "source_mapping": {
+                  "start": 2953,
+                  "length": 1570,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "Presale",
+                    "source_mapping": {
+                      "start": 2310,
+                      "length": 3311,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "fallback()"
+                }
+              }
+            }
+          },
+          {
+            "type": "node",
+            "name": "valueWei = valueUSD * 1000000000000000000 / etherPrice",
+            "source_mapping": {
+              "start": 3376,
+              "length": 54,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "fallback",
+                "source_mapping": {
+                  "start": 2953,
+                  "length": 1570,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "Presale",
+                    "source_mapping": {
+                      "start": 2310,
+                      "length": 3311,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "fallback()"
+                }
+              }
+            }
+          }
+        ],
+        "description": "Presale.fallback() () performs a multiplication on the result of a division:\n\t- valueUSD = valueWei * etherPrice / 1000000000000000000 ()\n\t- valueWei = valueUSD * 1000000000000000000 / etherPrice ()\n",
+        "markdown": "[Presale.fallback()]() performs a multiplication on the result of a division:\n\t- [valueUSD = valueWei * etherPrice / 1000000000000000000]()\n\t- [valueWei = valueUSD * 1000000000000000000 / etherPrice]()\n",
+        "first_markdown_element": "",
+        "id": "8d7419d366062aaa1c2572777e3aaf26b7b4b8d8e8c63c8dd9a52fff0955da43",
+        "check": "divide-before-multiply",
+        "impact": "Medium",
+        "confidence": "Medium"
+      },
+      {
+        "elements": [
+          {
+            "type": "contract",
+            "name": "OpenLongevityPresale",
+            "source_mapping": {
+              "start": 6295,
+              "length": 196,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            }
+          },
+          {
+            "type": "function",
+            "name": "approve",
+            "source_mapping": {
+              "start": 6151,
+              "length": 53,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "PresaleToken",
+                "source_mapping": {
+                  "start": 5623,
+                  "length": 670,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              },
+              "signature": "approve(address,uint256)"
+            }
+          }
+        ],
+        "description": "OpenLongevityPresale () has incorrect ERC20 function interface:PresaleToken.approve(address,uint256) ()\n",
+        "markdown": "[OpenLongevityPresale]() has incorrect ERC20 function interface:[PresaleToken.approve(address,uint256)]()\n",
+        "first_markdown_element": "",
+        "id": "1f3808faa29497665bed8b5d71adb5b31d3a0a43bbbb30c201a8ac7437a31282",
+        "check": "erc20-interface",
+        "impact": "Medium",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "contract",
+            "name": "OpenLongevityPresale",
+            "source_mapping": {
+              "start": 6295,
+              "length": 196,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            }
+          },
+          {
+            "type": "function",
+            "name": "transferFrom",
+            "source_mapping": {
+              "start": 6079,
+              "length": 67,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "PresaleToken",
+                "source_mapping": {
+                  "start": 5623,
+                  "length": 670,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              },
+              "signature": "transferFrom(address,address,uint256)"
+            }
+          }
+        ],
+        "description": "OpenLongevityPresale () has incorrect ERC20 function interface:PresaleToken.transferFrom(address,address,uint256) ()\n",
+        "markdown": "[OpenLongevityPresale]() has incorrect ERC20 function interface:[PresaleToken.transferFrom(address,address,uint256)]()\n",
+        "first_markdown_element": "",
+        "id": "3634becc96330cdf0ae608ea4e6ad557d1d9188de9edb497ecfe67dd307239ad",
+        "check": "erc20-interface",
+        "impact": "Medium",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "contract",
+            "name": "OpenLongevityPresale",
+            "source_mapping": {
+              "start": 6295,
+              "length": 196,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            }
+          },
+          {
+            "type": "function",
+            "name": "transfer",
+            "source_mapping": {
+              "start": 6020,
+              "length": 54,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "PresaleToken",
+                "source_mapping": {
+                  "start": 5623,
+                  "length": 670,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              },
+              "signature": "transfer(address,uint256)"
+            }
+          }
+        ],
+        "description": "OpenLongevityPresale () has incorrect ERC20 function interface:PresaleToken.transfer(address,uint256) ()\n",
+        "markdown": "[OpenLongevityPresale]() has incorrect ERC20 function interface:[PresaleToken.transfer(address,uint256)]()\n",
+        "first_markdown_element": "",
+        "id": "38f7302b11352815442500cd85ac757f8cb6132896f4ffeac88d7178be12b901",
+        "check": "erc20-interface",
+        "impact": "Medium",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "contract",
+            "name": "OpenLongevityPresale",
+            "source_mapping": {
+              "start": 6295,
+              "length": 196,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            }
+          },
+          {
+            "type": "function",
+            "name": "transferFrom",
+            "source_mapping": {
+              "start": 1624,
+              "length": 60,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "ERC20",
+                "source_mapping": {
+                  "start": 1386,
+                  "length": 505,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              },
+              "signature": "transferFrom(address,address,uint256)"
+            }
+          }
+        ],
+        "description": "OpenLongevityPresale () has incorrect ERC20 function interface:ERC20.transferFrom(address,address,uint256) ()\n",
+        "markdown": "[OpenLongevityPresale]() has incorrect ERC20 function interface:[ERC20.transferFrom(address,address,uint256)]()\n",
+        "first_markdown_element": "",
+        "id": "628d56e8c2559cd2077275e218cc049e011ec53bb68cc458f8c795cea3081810",
+        "check": "erc20-interface",
+        "impact": "Medium",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "contract",
+            "name": "OpenLongevityPresale",
+            "source_mapping": {
+              "start": 6295,
+              "length": 196,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            }
+          },
+          {
+            "type": "function",
+            "name": "transfer",
+            "source_mapping": {
+              "start": 1497,
+              "length": 42,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "ERC20",
+                "source_mapping": {
+                  "start": 1386,
+                  "length": 505,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              },
+              "signature": "transfer(address,uint256)"
+            }
+          }
+        ],
+        "description": "OpenLongevityPresale () has incorrect ERC20 function interface:ERC20.transfer(address,uint256) ()\n",
+        "markdown": "[OpenLongevityPresale]() has incorrect ERC20 function interface:[ERC20.transfer(address,uint256)]()\n",
+        "first_markdown_element": "",
+        "id": "c18783cd239261c24acf6dc8913eb918eee40d80368982997cec4f505f7beef4",
+        "check": "erc20-interface",
+        "impact": "Medium",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "contract",
+            "name": "OpenLongevityPresale",
+            "source_mapping": {
+              "start": 6295,
+              "length": 196,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            }
+          },
+          {
+            "type": "function",
+            "name": "approve",
+            "source_mapping": {
+              "start": 1689,
+              "length": 46,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "ERC20",
+                "source_mapping": {
+                  "start": 1386,
+                  "length": 505,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              },
+              "signature": "approve(address,uint256)"
+            }
+          }
+        ],
+        "description": "OpenLongevityPresale () has incorrect ERC20 function interface:ERC20.approve(address,uint256) ()\n",
+        "markdown": "[OpenLongevityPresale]() has incorrect ERC20 function interface:[ERC20.approve(address,uint256)]()\n",
+        "first_markdown_element": "",
+        "id": "fa34cb233cc14523d92b89fcfc29dff4137bcf8bebd9fb9afd106423359c8677",
+        "check": "erc20-interface",
+        "impact": "Medium",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "_presaleOwner",
+            "source_mapping": {
+              "start": 4555,
+              "length": 21,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "startPresale",
+                "source_mapping": {
+                  "start": 4533,
+                  "length": 410,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "Presale",
+                    "source_mapping": {
+                      "start": 2310,
+                      "length": 3311,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "startPresale(address,uint256)"
+                }
+              }
+            }
+          },
+          {
+            "type": "node",
+            "name": "presaleOwner = _presaleOwner",
+            "source_mapping": {
+              "start": 4697,
+              "length": 28,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "startPresale",
+                "source_mapping": {
+                  "start": 4533,
+                  "length": 410,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "Presale",
+                    "source_mapping": {
+                      "start": 2310,
+                      "length": 3311,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "startPresale(address,uint256)"
+                }
+              }
+            }
+          }
+        ],
+        "description": "Presale.startPresale(address,uint256)._presaleOwner () lacks a zero-check on :\n\t\t- presaleOwner = _presaleOwner ()\n",
+        "markdown": "[Presale.startPresale(address,uint256)._presaleOwner]() lacks a zero-check on :\n\t\t- [presaleOwner = _presaleOwner]()\n",
+        "first_markdown_element": "",
+        "id": "c97a45bc6331c56a8dc44c4a03b3fda532745b57936ce44ee39f65b679e4eb49",
+        "check": "missing-zero-check",
+        "impact": "Low",
+        "confidence": "Medium"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "_confirmer",
+            "source_mapping": {
+              "start": 2083,
+              "length": 18,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "setConfirmer",
+                "source_mapping": {
+                  "start": 2061,
+                  "length": 98,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "KYC",
+                    "source_mapping": {
+                      "start": 1939,
+                      "length": 369,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "setConfirmer(address)"
+                }
+              }
+            }
+          },
+          {
+            "type": "node",
+            "name": "confirmer = _confirmer",
+            "source_mapping": {
+              "start": 2130,
+              "length": 22,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "setConfirmer",
+                "source_mapping": {
+                  "start": 2061,
+                  "length": 98,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "KYC",
+                    "source_mapping": {
+                      "start": 1939,
+                      "length": 369,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "setConfirmer(address)"
+                }
+              }
+            }
+          }
+        ],
+        "description": "KYC.setConfirmer(address)._confirmer () lacks a zero-check on :\n\t\t- confirmer = _confirmer ()\n",
+        "markdown": "[KYC.setConfirmer(address)._confirmer]() lacks a zero-check on :\n\t\t- [confirmer = _confirmer]()\n",
+        "first_markdown_element": "",
+        "id": "eba64227ab2657cc776eaa23fca91eb37b042b7e1ef77f95d98b7cbbcf705893",
+        "check": "missing-zero-check",
+        "impact": "Low",
+        "confidence": "Medium"
+      },
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "fallback",
+            "source_mapping": {
+              "start": 2953,
+              "length": 1570,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "Presale",
+                "source_mapping": {
+                  "start": 2310,
+                  "length": 3311,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              },
+              "signature": "fallback()"
+            }
+          },
+          {
+            "type": "node",
+            "name": "require(bool)(msg.sender.call.gas(3000000).value(msg.value - valueWei)())",
+            "source_mapping": {
+              "start": 3444,
+              "length": 67,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "fallback",
+                "source_mapping": {
+                  "start": 2953,
+                  "length": 1570,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "Presale",
+                    "source_mapping": {
+                      "start": 2310,
+                      "length": 3311,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "fallback()"
+                }
+              }
+            },
+            "additional_fields": {
+              "underlying_type": "external_calls"
+            }
+          },
+          {
+            "type": "node",
+            "name": "inv.amountTokens += tokens",
+            "source_mapping": {
+              "start": 4380,
+              "length": 26,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "fallback",
+                "source_mapping": {
+                  "start": 2953,
+                  "length": 1570,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "Presale",
+                    "source_mapping": {
+                      "start": 2310,
+                      "length": 3311,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "fallback()"
+                }
+              }
+            },
+            "additional_fields": {
+              "underlying_type": "variables_written",
+              "variable_name": "investors"
+            }
+          },
+          {
+            "type": "node",
+            "name": "inv.amountWei += valueWei",
+            "source_mapping": {
+              "start": 4416,
+              "length": 25,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "fallback",
+                "source_mapping": {
+                  "start": 2953,
+                  "length": 1570,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "Presale",
+                    "source_mapping": {
+                      "start": 2310,
+                      "length": 3311,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "fallback()"
+                }
+              }
+            },
+            "additional_fields": {
+              "underlying_type": "variables_written",
+              "variable_name": "investors"
+            }
+          },
+          {
+            "type": "node",
+            "name": "investorsIter[numberOfInvestors ++] = msg.sender",
+            "source_mapping": {
+              "start": 4238,
+              "length": 47,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "fallback",
+                "source_mapping": {
+                  "start": 2953,
+                  "length": 1570,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "Presale",
+                    "source_mapping": {
+                      "start": 2310,
+                      "length": 3311,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "fallback()"
+                }
+              }
+            },
+            "additional_fields": {
+              "underlying_type": "variables_written",
+              "variable_name": "investorsIter"
+            }
+          },
+          {
+            "type": "node",
+            "name": "investorsIter[numberOfInvestors ++] = msg.sender",
+            "source_mapping": {
+              "start": 4238,
+              "length": 47,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "fallback",
+                "source_mapping": {
+                  "start": 2953,
+                  "length": 1570,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "Presale",
+                    "source_mapping": {
+                      "start": 2310,
+                      "length": 3311,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "fallback()"
+                }
+              }
+            },
+            "additional_fields": {
+              "underlying_type": "variables_written",
+              "variable_name": "numberOfInvestors"
+            }
+          },
+          {
+            "type": "node",
+            "name": "totalSupply += tokens",
+            "source_mapping": {
+              "start": 4451,
+              "length": 21,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "fallback",
+                "source_mapping": {
+                  "start": 2953,
+                  "length": 1570,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "Presale",
+                    "source_mapping": {
+                      "start": 2310,
+                      "length": 3311,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "fallback()"
+                }
+              }
+            },
+            "additional_fields": {
+              "underlying_type": "variables_written",
+              "variable_name": "totalSupply"
+            }
+          }
+        ],
+        "description": "Reentrancy in Presale.fallback() ():\n\tExternal calls:\n\t- require(bool)(msg.sender.call.gas(3000000).value(msg.value - valueWei)()) ()\n\tState variables written after the call(s):\n\t- inv.amountTokens += tokens ()\n\t- inv.amountWei += valueWei ()\n\t- investorsIter[numberOfInvestors ++] = msg.sender ()\n\t- investorsIter[numberOfInvestors ++] = msg.sender ()\n\t- totalSupply += tokens ()\n",
+        "markdown": "Reentrancy in [Presale.fallback()]():\n\tExternal calls:\n\t- [require(bool)(msg.sender.call.gas(3000000).value(msg.value - valueWei)())]()\n\tState variables written after the call(s):\n\t- [inv.amountTokens += tokens]()\n\t- [inv.amountWei += valueWei]()\n\t- [investorsIter[numberOfInvestors ++] = msg.sender]()\n\t- [investorsIter[numberOfInvestors ++] = msg.sender]()\n\t- [totalSupply += tokens]()\n",
+        "first_markdown_element": "",
+        "id": "1ae413c85d5b819ccbad019c862386ba1f7157c00ff2325ae571170ac6171e17",
+        "check": "reentrancy-benign",
+        "impact": "Low",
+        "confidence": "Medium"
+      },
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "finishPresale",
+            "source_mapping": {
+              "start": 5200,
+              "length": 294,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "Presale",
+                "source_mapping": {
+                  "start": 2310,
+                  "length": 3311,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              },
+              "signature": "finishPresale()"
+            }
+          },
+          {
+            "type": "node",
+            "name": "require(bool)(presaleOwner.call.gas(3000000).value(this.balance)())",
+            "source_mapping": {
+              "start": 5369,
+              "length": 61,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "finishPresale",
+                "source_mapping": {
+                  "start": 5200,
+                  "length": 294,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "Presale",
+                    "source_mapping": {
+                      "start": 2310,
+                      "length": 3311,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "finishPresale()"
+                }
+              }
+            },
+            "additional_fields": {
+              "underlying_type": "external_calls"
+            }
+          },
+          {
+            "type": "node",
+            "name": "NewState(state)",
+            "source_mapping": {
+              "start": 5472,
+              "length": 15,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "finishPresale",
+                "source_mapping": {
+                  "start": 5200,
+                  "length": 294,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "Presale",
+                    "source_mapping": {
+                      "start": 2310,
+                      "length": 3311,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "finishPresale()"
+                }
+              }
+            },
+            "additional_fields": {
+              "underlying_type": "event"
+            }
+          }
+        ],
+        "description": "Reentrancy in Presale.finishPresale() ():\n\tExternal calls:\n\t- require(bool)(presaleOwner.call.gas(3000000).value(this.balance)()) ()\n\tEvent emitted after the call(s):\n\t- NewState(state) ()\n",
+        "markdown": "Reentrancy in [Presale.finishPresale()]():\n\tExternal calls:\n\t- [require(bool)(presaleOwner.call.gas(3000000).value(this.balance)())]()\n\tEvent emitted after the call(s):\n\t- [NewState(state)]()\n",
+        "first_markdown_element": "",
+        "id": "240f699b016b1b904e64e43e689090766fbcda880d288176991a75763a827576",
+        "check": "reentrancy-events",
+        "impact": "Low",
+        "confidence": "Medium"
+      },
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "fallback",
+            "source_mapping": {
+              "start": 2953,
+              "length": 1570,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "Presale",
+                "source_mapping": {
+                  "start": 2310,
+                  "length": 3311,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              },
+              "signature": "fallback()"
+            }
+          },
+          {
+            "type": "node",
+            "name": "require(bool)(msg.sender.call.gas(3000000).value(msg.value - valueWei)())",
+            "source_mapping": {
+              "start": 3444,
+              "length": 67,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "fallback",
+                "source_mapping": {
+                  "start": 2953,
+                  "length": 1570,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "Presale",
+                    "source_mapping": {
+                      "start": 2310,
+                      "length": 3311,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "fallback()"
+                }
+              }
+            },
+            "additional_fields": {
+              "underlying_type": "external_calls"
+            }
+          },
+          {
+            "type": "node",
+            "name": "Transfer(this,msg.sender,tokens)",
+            "source_mapping": {
+              "start": 4482,
+              "length": 34,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "fallback",
+                "source_mapping": {
+                  "start": 2953,
+                  "length": 1570,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "Presale",
+                    "source_mapping": {
+                      "start": 2310,
+                      "length": 3311,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "fallback()"
+                }
+              }
+            },
+            "additional_fields": {
+              "underlying_type": "event"
+            }
+          }
+        ],
+        "description": "Reentrancy in Presale.fallback() ():\n\tExternal calls:\n\t- require(bool)(msg.sender.call.gas(3000000).value(msg.value - valueWei)()) ()\n\tEvent emitted after the call(s):\n\t- Transfer(this,msg.sender,tokens) ()\n",
+        "markdown": "Reentrancy in [Presale.fallback()]():\n\tExternal calls:\n\t- [require(bool)(msg.sender.call.gas(3000000).value(msg.value - valueWei)())]()\n\tEvent emitted after the call(s):\n\t- [Transfer(this,msg.sender,tokens)]()\n",
+        "first_markdown_element": "",
+        "id": "36a0d7d89a32df59792194bb27385126e9c624a853164c379c2a7d00d7998d34",
+        "check": "reentrancy-events",
+        "impact": "Low",
+        "confidence": "Medium"
+      },
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "finishPresale",
+            "source_mapping": {
+              "start": 5200,
+              "length": 294,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "Presale",
+                "source_mapping": {
+                  "start": 2310,
+                  "length": 3311,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              },
+              "signature": "finishPresale()"
+            }
+          },
+          {
+            "type": "node",
+            "name": "require(bool)(presaleOwner.call.gas(3000000).value(this.balance)())",
+            "source_mapping": {
+              "start": 5369,
+              "length": 61,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "finishPresale",
+                "source_mapping": {
+                  "start": 5200,
+                  "length": 294,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "Presale",
+                    "source_mapping": {
+                      "start": 2310,
+                      "length": 3311,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "finishPresale()"
+                }
+              }
+            }
+          }
+        ],
+        "description": "Presale.finishPresale() () tries to limit the gas of an external call that controls implicit decoding\n\trequire(bool)(presaleOwner.call.gas(3000000).value(this.balance)()) ()\n",
+        "markdown": "[Presale.finishPresale()]() tries to limit the gas of an external call that controls implicit decoding\n\t[require(bool)(presaleOwner.call.gas(3000000).value(this.balance)())]()\n",
+        "first_markdown_element": "",
+        "id": "426c44cfaeb1110bee46fa5c01287e67fd35c725ff62feff92f04bb400bbd833",
+        "check": "return-bomb",
+        "impact": "Low",
+        "confidence": "Medium"
+      },
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "withdraw",
+            "source_mapping": {
+              "start": 5504,
+              "length": 115,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "Presale",
+                "source_mapping": {
+                  "start": 2310,
+                  "length": 3311,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              },
+              "signature": "withdraw()"
+            }
+          },
+          {
+            "type": "node",
+            "name": "require(bool)(presaleOwner.call.gas(3000000).value(this.balance)())",
+            "source_mapping": {
+              "start": 5551,
+              "length": 61,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "withdraw",
+                "source_mapping": {
+                  "start": 5504,
+                  "length": 115,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "Presale",
+                    "source_mapping": {
+                      "start": 2310,
+                      "length": 3311,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "withdraw()"
+                }
+              }
+            }
+          }
+        ],
+        "description": "Presale.withdraw() () tries to limit the gas of an external call that controls implicit decoding\n\trequire(bool)(presaleOwner.call.gas(3000000).value(this.balance)()) ()\n",
+        "markdown": "[Presale.withdraw()]() tries to limit the gas of an external call that controls implicit decoding\n\t[require(bool)(presaleOwner.call.gas(3000000).value(this.balance)())]()\n",
+        "first_markdown_element": "",
+        "id": "79fba5bcd150d4fba8cf432b2b3fd1f30820c0bac86d9ce597496cd46480a6a2",
+        "check": "return-bomb",
+        "impact": "Low",
+        "confidence": "Medium"
+      },
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "fallback",
+            "source_mapping": {
+              "start": 2953,
+              "length": 1570,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "Presale",
+                "source_mapping": {
+                  "start": 2310,
+                  "length": 3311,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              },
+              "signature": "fallback()"
+            }
+          },
+          {
+            "type": "node",
+            "name": "require(bool)(msg.sender.call.gas(3000000).value(msg.value - valueWei)())",
+            "source_mapping": {
+              "start": 3444,
+              "length": 67,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "fallback",
+                "source_mapping": {
+                  "start": 2953,
+                  "length": 1570,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "Presale",
+                    "source_mapping": {
+                      "start": 2310,
+                      "length": 3311,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "fallback()"
+                }
+              }
+            }
+          }
+        ],
+        "description": "Presale.fallback() () tries to limit the gas of an external call that controls implicit decoding\n\trequire(bool)(msg.sender.call.gas(3000000).value(msg.value - valueWei)()) ()\n",
+        "markdown": "[Presale.fallback()]() tries to limit the gas of an external call that controls implicit decoding\n\t[require(bool)(msg.sender.call.gas(3000000).value(msg.value - valueWei)())]()\n",
+        "first_markdown_element": "",
+        "id": "fca7f5e839bace5f7bacda85c493027abf0d569d8eb5a740385c726048990a46",
+        "check": "return-bomb",
+        "impact": "Low",
+        "confidence": "Medium"
+      },
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "finishPresale",
+            "source_mapping": {
+              "start": 5200,
+              "length": 294,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "Presale",
+                "source_mapping": {
+                  "start": 2310,
+                  "length": 3311,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              },
+              "signature": "finishPresale()"
+            }
+          },
+          {
+            "type": "node",
+            "name": "require(bool)(now >= presaleFinishTime || collectedUSD == totalLimitUSD)",
+            "source_mapping": {
+              "start": 5293,
+              "length": 66,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "finishPresale",
+                "source_mapping": {
+                  "start": 5200,
+                  "length": 294,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "Presale",
+                    "source_mapping": {
+                      "start": 2310,
+                      "length": 3311,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "finishPresale()"
+                }
+              }
+            }
+          }
+        ],
+        "description": "Presale.finishPresale() () uses timestamp for comparisons\n\tDangerous comparisons:\n\t- require(bool)(now >= presaleFinishTime || collectedUSD == totalLimitUSD) ()\n",
+        "markdown": "[Presale.finishPresale()]() uses timestamp for comparisons\n\tDangerous comparisons:\n\t- [require(bool)(now >= presaleFinishTime || collectedUSD == totalLimitUSD)]()\n",
+        "first_markdown_element": "",
+        "id": "080e9a18ab5d8be3a1ae90ef9100a66ec35765084b7f70726e9c4a8ae4edf058",
+        "check": "timestamp",
+        "impact": "Low",
+        "confidence": "Medium"
+      },
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "fallback",
+            "source_mapping": {
+              "start": 2953,
+              "length": 1570,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "Presale",
+                "source_mapping": {
+                  "start": 2310,
+                  "length": 3311,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              },
+              "signature": "fallback()"
+            }
+          },
+          {
+            "type": "node",
+            "name": "require(bool)(now < presaleFinishTime)",
+            "source_mapping": {
+              "start": 3031,
+              "length": 32,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "fallback",
+                "source_mapping": {
+                  "start": 2953,
+                  "length": 1570,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "Presale",
+                    "source_mapping": {
+                      "start": 2310,
+                      "length": 3311,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "fallback()"
+                }
+              }
+            }
+          },
+          {
+            "type": "node",
+            "name": "require(bool)(now > ppFinishTime || known[msg.sender])",
+            "source_mapping": {
+              "start": 3073,
+              "length": 48,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "fallback",
+                "source_mapping": {
+                  "start": 2953,
+                  "length": 1570,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "Presale",
+                    "source_mapping": {
+                      "start": 2310,
+                      "length": 3311,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "fallback()"
+                }
+              }
+            }
+          },
+          {
+            "type": "node",
+            "name": "now <= ppFinishTime",
+            "source_mapping": {
+              "start": 3686,
+              "length": 19,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "fallback",
+                "source_mapping": {
+                  "start": 2953,
+                  "length": 1570,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "Presale",
+                    "source_mapping": {
+                      "start": 2310,
+                      "length": 3311,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "fallback()"
+                }
+              }
+            }
+          }
+        ],
+        "description": "Presale.fallback() () uses timestamp for comparisons\n\tDangerous comparisons:\n\t- require(bool)(now < presaleFinishTime) ()\n\t- require(bool)(now > ppFinishTime || known[msg.sender]) ()\n\t- now <= ppFinishTime ()\n",
+        "markdown": "[Presale.fallback()]() uses timestamp for comparisons\n\tDangerous comparisons:\n\t- [require(bool)(now < presaleFinishTime)]()\n\t- [require(bool)(now > ppFinishTime || known[msg.sender])]()\n\t- [now <= ppFinishTime]()\n",
+        "first_markdown_element": "",
+        "id": "648a9996a46651d83cd15499f2292b86e25b32f2c0c6c65d4ac1112c7e0f250f",
+        "check": "timestamp",
+        "impact": "Low",
+        "confidence": "Medium"
+      },
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "timeToFinishPresale",
+            "source_mapping": {
+              "start": 4953,
+              "length": 237,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "Presale",
+                "source_mapping": {
+                  "start": 2310,
+                  "length": 3311,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              },
+              "signature": "timeToFinishPresale()"
+            }
+          },
+          {
+            "type": "node",
+            "name": "now > presaleFinishTime",
+            "source_mapping": {
+              "start": 5071,
+              "length": 23,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "timeToFinishPresale",
+                "source_mapping": {
+                  "start": 4953,
+                  "length": 237,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "Presale",
+                    "source_mapping": {
+                      "start": 2310,
+                      "length": 3311,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "timeToFinishPresale()"
+                }
+              }
+            }
+          }
+        ],
+        "description": "Presale.timeToFinishPresale() () uses timestamp for comparisons\n\tDangerous comparisons:\n\t- now > presaleFinishTime ()\n",
+        "markdown": "[Presale.timeToFinishPresale()]() uses timestamp for comparisons\n\tDangerous comparisons:\n\t- [now > presaleFinishTime]()\n",
+        "first_markdown_element": "",
+        "id": "de5fa778339abc2e37fab159d9881fa7314cda0d830b3fc92e1fab958841b448",
+        "check": "timestamp",
+        "impact": "Low",
+        "confidence": "Medium"
+      },
+      {
+        "elements": [],
+        "description": "solc-0.4.10 is not recommended for deployment\n",
+        "markdown": "solc-0.4.10 is not recommended for deployment\n",
+        "first_markdown_element": "",
+        "id": "0eb2863571dc5faae5942bcb279abacd3e70424aa95146384321c9743a3cf58c",
+        "check": "solc-version",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "pragma",
+            "name": "^0.4.10",
+            "source_mapping": {
+              "start": 780,
+              "length": 24,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "directive": [
+                "solidity",
+                "^",
+                "0.4",
+                ".10"
+              ]
+            }
+          }
+        ],
+        "description": "Pragma version^0.4.10 () allows old versions\n",
+        "markdown": "Pragma version[^0.4.10]() allows old versions\n",
+        "first_markdown_element": "",
+        "id": "585d0efb95cc5ddba951b2df4d1064a238c383e91df65f88a41cec6cca3a639d",
+        "check": "solc-version",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "finishPresale",
+            "source_mapping": {
+              "start": 5200,
+              "length": 294,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "Presale",
+                "source_mapping": {
+                  "start": 2310,
+                  "length": 3311,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              },
+              "signature": "finishPresale()"
+            }
+          },
+          {
+            "type": "node",
+            "name": "require(bool)(presaleOwner.call.gas(3000000).value(this.balance)())",
+            "source_mapping": {
+              "start": 5369,
+              "length": 61,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "finishPresale",
+                "source_mapping": {
+                  "start": 5200,
+                  "length": 294,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "Presale",
+                    "source_mapping": {
+                      "start": 2310,
+                      "length": 3311,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "finishPresale()"
+                }
+              }
+            }
+          }
+        ],
+        "description": "Low level call in Presale.finishPresale() ():\n\t- require(bool)(presaleOwner.call.gas(3000000).value(this.balance)()) ()\n",
+        "markdown": "Low level call in [Presale.finishPresale()]():\n\t- [require(bool)(presaleOwner.call.gas(3000000).value(this.balance)())]()\n",
+        "first_markdown_element": "",
+        "id": "61d007f3a2fb86c20c1b3a0b9a120db7f1c410c5768f2507758bb62e325bde9d",
+        "check": "low-level-calls",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "fallback",
+            "source_mapping": {
+              "start": 2953,
+              "length": 1570,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "Presale",
+                "source_mapping": {
+                  "start": 2310,
+                  "length": 3311,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              },
+              "signature": "fallback()"
+            }
+          },
+          {
+            "type": "node",
+            "name": "require(bool)(msg.sender.call.gas(3000000).value(msg.value - valueWei)())",
+            "source_mapping": {
+              "start": 3444,
+              "length": 67,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "fallback",
+                "source_mapping": {
+                  "start": 2953,
+                  "length": 1570,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "Presale",
+                    "source_mapping": {
+                      "start": 2310,
+                      "length": 3311,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "fallback()"
+                }
+              }
+            }
+          }
+        ],
+        "description": "Low level call in Presale.fallback() ():\n\t- require(bool)(msg.sender.call.gas(3000000).value(msg.value - valueWei)()) ()\n",
+        "markdown": "Low level call in [Presale.fallback()]():\n\t- [require(bool)(msg.sender.call.gas(3000000).value(msg.value - valueWei)())]()\n",
+        "first_markdown_element": "",
+        "id": "707eb6a92cbb86bbdf5996facde9c94fbb340a18ef5201eceeedf5ff273f525c",
+        "check": "low-level-calls",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "withdraw",
+            "source_mapping": {
+              "start": 5504,
+              "length": 115,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "Presale",
+                "source_mapping": {
+                  "start": 2310,
+                  "length": 3311,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              },
+              "signature": "withdraw()"
+            }
+          },
+          {
+            "type": "node",
+            "name": "require(bool)(presaleOwner.call.gas(3000000).value(this.balance)())",
+            "source_mapping": {
+              "start": 5551,
+              "length": 61,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "withdraw",
+                "source_mapping": {
+                  "start": 5504,
+                  "length": 115,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "Presale",
+                    "source_mapping": {
+                      "start": 2310,
+                      "length": 3311,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "withdraw()"
+                }
+              }
+            }
+          }
+        ],
+        "description": "Low level call in Presale.withdraw() ():\n\t- require(bool)(presaleOwner.call.gas(3000000).value(this.balance)()) ()\n",
+        "markdown": "Low level call in [Presale.withdraw()]():\n\t- [require(bool)(presaleOwner.call.gas(3000000).value(this.balance)())]()\n",
+        "first_markdown_element": "",
+        "id": "f3399e42d092ec8c40e947f95f7c5f6349a59f28fda2f7e69db19b55d5ee5844",
+        "check": "low-level-calls",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "contract",
+            "name": "owned",
+            "source_mapping": {
+              "start": 806,
+              "length": 489,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "additional_fields": {
+              "target": "contract",
+              "convention": "CapWords"
+            }
+          }
+        ],
+        "description": "Contract owned () is not in CapWords\n",
+        "markdown": "Contract [owned]() is not in CapWords\n",
+        "first_markdown_element": "",
+        "id": "01bc58369f2fd81680c634b453fa427ba4b0127f990d30f7be7154dc8da22427",
+        "check": "naming-convention",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "_who",
+            "source_mapping": {
+              "start": 2185,
+              "length": 12,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "setToKnown",
+                "source_mapping": {
+                  "start": 2165,
+                  "length": 141,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "KYC",
+                    "source_mapping": {
+                      "start": 1939,
+                      "length": 369,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "setToKnown(address)"
+                }
+              }
+            },
+            "additional_fields": {
+              "target": "parameter",
+              "convention": "mixedCase"
+            }
+          }
+        ],
+        "description": "Parameter KYC.setToKnown(address)._who () is not in mixedCase\n",
+        "markdown": "Parameter [KYC.setToKnown(address)._who]() is not in mixedCase\n",
+        "first_markdown_element": "",
+        "id": "0be578612138fd4f0f988bc58ffbb3debefd8385f8ac66db17cb920b4f86bafd",
+        "check": "naming-convention",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "_etherPrice",
+            "source_mapping": {
+              "start": 4578,
+              "length": 16,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "startPresale",
+                "source_mapping": {
+                  "start": 4533,
+                  "length": 410,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "Presale",
+                    "source_mapping": {
+                      "start": 2310,
+                      "length": 3311,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "startPresale(address,uint256)"
+                }
+              }
+            },
+            "additional_fields": {
+              "target": "parameter",
+              "convention": "mixedCase"
+            }
+          }
+        ],
+        "description": "Parameter Presale.startPresale(address,uint256)._etherPrice () is not in mixedCase\n",
+        "markdown": "Parameter [Presale.startPresale(address,uint256)._etherPrice]() is not in mixedCase\n",
+        "first_markdown_element": "",
+        "id": "859d0bdc1c97f975e5a7221cfcc4a9da2261c5ac7a78794b00b7d7ffe4fdab2f",
+        "check": "naming-convention",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "_confirmer",
+            "source_mapping": {
+              "start": 2083,
+              "length": 18,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "setConfirmer",
+                "source_mapping": {
+                  "start": 2061,
+                  "length": 98,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "KYC",
+                    "source_mapping": {
+                      "start": 1939,
+                      "length": 369,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "setConfirmer(address)"
+                }
+              }
+            },
+            "additional_fields": {
+              "target": "parameter",
+              "convention": "mixedCase"
+            }
+          }
+        ],
+        "description": "Parameter KYC.setConfirmer(address)._confirmer () is not in mixedCase\n",
+        "markdown": "Parameter [KYC.setConfirmer(address)._confirmer]() is not in mixedCase\n",
+        "first_markdown_element": "",
+        "id": "97c04a0468018b6741f72aeeb0a7529b2a639cd91df3018fb35a3f3da9b9a4a0",
+        "check": "naming-convention",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "_who",
+            "source_mapping": {
+              "start": 5917,
+              "length": 12,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "balanceOf",
+                "source_mapping": {
+                  "start": 5898,
+                  "length": 116,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "PresaleToken",
+                    "source_mapping": {
+                      "start": 5623,
+                      "length": 670,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "balanceOf(address)"
+                }
+              }
+            },
+            "additional_fields": {
+              "target": "parameter",
+              "convention": "mixedCase"
+            }
+          }
+        ],
+        "description": "Parameter PresaleToken.balanceOf(address)._who () is not in mixedCase\n",
+        "markdown": "Parameter [PresaleToken.balanceOf(address)._who]() is not in mixedCase\n",
+        "first_markdown_element": "",
+        "id": "ab728be44d1d38272f8f13cb55f1eb32354204cb11acc3bd0be50f36a9c1d75f",
+        "check": "naming-convention",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "_presaleOwner",
+            "source_mapping": {
+              "start": 4555,
+              "length": 21,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "startPresale",
+                "source_mapping": {
+                  "start": 4533,
+                  "length": 410,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "Presale",
+                    "source_mapping": {
+                      "start": 2310,
+                      "length": 3311,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "startPresale(address,uint256)"
+                }
+              }
+            },
+            "additional_fields": {
+              "target": "parameter",
+              "convention": "mixedCase"
+            }
+          }
+        ],
+        "description": "Parameter Presale.startPresale(address,uint256)._presaleOwner () is not in mixedCase\n",
+        "markdown": "Parameter [Presale.startPresale(address,uint256)._presaleOwner]() is not in mixedCase\n",
+        "first_markdown_element": "",
+        "id": "adff53e45151d305871f7d72b3caeb220092c23e43b15882ee829bc04d279510",
+        "check": "naming-convention",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "_owner",
+            "source_mapping": {
+              "start": 1056,
+              "length": 14,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "changeOwner",
+                "source_mapping": {
+                  "start": 1035,
+                  "length": 118,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "owned",
+                    "source_mapping": {
+                      "start": 806,
+                      "length": 489,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "changeOwner(address)"
+                }
+              }
+            },
+            "additional_fields": {
+              "target": "parameter",
+              "convention": "mixedCase"
+            }
+          }
+        ],
+        "description": "Parameter owned.changeOwner(address)._owner () is not in mixedCase\n",
+        "markdown": "Parameter [owned.changeOwner(address)._owner]() is not in mixedCase\n",
+        "first_markdown_element": "",
+        "id": "b1100e18df324f9a8817a3d56cfa650a1cc914a14cadc971c8e68168019bff46",
+        "check": "naming-convention",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "finishPresale",
+            "source_mapping": {
+              "start": 5200,
+              "length": 294,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "Presale",
+                "source_mapping": {
+                  "start": 2310,
+                  "length": 3311,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              },
+              "signature": "finishPresale()"
+            }
+          },
+          {
+            "type": "node",
+            "name": "require(bool)(presaleOwner.call.gas(3000000).value(this.balance)())",
+            "source_mapping": {
+              "start": 5369,
+              "length": 61,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "finishPresale",
+                "source_mapping": {
+                  "start": 5200,
+                  "length": 294,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "Presale",
+                    "source_mapping": {
+                      "start": 2310,
+                      "length": 3311,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "finishPresale()"
+                }
+              }
+            }
+          }
+        ],
+        "description": "Presale.finishPresale() () uses literals with too many digits:\n\t- require(bool)(presaleOwner.call.gas(3000000).value(this.balance)()) ()\n",
+        "markdown": "[Presale.finishPresale()]() uses literals with too many digits:\n\t- [require(bool)(presaleOwner.call.gas(3000000).value(this.balance)())]()\n",
+        "first_markdown_element": "",
+        "id": "124d92b8e0d5e74627ceead9f71c3040e936b8288b86a510ccdb1dd58a6d8de7",
+        "check": "too-many-digits",
+        "impact": "Informational",
+        "confidence": "Medium"
+      },
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "fallback",
+            "source_mapping": {
+              "start": 2953,
+              "length": 1570,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "Presale",
+                "source_mapping": {
+                  "start": 2310,
+                  "length": 3311,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              },
+              "signature": "fallback()"
+            }
+          },
+          {
+            "type": "node",
+            "name": "valueUSD >= 100000",
+            "source_mapping": {
+              "start": 3725,
+              "length": 18,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "fallback",
+                "source_mapping": {
+                  "start": 2953,
+                  "length": 1570,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "Presale",
+                    "source_mapping": {
+                      "start": 2310,
+                      "length": 3311,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "fallback()"
+                }
+              }
+            }
+          }
+        ],
+        "description": "Presale.fallback() () uses literals with too many digits:\n\t- valueUSD >= 100000 ()\n",
+        "markdown": "[Presale.fallback()]() uses literals with too many digits:\n\t- [valueUSD >= 100000]()\n",
+        "first_markdown_element": "",
+        "id": "29484cb586f673264207cbad2acd065842eb45dba043dac94fa8eb8d5d6ff4c2",
+        "check": "too-many-digits",
+        "impact": "Informational",
+        "confidence": "Medium"
+      },
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "startPresale",
+            "source_mapping": {
+              "start": 4533,
+              "length": 410,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "Presale",
+                "source_mapping": {
+                  "start": 2310,
+                  "length": 3311,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              },
+              "signature": "startPresale(address,uint256)"
+            }
+          },
+          {
+            "type": "node",
+            "name": "totalLimitUSD = 500000",
+            "source_mapping": {
+              "start": 4889,
+              "length": 22,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "startPresale",
+                "source_mapping": {
+                  "start": 4533,
+                  "length": 410,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "Presale",
+                    "source_mapping": {
+                      "start": 2310,
+                      "length": 3311,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "startPresale(address,uint256)"
+                }
+              }
+            }
+          }
+        ],
+        "description": "Presale.startPresale(address,uint256) () uses literals with too many digits:\n\t- totalLimitUSD = 500000 ()\n",
+        "markdown": "[Presale.startPresale(address,uint256)]() uses literals with too many digits:\n\t- [totalLimitUSD = 500000]()\n",
+        "first_markdown_element": "",
+        "id": "370a62e88c64f2a2de96b320f874341e5e76a9e725258309dbeaec93ab5cf736",
+        "check": "too-many-digits",
+        "impact": "Informational",
+        "confidence": "Medium"
+      },
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "fallback",
+            "source_mapping": {
+              "start": 2953,
+              "length": 1570,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "Presale",
+                "source_mapping": {
+                  "start": 2310,
+                  "length": 3311,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              },
+              "signature": "fallback()"
+            }
+          },
+          {
+            "type": "node",
+            "name": "require(bool)(msg.sender.call.gas(3000000).value(msg.value - valueWei)())",
+            "source_mapping": {
+              "start": 3444,
+              "length": 67,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "fallback",
+                "source_mapping": {
+                  "start": 2953,
+                  "length": 1570,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "Presale",
+                    "source_mapping": {
+                      "start": 2310,
+                      "length": 3311,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "fallback()"
+                }
+              }
+            }
+          }
+        ],
+        "description": "Presale.fallback() () uses literals with too many digits:\n\t- require(bool)(msg.sender.call.gas(3000000).value(msg.value - valueWei)()) ()\n",
+        "markdown": "[Presale.fallback()]() uses literals with too many digits:\n\t- [require(bool)(msg.sender.call.gas(3000000).value(msg.value - valueWei)())]()\n",
+        "first_markdown_element": "",
+        "id": "408ce4b67f52ca23ec7dbb4610b0365ff10f229403e7212a922c68cd9c269732",
+        "check": "too-many-digits",
+        "impact": "Informational",
+        "confidence": "Medium"
+      },
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "fallback",
+            "source_mapping": {
+              "start": 2953,
+              "length": 1570,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "Presale",
+                "source_mapping": {
+                  "start": 2310,
+                  "length": 3311,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              },
+              "signature": "fallback()"
+            }
+          },
+          {
+            "type": "node",
+            "name": "valueUSD = valueWei * etherPrice / 1000000000000000000",
+            "source_mapping": {
+              "start": 3167,
+              "length": 59,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "fallback",
+                "source_mapping": {
+                  "start": 2953,
+                  "length": 1570,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "Presale",
+                    "source_mapping": {
+                      "start": 2310,
+                      "length": 3311,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "fallback()"
+                }
+              }
+            }
+          }
+        ],
+        "description": "Presale.fallback() () uses literals with too many digits:\n\t- valueUSD = valueWei * etherPrice / 1000000000000000000 ()\n",
+        "markdown": "[Presale.fallback()]() uses literals with too many digits:\n\t- [valueUSD = valueWei * etherPrice / 1000000000000000000]()\n",
+        "first_markdown_element": "",
+        "id": "539ee8e5faaf723f425f111507afe82686811268ac5ae22ab3348e643d7f4770",
+        "check": "too-many-digits",
+        "impact": "Informational",
+        "confidence": "Medium"
+      },
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "withdraw",
+            "source_mapping": {
+              "start": 5504,
+              "length": 115,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "Presale",
+                "source_mapping": {
+                  "start": 2310,
+                  "length": 3311,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              },
+              "signature": "withdraw()"
+            }
+          },
+          {
+            "type": "node",
+            "name": "require(bool)(presaleOwner.call.gas(3000000).value(this.balance)())",
+            "source_mapping": {
+              "start": 5551,
+              "length": 61,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "withdraw",
+                "source_mapping": {
+                  "start": 5504,
+                  "length": 115,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "Presale",
+                    "source_mapping": {
+                      "start": 2310,
+                      "length": 3311,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "withdraw()"
+                }
+              }
+            }
+          }
+        ],
+        "description": "Presale.withdraw() () uses literals with too many digits:\n\t- require(bool)(presaleOwner.call.gas(3000000).value(this.balance)()) ()\n",
+        "markdown": "[Presale.withdraw()]() uses literals with too many digits:\n\t- [require(bool)(presaleOwner.call.gas(3000000).value(this.balance)())]()\n",
+        "first_markdown_element": "",
+        "id": "5787c7b06ea57005ba30f7aa276d5abeb82acec0f74fe03d6e0db5b4bd77f404",
+        "check": "too-many-digits",
+        "impact": "Informational",
+        "confidence": "Medium"
+      },
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "fallback",
+            "source_mapping": {
+              "start": 2953,
+              "length": 1570,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "Presale",
+                "source_mapping": {
+                  "start": 2310,
+                  "length": 3311,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              },
+              "signature": "fallback()"
+            }
+          },
+          {
+            "type": "node",
+            "name": "valueWei = valueUSD * 1000000000000000000 / etherPrice",
+            "source_mapping": {
+              "start": 3376,
+              "length": 54,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "fallback",
+                "source_mapping": {
+                  "start": 2953,
+                  "length": 1570,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "Presale",
+                    "source_mapping": {
+                      "start": 2310,
+                      "length": 3311,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "fallback()"
+                }
+              }
+            }
+          }
+        ],
+        "description": "Presale.fallback() () uses literals with too many digits:\n\t- valueWei = valueUSD * 1000000000000000000 / etherPrice ()\n",
+        "markdown": "[Presale.fallback()]() uses literals with too many digits:\n\t- [valueWei = valueUSD * 1000000000000000000 / etherPrice]()\n",
+        "first_markdown_element": "",
+        "id": "b22ca767f76323343e333e067aafa61166099eb3cf1a58cd065421190600984a",
+        "check": "too-many-digits",
+        "impact": "Informational",
+        "confidence": "Medium"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "decimals",
+            "source_mapping": {
+              "start": 5804,
+              "length": 30,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "PresaleToken",
+                "source_mapping": {
+                  "start": 5623,
+                  "length": 670,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              }
+            }
+          },
+          {
+            "type": "contract",
+            "name": "OpenLongevityPresale",
+            "source_mapping": {
+              "start": 6295,
+              "length": 196,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            }
+          }
+        ],
+        "description": "PresaleToken.decimals () is never used in OpenLongevityPresale ()\n",
+        "markdown": "[PresaleToken.decimals]() is never used in [OpenLongevityPresale]()\n",
+        "first_markdown_element": "",
+        "id": "077ba48eb28bad31ad3e55f0e01a740d5bdd8e2c35c605fa9d55f65364cd51c2",
+        "check": "unused-state",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "name",
+            "source_mapping": {
+              "start": 5713,
+              "length": 44,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "PresaleToken",
+                "source_mapping": {
+                  "start": 5623,
+                  "length": 670,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              }
+            }
+          },
+          {
+            "type": "contract",
+            "name": "OpenLongevityPresale",
+            "source_mapping": {
+              "start": 6295,
+              "length": 196,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            }
+          }
+        ],
+        "description": "PresaleToken.name () is never used in OpenLongevityPresale ()\n",
+        "markdown": "[PresaleToken.name]() is never used in [OpenLongevityPresale]()\n",
+        "first_markdown_element": "",
+        "id": "27f55885ea7033e14d45702a8a4df363d747f4d492359667e99d84e525286f66",
+        "check": "unused-state",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "standard",
+            "source_mapping": {
+              "start": 5667,
+              "length": 40,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "PresaleToken",
+                "source_mapping": {
+                  "start": 5623,
+                  "length": 670,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              }
+            }
+          },
+          {
+            "type": "contract",
+            "name": "OpenLongevityPresale",
+            "source_mapping": {
+              "start": 6295,
+              "length": 196,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            }
+          }
+        ],
+        "description": "PresaleToken.standard () is never used in OpenLongevityPresale ()\n",
+        "markdown": "[PresaleToken.standard]() is never used in [OpenLongevityPresale]()\n",
+        "first_markdown_element": "",
+        "id": "6cce330602467cdf6c02949959947c9f0572dcbd614dca895f3a54dc0e3be903",
+        "check": "unused-state",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "symbol",
+            "source_mapping": {
+              "start": 5763,
+              "length": 35,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "PresaleToken",
+                "source_mapping": {
+                  "start": 5623,
+                  "length": 670,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              }
+            }
+          },
+          {
+            "type": "contract",
+            "name": "OpenLongevityPresale",
+            "source_mapping": {
+              "start": 6295,
+              "length": 196,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            }
+          }
+        ],
+        "description": "PresaleToken.symbol () is never used in OpenLongevityPresale ()\n",
+        "markdown": "[PresaleToken.symbol]() is never used in [OpenLongevityPresale]()\n",
+        "first_markdown_element": "",
+        "id": "ff5383daf492c1231c4de1a4e4308717e9b58ad0303d9aa6f73c67857e0958eb",
+        "check": "unused-state",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "name",
+            "source_mapping": {
+              "start": 5713,
+              "length": 44,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "PresaleToken",
+                "source_mapping": {
+                  "start": 5623,
+                  "length": 670,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              }
+            }
+          }
+        ],
+        "description": "PresaleToken.name () should be constant \n",
+        "markdown": "[PresaleToken.name]() should be constant \n",
+        "first_markdown_element": "",
+        "id": "66193e6bda3be62516d904574f479a3f41aab10513e485aafd6ddc141f88abc4",
+        "check": "constable-states",
+        "impact": "Optimization",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "standard",
+            "source_mapping": {
+              "start": 5667,
+              "length": 40,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "PresaleToken",
+                "source_mapping": {
+                  "start": 5623,
+                  "length": 670,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              }
+            }
+          }
+        ],
+        "description": "PresaleToken.standard () should be constant \n",
+        "markdown": "[PresaleToken.standard]() should be constant \n",
+        "first_markdown_element": "",
+        "id": "69c127fc3fd5c9a4ef0745b81fb163c75f274c9c6382bdba0b730e768998367c",
+        "check": "constable-states",
+        "impact": "Optimization",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "symbol",
+            "source_mapping": {
+              "start": 5763,
+              "length": 35,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "PresaleToken",
+                "source_mapping": {
+                  "start": 5623,
+                  "length": 670,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              }
+            }
+          }
+        ],
+        "description": "PresaleToken.symbol () should be constant \n",
+        "markdown": "[PresaleToken.symbol]() should be constant \n",
+        "first_markdown_element": "",
+        "id": "840859613288ba0ca3d07cb0ec724ba76ce5b25a09abf1a88a7b2d0ad0fdfbd8",
+        "check": "constable-states",
+        "impact": "Optimization",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "decimals",
+            "source_mapping": {
+              "start": 5804,
+              "length": 30,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "PresaleToken",
+                "source_mapping": {
+                  "start": 5623,
+                  "length": 670,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              }
+            }
+          }
+        ],
+        "description": "PresaleToken.decimals () should be constant \n",
+        "markdown": "[PresaleToken.decimals]() should be constant \n",
+        "first_markdown_element": "",
+        "id": "d8d9cf18dcfdd2f3e91bc7fa693f016c4ddb13813b5c9cf5aa9c583ba236fd4d",
+        "check": "constable-states",
+        "impact": "Optimization",
+        "confidence": "High"
+      }
+    ]
+  }
+}

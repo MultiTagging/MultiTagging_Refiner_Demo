@@ -1,0 +1,1003 @@
+{
+  "success": true,
+  "error": null,
+  "results": {
+    "detectors": [
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "a",
+            "source_mapping": {
+              "start": 2008,
+              "length": 10,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "ValidateLogin",
+                "source_mapping": {
+                  "start": 1911,
+                  "length": 275,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "RentCar",
+                    "source_mapping": {
+                      "start": 25,
+                      "length": 3069,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "ValidateLogin(uint256,address[])"
+                }
+              }
+            }
+          }
+        ],
+        "description": "RentCar.ValidateLogin(uint256,address[]).a () is a local variable never initialized\n",
+        "markdown": "[RentCar.ValidateLogin(uint256,address[]).a]() is a local variable never initialized\n",
+        "first_markdown_element": "",
+        "id": "289fc176be3501290722c068450ce24f009b4de814ec7aab49063247b8919c55",
+        "check": "uninitialized-local",
+        "impact": "Medium",
+        "confidence": "Medium"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "_addr",
+            "source_mapping": {
+              "start": 1424,
+              "length": 13,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "GetUserdetails",
+                "source_mapping": {
+                  "start": 1400,
+                  "length": 506,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "RentCar",
+                    "source_mapping": {
+                      "start": 25,
+                      "length": 3069,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "GetUserdetails(address)"
+                }
+              }
+            }
+          },
+          {
+            "type": "node",
+            "name": "us = _addr",
+            "source_mapping": {
+              "start": 1544,
+              "length": 8,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "GetUserdetails",
+                "source_mapping": {
+                  "start": 1400,
+                  "length": 506,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "RentCar",
+                    "source_mapping": {
+                      "start": 25,
+                      "length": 3069,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "GetUserdetails(address)"
+                }
+              }
+            }
+          }
+        ],
+        "description": "RentCar.GetUserdetails(address)._addr () lacks a zero-check on :\n\t\t- us = _addr ()\n",
+        "markdown": "[RentCar.GetUserdetails(address)._addr]() lacks a zero-check on :\n\t\t- [us = _addr]()\n",
+        "first_markdown_element": "",
+        "id": "5ad64fb1eedbb573b372fff3e2b3eba2ae5f171260f1a5bd99776b3bbdb6edf0",
+        "check": "missing-zero-check",
+        "impact": "Low",
+        "confidence": "Medium"
+      },
+      {
+        "elements": [
+          {
+            "type": "pragma",
+            "name": "^0.4.4",
+            "source_mapping": {
+              "start": 0,
+              "length": 23,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "directive": [
+                "solidity",
+                "^",
+                "0.4",
+                ".4"
+              ]
+            }
+          }
+        ],
+        "description": "Pragma version^0.4.4 () allows old versions\n",
+        "markdown": "Pragma version[^0.4.4]() allows old versions\n",
+        "first_markdown_element": "",
+        "id": "c524dbac81447218cdcc218b1e615718838db5d05e8e9dedd1312462097ce552",
+        "check": "solc-version",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [],
+        "description": "solc-0.4.4 is not recommended for deployment\n",
+        "markdown": "solc-0.4.4 is not recommended for deployment\n",
+        "first_markdown_element": "",
+        "id": "d3c9a9a2694f771324145f36235e7a11e1b0352ba5bffd7634afad1f93f9692b",
+        "check": "solc-version",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "_addr",
+            "source_mapping": {
+              "start": 1424,
+              "length": 13,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "GetUserdetails",
+                "source_mapping": {
+                  "start": 1400,
+                  "length": 506,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "RentCar",
+                    "source_mapping": {
+                      "start": 25,
+                      "length": 3069,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "GetUserdetails(address)"
+                }
+              }
+            },
+            "additional_fields": {
+              "target": "parameter",
+              "convention": "mixedCase"
+            }
+          }
+        ],
+        "description": "Parameter RentCar.GetUserdetails(address)._addr () is not in mixedCase\n",
+        "markdown": "Parameter [RentCar.GetUserdetails(address)._addr]() is not in mixedCase\n",
+        "first_markdown_element": "",
+        "id": "0395aff2933ac3645fa342c1608b89d310fc448aac016759dc4b9c7bdad53013",
+        "check": "naming-convention",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "CreateUser",
+            "source_mapping": {
+              "start": 848,
+              "length": 546,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "RentCar",
+                "source_mapping": {
+                  "start": 25,
+                  "length": 3069,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              },
+              "signature": "CreateUser(address[],string,string,string,string,uint256)"
+            },
+            "additional_fields": {
+              "target": "function",
+              "convention": "mixedCase"
+            }
+          }
+        ],
+        "description": "Function RentCar.CreateUser(address[],string,string,string,string,uint256) () is not in mixedCase\n",
+        "markdown": "Function [RentCar.CreateUser(address[],string,string,string,string,uint256)]() is not in mixedCase\n",
+        "first_markdown_element": "",
+        "id": "0c1a4ae0a6fd470fef7a8928cdea051a46be230865a21ab75afa131a7ad30f71",
+        "check": "naming-convention",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "_mobileno",
+            "source_mapping": {
+              "start": 955,
+              "length": 14,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "CreateUser",
+                "source_mapping": {
+                  "start": 848,
+                  "length": 546,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "RentCar",
+                    "source_mapping": {
+                      "start": 25,
+                      "length": 3069,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "CreateUser(address[],string,string,string,string,uint256)"
+                }
+              }
+            },
+            "additional_fields": {
+              "target": "parameter",
+              "convention": "mixedCase"
+            }
+          }
+        ],
+        "description": "Parameter RentCar.CreateUser(address[],string,string,string,string,uint256)._mobileno () is not in mixedCase\n",
+        "markdown": "Parameter [RentCar.CreateUser(address[],string,string,string,string,uint256)._mobileno]() is not in mixedCase\n",
+        "first_markdown_element": "",
+        "id": "114dd011bc3813076b4cf2cb34519d9feb2d424c8def4d3f7c458ab72f956f89",
+        "check": "naming-convention",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "AddMoney",
+            "source_mapping": {
+              "start": 2192,
+              "length": 115,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "RentCar",
+                "source_mapping": {
+                  "start": 25,
+                  "length": 3069,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              },
+              "signature": "AddMoney(address,uint256)"
+            },
+            "additional_fields": {
+              "target": "function",
+              "convention": "mixedCase"
+            }
+          }
+        ],
+        "description": "Function RentCar.AddMoney(address,uint256) () is not in mixedCase\n",
+        "markdown": "Function [RentCar.AddMoney(address,uint256)]() is not in mixedCase\n",
+        "first_markdown_element": "",
+        "id": "23f539ccc71392a2b476630dcda0fd2cf35e61f78fcb793c7f67b202ece85953",
+        "check": "naming-convention",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "ValidateLogin",
+            "source_mapping": {
+              "start": 1911,
+              "length": 275,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "RentCar",
+                "source_mapping": {
+                  "start": 25,
+                  "length": 3069,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              },
+              "signature": "ValidateLogin(uint256,address[])"
+            },
+            "additional_fields": {
+              "target": "function",
+              "convention": "mixedCase"
+            }
+          }
+        ],
+        "description": "Function RentCar.ValidateLogin(uint256,address[]) () is not in mixedCase\n",
+        "markdown": "Function [RentCar.ValidateLogin(uint256,address[])]() is not in mixedCase\n",
+        "first_markdown_element": "",
+        "id": "671edd71e982fb184fb9012204deab0454d339bafc8dabe6c2cb683e384b15b2",
+        "check": "naming-convention",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "_mobileno",
+            "source_mapping": {
+              "start": 1934,
+              "length": 14,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "ValidateLogin",
+                "source_mapping": {
+                  "start": 1911,
+                  "length": 275,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "RentCar",
+                    "source_mapping": {
+                      "start": 25,
+                      "length": 3069,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "ValidateLogin(uint256,address[])"
+                }
+              }
+            },
+            "additional_fields": {
+              "target": "parameter",
+              "convention": "mixedCase"
+            }
+          }
+        ],
+        "description": "Parameter RentCar.ValidateLogin(uint256,address[])._mobileno () is not in mixedCase\n",
+        "markdown": "Parameter [RentCar.ValidateLogin(uint256,address[])._mobileno]() is not in mixedCase\n",
+        "first_markdown_element": "",
+        "id": "7c92d3e87065570d63dc8b964d46b5634774d4f2aa50f672dc76f69b78c47274",
+        "check": "naming-convention",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "_homeaddress",
+            "source_mapping": {
+              "start": 900,
+              "length": 19,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "CreateUser",
+                "source_mapping": {
+                  "start": 848,
+                  "length": 546,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "RentCar",
+                    "source_mapping": {
+                      "start": 25,
+                      "length": 3069,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "CreateUser(address[],string,string,string,string,uint256)"
+                }
+              }
+            },
+            "additional_fields": {
+              "target": "parameter",
+              "convention": "mixedCase"
+            }
+          }
+        ],
+        "description": "Parameter RentCar.CreateUser(address[],string,string,string,string,uint256)._homeaddress () is not in mixedCase\n",
+        "markdown": "Parameter [RentCar.CreateUser(address[],string,string,string,string,uint256)._homeaddress]() is not in mixedCase\n",
+        "first_markdown_element": "",
+        "id": "7ef6d7fd3f2c81aa76ca9dd332e0501b8b8c0e366ef6b8cd2ba0ccacaf204a22",
+        "check": "naming-convention",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "_emailid",
+            "source_mapping": {
+              "start": 920,
+              "length": 15,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "CreateUser",
+                "source_mapping": {
+                  "start": 848,
+                  "length": 546,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "RentCar",
+                    "source_mapping": {
+                      "start": 25,
+                      "length": 3069,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "CreateUser(address[],string,string,string,string,uint256)"
+                }
+              }
+            },
+            "additional_fields": {
+              "target": "parameter",
+              "convention": "mixedCase"
+            }
+          }
+        ],
+        "description": "Parameter RentCar.CreateUser(address[],string,string,string,string,uint256)._emailid () is not in mixedCase\n",
+        "markdown": "Parameter [RentCar.CreateUser(address[],string,string,string,string,uint256)._emailid]() is not in mixedCase\n",
+        "first_markdown_element": "",
+        "id": "a217329cb8d55187e0ae68345343fd2648b1ba0eb2e4e3a18e2c319f9107a542",
+        "check": "naming-convention",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "_passphrase",
+            "source_mapping": {
+              "start": 936,
+              "length": 18,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "CreateUser",
+                "source_mapping": {
+                  "start": 848,
+                  "length": 546,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "RentCar",
+                    "source_mapping": {
+                      "start": 25,
+                      "length": 3069,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "CreateUser(address[],string,string,string,string,uint256)"
+                }
+              }
+            },
+            "additional_fields": {
+              "target": "parameter",
+              "convention": "mixedCase"
+            }
+          }
+        ],
+        "description": "Parameter RentCar.CreateUser(address[],string,string,string,string,uint256)._passphrase () is not in mixedCase\n",
+        "markdown": "Parameter [RentCar.CreateUser(address[],string,string,string,string,uint256)._passphrase]() is not in mixedCase\n",
+        "first_markdown_element": "",
+        "id": "b33197216d8b9bf692146b5ee73c94819db00e66b8469f4cb8dbc641cdec3a1d",
+        "check": "naming-convention",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "_name",
+            "source_mapping": {
+              "start": 887,
+              "length": 12,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "CreateUser",
+                "source_mapping": {
+                  "start": 848,
+                  "length": 546,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "RentCar",
+                    "source_mapping": {
+                      "start": 25,
+                      "length": 3069,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "CreateUser(address[],string,string,string,string,uint256)"
+                }
+              }
+            },
+            "additional_fields": {
+              "target": "parameter",
+              "convention": "mixedCase"
+            }
+          }
+        ],
+        "description": "Parameter RentCar.CreateUser(address[],string,string,string,string,uint256)._name () is not in mixedCase\n",
+        "markdown": "Parameter [RentCar.CreateUser(address[],string,string,string,string,uint256)._name]() is not in mixedCase\n",
+        "first_markdown_element": "",
+        "id": "ba09f4e0d722430535fcc97e1424647af5f22dfe968fe5f8eafe8dcde231e365",
+        "check": "naming-convention",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "GetUserdetails",
+            "source_mapping": {
+              "start": 1400,
+              "length": 506,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "RentCar",
+                "source_mapping": {
+                  "start": 25,
+                  "length": 3069,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              },
+              "signature": "GetUserdetails(address)"
+            },
+            "additional_fields": {
+              "target": "function",
+              "convention": "mixedCase"
+            }
+          }
+        ],
+        "description": "Function RentCar.GetUserdetails(address) () is not in mixedCase\n",
+        "markdown": "Function [RentCar.GetUserdetails(address)]() is not in mixedCase\n",
+        "first_markdown_element": "",
+        "id": "c7882dc6383c4ca8a127e65fdde371453c4e900d5d1e096664b5a5d7eea16a40",
+        "check": "naming-convention",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "ValidateLogin",
+            "source_mapping": {
+              "start": 1911,
+              "length": 275,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "RentCar",
+                "source_mapping": {
+                  "start": 25,
+                  "length": 3069,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              },
+              "signature": "ValidateLogin(uint256,address[])"
+            }
+          }
+        ],
+        "description": "ValidateLogin(uint256,address[]) should be declared external:\n\t- RentCar.ValidateLogin(uint256,address[]) ()\n",
+        "markdown": "ValidateLogin(uint256,address[]) should be declared external:\n\t- [RentCar.ValidateLogin(uint256,address[])]()\n",
+        "first_markdown_element": "",
+        "id": "2d2b86ef1bce52b5d1e467a0d2a23e6029da337956ac01f42bf873dc28ff7baf",
+        "check": "external-function",
+        "impact": "Optimization",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "CreateUser",
+            "source_mapping": {
+              "start": 848,
+              "length": 546,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "RentCar",
+                "source_mapping": {
+                  "start": 25,
+                  "length": 3069,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              },
+              "signature": "CreateUser(address[],string,string,string,string,uint256)"
+            }
+          }
+        ],
+        "description": "CreateUser(address[],string,string,string,string,uint256) should be declared external:\n\t- RentCar.CreateUser(address[],string,string,string,string,uint256) ()\n",
+        "markdown": "CreateUser(address[],string,string,string,string,uint256) should be declared external:\n\t- [RentCar.CreateUser(address[],string,string,string,string,uint256)]()\n",
+        "first_markdown_element": "",
+        "id": "a34693eeb2fba9868f1c8087393ce5eebac49d8b7908413d04e22d2078578b13",
+        "check": "external-function",
+        "impact": "Optimization",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "payrentnow",
+            "source_mapping": {
+              "start": 2313,
+              "length": 385,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "RentCar",
+                "source_mapping": {
+                  "start": 25,
+                  "length": 3069,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              },
+              "signature": "payrentnow(address,uint256,address[])"
+            }
+          }
+        ],
+        "description": "payrentnow(address,uint256,address[]) should be declared external:\n\t- RentCar.payrentnow(address,uint256,address[]) ()\n",
+        "markdown": "payrentnow(address,uint256,address[]) should be declared external:\n\t- [RentCar.payrentnow(address,uint256,address[])]()\n",
+        "first_markdown_element": "",
+        "id": "de82723debba8a423c5ba616a599c06ec37cba1107104abe4f194bf95dca49ec",
+        "check": "external-function",
+        "impact": "Optimization",
+        "confidence": "High"
+      }
+    ]
+  }
+}

@@ -1,0 +1,147 @@
+{
+  "success": true,
+  "error": null,
+  "results": {
+    "detectors": [
+      {
+        "elements": [
+          {
+            "type": "pragma",
+            "name": "^0.4.8",
+            "source_mapping": {
+              "start": 0,
+              "length": 23,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "directive": [
+                "solidity",
+                "^",
+                "0.4",
+                ".8"
+              ]
+            }
+          }
+        ],
+        "description": "Pragma version^0.4.8 () allows old versions\n",
+        "markdown": "Pragma version[^0.4.8]() allows old versions\n",
+        "first_markdown_element": "",
+        "id": "dd43bca9b08bc1fa7b94a3e619671f3c2c98a72b8b3bf0caf1e1f86665ec4569",
+        "check": "solc-version",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [],
+        "description": "solc-0.4.8 is not recommended for deployment\n",
+        "markdown": "solc-0.4.8 is not recommended for deployment\n",
+        "first_markdown_element": "",
+        "id": "ebbd8e423b3c73a93e118f8daed7c9ac33b0d525351f79b5ea41076caa3c1bc5",
+        "check": "solc-version",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "Second",
+            "source_mapping": {
+              "start": 101,
+              "length": 11,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "bar",
+                "source_mapping": {
+                  "start": 88,
+                  "length": 80,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "foo",
+                    "source_mapping": {
+                      "start": 69,
+                      "length": 101,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "bar(uint256)"
+                }
+              }
+            },
+            "additional_fields": {
+              "target": "parameter",
+              "convention": "mixedCase"
+            }
+          }
+        ],
+        "description": "Parameter foo.bar(uint256).Second () is not in mixedCase\n",
+        "markdown": "Parameter [foo.bar(uint256).Second]() is not in mixedCase\n",
+        "first_markdown_element": "",
+        "id": "788b99d536b5f89acc5fecbe602d023e4e5409c722c1a3328239a0a88d14d4b7",
+        "check": "naming-convention",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "contract",
+            "name": "foo",
+            "source_mapping": {
+              "start": 69,
+              "length": 101,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "additional_fields": {
+              "target": "contract",
+              "convention": "CapWords"
+            }
+          }
+        ],
+        "description": "Contract foo () is not in CapWords\n",
+        "markdown": "Contract [foo]() is not in CapWords\n",
+        "first_markdown_element": "",
+        "id": "7e77beb31d08e3f0c30a670acdf38db01062f0097df779ed5aa324ca32641590",
+        "check": "naming-convention",
+        "impact": "Informational",
+        "confidence": "High"
+      }
+    ]
+  }
+}

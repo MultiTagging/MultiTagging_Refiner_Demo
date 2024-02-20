@@ -1,0 +1,37 @@
+{
+  "fileName": "Benchmarks/Study_SamplesSet/122bd31ed8e2a77782bf1035f355b764.sol",
+  "baseName": "122bd31ed8e2a77782bf1035f355b764.sol",
+  "iter": 2,
+  "time": "0.346149",
+  "errMsg": null,
+  "result": [
+    {
+      "no": "1",
+      "kind": "ETH_LEAK",
+      "line": 34,
+      "signatures": [
+        {
+          "contractName": "RedEnvelope",
+          "methodName": "Open",
+          "argTypes": [ "dbytes" ]
+        }
+      ],
+      "exp": "msg.sender.transfer(this.balance);",
+      "status": "proven"
+    },
+    {
+      "no": "2",
+      "kind": "ETH_LEAK",
+      "line": 36,
+      "signatures": [
+        {
+          "contractName": "RedEnvelope",
+          "methodName": "Open",
+          "argTypes": [ "dbytes" ]
+        }
+      ],
+      "exp": "msg.sender.transfer(this.balance);",
+      "status": "proven"
+    }
+  ]
+}

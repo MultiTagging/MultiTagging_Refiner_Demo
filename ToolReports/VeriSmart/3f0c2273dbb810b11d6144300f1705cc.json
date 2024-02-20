@@ -1,0 +1,223 @@
+{
+  "fileName": "Benchmarks/Study_SamplesSet/3f0c2273dbb810b11d6144300f1705cc.sol",
+  "baseName": "3f0c2273dbb810b11d6144300f1705cc.sol",
+  "iter": 241,
+  "time": "300.460359",
+  "errMsg": null,
+  "result": [
+    {
+      "no": "1",
+      "kind": "IO",
+      "line": 43,
+      "signatures": [
+        { "contractName": "MAC", "methodName": "@fallback", "argTypes": [] },
+        { "contractName": "MAC", "methodName": "getTokens", "argTypes": [] }
+      ],
+      "exp": "(a * b)",
+      "status": "unproven"
+    },
+    {
+      "no": "2",
+      "kind": "IO",
+      "line": 55,
+      "signatures": [
+        { "contractName": "MAC", "methodName": "MAC", "argTypes": [] },
+        {
+          "contractName": "MAC",
+          "methodName": "burn",
+          "argTypes": [ "uint256" ]
+        },
+        {
+          "contractName": "MAC",
+          "methodName": "distr",
+          "argTypes": [ "address", "uint256" ]
+        },
+        {
+          "contractName": "MAC",
+          "methodName": "transfer",
+          "argTypes": [ "address", "uint256" ]
+        },
+        {
+          "contractName": "MAC",
+          "methodName": "transferFrom",
+          "argTypes": [ "address", "address", "uint256" ]
+        }
+      ],
+      "exp": "(a - b)",
+      "status": "proven"
+    },
+    {
+      "no": "3",
+      "kind": "IO",
+      "line": 59,
+      "signatures": [
+        {
+          "contractName": "MAC",
+          "methodName": "distr",
+          "argTypes": [ "address", "uint256" ]
+        },
+        {
+          "contractName": "MAC",
+          "methodName": "transfer",
+          "argTypes": [ "address", "uint256" ]
+        },
+        {
+          "contractName": "MAC",
+          "methodName": "transferFrom",
+          "argTypes": [ "address", "address", "uint256" ]
+        }
+      ],
+      "exp": "(a + b)",
+      "status": "unproven"
+    },
+    {
+      "no": "4",
+      "kind": "IO",
+      "line": 146,
+      "signatures": [
+        {
+          "contractName": "MAC",
+          "methodName": "enableWhitelist",
+          "argTypes": [ "address[]" ]
+        }
+      ],
+      "exp": "(i + 1)",
+      "status": "proven"
+    },
+    {
+      "no": "5",
+      "kind": "IO",
+      "line": 152,
+      "signatures": [
+        {
+          "contractName": "MAC",
+          "methodName": "disableWhitelist",
+          "argTypes": [ "address[]" ]
+        }
+      ],
+      "exp": "(i + 1)",
+      "status": "proven"
+    },
+    {
+      "no": "6",
+      "kind": "IO",
+      "line": 181,
+      "signatures": [
+        {
+          "contractName": "MAC",
+          "methodName": "airdrop",
+          "argTypes": [ "address[]" ]
+        }
+      ],
+      "exp": "(i + 1)",
+      "status": "proven"
+    },
+    {
+      "no": "7",
+      "kind": "IO",
+      "line": 196,
+      "signatures": [
+        {
+          "contractName": "MAC",
+          "methodName": "distribution",
+          "argTypes": [ "address[]", "uint256" ]
+        }
+      ],
+      "exp": "(i + 1)",
+      "status": "proven"
+    },
+    {
+      "no": "8",
+      "kind": "IO",
+      "line": 211,
+      "signatures": [
+        {
+          "contractName": "MAC",
+          "methodName": "distributeAmounts",
+          "argTypes": [ "address[]", "uint256[]" ]
+        }
+      ],
+      "exp": "(i + 1)",
+      "status": "unproven"
+    },
+    {
+      "no": "9",
+      "kind": "IO",
+      "line": 255,
+      "signatures": [
+        {
+          "contractName": "MAC",
+          "methodName": "transfer",
+          "argTypes": [ "address", "uint256" ]
+        },
+        {
+          "contractName": "MAC",
+          "methodName": "transferFrom",
+          "argTypes": [ "address", "address", "uint256" ]
+        }
+      ],
+      "exp": "(size + 4)",
+      "status": "proven"
+    },
+    {
+      "no": "10",
+      "kind": "IO",
+      "line": 259,
+      "signatures": [
+        {
+          "contractName": "MAC",
+          "methodName": "transfer",
+          "argTypes": [ "address", "uint256" ]
+        }
+      ],
+      "exp": "(2 * 32)",
+      "status": "proven"
+    },
+    {
+      "no": "11",
+      "kind": "IO",
+      "line": 270,
+      "signatures": [
+        {
+          "contractName": "MAC",
+          "methodName": "transferFrom",
+          "argTypes": [ "address", "address", "uint256" ]
+        }
+      ],
+      "exp": "(3 * 32)",
+      "status": "proven"
+    },
+    {
+      "no": "12",
+      "kind": "DZ",
+      "line": 44,
+      "signatures": [
+        { "contractName": "MAC", "methodName": "@fallback", "argTypes": [] },
+        { "contractName": "MAC", "methodName": "getTokens", "argTypes": [] }
+      ],
+      "exp": "(c / a)",
+      "status": "unproven"
+    },
+    {
+      "no": "13",
+      "kind": "DZ",
+      "line": 49,
+      "signatures": [
+        { "contractName": "MAC", "methodName": "@fallback", "argTypes": [] },
+        { "contractName": "MAC", "methodName": "getTokens", "argTypes": [] }
+      ],
+      "exp": "(a / b)",
+      "status": "proven"
+    },
+    {
+      "no": "14",
+      "kind": "ETH_LEAK",
+      "line": 303,
+      "signatures": [
+        { "contractName": "MAC", "methodName": "withdraw", "argTypes": [] }
+      ],
+      "exp": "owner.transfer(etherBalance);",
+      "status": "proven"
+    }
+  ]
+}

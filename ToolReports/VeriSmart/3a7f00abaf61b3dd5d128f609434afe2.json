@@ -1,0 +1,135 @@
+{
+  "fileName": "Benchmarks/Study_SamplesSet/3a7f00abaf61b3dd5d128f609434afe2.sol",
+  "baseName": "3a7f00abaf61b3dd5d128f609434afe2.sol",
+  "iter": 976,
+  "time": "300.138487",
+  "errMsg": null,
+  "result": [
+    {
+      "no": "1",
+      "kind": "IO",
+      "line": 27,
+      "signatures": [
+        {
+          "contractName": "ProvidencePresale",
+          "methodName": "buyTokens",
+          "argTypes": [ "address" ]
+        }
+      ],
+      "exp": "(a + b)",
+      "status": "unproven"
+    },
+    {
+      "no": "2",
+      "kind": "IO",
+      "line": 79,
+      "signatures": [
+        {
+          "contractName": "ProvidencePresale",
+          "methodName": "ProvidencePresale",
+          "argTypes": []
+        }
+      ],
+      "exp": "(((14 * 24) * 60) * 60)",
+      "status": "proven"
+    },
+    {
+      "no": "3",
+      "kind": "IO",
+      "line": 79,
+      "signatures": [
+        {
+          "contractName": "ProvidencePresale",
+          "methodName": "ProvidencePresale",
+          "argTypes": []
+        }
+      ],
+      "exp": "((14 * 24) * 60)",
+      "status": "proven"
+    },
+    {
+      "no": "4",
+      "kind": "IO",
+      "line": 79,
+      "signatures": [
+        {
+          "contractName": "ProvidencePresale",
+          "methodName": "ProvidencePresale",
+          "argTypes": []
+        }
+      ],
+      "exp": "(14 * 24)",
+      "status": "proven"
+    },
+    {
+      "no": "5",
+      "kind": "IO",
+      "line": 79,
+      "signatures": [
+        {
+          "contractName": "ProvidencePresale",
+          "methodName": "ProvidencePresale",
+          "argTypes": []
+        }
+      ],
+      "exp": "(startTime + (((14 * 24) * 60) * 60))",
+      "status": "proven"
+    },
+    {
+      "no": "6",
+      "kind": "IO",
+      "line": 94,
+      "signatures": [
+        {
+          "contractName": "ProvidencePresale",
+          "methodName": "buyTokens",
+          "argTypes": [ "address" ]
+        }
+      ],
+      "exp": "(10 ** 18)",
+      "status": "proven"
+    },
+    {
+      "no": "7",
+      "kind": "IO",
+      "line": 94,
+      "signatures": [
+        {
+          "contractName": "ProvidencePresale",
+          "methodName": "buyTokens",
+          "argTypes": [ "address" ]
+        }
+      ],
+      "exp": "(5 * (10 ** 18))",
+      "status": "proven"
+    },
+    {
+      "no": "8",
+      "kind": "IO",
+      "line": 97,
+      "signatures": [
+        {
+          "contractName": "ProvidencePresale",
+          "methodName": "buyTokens",
+          "argTypes": [ "address" ]
+        }
+      ],
+      "exp": "(weiAmount * 810)",
+      "status": "unproven"
+    },
+    {
+      "no": "9",
+      "kind": "ETH_LEAK",
+      "line": 111,
+      "signatures": [
+        {
+          "contractName": "ProvidencePresale",
+          "methodName": "buyTokens",
+          "argTypes": [ "address" ]
+        }
+      ],
+      "exp": "wallet.send(msg.value)",
+      "status": "proven"
+    }
+  ]
+}

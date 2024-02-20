@@ -1,0 +1,296 @@
+{
+  "success": true,
+  "error": null,
+  "results": {
+    "detectors": [
+      {
+        "elements": [
+          {
+            "type": "contract",
+            "name": "TestQuery",
+            "source_mapping": {
+              "start": 398,
+              "length": 855,
+              "filename_relative": "Benchmarks/Study_SamplesSet/f23685212aadb71e635f291b5a234e3d.sol",
+              "filename_absolute": "/home/shikah/Documents/PhD/VulDet/Benchmarks/Study_SamplesSet/f23685212aadb71e635f291b5a234e3d.sol",
+              "filename_short": "Benchmarks/Study_SamplesSet/f23685212aadb71e635f291b5a234e3d.sol",
+              "is_dependency": false,
+              "lines": [
+                8,
+                9,
+                10,
+                11,
+                12,
+                13,
+                14,
+                15,
+                16,
+                17,
+                18,
+                19,
+                20,
+                21,
+                22,
+                23,
+                24,
+                25,
+                26,
+                27,
+                28,
+                29,
+                30,
+                31,
+                32,
+                33,
+                34,
+                35,
+                36,
+                37,
+                38,
+                39
+              ],
+              "starting_column": 1,
+              "ending_column": 0
+            }
+          },
+          {
+            "type": "function",
+            "name": "lockforTransfer",
+            "source_mapping": {
+              "start": 730,
+              "length": 314,
+              "filename_relative": "Benchmarks/Study_SamplesSet/f23685212aadb71e635f291b5a234e3d.sol",
+              "filename_absolute": "/home/shikah/Documents/PhD/VulDet/Benchmarks/Study_SamplesSet/f23685212aadb71e635f291b5a234e3d.sol",
+              "filename_short": "Benchmarks/Study_SamplesSet/f23685212aadb71e635f291b5a234e3d.sol",
+              "is_dependency": false,
+              "lines": [
+                21,
+                22,
+                23,
+                24,
+                25,
+                26,
+                27,
+                28,
+                29,
+                30,
+                31
+              ],
+              "starting_column": 3,
+              "ending_column": 4
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "TestQuery",
+                "source_mapping": {
+                  "start": 398,
+                  "length": 855,
+                  "filename_relative": "Benchmarks/Study_SamplesSet/f23685212aadb71e635f291b5a234e3d.sol",
+                  "filename_absolute": "/home/shikah/Documents/PhD/VulDet/Benchmarks/Study_SamplesSet/f23685212aadb71e635f291b5a234e3d.sol",
+                  "filename_short": "Benchmarks/Study_SamplesSet/f23685212aadb71e635f291b5a234e3d.sol",
+                  "is_dependency": false,
+                  "lines": [
+                    8,
+                    9,
+                    10,
+                    11,
+                    12,
+                    13,
+                    14,
+                    15,
+                    16,
+                    17,
+                    18,
+                    19,
+                    20,
+                    21,
+                    22,
+                    23,
+                    24,
+                    25,
+                    26,
+                    27,
+                    28,
+                    29,
+                    30,
+                    31,
+                    32,
+                    33,
+                    34,
+                    35,
+                    36,
+                    37,
+                    38,
+                    39
+                  ],
+                  "starting_column": 1,
+                  "ending_column": 0
+                }
+              },
+              "signature": "lockforTransfer()"
+            }
+          }
+        ],
+        "description": "Contract locking ether found:\n\tContract TestQuery (Benchmarks/Study_SamplesSet/f23685212aadb71e635f291b5a234e3d.sol#8-39) has payable functions:\n\t - TestQuery.lockforTransfer() (Benchmarks/Study_SamplesSet/f23685212aadb71e635f291b5a234e3d.sol#21-31)\n\tBut does not have a function to withdraw the ether\n",
+        "markdown": "Contract locking ether found:\n\tContract [TestQuery](Benchmarks/Study_SamplesSet/f23685212aadb71e635f291b5a234e3d.sol#L8-L39) has payable functions:\n\t - [TestQuery.lockforTransfer()](Benchmarks/Study_SamplesSet/f23685212aadb71e635f291b5a234e3d.sol#L21-L31)\n\tBut does not have a function to withdraw the ether\n",
+        "first_markdown_element": "Benchmarks/Study_SamplesSet/f23685212aadb71e635f291b5a234e3d.sol#L8-L39",
+        "id": "73838c98df28da83f4bb00a465da8ddc84f38bb5d53f3948744ba9b7ee602efe",
+        "check": "locked-ether",
+        "impact": "Medium",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "pragma",
+            "name": "^0.4.19",
+            "source_mapping": {
+              "start": 0,
+              "length": 24,
+              "filename_relative": "Benchmarks/Study_SamplesSet/f23685212aadb71e635f291b5a234e3d.sol",
+              "filename_absolute": "/home/shikah/Documents/PhD/VulDet/Benchmarks/Study_SamplesSet/f23685212aadb71e635f291b5a234e3d.sol",
+              "filename_short": "Benchmarks/Study_SamplesSet/f23685212aadb71e635f291b5a234e3d.sol",
+              "is_dependency": false,
+              "lines": [
+                1
+              ],
+              "starting_column": 1,
+              "ending_column": 25
+            },
+            "type_specific_fields": {
+              "directive": [
+                "solidity",
+                "^",
+                "0.4",
+                ".19"
+              ]
+            }
+          }
+        ],
+        "description": "Pragma version^0.4.19 (Benchmarks/Study_SamplesSet/f23685212aadb71e635f291b5a234e3d.sol#1) allows old versions\n",
+        "markdown": "Pragma version[^0.4.19](Benchmarks/Study_SamplesSet/f23685212aadb71e635f291b5a234e3d.sol#L1) allows old versions\n",
+        "first_markdown_element": "Benchmarks/Study_SamplesSet/f23685212aadb71e635f291b5a234e3d.sol#L1",
+        "id": "4229c5cb1c93a29ba5d52d44c80d0b22379a2f1a58e18105a78486c8988f2e1e",
+        "check": "solc-version",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [],
+        "description": "solc-0.4.19 is not recommended for deployment\n",
+        "markdown": "solc-0.4.19 is not recommended for deployment\n",
+        "first_markdown_element": "",
+        "id": "6c57d3efd769b2c1ca361b3d06ff1f2677845be92f7b50762125a4196d71725a",
+        "check": "solc-version",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "_transferId",
+            "source_mapping": {
+              "start": 1069,
+              "length": 16,
+              "filename_relative": "Benchmarks/Study_SamplesSet/f23685212aadb71e635f291b5a234e3d.sol",
+              "filename_absolute": "/home/shikah/Documents/PhD/VulDet/Benchmarks/Study_SamplesSet/f23685212aadb71e635f291b5a234e3d.sol",
+              "filename_short": "Benchmarks/Study_SamplesSet/f23685212aadb71e635f291b5a234e3d.sol",
+              "is_dependency": false,
+              "lines": [
+                33
+              ],
+              "starting_column": 24,
+              "ending_column": 40
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "getTransfer",
+                "source_mapping": {
+                  "start": 1048,
+                  "length": 202,
+                  "filename_relative": "Benchmarks/Study_SamplesSet/f23685212aadb71e635f291b5a234e3d.sol",
+                  "filename_absolute": "/home/shikah/Documents/PhD/VulDet/Benchmarks/Study_SamplesSet/f23685212aadb71e635f291b5a234e3d.sol",
+                  "filename_short": "Benchmarks/Study_SamplesSet/f23685212aadb71e635f291b5a234e3d.sol",
+                  "is_dependency": false,
+                  "lines": [
+                    33,
+                    34,
+                    35,
+                    36
+                  ],
+                  "starting_column": 3,
+                  "ending_column": 4
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "TestQuery",
+                    "source_mapping": {
+                      "start": 398,
+                      "length": 855,
+                      "filename_relative": "Benchmarks/Study_SamplesSet/f23685212aadb71e635f291b5a234e3d.sol",
+                      "filename_absolute": "/home/shikah/Documents/PhD/VulDet/Benchmarks/Study_SamplesSet/f23685212aadb71e635f291b5a234e3d.sol",
+                      "filename_short": "Benchmarks/Study_SamplesSet/f23685212aadb71e635f291b5a234e3d.sol",
+                      "is_dependency": false,
+                      "lines": [
+                        8,
+                        9,
+                        10,
+                        11,
+                        12,
+                        13,
+                        14,
+                        15,
+                        16,
+                        17,
+                        18,
+                        19,
+                        20,
+                        21,
+                        22,
+                        23,
+                        24,
+                        25,
+                        26,
+                        27,
+                        28,
+                        29,
+                        30,
+                        31,
+                        32,
+                        33,
+                        34,
+                        35,
+                        36,
+                        37,
+                        38,
+                        39
+                      ],
+                      "starting_column": 1,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "getTransfer(uint256)"
+                }
+              }
+            },
+            "additional_fields": {
+              "target": "parameter",
+              "convention": "mixedCase"
+            }
+          }
+        ],
+        "description": "Parameter TestQuery.getTransfer(uint256)._transferId (Benchmarks/Study_SamplesSet/f23685212aadb71e635f291b5a234e3d.sol#33) is not in mixedCase\n",
+        "markdown": "Parameter [TestQuery.getTransfer(uint256)._transferId](Benchmarks/Study_SamplesSet/f23685212aadb71e635f291b5a234e3d.sol#L33) is not in mixedCase\n",
+        "first_markdown_element": "Benchmarks/Study_SamplesSet/f23685212aadb71e635f291b5a234e3d.sol#L33",
+        "id": "8348aff3f15dd6f1dea4a1462f12ee1a145d327296fd73265801eb15e378a546",
+        "check": "naming-convention",
+        "impact": "Informational",
+        "confidence": "High"
+      }
+    ]
+  }
+}

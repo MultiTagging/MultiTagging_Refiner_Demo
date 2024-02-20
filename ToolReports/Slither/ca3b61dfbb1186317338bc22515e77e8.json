@@ -1,0 +1,189 @@
+{
+  "success": true,
+  "error": null,
+  "results": {
+    "detectors": [
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "getPercent",
+            "source_mapping": {
+              "start": 1327,
+              "length": 666,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "THX",
+                "source_mapping": {
+                  "start": 59,
+                  "length": 2802,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              },
+              "signature": "getPercent(uint256)"
+            }
+          },
+          {
+            "type": "node",
+            "name": "(inWrg >= 0) && (inWrg < 2)",
+            "source_mapping": {
+              "start": 1459,
+              "length": 27,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "getPercent",
+                "source_mapping": {
+                  "start": 1327,
+                  "length": 666,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "THX",
+                    "source_mapping": {
+                      "start": 59,
+                      "length": 2802,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "getPercent(uint256)"
+                }
+              }
+            }
+          }
+        ],
+        "description": "THX.getPercent(uint256) () contains a tautology or contradiction:\n\t- (inWrg >= 0) && (inWrg < 2) ()\n",
+        "markdown": "[THX.getPercent(uint256)]() contains a tautology or contradiction:\n\t- [(inWrg >= 0) && (inWrg < 2)]()\n",
+        "first_markdown_element": "",
+        "id": "1d49b690afd68bc6b618fc8815cbe1b815740c8f17cede5d713a399fee90b306",
+        "check": "tautology",
+        "impact": "Medium",
+        "confidence": "High"
+      },
+      {
+        "elements": [],
+        "description": "solc-0.4.0 is not recommended for deployment\n",
+        "markdown": "solc-0.4.0 is not recommended for deployment\n",
+        "first_markdown_element": "",
+        "id": "e676d9e89e623fa7675baecce41eb7ab21d1d8ec9e856bc5b047e6cfb50b37ca",
+        "check": "solc-version",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "pragma",
+            "name": "^0.4.0",
+            "source_mapping": {
+              "start": 0,
+              "length": 23,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "directive": [
+                "solidity",
+                "^",
+                "0.4",
+                ".0"
+              ]
+            }
+          }
+        ],
+        "description": "Pragma version^0.4.0 () allows old versions\n",
+        "markdown": "Pragma version[^0.4.0]() allows old versions\n",
+        "first_markdown_element": "",
+        "id": "f4d0f96f990510a571c7ae954763f848d217d6f86fa5953d251f28f5221969e2",
+        "check": "solc-version",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "wrgMul",
+            "source_mapping": {
+              "start": 174,
+              "length": 26,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "THX",
+                "source_mapping": {
+                  "start": 59,
+                  "length": 2802,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              }
+            }
+          }
+        ],
+        "description": "THX.wrgMul () should be constant \n",
+        "markdown": "[THX.wrgMul]() should be constant \n",
+        "first_markdown_element": "",
+        "id": "7fb7a755c038bd6787160b9a750c7549268db0c9e5b3addc7fd13f8123467c54",
+        "check": "constable-states",
+        "impact": "Optimization",
+        "confidence": "High"
+      }
+    ]
+  }
+}

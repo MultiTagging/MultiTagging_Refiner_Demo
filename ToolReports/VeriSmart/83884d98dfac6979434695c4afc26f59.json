@@ -1,0 +1,177 @@
+{
+  "fileName": "Benchmarks/Study_SamplesSet/83884d98dfac6979434695c4afc26f59.sol",
+  "baseName": "83884d98dfac6979434695c4afc26f59.sol",
+  "iter": 3928,
+  "time": "177.533959",
+  "errMsg": null,
+  "result": [
+    {
+      "no": "1",
+      "kind": "IO",
+      "line": 39,
+      "signatures": [
+        {
+          "contractName": "TrustBet",
+          "methodName": "lottery",
+          "argTypes": [ "uint8" ]
+        }
+      ],
+      "exp": "(block.number + 130000)",
+      "status": "unproven"
+    },
+    {
+      "no": "2",
+      "kind": "IO",
+      "line": 47,
+      "signatures": [
+        {
+          "contractName": "TrustBet",
+          "methodName": "bet",
+          "argTypes": [ "uint8" ]
+        }
+      ],
+      "exp": "(stakes[team][msg.sender] + msg.value)",
+      "status": "unproven"
+    },
+    {
+      "no": "3",
+      "kind": "IO",
+      "line": 49,
+      "signatures": [
+        {
+          "contractName": "TrustBet",
+          "methodName": "bet",
+          "argTypes": [ "uint8" ]
+        }
+      ],
+      "exp": "(teamStakes[team] + msg.value)",
+      "status": "unproven"
+    },
+    {
+      "no": "4",
+      "kind": "IO",
+      "line": 61,
+      "signatures": [
+        {
+          "contractName": "TrustBet",
+          "methodName": "withdraw",
+          "argTypes": []
+        }
+      ],
+      "exp": "((teamStakes[0] + teamStakes[1]) + teamStakes[2])",
+      "status": "unproven"
+    },
+    {
+      "no": "5",
+      "kind": "IO",
+      "line": 61,
+      "signatures": [
+        {
+          "contractName": "TrustBet",
+          "methodName": "withdraw",
+          "argTypes": []
+        }
+      ],
+      "exp": "(myStake * ((teamStakes[0] + teamStakes[1]) + teamStakes[2]))",
+      "status": "unproven"
+    },
+    {
+      "no": "6",
+      "kind": "IO",
+      "line": 61,
+      "signatures": [
+        {
+          "contractName": "TrustBet",
+          "methodName": "withdraw",
+          "argTypes": []
+        }
+      ],
+      "exp": "(teamStakes[0] + teamStakes[1])",
+      "status": "unproven"
+    },
+    {
+      "no": "7",
+      "kind": "IO",
+      "line": 63,
+      "signatures": [
+        {
+          "contractName": "TrustBet",
+          "methodName": "withdraw",
+          "argTypes": []
+        }
+      ],
+      "exp": "(win * 1)",
+      "status": "proven"
+    },
+    {
+      "no": "8",
+      "kind": "IO",
+      "line": 63,
+      "signatures": [
+        {
+          "contractName": "TrustBet",
+          "methodName": "withdraw",
+          "argTypes": []
+        }
+      ],
+      "exp": "(win - ((win * 1) / 100))",
+      "status": "proven"
+    },
+    {
+      "no": "9",
+      "kind": "DZ",
+      "line": 61,
+      "signatures": [
+        {
+          "contractName": "TrustBet",
+          "methodName": "withdraw",
+          "argTypes": []
+        }
+      ],
+      "exp": "((myStake * ((teamStakes[0] + teamStakes[1]) + teamStakes[2])) / teamStakes[winTeam])",
+      "status": "unproven"
+    },
+    {
+      "no": "10",
+      "kind": "DZ",
+      "line": 63,
+      "signatures": [
+        {
+          "contractName": "TrustBet",
+          "methodName": "withdraw",
+          "argTypes": []
+        }
+      ],
+      "exp": "((win * 1) / 100)",
+      "status": "proven"
+    },
+    {
+      "no": "11",
+      "kind": "ETH_LEAK",
+      "line": 68,
+      "signatures": [
+        {
+          "contractName": "TrustBet",
+          "methodName": "withdraw",
+          "argTypes": []
+        }
+      ],
+      "exp": "msg.sender.transfer(amount);",
+      "status": "unproven"
+    },
+    {
+      "no": "12",
+      "kind": "ETH_LEAK",
+      "line": 78,
+      "signatures": [
+        {
+          "contractName": "TrustBet",
+          "methodName": "commission",
+          "argTypes": []
+        }
+      ],
+      "exp": "owner.transfer(address(this).balance);",
+      "status": "proven"
+    }
+  ]
+}

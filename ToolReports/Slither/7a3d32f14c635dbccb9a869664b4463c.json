@@ -1,0 +1,651 @@
+{
+  "success": true,
+  "error": null,
+  "results": {
+    "detectors": [
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "dissmisPurse",
+            "source_mapping": {
+              "start": 2000,
+              "length": 422,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "Omnipurse",
+                "source_mapping": {
+                  "start": 25,
+                  "length": 2688,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              },
+              "signature": "dissmisPurse(uint256)"
+            }
+          },
+          {
+            "type": "node",
+            "name": "c.refunded = c.sender.send(c.value)",
+            "source_mapping": {
+              "start": 2297,
+              "length": 35,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "dissmisPurse",
+                "source_mapping": {
+                  "start": 2000,
+                  "length": 422,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "Omnipurse",
+                    "source_mapping": {
+                      "start": 25,
+                      "length": 2688,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "dissmisPurse(uint256)"
+                }
+              }
+            }
+          }
+        ],
+        "description": "Omnipurse.dissmisPurse(uint256) () has external calls inside a loop: c.refunded = c.sender.send(c.value) ()\n",
+        "markdown": "[Omnipurse.dissmisPurse(uint256)]() has external calls inside a loop: [c.refunded = c.sender.send(c.value)]()\n",
+        "first_markdown_element": "",
+        "id": "6d1d8c1d22a4767c45f98d805dadac0ba3fd45d6b601fc120750541f980d8280",
+        "check": "calls-loop",
+        "impact": "Low",
+        "confidence": "Medium"
+      },
+      {
+        "elements": [
+          {
+            "type": "node",
+            "name": "",
+            "source_mapping": {
+              "start": 1786,
+              "length": 5,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "contributeToPurse",
+                "source_mapping": {
+                  "start": 1679,
+                  "length": 317,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "Omnipurse",
+                    "source_mapping": {
+                      "start": 25,
+                      "length": 2688,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "contributeToPurse(uint256)"
+                }
+              }
+            }
+          }
+        ],
+        "description": "Deprecated standard detected THROW ():\n\t- Usage of \"throw\" should be replaced with \"revert()\"\n",
+        "markdown": "Deprecated standard detected [THROW]():\n\t- Usage of \"throw\" should be replaced with \"revert()\"\n",
+        "first_markdown_element": "",
+        "id": "f5556cf1c70b64b9e4b1fc32044dd970b5f2c8b9fc21b7971fda01971033f2d5",
+        "check": "deprecated-standards",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "pragma",
+            "name": "^0.4.8",
+            "source_mapping": {
+              "start": 0,
+              "length": 23,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "directive": [
+                "solidity",
+                "^",
+                "0.4",
+                ".8"
+              ]
+            }
+          }
+        ],
+        "description": "Pragma version^0.4.8 () allows old versions\n",
+        "markdown": "Pragma version[^0.4.8]() allows old versions\n",
+        "first_markdown_element": "",
+        "id": "dd43bca9b08bc1fa7b94a3e619671f3c2c98a72b8b3bf0caf1e1f86665ec4569",
+        "check": "solc-version",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [],
+        "description": "solc-0.4.8 is not recommended for deployment\n",
+        "markdown": "solc-0.4.8 is not recommended for deployment\n",
+        "first_markdown_element": "",
+        "id": "ebbd8e423b3c73a93e118f8daed7c9ac33b0d525351f79b5ea41076caa3c1bc5",
+        "check": "solc-version",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "finishPurse",
+            "source_mapping": {
+              "start": 2426,
+              "length": 194,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "Omnipurse",
+                "source_mapping": {
+                  "start": 25,
+                  "length": 2688,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              },
+              "signature": "finishPurse(uint256)"
+            }
+          },
+          {
+            "type": "node",
+            "name": "p.creator.send(p.totalContributed)",
+            "source_mapping": {
+              "start": 2563,
+              "length": 34,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "finishPurse",
+                "source_mapping": {
+                  "start": 2426,
+                  "length": 194,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "Omnipurse",
+                    "source_mapping": {
+                      "start": 25,
+                      "length": 2688,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "finishPurse(uint256)"
+                }
+              }
+            },
+            "additional_fields": {
+              "underlying_type": "external_calls"
+            }
+          },
+          {
+            "type": "node",
+            "name": "p.status = 2",
+            "source_mapping": {
+              "start": 2601,
+              "length": 12,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "finishPurse",
+                "source_mapping": {
+                  "start": 2426,
+                  "length": 194,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "Omnipurse",
+                    "source_mapping": {
+                      "start": 25,
+                      "length": 2688,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "finishPurse(uint256)"
+                }
+              }
+            },
+            "additional_fields": {
+              "underlying_type": "variables_written",
+              "variable_name": "purses"
+            }
+          }
+        ],
+        "description": "Reentrancy in Omnipurse.finishPurse(uint256) ():\n\tExternal calls:\n\t- p.creator.send(p.totalContributed) ()\n\tState variables written after the call(s):\n\t- p.status = 2 ()\n",
+        "markdown": "Reentrancy in [Omnipurse.finishPurse(uint256)]():\n\tExternal calls:\n\t- [p.creator.send(p.totalContributed)]()\n\tState variables written after the call(s):\n\t- [p.status = 2]()\n",
+        "first_markdown_element": "",
+        "id": "7af765ad615bfa3c6b5e00f5c75de9b5b74edb26551811c2948e802182b9660e",
+        "check": "reentrancy-unlimited-gas",
+        "impact": "Informational",
+        "confidence": "Medium"
+      },
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "dissmisPurse",
+            "source_mapping": {
+              "start": 2000,
+              "length": 422,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "Omnipurse",
+                "source_mapping": {
+                  "start": 25,
+                  "length": 2688,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              },
+              "signature": "dissmisPurse(uint256)"
+            }
+          },
+          {
+            "type": "node",
+            "name": "c.refunded = c.sender.send(c.value)",
+            "source_mapping": {
+              "start": 2297,
+              "length": 35,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "dissmisPurse",
+                "source_mapping": {
+                  "start": 2000,
+                  "length": 422,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "Omnipurse",
+                    "source_mapping": {
+                      "start": 25,
+                      "length": 2688,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "dissmisPurse(uint256)"
+                }
+              }
+            },
+            "additional_fields": {
+              "underlying_type": "external_calls"
+            }
+          },
+          {
+            "type": "node",
+            "name": "p.status = 3",
+            "source_mapping": {
+              "start": 2391,
+              "length": 26,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "dissmisPurse",
+                "source_mapping": {
+                  "start": 2000,
+                  "length": 422,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "Omnipurse",
+                    "source_mapping": {
+                      "start": 25,
+                      "length": 2688,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "dissmisPurse(uint256)"
+                }
+              }
+            },
+            "additional_fields": {
+              "underlying_type": "variables_written",
+              "variable_name": "purses"
+            }
+          },
+          {
+            "type": "node",
+            "name": "p.status = 4",
+            "source_mapping": {
+              "start": 2391,
+              "length": 26,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "dissmisPurse",
+                "source_mapping": {
+                  "start": 2000,
+                  "length": 422,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "Omnipurse",
+                    "source_mapping": {
+                      "start": 25,
+                      "length": 2688,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "dissmisPurse(uint256)"
+                }
+              }
+            },
+            "additional_fields": {
+              "underlying_type": "variables_written",
+              "variable_name": "purses"
+            }
+          }
+        ],
+        "description": "Reentrancy in Omnipurse.dissmisPurse(uint256) ():\n\tExternal calls:\n\t- c.refunded = c.sender.send(c.value) ()\n\tState variables written after the call(s):\n\t- p.status = 3 ()\n\t- p.status = 4 ()\n",
+        "markdown": "Reentrancy in [Omnipurse.dissmisPurse(uint256)]():\n\tExternal calls:\n\t- [c.refunded = c.sender.send(c.value)]()\n\tState variables written after the call(s):\n\t- [p.status = 3]()\n\t- [p.status = 4]()\n",
+        "first_markdown_element": "",
+        "id": "d8b244b606f7fd4e30256bd81f11a72996030b212fe2e178ab9607a692229ae3",
+        "check": "reentrancy-unlimited-gas",
+        "impact": "Informational",
+        "confidence": "Medium"
+      },
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "registerNickname",
+            "source_mapping": {
+              "start": 2624,
+              "length": 86,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "Omnipurse",
+                "source_mapping": {
+                  "start": 25,
+                  "length": 2688,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              },
+              "signature": "registerNickname(string)"
+            }
+          }
+        ],
+        "description": "registerNickname(string) should be declared external:\n\t- Omnipurse.registerNickname(string) ()\n",
+        "markdown": "registerNickname(string) should be declared external:\n\t- [Omnipurse.registerNickname(string)]()\n",
+        "first_markdown_element": "",
+        "id": "7c5d5b2b11d709599be3f86bb94192b7d2c339ed8c1fdc1011d27d574b148424",
+        "check": "external-function",
+        "impact": "Optimization",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "createPurse",
+            "source_mapping": {
+              "start": 1465,
+              "length": 210,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "Omnipurse",
+                "source_mapping": {
+                  "start": 25,
+                  "length": 2688,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              },
+              "signature": "createPurse(string)"
+            }
+          }
+        ],
+        "description": "createPurse(string) should be declared external:\n\t- Omnipurse.createPurse(string) ()\n",
+        "markdown": "createPurse(string) should be declared external:\n\t- [Omnipurse.createPurse(string)]()\n",
+        "first_markdown_element": "",
+        "id": "f5c613bb864d35585a1cfe422464d3cbf1c6ab54595977c1f9cd58ddff914f34",
+        "check": "external-function",
+        "impact": "Optimization",
+        "confidence": "High"
+      }
+    ]
+  }
+}

@@ -1,0 +1,215 @@
+{
+  "fileName": "Benchmarks/Study_SamplesSet/ef4048f9bb62bae6e6010b4c161bb819.sol",
+  "baseName": "ef4048f9bb62bae6e6010b4c161bb819.sol",
+  "iter": 396,
+  "time": "305.893772",
+  "errMsg": null,
+  "result": [
+    {
+      "no": "1",
+      "kind": "IO",
+      "line": 23,
+      "signatures": [
+        {
+          "contractName": "BinksBucks",
+          "methodName": "BinksBucks",
+          "argTypes": [ "address" ]
+        }
+      ],
+      "exp": "(_balances[this] + 250000000000000000000000000)",
+      "status": "proven"
+    },
+    {
+      "no": "2",
+      "kind": "IO",
+      "line": 24,
+      "signatures": [
+        {
+          "contractName": "BinksBucks",
+          "methodName": "BinksBucks",
+          "argTypes": [ "address" ]
+        }
+      ],
+      "exp": "(_totalSupply + 250000000000000000000000000)",
+      "status": "proven"
+    },
+    {
+      "no": "3",
+      "kind": "IO",
+      "line": 25,
+      "signatures": [
+        {
+          "contractName": "BinksBucks",
+          "methodName": "BinksBucks",
+          "argTypes": [ "address" ]
+        }
+      ],
+      "exp": "(_balances[bossman] + 750000000000000000000000000)",
+      "status": "proven"
+    },
+    {
+      "no": "4",
+      "kind": "IO",
+      "line": 26,
+      "signatures": [
+        {
+          "contractName": "BinksBucks",
+          "methodName": "BinksBucks",
+          "argTypes": [ "address" ]
+        }
+      ],
+      "exp": "(_totalSupply + 750000000000000000000000000)",
+      "status": "proven"
+    },
+    {
+      "no": "5",
+      "kind": "IO",
+      "line": 43,
+      "signatures": [
+        {
+          "contractName": "BinksBucks",
+          "methodName": "EnterCode",
+          "argTypes": [ "uint256" ]
+        },
+        {
+          "contractName": "BinksBucks",
+          "methodName": "transfer",
+          "argTypes": [ "address", "uint256" ]
+        },
+        {
+          "contractName": "BinksBucks",
+          "methodName": "transferFrom",
+          "argTypes": [ "address", "address", "uint256" ]
+        }
+      ],
+      "exp": "(balance + amount)",
+      "status": "unproven"
+    },
+    {
+      "no": "6",
+      "kind": "IO",
+      "line": 62,
+      "signatures": [
+        {
+          "contractName": "BinksBucks",
+          "methodName": "transfer",
+          "argTypes": [ "address", "uint256" ]
+        }
+      ],
+      "exp": "(_balances[msg.sender] - amount)",
+      "status": "proven"
+    },
+    {
+      "no": "7",
+      "kind": "IO",
+      "line": 63,
+      "signatures": [
+        {
+          "contractName": "BinksBucks",
+          "methodName": "transfer",
+          "argTypes": [ "address", "uint256" ]
+        }
+      ],
+      "exp": "(_balances[to] + amount)",
+      "status": "proven"
+    },
+    {
+      "no": "8",
+      "kind": "IO",
+      "line": 82,
+      "signatures": [
+        {
+          "contractName": "BinksBucks",
+          "methodName": "transferFrom",
+          "argTypes": [ "address", "address", "uint256" ]
+        }
+      ],
+      "exp": "(_allowed[from][msg.sender] - amount)",
+      "status": "proven"
+    },
+    {
+      "no": "9",
+      "kind": "IO",
+      "line": 83,
+      "signatures": [
+        {
+          "contractName": "BinksBucks",
+          "methodName": "transferFrom",
+          "argTypes": [ "address", "address", "uint256" ]
+        }
+      ],
+      "exp": "(_balances[from] - amount)",
+      "status": "proven"
+    },
+    {
+      "no": "10",
+      "kind": "IO",
+      "line": 84,
+      "signatures": [
+        {
+          "contractName": "BinksBucks",
+          "methodName": "transferFrom",
+          "argTypes": [ "address", "address", "uint256" ]
+        }
+      ],
+      "exp": "(_balances[to] + amount)",
+      "status": "proven"
+    },
+    {
+      "no": "11",
+      "kind": "IO",
+      "line": 98,
+      "signatures": [
+        {
+          "contractName": "BinksBucks",
+          "methodName": "setCode",
+          "argTypes": [ "uint256" ]
+        }
+      ],
+      "exp": "(_distribution_number + 1)",
+      "status": "unproven"
+    },
+    {
+      "no": "12",
+      "kind": "IO",
+      "line": 119,
+      "signatures": [
+        {
+          "contractName": "BinksBucks",
+          "methodName": "EnterCode",
+          "argTypes": [ "uint256" ]
+        }
+      ],
+      "exp": "(_distributions_left - 1)",
+      "status": "proven"
+    },
+    {
+      "no": "13",
+      "kind": "IO",
+      "line": 122,
+      "signatures": [
+        {
+          "contractName": "BinksBucks",
+          "methodName": "EnterCode",
+          "argTypes": [ "uint256" ]
+        }
+      ],
+      "exp": "(_balances[this] - _distribution_size)",
+      "status": "unproven"
+    },
+    {
+      "no": "14",
+      "kind": "IO",
+      "line": 123,
+      "signatures": [
+        {
+          "contractName": "BinksBucks",
+          "methodName": "EnterCode",
+          "argTypes": [ "uint256" ]
+        }
+      ],
+      "exp": "(_balances[msg.sender] + _distribution_size)",
+      "status": "proven"
+    }
+  ]
+}

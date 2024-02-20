@@ -1,0 +1,165 @@
+{
+  "fileName": "Benchmarks/Study_SamplesSet/9c37399dda2acd29509968dabe802aba.sol",
+  "baseName": "9c37399dda2acd29509968dabe802aba.sol",
+  "iter": 1121,
+  "time": "305.68954",
+  "errMsg": null,
+  "result": [
+    {
+      "no": "1",
+      "kind": "IO",
+      "line": 43,
+      "signatures": [
+        {
+          "contractName": "BancorBuyer",
+          "methodName": "buyOne",
+          "argTypes": [ "contract ERC20", "address", "uint256", "dbytes" ]
+        },
+        {
+          "contractName": "BancorBuyer",
+          "methodName": "withdraw",
+          "argTypes": [ "address", "uint256", "address[]", "uint256[]" ]
+        }
+      ],
+      "exp": "(a - b)",
+      "status": "proven"
+    },
+    {
+      "no": "2",
+      "kind": "IO",
+      "line": 50,
+      "signatures": [
+        {
+          "contractName": "BancorBuyer",
+          "methodName": "buy1",
+          "argTypes": [ "address[]", "address[]", "uint256[]", "dbytes" ]
+        },
+        {
+          "contractName": "BancorBuyer",
+          "methodName": "buy2",
+          "argTypes": [
+            "address[]", "address[]", "uint256[]", "dbytes", "dbytes"
+          ]
+        },
+        {
+          "contractName": "BancorBuyer",
+          "methodName": "buy3",
+          "argTypes": [
+            "address[]", "address[]", "uint256[]", "dbytes", "dbytes",
+            "dbytes"
+          ]
+        },
+        {
+          "contractName": "BancorBuyer",
+          "methodName": "buyOne",
+          "argTypes": [ "contract ERC20", "address", "uint256", "dbytes" ]
+        },
+        {
+          "contractName": "BancorBuyer",
+          "methodName": "deposit",
+          "argTypes": [ "address", "address[]", "uint256[]" ]
+        }
+      ],
+      "exp": "(a + b)",
+      "status": "unproven"
+    },
+    {
+      "no": "3",
+      "kind": "IO",
+      "line": 114,
+      "signatures": [
+        {
+          "contractName": "BancorBuyer",
+          "methodName": "sumWeightOfMultiToken",
+          "argTypes": [ "contract IMultiToken" ]
+        }
+      ],
+      "exp": "(i - 1)",
+      "status": "proven"
+    },
+    {
+      "no": "4",
+      "kind": "IO",
+      "line": 115,
+      "signatures": [
+        {
+          "contractName": "BancorBuyer",
+          "methodName": "sumWeightOfMultiToken",
+          "argTypes": [ "contract IMultiToken" ]
+        }
+      ],
+      "exp": "(i - 1)",
+      "status": "proven"
+    },
+    {
+      "no": "5",
+      "kind": "IO",
+      "line": 115,
+      "signatures": [
+        {
+          "contractName": "BancorBuyer",
+          "methodName": "sumWeightOfMultiToken",
+          "argTypes": [ "contract IMultiToken" ]
+        }
+      ],
+      "exp": "(sumWeight + mtkn.weights(mtkn.tokens((i - 1))))",
+      "status": "unproven"
+    },
+    {
+      "no": "6",
+      "kind": "IO",
+      "line": 124,
+      "signatures": [
+        {
+          "contractName": "BancorBuyer",
+          "methodName": "deposit",
+          "argTypes": [ "address", "address[]", "uint256[]" ]
+        }
+      ],
+      "exp": "(i + 1)",
+      "status": "proven"
+    },
+    {
+      "no": "7",
+      "kind": "IO",
+      "line": 141,
+      "signatures": [
+        {
+          "contractName": "BancorBuyer",
+          "methodName": "withdraw",
+          "argTypes": [ "address", "uint256", "address[]", "uint256[]" ]
+        }
+      ],
+      "exp": "(i + 1)",
+      "status": "proven"
+    },
+    {
+      "no": "8",
+      "kind": "ETH_LEAK",
+      "line": 137,
+      "signatures": [
+        {
+          "contractName": "BancorBuyer",
+          "methodName": "withdraw",
+          "argTypes": [ "address", "uint256", "address[]", "uint256[]" ]
+        }
+      ],
+      "exp": "_to.transfer(_value);",
+      "status": "unproven"
+    },
+    {
+      "no": "9",
+      "kind": "ETH_LEAK",
+      "line": 186,
+      "signatures": [
+        {
+          "contractName": "BancorBuyer",
+          "methodName": "buyOne",
+          "argTypes": [ "contract ERC20", "address", "uint256", "dbytes" ]
+        }
+      ],
+      "exp": "_exchange.call.value(_value)(_data)",
+      "status": "unproven"
+    }
+  ]
+}

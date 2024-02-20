@@ -1,0 +1,37 @@
+{
+  "fileName": "Benchmarks/Study_SamplesSet/c2cc6985f9bced8312f712ee1088ec50.sol",
+  "baseName": "c2cc6985f9bced8312f712ee1088ec50.sol",
+  "iter": 3,
+  "time": "0.100122",
+  "errMsg": null,
+  "result": [
+    {
+      "no": "1",
+      "kind": "ETH_LEAK",
+      "line": 10,
+      "signatures": [
+        {
+          "contractName": "think_and_get_rich",
+          "methodName": "Try",
+          "argTypes": [ "string" ]
+        }
+      ],
+      "exp": "msg.sender.transfer(this.balance);",
+      "status": "unproven"
+    },
+    {
+      "no": "2",
+      "kind": "ETH_LEAK",
+      "line": 31,
+      "signatures": [
+        {
+          "contractName": "think_and_get_rich",
+          "methodName": "StopGame",
+          "argTypes": []
+        }
+      ],
+      "exp": "msg.sender.transfer(this.balance);",
+      "status": "unproven"
+    }
+  ]
+}

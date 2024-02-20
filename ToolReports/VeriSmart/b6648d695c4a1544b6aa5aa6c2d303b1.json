@@ -1,0 +1,65 @@
+{
+  "fileName": "Benchmarks/Study_SamplesSet/b6648d695c4a1544b6aa5aa6c2d303b1.sol",
+  "baseName": "b6648d695c4a1544b6aa5aa6c2d303b1.sol",
+  "iter": 12,
+  "time": "54.698971",
+  "errMsg": null,
+  "result": [
+    {
+      "no": "1",
+      "kind": "IO",
+      "line": 15,
+      "signatures": [
+        {
+          "contractName": "gray_SimpleDAO",
+          "methodName": "donate",
+          "argTypes": [ "address" ]
+        }
+      ],
+      "exp": "(credit[to] + msg.value)",
+      "status": "unproven"
+    },
+    {
+      "no": "2",
+      "kind": "IO",
+      "line": 20,
+      "signatures": [
+        {
+          "contractName": "gray_SimpleDAO",
+          "methodName": "withdraw",
+          "argTypes": [ "uint256" ]
+        }
+      ],
+      "exp": "(credit[msg.sender] - amount)",
+      "status": "proven"
+    },
+    {
+      "no": "3",
+      "kind": "IO",
+      "line": 23,
+      "signatures": [
+        {
+          "contractName": "gray_SimpleDAO",
+          "methodName": "withdraw",
+          "argTypes": [ "uint256" ]
+        }
+      ],
+      "exp": "(credit[msg.sender] + amount)",
+      "status": "proven"
+    },
+    {
+      "no": "4",
+      "kind": "ETH_LEAK",
+      "line": 21,
+      "signatures": [
+        {
+          "contractName": "gray_SimpleDAO",
+          "methodName": "withdraw",
+          "argTypes": [ "uint256" ]
+        }
+      ],
+      "exp": "(flag, data) = msg.sender.call.value(amount)(\"\");",
+      "status": "proven"
+    }
+  ]
+}

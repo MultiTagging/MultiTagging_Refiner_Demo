@@ -1,0 +1,65 @@
+{
+  "fileName": "Benchmarks/Study_SamplesSet/b0f34ed474d95b0acea675f02f9d3661.sol",
+  "baseName": "b0f34ed474d95b0acea675f02f9d3661.sol",
+  "iter": 111,
+  "time": "304.263607",
+  "errMsg": null,
+  "result": [
+    {
+      "no": "1",
+      "kind": "IO",
+      "line": 17,
+      "signatures": [
+        {
+          "contractName": "Refunder",
+          "methodName": "refundAll",
+          "argTypes": []
+        }
+      ],
+      "exp": "(x + 1)",
+      "status": "proven"
+    },
+    {
+      "no": "2",
+      "kind": "IO",
+      "line": 25,
+      "signatures": [
+        {
+          "contractName": "Refunder",
+          "methodName": "refundAll_1",
+          "argTypes": []
+        }
+      ],
+      "exp": "(x + 1)",
+      "status": "proven"
+    },
+    {
+      "no": "3",
+      "kind": "ETH_LEAK",
+      "line": 19,
+      "signatures": [
+        {
+          "contractName": "Refunder",
+          "methodName": "refundAll",
+          "argTypes": []
+        }
+      ],
+      "exp": "refundAddresses[x].send(refunds[refundAddresses[x]])",
+      "status": "unproven"
+    },
+    {
+      "no": "4",
+      "kind": "ETH_LEAK",
+      "line": 26,
+      "signatures": [
+        {
+          "contractName": "Refunder",
+          "methodName": "refundAll_1",
+          "argTypes": []
+        }
+      ],
+      "exp": "refundAddresses[x].transfer(refunds[refundAddresses[x]]);",
+      "status": "unproven"
+    }
+  ]
+}

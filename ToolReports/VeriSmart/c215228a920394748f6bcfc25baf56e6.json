@@ -1,0 +1,275 @@
+{
+  "fileName": "Benchmarks/Study_SamplesSet/c215228a920394748f6bcfc25baf56e6.sol",
+  "baseName": "c215228a920394748f6bcfc25baf56e6.sol",
+  "iter": 3,
+  "time": "552.731966",
+  "errMsg": null,
+  "result": [
+    {
+      "no": "1",
+      "kind": "IO",
+      "line": 113,
+      "signatures": [
+        {
+          "contractName": "LiveTreeCrowdsale",
+          "methodName": "LiveTreeCrowdsale",
+          "argTypes": [ "address" ]
+        }
+      ],
+      "exp": "(tokenMultiplier ** tokenReward.decimals())",
+      "status": "unproven"
+    },
+    {
+      "no": "2",
+      "kind": "IO",
+      "line": 212,
+      "signatures": [
+        {
+          "contractName": "LiveTreeCrowdsale",
+          "methodName": "processPayment",
+          "argTypes": [ "address", "uint256" ]
+        }
+      ],
+      "exp": "(tokensPerEth * 2)",
+      "status": "proven"
+    },
+    {
+      "no": "3",
+      "kind": "IO",
+      "line": 217,
+      "signatures": [
+        {
+          "contractName": "LiveTreeCrowdsale",
+          "methodName": "processPayment",
+          "argTypes": [ "address", "uint256" ]
+        }
+      ],
+      "exp": "((amount * tokensPerEth) * tokenMultiplier)",
+      "status": "unproven"
+    },
+    {
+      "no": "4",
+      "kind": "IO",
+      "line": 217,
+      "signatures": [
+        {
+          "contractName": "LiveTreeCrowdsale",
+          "methodName": "processPayment",
+          "argTypes": [ "address", "uint256" ]
+        }
+      ],
+      "exp": "(amount * tokensPerEth)",
+      "status": "unproven"
+    },
+    {
+      "no": "5",
+      "kind": "IO",
+      "line": 229,
+      "signatures": [
+        {
+          "contractName": "LiveTreeCrowdsale",
+          "methodName": "processPayment",
+          "argTypes": [ "address", "uint256" ]
+        }
+      ],
+      "exp": "(tokenAmount * weiPerEth)",
+      "status": "unproven"
+    },
+    {
+      "no": "6",
+      "kind": "IO",
+      "line": 229,
+      "signatures": [
+        {
+          "contractName": "LiveTreeCrowdsale",
+          "methodName": "processPayment",
+          "argTypes": [ "address", "uint256" ]
+        }
+      ],
+      "exp": "(tokensPerEth * tokenMultiplier)",
+      "status": "unproven"
+    },
+    {
+      "no": "7",
+      "kind": "IO",
+      "line": 236,
+      "signatures": [
+        {
+          "contractName": "LiveTreeCrowdsale",
+          "methodName": "processPayment",
+          "argTypes": [ "address", "uint256" ]
+        }
+      ],
+      "exp": "(amount - acceptedAmount)",
+      "status": "unproven"
+    },
+    {
+      "no": "8",
+      "kind": "IO",
+      "line": 246,
+      "signatures": [
+        {
+          "contractName": "LiveTreeCrowdsale",
+          "methodName": "processPayment",
+          "argTypes": [ "address", "uint256" ]
+        }
+      ],
+      "exp": "(investmentRecords[bakerAddress] + acceptedAmount)",
+      "status": "unproven"
+    },
+    {
+      "no": "9",
+      "kind": "IO",
+      "line": 247,
+      "signatures": [
+        {
+          "contractName": "LiveTreeCrowdsale",
+          "methodName": "processPayment",
+          "argTypes": [ "address", "uint256" ]
+        }
+      ],
+      "exp": "(totalCollected + acceptedAmount)",
+      "status": "unproven"
+    },
+    {
+      "no": "10",
+      "kind": "IO",
+      "line": 392,
+      "signatures": [
+        {
+          "contractName": "LiveTreeCrowdsale",
+          "methodName": "refund",
+          "argTypes": []
+        }
+      ],
+      "exp": "(1000 - reasonableCostsPercentage)",
+      "status": "unproven"
+    },
+    {
+      "no": "11",
+      "kind": "IO",
+      "line": 392,
+      "signatures": [
+        {
+          "contractName": "LiveTreeCrowdsale",
+          "methodName": "refund",
+          "argTypes": []
+        }
+      ],
+      "exp": "(investmentRecords[msg.sender] * (1000 - reasonableCostsPercentage))",
+      "status": "unproven"
+    },
+    {
+      "no": "12",
+      "kind": "DZ",
+      "line": 217,
+      "signatures": [
+        {
+          "contractName": "LiveTreeCrowdsale",
+          "methodName": "processPayment",
+          "argTypes": [ "address", "uint256" ]
+        }
+      ],
+      "exp": "(((amount * tokensPerEth) * tokenMultiplier) / weiPerEth)",
+      "status": "proven"
+    },
+    {
+      "no": "13",
+      "kind": "DZ",
+      "line": 229,
+      "signatures": [
+        {
+          "contractName": "LiveTreeCrowdsale",
+          "methodName": "processPayment",
+          "argTypes": [ "address", "uint256" ]
+        }
+      ],
+      "exp": "((tokenAmount * weiPerEth) / (tokensPerEth * tokenMultiplier))",
+      "status": "unproven"
+    },
+    {
+      "no": "14",
+      "kind": "DZ",
+      "line": 392,
+      "signatures": [
+        {
+          "contractName": "LiveTreeCrowdsale",
+          "methodName": "refund",
+          "argTypes": []
+        }
+      ],
+      "exp": "((investmentRecords[msg.sender] * (1000 - reasonableCostsPercentage)) / 1000)",
+      "status": "proven"
+    },
+    {
+      "no": "15",
+      "kind": "KA",
+      "line": 380,
+      "signatures": [
+        {
+          "contractName": "LiveTreeCrowdsale",
+          "methodName": "kill",
+          "argTypes": []
+        }
+      ],
+      "exp": "selfdestruct(owner);",
+      "status": "proven"
+    },
+    {
+      "no": "16",
+      "kind": "ETH_LEAK",
+      "line": 238,
+      "signatures": [
+        {
+          "contractName": "LiveTreeCrowdsale",
+          "methodName": "processPayment",
+          "argTypes": [ "address", "uint256" ]
+        }
+      ],
+      "exp": "bakerAddress.send(change)",
+      "status": "unproven"
+    },
+    {
+      "no": "17",
+      "kind": "ETH_LEAK",
+      "line": 347,
+      "signatures": [
+        {
+          "contractName": "LiveTreeCrowdsale",
+          "methodName": "safeWithdrawal",
+          "argTypes": [ "uint256" ]
+        }
+      ],
+      "exp": "owner.send(amount)",
+      "status": "proven"
+    },
+    {
+      "no": "18",
+      "kind": "ETH_LEAK",
+      "line": 380,
+      "signatures": [
+        {
+          "contractName": "LiveTreeCrowdsale",
+          "methodName": "kill",
+          "argTypes": []
+        }
+      ],
+      "exp": "selfdestruct(owner);",
+      "status": "proven"
+    },
+    {
+      "no": "19",
+      "kind": "ETH_LEAK",
+      "line": 397,
+      "signatures": [
+        {
+          "contractName": "LiveTreeCrowdsale",
+          "methodName": "refund",
+          "argTypes": []
+        }
+      ],
+      "exp": "msg.sender.transfer(amountToReturn);",
+      "status": "unproven"
+    }
+  ]
+}

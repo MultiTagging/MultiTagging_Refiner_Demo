@@ -1,0 +1,100 @@
+{
+  "fileName": "Benchmarks/Study_SamplesSet/db05c6c6e9a71fbe3f25d75dc06543b5.sol",
+  "baseName": "db05c6c6e9a71fbe3f25d75dc06543b5.sol",
+  "iter": 2,
+  "time": "0.181816",
+  "errMsg": null,
+  "result": [
+    {
+      "no": "1",
+      "kind": "IO",
+      "line": 19,
+      "signatures": [
+        {
+          "contractName": "SafeMath",
+          "methodName": "sub",
+          "argTypes": [ "uint256", "uint256" ]
+        },
+        {
+          "contractName": "VotingProxy",
+          "methodName": "getDaysPassedSinceLastRefundBallot",
+          "argTypes": []
+        },
+        {
+          "contractName": "VotingProxy",
+          "methodName": "getDaysPassedSinceLastTeamFundsBallot",
+          "argTypes": []
+        },
+        {
+          "contractName": "VotingProxy",
+          "methodName": "startRefundInvestorsBallot",
+          "argTypes": []
+        },
+        {
+          "contractName": "VotingProxy",
+          "methodName": "startincreaseWithdrawalTeam",
+          "argTypes": []
+        }
+      ],
+      "exp": "(a - b)",
+      "status": "proven"
+    },
+    {
+      "no": "2",
+      "kind": "IO",
+      "line": 23,
+      "signatures": [
+        {
+          "contractName": "SafeMath",
+          "methodName": "add",
+          "argTypes": [ "uint256", "uint256" ]
+        }
+      ],
+      "exp": "(a + b)",
+      "status": "unproven"
+    },
+    {
+      "no": "3",
+      "kind": "DZ",
+      "line": 12,
+      "signatures": [
+        {
+          "contractName": "VotingProxy",
+          "methodName": "getDaysPassedSinceLastRefundBallot",
+          "argTypes": []
+        },
+        {
+          "contractName": "VotingProxy",
+          "methodName": "getDaysPassedSinceLastTeamFundsBallot",
+          "argTypes": []
+        },
+        {
+          "contractName": "VotingProxy",
+          "methodName": "startRefundInvestorsBallot",
+          "argTypes": []
+        },
+        {
+          "contractName": "VotingProxy",
+          "methodName": "startincreaseWithdrawalTeam",
+          "argTypes": []
+        }
+      ],
+      "exp": "(a / b)",
+      "status": "proven"
+    },
+    {
+      "no": "4",
+      "kind": "ETH_LEAK",
+      "line": 1090,
+      "signatures": [
+        {
+          "contractName": "VotingProxy",
+          "methodName": "claimTokens",
+          "argTypes": [ "address" ]
+        }
+      ],
+      "exp": "owner.transfer(this.balance);",
+      "status": "proven"
+    }
+  ]
+}

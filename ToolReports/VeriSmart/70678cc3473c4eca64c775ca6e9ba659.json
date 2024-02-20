@@ -1,0 +1,222 @@
+{
+  "fileName": "Benchmarks/Study_SamplesSet/70678cc3473c4eca64c775ca6e9ba659.sol",
+  "baseName": "70678cc3473c4eca64c775ca6e9ba659.sol",
+  "iter": 1,
+  "time": "7152.72828",
+  "errMsg": null,
+  "result": [
+    {
+      "no": "1",
+      "kind": "IO",
+      "line": 7,
+      "signatures": [
+        {
+          "contractName": "GetPaid",
+          "methodName": "getTokens",
+          "argTypes": []
+        }
+      ],
+      "exp": "(a * b)",
+      "status": "unproven"
+    },
+    {
+      "no": "2",
+      "kind": "IO",
+      "line": 19,
+      "signatures": [
+        {
+          "contractName": "GetPaid",
+          "methodName": "GetPaid",
+          "argTypes": []
+        },
+        {
+          "contractName": "GetPaid",
+          "methodName": "burn",
+          "argTypes": [ "uint256" ]
+        },
+        {
+          "contractName": "GetPaid",
+          "methodName": "getTokens",
+          "argTypes": []
+        },
+        {
+          "contractName": "GetPaid",
+          "methodName": "transfer",
+          "argTypes": [ "address", "uint256" ]
+        },
+        {
+          "contractName": "GetPaid",
+          "methodName": "transferFrom",
+          "argTypes": [ "address", "address", "uint256" ]
+        }
+      ],
+      "exp": "(a - b)",
+      "status": "proven"
+    },
+    {
+      "no": "3",
+      "kind": "IO",
+      "line": 23,
+      "signatures": [
+        {
+          "contractName": "GetPaid",
+          "methodName": "adminClaimAirdrop",
+          "argTypes": [ "address", "uint256" ]
+        },
+        {
+          "contractName": "GetPaid",
+          "methodName": "adminClaimAirdropMultiple",
+          "argTypes": [ "address[]", "uint256" ]
+        },
+        {
+          "contractName": "GetPaid",
+          "methodName": "getTokens",
+          "argTypes": []
+        },
+        {
+          "contractName": "GetPaid",
+          "methodName": "transfer",
+          "argTypes": [ "address", "uint256" ]
+        },
+        {
+          "contractName": "GetPaid",
+          "methodName": "transferFrom",
+          "argTypes": [ "address", "address", "uint256" ]
+        }
+      ],
+      "exp": "(a + b)",
+      "status": "unproven"
+    },
+    {
+      "no": "4",
+      "kind": "IO",
+      "line": 279,
+      "signatures": [
+        {
+          "contractName": "GetPaid",
+          "methodName": "adminClaimAirdropMultiple",
+          "argTypes": [ "address[]", "uint256" ]
+        }
+      ],
+      "exp": "(i + 1)",
+      "status": "proven"
+    },
+    {
+      "no": "5",
+      "kind": "IO",
+      "line": 292,
+      "signatures": [
+        {
+          "contractName": "GetPaid",
+          "methodName": "transfer",
+          "argTypes": [ "address", "uint256" ]
+        },
+        {
+          "contractName": "GetPaid",
+          "methodName": "transferFrom",
+          "argTypes": [ "address", "address", "uint256" ]
+        }
+      ],
+      "exp": "(size + 4)",
+      "status": "proven"
+    },
+    {
+      "no": "6",
+      "kind": "IO",
+      "line": 296,
+      "signatures": [
+        {
+          "contractName": "GetPaid",
+          "methodName": "transfer",
+          "argTypes": [ "address", "uint256" ]
+        }
+      ],
+      "exp": "(2 * 32)",
+      "status": "proven"
+    },
+    {
+      "no": "7",
+      "kind": "IO",
+      "line": 306,
+      "signatures": [
+        {
+          "contractName": "GetPaid",
+          "methodName": "transferFrom",
+          "argTypes": [ "address", "address", "uint256" ]
+        }
+      ],
+      "exp": "(3 * 32)",
+      "status": "proven"
+    },
+    {
+      "no": "8",
+      "kind": "DZ",
+      "line": 8,
+      "signatures": [
+        {
+          "contractName": "GetPaid",
+          "methodName": "getTokens",
+          "argTypes": []
+        }
+      ],
+      "exp": "(c / a)",
+      "status": "unproven"
+    },
+    {
+      "no": "9",
+      "kind": "DZ",
+      "line": 80,
+      "signatures": [
+        {
+          "contractName": "GetPaid",
+          "methodName": "GetPaid",
+          "argTypes": []
+        }
+      ],
+      "exp": "(1000000000000000000 / 100)",
+      "status": "proven"
+    },
+    {
+      "no": "10",
+      "kind": "DZ",
+      "line": 180,
+      "signatures": [
+        {
+          "contractName": "GetPaid",
+          "methodName": "getTokens",
+          "argTypes": []
+        }
+      ],
+      "exp": "(tokensPerEth.mul(msg.value) / 1000000000000000000)",
+      "status": "proven"
+    },
+    {
+      "no": "11",
+      "kind": "DZ",
+      "line": 184,
+      "signatures": [
+        {
+          "contractName": "GetPaid",
+          "methodName": "getTokens",
+          "argTypes": []
+        }
+      ],
+      "exp": "(tokens / 2)",
+      "status": "proven"
+    },
+    {
+      "no": "12",
+      "kind": "ETH_LEAK",
+      "line": 338,
+      "signatures": [
+        {
+          "contractName": "GetPaid",
+          "methodName": "withdraw",
+          "argTypes": []
+        }
+      ],
+      "exp": "owner.transfer(etherBalance);",
+      "status": "unproven"
+    }
+  ]
+}

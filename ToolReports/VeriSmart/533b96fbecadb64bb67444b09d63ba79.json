@@ -1,0 +1,201 @@
+{
+  "fileName": "Benchmarks/Study_SamplesSet/533b96fbecadb64bb67444b09d63ba79.sol",
+  "baseName": "533b96fbecadb64bb67444b09d63ba79.sol",
+  "iter": 6,
+  "time": "1536.454027",
+  "errMsg": null,
+  "result": [
+    {
+      "no": "1",
+      "kind": "IO",
+      "line": 114,
+      "signatures": [
+        {
+          "contractName": "Controlled",
+          "methodName": "transfer",
+          "argTypes": [ "address", "uint256" ]
+        },
+        {
+          "contractName": "Controlled",
+          "methodName": "transferFrom",
+          "argTypes": [ "address", "address", "uint256" ]
+        },
+        {
+          "contractName": "DSAuth",
+          "methodName": "transfer",
+          "argTypes": [ "address", "uint256" ]
+        },
+        {
+          "contractName": "DSAuthEvents",
+          "methodName": "transfer",
+          "argTypes": [ "address", "uint256" ]
+        },
+        {
+          "contractName": "DSNote",
+          "methodName": "transfer",
+          "argTypes": [ "address", "uint256" ]
+        },
+        {
+          "contractName": "DSStop",
+          "methodName": "transfer",
+          "argTypes": [ "address", "uint256" ]
+        },
+        {
+          "contractName": "DSToken",
+          "methodName": "transfer",
+          "argTypes": [ "address", "uint256" ]
+        },
+        {
+          "contractName": "DSTokenBase",
+          "methodName": "transfer",
+          "argTypes": [ "address", "uint256" ]
+        },
+        {
+          "contractName": "ERC223",
+          "methodName": "transfer",
+          "argTypes": [ "address", "uint256" ]
+        },
+        {
+          "contractName": "OMT",
+          "methodName": "mint",
+          "argTypes": [ "address", "uint256" ]
+        },
+        {
+          "contractName": "OMT",
+          "methodName": "mint",
+          "argTypes": [ "uint256" ]
+        },
+        {
+          "contractName": "OMT",
+          "methodName": "transferFrom",
+          "argTypes": [ "address", "address", "uint256" ]
+        },
+        {
+          "contractName": "OMT",
+          "methodName": "transferFrom",
+          "argTypes": [ "address", "address", "uint256", "dbytes" ]
+        },
+        {
+          "contractName": "OMT",
+          "methodName": "transferFrom",
+          "argTypes": [ "address", "address", "uint256", "dbytes", "string" ]
+        }
+      ],
+      "exp": "(x + y)",
+      "status": "unproven"
+    },
+    {
+      "no": "2",
+      "kind": "IO",
+      "line": 117,
+      "signatures": [
+        {
+          "contractName": "Controlled",
+          "methodName": "burn",
+          "argTypes": [ "address", "uint256" ]
+        },
+        {
+          "contractName": "Controlled",
+          "methodName": "transfer",
+          "argTypes": [ "address", "uint256" ]
+        },
+        {
+          "contractName": "Controlled",
+          "methodName": "transferFrom",
+          "argTypes": [ "address", "address", "uint256" ]
+        },
+        {
+          "contractName": "DSAuth",
+          "methodName": "transfer",
+          "argTypes": [ "address", "uint256" ]
+        },
+        {
+          "contractName": "DSAuthEvents",
+          "methodName": "transfer",
+          "argTypes": [ "address", "uint256" ]
+        },
+        {
+          "contractName": "DSNote",
+          "methodName": "transfer",
+          "argTypes": [ "address", "uint256" ]
+        },
+        {
+          "contractName": "DSStop",
+          "methodName": "transfer",
+          "argTypes": [ "address", "uint256" ]
+        },
+        {
+          "contractName": "DSToken",
+          "methodName": "transfer",
+          "argTypes": [ "address", "uint256" ]
+        },
+        {
+          "contractName": "DSTokenBase",
+          "methodName": "transfer",
+          "argTypes": [ "address", "uint256" ]
+        },
+        {
+          "contractName": "ERC223",
+          "methodName": "transfer",
+          "argTypes": [ "address", "uint256" ]
+        },
+        {
+          "contractName": "OMT",
+          "methodName": "burn",
+          "argTypes": [ "address", "uint256" ]
+        },
+        {
+          "contractName": "OMT",
+          "methodName": "transferFrom",
+          "argTypes": [ "address", "address", "uint256" ]
+        },
+        {
+          "contractName": "OMT",
+          "methodName": "transferFrom",
+          "argTypes": [ "address", "address", "uint256", "dbytes" ]
+        },
+        {
+          "contractName": "OMT",
+          "methodName": "transferFrom",
+          "argTypes": [ "address", "address", "uint256", "dbytes", "string" ]
+        }
+      ],
+      "exp": "(x - y)",
+      "status": "unproven"
+    },
+    {
+      "no": "3",
+      "kind": "IO",
+      "line": 136,
+      "signatures": [
+        { "contractName": "OMT", "methodName": "OMT", "argTypes": [] }
+      ],
+      "exp": "(10 ** 18)",
+      "status": "proven"
+    },
+    {
+      "no": "4",
+      "kind": "IO",
+      "line": 137,
+      "signatures": [
+        { "contractName": "OMT", "methodName": "OMT", "argTypes": [] }
+      ],
+      "exp": "(10 ** 27)",
+      "status": "proven"
+    },
+    {
+      "no": "5",
+      "kind": "ETH_LEAK",
+      "line": 595,
+      "signatures": [
+        {
+          "contractName": "OMT",
+          "methodName": "claimTokens",
+          "argTypes": [ "address" ]
+        }
+      ],
+      "exp": "controller.transfer(this.balance);",
+      "status": "proven"
+    }
+  ]
+}

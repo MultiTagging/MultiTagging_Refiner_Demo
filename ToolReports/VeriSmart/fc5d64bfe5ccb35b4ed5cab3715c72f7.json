@@ -1,0 +1,576 @@
+{
+  "fileName": "Benchmarks/Study_SamplesSet/fc5d64bfe5ccb35b4ed5cab3715c72f7.sol",
+  "baseName": "fc5d64bfe5ccb35b4ed5cab3715c72f7.sol",
+  "iter": 87,
+  "time": "597.169367",
+  "errMsg": null,
+  "result": [
+    {
+      "no": "1",
+      "kind": "IO",
+      "line": 146,
+      "signatures": [
+        {
+          "contractName": "METADOLLAR",
+          "methodName": "STARTMETADOLLAR",
+          "argTypes": []
+        }
+      ],
+      "exp": "(tokenBalanceOf[this] + _totalSupply)",
+      "status": "unproven"
+    },
+    {
+      "no": "2",
+      "kind": "IO",
+      "line": 149,
+      "signatures": [
+        {
+          "contractName": "METADOLLAR",
+          "methodName": "STARTMETADOLLAR",
+          "argTypes": []
+        }
+      ],
+      "exp": "(1 * 1)",
+      "status": "proven"
+    },
+    {
+      "no": "3",
+      "kind": "IO",
+      "line": 150,
+      "signatures": [
+        {
+          "contractName": "METADOLLAR",
+          "methodName": "STARTMETADOLLAR",
+          "argTypes": []
+        }
+      ],
+      "exp": "(ethRate * dolRate)",
+      "status": "unproven"
+    },
+    {
+      "no": "4",
+      "kind": "IO",
+      "line": 151,
+      "signatures": [
+        {
+          "contractName": "METADOLLAR",
+          "methodName": "STARTMETADOLLAR",
+          "argTypes": []
+        }
+      ],
+      "exp": "(sellRate * ethRate)",
+      "status": "unproven"
+    },
+    {
+      "no": "5",
+      "kind": "IO",
+      "line": 181,
+      "signatures": [
+        {
+          "contractName": "METADOLLAR",
+          "methodName": "calculateTheEndPrice",
+          "argTypes": [ "uint256" ]
+        }
+      ],
+      "exp": "(howManyTokenToBuy * currentTokenPrice)",
+      "status": "unproven"
+    },
+    {
+      "no": "6",
+      "kind": "IO",
+      "line": 210,
+      "signatures": [
+        {
+          "contractName": "METADOLLAR",
+          "methodName": "sell",
+          "argTypes": [ "uint256" ]
+        }
+      ],
+      "exp": "(amount * sellPrice)",
+      "status": "unproven"
+    },
+    {
+      "no": "7",
+      "kind": "IO",
+      "line": 221,
+      "signatures": [
+        {
+          "contractName": "METADOLLAR",
+          "methodName": "sell2",
+          "argTypes": [ "address" ]
+        }
+      ],
+      "exp": "(msg.value * sellPrice)",
+      "status": "unproven"
+    },
+    {
+      "no": "8",
+      "kind": "IO",
+      "line": 237,
+      "signatures": [
+        {
+          "contractName": "METADOLLAR",
+          "methodName": "transfer",
+          "argTypes": [ "address", "uint256" ]
+        }
+      ],
+      "exp": "(tokenBalanceOf[msg.sender] - _value)",
+      "status": "proven"
+    },
+    {
+      "no": "9",
+      "kind": "IO",
+      "line": 238,
+      "signatures": [
+        {
+          "contractName": "METADOLLAR",
+          "methodName": "transfer",
+          "argTypes": [ "address", "uint256" ]
+        }
+      ],
+      "exp": "(tokenBalanceOf[_to] + _value)",
+      "status": "unproven"
+    },
+    {
+      "no": "10",
+      "kind": "IO",
+      "line": 258,
+      "signatures": [
+        {
+          "contractName": "METADOLLAR",
+          "methodName": "transferFrom",
+          "argTypes": [ "address", "address", "uint256" ]
+        }
+      ],
+      "exp": "(tokenBalanceOf[_from] - _value)",
+      "status": "proven"
+    },
+    {
+      "no": "11",
+      "kind": "IO",
+      "line": 259,
+      "signatures": [
+        {
+          "contractName": "METADOLLAR",
+          "methodName": "transferFrom",
+          "argTypes": [ "address", "address", "uint256" ]
+        }
+      ],
+      "exp": "(tokenBalanceOf[_to] + _value)",
+      "status": "unproven"
+    },
+    {
+      "no": "12",
+      "kind": "IO",
+      "line": 263,
+      "signatures": [
+        {
+          "contractName": "METADOLLAR",
+          "methodName": "transferFrom",
+          "argTypes": [ "address", "address", "uint256" ]
+        }
+      ],
+      "exp": "(allowed[_from][msg.sender] - _value)",
+      "status": "unproven"
+    },
+    {
+      "no": "13",
+      "kind": "IO",
+      "line": 287,
+      "signatures": [
+        {
+          "contractName": "METADOLLAR",
+          "methodName": "STARTMETADOLLAR",
+          "argTypes": []
+        },
+        {
+          "contractName": "METADOLLAR",
+          "methodName": "buyToken",
+          "argTypes": []
+        },
+        {
+          "contractName": "METADOLLAR",
+          "methodName": "setICOPrice",
+          "argTypes": [ "uint256" ]
+        }
+      ],
+      "exp": "(_totalSupply - icoLimit)",
+      "status": "unproven"
+    },
+    {
+      "no": "14",
+      "kind": "IO",
+      "line": 301,
+      "signatures": [
+        {
+          "contractName": "METADOLLAR",
+          "methodName": "buyToken",
+          "argTypes": []
+        }
+      ],
+      "exp": "(amount * sellPrice)",
+      "status": "unproven"
+    },
+    {
+      "no": "15",
+      "kind": "IO",
+      "line": 301,
+      "signatures": [
+        {
+          "contractName": "METADOLLAR",
+          "methodName": "buyToken",
+          "argTypes": []
+        }
+      ],
+      "exp": "(value - (amount * sellPrice))",
+      "status": "unproven"
+    },
+    {
+      "no": "16",
+      "kind": "IO",
+      "line": 303,
+      "signatures": [
+        {
+          "contractName": "METADOLLAR",
+          "methodName": "buyToken",
+          "argTypes": []
+        }
+      ],
+      "exp": "(amountOfInvestments + (value - moneyBack))",
+      "status": "unproven"
+    },
+    {
+      "no": "17",
+      "kind": "IO",
+      "line": 303,
+      "signatures": [
+        {
+          "contractName": "METADOLLAR",
+          "methodName": "buyToken",
+          "argTypes": []
+        }
+      ],
+      "exp": "(value - moneyBack)",
+      "status": "unproven"
+    },
+    {
+      "no": "18",
+      "kind": "IO",
+      "line": 317,
+      "signatures": [
+        {
+          "contractName": "METADOLLAR",
+          "methodName": "_transfer",
+          "argTypes": [ "address", "address", "uint256" ]
+        }
+      ],
+      "exp": "(tokenBalanceOf[_to] + _value)",
+      "status": "unproven"
+    },
+    {
+      "no": "19",
+      "kind": "IO",
+      "line": 321,
+      "signatures": [
+        {
+          "contractName": "METADOLLAR",
+          "methodName": "_transfer",
+          "argTypes": [ "address", "address", "uint256" ]
+        }
+      ],
+      "exp": "(countHolders + 1)",
+      "status": "unproven"
+    },
+    {
+      "no": "20",
+      "kind": "IO",
+      "line": 323,
+      "signatures": [
+        {
+          "contractName": "METADOLLAR",
+          "methodName": "_transfer",
+          "argTypes": [ "address", "address", "uint256" ]
+        }
+      ],
+      "exp": "(tokenBalanceOf[_from] - _value)",
+      "status": "proven"
+    },
+    {
+      "no": "21",
+      "kind": "IO",
+      "line": 325,
+      "signatures": [
+        {
+          "contractName": "METADOLLAR",
+          "methodName": "_transfer",
+          "argTypes": [ "address", "address", "uint256" ]
+        }
+      ],
+      "exp": "(countHolders - 1)",
+      "status": "unproven"
+    },
+    {
+      "no": "22",
+      "kind": "IO",
+      "line": 327,
+      "signatures": [
+        {
+          "contractName": "METADOLLAR",
+          "methodName": "_transfer",
+          "argTypes": [ "address", "address", "uint256" ]
+        }
+      ],
+      "exp": "(tokenBalanceOf[_to] + _value)",
+      "status": "proven"
+    },
+    {
+      "no": "23",
+      "kind": "IO",
+      "line": 410,
+      "signatures": [
+        {
+          "contractName": "METADOLLAR",
+          "methodName": "mintToken",
+          "argTypes": [ "uint256" ]
+        }
+      ],
+      "exp": "(_totalSupply + amount)",
+      "status": "unproven"
+    },
+    {
+      "no": "24",
+      "kind": "IO",
+      "line": 411,
+      "signatures": [
+        {
+          "contractName": "METADOLLAR",
+          "methodName": "mintToken",
+          "argTypes": [ "uint256" ]
+        }
+      ],
+      "exp": "(tokenBalanceOf[this] + amount)",
+      "status": "unproven"
+    },
+    {
+      "no": "25",
+      "kind": "IO",
+      "line": 412,
+      "signatures": [
+        {
+          "contractName": "METADOLLAR",
+          "methodName": "mintToken",
+          "argTypes": [ "uint256" ]
+        }
+      ],
+      "exp": "(_totalSupply + amount)",
+      "status": "proven"
+    },
+    {
+      "no": "26",
+      "kind": "IO",
+      "line": 413,
+      "signatures": [
+        {
+          "contractName": "METADOLLAR",
+          "methodName": "mintToken",
+          "argTypes": [ "uint256" ]
+        }
+      ],
+      "exp": "(tokenBalanceOf[this] + amount)",
+      "status": "proven"
+    },
+    {
+      "no": "27",
+      "kind": "IO",
+      "line": 425,
+      "signatures": [
+        {
+          "contractName": "METADOLLAR",
+          "methodName": "destroyToken",
+          "argTypes": [ "uint256" ]
+        }
+      ],
+      "exp": "(tokenBalanceOf[this] - amount)",
+      "status": "proven"
+    },
+    {
+      "no": "28",
+      "kind": "IO",
+      "line": 426,
+      "signatures": [
+        {
+          "contractName": "METADOLLAR",
+          "methodName": "destroyToken",
+          "argTypes": [ "uint256" ]
+        }
+      ],
+      "exp": "(_totalSupply - amount)",
+      "status": "proven"
+    },
+    {
+      "no": "29",
+      "kind": "IO",
+      "line": 427,
+      "signatures": [
+        {
+          "contractName": "METADOLLAR",
+          "methodName": "destroyToken",
+          "argTypes": [ "uint256" ]
+        }
+      ],
+      "exp": "(tokenBalanceOf[this] - amount)",
+      "status": "proven"
+    },
+    {
+      "no": "30",
+      "kind": "IO",
+      "line": 428,
+      "signatures": [
+        {
+          "contractName": "METADOLLAR",
+          "methodName": "destroyToken",
+          "argTypes": [ "uint256" ]
+        }
+      ],
+      "exp": "(_totalSupply - amount)",
+      "status": "proven"
+    },
+    {
+      "no": "31",
+      "kind": "DZ",
+      "line": 197,
+      "signatures": [
+        { "contractName": "METADOLLAR", "methodName": "buy", "argTypes": [] }
+      ],
+      "exp": "(msg.value / commissionRate)",
+      "status": "unproven"
+    },
+    {
+      "no": "32",
+      "kind": "DZ",
+      "line": 212,
+      "signatures": [
+        {
+          "contractName": "METADOLLAR",
+          "methodName": "sell",
+          "argTypes": [ "uint256" ]
+        }
+      ],
+      "exp": "(msg.value / commissionRate)",
+      "status": "unproven"
+    },
+    {
+      "no": "33",
+      "kind": "DZ",
+      "line": 223,
+      "signatures": [
+        {
+          "contractName": "METADOLLAR",
+          "methodName": "sell2",
+          "argTypes": [ "address" ]
+        }
+      ],
+      "exp": "(msg.value / commissionRate)",
+      "status": "unproven"
+    },
+    {
+      "no": "34",
+      "kind": "DZ",
+      "line": 300,
+      "signatures": [
+        {
+          "contractName": "METADOLLAR",
+          "methodName": "buyToken",
+          "argTypes": []
+        }
+      ],
+      "exp": "(value / currentTokenPrice)",
+      "status": "proven"
+    },
+    {
+      "no": "35",
+      "kind": "ETH_LEAK",
+      "line": 198,
+      "signatures": [
+        { "contractName": "METADOLLAR", "methodName": "buy", "argTypes": [] }
+      ],
+      "exp": "address(this).send(commission)",
+      "status": "proven"
+    },
+    {
+      "no": "36",
+      "kind": "ETH_LEAK",
+      "line": 213,
+      "signatures": [
+        {
+          "contractName": "METADOLLAR",
+          "methodName": "sell",
+          "argTypes": [ "uint256" ]
+        }
+      ],
+      "exp": "address(this).send(commission)",
+      "status": "proven"
+    },
+    {
+      "no": "37",
+      "kind": "ETH_LEAK",
+      "line": 214,
+      "signatures": [
+        {
+          "contractName": "METADOLLAR",
+          "methodName": "sell",
+          "argTypes": [ "uint256" ]
+        }
+      ],
+      "exp": "msg.sender.transfer(revenue);",
+      "status": "unproven"
+    },
+    {
+      "no": "38",
+      "kind": "ETH_LEAK",
+      "line": 224,
+      "signatures": [
+        {
+          "contractName": "METADOLLAR",
+          "methodName": "sell2",
+          "argTypes": [ "address" ]
+        }
+      ],
+      "exp": "address(this).send(commission)",
+      "status": "proven"
+    },
+    {
+      "no": "39",
+      "kind": "ETH_LEAK",
+      "line": 307,
+      "signatures": [
+        {
+          "contractName": "METADOLLAR",
+          "methodName": "buyToken",
+          "argTypes": []
+        }
+      ],
+      "exp": "sender.transfer(moneyBack);",
+      "status": "unproven"
+    },
+    {
+      "no": "40",
+      "kind": "ETH_LEAK",
+      "line": 458,
+      "signatures": [
+        {
+          "contractName": "METADOLLAR",
+          "methodName": "collect",
+          "argTypes": []
+        },
+        {
+          "contractName": "METADOLLAR",
+          "methodName": "withdraw",
+          "argTypes": [ "uint256" ]
+        }
+      ],
+      "exp": "sender.transfer(summeInWei);",
+      "status": "unproven"
+    }
+  ]
+}

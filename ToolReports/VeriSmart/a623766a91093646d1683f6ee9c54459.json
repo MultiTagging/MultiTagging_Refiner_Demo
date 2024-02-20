@@ -1,0 +1,259 @@
+{
+  "fileName": "Benchmarks/Study_SamplesSet/a623766a91093646d1683f6ee9c54459.sol",
+  "baseName": "a623766a91093646d1683f6ee9c54459.sol",
+  "iter": 33,
+  "time": "310.270398",
+  "errMsg": null,
+  "result": [
+    {
+      "no": "1",
+      "kind": "IO",
+      "line": 57,
+      "signatures": [
+        {
+          "contractName": "LifCrowdsale",
+          "methodName": "addPrivatePresaleTokens",
+          "argTypes": [ "address", "uint256", "uint256" ]
+        },
+        {
+          "contractName": "LifCrowdsale",
+          "methodName": "buyTokens",
+          "argTypes": [ "address" ]
+        },
+        {
+          "contractName": "LifCrowdsale",
+          "methodName": "claimEth",
+          "argTypes": []
+        },
+        {
+          "contractName": "LifCrowdsale",
+          "methodName": "finalize",
+          "argTypes": []
+        },
+        {
+          "contractName": "LifCrowdsale",
+          "methodName": "forwardFunds",
+          "argTypes": []
+        },
+        {
+          "contractName": "LifCrowdsale",
+          "methodName": "funded",
+          "argTypes": []
+        },
+        {
+          "contractName": "LifCrowdsale",
+          "methodName": "mintExtraTokens",
+          "argTypes": [ "uint256" ]
+        },
+        {
+          "contractName": "SafeMath",
+          "methodName": "mul",
+          "argTypes": [ "uint256", "uint256" ]
+        }
+      ],
+      "exp": "(a * b)",
+      "status": "unproven"
+    },
+    {
+      "no": "2",
+      "kind": "IO",
+      "line": 77,
+      "signatures": [
+        {
+          "contractName": "LifCrowdsale",
+          "methodName": "forwardFunds",
+          "argTypes": []
+        },
+        {
+          "contractName": "LifCrowdsale",
+          "methodName": "returnPurchase",
+          "argTypes": [ "address" ]
+        },
+        {
+          "contractName": "LifCrowdsale",
+          "methodName": "setWeiPerUSDinTGE",
+          "argTypes": [ "uint256" ]
+        },
+        {
+          "contractName": "SafeMath",
+          "methodName": "sub",
+          "argTypes": [ "uint256", "uint256" ]
+        }
+      ],
+      "exp": "(a - b)",
+      "status": "proven"
+    },
+    {
+      "no": "3",
+      "kind": "IO",
+      "line": 84,
+      "signatures": [
+        {
+          "contractName": "LifCrowdsale",
+          "methodName": "addPrivatePresaleTokens",
+          "argTypes": [ "address", "uint256", "uint256" ]
+        },
+        {
+          "contractName": "LifCrowdsale",
+          "methodName": "buyTokens",
+          "argTypes": [ "address" ]
+        },
+        {
+          "contractName": "LifCrowdsale",
+          "methodName": "forwardFunds",
+          "argTypes": []
+        },
+        {
+          "contractName": "LifCrowdsale",
+          "methodName": "mintExtraTokens",
+          "argTypes": [ "uint256" ]
+        },
+        {
+          "contractName": "SafeMath",
+          "methodName": "add",
+          "argTypes": [ "uint256", "uint256" ]
+        }
+      ],
+      "exp": "(a + b)",
+      "status": "unproven"
+    },
+    {
+      "no": "4",
+      "kind": "IO",
+      "line": 815,
+      "signatures": [
+        {
+          "contractName": "LifMarketValidationMechanism",
+          "methodName": "calculateDistributionPeriods",
+          "argTypes": []
+        }
+      ],
+      "exp": "(i + 1)",
+      "status": "proven"
+    },
+    {
+      "no": "5",
+      "kind": "DZ",
+      "line": 58,
+      "signatures": [
+        {
+          "contractName": "LifCrowdsale",
+          "methodName": "addPrivatePresaleTokens",
+          "argTypes": [ "address", "uint256", "uint256" ]
+        },
+        {
+          "contractName": "LifCrowdsale",
+          "methodName": "buyTokens",
+          "argTypes": [ "address" ]
+        },
+        {
+          "contractName": "LifCrowdsale",
+          "methodName": "claimEth",
+          "argTypes": []
+        },
+        {
+          "contractName": "LifCrowdsale",
+          "methodName": "finalize",
+          "argTypes": []
+        },
+        {
+          "contractName": "LifCrowdsale",
+          "methodName": "forwardFunds",
+          "argTypes": []
+        },
+        {
+          "contractName": "LifCrowdsale",
+          "methodName": "funded",
+          "argTypes": []
+        },
+        {
+          "contractName": "LifCrowdsale",
+          "methodName": "mintExtraTokens",
+          "argTypes": [ "uint256" ]
+        },
+        {
+          "contractName": "SafeMath",
+          "methodName": "mul",
+          "argTypes": [ "uint256", "uint256" ]
+        }
+      ],
+      "exp": "(c / a)",
+      "status": "proven"
+    },
+    {
+      "no": "6",
+      "kind": "DZ",
+      "line": 67,
+      "signatures": [
+        {
+          "contractName": "LifCrowdsale",
+          "methodName": "mintExtraTokens",
+          "argTypes": [ "uint256" ]
+        },
+        {
+          "contractName": "SafeMath",
+          "methodName": "div",
+          "argTypes": [ "uint256", "uint256" ]
+        }
+      ],
+      "exp": "(a / b)",
+      "status": "unproven"
+    },
+    {
+      "no": "7",
+      "kind": "ETH_LEAK",
+      "line": 1240,
+      "signatures": [
+        {
+          "contractName": "LifCrowdsale",
+          "methodName": "forwardFunds",
+          "argTypes": []
+        }
+      ],
+      "exp": "foundationWallet.transfer(this.balance);",
+      "status": "proven"
+    },
+    {
+      "no": "8",
+      "kind": "ETH_LEAK",
+      "line": 1253,
+      "signatures": [
+        {
+          "contractName": "LifCrowdsale",
+          "methodName": "forwardFunds",
+          "argTypes": []
+        }
+      ],
+      "exp": "foundationWallet.transfer(foundationBalanceCapWei);",
+      "status": "proven"
+    },
+    {
+      "no": "9",
+      "kind": "ETH_LEAK",
+      "line": 1348,
+      "signatures": [
+        {
+          "contractName": "LifCrowdsale",
+          "methodName": "claimEth",
+          "argTypes": []
+        }
+      ],
+      "exp": "msg.sender.transfer(toReturn);",
+      "status": "unproven"
+    },
+    {
+      "no": "10",
+      "kind": "ETH_LEAK",
+      "line": 1370,
+      "signatures": [
+        {
+          "contractName": "LifCrowdsale",
+          "methodName": "returnPurchase",
+          "argTypes": [ "address" ]
+        }
+      ],
+      "exp": "contributor.transfer(toReturn);",
+      "status": "unproven"
+    }
+  ]
+}

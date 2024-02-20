@@ -1,0 +1,37 @@
+{
+  "fileName": "Benchmarks/Study_SamplesSet/73ae836135de464262086a9f1961be11.sol",
+  "baseName": "73ae836135de464262086a9f1961be11.sol",
+  "iter": 4,
+  "time": "0.305578",
+  "errMsg": null,
+  "result": [
+    {
+      "no": "1",
+      "kind": "ETH_LEAK",
+      "line": 48,
+      "signatures": [
+        {
+          "contractName": "Marriage",
+          "methodName": "execute",
+          "argTypes": [ "address", "uint256", "dbytes" ]
+        }
+      ],
+      "exp": "_dst.call.value(_value)(_data);",
+      "status": "proven"
+    },
+    {
+      "no": "2",
+      "kind": "ETH_LEAK",
+      "line": 131,
+      "signatures": [
+        {
+          "contractName": "Marriage",
+          "methodName": "sendMessage",
+          "argTypes": [ "string", "string", "string" ]
+        }
+      ],
+      "exp": "owner.transfer(this.balance);",
+      "status": "proven"
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "fileName": "Benchmarks/Study_SamplesSet/c82625e3252bc8642cc2310358bc6050.sol",
+  "baseName": "c82625e3252bc8642cc2310358bc6050.sol",
+  "iter": 2,
+  "time": "0.030842",
+  "errMsg": null,
+  "result": [
+    {
+      "no": "1",
+      "kind": "ETH_LEAK",
+      "line": 18,
+      "signatures": [
+        {
+          "contractName": "HashForEther",
+          "methodName": "_sendWinnings",
+          "argTypes": []
+        },
+        {
+          "contractName": "HashForEther",
+          "methodName": "withdrawWinnings",
+          "argTypes": []
+        }
+      ],
+      "exp": "msg.sender.transfer(this.balance);",
+      "status": "unproven"
+    }
+  ]
+}

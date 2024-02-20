@@ -1,0 +1,2171 @@
+{
+  "success": true,
+  "error": null,
+  "results": {
+    "detectors": [
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "sendFund",
+            "source_mapping": {
+              "start": 3682,
+              "length": 75,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "RevvaCoin",
+                "source_mapping": {
+                  "start": 2428,
+                  "length": 2412,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              },
+              "signature": "sendFund()"
+            }
+          },
+          {
+            "type": "node",
+            "name": "walletOut.send(this.balance)",
+            "source_mapping": {
+              "start": 3722,
+              "length": 28,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "sendFund",
+                "source_mapping": {
+                  "start": 3682,
+                  "length": 75,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "RevvaCoin",
+                    "source_mapping": {
+                      "start": 2428,
+                      "length": 2412,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "sendFund()"
+                }
+              }
+            }
+          }
+        ],
+        "description": "RevvaCoin.sendFund() () ignores return value by walletOut.send(this.balance) ()\n",
+        "markdown": "[RevvaCoin.sendFund()]() ignores return value by [walletOut.send(this.balance)]()\n",
+        "first_markdown_element": "",
+        "id": "5f24f21992c775b07e969c9daec4d4b8f52be6f69a5ad8274ccb9bbadb7fc7e2",
+        "check": "unchecked-send",
+        "impact": "Medium",
+        "confidence": "Medium"
+      },
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "changeOwner",
+            "source_mapping": {
+              "start": 182,
+              "length": 82,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "Owned",
+                "source_mapping": {
+                  "start": 82,
+                  "length": 252,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              },
+              "signature": "changeOwner(address)"
+            }
+          },
+          {
+            "type": "node",
+            "name": "owner = newOwner",
+            "source_mapping": {
+              "start": 241,
+              "length": 16,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "changeOwner",
+                "source_mapping": {
+                  "start": 182,
+                  "length": 82,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "Owned",
+                    "source_mapping": {
+                      "start": 82,
+                      "length": 252,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "changeOwner(address)"
+                }
+              }
+            }
+          }
+        ],
+        "description": "Owned.changeOwner(address) () should emit an event for: \n\t- owner = newOwner () \n",
+        "markdown": "[Owned.changeOwner(address)]() should emit an event for: \n\t- [owner = newOwner]() \n",
+        "first_markdown_element": "",
+        "id": "d4aa21fae75ce6f931286dd209759e16c38655f83ac2de3638b514024616fcb4",
+        "check": "events-access",
+        "impact": "Low",
+        "confidence": "Medium"
+      },
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "setPrice",
+            "source_mapping": {
+              "start": 3432,
+              "length": 79,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "RevvaCoin",
+                "source_mapping": {
+                  "start": 2428,
+                  "length": 2412,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              },
+              "signature": "setPrice(uint256)"
+            }
+          },
+          {
+            "type": "node",
+            "name": "price = newPrice",
+            "source_mapping": {
+              "start": 3488,
+              "length": 16,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "setPrice",
+                "source_mapping": {
+                  "start": 3432,
+                  "length": 79,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "RevvaCoin",
+                    "source_mapping": {
+                      "start": 2428,
+                      "length": 2412,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "setPrice(uint256)"
+                }
+              }
+            }
+          }
+        ],
+        "description": "RevvaCoin.setPrice(uint256) () should emit an event for: \n\t- price = newPrice () \n",
+        "markdown": "[RevvaCoin.setPrice(uint256)]() should emit an event for: \n\t- [price = newPrice]() \n",
+        "first_markdown_element": "",
+        "id": "74b98a06d1b94ed1c54a46d50fd65976b0f915958d2f4181ea82762ea12fe497",
+        "check": "events-maths",
+        "impact": "Low",
+        "confidence": "Medium"
+      },
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "setLimit",
+            "source_mapping": {
+              "start": 3517,
+              "length": 79,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "RevvaCoin",
+                "source_mapping": {
+                  "start": 2428,
+                  "length": 2412,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              },
+              "signature": "setLimit(uint256)"
+            }
+          },
+          {
+            "type": "node",
+            "name": "limit = newLimit",
+            "source_mapping": {
+              "start": 3573,
+              "length": 16,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "setLimit",
+                "source_mapping": {
+                  "start": 3517,
+                  "length": 79,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "RevvaCoin",
+                    "source_mapping": {
+                      "start": 2428,
+                      "length": 2412,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "setLimit(uint256)"
+                }
+              }
+            }
+          }
+        ],
+        "description": "RevvaCoin.setLimit(uint256) () should emit an event for: \n\t- limit = newLimit () \n",
+        "markdown": "[RevvaCoin.setLimit(uint256)]() should emit an event for: \n\t- [limit = newLimit]() \n",
+        "first_markdown_element": "",
+        "id": "c80138c83b6568190f5b531700e2ea7ff147b49e26cf30dacb47f8c646ff4d64",
+        "check": "events-maths",
+        "impact": "Low",
+        "confidence": "Medium"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "_to",
+            "source_mapping": {
+              "start": 3621,
+              "length": 11,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "setWallet",
+                "source_mapping": {
+                  "start": 3602,
+                  "length": 74,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "RevvaCoin",
+                    "source_mapping": {
+                      "start": 2428,
+                      "length": 2412,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "setWallet(address)"
+                }
+              }
+            }
+          },
+          {
+            "type": "node",
+            "name": "walletOut = _to",
+            "source_mapping": {
+              "start": 3654,
+              "length": 15,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "setWallet",
+                "source_mapping": {
+                  "start": 3602,
+                  "length": 74,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "RevvaCoin",
+                    "source_mapping": {
+                      "start": 2428,
+                      "length": 2412,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "setWallet(address)"
+                }
+              }
+            }
+          }
+        ],
+        "description": "RevvaCoin.setWallet(address)._to () lacks a zero-check on :\n\t\t- walletOut = _to ()\n",
+        "markdown": "[RevvaCoin.setWallet(address)._to]() lacks a zero-check on :\n\t\t- [walletOut = _to]()\n",
+        "first_markdown_element": "",
+        "id": "edc737a7805f3e0b6f0651ac883b0963cc833f98816270bb0903dc877aadd353",
+        "check": "missing-zero-check",
+        "impact": "Low",
+        "confidence": "Medium"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "newOwner",
+            "source_mapping": {
+              "start": 203,
+              "length": 16,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "changeOwner",
+                "source_mapping": {
+                  "start": 182,
+                  "length": 82,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "Owned",
+                    "source_mapping": {
+                      "start": 82,
+                      "length": 252,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "changeOwner(address)"
+                }
+              }
+            }
+          },
+          {
+            "type": "node",
+            "name": "owner = newOwner",
+            "source_mapping": {
+              "start": 241,
+              "length": 16,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "changeOwner",
+                "source_mapping": {
+                  "start": 182,
+                  "length": 82,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "Owned",
+                    "source_mapping": {
+                      "start": 82,
+                      "length": 252,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "changeOwner(address)"
+                }
+              }
+            }
+          }
+        ],
+        "description": "Owned.changeOwner(address).newOwner () lacks a zero-check on :\n\t\t- owner = newOwner ()\n",
+        "markdown": "[Owned.changeOwner(address).newOwner]() lacks a zero-check on :\n\t\t- [owner = newOwner]()\n",
+        "first_markdown_element": "",
+        "id": "f1affa42f87c6ab8361b67b0045a0836fe83bc327791dd0ea18a8d496db520e2",
+        "check": "missing-zero-check",
+        "impact": "Low",
+        "confidence": "Medium"
+      },
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "onlyOwner",
+            "source_mapping": {
+              "start": 270,
+              "length": 62,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "Owned",
+                "source_mapping": {
+                  "start": 82,
+                  "length": 252,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              },
+              "signature": "onlyOwner()"
+            }
+          }
+        ],
+        "description": "Modifier Owned.onlyOwner() () does not always execute _; or revert",
+        "markdown": "Modifier [Owned.onlyOwner()]() does not always execute _; or revert",
+        "first_markdown_element": "",
+        "id": "c36bb46fe28a5541cb31cc6d917897e9a2b107a81c4397e0e15b28ff44eb67b2",
+        "check": "incorrect-modifier",
+        "impact": "Low",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "fallback",
+            "source_mapping": {
+              "start": 2720,
+              "length": 562,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "RevvaCoin",
+                "source_mapping": {
+                  "start": 2428,
+                  "length": 2412,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              },
+              "signature": "fallback()"
+            }
+          },
+          {
+            "type": "node",
+            "name": "isTokenSale == false",
+            "source_mapping": {
+              "start": 2764,
+              "length": 20,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "fallback",
+                "source_mapping": {
+                  "start": 2720,
+                  "length": 562,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "RevvaCoin",
+                    "source_mapping": {
+                      "start": 2428,
+                      "length": 2412,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "fallback()"
+                }
+              }
+            }
+          }
+        ],
+        "description": "RevvaCoin.fallback() () compares to a boolean constant:\n\t-isTokenSale == false ()\n",
+        "markdown": "[RevvaCoin.fallback()]() compares to a boolean constant:\n\t-[isTokenSale == false]()\n",
+        "first_markdown_element": "",
+        "id": "811090350aa235be97922ad84daa9053d34f6c5ee904203cecd0771c172d9f55",
+        "check": "boolean-equal",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "node",
+            "name": "",
+            "source_mapping": {
+              "start": 2800,
+              "length": 5,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "fallback",
+                "source_mapping": {
+                  "start": 2720,
+                  "length": 562,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "RevvaCoin",
+                    "source_mapping": {
+                      "start": 2428,
+                      "length": 2412,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "fallback()"
+                }
+              }
+            }
+          }
+        ],
+        "description": "Deprecated standard detected THROW ():\n\t- Usage of \"throw\" should be replaced with \"revert()\"\n",
+        "markdown": "Deprecated standard detected [THROW]():\n\t- Usage of \"throw\" should be replaced with \"revert()\"\n",
+        "first_markdown_element": "",
+        "id": "f5556cf1c70b64b9e4b1fc32044dd970b5f2c8b9fc21b7971fda01971033f2d5",
+        "check": "deprecated-standards",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "pragma",
+            "name": "^0.4.8",
+            "source_mapping": {
+              "start": 0,
+              "length": 23,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "directive": [
+                "solidity",
+                "^",
+                "0.4",
+                ".8"
+              ]
+            }
+          }
+        ],
+        "description": "Pragma version^0.4.8 () allows old versions\n",
+        "markdown": "Pragma version[^0.4.8]() allows old versions\n",
+        "first_markdown_element": "",
+        "id": "dd43bca9b08bc1fa7b94a3e619671f3c2c98a72b8b3bf0caf1e1f86665ec4569",
+        "check": "solc-version",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [],
+        "description": "solc-0.4.8 is not recommended for deployment\n",
+        "markdown": "solc-0.4.8 is not recommended for deployment\n",
+        "first_markdown_element": "",
+        "id": "ebbd8e423b3c73a93e118f8daed7c9ac33b0d525351f79b5ea41076caa3c1bc5",
+        "check": "solc-version",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "_from",
+            "source_mapping": {
+              "start": 1428,
+              "length": 13,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "transferFrom",
+                "source_mapping": {
+                  "start": 1406,
+                  "length": 446,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "ERC20Token",
+                    "source_mapping": {
+                      "start": 1012,
+                      "length": 1414,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "transferFrom(address,address,uint256)"
+                }
+              }
+            },
+            "additional_fields": {
+              "target": "parameter",
+              "convention": "mixedCase"
+            }
+          }
+        ],
+        "description": "Parameter ERC20Token.transferFrom(address,address,uint256)._from () is not in mixedCase\n",
+        "markdown": "Parameter [ERC20Token.transferFrom(address,address,uint256)._from]() is not in mixedCase\n",
+        "first_markdown_element": "",
+        "id": "2b5a9c465fc4c4dd19b304f30e16d82f080533224bafd72b7fcfc4222cb3c8a4",
+        "check": "naming-convention",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "_value",
+            "source_mapping": {
+              "start": 4604,
+              "length": 14,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "burn",
+                "source_mapping": {
+                  "start": 4590,
+                  "length": 248,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "RevvaCoin",
+                    "source_mapping": {
+                      "start": 2428,
+                      "length": 2412,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "burn(uint256)"
+                }
+              }
+            },
+            "additional_fields": {
+              "target": "parameter",
+              "convention": "mixedCase"
+            }
+          }
+        ],
+        "description": "Parameter RevvaCoin.burn(uint256)._value () is not in mixedCase\n",
+        "markdown": "Parameter [RevvaCoin.burn(uint256)._value]() is not in mixedCase\n",
+        "first_markdown_element": "",
+        "id": "38065b991ffd3c56b44b71fdef1119936159c5658e9cc5415e00cf28fc791da3",
+        "check": "naming-convention",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "_spender",
+            "source_mapping": {
+              "start": 2213,
+              "length": 16,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "allowance",
+                "source_mapping": {
+                  "start": 2178,
+                  "length": 139,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "ERC20Token",
+                    "source_mapping": {
+                      "start": 1012,
+                      "length": 1414,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "allowance(address,address)"
+                }
+              }
+            },
+            "additional_fields": {
+              "target": "parameter",
+              "convention": "mixedCase"
+            }
+          }
+        ],
+        "description": "Parameter ERC20Token.allowance(address,address)._spender () is not in mixedCase\n",
+        "markdown": "Parameter [ERC20Token.allowance(address,address)._spender]() is not in mixedCase\n",
+        "first_markdown_element": "",
+        "id": "3f8abc33a611c1852cf278ffc388924bc5934e8196af212c8be6c73c375b5ac1",
+        "check": "naming-convention",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "_to",
+            "source_mapping": {
+              "start": 3621,
+              "length": 11,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "setWallet",
+                "source_mapping": {
+                  "start": 3602,
+                  "length": 74,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "RevvaCoin",
+                    "source_mapping": {
+                      "start": 2428,
+                      "length": 2412,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "setWallet(address)"
+                }
+              }
+            },
+            "additional_fields": {
+              "target": "parameter",
+              "convention": "mixedCase"
+            }
+          }
+        ],
+        "description": "Parameter RevvaCoin.setWallet(address)._to () is not in mixedCase\n",
+        "markdown": "Parameter [RevvaCoin.setWallet(address)._to]() is not in mixedCase\n",
+        "first_markdown_element": "",
+        "id": "422c268d20e06a64e813861ecb48cc1a01514c206528af72348a8b7efb228736",
+        "check": "naming-convention",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "_value",
+            "source_mapping": {
+              "start": 2009,
+              "length": 14,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "approve",
+                "source_mapping": {
+                  "start": 1974,
+                  "length": 198,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "ERC20Token",
+                    "source_mapping": {
+                      "start": 1012,
+                      "length": 1414,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "approve(address,uint256)"
+                }
+              }
+            },
+            "additional_fields": {
+              "target": "parameter",
+              "convention": "mixedCase"
+            }
+          }
+        ],
+        "description": "Parameter ERC20Token.approve(address,uint256)._value () is not in mixedCase\n",
+        "markdown": "Parameter [ERC20Token.approve(address,uint256)._value]() is not in mixedCase\n",
+        "first_markdown_element": "",
+        "id": "4fb3423e6afed23a72cc6d98d2a981029c0b9db938ea7e77555bffd323d7d3ab",
+        "check": "naming-convention",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "_value",
+            "source_mapping": {
+              "start": 4228,
+              "length": 14,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "add",
+                "source_mapping": {
+                  "start": 4215,
+                  "length": 271,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "RevvaCoin",
+                    "source_mapping": {
+                      "start": 2428,
+                      "length": 2412,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "add(uint256)"
+                }
+              }
+            },
+            "additional_fields": {
+              "target": "parameter",
+              "convention": "mixedCase"
+            }
+          }
+        ],
+        "description": "Parameter RevvaCoin.add(uint256)._value () is not in mixedCase\n",
+        "markdown": "Parameter [RevvaCoin.add(uint256)._value]() is not in mixedCase\n",
+        "first_markdown_element": "",
+        "id": "5be7121fcb96347637b07d32fcb33bee78922c2662f398fcfa31abde8061cc83",
+        "check": "naming-convention",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "_spender",
+            "source_mapping": {
+              "start": 1991,
+              "length": 16,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "approve",
+                "source_mapping": {
+                  "start": 1974,
+                  "length": 198,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "ERC20Token",
+                    "source_mapping": {
+                      "start": 1012,
+                      "length": 1414,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "approve(address,uint256)"
+                }
+              }
+            },
+            "additional_fields": {
+              "target": "parameter",
+              "convention": "mixedCase"
+            }
+          }
+        ],
+        "description": "Parameter ERC20Token.approve(address,uint256)._spender () is not in mixedCase\n",
+        "markdown": "Parameter [ERC20Token.approve(address,uint256)._spender]() is not in mixedCase\n",
+        "first_markdown_element": "",
+        "id": "5f00a2cfddf9a2c0a46c075543a362a927c264a19ee82c4a26957fbcb0b0ab06",
+        "check": "naming-convention",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "_value",
+            "source_mapping": {
+              "start": 1456,
+              "length": 14,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "transferFrom",
+                "source_mapping": {
+                  "start": 1406,
+                  "length": 446,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "ERC20Token",
+                    "source_mapping": {
+                      "start": 1012,
+                      "length": 1414,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "transferFrom(address,address,uint256)"
+                }
+              }
+            },
+            "additional_fields": {
+              "target": "parameter",
+              "convention": "mixedCase"
+            }
+          }
+        ],
+        "description": "Parameter ERC20Token.transferFrom(address,address,uint256)._value () is not in mixedCase\n",
+        "markdown": "Parameter [ERC20Token.transferFrom(address,address,uint256)._value]() is not in mixedCase\n",
+        "first_markdown_element": "",
+        "id": "624a2ba01ea3c2def81a203e50d9f5da314df68c339af62e42c13a0037434ee4",
+        "check": "naming-convention",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "_owner",
+            "source_mapping": {
+              "start": 2197,
+              "length": 14,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "allowance",
+                "source_mapping": {
+                  "start": 2178,
+                  "length": 139,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "ERC20Token",
+                    "source_mapping": {
+                      "start": 1012,
+                      "length": 1414,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "allowance(address,address)"
+                }
+              }
+            },
+            "additional_fields": {
+              "target": "parameter",
+              "convention": "mixedCase"
+            }
+          }
+        ],
+        "description": "Parameter ERC20Token.allowance(address,address)._owner () is not in mixedCase\n",
+        "markdown": "Parameter [ERC20Token.allowance(address,address)._owner]() is not in mixedCase\n",
+        "first_markdown_element": "",
+        "id": "6463aebe674b74936e662ddc71e673caa755a5508f7abbf47bc3366a183d4dd1",
+        "check": "naming-convention",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "_to",
+            "source_mapping": {
+              "start": 1443,
+              "length": 11,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "transferFrom",
+                "source_mapping": {
+                  "start": 1406,
+                  "length": 446,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "ERC20Token",
+                    "source_mapping": {
+                      "start": 1012,
+                      "length": 1414,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "transferFrom(address,address,uint256)"
+                }
+              }
+            },
+            "additional_fields": {
+              "target": "parameter",
+              "convention": "mixedCase"
+            }
+          }
+        ],
+        "description": "Parameter ERC20Token.transferFrom(address,address,uint256)._to () is not in mixedCase\n",
+        "markdown": "Parameter [ERC20Token.transferFrom(address,address,uint256)._to]() is not in mixedCase\n",
+        "first_markdown_element": "",
+        "id": "9911f9049723150800b2b8316cf38216ef97e7f0494dfdcfcea07886f7ed3e20",
+        "check": "naming-convention",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "_to",
+            "source_mapping": {
+              "start": 1066,
+              "length": 11,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "transfer",
+                "source_mapping": {
+                  "start": 1048,
+                  "length": 352,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "ERC20Token",
+                    "source_mapping": {
+                      "start": 1012,
+                      "length": 1414,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "transfer(address,uint256)"
+                }
+              }
+            },
+            "additional_fields": {
+              "target": "parameter",
+              "convention": "mixedCase"
+            }
+          }
+        ],
+        "description": "Parameter ERC20Token.transfer(address,uint256)._to () is not in mixedCase\n",
+        "markdown": "Parameter [ERC20Token.transfer(address,uint256)._to]() is not in mixedCase\n",
+        "first_markdown_element": "",
+        "id": "b79b55be7ed7b7bef9ea132b7494532bfa25b215d29d77c209d3bd2c59f1a8d9",
+        "check": "naming-convention",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "_value",
+            "source_mapping": {
+              "start": 1079,
+              "length": 14,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "transfer",
+                "source_mapping": {
+                  "start": 1048,
+                  "length": 352,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "ERC20Token",
+                    "source_mapping": {
+                      "start": 1012,
+                      "length": 1414,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "transfer(address,uint256)"
+                }
+              }
+            },
+            "additional_fields": {
+              "target": "parameter",
+              "convention": "mixedCase"
+            }
+          }
+        ],
+        "description": "Parameter ERC20Token.transfer(address,uint256)._value () is not in mixedCase\n",
+        "markdown": "Parameter [ERC20Token.transfer(address,uint256)._value]() is not in mixedCase\n",
+        "first_markdown_element": "",
+        "id": "bfe2cef40f67f09101385cf26c799f136c8b61493e717e509a79d38db8f5e724",
+        "check": "naming-convention",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "_owner",
+            "source_mapping": {
+              "start": 1877,
+              "length": 14,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "balanceOf",
+                "source_mapping": {
+                  "start": 1858,
+                  "length": 110,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "ERC20Token",
+                    "source_mapping": {
+                      "start": 1012,
+                      "length": 1414,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "balanceOf(address)"
+                }
+              }
+            },
+            "additional_fields": {
+              "target": "parameter",
+              "convention": "mixedCase"
+            }
+          }
+        ],
+        "description": "Parameter ERC20Token.balanceOf(address)._owner () is not in mixedCase\n",
+        "markdown": "Parameter [ERC20Token.balanceOf(address)._owner]() is not in mixedCase\n",
+        "first_markdown_element": "",
+        "id": "c217bf4d68c93f8d304dcac4db562a06b1b21fa466a3c04cbf6b1e75017accb9",
+        "check": "naming-convention",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "RevvaCoin",
+            "source_mapping": {
+              "start": 3876,
+              "length": 274,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "RevvaCoin",
+                "source_mapping": {
+                  "start": 2428,
+                  "length": 2412,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              },
+              "signature": "RevvaCoin()"
+            }
+          },
+          {
+            "type": "node",
+            "name": "price = 12500000000000000",
+            "source_mapping": {
+              "start": 4071,
+              "length": 25,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "RevvaCoin",
+                "source_mapping": {
+                  "start": 3876,
+                  "length": 274,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "RevvaCoin",
+                    "source_mapping": {
+                      "start": 2428,
+                      "length": 2412,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "RevvaCoin()"
+                }
+              }
+            }
+          }
+        ],
+        "description": "RevvaCoin.RevvaCoin() () uses literals with too many digits:\n\t- price = 12500000000000000 ()\n",
+        "markdown": "[RevvaCoin.RevvaCoin()]() uses literals with too many digits:\n\t- [price = 12500000000000000]()\n",
+        "first_markdown_element": "",
+        "id": "0e92dcf186e29d969ffc9d2dd92d6004205aa47bfa7438c7a449c5f23233d524",
+        "check": "too-many-digits",
+        "impact": "Informational",
+        "confidence": "Medium"
+      },
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "fallback",
+            "source_mapping": {
+              "start": 2720,
+              "length": 562,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "RevvaCoin",
+                "source_mapping": {
+                  "start": 2428,
+                  "length": 2412,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              },
+              "signature": "fallback()"
+            }
+          },
+          {
+            "type": "node",
+            "name": "tokenAmount = (msg.value * 100000000) / price",
+            "source_mapping": {
+              "start": 2826,
+              "length": 54,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "fallback",
+                "source_mapping": {
+                  "start": 2720,
+                  "length": 562,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "RevvaCoin",
+                    "source_mapping": {
+                      "start": 2428,
+                      "length": 2412,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "fallback()"
+                }
+              }
+            }
+          }
+        ],
+        "description": "RevvaCoin.fallback() () uses literals with too many digits:\n\t- tokenAmount = (msg.value * 100000000) / price ()\n",
+        "markdown": "[RevvaCoin.fallback()]() uses literals with too many digits:\n\t- [tokenAmount = (msg.value * 100000000) / price]()\n",
+        "first_markdown_element": "",
+        "id": "30ce9bb7fc7c052cf96a1404d80352aae577067ec27f5bb7e05aa69d2f64c63a",
+        "check": "too-many-digits",
+        "impact": "Informational",
+        "confidence": "Medium"
+      },
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "RevvaCoin",
+            "source_mapping": {
+              "start": 3876,
+              "length": 274,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "RevvaCoin",
+                "source_mapping": {
+                  "start": 2428,
+                  "length": 2412,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              },
+              "signature": "RevvaCoin()"
+            }
+          },
+          {
+            "type": "node",
+            "name": "limit = totalSupply - 100000000000000",
+            "source_mapping": {
+              "start": 4106,
+              "length": 37,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "RevvaCoin",
+                "source_mapping": {
+                  "start": 3876,
+                  "length": 274,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "RevvaCoin",
+                    "source_mapping": {
+                      "start": 2428,
+                      "length": 2412,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "RevvaCoin()"
+                }
+              }
+            }
+          }
+        ],
+        "description": "RevvaCoin.RevvaCoin() () uses literals with too many digits:\n\t- limit = totalSupply - 100000000000000 ()\n",
+        "markdown": "[RevvaCoin.RevvaCoin()]() uses literals with too many digits:\n\t- [limit = totalSupply - 100000000000000]()\n",
+        "first_markdown_element": "",
+        "id": "333ebd4732f2e65dd963f41ff1e96045c78e2ef570bc05a727ae2a8d31d6169a",
+        "check": "too-many-digits",
+        "impact": "Informational",
+        "confidence": "Medium"
+      },
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "RevvaCoin",
+            "source_mapping": {
+              "start": 3876,
+              "length": 274,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "RevvaCoin",
+                "source_mapping": {
+                  "start": 2428,
+                  "length": 2412,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              },
+              "signature": "RevvaCoin()"
+            }
+          },
+          {
+            "type": "node",
+            "name": "totalSupply = 10000000 * 100000000",
+            "source_mapping": {
+              "start": 3907,
+              "length": 34,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "RevvaCoin",
+                "source_mapping": {
+                  "start": 3876,
+                  "length": 274,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "RevvaCoin",
+                    "source_mapping": {
+                      "start": 2428,
+                      "length": 2412,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "RevvaCoin()"
+                }
+              }
+            }
+          }
+        ],
+        "description": "RevvaCoin.RevvaCoin() () uses literals with too many digits:\n\t- totalSupply = 10000000 * 100000000 ()\n",
+        "markdown": "[RevvaCoin.RevvaCoin()]() uses literals with too many digits:\n\t- [totalSupply = 10000000 * 100000000]()\n",
+        "first_markdown_element": "",
+        "id": "9ef0ff122d194283323bdb22b69da2e6f687d300e5b756e57ff19d05c05d41b7",
+        "check": "too-many-digits",
+        "impact": "Informational",
+        "confidence": "Medium"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "version",
+            "source_mapping": {
+              "start": 3840,
+              "length": 29,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "RevvaCoin",
+                "source_mapping": {
+                  "start": 2428,
+                  "length": 2412,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              }
+            }
+          },
+          {
+            "type": "contract",
+            "name": "RevvaCoin",
+            "source_mapping": {
+              "start": 2428,
+              "length": 2412,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            }
+          }
+        ],
+        "description": "RevvaCoin.version () is never used in RevvaCoin ()\n",
+        "markdown": "[RevvaCoin.version]() is never used in [RevvaCoin]()\n",
+        "first_markdown_element": "",
+        "id": "225c5c949f89b87deea3dbcae54f794d31d1ad90a31f55271565b4e8587927ea",
+        "check": "unused-state",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "version",
+            "source_mapping": {
+              "start": 3840,
+              "length": 29,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "RevvaCoin",
+                "source_mapping": {
+                  "start": 2428,
+                  "length": 2412,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              }
+            }
+          }
+        ],
+        "description": "RevvaCoin.version () should be constant \n",
+        "markdown": "[RevvaCoin.version]() should be constant \n",
+        "first_markdown_element": "",
+        "id": "09882b3eecda081e40ed05dca705d6940308506f22ddb8dc7eeb09f6481960c6",
+        "check": "constable-states",
+        "impact": "Optimization",
+        "confidence": "High"
+      }
+    ]
+  }
+}

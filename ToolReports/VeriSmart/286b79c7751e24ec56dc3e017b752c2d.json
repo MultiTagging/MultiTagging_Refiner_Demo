@@ -1,0 +1,140 @@
+{
+  "fileName": "Benchmarks/Study_SamplesSet/286b79c7751e24ec56dc3e017b752c2d.sol",
+  "baseName": "286b79c7751e24ec56dc3e017b752c2d.sol",
+  "iter": 224,
+  "time": "300.18564",
+  "errMsg": null,
+  "result": [
+    {
+      "no": "1",
+      "kind": "IO",
+      "line": 49,
+      "signatures": [
+        {
+          "contractName": "OpenAddressLottery",
+          "methodName": "participate",
+          "argTypes": []
+        }
+      ],
+      "exp": "(msg.value * 7)",
+      "status": "unproven"
+    },
+    {
+      "no": "2",
+      "kind": "IO",
+      "line": 56,
+      "signatures": [
+        {
+          "contractName": "OpenAddressLottery",
+          "methodName": "participate",
+          "argTypes": []
+        }
+      ],
+      "exp": "(block.number - lastReseed)",
+      "status": "unproven"
+    },
+    {
+      "no": "3",
+      "kind": "IO",
+      "line": 86,
+      "signatures": [
+        {
+          "contractName": "OpenAddressLottery",
+          "methodName": "forceReseed",
+          "argTypes": []
+        }
+      ],
+      "exp": "(block.number - 1)",
+      "status": "unproven"
+    },
+    {
+      "no": "4",
+      "kind": "IO",
+      "line": 87,
+      "signatures": [
+        {
+          "contractName": "OpenAddressLottery",
+          "methodName": "forceReseed",
+          "argTypes": []
+        }
+      ],
+      "exp": "(block.difficulty * uint256(block.coinbase))",
+      "status": "unproven"
+    },
+    {
+      "no": "5",
+      "kind": "IO",
+      "line": 88,
+      "signatures": [
+        {
+          "contractName": "OpenAddressLottery",
+          "methodName": "forceReseed",
+          "argTypes": []
+        }
+      ],
+      "exp": "(tx.gasprice * 7)",
+      "status": "unproven"
+    },
+    {
+      "no": "6",
+      "kind": "DZ",
+      "line": 62,
+      "signatures": [
+        {
+          "contractName": "OpenAddressLottery",
+          "methodName": "luckyNumberOfAddress",
+          "argTypes": [ "address" ]
+        },
+        {
+          "contractName": "OpenAddressLottery",
+          "methodName": "participate",
+          "argTypes": []
+        }
+      ],
+      "exp": "(uint256(keccak256(uint256(addr), secretSeed)[0]) % 8)",
+      "status": "proven"
+    },
+    {
+      "no": "7",
+      "kind": "KA",
+      "line": 78,
+      "signatures": [
+        {
+          "contractName": "OpenAddressLottery",
+          "methodName": "kill",
+          "argTypes": []
+        }
+      ],
+      "exp": "selfdestruct(msg.sender);",
+      "status": "proven"
+    },
+    {
+      "no": "8",
+      "kind": "ETH_LEAK",
+      "line": 53,
+      "signatures": [
+        {
+          "contractName": "OpenAddressLottery",
+          "methodName": "participate",
+          "argTypes": []
+        }
+      ],
+      "exp": "msg.sender.transfer(win);",
+      "status": "unproven"
+    },
+    {
+      "no": "9",
+      "kind": "ETH_LEAK",
+      "line": 78,
+      "signatures": [
+        {
+          "contractName": "OpenAddressLottery",
+          "methodName": "kill",
+          "argTypes": []
+        }
+      ],
+      "exp": "selfdestruct(msg.sender);",
+      "status": "proven"
+    }
+  ]
+}

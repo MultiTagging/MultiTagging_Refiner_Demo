@@ -1,0 +1,4650 @@
+{
+  "success": true,
+  "error": null,
+  "results": {
+    "detectors": [
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "funding",
+            "source_mapping": {
+              "start": 3516,
+              "length": 422,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "NinjaToken",
+                "source_mapping": {
+                  "start": 2036,
+                  "length": 2768,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              },
+              "signature": "funding()"
+            }
+          },
+          {
+            "type": "node",
+            "name": "! fundingAccount.call.value(msg.value)()",
+            "source_mapping": {
+              "start": 3785,
+              "length": 39,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "funding",
+                "source_mapping": {
+                  "start": 3516,
+                  "length": 422,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "NinjaToken",
+                    "source_mapping": {
+                      "start": 2036,
+                      "length": 2768,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "funding()"
+                }
+              }
+            },
+            "additional_fields": {
+              "underlying_type": "external_calls"
+            }
+          },
+          {
+            "type": "node",
+            "name": "balances[msg.sender] += msg.value * fundingExchangeRate",
+            "source_mapping": {
+              "start": 3841,
+              "length": 51,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "funding",
+                "source_mapping": {
+                  "start": 3516,
+                  "length": 422,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "NinjaToken",
+                    "source_mapping": {
+                      "start": 2036,
+                      "length": 2768,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "funding()"
+                }
+              }
+            },
+            "additional_fields": {
+              "underlying_type": "variables_written",
+              "variable_name": "balances"
+            }
+          }
+        ],
+        "description": "Reentrancy in NinjaToken.funding() ():\n\tExternal calls:\n\t- ! fundingAccount.call.value(msg.value)() ()\n\tState variables written after the call(s):\n\t- balances[msg.sender] += msg.value * fundingExchangeRate ()\n\tStandardToken.balances () can be used in cross function reentrancies:\n\t- StandardToken.balanceOf(address) ()\n\t- NinjaToken.buy(string) ()\n\t- NinjaToken.funding() ()\n\t- StandardToken.transfer(address,uint256) ()\n\t- StandardToken.transferFrom(address,address,uint256) ()\n",
+        "markdown": "Reentrancy in [NinjaToken.funding()]():\n\tExternal calls:\n\t- [! fundingAccount.call.value(msg.value)()]()\n\tState variables written after the call(s):\n\t- [balances[msg.sender] += msg.value * fundingExchangeRate]()\n\t[StandardToken.balances]() can be used in cross function reentrancies:\n\t- [StandardToken.balanceOf(address)]()\n\t- [NinjaToken.buy(string)]()\n\t- [NinjaToken.funding()]()\n\t- [StandardToken.transfer(address,uint256)]()\n\t- [StandardToken.transferFrom(address,address,uint256)]()\n",
+        "first_markdown_element": "",
+        "id": "13954ca959aff0f8708a05adee0fb3dfa58cc47c225503cba0fe75cf56d19800",
+        "check": "reentrancy-eth",
+        "impact": "High",
+        "confidence": "Medium"
+      },
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "buy",
+            "source_mapping": {
+              "start": 4111,
+              "length": 326,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "NinjaToken",
+                "source_mapping": {
+                  "start": 2036,
+                  "length": 2768,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              },
+              "signature": "buy(string)"
+            }
+          },
+          {
+            "type": "node",
+            "name": "! fundingAccount.call.value(msg.value)()",
+            "source_mapping": {
+              "start": 4266,
+              "length": 39,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "buy",
+                "source_mapping": {
+                  "start": 4111,
+                  "length": 326,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "NinjaToken",
+                    "source_mapping": {
+                      "start": 2036,
+                      "length": 2768,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "buy(string)"
+                }
+              }
+            },
+            "additional_fields": {
+              "underlying_type": "external_calls"
+            }
+          },
+          {
+            "type": "node",
+            "name": "balances[msg.sender] += msg.value * price",
+            "source_mapping": {
+              "start": 4322,
+              "length": 37,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "buy",
+                "source_mapping": {
+                  "start": 4111,
+                  "length": 326,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "NinjaToken",
+                    "source_mapping": {
+                      "start": 2036,
+                      "length": 2768,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "buy(string)"
+                }
+              }
+            },
+            "additional_fields": {
+              "underlying_type": "variables_written",
+              "variable_name": "balances"
+            }
+          }
+        ],
+        "description": "Reentrancy in NinjaToken.buy(string) ():\n\tExternal calls:\n\t- ! fundingAccount.call.value(msg.value)() ()\n\tState variables written after the call(s):\n\t- balances[msg.sender] += msg.value * price ()\n\tStandardToken.balances () can be used in cross function reentrancies:\n\t- StandardToken.balanceOf(address) ()\n\t- NinjaToken.buy(string) ()\n\t- NinjaToken.funding() ()\n\t- StandardToken.transfer(address,uint256) ()\n\t- StandardToken.transferFrom(address,address,uint256) ()\n",
+        "markdown": "Reentrancy in [NinjaToken.buy(string)]():\n\tExternal calls:\n\t- [! fundingAccount.call.value(msg.value)()]()\n\tState variables written after the call(s):\n\t- [balances[msg.sender] += msg.value * price]()\n\t[StandardToken.balances]() can be used in cross function reentrancies:\n\t- [StandardToken.balanceOf(address)]()\n\t- [NinjaToken.buy(string)]()\n\t- [NinjaToken.funding()]()\n\t- [StandardToken.transfer(address,uint256)]()\n\t- [StandardToken.transferFrom(address,address,uint256)]()\n",
+        "first_markdown_element": "",
+        "id": "69ef7ab3fad1594388031d1aa9a31a1999e0287e30012c1fc1d52cac2c136fb3",
+        "check": "reentrancy-eth",
+        "impact": "High",
+        "confidence": "Medium"
+      },
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "transferFrom",
+            "source_mapping": {
+              "start": 1199,
+              "length": 401,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "StandardToken",
+                "source_mapping": {
+                  "start": 712,
+                  "length": 1322,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              },
+              "signature": "transferFrom(address,address,uint256)"
+            }
+          },
+          {
+            "type": "variable",
+            "name": "allowed",
+            "source_mapping": {
+              "start": 816,
+              "length": 51,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "StandardToken",
+                "source_mapping": {
+                  "start": 712,
+                  "length": 1322,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              }
+            }
+          },
+          {
+            "type": "variable",
+            "name": "balances",
+            "source_mapping": {
+              "start": 777,
+              "length": 35,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "StandardToken",
+                "source_mapping": {
+                  "start": 712,
+                  "length": 1322,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              }
+            }
+          }
+        ],
+        "description": "StandardToken.transferFrom(address,address,uint256) () is declared view but changes state variables:\n\t- StandardToken.allowed ()\n\t- StandardToken.balances ()\n",
+        "markdown": "[StandardToken.transferFrom(address,address,uint256)]() is declared view but changes state variables:\n\t- [StandardToken.allowed]()\n\t- [StandardToken.balances]()\n",
+        "first_markdown_element": "",
+        "id": "0570d605bfbaa3f1f390b670b6db77a445d107eb58082d88ff00109536db41e2",
+        "additional_fields": {
+          "contains_assembly": false
+        },
+        "check": "constant-function-state",
+        "impact": "Medium",
+        "confidence": "Medium"
+      },
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "transferFrom",
+            "source_mapping": {
+              "start": 4612,
+              "length": 189,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "NinjaToken",
+                "source_mapping": {
+                  "start": 2036,
+                  "length": 2768,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              },
+              "signature": "transferFrom(address,address,uint256)"
+            }
+          },
+          {
+            "type": "variable",
+            "name": "allowed",
+            "source_mapping": {
+              "start": 816,
+              "length": 51,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "StandardToken",
+                "source_mapping": {
+                  "start": 712,
+                  "length": 1322,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              }
+            }
+          },
+          {
+            "type": "variable",
+            "name": "balances",
+            "source_mapping": {
+              "start": 777,
+              "length": 35,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "StandardToken",
+                "source_mapping": {
+                  "start": 712,
+                  "length": 1322,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              }
+            }
+          }
+        ],
+        "description": "NinjaToken.transferFrom(address,address,uint256) () is declared view but changes state variables:\n\t- StandardToken.allowed ()\n\t- StandardToken.balances ()\n",
+        "markdown": "[NinjaToken.transferFrom(address,address,uint256)]() is declared view but changes state variables:\n\t- [StandardToken.allowed]()\n\t- [StandardToken.balances]()\n",
+        "first_markdown_element": "",
+        "id": "42cb3819e08aa9b4c59a65a270368e29fe101bcad915a5b4e67b86a22281b8a2",
+        "additional_fields": {
+          "contains_assembly": false
+        },
+        "check": "constant-function-state",
+        "impact": "Medium",
+        "confidence": "Medium"
+      },
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "transfer",
+            "source_mapping": {
+              "start": 4447,
+              "length": 159,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "NinjaToken",
+                "source_mapping": {
+                  "start": 2036,
+                  "length": 2768,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              },
+              "signature": "transfer(address,uint256)"
+            }
+          },
+          {
+            "type": "variable",
+            "name": "balances",
+            "source_mapping": {
+              "start": 777,
+              "length": 35,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "StandardToken",
+                "source_mapping": {
+                  "start": 712,
+                  "length": 1322,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              }
+            }
+          }
+        ],
+        "description": "NinjaToken.transfer(address,uint256) () is declared view but changes state variables:\n\t- StandardToken.balances ()\n",
+        "markdown": "[NinjaToken.transfer(address,uint256)]() is declared view but changes state variables:\n\t- [StandardToken.balances]()\n",
+        "first_markdown_element": "",
+        "id": "7c97e3108e563ec1b9557ba442fd30e2d765cec89e4e590d2d43d2e40269bbf8",
+        "additional_fields": {
+          "contains_assembly": false
+        },
+        "check": "constant-function-state",
+        "impact": "Medium",
+        "confidence": "Medium"
+      },
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "transfer",
+            "source_mapping": {
+              "start": 873,
+              "length": 322,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "StandardToken",
+                "source_mapping": {
+                  "start": 712,
+                  "length": 1322,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              },
+              "signature": "transfer(address,uint256)"
+            }
+          },
+          {
+            "type": "variable",
+            "name": "balances",
+            "source_mapping": {
+              "start": 777,
+              "length": 35,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "StandardToken",
+                "source_mapping": {
+                  "start": 712,
+                  "length": 1322,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              }
+            }
+          }
+        ],
+        "description": "StandardToken.transfer(address,uint256) () is declared view but changes state variables:\n\t- StandardToken.balances ()\n",
+        "markdown": "[StandardToken.transfer(address,uint256)]() is declared view but changes state variables:\n\t- [StandardToken.balances]()\n",
+        "first_markdown_element": "",
+        "id": "ba12069ad268b85ab2f6d404e9e7a08aefc8b23b9bdfcf221b5b7cd34642beb8",
+        "additional_fields": {
+          "contains_assembly": false
+        },
+        "check": "constant-function-state",
+        "impact": "Medium",
+        "confidence": "Medium"
+      },
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "approve",
+            "source_mapping": {
+              "start": 1604,
+              "length": 187,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "StandardToken",
+                "source_mapping": {
+                  "start": 712,
+                  "length": 1322,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              },
+              "signature": "approve(address,uint256)"
+            }
+          },
+          {
+            "type": "variable",
+            "name": "allowed",
+            "source_mapping": {
+              "start": 816,
+              "length": 51,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "StandardToken",
+                "source_mapping": {
+                  "start": 712,
+                  "length": 1322,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              }
+            }
+          }
+        ],
+        "description": "StandardToken.approve(address,uint256) () is declared view but changes state variables:\n\t- StandardToken.allowed ()\n",
+        "markdown": "[StandardToken.approve(address,uint256)]() is declared view but changes state variables:\n\t- [StandardToken.allowed]()\n",
+        "first_markdown_element": "",
+        "id": "f76e180f1df219c7fa0c1576499e8c6715376c4c1ad24e802f74df78766fc1dc",
+        "additional_fields": {
+          "contains_assembly": false
+        },
+        "check": "constant-function-state",
+        "impact": "Medium",
+        "confidence": "Medium"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "allowance",
+            "source_mapping": {
+              "start": 1971,
+              "length": 17,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "allowance",
+                "source_mapping": {
+                  "start": 1902,
+                  "length": 130,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "StandardToken",
+                    "source_mapping": {
+                      "start": 712,
+                      "length": 1322,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "allowance(address,address)"
+                }
+              }
+            }
+          },
+          {
+            "type": "function",
+            "name": "allowance",
+            "source_mapping": {
+              "start": 1902,
+              "length": 130,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "StandardToken",
+                "source_mapping": {
+                  "start": 712,
+                  "length": 1322,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              },
+              "signature": "allowance(address,address)"
+            }
+          },
+          {
+            "type": "function",
+            "name": "allowance",
+            "source_mapping": {
+              "start": 620,
+              "length": 87,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "Token",
+                "source_mapping": {
+                  "start": 24,
+                  "length": 686,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              },
+              "signature": "allowance(address,uint256)"
+            }
+          }
+        ],
+        "description": "StandardToken.allowance(address,address).allowance () shadows:\n\t- StandardToken.allowance(address,address) () (function)\n\t- Token.allowance(address,uint256) () (function)\n",
+        "markdown": "[StandardToken.allowance(address,address).allowance]() shadows:\n\t- [StandardToken.allowance(address,address)]() (function)\n\t- [Token.allowance(address,uint256)]() (function)\n",
+        "first_markdown_element": "",
+        "id": "376e6f457d2cd474329ca84ccb2dad27d38b94c506de2b9de6da5e739ec89f86",
+        "check": "shadowing-local",
+        "impact": "Low",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "totalSupply",
+            "source_mapping": {
+              "start": 246,
+              "length": 19,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "totalSupply",
+                "source_mapping": {
+                  "start": 206,
+                  "length": 62,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "Token",
+                    "source_mapping": {
+                      "start": 24,
+                      "length": 686,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "totalSupply()"
+                }
+              }
+            }
+          },
+          {
+            "type": "function",
+            "name": "totalSupply",
+            "source_mapping": {
+              "start": 206,
+              "length": 62,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "Token",
+                "source_mapping": {
+                  "start": 24,
+                  "length": 686,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              },
+              "signature": "totalSupply()"
+            }
+          }
+        ],
+        "description": "Token.totalSupply().totalSupply () shadows:\n\t- Token.totalSupply() () (function)\n",
+        "markdown": "[Token.totalSupply().totalSupply]() shadows:\n\t- [Token.totalSupply()]() (function)\n",
+        "first_markdown_element": "",
+        "id": "747622cab3d1a04a324292747a3ea6bf15096ff312550dfc2c7da2a69fbc5a86",
+        "check": "shadowing-local",
+        "impact": "Low",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "setFundingEnv",
+            "source_mapping": {
+              "start": 3253,
+              "length": 253,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "NinjaToken",
+                "source_mapping": {
+                  "start": 2036,
+                  "length": 2768,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              },
+              "signature": "setFundingEnv(uint256,uint256,uint256)"
+            }
+          },
+          {
+            "type": "node",
+            "name": "startBlock = _startBlock",
+            "source_mapping": {
+              "start": 3389,
+              "length": 22,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "setFundingEnv",
+                "source_mapping": {
+                  "start": 3253,
+                  "length": 253,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "NinjaToken",
+                    "source_mapping": {
+                      "start": 2036,
+                      "length": 2768,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "setFundingEnv(uint256,uint256,uint256)"
+                }
+              }
+            }
+          },
+          {
+            "type": "node",
+            "name": "blockDuration = _blockDuration",
+            "source_mapping": {
+              "start": 3421,
+              "length": 28,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "setFundingEnv",
+                "source_mapping": {
+                  "start": 3253,
+                  "length": 253,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "NinjaToken",
+                    "source_mapping": {
+                      "start": 2036,
+                      "length": 2768,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "setFundingEnv(uint256,uint256,uint256)"
+                }
+              }
+            }
+          },
+          {
+            "type": "node",
+            "name": "fundingExchangeRate = _fundingExchangeRate",
+            "source_mapping": {
+              "start": 3459,
+              "length": 40,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "setFundingEnv",
+                "source_mapping": {
+                  "start": 3253,
+                  "length": 253,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "NinjaToken",
+                    "source_mapping": {
+                      "start": 2036,
+                      "length": 2768,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "setFundingEnv(uint256,uint256,uint256)"
+                }
+              }
+            }
+          }
+        ],
+        "description": "NinjaToken.setFundingEnv(uint256,uint256,uint256) () should emit an event for: \n\t- startBlock = _startBlock () \n\t- blockDuration = _blockDuration () \n\t- fundingExchangeRate = _fundingExchangeRate () \n",
+        "markdown": "[NinjaToken.setFundingEnv(uint256,uint256,uint256)]() should emit an event for: \n\t- [startBlock = _startBlock]() \n\t- [blockDuration = _blockDuration]() \n\t- [fundingExchangeRate = _fundingExchangeRate]() \n",
+        "first_markdown_element": "",
+        "id": "18e304d03cbe4266acac7b8a927b72c6433ac7cf476a35895e915c93de5082d5",
+        "check": "events-maths",
+        "impact": "Low",
+        "confidence": "Medium"
+      },
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "setPrice",
+            "source_mapping": {
+              "start": 3948,
+              "length": 153,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "NinjaToken",
+                "source_mapping": {
+                  "start": 2036,
+                  "length": 2768,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              },
+              "signature": "setPrice(uint256,bool)"
+            }
+          },
+          {
+            "type": "node",
+            "name": "price = _price",
+            "source_mapping": {
+              "start": 4046,
+              "length": 12,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "setPrice",
+                "source_mapping": {
+                  "start": 3948,
+                  "length": 153,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "NinjaToken",
+                    "source_mapping": {
+                      "start": 2036,
+                      "length": 2768,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "setPrice(uint256,bool)"
+                }
+              }
+            }
+          }
+        ],
+        "description": "NinjaToken.setPrice(uint256,bool) () should emit an event for: \n\t- price = _price () \n",
+        "markdown": "[NinjaToken.setPrice(uint256,bool)]() should emit an event for: \n\t- [price = _price]() \n",
+        "first_markdown_element": "",
+        "id": "fcb11b81ed4ffafe5b149f4ca2dc8c311fdca5fe585962dfaf1ca2a3280537ad",
+        "check": "events-maths",
+        "impact": "Low",
+        "confidence": "Medium"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "_founder",
+            "source_mapping": {
+              "start": 2915,
+              "length": 16,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "changeFunder",
+                "source_mapping": {
+                  "start": 2893,
+                  "length": 154,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "NinjaToken",
+                    "source_mapping": {
+                      "start": 2036,
+                      "length": 2768,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "changeFunder(address,address)"
+                }
+              }
+            }
+          },
+          {
+            "type": "node",
+            "name": "founder = _founder",
+            "source_mapping": {
+              "start": 2994,
+              "length": 16,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "changeFunder",
+                "source_mapping": {
+                  "start": 2893,
+                  "length": 154,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "NinjaToken",
+                    "source_mapping": {
+                      "start": 2036,
+                      "length": 2768,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "changeFunder(address,address)"
+                }
+              }
+            }
+          }
+        ],
+        "description": "NinjaToken.changeFunder(address,address)._founder () lacks a zero-check on :\n\t\t- founder = _founder ()\n",
+        "markdown": "[NinjaToken.changeFunder(address,address)._founder]() lacks a zero-check on :\n\t\t- [founder = _founder]()\n",
+        "first_markdown_element": "",
+        "id": "69d3ec2f6ea909fac2dd0f8b964dab000ff0d2af84d7bc340181a6052e2a1a9a",
+        "check": "missing-zero-check",
+        "impact": "Low",
+        "confidence": "Medium"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "_admin",
+            "source_mapping": {
+              "start": 2932,
+              "length": 14,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "changeFunder",
+                "source_mapping": {
+                  "start": 2893,
+                  "length": 154,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "NinjaToken",
+                    "source_mapping": {
+                      "start": 2036,
+                      "length": 2768,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "changeFunder(address,address)"
+                }
+              }
+            }
+          },
+          {
+            "type": "node",
+            "name": "admin = _admin",
+            "source_mapping": {
+              "start": 3020,
+              "length": 12,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "changeFunder",
+                "source_mapping": {
+                  "start": 2893,
+                  "length": 154,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "NinjaToken",
+                    "source_mapping": {
+                      "start": 2036,
+                      "length": 2768,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "changeFunder(address,address)"
+                }
+              }
+            }
+          }
+        ],
+        "description": "NinjaToken.changeFunder(address,address)._admin () lacks a zero-check on :\n\t\t- admin = _admin ()\n",
+        "markdown": "[NinjaToken.changeFunder(address,address)._admin]() lacks a zero-check on :\n\t\t- [admin = _admin]()\n",
+        "first_markdown_element": "",
+        "id": "9513915487826ff4de802f22124f1fc0ffbd26cac6dea34b5f7bab6387b5a9ad",
+        "check": "missing-zero-check",
+        "impact": "Low",
+        "confidence": "Medium"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "_admin",
+            "source_mapping": {
+              "start": 2813,
+              "length": 14,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "NinjaToken",
+                "source_mapping": {
+                  "start": 2776,
+                  "length": 107,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "NinjaToken",
+                    "source_mapping": {
+                      "start": 2036,
+                      "length": 2768,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "NinjaToken(address,address)"
+                }
+              }
+            }
+          },
+          {
+            "type": "node",
+            "name": "admin = _admin",
+            "source_mapping": {
+              "start": 2864,
+              "length": 12,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "NinjaToken",
+                "source_mapping": {
+                  "start": 2776,
+                  "length": 107,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "NinjaToken",
+                    "source_mapping": {
+                      "start": 2036,
+                      "length": 2768,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "NinjaToken(address,address)"
+                }
+              }
+            }
+          }
+        ],
+        "description": "NinjaToken.NinjaToken(address,address)._admin () lacks a zero-check on :\n\t\t- admin = _admin ()\n",
+        "markdown": "[NinjaToken.NinjaToken(address,address)._admin]() lacks a zero-check on :\n\t\t- [admin = _admin]()\n",
+        "first_markdown_element": "",
+        "id": "a0885c69928b390dd43ff332340536809f5894a87cf82a6f1e64b0e9d7c36b62",
+        "check": "missing-zero-check",
+        "impact": "Low",
+        "confidence": "Medium"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "_fundingAccount",
+            "source_mapping": {
+              "start": 3099,
+              "length": 23,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "setFundingLock",
+                "source_mapping": {
+                  "start": 3057,
+                  "length": 186,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "NinjaToken",
+                    "source_mapping": {
+                      "start": 2036,
+                      "length": 2768,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "setFundingLock(bool,address)"
+                }
+              }
+            }
+          },
+          {
+            "type": "node",
+            "name": "fundingAccount = _fundingAccount",
+            "source_mapping": {
+              "start": 3206,
+              "length": 30,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "setFundingLock",
+                "source_mapping": {
+                  "start": 3057,
+                  "length": 186,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "NinjaToken",
+                    "source_mapping": {
+                      "start": 2036,
+                      "length": 2768,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "setFundingLock(bool,address)"
+                }
+              }
+            }
+          }
+        ],
+        "description": "NinjaToken.setFundingLock(bool,address)._fundingAccount () lacks a zero-check on :\n\t\t- fundingAccount = _fundingAccount ()\n",
+        "markdown": "[NinjaToken.setFundingLock(bool,address)._fundingAccount]() lacks a zero-check on :\n\t\t- [fundingAccount = _fundingAccount]()\n",
+        "first_markdown_element": "",
+        "id": "c6b02e99720223ab7d26cf17ab16abd0914bdb1ea4e5db07989e660edf6150e8",
+        "check": "missing-zero-check",
+        "impact": "Low",
+        "confidence": "Medium"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "_founder",
+            "source_mapping": {
+              "start": 2796,
+              "length": 16,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "NinjaToken",
+                "source_mapping": {
+                  "start": 2776,
+                  "length": 107,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "NinjaToken",
+                    "source_mapping": {
+                      "start": 2036,
+                      "length": 2768,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "NinjaToken(address,address)"
+                }
+              }
+            }
+          },
+          {
+            "type": "node",
+            "name": "founder = _founder",
+            "source_mapping": {
+              "start": 2838,
+              "length": 16,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "NinjaToken",
+                "source_mapping": {
+                  "start": 2776,
+                  "length": 107,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "NinjaToken",
+                    "source_mapping": {
+                      "start": 2036,
+                      "length": 2768,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "NinjaToken(address,address)"
+                }
+              }
+            }
+          }
+        ],
+        "description": "NinjaToken.NinjaToken(address,address)._founder () lacks a zero-check on :\n\t\t- founder = _founder ()\n",
+        "markdown": "[NinjaToken.NinjaToken(address,address)._founder]() lacks a zero-check on :\n\t\t- [founder = _founder]()\n",
+        "first_markdown_element": "",
+        "id": "fe9523923272979fe2238b88f32c27ba5c89352c58e87b7195a9e9ce55ebe34b",
+        "check": "missing-zero-check",
+        "impact": "Low",
+        "confidence": "Medium"
+      },
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "buy",
+            "source_mapping": {
+              "start": 4111,
+              "length": 326,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "NinjaToken",
+                "source_mapping": {
+                  "start": 2036,
+                  "length": 2768,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              },
+              "signature": "buy(string)"
+            }
+          },
+          {
+            "type": "node",
+            "name": "! fundingAccount.call.value(msg.value)()",
+            "source_mapping": {
+              "start": 4266,
+              "length": 39,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "buy",
+                "source_mapping": {
+                  "start": 4111,
+                  "length": 326,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "NinjaToken",
+                    "source_mapping": {
+                      "start": 2036,
+                      "length": 2768,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "buy(string)"
+                }
+              }
+            },
+            "additional_fields": {
+              "underlying_type": "external_calls"
+            }
+          },
+          {
+            "type": "node",
+            "name": "commit[msg.sender] = _commit",
+            "source_mapping": {
+              "start": 4369,
+              "length": 26,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "buy",
+                "source_mapping": {
+                  "start": 4111,
+                  "length": 326,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "NinjaToken",
+                    "source_mapping": {
+                      "start": 2036,
+                      "length": 2768,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "buy(string)"
+                }
+              }
+            },
+            "additional_fields": {
+              "underlying_type": "variables_written",
+              "variable_name": "commit"
+            }
+          }
+        ],
+        "description": "Reentrancy in NinjaToken.buy(string) ():\n\tExternal calls:\n\t- ! fundingAccount.call.value(msg.value)() ()\n\tState variables written after the call(s):\n\t- commit[msg.sender] = _commit ()\n",
+        "markdown": "Reentrancy in [NinjaToken.buy(string)]():\n\tExternal calls:\n\t- [! fundingAccount.call.value(msg.value)()]()\n\tState variables written after the call(s):\n\t- [commit[msg.sender] = _commit]()\n",
+        "first_markdown_element": "",
+        "id": "95e14152f94393d7670e6fcdd1c077f2fb66708c7376955512681708849d63cb",
+        "check": "reentrancy-benign",
+        "impact": "Low",
+        "confidence": "Medium"
+      },
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "buy",
+            "source_mapping": {
+              "start": 4111,
+              "length": 326,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "NinjaToken",
+                "source_mapping": {
+                  "start": 2036,
+                  "length": 2768,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              },
+              "signature": "buy(string)"
+            }
+          },
+          {
+            "type": "node",
+            "name": "! fundingAccount.call.value(msg.value)()",
+            "source_mapping": {
+              "start": 4266,
+              "length": 39,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "buy",
+                "source_mapping": {
+                  "start": 4111,
+                  "length": 326,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "NinjaToken",
+                    "source_mapping": {
+                      "start": 2036,
+                      "length": 2768,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "buy(string)"
+                }
+              }
+            },
+            "additional_fields": {
+              "underlying_type": "external_calls"
+            }
+          },
+          {
+            "type": "node",
+            "name": "Buy(msg.sender,msg.value)",
+            "source_mapping": {
+              "start": 4405,
+              "length": 25,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "buy",
+                "source_mapping": {
+                  "start": 4111,
+                  "length": 326,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "NinjaToken",
+                    "source_mapping": {
+                      "start": 2036,
+                      "length": 2768,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "buy(string)"
+                }
+              }
+            },
+            "additional_fields": {
+              "underlying_type": "event"
+            }
+          }
+        ],
+        "description": "Reentrancy in NinjaToken.buy(string) ():\n\tExternal calls:\n\t- ! fundingAccount.call.value(msg.value)() ()\n\tEvent emitted after the call(s):\n\t- Buy(msg.sender,msg.value) ()\n",
+        "markdown": "Reentrancy in [NinjaToken.buy(string)]():\n\tExternal calls:\n\t- [! fundingAccount.call.value(msg.value)()]()\n\tEvent emitted after the call(s):\n\t- [Buy(msg.sender,msg.value)]()\n",
+        "first_markdown_element": "",
+        "id": "65479e73557d47aee562927ae8e59d01b8120b81c262172adff6119b974567e9",
+        "check": "reentrancy-events",
+        "impact": "Low",
+        "confidence": "Medium"
+      },
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "funding",
+            "source_mapping": {
+              "start": 3516,
+              "length": 422,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "NinjaToken",
+                "source_mapping": {
+                  "start": 2036,
+                  "length": 2768,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              },
+              "signature": "funding()"
+            }
+          },
+          {
+            "type": "node",
+            "name": "! fundingAccount.call.value(msg.value)()",
+            "source_mapping": {
+              "start": 3785,
+              "length": 39,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "funding",
+                "source_mapping": {
+                  "start": 3516,
+                  "length": 422,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "NinjaToken",
+                    "source_mapping": {
+                      "start": 2036,
+                      "length": 2768,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "funding()"
+                }
+              }
+            },
+            "additional_fields": {
+              "underlying_type": "external_calls"
+            }
+          },
+          {
+            "type": "node",
+            "name": "Funding(msg.sender,msg.value)",
+            "source_mapping": {
+              "start": 3902,
+              "length": 29,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "funding",
+                "source_mapping": {
+                  "start": 3516,
+                  "length": 422,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "NinjaToken",
+                    "source_mapping": {
+                      "start": 2036,
+                      "length": 2768,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "funding()"
+                }
+              }
+            },
+            "additional_fields": {
+              "underlying_type": "event"
+            }
+          }
+        ],
+        "description": "Reentrancy in NinjaToken.funding() ():\n\tExternal calls:\n\t- ! fundingAccount.call.value(msg.value)() ()\n\tEvent emitted after the call(s):\n\t- Funding(msg.sender,msg.value) ()\n",
+        "markdown": "Reentrancy in [NinjaToken.funding()]():\n\tExternal calls:\n\t- [! fundingAccount.call.value(msg.value)()]()\n\tEvent emitted after the call(s):\n\t- [Funding(msg.sender,msg.value)]()\n",
+        "first_markdown_element": "",
+        "id": "9ddc8a8a7070ac6ffe96537b52b718b7912592a38115eaa198ab24fb2adb1300",
+        "check": "reentrancy-events",
+        "impact": "Low",
+        "confidence": "Medium"
+      },
+      {
+        "elements": [
+          {
+            "type": "node",
+            "name": "",
+            "source_mapping": {
+              "start": 2979,
+              "length": 5,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "changeFunder",
+                "source_mapping": {
+                  "start": 2893,
+                  "length": 154,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "NinjaToken",
+                    "source_mapping": {
+                      "start": 2036,
+                      "length": 2768,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "changeFunder(address,address)"
+                }
+              }
+            }
+          }
+        ],
+        "description": "Deprecated standard detected THROW ():\n\t- Usage of \"throw\" should be replaced with \"revert()\"\n",
+        "markdown": "Deprecated standard detected [THROW]():\n\t- Usage of \"throw\" should be replaced with \"revert()\"\n",
+        "first_markdown_element": "",
+        "id": "f5556cf1c70b64b9e4b1fc32044dd970b5f2c8b9fc21b7971fda01971033f2d5",
+        "check": "deprecated-standards",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "pragma",
+            "name": "^0.4.2",
+            "source_mapping": {
+              "start": 0,
+              "length": 23,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "directive": [
+                "solidity",
+                "^",
+                "0.4",
+                ".2"
+              ]
+            }
+          }
+        ],
+        "description": "Pragma version^0.4.2 () allows old versions\n",
+        "markdown": "Pragma version[^0.4.2]() allows old versions\n",
+        "first_markdown_element": "",
+        "id": "684a56cd27e54ff2efdccacdc31c1f9807e03d1014a0a136c00240d60a2f3a67",
+        "check": "solc-version",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [],
+        "description": "solc-0.4.2 is not recommended for deployment\n",
+        "markdown": "solc-0.4.2 is not recommended for deployment\n",
+        "first_markdown_element": "",
+        "id": "707dbfcfdf84b6816d84949bbe947a3701cd8aa49952e3db1879e122f1f0990d",
+        "check": "solc-version",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "funding",
+            "source_mapping": {
+              "start": 3516,
+              "length": 422,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "NinjaToken",
+                "source_mapping": {
+                  "start": 2036,
+                  "length": 2768,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              },
+              "signature": "funding()"
+            }
+          },
+          {
+            "type": "node",
+            "name": "! fundingAccount.call.value(msg.value)()",
+            "source_mapping": {
+              "start": 3785,
+              "length": 39,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "funding",
+                "source_mapping": {
+                  "start": 3516,
+                  "length": 422,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "NinjaToken",
+                    "source_mapping": {
+                      "start": 2036,
+                      "length": 2768,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "funding()"
+                }
+              }
+            }
+          }
+        ],
+        "description": "Low level call in NinjaToken.funding() ():\n\t- ! fundingAccount.call.value(msg.value)() ()\n",
+        "markdown": "Low level call in [NinjaToken.funding()]():\n\t- [! fundingAccount.call.value(msg.value)()]()\n",
+        "first_markdown_element": "",
+        "id": "b38545d7c7285805d6f30f2a16cef6ea46e10aeb767fc818672e288cff58fc2c",
+        "check": "low-level-calls",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "buy",
+            "source_mapping": {
+              "start": 4111,
+              "length": 326,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "NinjaToken",
+                "source_mapping": {
+                  "start": 2036,
+                  "length": 2768,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              },
+              "signature": "buy(string)"
+            }
+          },
+          {
+            "type": "node",
+            "name": "! fundingAccount.call.value(msg.value)()",
+            "source_mapping": {
+              "start": 4266,
+              "length": 39,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "buy",
+                "source_mapping": {
+                  "start": 4111,
+                  "length": 326,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "NinjaToken",
+                    "source_mapping": {
+                      "start": 2036,
+                      "length": 2768,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "buy(string)"
+                }
+              }
+            }
+          }
+        ],
+        "description": "Low level call in NinjaToken.buy(string) ():\n\t- ! fundingAccount.call.value(msg.value)() ()\n",
+        "markdown": "Low level call in [NinjaToken.buy(string)]():\n\t- [! fundingAccount.call.value(msg.value)()]()\n",
+        "first_markdown_element": "",
+        "id": "ebe5fc58ece807bc2d9a1df6bd8cf0e125237735176c46b0bdd8ac277bec62e1",
+        "check": "low-level-calls",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "_spender",
+            "source_mapping": {
+              "start": 1936,
+              "length": 16,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "allowance",
+                "source_mapping": {
+                  "start": 1902,
+                  "length": 130,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "StandardToken",
+                    "source_mapping": {
+                      "start": 712,
+                      "length": 1322,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "allowance(address,address)"
+                }
+              }
+            },
+            "additional_fields": {
+              "target": "parameter",
+              "convention": "mixedCase"
+            }
+          }
+        ],
+        "description": "Parameter StandardToken.allowance(address,address)._spender () is not in mixedCase\n",
+        "markdown": "Parameter [StandardToken.allowance(address,address)._spender]() is not in mixedCase\n",
+        "first_markdown_element": "",
+        "id": "1dfe198c2dca57c55bebb6453f93f0f0fc9b1e67fc091a4bcfa314300d9a90a6",
+        "check": "naming-convention",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "_value",
+            "source_mapping": {
+              "start": 1639,
+              "length": 14,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "approve",
+                "source_mapping": {
+                  "start": 1604,
+                  "length": 187,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "StandardToken",
+                    "source_mapping": {
+                      "start": 712,
+                      "length": 1322,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "approve(address,uint256)"
+                }
+              }
+            },
+            "additional_fields": {
+              "target": "parameter",
+              "convention": "mixedCase"
+            }
+          }
+        ],
+        "description": "Parameter StandardToken.approve(address,uint256)._value () is not in mixedCase\n",
+        "markdown": "Parameter [StandardToken.approve(address,uint256)._value]() is not in mixedCase\n",
+        "first_markdown_element": "",
+        "id": "1fa3f5bb048f68171399fc7d36b8e34d891cac5b9e22c65b41391d16050e7922",
+        "check": "naming-convention",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "_admin",
+            "source_mapping": {
+              "start": 2932,
+              "length": 14,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "changeFunder",
+                "source_mapping": {
+                  "start": 2893,
+                  "length": 154,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "NinjaToken",
+                    "source_mapping": {
+                      "start": 2036,
+                      "length": 2768,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "changeFunder(address,address)"
+                }
+              }
+            },
+            "additional_fields": {
+              "target": "parameter",
+              "convention": "mixedCase"
+            }
+          }
+        ],
+        "description": "Parameter NinjaToken.changeFunder(address,address)._admin () is not in mixedCase\n",
+        "markdown": "Parameter [NinjaToken.changeFunder(address,address)._admin]() is not in mixedCase\n",
+        "first_markdown_element": "",
+        "id": "255e794c93fcc0be4b63c8e0f444e6b3bb910c01bc30d92969bd5d9b24fc3b95",
+        "check": "naming-convention",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "_commit",
+            "source_mapping": {
+              "start": 4124,
+              "length": 14,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "buy",
+                "source_mapping": {
+                  "start": 4111,
+                  "length": 326,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "NinjaToken",
+                    "source_mapping": {
+                      "start": 2036,
+                      "length": 2768,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "buy(string)"
+                }
+              }
+            },
+            "additional_fields": {
+              "target": "parameter",
+              "convention": "mixedCase"
+            }
+          }
+        ],
+        "description": "Parameter NinjaToken.buy(string)._commit () is not in mixedCase\n",
+        "markdown": "Parameter [NinjaToken.buy(string)._commit]() is not in mixedCase\n",
+        "first_markdown_element": "",
+        "id": "278717b3c30ea166f97ce3107a07733d2a21cb84b8e25ba836840654e135e940",
+        "check": "naming-convention",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "_value",
+            "source_mapping": {
+              "start": 904,
+              "length": 14,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "transfer",
+                "source_mapping": {
+                  "start": 873,
+                  "length": 322,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "StandardToken",
+                    "source_mapping": {
+                      "start": 712,
+                      "length": 1322,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "transfer(address,uint256)"
+                }
+              }
+            },
+            "additional_fields": {
+              "target": "parameter",
+              "convention": "mixedCase"
+            }
+          }
+        ],
+        "description": "Parameter StandardToken.transfer(address,uint256)._value () is not in mixedCase\n",
+        "markdown": "Parameter [StandardToken.transfer(address,uint256)._value]() is not in mixedCase\n",
+        "first_markdown_element": "",
+        "id": "31af0fe2efb3149a68bb2fd105d1476f896dc61d738c336bdf7e41a57feb1479",
+        "check": "naming-convention",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "_fundingExchangeRate",
+            "source_mapping": {
+              "start": 3314,
+              "length": 25,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "setFundingEnv",
+                "source_mapping": {
+                  "start": 3253,
+                  "length": 253,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "NinjaToken",
+                    "source_mapping": {
+                      "start": 2036,
+                      "length": 2768,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "setFundingEnv(uint256,uint256,uint256)"
+                }
+              }
+            },
+            "additional_fields": {
+              "target": "parameter",
+              "convention": "mixedCase"
+            }
+          }
+        ],
+        "description": "Parameter NinjaToken.setFundingEnv(uint256,uint256,uint256)._fundingExchangeRate () is not in mixedCase\n",
+        "markdown": "Parameter [NinjaToken.setFundingEnv(uint256,uint256,uint256)._fundingExchangeRate]() is not in mixedCase\n",
+        "first_markdown_element": "",
+        "id": "31ef5f9a4eca275c40d64988cc0bd35486d59856426a08ab3d43865f1f8df089",
+        "check": "naming-convention",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "_to",
+            "source_mapping": {
+              "start": 4649,
+              "length": 11,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "transferFrom",
+                "source_mapping": {
+                  "start": 4612,
+                  "length": 189,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "NinjaToken",
+                    "source_mapping": {
+                      "start": 2036,
+                      "length": 2768,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "transferFrom(address,address,uint256)"
+                }
+              }
+            },
+            "additional_fields": {
+              "target": "parameter",
+              "convention": "mixedCase"
+            }
+          }
+        ],
+        "description": "Parameter NinjaToken.transferFrom(address,address,uint256)._to () is not in mixedCase\n",
+        "markdown": "Parameter [NinjaToken.transferFrom(address,address,uint256)._to]() is not in mixedCase\n",
+        "first_markdown_element": "",
+        "id": "39a17607de1b55d7c42732e2b2dc03500347ad9ed288c8d5c81c72e8b1daa34d",
+        "check": "naming-convention",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "_to",
+            "source_mapping": {
+              "start": 891,
+              "length": 11,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "transfer",
+                "source_mapping": {
+                  "start": 873,
+                  "length": 322,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "StandardToken",
+                    "source_mapping": {
+                      "start": 712,
+                      "length": 1322,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "transfer(address,uint256)"
+                }
+              }
+            },
+            "additional_fields": {
+              "target": "parameter",
+              "convention": "mixedCase"
+            }
+          }
+        ],
+        "description": "Parameter StandardToken.transfer(address,uint256)._to () is not in mixedCase\n",
+        "markdown": "Parameter [StandardToken.transfer(address,uint256)._to]() is not in mixedCase\n",
+        "first_markdown_element": "",
+        "id": "3c14db6b6c1ab6ca2562962944c2cf0cfbb75024bfc8414a346a102288fb8c42",
+        "check": "naming-convention",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "_fundinglock",
+            "source_mapping": {
+              "start": 3081,
+              "length": 17,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "setFundingLock",
+                "source_mapping": {
+                  "start": 3057,
+                  "length": 186,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "NinjaToken",
+                    "source_mapping": {
+                      "start": 2036,
+                      "length": 2768,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "setFundingLock(bool,address)"
+                }
+              }
+            },
+            "additional_fields": {
+              "target": "parameter",
+              "convention": "mixedCase"
+            }
+          }
+        ],
+        "description": "Parameter NinjaToken.setFundingLock(bool,address)._fundinglock () is not in mixedCase\n",
+        "markdown": "Parameter [NinjaToken.setFundingLock(bool,address)._fundinglock]() is not in mixedCase\n",
+        "first_markdown_element": "",
+        "id": "3c4d5e2a3818fc3f7f1ec9379aeb8d32ad5ce622db88da58400743e1e4dd8b0d",
+        "check": "naming-convention",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "_from",
+            "source_mapping": {
+              "start": 1221,
+              "length": 13,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "transferFrom",
+                "source_mapping": {
+                  "start": 1199,
+                  "length": 401,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "StandardToken",
+                    "source_mapping": {
+                      "start": 712,
+                      "length": 1322,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "transferFrom(address,address,uint256)"
+                }
+              }
+            },
+            "additional_fields": {
+              "target": "parameter",
+              "convention": "mixedCase"
+            }
+          }
+        ],
+        "description": "Parameter StandardToken.transferFrom(address,address,uint256)._from () is not in mixedCase\n",
+        "markdown": "Parameter [StandardToken.transferFrom(address,address,uint256)._from]() is not in mixedCase\n",
+        "first_markdown_element": "",
+        "id": "4dd3d547c81f2913d544b98793a5c021fe472f59b45114f773a817330cf34bfc",
+        "check": "naming-convention",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "_startBlock",
+            "source_mapping": {
+              "start": 3276,
+              "length": 16,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "setFundingEnv",
+                "source_mapping": {
+                  "start": 3253,
+                  "length": 253,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "NinjaToken",
+                    "source_mapping": {
+                      "start": 2036,
+                      "length": 2768,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "setFundingEnv(uint256,uint256,uint256)"
+                }
+              }
+            },
+            "additional_fields": {
+              "target": "parameter",
+              "convention": "mixedCase"
+            }
+          }
+        ],
+        "description": "Parameter NinjaToken.setFundingEnv(uint256,uint256,uint256)._startBlock () is not in mixedCase\n",
+        "markdown": "Parameter [NinjaToken.setFundingEnv(uint256,uint256,uint256)._startBlock]() is not in mixedCase\n",
+        "first_markdown_element": "",
+        "id": "509d7a18ccf070e98a2d3c72e81d30cd8c4a0226a4ad257e48d05e805e926935",
+        "check": "naming-convention",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "_value",
+            "source_mapping": {
+              "start": 4478,
+              "length": 14,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "transfer",
+                "source_mapping": {
+                  "start": 4447,
+                  "length": 159,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "NinjaToken",
+                    "source_mapping": {
+                      "start": 2036,
+                      "length": 2768,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "transfer(address,uint256)"
+                }
+              }
+            },
+            "additional_fields": {
+              "target": "parameter",
+              "convention": "mixedCase"
+            }
+          }
+        ],
+        "description": "Parameter NinjaToken.transfer(address,uint256)._value () is not in mixedCase\n",
+        "markdown": "Parameter [NinjaToken.transfer(address,uint256)._value]() is not in mixedCase\n",
+        "first_markdown_element": "",
+        "id": "5afaa0954189ff57471895c8b0e01d38ed75d309f09d1b0fb1f55239168827d7",
+        "check": "naming-convention",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "_value",
+            "source_mapping": {
+              "start": 4662,
+              "length": 14,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "transferFrom",
+                "source_mapping": {
+                  "start": 4612,
+                  "length": 189,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "NinjaToken",
+                    "source_mapping": {
+                      "start": 2036,
+                      "length": 2768,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "transferFrom(address,address,uint256)"
+                }
+              }
+            },
+            "additional_fields": {
+              "target": "parameter",
+              "convention": "mixedCase"
+            }
+          }
+        ],
+        "description": "Parameter NinjaToken.transferFrom(address,address,uint256)._value () is not in mixedCase\n",
+        "markdown": "Parameter [NinjaToken.transferFrom(address,address,uint256)._value]() is not in mixedCase\n",
+        "first_markdown_element": "",
+        "id": "5fa98c12c589b990cada3723dcbf5af048c587d3bd458b254ecdd9b63f3db887",
+        "check": "naming-convention",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "_to",
+            "source_mapping": {
+              "start": 1236,
+              "length": 11,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "transferFrom",
+                "source_mapping": {
+                  "start": 1199,
+                  "length": 401,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "StandardToken",
+                    "source_mapping": {
+                      "start": 712,
+                      "length": 1322,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "transferFrom(address,address,uint256)"
+                }
+              }
+            },
+            "additional_fields": {
+              "target": "parameter",
+              "convention": "mixedCase"
+            }
+          }
+        ],
+        "description": "Parameter StandardToken.transferFrom(address,address,uint256)._to () is not in mixedCase\n",
+        "markdown": "Parameter [StandardToken.transferFrom(address,address,uint256)._to]() is not in mixedCase\n",
+        "first_markdown_element": "",
+        "id": "6150a62fc365f4a97437d70d15bfe1ca02b48e7695b0f9d432eb82ac34404d51",
+        "check": "naming-convention",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "_spender",
+            "source_mapping": {
+              "start": 1621,
+              "length": 16,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "approve",
+                "source_mapping": {
+                  "start": 1604,
+                  "length": 187,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "StandardToken",
+                    "source_mapping": {
+                      "start": 712,
+                      "length": 1322,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "approve(address,uint256)"
+                }
+              }
+            },
+            "additional_fields": {
+              "target": "parameter",
+              "convention": "mixedCase"
+            }
+          }
+        ],
+        "description": "Parameter StandardToken.approve(address,uint256)._spender () is not in mixedCase\n",
+        "markdown": "Parameter [StandardToken.approve(address,uint256)._spender]() is not in mixedCase\n",
+        "first_markdown_element": "",
+        "id": "70a9b4c8c2d4dca0d12170ecce3b3b3e56f16721a930795c44e5e7b45a10a5c1",
+        "check": "naming-convention",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "_to",
+            "source_mapping": {
+              "start": 4465,
+              "length": 11,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "transfer",
+                "source_mapping": {
+                  "start": 4447,
+                  "length": 159,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "NinjaToken",
+                    "source_mapping": {
+                      "start": 2036,
+                      "length": 2768,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "transfer(address,uint256)"
+                }
+              }
+            },
+            "additional_fields": {
+              "target": "parameter",
+              "convention": "mixedCase"
+            }
+          }
+        ],
+        "description": "Parameter NinjaToken.transfer(address,uint256)._to () is not in mixedCase\n",
+        "markdown": "Parameter [NinjaToken.transfer(address,uint256)._to]() is not in mixedCase\n",
+        "first_markdown_element": "",
+        "id": "78bf820710d1ff3994fc736a9db7365ecf43b61881094de32b3ef3f99e13027d",
+        "check": "naming-convention",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "_blockDuration",
+            "source_mapping": {
+              "start": 3294,
+              "length": 19,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "setFundingEnv",
+                "source_mapping": {
+                  "start": 3253,
+                  "length": 253,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "NinjaToken",
+                    "source_mapping": {
+                      "start": 2036,
+                      "length": 2768,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "setFundingEnv(uint256,uint256,uint256)"
+                }
+              }
+            },
+            "additional_fields": {
+              "target": "parameter",
+              "convention": "mixedCase"
+            }
+          }
+        ],
+        "description": "Parameter NinjaToken.setFundingEnv(uint256,uint256,uint256)._blockDuration () is not in mixedCase\n",
+        "markdown": "Parameter [NinjaToken.setFundingEnv(uint256,uint256,uint256)._blockDuration]() is not in mixedCase\n",
+        "first_markdown_element": "",
+        "id": "7916765655e9c6897e944615df25e7907847660cad504b9e25b27847e5b1218d",
+        "check": "naming-convention",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "_from",
+            "source_mapping": {
+              "start": 4634,
+              "length": 13,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "transferFrom",
+                "source_mapping": {
+                  "start": 4612,
+                  "length": 189,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "NinjaToken",
+                    "source_mapping": {
+                      "start": 2036,
+                      "length": 2768,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "transferFrom(address,address,uint256)"
+                }
+              }
+            },
+            "additional_fields": {
+              "target": "parameter",
+              "convention": "mixedCase"
+            }
+          }
+        ],
+        "description": "Parameter NinjaToken.transferFrom(address,address,uint256)._from () is not in mixedCase\n",
+        "markdown": "Parameter [NinjaToken.transferFrom(address,address,uint256)._from]() is not in mixedCase\n",
+        "first_markdown_element": "",
+        "id": "a072748b6f67ca9ba18cb525de24f56575fe59fc0c8f52c4690e8d71a9836d91",
+        "check": "naming-convention",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "_fundingAccount",
+            "source_mapping": {
+              "start": 3099,
+              "length": 23,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "setFundingLock",
+                "source_mapping": {
+                  "start": 3057,
+                  "length": 186,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "NinjaToken",
+                    "source_mapping": {
+                      "start": 2036,
+                      "length": 2768,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "setFundingLock(bool,address)"
+                }
+              }
+            },
+            "additional_fields": {
+              "target": "parameter",
+              "convention": "mixedCase"
+            }
+          }
+        ],
+        "description": "Parameter NinjaToken.setFundingLock(bool,address)._fundingAccount () is not in mixedCase\n",
+        "markdown": "Parameter [NinjaToken.setFundingLock(bool,address)._fundingAccount]() is not in mixedCase\n",
+        "first_markdown_element": "",
+        "id": "a5705a5573d4220cd2594a079500450418412f5fe01c916817f27c00d5292ea7",
+        "check": "naming-convention",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "_price",
+            "source_mapping": {
+              "start": 3966,
+              "length": 11,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "setPrice",
+                "source_mapping": {
+                  "start": 3948,
+                  "length": 153,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "NinjaToken",
+                    "source_mapping": {
+                      "start": 2036,
+                      "length": 2768,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "setPrice(uint256,bool)"
+                }
+              }
+            },
+            "additional_fields": {
+              "target": "parameter",
+              "convention": "mixedCase"
+            }
+          }
+        ],
+        "description": "Parameter NinjaToken.setPrice(uint256,bool)._price () is not in mixedCase\n",
+        "markdown": "Parameter [NinjaToken.setPrice(uint256,bool)._price]() is not in mixedCase\n",
+        "first_markdown_element": "",
+        "id": "b88c1e0e17761626ba5b06bafbb4d0c085b837b823a82902c032532ee6a8923d",
+        "check": "naming-convention",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "_onwer",
+            "source_mapping": {
+              "start": 1921,
+              "length": 14,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "allowance",
+                "source_mapping": {
+                  "start": 1902,
+                  "length": 130,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "StandardToken",
+                    "source_mapping": {
+                      "start": 712,
+                      "length": 1322,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "allowance(address,address)"
+                }
+              }
+            },
+            "additional_fields": {
+              "target": "parameter",
+              "convention": "mixedCase"
+            }
+          }
+        ],
+        "description": "Parameter StandardToken.allowance(address,address)._onwer () is not in mixedCase\n",
+        "markdown": "Parameter [StandardToken.allowance(address,address)._onwer]() is not in mixedCase\n",
+        "first_markdown_element": "",
+        "id": "d415dda48dcdf5f9e72ecb1018f3a4ba0becdaaa4c14f7b2067df327b3392119",
+        "check": "naming-convention",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "_value",
+            "source_mapping": {
+              "start": 1249,
+              "length": 14,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "transferFrom",
+                "source_mapping": {
+                  "start": 1199,
+                  "length": 401,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "StandardToken",
+                    "source_mapping": {
+                      "start": 712,
+                      "length": 1322,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "transferFrom(address,address,uint256)"
+                }
+              }
+            },
+            "additional_fields": {
+              "target": "parameter",
+              "convention": "mixedCase"
+            }
+          }
+        ],
+        "description": "Parameter StandardToken.transferFrom(address,address,uint256)._value () is not in mixedCase\n",
+        "markdown": "Parameter [StandardToken.transferFrom(address,address,uint256)._value]() is not in mixedCase\n",
+        "first_markdown_element": "",
+        "id": "e001d55ad5c9886aa799c28ded83887106a3cdbd6a17edfcc0db2c6ef55090d3",
+        "check": "naming-convention",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "_transferLock",
+            "source_mapping": {
+              "start": 3978,
+              "length": 18,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "setPrice",
+                "source_mapping": {
+                  "start": 3948,
+                  "length": 153,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "NinjaToken",
+                    "source_mapping": {
+                      "start": 2036,
+                      "length": 2768,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "setPrice(uint256,bool)"
+                }
+              }
+            },
+            "additional_fields": {
+              "target": "parameter",
+              "convention": "mixedCase"
+            }
+          }
+        ],
+        "description": "Parameter NinjaToken.setPrice(uint256,bool)._transferLock () is not in mixedCase\n",
+        "markdown": "Parameter [NinjaToken.setPrice(uint256,bool)._transferLock]() is not in mixedCase\n",
+        "first_markdown_element": "",
+        "id": "e014ce4b37dcea39085e5c48189ae716f8968aa49d46972c5cd988fb3d525b4c",
+        "check": "naming-convention",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "_owner",
+            "source_mapping": {
+              "start": 1814,
+              "length": 14,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "balanceOf",
+                "source_mapping": {
+                  "start": 1795,
+                  "length": 103,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "StandardToken",
+                    "source_mapping": {
+                      "start": 712,
+                      "length": 1322,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "balanceOf(address)"
+                }
+              }
+            },
+            "additional_fields": {
+              "target": "parameter",
+              "convention": "mixedCase"
+            }
+          }
+        ],
+        "description": "Parameter StandardToken.balanceOf(address)._owner () is not in mixedCase\n",
+        "markdown": "Parameter [StandardToken.balanceOf(address)._owner]() is not in mixedCase\n",
+        "first_markdown_element": "",
+        "id": "e2c602baa3f6215dc1bf4b8f0abe23563363fc889add3f48a208eb560cfca631",
+        "check": "naming-convention",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "_founder",
+            "source_mapping": {
+              "start": 2915,
+              "length": 16,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "changeFunder",
+                "source_mapping": {
+                  "start": 2893,
+                  "length": 154,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "NinjaToken",
+                    "source_mapping": {
+                      "start": 2036,
+                      "length": 2768,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "changeFunder(address,address)"
+                }
+              }
+            },
+            "additional_fields": {
+              "target": "parameter",
+              "convention": "mixedCase"
+            }
+          }
+        ],
+        "description": "Parameter NinjaToken.changeFunder(address,address)._founder () is not in mixedCase\n",
+        "markdown": "Parameter [NinjaToken.changeFunder(address,address)._founder]() is not in mixedCase\n",
+        "first_markdown_element": "",
+        "id": "fd2eb7256c897050668d5d8f50cc0ec7c58abf05de7c198054b63aee2a7a67ff",
+        "check": "naming-convention",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "version",
+            "source_mapping": {
+              "start": 2116,
+              "length": 29,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "NinjaToken",
+                "source_mapping": {
+                  "start": 2036,
+                  "length": 2768,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              }
+            }
+          },
+          {
+            "type": "contract",
+            "name": "NinjaToken",
+            "source_mapping": {
+              "start": 2036,
+              "length": 2768,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            }
+          }
+        ],
+        "description": "NinjaToken.version () is never used in NinjaToken ()\n",
+        "markdown": "[NinjaToken.version]() is never used in [NinjaToken]()\n",
+        "first_markdown_element": "",
+        "id": "057a2e0220d3983a8d74de744b3836352673c28ef27617d8471e5b2a0480f4c3",
+        "check": "unused-state",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "totalSupply",
+            "source_mapping": {
+              "start": 747,
+              "length": 26,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "StandardToken",
+                "source_mapping": {
+                  "start": 712,
+                  "length": 1322,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              }
+            }
+          },
+          {
+            "type": "contract",
+            "name": "NinjaToken",
+            "source_mapping": {
+              "start": 2036,
+              "length": 2768,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            }
+          }
+        ],
+        "description": "StandardToken.totalSupply () is never used in NinjaToken ()\n",
+        "markdown": "[StandardToken.totalSupply]() is never used in [NinjaToken]()\n",
+        "first_markdown_element": "",
+        "id": "1df16472f62c36ff667e43f8a1a006b5ced40a6afd341c9b9f7124beb85673cc",
+        "check": "unused-state",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "decimals",
+            "source_mapping": {
+              "start": 2151,
+              "length": 25,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "NinjaToken",
+                "source_mapping": {
+                  "start": 2036,
+                  "length": 2768,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              }
+            }
+          },
+          {
+            "type": "contract",
+            "name": "NinjaToken",
+            "source_mapping": {
+              "start": 2036,
+              "length": 2768,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            }
+          }
+        ],
+        "description": "NinjaToken.decimals () is never used in NinjaToken ()\n",
+        "markdown": "[NinjaToken.decimals]() is never used in [NinjaToken]()\n",
+        "first_markdown_element": "",
+        "id": "4f2bd35916750ea1af6d010c54c9cfffd1ac99e99e67cee37a2ded604b1efe32",
+        "check": "unused-state",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "name",
+            "source_mapping": {
+              "start": 2078,
+              "length": 32,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "NinjaToken",
+                "source_mapping": {
+                  "start": 2036,
+                  "length": 2768,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              }
+            }
+          },
+          {
+            "type": "contract",
+            "name": "NinjaToken",
+            "source_mapping": {
+              "start": 2036,
+              "length": 2768,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            }
+          }
+        ],
+        "description": "NinjaToken.name () is never used in NinjaToken ()\n",
+        "markdown": "[NinjaToken.name]() is never used in [NinjaToken]()\n",
+        "first_markdown_element": "",
+        "id": "d116ac656bf2c8264df795cd22e52f5711c45b4064472ce08ad6b01f47d2ac9a",
+        "check": "unused-state",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "version",
+            "source_mapping": {
+              "start": 2116,
+              "length": 29,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "NinjaToken",
+                "source_mapping": {
+                  "start": 2036,
+                  "length": 2768,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              }
+            }
+          }
+        ],
+        "description": "NinjaToken.version () should be constant \n",
+        "markdown": "[NinjaToken.version]() should be constant \n",
+        "first_markdown_element": "",
+        "id": "06ba87157b376a3056ec46daa600bf7abf7cb62d22d12964ccd958f395877032",
+        "check": "constable-states",
+        "impact": "Optimization",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "totalSupply",
+            "source_mapping": {
+              "start": 747,
+              "length": 26,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "StandardToken",
+                "source_mapping": {
+                  "start": 712,
+                  "length": 1322,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              }
+            }
+          }
+        ],
+        "description": "StandardToken.totalSupply () should be constant \n",
+        "markdown": "[StandardToken.totalSupply]() should be constant \n",
+        "first_markdown_element": "",
+        "id": "39a4ce044b4d3497c8c10499a2e6e80263e70b1f67678881e70c72bbbc7523e9",
+        "check": "constable-states",
+        "impact": "Optimization",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "name",
+            "source_mapping": {
+              "start": 2078,
+              "length": 32,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "NinjaToken",
+                "source_mapping": {
+                  "start": 2036,
+                  "length": 2768,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              }
+            }
+          }
+        ],
+        "description": "NinjaToken.name () should be constant \n",
+        "markdown": "[NinjaToken.name]() should be constant \n",
+        "first_markdown_element": "",
+        "id": "4c3e5391dffa12a944bebac0110197d931e2308081335f6564489b3e274687f6",
+        "check": "constable-states",
+        "impact": "Optimization",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "decimals",
+            "source_mapping": {
+              "start": 2151,
+              "length": 25,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "NinjaToken",
+                "source_mapping": {
+                  "start": 2036,
+                  "length": 2768,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              }
+            }
+          }
+        ],
+        "description": "NinjaToken.decimals () should be constant \n",
+        "markdown": "[NinjaToken.decimals]() should be constant \n",
+        "first_markdown_element": "",
+        "id": "5781d385042f375fd0ef36ea77031814fc5059ff2d5cdb3bf984013d816167f2",
+        "check": "constable-states",
+        "impact": "Optimization",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "buy",
+            "source_mapping": {
+              "start": 4111,
+              "length": 326,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "NinjaToken",
+                "source_mapping": {
+                  "start": 2036,
+                  "length": 2768,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              },
+              "signature": "buy(string)"
+            }
+          }
+        ],
+        "description": "buy(string) should be declared external:\n\t- NinjaToken.buy(string) ()\n",
+        "markdown": "buy(string) should be declared external:\n\t- [NinjaToken.buy(string)]()\n",
+        "first_markdown_element": "",
+        "id": "b18173fc65a13d7edd44d95989d7d72541de4c9f01c9bc918b4669f3e4181817",
+        "check": "external-function",
+        "impact": "Optimization",
+        "confidence": "High"
+      }
+    ]
+  }
+}

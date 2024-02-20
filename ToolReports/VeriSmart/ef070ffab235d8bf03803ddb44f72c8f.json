@@ -1,0 +1,79 @@
+{
+  "fileName": "Benchmarks/Study_SamplesSet/ef070ffab235d8bf03803ddb44f72c8f.sol",
+  "baseName": "ef070ffab235d8bf03803ddb44f72c8f.sol",
+  "iter": 631,
+  "time": "300.181925",
+  "errMsg": null,
+  "result": [
+    {
+      "no": "1",
+      "kind": "IO",
+      "line": 22,
+      "signatures": [
+        {
+          "contractName": "EthDickMeasuringGame",
+          "methodName": "@fallback",
+          "argTypes": []
+        }
+      ],
+      "exp": "(now + 172800)",
+      "status": "unproven"
+    },
+    {
+      "no": "2",
+      "kind": "IO",
+      "line": 34,
+      "signatures": [
+        {
+          "contractName": "EthDickMeasuringGame",
+          "methodName": "withdraw",
+          "argTypes": []
+        }
+      ],
+      "exp": "(this.balance * 3)",
+      "status": "unproven"
+    },
+    {
+      "no": "3",
+      "kind": "DZ",
+      "line": 34,
+      "signatures": [
+        {
+          "contractName": "EthDickMeasuringGame",
+          "methodName": "withdraw",
+          "argTypes": []
+        }
+      ],
+      "exp": "((this.balance * 3) / 100)",
+      "status": "proven"
+    },
+    {
+      "no": "4",
+      "kind": "ETH_LEAK",
+      "line": 34,
+      "signatures": [
+        {
+          "contractName": "EthDickMeasuringGame",
+          "methodName": "withdraw",
+          "argTypes": []
+        }
+      ],
+      "exp": "owner.transfer(((this.balance * 3) / 100));",
+      "status": "proven"
+    },
+    {
+      "no": "5",
+      "kind": "ETH_LEAK",
+      "line": 37,
+      "signatures": [
+        {
+          "contractName": "EthDickMeasuringGame",
+          "methodName": "withdraw",
+          "argTypes": []
+        }
+      ],
+      "exp": "largestPenisOwner.transfer(this.balance);",
+      "status": "unproven"
+    }
+  ]
+}

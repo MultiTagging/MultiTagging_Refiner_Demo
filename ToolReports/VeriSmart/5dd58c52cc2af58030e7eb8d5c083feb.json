@@ -1,0 +1,191 @@
+{
+  "fileName": "Benchmarks/Study_SamplesSet/5dd58c52cc2af58030e7eb8d5c083feb.sol",
+  "baseName": "5dd58c52cc2af58030e7eb8d5c083feb.sol",
+  "iter": 36,
+  "time": "315.189279",
+  "errMsg": null,
+  "result": [
+    {
+      "no": "1",
+      "kind": "IO",
+      "line": 62,
+      "signatures": [
+        {
+          "contractName": "Alluma",
+          "methodName": "@fallback",
+          "argTypes": []
+        },
+        {
+          "contractName": "Alluma",
+          "methodName": "getTokens",
+          "argTypes": []
+        }
+      ],
+      "exp": "(a * b)",
+      "status": "unproven"
+    },
+    {
+      "no": "2",
+      "kind": "IO",
+      "line": 74,
+      "signatures": [
+        { "contractName": "Alluma", "methodName": "Alluma", "argTypes": [] },
+        {
+          "contractName": "Alluma",
+          "methodName": "burn",
+          "argTypes": [ "uint256" ]
+        },
+        {
+          "contractName": "Alluma",
+          "methodName": "distr",
+          "argTypes": [ "address", "uint256" ]
+        },
+        {
+          "contractName": "Alluma",
+          "methodName": "getTokens",
+          "argTypes": []
+        },
+        {
+          "contractName": "Alluma",
+          "methodName": "transfer",
+          "argTypes": [ "address", "uint256" ]
+        },
+        {
+          "contractName": "Alluma",
+          "methodName": "transferFrom",
+          "argTypes": [ "address", "address", "uint256" ]
+        }
+      ],
+      "exp": "(a - b)",
+      "status": "proven"
+    },
+    {
+      "no": "3",
+      "kind": "IO",
+      "line": 78,
+      "signatures": [
+        {
+          "contractName": "Alluma",
+          "methodName": "distr",
+          "argTypes": [ "address", "uint256" ]
+        },
+        {
+          "contractName": "Alluma",
+          "methodName": "getTokens",
+          "argTypes": []
+        },
+        {
+          "contractName": "Alluma",
+          "methodName": "transfer",
+          "argTypes": [ "address", "uint256" ]
+        },
+        {
+          "contractName": "Alluma",
+          "methodName": "transferFrom",
+          "argTypes": [ "address", "address", "uint256" ]
+        }
+      ],
+      "exp": "(a + b)",
+      "status": "unproven"
+    },
+    {
+      "no": "4",
+      "kind": "IO",
+      "line": 220,
+      "signatures": [
+        {
+          "contractName": "Alluma",
+          "methodName": "transfer",
+          "argTypes": [ "address", "uint256" ]
+        },
+        {
+          "contractName": "Alluma",
+          "methodName": "transferFrom",
+          "argTypes": [ "address", "address", "uint256" ]
+        }
+      ],
+      "exp": "(size + 4)",
+      "status": "proven"
+    },
+    {
+      "no": "5",
+      "kind": "IO",
+      "line": 224,
+      "signatures": [
+        {
+          "contractName": "Alluma",
+          "methodName": "transfer",
+          "argTypes": [ "address", "uint256" ]
+        }
+      ],
+      "exp": "(2 * 32)",
+      "status": "proven"
+    },
+    {
+      "no": "6",
+      "kind": "IO",
+      "line": 234,
+      "signatures": [
+        {
+          "contractName": "Alluma",
+          "methodName": "transferFrom",
+          "argTypes": [ "address", "address", "uint256" ]
+        }
+      ],
+      "exp": "(3 * 32)",
+      "status": "proven"
+    },
+    {
+      "no": "7",
+      "kind": "DZ",
+      "line": 63,
+      "signatures": [
+        {
+          "contractName": "Alluma",
+          "methodName": "@fallback",
+          "argTypes": []
+        },
+        {
+          "contractName": "Alluma",
+          "methodName": "getTokens",
+          "argTypes": []
+        }
+      ],
+      "exp": "(c / a)",
+      "status": "unproven"
+    },
+    {
+      "no": "8",
+      "kind": "DZ",
+      "line": 68,
+      "signatures": [
+        {
+          "contractName": "Alluma",
+          "methodName": "@fallback",
+          "argTypes": []
+        },
+        {
+          "contractName": "Alluma",
+          "methodName": "getTokens",
+          "argTypes": []
+        }
+      ],
+      "exp": "(a / b)",
+      "status": "proven"
+    },
+    {
+      "no": "9",
+      "kind": "ETH_LEAK",
+      "line": 265,
+      "signatures": [
+        {
+          "contractName": "Alluma",
+          "methodName": "withdraw",
+          "argTypes": []
+        }
+      ],
+      "exp": "owner.transfer(etherBalance);",
+      "status": "proven"
+    }
+  ]
+}

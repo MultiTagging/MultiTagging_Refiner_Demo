@@ -1,0 +1,2181 @@
+{
+  "success": true,
+  "error": null,
+  "results": {
+    "detectors": [
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "safeMul",
+            "source_mapping": {
+              "start": 594,
+              "length": 130,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "SafeMath",
+                "source_mapping": {
+                  "start": 557,
+                  "length": 476,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              },
+              "signature": "safeMul(uint256,uint256)"
+            }
+          },
+          {
+            "type": "node",
+            "name": "assert(a == 0 || c / a == b)",
+            "source_mapping": {
+              "start": 677,
+              "length": 28,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "safeMul",
+                "source_mapping": {
+                  "start": 594,
+                  "length": 130,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "SafeMath",
+                    "source_mapping": {
+                      "start": 557,
+                      "length": 476,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "safeMul(uint256,uint256)"
+                }
+              }
+            }
+          }
+        ],
+        "description": "SafeMath.safeMul(uint256,uint256) () uses a dangerous strict equality:\n\t- assert(a == 0 || c / a == b) ()\n",
+        "markdown": "[SafeMath.safeMul(uint256,uint256)]() uses a dangerous strict equality:\n\t- [assert(a == 0 || c / a == b)]()\n",
+        "first_markdown_element": "",
+        "id": "0b52a8826da398318b7fd88ae8136be81c350486c0138d61a1d8a51626b9fe06",
+        "check": "incorrect-equality",
+        "impact": "Medium",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "assert",
+            "source_mapping": {
+              "start": 958,
+              "length": 73,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "SafeMath",
+                "source_mapping": {
+                  "start": 557,
+                  "length": 476,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              },
+              "signature": "assert(bool)"
+            }
+          }
+        ],
+        "description": "SafeMath.assert(bool) () (function) shadows built-in symbol\"\n",
+        "markdown": "[SafeMath.assert(bool)]() (function) shadows built-in symbol\"\n",
+        "first_markdown_element": "",
+        "id": "2ed4a8d1ba6e312aa9e54b65a7bd9f8608ba30ae953b80c8ccaa4fae542dd23a",
+        "check": "shadowing-builtin",
+        "impact": "Low",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "transferFrom",
+            "source_mapping": {
+              "start": 3971,
+              "length": 718,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "EdgelessToken",
+                "source_mapping": {
+                  "start": 1035,
+                  "length": 5210,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              },
+              "signature": "transferFrom(address,address,uint256)"
+            }
+          },
+          {
+            "type": "node",
+            "name": "now < startTime && _from != owner",
+            "source_mapping": {
+              "start": 4074,
+              "length": 31,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "transferFrom",
+                "source_mapping": {
+                  "start": 3971,
+                  "length": 718,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "EdgelessToken",
+                    "source_mapping": {
+                      "start": 1035,
+                      "length": 5210,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "transferFrom(address,address,uint256)"
+                }
+              }
+            }
+          }
+        ],
+        "description": "EdgelessToken.transferFrom(address,address,uint256) () uses timestamp for comparisons\n\tDangerous comparisons:\n\t- now < startTime && _from != owner ()\n",
+        "markdown": "[EdgelessToken.transferFrom(address,address,uint256)]() uses timestamp for comparisons\n\tDangerous comparisons:\n\t- [now < startTime && _from != owner]()\n",
+        "first_markdown_element": "",
+        "id": "0c85ee6a2a24d8ad89ef7a24a90ca3391d6fd14a12bae66bcf8dc4a856acaaa1",
+        "check": "timestamp",
+        "impact": "Low",
+        "confidence": "Medium"
+      },
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "burn",
+            "source_mapping": {
+              "start": 5915,
+              "length": 327,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "EdgelessToken",
+                "source_mapping": {
+                  "start": 1035,
+                  "length": 5210,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              },
+              "signature": "burn()"
+            }
+          },
+          {
+            "type": "node",
+            "name": "! burned && now > startTime",
+            "source_mapping": {
+              "start": 6004,
+              "length": 24,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "burn",
+                "source_mapping": {
+                  "start": 5915,
+                  "length": 327,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "EdgelessToken",
+                    "source_mapping": {
+                      "start": 1035,
+                      "length": 5210,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "burn()"
+                }
+              }
+            }
+          }
+        ],
+        "description": "EdgelessToken.burn() () uses timestamp for comparisons\n\tDangerous comparisons:\n\t- ! burned && now > startTime ()\n",
+        "markdown": "[EdgelessToken.burn()]() uses timestamp for comparisons\n\tDangerous comparisons:\n\t- [! burned && now > startTime]()\n",
+        "first_markdown_element": "",
+        "id": "50b6fed3efcfa9c0f7ae9d6b6ec79ba8b8e19fe69c19ba522605918671105b56",
+        "check": "timestamp",
+        "impact": "Low",
+        "confidence": "Medium"
+      },
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "getInterval",
+            "source_mapping": {
+              "start": 5293,
+              "length": 250,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "EdgelessToken",
+                "source_mapping": {
+                  "start": 1035,
+                  "length": 5210,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              },
+              "signature": "getInterval()"
+            }
+          },
+          {
+            "type": "node",
+            "name": "now > safeAdd(safeMul(currentInterval,intervalLength),startTime)",
+            "source_mapping": {
+              "start": 5356,
+              "length": 66,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "getInterval",
+                "source_mapping": {
+                  "start": 5293,
+                  "length": 250,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "EdgelessToken",
+                    "source_mapping": {
+                      "start": 1035,
+                      "length": 5210,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "getInterval()"
+                }
+              }
+            }
+          }
+        ],
+        "description": "EdgelessToken.getInterval() () uses timestamp for comparisons\n\tDangerous comparisons:\n\t- now > safeAdd(safeMul(currentInterval,intervalLength),startTime) ()\n",
+        "markdown": "[EdgelessToken.getInterval()]() uses timestamp for comparisons\n\tDangerous comparisons:\n\t- [now > safeAdd(safeMul(currentInterval,intervalLength),startTime)]()\n",
+        "first_markdown_element": "",
+        "id": "87bacbd4726468ab1b2288cfb2fc3ac2465c513235889c159faf76897081f22c",
+        "check": "timestamp",
+        "impact": "Low",
+        "confidence": "Medium"
+      },
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "transfer",
+            "source_mapping": {
+              "start": 2833,
+              "length": 711,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "EdgelessToken",
+                "source_mapping": {
+                  "start": 1035,
+                  "length": 5210,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              },
+              "signature": "transfer(address,uint256)"
+            }
+          },
+          {
+            "type": "node",
+            "name": "now < startTime",
+            "source_mapping": {
+              "start": 2916,
+              "length": 15,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "transfer",
+                "source_mapping": {
+                  "start": 2833,
+                  "length": 711,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "EdgelessToken",
+                    "source_mapping": {
+                      "start": 1035,
+                      "length": 5210,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "transfer(address,uint256)"
+                }
+              }
+            }
+          }
+        ],
+        "description": "EdgelessToken.transfer(address,uint256) () uses timestamp for comparisons\n\tDangerous comparisons:\n\t- now < startTime ()\n",
+        "markdown": "[EdgelessToken.transfer(address,uint256)]() uses timestamp for comparisons\n\tDangerous comparisons:\n\t- [now < startTime]()\n",
+        "first_markdown_element": "",
+        "id": "e1064eae43e17942805661289510094bf520c3b41b69afc5113139fa6654db93",
+        "check": "timestamp",
+        "impact": "Low",
+        "confidence": "Medium"
+      },
+      {
+        "elements": [
+          {
+            "type": "node",
+            "name": "",
+            "source_mapping": {
+              "start": 1021,
+              "length": 5,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "assert",
+                "source_mapping": {
+                  "start": 958,
+                  "length": 73,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "SafeMath",
+                    "source_mapping": {
+                      "start": 557,
+                      "length": 476,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "assert(bool)"
+                }
+              }
+            }
+          }
+        ],
+        "description": "Deprecated standard detected THROW ():\n\t- Usage of \"throw\" should be replaced with \"revert()\"\n",
+        "markdown": "Deprecated standard detected [THROW]():\n\t- Usage of \"throw\" should be replaced with \"revert()\"\n",
+        "first_markdown_element": "",
+        "id": "f5556cf1c70b64b9e4b1fc32044dd970b5f2c8b9fc21b7971fda01971033f2d5",
+        "check": "deprecated-standards",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "pragma",
+            "name": "^0.4.6",
+            "source_mapping": {
+              "start": 413,
+              "length": 23,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "directive": [
+                "solidity",
+                "^",
+                "0.4",
+                ".6"
+              ]
+            }
+          }
+        ],
+        "description": "Pragma version^0.4.6 () allows old versions\n",
+        "markdown": "Pragma version[^0.4.6]() allows old versions\n",
+        "first_markdown_element": "",
+        "id": "54eae9514d5e93f8fb467cb6e12380204cb269720316b950ba80b399a769bf71",
+        "check": "solc-version",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [],
+        "description": "solc-0.4.6 is not recommended for deployment\n",
+        "markdown": "solc-0.4.6 is not recommended for deployment\n",
+        "first_markdown_element": "",
+        "id": "b2e09ce9c0c37029707bd5645a9a2972adb1c4c04948009825bacc17fa383ec8",
+        "check": "solc-version",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "contract",
+            "name": "tokenRecipient",
+            "source_mapping": {
+              "start": 437,
+              "length": 118,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "additional_fields": {
+              "target": "contract",
+              "convention": "CapWords"
+            }
+          }
+        ],
+        "description": "Contract tokenRecipient () is not in CapWords\n",
+        "markdown": "Contract [tokenRecipient]() is not in CapWords\n",
+        "first_markdown_element": "",
+        "id": "2b490d093e8774391ae7b7880a9192319b34e7b392e95de10bb460182ae054a0",
+        "check": "naming-convention",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "_value",
+            "source_mapping": {
+              "start": 3664,
+              "length": 14,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "approve",
+                "source_mapping": {
+                  "start": 3629,
+                  "length": 200,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "EdgelessToken",
+                    "source_mapping": {
+                      "start": 1035,
+                      "length": 5210,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "approve(address,uint256)"
+                }
+              }
+            },
+            "additional_fields": {
+              "target": "parameter",
+              "convention": "mixedCase"
+            }
+          }
+        ],
+        "description": "Parameter EdgelessToken.approve(address,uint256)._value () is not in mixedCase\n",
+        "markdown": "Parameter [EdgelessToken.approve(address,uint256)._value]() is not in mixedCase\n",
+        "first_markdown_element": "",
+        "id": "2d9ee2e6cf29e547dd60ab7206badc579c50a479f4397a37600288a9daef0403",
+        "check": "naming-convention",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "_value",
+            "source_mapping": {
+              "start": 2864,
+              "length": 14,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "transfer",
+                "source_mapping": {
+                  "start": 2833,
+                  "length": 711,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "EdgelessToken",
+                    "source_mapping": {
+                      "start": 1035,
+                      "length": 5210,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "transfer(address,uint256)"
+                }
+              }
+            },
+            "additional_fields": {
+              "target": "parameter",
+              "convention": "mixedCase"
+            }
+          }
+        ],
+        "description": "Parameter EdgelessToken.transfer(address,uint256)._value () is not in mixedCase\n",
+        "markdown": "Parameter [EdgelessToken.transfer(address,uint256)._value]() is not in mixedCase\n",
+        "first_markdown_element": "",
+        "id": "368925d050c3026114f34f7346cae3a8b2ad33bd23cada147854401f28083260",
+        "check": "naming-convention",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "_to",
+            "source_mapping": {
+              "start": 4008,
+              "length": 11,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "transferFrom",
+                "source_mapping": {
+                  "start": 3971,
+                  "length": 718,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "EdgelessToken",
+                    "source_mapping": {
+                      "start": 1035,
+                      "length": 5210,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "transferFrom(address,address,uint256)"
+                }
+              }
+            },
+            "additional_fields": {
+              "target": "parameter",
+              "convention": "mixedCase"
+            }
+          }
+        ],
+        "description": "Parameter EdgelessToken.transferFrom(address,address,uint256)._to () is not in mixedCase\n",
+        "markdown": "Parameter [EdgelessToken.transferFrom(address,address,uint256)._to]() is not in mixedCase\n",
+        "first_markdown_element": "",
+        "id": "47068ba10d85b20f30be0fd95de1142c4b551645dc4f86dca7a0d095d15a7ae1",
+        "check": "naming-convention",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "_spender",
+            "source_mapping": {
+              "start": 3646,
+              "length": 16,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "approve",
+                "source_mapping": {
+                  "start": 3629,
+                  "length": 200,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "EdgelessToken",
+                    "source_mapping": {
+                      "start": 1035,
+                      "length": 5210,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "approve(address,uint256)"
+                }
+              }
+            },
+            "additional_fields": {
+              "target": "parameter",
+              "convention": "mixedCase"
+            }
+          }
+        ],
+        "description": "Parameter EdgelessToken.approve(address,uint256)._spender () is not in mixedCase\n",
+        "markdown": "Parameter [EdgelessToken.approve(address,uint256)._spender]() is not in mixedCase\n",
+        "first_markdown_element": "",
+        "id": "5583a3a22810d33bc127f5804f30f164b9fb978d5f8a8d0b922036f09010fb5e",
+        "check": "naming-convention",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "_value",
+            "source_mapping": {
+              "start": 4021,
+              "length": 14,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "transferFrom",
+                "source_mapping": {
+                  "start": 3971,
+                  "length": 718,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "EdgelessToken",
+                    "source_mapping": {
+                      "start": 1035,
+                      "length": 5210,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "transferFrom(address,address,uint256)"
+                }
+              }
+            },
+            "additional_fields": {
+              "target": "parameter",
+              "convention": "mixedCase"
+            }
+          }
+        ],
+        "description": "Parameter EdgelessToken.transferFrom(address,address,uint256)._value () is not in mixedCase\n",
+        "markdown": "Parameter [EdgelessToken.transferFrom(address,address,uint256)._value]() is not in mixedCase\n",
+        "first_markdown_element": "",
+        "id": "648426c63606b78b9c58445111f64213a1793f009f81a2eaccb3f2e80f00b9cc",
+        "check": "naming-convention",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "_value",
+            "source_mapping": {
+              "start": 4863,
+              "length": 14,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "lock",
+                "source_mapping": {
+                  "start": 4833,
+                  "length": 330,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "EdgelessToken",
+                    "source_mapping": {
+                      "start": 1035,
+                      "length": 5210,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "lock(address,uint256)"
+                }
+              }
+            },
+            "additional_fields": {
+              "target": "parameter",
+              "convention": "mixedCase"
+            }
+          }
+        ],
+        "description": "Parameter EdgelessToken.lock(address,uint256)._value () is not in mixedCase\n",
+        "markdown": "Parameter [EdgelessToken.lock(address,uint256)._value]() is not in mixedCase\n",
+        "first_markdown_element": "",
+        "id": "7615c06ca8568bde3679eb0f78ed26d2356e9fe854b5193f3c9a21128643cea4",
+        "check": "naming-convention",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "_from",
+            "source_mapping": {
+              "start": 3993,
+              "length": 13,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "transferFrom",
+                "source_mapping": {
+                  "start": 3971,
+                  "length": 718,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "EdgelessToken",
+                    "source_mapping": {
+                      "start": 1035,
+                      "length": 5210,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "transferFrom(address,address,uint256)"
+                }
+              }
+            },
+            "additional_fields": {
+              "target": "parameter",
+              "convention": "mixedCase"
+            }
+          }
+        ],
+        "description": "Parameter EdgelessToken.transferFrom(address,address,uint256)._from () is not in mixedCase\n",
+        "markdown": "Parameter [EdgelessToken.transferFrom(address,address,uint256)._from]() is not in mixedCase\n",
+        "first_markdown_element": "",
+        "id": "7ab4028d21400464ef4fa2a73b2b010bb69c38c5a4b4c67311a606feff2e1b38",
+        "check": "naming-convention",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "_to",
+            "source_mapping": {
+              "start": 2851,
+              "length": 11,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "transfer",
+                "source_mapping": {
+                  "start": 2833,
+                  "length": 711,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "EdgelessToken",
+                    "source_mapping": {
+                      "start": 1035,
+                      "length": 5210,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "transfer(address,uint256)"
+                }
+              }
+            },
+            "additional_fields": {
+              "target": "parameter",
+              "convention": "mixedCase"
+            }
+          }
+        ],
+        "description": "Parameter EdgelessToken.transfer(address,uint256)._to () is not in mixedCase\n",
+        "markdown": "Parameter [EdgelessToken.transfer(address,uint256)._to]() is not in mixedCase\n",
+        "first_markdown_element": "",
+        "id": "ea4cea9637eb65b121993d728aa481a5c32ba3e1706d64a6117e0626cc6e482e",
+        "check": "naming-convention",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "EdgelessToken",
+            "source_mapping": {
+              "start": 2377,
+              "length": 396,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "EdgelessToken",
+                "source_mapping": {
+                  "start": 1035,
+                  "length": 5210,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              },
+              "signature": "EdgelessToken()"
+            }
+          },
+          {
+            "type": "node",
+            "name": "balanceOf[owner] = 500000000",
+            "source_mapping": {
+              "start": 2472,
+              "length": 28,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "EdgelessToken",
+                "source_mapping": {
+                  "start": 2377,
+                  "length": 396,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "EdgelessToken",
+                    "source_mapping": {
+                      "start": 1035,
+                      "length": 5210,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "EdgelessToken()"
+                }
+              }
+            }
+          }
+        ],
+        "description": "EdgelessToken.EdgelessToken() () uses literals with too many digits:\n\t- balanceOf[owner] = 500000000 ()\n",
+        "markdown": "[EdgelessToken.EdgelessToken()]() uses literals with too many digits:\n\t- [balanceOf[owner] = 500000000]()\n",
+        "first_markdown_element": "",
+        "id": "05d2ce193421ebc4b069e9f28a4f081ec6624d5e49496a0996c5fbec34072bff",
+        "check": "too-many-digits",
+        "impact": "Informational",
+        "confidence": "Medium"
+      },
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "burn",
+            "source_mapping": {
+              "start": 5915,
+              "length": 327,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "EdgelessToken",
+                "source_mapping": {
+                  "start": 1035,
+                  "length": 5210,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              },
+              "signature": "burn()"
+            }
+          },
+          {
+            "type": "node",
+            "name": "balanceOf[owner] = 60000000",
+            "source_mapping": {
+              "start": 6126,
+              "length": 27,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "burn",
+                "source_mapping": {
+                  "start": 5915,
+                  "length": 327,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "EdgelessToken",
+                    "source_mapping": {
+                      "start": 1035,
+                      "length": 5210,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "burn()"
+                }
+              }
+            }
+          }
+        ],
+        "description": "EdgelessToken.burn() () uses literals with too many digits:\n\t- balanceOf[owner] = 60000000 ()\n",
+        "markdown": "[EdgelessToken.burn()]() uses literals with too many digits:\n\t- [balanceOf[owner] = 60000000]()\n",
+        "first_markdown_element": "",
+        "id": "15dcccee38e867442de117520d077acb9b43c681335464c11ddc207ea1efca8d",
+        "check": "too-many-digits",
+        "impact": "Informational",
+        "confidence": "Medium"
+      },
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "burn",
+            "source_mapping": {
+              "start": 5915,
+              "length": 327,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "EdgelessToken",
+                "source_mapping": {
+                  "start": 1035,
+                  "length": 5210,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              },
+              "signature": "burn()"
+            }
+          },
+          {
+            "type": "node",
+            "name": "difference = safeSub(balanceOf[owner],60000000)",
+            "source_mapping": {
+              "start": 6037,
+              "length": 53,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "burn",
+                "source_mapping": {
+                  "start": 5915,
+                  "length": 327,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "EdgelessToken",
+                    "source_mapping": {
+                      "start": 1035,
+                      "length": 5210,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "burn()"
+                }
+              }
+            }
+          }
+        ],
+        "description": "EdgelessToken.burn() () uses literals with too many digits:\n\t- difference = safeSub(balanceOf[owner],60000000) ()\n",
+        "markdown": "[EdgelessToken.burn()]() uses literals with too many digits:\n\t- [difference = safeSub(balanceOf[owner],60000000)]()\n",
+        "first_markdown_element": "",
+        "id": "6fe4fa608cdd0f5404394089fda755dfa8b1bfb17ac934827606685f3a8ab9f3",
+        "check": "too-many-digits",
+        "impact": "Informational",
+        "confidence": "Medium"
+      },
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "EdgelessToken",
+            "source_mapping": {
+              "start": 2377,
+              "length": 396,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "EdgelessToken",
+                "source_mapping": {
+                  "start": 1035,
+                  "length": 5210,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              },
+              "signature": "EdgelessToken()"
+            }
+          },
+          {
+            "type": "node",
+            "name": "totalSupply = 500000000",
+            "source_mapping": {
+              "start": 2560,
+              "length": 23,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "EdgelessToken",
+                "source_mapping": {
+                  "start": 2377,
+                  "length": 396,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "EdgelessToken",
+                    "source_mapping": {
+                      "start": 1035,
+                      "length": 5210,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "EdgelessToken()"
+                }
+              }
+            }
+          }
+        ],
+        "description": "EdgelessToken.EdgelessToken() () uses literals with too many digits:\n\t- totalSupply = 500000000 ()\n",
+        "markdown": "[EdgelessToken.EdgelessToken()]() uses literals with too many digits:\n\t- [totalSupply = 500000000]()\n",
+        "first_markdown_element": "",
+        "id": "a38752f6801dd9669760cb95229a304388c413f3fbe99c2fa71da65965dc0e4a",
+        "check": "too-many-digits",
+        "impact": "Informational",
+        "confidence": "Medium"
+      },
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "EdgelessToken",
+            "source_mapping": {
+              "start": 2377,
+              "length": 396,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "EdgelessToken",
+                "source_mapping": {
+                  "start": 1035,
+                  "length": 5210,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              },
+              "signature": "EdgelessToken()"
+            }
+          },
+          {
+            "type": "node",
+            "name": "locked[owner][i] = 50000000",
+            "source_mapping": {
+              "start": 2739,
+              "length": 27,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "EdgelessToken",
+                "source_mapping": {
+                  "start": 2377,
+                  "length": 396,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "EdgelessToken",
+                    "source_mapping": {
+                      "start": 1035,
+                      "length": 5210,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "EdgelessToken()"
+                }
+              }
+            }
+          }
+        ],
+        "description": "EdgelessToken.EdgelessToken() () uses literals with too many digits:\n\t- locked[owner][i] = 50000000 ()\n",
+        "markdown": "[EdgelessToken.EdgelessToken()]() uses literals with too many digits:\n\t- [locked[owner][i] = 50000000]()\n",
+        "first_markdown_element": "",
+        "id": "c7e6b602202c2fa3c2f21ce9d028dfdbc4c43d2bacf3e761edacb4dcb20b6726",
+        "check": "too-many-digits",
+        "impact": "Informational",
+        "confidence": "Medium"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "decimals",
+            "source_mapping": {
+              "start": 1225,
+              "length": 25,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "EdgelessToken",
+                "source_mapping": {
+                  "start": 1035,
+                  "length": 5210,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              }
+            }
+          },
+          {
+            "type": "contract",
+            "name": "EdgelessToken",
+            "source_mapping": {
+              "start": 1035,
+              "length": 5210,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            }
+          }
+        ],
+        "description": "EdgelessToken.decimals () is never used in EdgelessToken ()\n",
+        "markdown": "[EdgelessToken.decimals]() is never used in [EdgelessToken]()\n",
+        "first_markdown_element": "",
+        "id": "2fde1111974aacfa89b8954571ada3f4f870cd274d051bd7f6b047c3941329b8",
+        "check": "unused-state",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "standard",
+            "source_mapping": {
+              "start": 1116,
+              "length": 32,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "EdgelessToken",
+                "source_mapping": {
+                  "start": 1035,
+                  "length": 5210,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              }
+            }
+          },
+          {
+            "type": "contract",
+            "name": "EdgelessToken",
+            "source_mapping": {
+              "start": 1035,
+              "length": 5210,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            }
+          }
+        ],
+        "description": "EdgelessToken.standard () is never used in EdgelessToken ()\n",
+        "markdown": "[EdgelessToken.standard]() is never used in [EdgelessToken]()\n",
+        "first_markdown_element": "",
+        "id": "37064bd220378b495c0de0dce4b6e014e61eb4c676682c7ee7afd8aea6204f9e",
+        "check": "unused-state",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "name",
+            "source_mapping": {
+              "start": 1154,
+              "length": 31,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "EdgelessToken",
+                "source_mapping": {
+                  "start": 1035,
+                  "length": 5210,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              }
+            }
+          },
+          {
+            "type": "contract",
+            "name": "EdgelessToken",
+            "source_mapping": {
+              "start": 1035,
+              "length": 5210,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            }
+          }
+        ],
+        "description": "EdgelessToken.name () is never used in EdgelessToken ()\n",
+        "markdown": "[EdgelessToken.name]() is never used in [EdgelessToken]()\n",
+        "first_markdown_element": "",
+        "id": "57ce12f3968ddfa825ba6a88957252bbcf37e070885dbc1a8bae283da9a2a4c3",
+        "check": "unused-state",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "symbol",
+            "source_mapping": {
+              "start": 1191,
+              "length": 28,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "EdgelessToken",
+                "source_mapping": {
+                  "start": 1035,
+                  "length": 5210,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              }
+            }
+          },
+          {
+            "type": "contract",
+            "name": "EdgelessToken",
+            "source_mapping": {
+              "start": 1035,
+              "length": 5210,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            }
+          }
+        ],
+        "description": "EdgelessToken.symbol () is never used in EdgelessToken ()\n",
+        "markdown": "[EdgelessToken.symbol]() is never used in [EdgelessToken]()\n",
+        "first_markdown_element": "",
+        "id": "b2e8e307f87dd46886a2c0d07767941015f667a0e34cbfb19c5f17421397cd09",
+        "check": "unused-state",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "decimals",
+            "source_mapping": {
+              "start": 1225,
+              "length": 25,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "EdgelessToken",
+                "source_mapping": {
+                  "start": 1035,
+                  "length": 5210,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              }
+            }
+          }
+        ],
+        "description": "EdgelessToken.decimals () should be constant \n",
+        "markdown": "[EdgelessToken.decimals]() should be constant \n",
+        "first_markdown_element": "",
+        "id": "11db593c329d581afa28cc772b7381bef9732d2167b2c72ab127a2a5030fb8e4",
+        "check": "constable-states",
+        "impact": "Optimization",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "intervalLength",
+            "source_mapping": {
+              "start": 1328,
+              "length": 39,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "EdgelessToken",
+                "source_mapping": {
+                  "start": 1035,
+                  "length": 5210,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              }
+            }
+          }
+        ],
+        "description": "EdgelessToken.intervalLength () should be constant \n",
+        "markdown": "[EdgelessToken.intervalLength]() should be constant \n",
+        "first_markdown_element": "",
+        "id": "3008dc6657cab95326886b77b90d3d711a4165574280a5c742be023af4bedf72",
+        "check": "constable-states",
+        "impact": "Optimization",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "standard",
+            "source_mapping": {
+              "start": 1116,
+              "length": 32,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "EdgelessToken",
+                "source_mapping": {
+                  "start": 1035,
+                  "length": 5210,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              }
+            }
+          }
+        ],
+        "description": "EdgelessToken.standard () should be constant \n",
+        "markdown": "[EdgelessToken.standard]() should be constant \n",
+        "first_markdown_element": "",
+        "id": "9880899f2af3200eaacfbf75b15bdba50d3af0cb92182c3a870ae29ab7a848fb",
+        "check": "constable-states",
+        "impact": "Optimization",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "startTime",
+            "source_mapping": {
+              "start": 1463,
+              "length": 37,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "EdgelessToken",
+                "source_mapping": {
+                  "start": 1035,
+                  "length": 5210,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              }
+            }
+          }
+        ],
+        "description": "EdgelessToken.startTime () should be constant \n",
+        "markdown": "[EdgelessToken.startTime]() should be constant \n",
+        "first_markdown_element": "",
+        "id": "b5770c54683369d77a83c9dce2936619a9b4edbd1bc1cba6ab7250a63612ce8a",
+        "check": "constable-states",
+        "impact": "Optimization",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "symbol",
+            "source_mapping": {
+              "start": 1191,
+              "length": 28,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "EdgelessToken",
+                "source_mapping": {
+                  "start": 1035,
+                  "length": 5210,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              }
+            }
+          }
+        ],
+        "description": "EdgelessToken.symbol () should be constant \n",
+        "markdown": "[EdgelessToken.symbol]() should be constant \n",
+        "first_markdown_element": "",
+        "id": "db1e6412bc34e05807d2b4b43f1ed3fdb7834ec6ff6f993867747ad3cd75d80b",
+        "check": "constable-states",
+        "impact": "Optimization",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "name",
+            "source_mapping": {
+              "start": 1154,
+              "length": 31,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "EdgelessToken",
+                "source_mapping": {
+                  "start": 1035,
+                  "length": 5210,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              }
+            }
+          }
+        ],
+        "description": "EdgelessToken.name () should be constant \n",
+        "markdown": "[EdgelessToken.name]() should be constant \n",
+        "first_markdown_element": "",
+        "id": "fd40858cf842f71360539976f2a98a747bde57b303365341d0ccf03c5e389fca",
+        "check": "constable-states",
+        "impact": "Optimization",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "receiveApproval",
+            "source_mapping": {
+              "start": 463,
+              "length": 90,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "tokenRecipient",
+                "source_mapping": {
+                  "start": 437,
+                  "length": 118,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              },
+              "signature": "receiveApproval(address,uint256,address,bytes)"
+            }
+          }
+        ],
+        "description": "receiveApproval(address,uint256,address,bytes) should be declared external:\n\t- tokenRecipient.receiveApproval(address,uint256,address,bytes) ()\n",
+        "markdown": "receiveApproval(address,uint256,address,bytes) should be declared external:\n\t- [tokenRecipient.receiveApproval(address,uint256,address,bytes)]()\n",
+        "first_markdown_element": "",
+        "id": "5bf8032db6d08275d0001914f4bdb19064612f8be1a79083db009c885f9d9f3e",
+        "check": "external-function",
+        "impact": "Optimization",
+        "confidence": "High"
+      }
+    ]
+  }
+}

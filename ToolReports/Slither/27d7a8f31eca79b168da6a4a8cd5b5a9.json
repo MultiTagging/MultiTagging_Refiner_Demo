@@ -1,0 +1,462 @@
+{
+  "success": true,
+  "error": null,
+  "results": {
+    "detectors": [
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "withdraw",
+            "source_mapping": {
+              "start": 2163,
+              "length": 369,
+              "filename_relative": "Benchmarks/Study_SamplesSet/27d7a8f31eca79b168da6a4a8cd5b5a9.sol",
+              "filename_absolute": "/home/shikah/Documents/PhD/VulDet/Benchmarks/Study_SamplesSet/27d7a8f31eca79b168da6a4a8cd5b5a9.sol",
+              "filename_short": "Benchmarks/Study_SamplesSet/27d7a8f31eca79b168da6a4a8cd5b5a9.sol",
+              "is_dependency": false,
+              "lines": [
+                91,
+                92,
+                93,
+                94,
+                95,
+                96,
+                97,
+                98,
+                99
+              ],
+              "starting_column": 5,
+              "ending_column": 6
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "ChristmasClub",
+                "source_mapping": {
+                  "start": 1812,
+                  "length": 870,
+                  "filename_relative": "Benchmarks/Study_SamplesSet/27d7a8f31eca79b168da6a4a8cd5b5a9.sol",
+                  "filename_absolute": "/home/shikah/Documents/PhD/VulDet/Benchmarks/Study_SamplesSet/27d7a8f31eca79b168da6a4a8cd5b5a9.sol",
+                  "filename_short": "Benchmarks/Study_SamplesSet/27d7a8f31eca79b168da6a4a8cd5b5a9.sol",
+                  "is_dependency": false,
+                  "lines": [
+                    79,
+                    80,
+                    81,
+                    82,
+                    83,
+                    84,
+                    85,
+                    86,
+                    87,
+                    88,
+                    89,
+                    90,
+                    91,
+                    92,
+                    93,
+                    94,
+                    95,
+                    96,
+                    97,
+                    98,
+                    99,
+                    100,
+                    101,
+                    102,
+                    103,
+                    104,
+                    105,
+                    106,
+                    107,
+                    108
+                  ],
+                  "starting_column": 1,
+                  "ending_column": 0
+                }
+              },
+              "signature": "withdraw()"
+            }
+          },
+          {
+            "type": "node",
+            "name": "now < withdrawalTime",
+            "source_mapping": {
+              "start": 2253,
+              "length": 20,
+              "filename_relative": "Benchmarks/Study_SamplesSet/27d7a8f31eca79b168da6a4a8cd5b5a9.sol",
+              "filename_absolute": "/home/shikah/Documents/PhD/VulDet/Benchmarks/Study_SamplesSet/27d7a8f31eca79b168da6a4a8cd5b5a9.sol",
+              "filename_short": "Benchmarks/Study_SamplesSet/27d7a8f31eca79b168da6a4a8cd5b5a9.sol",
+              "is_dependency": false,
+              "lines": [
+                93
+              ],
+              "starting_column": 13,
+              "ending_column": 33
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "withdraw",
+                "source_mapping": {
+                  "start": 2163,
+                  "length": 369,
+                  "filename_relative": "Benchmarks/Study_SamplesSet/27d7a8f31eca79b168da6a4a8cd5b5a9.sol",
+                  "filename_absolute": "/home/shikah/Documents/PhD/VulDet/Benchmarks/Study_SamplesSet/27d7a8f31eca79b168da6a4a8cd5b5a9.sol",
+                  "filename_short": "Benchmarks/Study_SamplesSet/27d7a8f31eca79b168da6a4a8cd5b5a9.sol",
+                  "is_dependency": false,
+                  "lines": [
+                    91,
+                    92,
+                    93,
+                    94,
+                    95,
+                    96,
+                    97,
+                    98,
+                    99
+                  ],
+                  "starting_column": 5,
+                  "ending_column": 6
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "ChristmasClub",
+                    "source_mapping": {
+                      "start": 1812,
+                      "length": 870,
+                      "filename_relative": "Benchmarks/Study_SamplesSet/27d7a8f31eca79b168da6a4a8cd5b5a9.sol",
+                      "filename_absolute": "/home/shikah/Documents/PhD/VulDet/Benchmarks/Study_SamplesSet/27d7a8f31eca79b168da6a4a8cd5b5a9.sol",
+                      "filename_short": "Benchmarks/Study_SamplesSet/27d7a8f31eca79b168da6a4a8cd5b5a9.sol",
+                      "is_dependency": false,
+                      "lines": [
+                        79,
+                        80,
+                        81,
+                        82,
+                        83,
+                        84,
+                        85,
+                        86,
+                        87,
+                        88,
+                        89,
+                        90,
+                        91,
+                        92,
+                        93,
+                        94,
+                        95,
+                        96,
+                        97,
+                        98,
+                        99,
+                        100,
+                        101,
+                        102,
+                        103,
+                        104,
+                        105,
+                        106,
+                        107,
+                        108
+                      ],
+                      "starting_column": 1,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "withdraw()"
+                }
+              }
+            }
+          }
+        ],
+        "description": "ChristmasClub.withdraw() (Benchmarks/Study_SamplesSet/27d7a8f31eca79b168da6a4a8cd5b5a9.sol#91-99) uses timestamp for comparisons\n\tDangerous comparisons:\n\t- now < withdrawalTime (Benchmarks/Study_SamplesSet/27d7a8f31eca79b168da6a4a8cd5b5a9.sol#93)\n",
+        "markdown": "[ChristmasClub.withdraw()](Benchmarks/Study_SamplesSet/27d7a8f31eca79b168da6a4a8cd5b5a9.sol#L91-L99) uses timestamp for comparisons\n\tDangerous comparisons:\n\t- [now < withdrawalTime](Benchmarks/Study_SamplesSet/27d7a8f31eca79b168da6a4a8cd5b5a9.sol#L93)\n",
+        "first_markdown_element": "Benchmarks/Study_SamplesSet/27d7a8f31eca79b168da6a4a8cd5b5a9.sol#L91-L99",
+        "id": "fa65bacc5922cefd1d8c6e421907f10b122a6a034fc23f00e4e2b0d989e2671e",
+        "check": "timestamp",
+        "impact": "Low",
+        "confidence": "Medium"
+      },
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "sub",
+            "source_mapping": {
+              "start": 1565,
+              "length": 110,
+              "filename_relative": "Benchmarks/Study_SamplesSet/27d7a8f31eca79b168da6a4a8cd5b5a9.sol",
+              "filename_absolute": "/home/shikah/Documents/PhD/VulDet/Benchmarks/Study_SamplesSet/27d7a8f31eca79b168da6a4a8cd5b5a9.sol",
+              "filename_short": "Benchmarks/Study_SamplesSet/27d7a8f31eca79b168da6a4a8cd5b5a9.sol",
+              "is_dependency": false,
+              "lines": [
+                67,
+                68,
+                69,
+                70
+              ],
+              "starting_column": 3,
+              "ending_column": 4
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "SafeMath",
+                "source_mapping": {
+                  "start": 1098,
+                  "length": 712,
+                  "filename_relative": "Benchmarks/Study_SamplesSet/27d7a8f31eca79b168da6a4a8cd5b5a9.sol",
+                  "filename_absolute": "/home/shikah/Documents/PhD/VulDet/Benchmarks/Study_SamplesSet/27d7a8f31eca79b168da6a4a8cd5b5a9.sol",
+                  "filename_short": "Benchmarks/Study_SamplesSet/27d7a8f31eca79b168da6a4a8cd5b5a9.sol",
+                  "is_dependency": false,
+                  "lines": [
+                    50,
+                    51,
+                    52,
+                    53,
+                    54,
+                    55,
+                    56,
+                    57,
+                    58,
+                    59,
+                    60,
+                    61,
+                    62,
+                    63,
+                    64,
+                    65,
+                    66,
+                    67,
+                    68,
+                    69,
+                    70,
+                    71,
+                    72,
+                    73,
+                    74,
+                    75,
+                    76,
+                    77
+                  ],
+                  "starting_column": 1,
+                  "ending_column": 2
+                }
+              },
+              "signature": "sub(uint256,uint256)"
+            }
+          }
+        ],
+        "description": "SafeMath.sub(uint256,uint256) (Benchmarks/Study_SamplesSet/27d7a8f31eca79b168da6a4a8cd5b5a9.sol#67-70) is never used and should be removed\n",
+        "markdown": "[SafeMath.sub(uint256,uint256)](Benchmarks/Study_SamplesSet/27d7a8f31eca79b168da6a4a8cd5b5a9.sol#L67-L70) is never used and should be removed\n",
+        "first_markdown_element": "Benchmarks/Study_SamplesSet/27d7a8f31eca79b168da6a4a8cd5b5a9.sol#L67-L70",
+        "id": "0597ae61b0a7d596bb9d6115f18ba9ca50e326614caee57b8155a4db524ba57b",
+        "check": "dead-code",
+        "impact": "Informational",
+        "confidence": "Medium"
+      },
+      {
+        "elements": [
+          {
+            "type": "pragma",
+            "name": "^0.4.19",
+            "source_mapping": {
+              "start": 0,
+              "length": 24,
+              "filename_relative": "Benchmarks/Study_SamplesSet/27d7a8f31eca79b168da6a4a8cd5b5a9.sol",
+              "filename_absolute": "/home/shikah/Documents/PhD/VulDet/Benchmarks/Study_SamplesSet/27d7a8f31eca79b168da6a4a8cd5b5a9.sol",
+              "filename_short": "Benchmarks/Study_SamplesSet/27d7a8f31eca79b168da6a4a8cd5b5a9.sol",
+              "is_dependency": false,
+              "lines": [
+                1
+              ],
+              "starting_column": 1,
+              "ending_column": 25
+            },
+            "type_specific_fields": {
+              "directive": [
+                "solidity",
+                "^",
+                "0.4",
+                ".19"
+              ]
+            }
+          }
+        ],
+        "description": "Pragma version^0.4.19 (Benchmarks/Study_SamplesSet/27d7a8f31eca79b168da6a4a8cd5b5a9.sol#1) allows old versions\n",
+        "markdown": "Pragma version[^0.4.19](Benchmarks/Study_SamplesSet/27d7a8f31eca79b168da6a4a8cd5b5a9.sol#L1) allows old versions\n",
+        "first_markdown_element": "Benchmarks/Study_SamplesSet/27d7a8f31eca79b168da6a4a8cd5b5a9.sol#L1",
+        "id": "24bf23a59ed4b9872ed2db92b4495d125bef327dc905ecfee0826677060431d0",
+        "check": "solc-version",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [],
+        "description": "solc-0.4.19 is not recommended for deployment\n",
+        "markdown": "solc-0.4.19 is not recommended for deployment\n",
+        "first_markdown_element": "",
+        "id": "6c57d3efd769b2c1ca361b3d06ff1f2677845be92f7b50762125a4196d71725a",
+        "check": "solc-version",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "earlyWithdrawalFeePct",
+            "source_mapping": {
+              "start": 1950,
+              "length": 37,
+              "filename_relative": "Benchmarks/Study_SamplesSet/27d7a8f31eca79b168da6a4a8cd5b5a9.sol",
+              "filename_absolute": "/home/shikah/Documents/PhD/VulDet/Benchmarks/Study_SamplesSet/27d7a8f31eca79b168da6a4a8cd5b5a9.sol",
+              "filename_short": "Benchmarks/Study_SamplesSet/27d7a8f31eca79b168da6a4a8cd5b5a9.sol",
+              "is_dependency": false,
+              "lines": [
+                83
+              ],
+              "starting_column": 5,
+              "ending_column": 42
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "ChristmasClub",
+                "source_mapping": {
+                  "start": 1812,
+                  "length": 870,
+                  "filename_relative": "Benchmarks/Study_SamplesSet/27d7a8f31eca79b168da6a4a8cd5b5a9.sol",
+                  "filename_absolute": "/home/shikah/Documents/PhD/VulDet/Benchmarks/Study_SamplesSet/27d7a8f31eca79b168da6a4a8cd5b5a9.sol",
+                  "filename_short": "Benchmarks/Study_SamplesSet/27d7a8f31eca79b168da6a4a8cd5b5a9.sol",
+                  "is_dependency": false,
+                  "lines": [
+                    79,
+                    80,
+                    81,
+                    82,
+                    83,
+                    84,
+                    85,
+                    86,
+                    87,
+                    88,
+                    89,
+                    90,
+                    91,
+                    92,
+                    93,
+                    94,
+                    95,
+                    96,
+                    97,
+                    98,
+                    99,
+                    100,
+                    101,
+                    102,
+                    103,
+                    104,
+                    105,
+                    106,
+                    107,
+                    108
+                  ],
+                  "starting_column": 1,
+                  "ending_column": 0
+                }
+              }
+            }
+          }
+        ],
+        "description": "ChristmasClub.earlyWithdrawalFeePct (Benchmarks/Study_SamplesSet/27d7a8f31eca79b168da6a4a8cd5b5a9.sol#83) should be constant \n",
+        "markdown": "[ChristmasClub.earlyWithdrawalFeePct](Benchmarks/Study_SamplesSet/27d7a8f31eca79b168da6a4a8cd5b5a9.sol#L83) should be constant \n",
+        "first_markdown_element": "Benchmarks/Study_SamplesSet/27d7a8f31eca79b168da6a4a8cd5b5a9.sol#L83",
+        "id": "019ac92ce725b11587c7366e960687c0c7c4041338f4879ce70da93f014bca92",
+        "check": "constable-states",
+        "impact": "Optimization",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "withdrawalTime",
+            "source_mapping": {
+              "start": 1889,
+              "length": 39,
+              "filename_relative": "Benchmarks/Study_SamplesSet/27d7a8f31eca79b168da6a4a8cd5b5a9.sol",
+              "filename_absolute": "/home/shikah/Documents/PhD/VulDet/Benchmarks/Study_SamplesSet/27d7a8f31eca79b168da6a4a8cd5b5a9.sol",
+              "filename_short": "Benchmarks/Study_SamplesSet/27d7a8f31eca79b168da6a4a8cd5b5a9.sol",
+              "is_dependency": false,
+              "lines": [
+                82
+              ],
+              "starting_column": 5,
+              "ending_column": 44
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "ChristmasClub",
+                "source_mapping": {
+                  "start": 1812,
+                  "length": 870,
+                  "filename_relative": "Benchmarks/Study_SamplesSet/27d7a8f31eca79b168da6a4a8cd5b5a9.sol",
+                  "filename_absolute": "/home/shikah/Documents/PhD/VulDet/Benchmarks/Study_SamplesSet/27d7a8f31eca79b168da6a4a8cd5b5a9.sol",
+                  "filename_short": "Benchmarks/Study_SamplesSet/27d7a8f31eca79b168da6a4a8cd5b5a9.sol",
+                  "is_dependency": false,
+                  "lines": [
+                    79,
+                    80,
+                    81,
+                    82,
+                    83,
+                    84,
+                    85,
+                    86,
+                    87,
+                    88,
+                    89,
+                    90,
+                    91,
+                    92,
+                    93,
+                    94,
+                    95,
+                    96,
+                    97,
+                    98,
+                    99,
+                    100,
+                    101,
+                    102,
+                    103,
+                    104,
+                    105,
+                    106,
+                    107,
+                    108
+                  ],
+                  "starting_column": 1,
+                  "ending_column": 0
+                }
+              }
+            }
+          }
+        ],
+        "description": "ChristmasClub.withdrawalTime (Benchmarks/Study_SamplesSet/27d7a8f31eca79b168da6a4a8cd5b5a9.sol#82) should be constant \n",
+        "markdown": "[ChristmasClub.withdrawalTime](Benchmarks/Study_SamplesSet/27d7a8f31eca79b168da6a4a8cd5b5a9.sol#L82) should be constant \n",
+        "first_markdown_element": "Benchmarks/Study_SamplesSet/27d7a8f31eca79b168da6a4a8cd5b5a9.sol#L82",
+        "id": "524656f0a85ac161d29286f8f55e2a7f4d672a8ff73a6719371d0e6467685eaa",
+        "check": "constable-states",
+        "impact": "Optimization",
+        "confidence": "High"
+      }
+    ]
+  }
+}

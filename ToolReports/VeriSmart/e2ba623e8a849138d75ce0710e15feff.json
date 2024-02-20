@@ -1,0 +1,171 @@
+{
+  "fileName": "Benchmarks/Study_SamplesSet/e2ba623e8a849138d75ce0710e15feff.sol",
+  "baseName": "e2ba623e8a849138d75ce0710e15feff.sol",
+  "iter": 25,
+  "time": "315.918402",
+  "errMsg": null,
+  "result": [
+    {
+      "no": "1",
+      "kind": "IO",
+      "line": 8,
+      "signatures": [
+        {
+          "contractName": "BJCToken",
+          "methodName": "@fallback",
+          "argTypes": []
+        },
+        {
+          "contractName": "BJCToken",
+          "methodName": "game",
+          "argTypes": [ "uint256" ]
+        }
+      ],
+      "exp": "(a * b)",
+      "status": "unproven"
+    },
+    {
+      "no": "2",
+      "kind": "IO",
+      "line": 15,
+      "signatures": [
+        {
+          "contractName": "BJCToken",
+          "methodName": "@fallback",
+          "argTypes": []
+        },
+        {
+          "contractName": "BJCToken",
+          "methodName": "game",
+          "argTypes": [ "uint256" ]
+        },
+        {
+          "contractName": "BJCToken",
+          "methodName": "transfer",
+          "argTypes": [ "address", "uint256" ]
+        },
+        {
+          "contractName": "BJCToken",
+          "methodName": "transferFrom",
+          "argTypes": [ "address", "address", "uint256" ]
+        }
+      ],
+      "exp": "(a - b)",
+      "status": "proven"
+    },
+    {
+      "no": "3",
+      "kind": "IO",
+      "line": 18,
+      "signatures": [
+        {
+          "contractName": "BJCToken",
+          "methodName": "@fallback",
+          "argTypes": []
+        },
+        {
+          "contractName": "BJCToken",
+          "methodName": "game",
+          "argTypes": [ "uint256" ]
+        },
+        {
+          "contractName": "BJCToken",
+          "methodName": "transfer",
+          "argTypes": [ "address", "uint256" ]
+        },
+        {
+          "contractName": "BJCToken",
+          "methodName": "transferFrom",
+          "argTypes": [ "address", "address", "uint256" ]
+        }
+      ],
+      "exp": "(a + b)",
+      "status": "unproven"
+    },
+    {
+      "no": "4",
+      "kind": "IO",
+      "line": 79,
+      "signatures": [
+        {
+          "contractName": "BJCToken",
+          "methodName": "BJCToken",
+          "argTypes": []
+        }
+      ],
+      "exp": "(10 ** uint256(18))",
+      "status": "proven"
+    },
+    {
+      "no": "5",
+      "kind": "IO",
+      "line": 79,
+      "signatures": [
+        {
+          "contractName": "BJCToken",
+          "methodName": "BJCToken",
+          "argTypes": []
+        }
+      ],
+      "exp": "(initialSupply * (10 ** uint256(18)))",
+      "status": "proven"
+    },
+    {
+      "no": "6",
+      "kind": "DZ",
+      "line": 9,
+      "signatures": [
+        {
+          "contractName": "BJCToken",
+          "methodName": "@fallback",
+          "argTypes": []
+        },
+        {
+          "contractName": "BJCToken",
+          "methodName": "game",
+          "argTypes": [ "uint256" ]
+        }
+      ],
+      "exp": "(c / a)",
+      "status": "proven"
+    },
+    {
+      "no": "7",
+      "kind": "DZ",
+      "line": 124,
+      "signatures": [
+        {
+          "contractName": "BJCToken",
+          "methodName": "game",
+          "argTypes": [ "uint256" ]
+        },
+        {
+          "contractName": "BJCToken",
+          "methodName": "random",
+          "argTypes": []
+        }
+      ],
+      "exp": "(uint256(keccak256((uint256(keccak256(block.timestamp, block.difficulty)) % 251), now)) % 10)",
+      "status": "proven"
+    },
+    {
+      "no": "8",
+      "kind": "DZ",
+      "line": 124,
+      "signatures": [
+        {
+          "contractName": "BJCToken",
+          "methodName": "game",
+          "argTypes": [ "uint256" ]
+        },
+        {
+          "contractName": "BJCToken",
+          "methodName": "random",
+          "argTypes": []
+        }
+      ],
+      "exp": "(uint256(keccak256(block.timestamp, block.difficulty)) % 251)",
+      "status": "proven"
+    }
+  ]
+}

@@ -1,0 +1,137 @@
+{
+  "fileName": "Benchmarks/Study_SamplesSet/5a876adca0f5ffcdd9dd7c3def02cee4.sol",
+  "baseName": "5a876adca0f5ffcdd9dd7c3def02cee4.sol",
+  "iter": 1,
+  "time": "1751.110487",
+  "errMsg": null,
+  "result": [
+    {
+      "no": "1",
+      "kind": "IO",
+      "line": 8,
+      "signatures": [
+        {
+          "contractName": "XgoldCrowdsale",
+          "methodName": "buyTokens",
+          "argTypes": [ "address" ]
+        },
+        {
+          "contractName": "XgoldCrowdsale",
+          "methodName": "mintTokens",
+          "argTypes": [ "address", "uint256" ]
+        }
+      ],
+      "exp": "(a * b)",
+      "status": "unproven"
+    },
+    {
+      "no": "2",
+      "kind": "IO",
+      "line": 26,
+      "signatures": [
+        {
+          "contractName": "SafeMath",
+          "methodName": "add",
+          "argTypes": [ "uint256", "uint256" ]
+        },
+        {
+          "contractName": "XgoldCrowdsale",
+          "methodName": "buyTokens",
+          "argTypes": [ "address" ]
+        },
+        {
+          "contractName": "XgoldCrowdsale",
+          "methodName": "mintTokens",
+          "argTypes": [ "address", "uint256" ]
+        }
+      ],
+      "exp": "(a + b)",
+      "status": "unproven"
+    },
+    {
+      "no": "3",
+      "kind": "IO",
+      "line": 292,
+      "signatures": [
+        {
+          "contractName": "XgoldCrowdsale",
+          "methodName": "@fallback",
+          "argTypes": []
+        },
+        {
+          "contractName": "XgoldCrowdsale",
+          "methodName": "buyXgoldTokens",
+          "argTypes": [ "address" ]
+        }
+      ],
+      "exp": "(investors + 1)",
+      "status": "unproven"
+    },
+    {
+      "no": "4",
+      "kind": "IO",
+      "line": 302,
+      "signatures": [
+        {
+          "contractName": "XgoldCrowdsale",
+          "methodName": "sendTokens",
+          "argTypes": [ "address", "uint256" ]
+        }
+      ],
+      "exp": "(investors + 1)",
+      "status": "unproven"
+    },
+    {
+      "no": "5",
+      "kind": "DZ",
+      "line": 9,
+      "signatures": [
+        {
+          "contractName": "XgoldCrowdsale",
+          "methodName": "buyTokens",
+          "argTypes": [ "address" ]
+        },
+        {
+          "contractName": "XgoldCrowdsale",
+          "methodName": "mintTokens",
+          "argTypes": [ "address", "uint256" ]
+        }
+      ],
+      "exp": "(c / a)",
+      "status": "proven"
+    },
+    {
+      "no": "6",
+      "kind": "DZ",
+      "line": 15,
+      "signatures": [
+        {
+          "contractName": "XgoldCrowdsale",
+          "methodName": "buyTokens",
+          "argTypes": [ "address" ]
+        },
+        {
+          "contractName": "XgoldCrowdsale",
+          "methodName": "mintTokens",
+          "argTypes": [ "address", "uint256" ]
+        }
+      ],
+      "exp": "(a / b)",
+      "status": "proven"
+    },
+    {
+      "no": "7",
+      "kind": "ETH_LEAK",
+      "line": 245,
+      "signatures": [
+        {
+          "contractName": "XgoldCrowdsale",
+          "methodName": "buyTokens",
+          "argTypes": [ "address" ]
+        }
+      ],
+      "exp": "wallet.transfer(msg.value);",
+      "status": "unproven"
+    }
+  ]
+}

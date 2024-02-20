@@ -1,0 +1,134 @@
+{
+  "fileName": "Benchmarks/Study_SamplesSet/90b247f644f517e2ea144fddccce9c16.sol",
+  "baseName": "90b247f644f517e2ea144fddccce9c16.sol",
+  "iter": 152,
+  "time": "300.741735",
+  "errMsg": null,
+  "result": [
+    {
+      "no": "1",
+      "kind": "IO",
+      "line": 20,
+      "signatures": [
+        {
+          "contractName": "BasicToken",
+          "methodName": "transfer",
+          "argTypes": [ "address", "uint256" ]
+        },
+        {
+          "contractName": "JesusCoin",
+          "methodName": "decreaseApproval",
+          "argTypes": [ "address", "uint256" ]
+        },
+        {
+          "contractName": "JesusCoin",
+          "methodName": "transfer",
+          "argTypes": [ "address", "uint256" ]
+        },
+        {
+          "contractName": "JesusCoin",
+          "methodName": "transferFrom",
+          "argTypes": [ "address", "address", "uint256" ]
+        },
+        {
+          "contractName": "MintableToken",
+          "methodName": "transfer",
+          "argTypes": [ "address", "uint256" ]
+        },
+        {
+          "contractName": "StandardToken",
+          "methodName": "transfer",
+          "argTypes": [ "address", "uint256" ]
+        }
+      ],
+      "exp": "(a - b)",
+      "status": "proven"
+    },
+    {
+      "no": "2",
+      "kind": "IO",
+      "line": 24,
+      "signatures": [
+        {
+          "contractName": "BasicToken",
+          "methodName": "transfer",
+          "argTypes": [ "address", "uint256" ]
+        },
+        {
+          "contractName": "JesusCoin",
+          "methodName": "increaseApproval",
+          "argTypes": [ "address", "uint256" ]
+        },
+        {
+          "contractName": "JesusCoin",
+          "methodName": "mint",
+          "argTypes": [ "address", "uint256" ]
+        },
+        {
+          "contractName": "JesusCoin",
+          "methodName": "transfer",
+          "argTypes": [ "address", "uint256" ]
+        },
+        {
+          "contractName": "JesusCoin",
+          "methodName": "transferFrom",
+          "argTypes": [ "address", "address", "uint256" ]
+        },
+        {
+          "contractName": "MintableToken",
+          "methodName": "transfer",
+          "argTypes": [ "address", "uint256" ]
+        },
+        {
+          "contractName": "StandardToken",
+          "methodName": "transfer",
+          "argTypes": [ "address", "uint256" ]
+        }
+      ],
+      "exp": "(a + b)",
+      "status": "unproven"
+    },
+    {
+      "no": "3",
+      "kind": "IO",
+      "line": 176,
+      "signatures": [
+        {
+          "contractName": "JesusCoin",
+          "methodName": "destroy",
+          "argTypes": [ "address[]" ]
+        }
+      ],
+      "exp": "(i + 1)",
+      "status": "proven"
+    },
+    {
+      "no": "4",
+      "kind": "KA",
+      "line": 182,
+      "signatures": [
+        {
+          "contractName": "JesusCoin",
+          "methodName": "destroy",
+          "argTypes": [ "address[]" ]
+        }
+      ],
+      "exp": "selfdestruct(owner);",
+      "status": "unproven"
+    },
+    {
+      "no": "5",
+      "kind": "ETH_LEAK",
+      "line": 182,
+      "signatures": [
+        {
+          "contractName": "JesusCoin",
+          "methodName": "destroy",
+          "argTypes": [ "address[]" ]
+        }
+      ],
+      "exp": "selfdestruct(owner);",
+      "status": "proven"
+    }
+  ]
+}

@@ -1,0 +1,75 @@
+{
+  "fileName": "Benchmarks/Study_SamplesSet/cb37b4fb4f1b4a8c4d7ad0ebfa33ec8c.sol",
+  "baseName": "cb37b4fb4f1b4a8c4d7ad0ebfa33ec8c.sol",
+  "iter": 2586,
+  "time": "300.075875",
+  "errMsg": null,
+  "result": [
+    {
+      "no": "1",
+      "kind": "IO",
+      "line": 21,
+      "signatures": [
+        {
+          "contractName": "ArtBlockToken",
+          "methodName": "subLockValue",
+          "argTypes": [ "address", "uint256" ]
+        },
+        {
+          "contractName": "ArtBlockToken",
+          "methodName": "transfer",
+          "argTypes": [ "address", "uint256" ]
+        },
+        {
+          "contractName": "ArtBlockToken",
+          "methodName": "transferFrom",
+          "argTypes": [ "address", "address", "uint256" ]
+        }
+      ],
+      "exp": "(a - b)",
+      "status": "proven"
+    },
+    {
+      "no": "2",
+      "kind": "IO",
+      "line": 28,
+      "signatures": [
+        {
+          "contractName": "ArtBlockToken",
+          "methodName": "addLockValue",
+          "argTypes": [ "address", "uint256" ]
+        }
+      ],
+      "exp": "(a + b)",
+      "status": "unproven"
+    },
+    {
+      "no": "3",
+      "kind": "IO",
+      "line": 77,
+      "signatures": [
+        {
+          "contractName": "ArtBlockToken",
+          "methodName": "ArtBlockToken",
+          "argTypes": []
+        }
+      ],
+      "exp": "(10 ** uint256(decimals))",
+      "status": "proven"
+    },
+    {
+      "no": "4",
+      "kind": "IO",
+      "line": 77,
+      "signatures": [
+        {
+          "contractName": "ArtBlockToken",
+          "methodName": "ArtBlockToken",
+          "argTypes": []
+        }
+      ],
+      "exp": "(4500000000 * (10 ** uint256(decimals)))",
+      "status": "proven"
+    }
+  ]
+}

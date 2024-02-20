@@ -1,0 +1,242 @@
+{
+  "fileName": "Benchmarks/Study_SamplesSet/884994c87e725489584fe44287c611f8.sol",
+  "baseName": "884994c87e725489584fe44287c611f8.sol",
+  "iter": 63,
+  "time": "311.652757",
+  "errMsg": null,
+  "result": [
+    {
+      "no": "1",
+      "kind": "IO",
+      "line": 17,
+      "signatures": [
+        {
+          "contractName": "NoteOfExchange",
+          "methodName": "NoteOfExchange",
+          "argTypes": [ "address" ]
+        },
+        {
+          "contractName": "NoteOfExchange",
+          "methodName": "getTokens",
+          "argTypes": []
+        },
+        {
+          "contractName": "NoteOfExchange",
+          "methodName": "transfer",
+          "argTypes": [ "address", "uint256" ]
+        }
+      ],
+      "exp": "(a * b)",
+      "status": "unproven"
+    },
+    {
+      "no": "2",
+      "kind": "IO",
+      "line": 37,
+      "signatures": [
+        {
+          "contractName": "NoteOfExchange",
+          "methodName": "burnFromAddress",
+          "argTypes": [ "uint256" ]
+        },
+        {
+          "contractName": "NoteOfExchange",
+          "methodName": "burnFromTotal",
+          "argTypes": [ "uint256" ]
+        },
+        {
+          "contractName": "NoteOfExchange",
+          "methodName": "transfer",
+          "argTypes": [ "address", "uint256" ]
+        },
+        {
+          "contractName": "NoteOfExchange",
+          "methodName": "transferFrom",
+          "argTypes": [ "address", "address", "uint256" ]
+        }
+      ],
+      "exp": "(a - b)",
+      "status": "proven"
+    },
+    {
+      "no": "3",
+      "kind": "IO",
+      "line": 44,
+      "signatures": [
+        {
+          "contractName": "NoteOfExchange",
+          "methodName": "NoteOfExchange",
+          "argTypes": [ "address" ]
+        },
+        {
+          "contractName": "NoteOfExchange",
+          "methodName": "getTokens",
+          "argTypes": []
+        },
+        {
+          "contractName": "NoteOfExchange",
+          "methodName": "selfLockFunds",
+          "argTypes": [ "uint256" ]
+        },
+        {
+          "contractName": "NoteOfExchange",
+          "methodName": "transfer",
+          "argTypes": [ "address", "uint256" ]
+        },
+        {
+          "contractName": "NoteOfExchange",
+          "methodName": "transferFrom",
+          "argTypes": [ "address", "address", "uint256" ]
+        }
+      ],
+      "exp": "(a + b)",
+      "status": "unproven"
+    },
+    {
+      "no": "4",
+      "kind": "IO",
+      "line": 233,
+      "signatures": [
+        {
+          "contractName": "NoteOfExchange",
+          "methodName": "transfer",
+          "argTypes": [ "address", "uint256" ]
+        },
+        {
+          "contractName": "NoteOfExchange",
+          "methodName": "transferFrom",
+          "argTypes": [ "address", "address", "uint256" ]
+        }
+      ],
+      "exp": "(size + 4)",
+      "status": "proven"
+    },
+    {
+      "no": "5",
+      "kind": "IO",
+      "line": 237,
+      "signatures": [
+        {
+          "contractName": "NoteOfExchange",
+          "methodName": "transfer",
+          "argTypes": [ "address", "uint256" ]
+        }
+      ],
+      "exp": "(2 * 32)",
+      "status": "proven"
+    },
+    {
+      "no": "6",
+      "kind": "IO",
+      "line": 256,
+      "signatures": [
+        {
+          "contractName": "NoteOfExchange",
+          "methodName": "transferFrom",
+          "argTypes": [ "address", "address", "uint256" ]
+        }
+      ],
+      "exp": "(3 * 32)",
+      "status": "proven"
+    },
+    {
+      "no": "7",
+      "kind": "DZ",
+      "line": 18,
+      "signatures": [
+        {
+          "contractName": "NoteOfExchange",
+          "methodName": "NoteOfExchange",
+          "argTypes": [ "address" ]
+        },
+        {
+          "contractName": "NoteOfExchange",
+          "methodName": "getTokens",
+          "argTypes": []
+        },
+        {
+          "contractName": "NoteOfExchange",
+          "methodName": "transfer",
+          "argTypes": [ "address", "uint256" ]
+        }
+      ],
+      "exp": "(c / a)",
+      "status": "proven"
+    },
+    {
+      "no": "8",
+      "kind": "DZ",
+      "line": 29,
+      "signatures": [
+        {
+          "contractName": "NoteOfExchange",
+          "methodName": "NoteOfExchange",
+          "argTypes": [ "address" ]
+        },
+        {
+          "contractName": "NoteOfExchange",
+          "methodName": "transfer",
+          "argTypes": [ "address", "uint256" ]
+        }
+      ],
+      "exp": "(a / b)",
+      "status": "proven"
+    },
+    {
+      "no": "9",
+      "kind": "DZ",
+      "line": 88,
+      "signatures": [
+        {
+          "contractName": "NoteOfExchange",
+          "methodName": "NoteOfExchange",
+          "argTypes": [ "address" ]
+        }
+      ],
+      "exp": "(1000000000000000000 / 10)",
+      "status": "proven"
+    },
+    {
+      "no": "10",
+      "kind": "DZ",
+      "line": 201,
+      "signatures": [
+        {
+          "contractName": "NoteOfExchange",
+          "methodName": "getTokens",
+          "argTypes": []
+        }
+      ],
+      "exp": "(tokensPerEth.mul(msg.value) / 1000000000000000000)",
+      "status": "proven"
+    },
+    {
+      "no": "11",
+      "kind": "ETH_LEAK",
+      "line": 199,
+      "signatures": [
+        {
+          "contractName": "NoteOfExchange",
+          "methodName": "getTokens",
+          "argTypes": []
+        }
+      ],
+      "exp": "owner.transfer(etherValue);",
+      "status": "proven"
+    },
+    {
+      "no": "12",
+      "kind": "ETH_LEAK",
+      "line": 286,
+      "signatures": [
+        {
+          "contractName": "NoteOfExchange",
+          "methodName": "withdraw",
+          "argTypes": []
+        }
+      ],
+      "exp": "owner.transfer(etherBalance);",
+      "status": "proven"
+    }
+  ]
+}

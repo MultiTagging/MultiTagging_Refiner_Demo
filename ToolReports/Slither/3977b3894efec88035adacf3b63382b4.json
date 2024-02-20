@@ -1,0 +1,753 @@
+{
+  "success": true,
+  "error": null,
+  "results": {
+    "detectors": [
+      {
+        "elements": [
+          {
+            "type": "contract",
+            "name": "dgame",
+            "source_mapping": {
+              "start": 703,
+              "length": 939,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            }
+          },
+          {
+            "type": "node",
+            "name": "players.push(msg.sender)",
+            "source_mapping": {
+              "start": 1608,
+              "length": 24,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "fallback",
+                "source_mapping": {
+                  "start": 989,
+                  "length": 648,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "dgame",
+                    "source_mapping": {
+                      "start": 703,
+                      "length": 939,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "fallback()"
+                }
+              }
+            }
+          }
+        ],
+        "description": "dgame () contract sets array length with a user-controlled value:\n\t- players.push(msg.sender) ()\n",
+        "markdown": "[dgame]() contract sets array length with a user-controlled value:\n\t- [players.push(msg.sender)]()\n",
+        "first_markdown_element": "",
+        "id": "7c48129d96a705559964fee72dc9b68eb9a39bb8a79654c770f5fef925b6872f",
+        "check": "controlled-array-length",
+        "impact": "High",
+        "confidence": "Medium"
+      },
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "fallback",
+            "source_mapping": {
+              "start": 989,
+              "length": 648,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "dgame",
+                "source_mapping": {
+                  "start": 703,
+                  "length": 939,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              },
+              "signature": "fallback()"
+            }
+          },
+          {
+            "type": "node",
+            "name": "winner = uint256(block.blockhash(block.number - 1)) % players.length",
+            "source_mapping": {
+              "start": 1233,
+              "length": 70,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "fallback",
+                "source_mapping": {
+                  "start": 989,
+                  "length": 648,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "dgame",
+                    "source_mapping": {
+                      "start": 703,
+                      "length": 939,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "fallback()"
+                }
+              }
+            }
+          }
+        ],
+        "description": "dgame.fallback() () uses a weak PRNG: \"winner = uint256(block.blockhash(block.number - 1)) % players.length ()\" \n",
+        "markdown": "[dgame.fallback()]() uses a weak PRNG: \"[winner = uint256(block.blockhash(block.number - 1)) % players.length]()\" \n",
+        "first_markdown_element": "",
+        "id": "9c98712b9f2a4c80c0f9508c8341614ac9898d804074862a1b918100cf5b5ddb",
+        "check": "weak-prng",
+        "impact": "High",
+        "confidence": "Medium"
+      },
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "fallback",
+            "source_mapping": {
+              "start": 989,
+              "length": 648,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "dgame",
+                "source_mapping": {
+                  "start": 703,
+                  "length": 939,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              },
+              "signature": "fallback()"
+            }
+          },
+          {
+            "type": "node",
+            "name": "players[winner].send(this.balance)",
+            "source_mapping": {
+              "start": 1469,
+              "length": 34,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "fallback",
+                "source_mapping": {
+                  "start": 989,
+                  "length": 648,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "dgame",
+                    "source_mapping": {
+                      "start": 703,
+                      "length": 939,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "fallback()"
+                }
+              }
+            }
+          }
+        ],
+        "description": "dgame.fallback() () ignores return value by players[winner].send(this.balance) ()\n",
+        "markdown": "[dgame.fallback()]() ignores return value by [players[winner].send(this.balance)]()\n",
+        "first_markdown_element": "",
+        "id": "dec4810e73489ff99caa26d763d34fc2c35ede2fe2ec4cd77a13a3236cb4c973",
+        "check": "unchecked-send",
+        "impact": "Medium",
+        "confidence": "Medium"
+      },
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "fallback",
+            "source_mapping": {
+              "start": 989,
+              "length": 648,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "dgame",
+                "source_mapping": {
+                  "start": 703,
+                  "length": 939,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              },
+              "signature": "fallback()"
+            }
+          },
+          {
+            "type": "node",
+            "name": "now > endRegisterTime && players.length > 0",
+            "source_mapping": {
+              "start": 1096,
+              "length": 43,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "fallback",
+                "source_mapping": {
+                  "start": 989,
+                  "length": 648,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "dgame",
+                    "source_mapping": {
+                      "start": 703,
+                      "length": 939,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "fallback()"
+                }
+              }
+            }
+          }
+        ],
+        "description": "dgame.fallback() () uses timestamp for comparisons\n\tDangerous comparisons:\n\t- now > endRegisterTime && players.length > 0 ()\n",
+        "markdown": "[dgame.fallback()]() uses timestamp for comparisons\n\tDangerous comparisons:\n\t- [now > endRegisterTime && players.length > 0]()\n",
+        "first_markdown_element": "",
+        "id": "847fc1ac2e870f503358f367166e54e58ccb29c0b011d8dea86c82e2ba4ff050",
+        "check": "timestamp",
+        "impact": "Low",
+        "confidence": "Medium"
+      },
+      {
+        "elements": [
+          {
+            "type": "node",
+            "name": "winner = uint256(block.blockhash(block.number - 1)) % players.length",
+            "source_mapping": {
+              "start": 1233,
+              "length": 70,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "fallback",
+                "source_mapping": {
+                  "start": 989,
+                  "length": 648,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "dgame",
+                    "source_mapping": {
+                      "start": 703,
+                      "length": 939,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "fallback()"
+                }
+              }
+            }
+          }
+        ],
+        "description": "Deprecated standard detected winner = uint256(block.blockhash(block.number - 1)) % players.length ():\n\t- Usage of \"block.blockhash()\" should be replaced with \"blockhash()\"\n",
+        "markdown": "Deprecated standard detected [winner = uint256(block.blockhash(block.number - 1)) % players.length]():\n\t- Usage of \"block.blockhash()\" should be replaced with \"blockhash()\"\n",
+        "first_markdown_element": "",
+        "id": "eeb16c283f54d4ac49e6455d42e603bc7e9d02a52cd6d680ed721f620693eda8",
+        "check": "deprecated-standards",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "pragma",
+            "name": "^0.4.5",
+            "source_mapping": {
+              "start": 0,
+              "length": 23,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "directive": [
+                "solidity",
+                "^",
+                "0.4",
+                ".5"
+              ]
+            }
+          }
+        ],
+        "description": "Pragma version^0.4.5 () allows old versions\n",
+        "markdown": "Pragma version[^0.4.5]() allows old versions\n",
+        "first_markdown_element": "",
+        "id": "23d4b6d8d9b3bf74c0a2e1c7beed6da92159144a4b12267884d9bbc31b7dde93",
+        "check": "solc-version",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [],
+        "description": "solc-0.4.5 is not recommended for deployment\n",
+        "markdown": "solc-0.4.5 is not recommended for deployment\n",
+        "first_markdown_element": "",
+        "id": "7a994d3847c219ce1ec6b32684781429cb9a3ba89c1e25169f41b1cb5bc113c2",
+        "check": "solc-version",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "contract",
+            "name": "dgame",
+            "source_mapping": {
+              "start": 703,
+              "length": 939,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "additional_fields": {
+              "target": "contract",
+              "convention": "CapWords"
+            }
+          }
+        ],
+        "description": "Contract dgame () is not in CapWords\n",
+        "markdown": "Contract [dgame]() is not in CapWords\n",
+        "first_markdown_element": "",
+        "id": "9c0691a75736c626e5f6e328700a5ba10fb6b472c5b103a968cbf200ad562a41",
+        "check": "naming-convention",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "fallback",
+            "source_mapping": {
+              "start": 989,
+              "length": 648,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "dgame",
+                "source_mapping": {
+                  "start": 703,
+                  "length": 939,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              },
+              "signature": "fallback()"
+            }
+          },
+          {
+            "type": "node",
+            "name": "players[winner].send(this.balance)",
+            "source_mapping": {
+              "start": 1469,
+              "length": 34,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "fallback",
+                "source_mapping": {
+                  "start": 989,
+                  "length": 648,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "dgame",
+                    "source_mapping": {
+                      "start": 703,
+                      "length": 939,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "fallback()"
+                }
+              }
+            },
+            "additional_fields": {
+              "underlying_type": "external_calls"
+            }
+          },
+          {
+            "type": "node",
+            "name": "delete players",
+            "source_mapping": {
+              "start": 1571,
+              "length": 14,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "fallback",
+                "source_mapping": {
+                  "start": 989,
+                  "length": 648,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "dgame",
+                    "source_mapping": {
+                      "start": 703,
+                      "length": 939,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "fallback()"
+                }
+              }
+            },
+            "additional_fields": {
+              "underlying_type": "variables_written",
+              "variable_name": "players"
+            }
+          }
+        ],
+        "description": "Reentrancy in dgame.fallback() ():\n\tExternal calls:\n\t- players[winner].send(this.balance) ()\n\tState variables written after the call(s):\n\t- delete players ()\n",
+        "markdown": "Reentrancy in [dgame.fallback()]():\n\tExternal calls:\n\t- [players[winner].send(this.balance)]()\n\tState variables written after the call(s):\n\t- [delete players]()\n",
+        "first_markdown_element": "",
+        "id": "d87920ceda200e48ce36b5fbcf8b4904226d9c55c3e7750df02510ded530271f",
+        "check": "reentrancy-unlimited-gas",
+        "impact": "Informational",
+        "confidence": "Medium"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "debug",
+            "source_mapping": {
+              "start": 792,
+              "length": 12,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "dgame",
+                "source_mapping": {
+                  "start": 703,
+                  "length": 939,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              }
+            }
+          },
+          {
+            "type": "contract",
+            "name": "dgame",
+            "source_mapping": {
+              "start": 703,
+              "length": 939,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            }
+          }
+        ],
+        "description": "dgame.debug () is never used in dgame ()\n",
+        "markdown": "[dgame.debug]() is never used in [dgame]()\n",
+        "first_markdown_element": "",
+        "id": "ba3f8f075176cf2675f77085a4dedabc50be85e6cabdde06f40dc6bebece869d",
+        "check": "unused-state",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "debug",
+            "source_mapping": {
+              "start": 792,
+              "length": 12,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "dgame",
+                "source_mapping": {
+                  "start": 703,
+                  "length": 939,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              }
+            }
+          }
+        ],
+        "description": "dgame.debug () should be constant \n",
+        "markdown": "[dgame.debug]() should be constant \n",
+        "first_markdown_element": "",
+        "id": "d3d497d3733121c10d4fb4b508d04eb3cd9af09b661a36f2085b409a043d63ce",
+        "check": "constable-states",
+        "impact": "Optimization",
+        "confidence": "High"
+      }
+    ]
+  }
+}

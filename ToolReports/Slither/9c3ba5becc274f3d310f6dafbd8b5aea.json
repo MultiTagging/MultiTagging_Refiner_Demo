@@ -1,0 +1,1141 @@
+{
+  "success": true,
+  "error": null,
+  "results": {
+    "detectors": [
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "close_bank",
+            "source_mapping": {
+              "start": 8371,
+              "length": 339,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "Bank_With_Interest",
+                "source_mapping": {
+                  "start": 25,
+                  "length": 9154,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              },
+              "signature": "close_bank()"
+            }
+          }
+        ],
+        "description": "Bank_With_Interest.close_bank() () allows anyone to destruct the contract\n",
+        "markdown": "[Bank_With_Interest.close_bank()]() allows anyone to destruct the contract\n",
+        "first_markdown_element": "",
+        "id": "eb1f155fd784b15af2e2b710d2c43c90ad508ed86ec8a8e829d6d0e6458667b0",
+        "check": "suicidal",
+        "impact": "High",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "extend_life_of_contract",
+            "source_mapping": {
+              "start": 7861,
+              "length": 363,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "Bank_With_Interest",
+                "source_mapping": {
+                  "start": 25,
+                  "length": 9154,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              },
+              "signature": "extend_life_of_contract(uint256)"
+            }
+          },
+          {
+            "type": "node",
+            "name": "contract_alive_until_this_block = newblock",
+            "source_mapping": {
+              "start": 8039,
+              "length": 42,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "extend_life_of_contract",
+                "source_mapping": {
+                  "start": 7861,
+                  "length": 363,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "Bank_With_Interest",
+                    "source_mapping": {
+                      "start": 25,
+                      "length": 9154,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "extend_life_of_contract(uint256)"
+                }
+              }
+            }
+          }
+        ],
+        "description": "Bank_With_Interest.extend_life_of_contract(uint256) () should emit an event for: \n\t- contract_alive_until_this_block = newblock () \n",
+        "markdown": "[Bank_With_Interest.extend_life_of_contract(uint256)]() should emit an event for: \n\t- [contract_alive_until_this_block = newblock]() \n",
+        "first_markdown_element": "",
+        "id": "e1f1b9da6dc7f0a4a4d40e0801d00aeefc4095878837352152c1d2a97be8409a",
+        "check": "events-maths",
+        "impact": "Low",
+        "confidence": "Medium"
+      },
+      {
+        "elements": [
+          {
+            "type": "node",
+            "name": "",
+            "source_mapping": {
+              "start": 3927,
+              "length": 5,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "deposit",
+                "source_mapping": {
+                  "start": 3846,
+                  "length": 902,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "Bank_With_Interest",
+                    "source_mapping": {
+                      "start": 25,
+                      "length": 9154,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "deposit()"
+                }
+              }
+            }
+          }
+        ],
+        "description": "Deprecated standard detected THROW ():\n\t- Usage of \"throw\" should be replaced with \"revert()\"\n",
+        "markdown": "Deprecated standard detected [THROW]():\n\t- Usage of \"throw\" should be replaced with \"revert()\"\n",
+        "first_markdown_element": "",
+        "id": "f5556cf1c70b64b9e4b1fc32044dd970b5f2c8b9fc21b7971fda01971033f2d5",
+        "check": "deprecated-standards",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "pragma",
+            "name": "^0.4.5",
+            "source_mapping": {
+              "start": 0,
+              "length": 23,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "directive": [
+                "solidity",
+                "^",
+                "0.4",
+                ".5"
+              ]
+            }
+          }
+        ],
+        "description": "Pragma version^0.4.5 () allows old versions\n",
+        "markdown": "Pragma version[^0.4.5]() allows old versions\n",
+        "first_markdown_element": "",
+        "id": "23d4b6d8d9b3bf74c0a2e1c7beed6da92159144a4b12267884d9bbc31b7dde93",
+        "check": "solc-version",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [],
+        "description": "solc-0.4.5 is not recommended for deployment\n",
+        "markdown": "solc-0.4.5 is not recommended for deployment\n",
+        "first_markdown_element": "",
+        "id": "7a994d3847c219ce1ec6b32684781429cb9a3ba89c1e25169f41b1cb5bc113c2",
+        "check": "solc-version",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "contract",
+            "name": "Bank_With_Interest",
+            "source_mapping": {
+              "start": 25,
+              "length": 9154,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "additional_fields": {
+              "target": "contract",
+              "convention": "CapWords"
+            }
+          }
+        ],
+        "description": "Contract Bank_With_Interest () is not in CapWords\n",
+        "markdown": "Contract [Bank_With_Interest]() is not in CapWords\n",
+        "first_markdown_element": "",
+        "id": "1c0c1dbf423d7a9ca81f5de2cd2abf65962ec5120fba77899373a5bbbe9d73a8",
+        "check": "naming-convention",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "new_fee",
+            "source_mapping": {
+              "start": 6993,
+              "length": 15,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "set_deposit_fee",
+                "source_mapping": {
+                  "start": 6967,
+                  "length": 133,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "Bank_With_Interest",
+                    "source_mapping": {
+                      "start": 25,
+                      "length": 9154,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "set_deposit_fee(uint256)"
+                }
+              }
+            },
+            "additional_fields": {
+              "target": "parameter",
+              "convention": "mixedCase"
+            }
+          }
+        ],
+        "description": "Parameter Bank_With_Interest.set_deposit_fee(uint256).new_fee () is not in mixedCase\n",
+        "markdown": "Parameter [Bank_With_Interest.set_deposit_fee(uint256).new_fee]() is not in mixedCase\n",
+        "first_markdown_element": "",
+        "id": "27605575043fcf8cceee81104b0aaac625903232e3c520d9725f19c7c2750263",
+        "check": "naming-convention",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "any_customer_payments_yet",
+            "source_mapping": {
+              "start": 2834,
+              "length": 45,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "Bank_With_Interest",
+                "source_mapping": {
+                  "start": 25,
+                  "length": 9154,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              }
+            },
+            "additional_fields": {
+              "target": "variable",
+              "convention": "mixedCase"
+            }
+          }
+        ],
+        "description": "Variable Bank_With_Interest.any_customer_payments_yet () is not in mixedCase\n",
+        "markdown": "Variable [Bank_With_Interest.any_customer_payments_yet]() is not in mixedCase\n",
+        "first_markdown_element": "",
+        "id": "2a34a7f3fe47fe7b07d4fc38f5f5e4948562cc68e6636149d77e724a41bd2125",
+        "check": "naming-convention",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "set_deposit_fee",
+            "source_mapping": {
+              "start": 6967,
+              "length": 133,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "Bank_With_Interest",
+                "source_mapping": {
+                  "start": 25,
+                  "length": 9154,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              },
+              "signature": "set_deposit_fee(uint256)"
+            },
+            "additional_fields": {
+              "target": "function",
+              "convention": "mixedCase"
+            }
+          }
+        ],
+        "description": "Function Bank_With_Interest.set_deposit_fee(uint256) () is not in mixedCase\n",
+        "markdown": "Function [Bank_With_Interest.set_deposit_fee(uint256)]() is not in mixedCase\n",
+        "first_markdown_element": "",
+        "id": "342a6587a5cdd1c329d41d29356d36de35d127aa132233dc84c9795b9bde62a7",
+        "check": "naming-convention",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "contract_alive_until_this_block",
+            "source_mapping": {
+              "start": 2777,
+              "length": 46,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "Bank_With_Interest",
+                "source_mapping": {
+                  "start": 25,
+                  "length": 9154,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              }
+            },
+            "additional_fields": {
+              "target": "variable",
+              "convention": "mixedCase"
+            }
+          }
+        ],
+        "description": "Variable Bank_With_Interest.contract_alive_until_this_block () is not in mixedCase\n",
+        "markdown": "Variable [Bank_With_Interest.contract_alive_until_this_block]() is not in mixedCase\n",
+        "first_markdown_element": "",
+        "id": "62441d1d8fefa5e67a91aeb5fa3afd1a71d2550315266189d29d3096bd34bf01",
+        "check": "naming-convention",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "new_limit",
+            "source_mapping": {
+              "start": 6814,
+              "length": 17,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "set_minimum_payment",
+                "source_mapping": {
+                  "start": 6785,
+                  "length": 144,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "Bank_With_Interest",
+                    "source_mapping": {
+                      "start": 25,
+                      "length": 9154,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "set_minimum_payment(uint256)"
+                }
+              }
+            },
+            "additional_fields": {
+              "target": "parameter",
+              "convention": "mixedCase"
+            }
+          }
+        ],
+        "description": "Parameter Bank_With_Interest.set_minimum_payment(uint256).new_limit () is not in mixedCase\n",
+        "markdown": "Parameter [Bank_With_Interest.set_minimum_payment(uint256).new_limit]() is not in mixedCase\n",
+        "first_markdown_element": "",
+        "id": "649db5f30368673de4f7d98d5f1bea8d368857f7d4c00261ae9ae8e19085d450",
+        "check": "naming-convention",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "withdraw_amount",
+            "source_mapping": {
+              "start": 5052,
+              "length": 23,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "withdraw",
+                "source_mapping": {
+                  "start": 5034,
+                  "length": 1516,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "Bank_With_Interest",
+                    "source_mapping": {
+                      "start": 25,
+                      "length": 9154,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "withdraw(uint256)"
+                }
+              }
+            },
+            "additional_fields": {
+              "target": "parameter",
+              "convention": "mixedCase"
+            }
+          }
+        ],
+        "description": "Parameter Bank_With_Interest.withdraw(uint256).withdraw_amount () is not in mixedCase\n",
+        "markdown": "Parameter [Bank_With_Interest.withdraw(uint256).withdraw_amount]() is not in mixedCase\n",
+        "first_markdown_element": "",
+        "id": "64ebecbd613b39c6ab6779baa870c10aff9e5e776ae50892e0ced6bc39d40065",
+        "check": "naming-convention",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "get_term_deposit_end_date",
+            "source_mapping": {
+              "start": 7349,
+              "length": 114,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "Bank_With_Interest",
+                "source_mapping": {
+                  "start": 25,
+                  "length": 9154,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              },
+              "signature": "get_term_deposit_end_date()"
+            },
+            "additional_fields": {
+              "target": "function",
+              "convention": "mixedCase"
+            }
+          }
+        ],
+        "description": "Function Bank_With_Interest.get_term_deposit_end_date() () is not in mixedCase\n",
+        "markdown": "Function [Bank_With_Interest.get_term_deposit_end_date()]() is not in mixedCase\n",
+        "first_markdown_element": "",
+        "id": "a6e850418ea0bd508b92ee3f8358d3ad66a967e3c8021a05f05373fde194976f",
+        "check": "naming-convention",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "term_deposit_end_block",
+            "source_mapping": {
+              "start": 2440,
+              "length": 50,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "Bank_With_Interest",
+                "source_mapping": {
+                  "start": 25,
+                  "length": 9154,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              }
+            },
+            "additional_fields": {
+              "target": "variable",
+              "convention": "mixedCase"
+            }
+          }
+        ],
+        "description": "Variable Bank_With_Interest.term_deposit_end_block () is not in mixedCase\n",
+        "markdown": "Variable [Bank_With_Interest.term_deposit_end_block]() is not in mixedCase\n",
+        "first_markdown_element": "",
+        "id": "af96e89754eb26a4d6720c425151a0bd0c6235ac96b2469461945b974250016f",
+        "check": "naming-convention",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "get_available_interest_amount",
+            "source_mapping": {
+              "start": 7176,
+              "length": 101,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "Bank_With_Interest",
+                "source_mapping": {
+                  "start": 25,
+                  "length": 9154,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              },
+              "signature": "get_available_interest_amount()"
+            },
+            "additional_fields": {
+              "target": "function",
+              "convention": "mixedCase"
+            }
+          }
+        ],
+        "description": "Function Bank_With_Interest.get_available_interest_amount() () is not in mixedCase\n",
+        "markdown": "Function [Bank_With_Interest.get_available_interest_amount()]() is not in mixedCase\n",
+        "first_markdown_element": "",
+        "id": "c0a6f2f4b12d3c04c5096bcd8ab372d89157486cebfb290da8d05bc213befccc",
+        "check": "naming-convention",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "close_bank",
+            "source_mapping": {
+              "start": 8371,
+              "length": 339,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "Bank_With_Interest",
+                "source_mapping": {
+                  "start": 25,
+                  "length": 9154,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              },
+              "signature": "close_bank()"
+            },
+            "additional_fields": {
+              "target": "function",
+              "convention": "mixedCase"
+            }
+          }
+        ],
+        "description": "Function Bank_With_Interest.close_bank() () is not in mixedCase\n",
+        "markdown": "Function [Bank_With_Interest.close_bank()]() is not in mixedCase\n",
+        "first_markdown_element": "",
+        "id": "d53d8c64082992e2e18fbb73185c5dab928967ffad37ef70169f79060e8f79c9",
+        "check": "naming-convention",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "extend_life_of_contract",
+            "source_mapping": {
+              "start": 7861,
+              "length": 363,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "Bank_With_Interest",
+                "source_mapping": {
+                  "start": 25,
+                  "length": 9154,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              },
+              "signature": "extend_life_of_contract(uint256)"
+            },
+            "additional_fields": {
+              "target": "function",
+              "convention": "mixedCase"
+            }
+          }
+        ],
+        "description": "Function Bank_With_Interest.extend_life_of_contract(uint256) () is not in mixedCase\n",
+        "markdown": "Function [Bank_With_Interest.extend_life_of_contract(uint256)]() is not in mixedCase\n",
+        "first_markdown_element": "",
+        "id": "dcc97e0babbdfec9a5d2311e1fa2d95b314b28eaf11f67586ec846d86b37823a",
+        "check": "naming-convention",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "minimum_payment",
+            "source_mapping": {
+              "start": 2660,
+              "length": 30,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "Bank_With_Interest",
+                "source_mapping": {
+                  "start": 25,
+                  "length": 9154,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              }
+            },
+            "additional_fields": {
+              "target": "variable",
+              "convention": "mixedCase"
+            }
+          }
+        ],
+        "description": "Variable Bank_With_Interest.minimum_payment () is not in mixedCase\n",
+        "markdown": "Variable [Bank_With_Interest.minimum_payment]() is not in mixedCase\n",
+        "first_markdown_element": "",
+        "id": "dd049ddfe96178fcef565fc94d60419e0361847c4461f120a7f3b0fe7c1e6b7b",
+        "check": "naming-convention",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "deposit_fee",
+            "source_mapping": {
+              "start": 2716,
+              "length": 26,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "Bank_With_Interest",
+                "source_mapping": {
+                  "start": 25,
+                  "length": 9154,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              }
+            },
+            "additional_fields": {
+              "target": "variable",
+              "convention": "mixedCase"
+            }
+          }
+        ],
+        "description": "Variable Bank_With_Interest.deposit_fee () is not in mixedCase\n",
+        "markdown": "Variable [Bank_With_Interest.deposit_fee]() is not in mixedCase\n",
+        "first_markdown_element": "",
+        "id": "e38caf95a2678c9cf9aef81a67f06d55de73e68e49b27b27789bc3f6fb751aed",
+        "check": "naming-convention",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "set_minimum_payment",
+            "source_mapping": {
+              "start": 6785,
+              "length": 144,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "Bank_With_Interest",
+                "source_mapping": {
+                  "start": 25,
+                  "length": 9154,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              },
+              "signature": "set_minimum_payment(uint256)"
+            },
+            "additional_fields": {
+              "target": "function",
+              "convention": "mixedCase"
+            }
+          }
+        ],
+        "description": "Function Bank_With_Interest.set_minimum_payment(uint256) () is not in mixedCase\n",
+        "markdown": "Function [Bank_With_Interest.set_minimum_payment(uint256)]() is not in mixedCase\n",
+        "first_markdown_element": "",
+        "id": "f00923966a16406ef5b6163d0dfb7b0ccc39f202667479c9a4ce8cfe9e32320a",
+        "check": "naming-convention",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "get_balance",
+            "source_mapping": {
+              "start": 7538,
+              "length": 86,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "Bank_With_Interest",
+                "source_mapping": {
+                  "start": 25,
+                  "length": 9154,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              },
+              "signature": "get_balance()"
+            },
+            "additional_fields": {
+              "target": "function",
+              "convention": "mixedCase"
+            }
+          }
+        ],
+        "description": "Function Bank_With_Interest.get_balance() () is not in mixedCase\n",
+        "markdown": "Function [Bank_With_Interest.get_balance()]() is not in mixedCase\n",
+        "first_markdown_element": "",
+        "id": "fd4e4d2d3f84f99256c85e9a92d9dd639b33f962c5f3bf4feb76074d1eeb9cfa",
+        "check": "naming-convention",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "Bank_With_Interest",
+            "source_mapping": {
+              "start": 3046,
+              "length": 554,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "Bank_With_Interest",
+                "source_mapping": {
+                  "start": 25,
+                  "length": 9154,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              },
+              "signature": "Bank_With_Interest()"
+            }
+          },
+          {
+            "type": "node",
+            "name": "contract_alive_until_this_block = 3000000",
+            "source_mapping": {
+              "start": 3209,
+              "length": 41,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "Bank_With_Interest",
+                "source_mapping": {
+                  "start": 3046,
+                  "length": 554,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "Bank_With_Interest",
+                    "source_mapping": {
+                      "start": 25,
+                      "length": 9154,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "Bank_With_Interest()"
+                }
+              }
+            }
+          }
+        ],
+        "description": "Bank_With_Interest.Bank_With_Interest() () uses literals with too many digits:\n\t- contract_alive_until_this_block = 3000000 ()\n",
+        "markdown": "[Bank_With_Interest.Bank_With_Interest()]() uses literals with too many digits:\n\t- [contract_alive_until_this_block = 3000000]()\n",
+        "first_markdown_element": "",
+        "id": "8b5079b9147e10ec6fdb68376206d0b9bd8ff54a60561f3f338ad4f49a16c1c3",
+        "check": "too-many-digits",
+        "impact": "Informational",
+        "confidence": "Medium"
+      }
+    ]
+  }
+}

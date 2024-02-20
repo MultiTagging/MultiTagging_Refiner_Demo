@@ -1,0 +1,377 @@
+{
+  "success": true,
+  "error": null,
+  "results": {
+    "detectors": [
+      {
+        "elements": [
+          {
+            "type": "contract",
+            "name": "Ballot",
+            "source_mapping": {
+              "start": 24,
+              "length": 2075,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            }
+          },
+          {
+            "type": "node",
+            "name": "proposals.length = _numProposals",
+            "source_mapping": {
+              "start": 494,
+              "length": 32,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "Ballot",
+                "source_mapping": {
+                  "start": 373,
+                  "length": 160,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "Ballot",
+                    "source_mapping": {
+                      "start": 24,
+                      "length": 2075,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "Ballot(uint8)"
+                }
+              }
+            }
+          }
+        ],
+        "description": "Ballot () contract sets array length with a user-controlled value:\n\t- proposals.length = _numProposals ()\n",
+        "markdown": "[Ballot]() contract sets array length with a user-controlled value:\n\t- [proposals.length = _numProposals]()\n",
+        "first_markdown_element": "",
+        "id": "99415067bf2321fd57e177c1f8bf744371f62f47f5e9b2de5b510bfbe72964ea",
+        "check": "controlled-array-length",
+        "impact": "High",
+        "confidence": "Medium"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "delegate",
+            "source_mapping": {
+              "start": 1205,
+              "length": 27,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "delegate",
+                "source_mapping": {
+                  "start": 845,
+                  "length": 546,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "Ballot",
+                    "source_mapping": {
+                      "start": 24,
+                      "length": 2075,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "delegate(address)"
+                }
+              }
+            }
+          },
+          {
+            "type": "function",
+            "name": "delegate",
+            "source_mapping": {
+              "start": 845,
+              "length": 546,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "Ballot",
+                "source_mapping": {
+                  "start": 24,
+                  "length": 2075,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              },
+              "signature": "delegate(address)"
+            }
+          }
+        ],
+        "description": "Ballot.delegate(address).delegate () shadows:\n\t- Ballot.delegate(address) () (function)\n",
+        "markdown": "[Ballot.delegate(address).delegate]() shadows:\n\t- [Ballot.delegate(address)]() (function)\n",
+        "first_markdown_element": "",
+        "id": "320eeb5999f7b66dd7f4e186a34819549bfe46433070de505a1001445d478637",
+        "check": "shadowing-local",
+        "impact": "Low",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "winningProposal",
+            "source_mapping": {
+              "start": 1763,
+              "length": 21,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "winningProposal",
+                "source_mapping": {
+                  "start": 1718,
+                  "length": 379,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "Ballot",
+                    "source_mapping": {
+                      "start": 24,
+                      "length": 2075,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "winningProposal()"
+                }
+              }
+            }
+          },
+          {
+            "type": "function",
+            "name": "winningProposal",
+            "source_mapping": {
+              "start": 1718,
+              "length": 379,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "Ballot",
+                "source_mapping": {
+                  "start": 24,
+                  "length": 2075,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              },
+              "signature": "winningProposal()"
+            }
+          }
+        ],
+        "description": "Ballot.winningProposal().winningProposal () shadows:\n\t- Ballot.winningProposal() () (function)\n",
+        "markdown": "[Ballot.winningProposal().winningProposal]() shadows:\n\t- [Ballot.winningProposal()]() (function)\n",
+        "first_markdown_element": "",
+        "id": "676187a99f49875de5638231d150d519b853502aa0e3ed55e4b2c1cdbed4d89f",
+        "check": "shadowing-local",
+        "impact": "Low",
+        "confidence": "High"
+      },
+      {
+        "elements": [],
+        "description": "solc-0.4.0 is not recommended for deployment\n",
+        "markdown": "solc-0.4.0 is not recommended for deployment\n",
+        "first_markdown_element": "",
+        "id": "e676d9e89e623fa7675baecce41eb7ab21d1d8ec9e856bc5b047e6cfb50b37ca",
+        "check": "solc-version",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "pragma",
+            "name": "^0.4.0",
+            "source_mapping": {
+              "start": 0,
+              "length": 23,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "directive": [
+                "solidity",
+                "^",
+                "0.4",
+                ".0"
+              ]
+            }
+          }
+        ],
+        "description": "Pragma version^0.4.0 () allows old versions\n",
+        "markdown": "Pragma version[^0.4.0]() allows old versions\n",
+        "first_markdown_element": "",
+        "id": "f4d0f96f990510a571c7ae954763f848d217d6f86fa5953d251f28f5221969e2",
+        "check": "solc-version",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "node",
+            "name": "proposal < proposals.length",
+            "source_mapping": {
+              "start": 1859,
+              "length": 27,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "winningProposal",
+                "source_mapping": {
+                  "start": 1718,
+                  "length": 379,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "Ballot",
+                    "source_mapping": {
+                      "start": 24,
+                      "length": 2075,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "winningProposal()"
+                }
+              }
+            }
+          }
+        ],
+        "description": "Loop condition proposal < proposals.length () should use cached array length instead of referencing `length` member of the storage array.\n ",
+        "markdown": "Loop condition [proposal < proposals.length]() should use cached array length instead of referencing `length` member of the storage array.\n ",
+        "first_markdown_element": "",
+        "id": "ac205dc17103cee3d9076300d2982cee952dca4f15f00a77fe04ef873beddfb3",
+        "check": "cache-array-length",
+        "impact": "Optimization",
+        "confidence": "High"
+      }
+    ]
+  }
+}

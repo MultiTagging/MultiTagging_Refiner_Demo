@@ -1,0 +1,42 @@
+{
+  "fileName": "Benchmarks/Study_SamplesSet/88f76d47fd48a0d7142dd77c6eb24e86.sol",
+  "baseName": "88f76d47fd48a0d7142dd77c6eb24e86.sol",
+  "iter": 126,
+  "time": "294.647469",
+  "errMsg": null,
+  "result": [
+    {
+      "no": "1",
+      "kind": "IO",
+      "line": 65,
+      "signatures": [
+        {
+          "contractName": "TokenBank",
+          "methodName": "@fallback",
+          "argTypes": []
+        },
+        {
+          "contractName": "TokenBank",
+          "methodName": "Deposit",
+          "argTypes": []
+        }
+      ],
+      "exp": "(Holders[msg.sender] + msg.value)",
+      "status": "unproven"
+    },
+    {
+      "no": "2",
+      "kind": "IO",
+      "line": 90,
+      "signatures": [
+        {
+          "contractName": "TokenBank",
+          "methodName": "WithdrawToHolder",
+          "argTypes": [ "address", "uint256" ]
+        }
+      ],
+      "exp": "(Holders[_addr] - _wei)",
+      "status": "proven"
+    }
+  ]
+}

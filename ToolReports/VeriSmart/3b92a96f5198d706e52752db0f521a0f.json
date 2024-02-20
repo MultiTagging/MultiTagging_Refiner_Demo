@@ -1,0 +1,51 @@
+{
+  "fileName": "Benchmarks/Study_SamplesSet/3b92a96f5198d706e52752db0f521a0f.sol",
+  "baseName": "3b92a96f5198d706e52752db0f521a0f.sol",
+  "iter": 15,
+  "time": "0.741066",
+  "errMsg": null,
+  "result": [
+    {
+      "no": "1",
+      "kind": "ETH_LEAK",
+      "line": 40,
+      "signatures": [
+        {
+          "contractName": "Lottery50chance",
+          "methodName": "play",
+          "argTypes": [ "uint256" ]
+        }
+      ],
+      "exp": "msg.sender.transfer(address(this).balance);",
+      "status": "unproven"
+    },
+    {
+      "no": "2",
+      "kind": "ETH_LEAK",
+      "line": 42,
+      "signatures": [
+        {
+          "contractName": "Lottery50chance",
+          "methodName": "play",
+          "argTypes": [ "uint256" ]
+        }
+      ],
+      "exp": "owner.transfer(address(this).balance);",
+      "status": "proven"
+    },
+    {
+      "no": "3",
+      "kind": "ETH_LEAK",
+      "line": 52,
+      "signatures": [
+        {
+          "contractName": "Lottery50chance",
+          "methodName": "withdraw",
+          "argTypes": [ "uint256" ]
+        }
+      ],
+      "exp": "owner.transfer(amount);",
+      "status": "proven"
+    }
+  ]
+}

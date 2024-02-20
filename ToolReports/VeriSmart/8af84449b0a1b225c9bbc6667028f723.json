@@ -1,0 +1,37 @@
+{
+  "fileName": "Benchmarks/Study_SamplesSet/8af84449b0a1b225c9bbc6667028f723.sol",
+  "baseName": "8af84449b0a1b225c9bbc6667028f723.sol",
+  "iter": 8,
+  "time": "0.19934",
+  "errMsg": null,
+  "result": [
+    {
+      "no": "1",
+      "kind": "IO",
+      "line": 17,
+      "signatures": [
+        {
+          "contractName": "uninitStateVar",
+          "methodName": "giveMeMoney",
+          "argTypes": []
+        }
+      ],
+      "exp": "(_order + 1)",
+      "status": "unproven"
+    },
+    {
+      "no": "2",
+      "kind": "ETH_LEAK",
+      "line": 25,
+      "signatures": [
+        {
+          "contractName": "uninitStateVar",
+          "methodName": "withdrawDonation",
+          "argTypes": []
+        }
+      ],
+      "exp": "payee.transfer(address(this).balance);",
+      "status": "proven"
+    }
+  ]
+}

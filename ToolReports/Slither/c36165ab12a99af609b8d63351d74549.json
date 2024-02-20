@@ -1,0 +1,1208 @@
+{
+  "success": true,
+  "error": null,
+  "results": {
+    "detectors": [
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "GetFreebie",
+            "source_mapping": {
+              "start": 162,
+              "length": 5657,
+              "filename_relative": "Benchmarks/Study_SamplesSet/c36165ab12a99af609b8d63351d74549.sol",
+              "filename_absolute": "/home/shikah/Documents/PhD/VulDet/Benchmarks/Study_SamplesSet/c36165ab12a99af609b8d63351d74549.sol",
+              "filename_short": "Benchmarks/Study_SamplesSet/c36165ab12a99af609b8d63351d74549.sol",
+              "is_dependency": false,
+              "lines": [
+                14,
+                15,
+                16,
+                17,
+                18,
+                19,
+                20,
+                21,
+                22
+              ],
+              "starting_column": 5,
+              "ending_column": 6
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "WhaleGiveaway1",
+                "source_mapping": {
+                  "start": 26,
+                  "length": 9210,
+                  "filename_relative": "Benchmarks/Study_SamplesSet/c36165ab12a99af609b8d63351d74549.sol",
+                  "filename_absolute": "/home/shikah/Documents/PhD/VulDet/Benchmarks/Study_SamplesSet/c36165ab12a99af609b8d63351d74549.sol",
+                  "filename_short": "Benchmarks/Study_SamplesSet/c36165ab12a99af609b8d63351d74549.sol",
+                  "is_dependency": false,
+                  "lines": [
+                    3,
+                    4,
+                    5,
+                    6,
+                    7,
+                    8,
+                    9,
+                    10,
+                    11,
+                    12,
+                    13,
+                    14,
+                    15,
+                    16,
+                    17,
+                    18,
+                    19,
+                    20,
+                    21,
+                    22,
+                    23,
+                    24,
+                    25,
+                    26,
+                    27,
+                    28,
+                    29,
+                    30,
+                    31,
+                    32,
+                    33,
+                    34,
+                    35,
+                    36,
+                    37,
+                    38,
+                    39,
+                    40
+                  ],
+                  "starting_column": 1,
+                  "ending_column": 0
+                }
+              },
+              "signature": "GetFreebie()"
+            }
+          },
+          {
+            "type": "node",
+            "name": "msg.sender.transfer(this.balance)",
+            "source_mapping": {
+              "start": 5657,
+              "length": 33,
+              "filename_relative": "Benchmarks/Study_SamplesSet/c36165ab12a99af609b8d63351d74549.sol",
+              "filename_absolute": "/home/shikah/Documents/PhD/VulDet/Benchmarks/Study_SamplesSet/c36165ab12a99af609b8d63351d74549.sol",
+              "filename_short": "Benchmarks/Study_SamplesSet/c36165ab12a99af609b8d63351d74549.sol",
+              "is_dependency": false,
+              "lines": [
+                20
+              ],
+              "starting_column": 13,
+              "ending_column": 46
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "GetFreebie",
+                "source_mapping": {
+                  "start": 162,
+                  "length": 5657,
+                  "filename_relative": "Benchmarks/Study_SamplesSet/c36165ab12a99af609b8d63351d74549.sol",
+                  "filename_absolute": "/home/shikah/Documents/PhD/VulDet/Benchmarks/Study_SamplesSet/c36165ab12a99af609b8d63351d74549.sol",
+                  "filename_short": "Benchmarks/Study_SamplesSet/c36165ab12a99af609b8d63351d74549.sol",
+                  "is_dependency": false,
+                  "lines": [
+                    14,
+                    15,
+                    16,
+                    17,
+                    18,
+                    19,
+                    20,
+                    21,
+                    22
+                  ],
+                  "starting_column": 5,
+                  "ending_column": 6
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "WhaleGiveaway1",
+                    "source_mapping": {
+                      "start": 26,
+                      "length": 9210,
+                      "filename_relative": "Benchmarks/Study_SamplesSet/c36165ab12a99af609b8d63351d74549.sol",
+                      "filename_absolute": "/home/shikah/Documents/PhD/VulDet/Benchmarks/Study_SamplesSet/c36165ab12a99af609b8d63351d74549.sol",
+                      "filename_short": "Benchmarks/Study_SamplesSet/c36165ab12a99af609b8d63351d74549.sol",
+                      "is_dependency": false,
+                      "lines": [
+                        3,
+                        4,
+                        5,
+                        6,
+                        7,
+                        8,
+                        9,
+                        10,
+                        11,
+                        12,
+                        13,
+                        14,
+                        15,
+                        16,
+                        17,
+                        18,
+                        19,
+                        20,
+                        21,
+                        22,
+                        23,
+                        24,
+                        25,
+                        26,
+                        27,
+                        28,
+                        29,
+                        30,
+                        31,
+                        32,
+                        33,
+                        34,
+                        35,
+                        36,
+                        37,
+                        38,
+                        39,
+                        40
+                      ],
+                      "starting_column": 1,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "GetFreebie()"
+                }
+              }
+            }
+          }
+        ],
+        "description": "WhaleGiveaway1.GetFreebie() (Benchmarks/Study_SamplesSet/c36165ab12a99af609b8d63351d74549.sol#14-22) sends eth to arbitrary user\n\tDangerous calls:\n\t- msg.sender.transfer(this.balance) (Benchmarks/Study_SamplesSet/c36165ab12a99af609b8d63351d74549.sol#20)\n",
+        "markdown": "[WhaleGiveaway1.GetFreebie()](Benchmarks/Study_SamplesSet/c36165ab12a99af609b8d63351d74549.sol#L14-L22) sends eth to arbitrary user\n\tDangerous calls:\n\t- [msg.sender.transfer(this.balance)](Benchmarks/Study_SamplesSet/c36165ab12a99af609b8d63351d74549.sol#L20)\n",
+        "first_markdown_element": "Benchmarks/Study_SamplesSet/c36165ab12a99af609b8d63351d74549.sol#L14-L22",
+        "id": "de59c3c4003cc22747727a8853daad8688d65fca745f9193ecc42f88eaebf856",
+        "check": "arbitrary-send-eth",
+        "impact": "High",
+        "confidence": "Medium"
+      },
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "Command",
+            "source_mapping": {
+              "start": 9080,
+              "length": 154,
+              "filename_relative": "Benchmarks/Study_SamplesSet/c36165ab12a99af609b8d63351d74549.sol",
+              "filename_absolute": "/home/shikah/Documents/PhD/VulDet/Benchmarks/Study_SamplesSet/c36165ab12a99af609b8d63351d74549.sol",
+              "filename_short": "Benchmarks/Study_SamplesSet/c36165ab12a99af609b8d63351d74549.sol",
+              "is_dependency": false,
+              "lines": [
+                32,
+                33,
+                34,
+                35,
+                36,
+                37,
+                38
+              ],
+              "starting_column": 5,
+              "ending_column": 6
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "WhaleGiveaway1",
+                "source_mapping": {
+                  "start": 26,
+                  "length": 9210,
+                  "filename_relative": "Benchmarks/Study_SamplesSet/c36165ab12a99af609b8d63351d74549.sol",
+                  "filename_absolute": "/home/shikah/Documents/PhD/VulDet/Benchmarks/Study_SamplesSet/c36165ab12a99af609b8d63351d74549.sol",
+                  "filename_short": "Benchmarks/Study_SamplesSet/c36165ab12a99af609b8d63351d74549.sol",
+                  "is_dependency": false,
+                  "lines": [
+                    3,
+                    4,
+                    5,
+                    6,
+                    7,
+                    8,
+                    9,
+                    10,
+                    11,
+                    12,
+                    13,
+                    14,
+                    15,
+                    16,
+                    17,
+                    18,
+                    19,
+                    20,
+                    21,
+                    22,
+                    23,
+                    24,
+                    25,
+                    26,
+                    27,
+                    28,
+                    29,
+                    30,
+                    31,
+                    32,
+                    33,
+                    34,
+                    35,
+                    36,
+                    37,
+                    38,
+                    39,
+                    40
+                  ],
+                  "starting_column": 1,
+                  "ending_column": 0
+                }
+              },
+              "signature": "Command(address,bytes)"
+            }
+          },
+          {
+            "type": "node",
+            "name": "adr.call.value(msg.value)(data)",
+            "source_mapping": {
+              "start": 9196,
+              "length": 31,
+              "filename_relative": "Benchmarks/Study_SamplesSet/c36165ab12a99af609b8d63351d74549.sol",
+              "filename_absolute": "/home/shikah/Documents/PhD/VulDet/Benchmarks/Study_SamplesSet/c36165ab12a99af609b8d63351d74549.sol",
+              "filename_short": "Benchmarks/Study_SamplesSet/c36165ab12a99af609b8d63351d74549.sol",
+              "is_dependency": false,
+              "lines": [
+                37
+              ],
+              "starting_column": 9,
+              "ending_column": 40
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "Command",
+                "source_mapping": {
+                  "start": 9080,
+                  "length": 154,
+                  "filename_relative": "Benchmarks/Study_SamplesSet/c36165ab12a99af609b8d63351d74549.sol",
+                  "filename_absolute": "/home/shikah/Documents/PhD/VulDet/Benchmarks/Study_SamplesSet/c36165ab12a99af609b8d63351d74549.sol",
+                  "filename_short": "Benchmarks/Study_SamplesSet/c36165ab12a99af609b8d63351d74549.sol",
+                  "is_dependency": false,
+                  "lines": [
+                    32,
+                    33,
+                    34,
+                    35,
+                    36,
+                    37,
+                    38
+                  ],
+                  "starting_column": 5,
+                  "ending_column": 6
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "WhaleGiveaway1",
+                    "source_mapping": {
+                      "start": 26,
+                      "length": 9210,
+                      "filename_relative": "Benchmarks/Study_SamplesSet/c36165ab12a99af609b8d63351d74549.sol",
+                      "filename_absolute": "/home/shikah/Documents/PhD/VulDet/Benchmarks/Study_SamplesSet/c36165ab12a99af609b8d63351d74549.sol",
+                      "filename_short": "Benchmarks/Study_SamplesSet/c36165ab12a99af609b8d63351d74549.sol",
+                      "is_dependency": false,
+                      "lines": [
+                        3,
+                        4,
+                        5,
+                        6,
+                        7,
+                        8,
+                        9,
+                        10,
+                        11,
+                        12,
+                        13,
+                        14,
+                        15,
+                        16,
+                        17,
+                        18,
+                        19,
+                        20,
+                        21,
+                        22,
+                        23,
+                        24,
+                        25,
+                        26,
+                        27,
+                        28,
+                        29,
+                        30,
+                        31,
+                        32,
+                        33,
+                        34,
+                        35,
+                        36,
+                        37,
+                        38,
+                        39,
+                        40
+                      ],
+                      "starting_column": 1,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "Command(address,bytes)"
+                }
+              }
+            }
+          }
+        ],
+        "description": "WhaleGiveaway1.Command(address,bytes) (Benchmarks/Study_SamplesSet/c36165ab12a99af609b8d63351d74549.sol#32-38) ignores return value by adr.call.value(msg.value)(data) (Benchmarks/Study_SamplesSet/c36165ab12a99af609b8d63351d74549.sol#37)\n",
+        "markdown": "[WhaleGiveaway1.Command(address,bytes)](Benchmarks/Study_SamplesSet/c36165ab12a99af609b8d63351d74549.sol#L32-L38) ignores return value by [adr.call.value(msg.value)(data)](Benchmarks/Study_SamplesSet/c36165ab12a99af609b8d63351d74549.sol#L37)\n",
+        "first_markdown_element": "Benchmarks/Study_SamplesSet/c36165ab12a99af609b8d63351d74549.sol#L32-L38",
+        "id": "5b6c9e6243c01e50256c98b2ac096f9a2dfbf85ef977e532563b62ef3dba6932",
+        "check": "unchecked-lowlevel",
+        "impact": "Medium",
+        "confidence": "Medium"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "adr",
+            "source_mapping": {
+              "start": 9097,
+              "length": 11,
+              "filename_relative": "Benchmarks/Study_SamplesSet/c36165ab12a99af609b8d63351d74549.sol",
+              "filename_absolute": "/home/shikah/Documents/PhD/VulDet/Benchmarks/Study_SamplesSet/c36165ab12a99af609b8d63351d74549.sol",
+              "filename_short": "Benchmarks/Study_SamplesSet/c36165ab12a99af609b8d63351d74549.sol",
+              "is_dependency": false,
+              "lines": [
+                32
+              ],
+              "starting_column": 22,
+              "ending_column": 33
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "Command",
+                "source_mapping": {
+                  "start": 9080,
+                  "length": 154,
+                  "filename_relative": "Benchmarks/Study_SamplesSet/c36165ab12a99af609b8d63351d74549.sol",
+                  "filename_absolute": "/home/shikah/Documents/PhD/VulDet/Benchmarks/Study_SamplesSet/c36165ab12a99af609b8d63351d74549.sol",
+                  "filename_short": "Benchmarks/Study_SamplesSet/c36165ab12a99af609b8d63351d74549.sol",
+                  "is_dependency": false,
+                  "lines": [
+                    32,
+                    33,
+                    34,
+                    35,
+                    36,
+                    37,
+                    38
+                  ],
+                  "starting_column": 5,
+                  "ending_column": 6
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "WhaleGiveaway1",
+                    "source_mapping": {
+                      "start": 26,
+                      "length": 9210,
+                      "filename_relative": "Benchmarks/Study_SamplesSet/c36165ab12a99af609b8d63351d74549.sol",
+                      "filename_absolute": "/home/shikah/Documents/PhD/VulDet/Benchmarks/Study_SamplesSet/c36165ab12a99af609b8d63351d74549.sol",
+                      "filename_short": "Benchmarks/Study_SamplesSet/c36165ab12a99af609b8d63351d74549.sol",
+                      "is_dependency": false,
+                      "lines": [
+                        3,
+                        4,
+                        5,
+                        6,
+                        7,
+                        8,
+                        9,
+                        10,
+                        11,
+                        12,
+                        13,
+                        14,
+                        15,
+                        16,
+                        17,
+                        18,
+                        19,
+                        20,
+                        21,
+                        22,
+                        23,
+                        24,
+                        25,
+                        26,
+                        27,
+                        28,
+                        29,
+                        30,
+                        31,
+                        32,
+                        33,
+                        34,
+                        35,
+                        36,
+                        37,
+                        38,
+                        39,
+                        40
+                      ],
+                      "starting_column": 1,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "Command(address,bytes)"
+                }
+              }
+            }
+          },
+          {
+            "type": "node",
+            "name": "adr.call.value(msg.value)(data)",
+            "source_mapping": {
+              "start": 9196,
+              "length": 31,
+              "filename_relative": "Benchmarks/Study_SamplesSet/c36165ab12a99af609b8d63351d74549.sol",
+              "filename_absolute": "/home/shikah/Documents/PhD/VulDet/Benchmarks/Study_SamplesSet/c36165ab12a99af609b8d63351d74549.sol",
+              "filename_short": "Benchmarks/Study_SamplesSet/c36165ab12a99af609b8d63351d74549.sol",
+              "is_dependency": false,
+              "lines": [
+                37
+              ],
+              "starting_column": 9,
+              "ending_column": 40
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "Command",
+                "source_mapping": {
+                  "start": 9080,
+                  "length": 154,
+                  "filename_relative": "Benchmarks/Study_SamplesSet/c36165ab12a99af609b8d63351d74549.sol",
+                  "filename_absolute": "/home/shikah/Documents/PhD/VulDet/Benchmarks/Study_SamplesSet/c36165ab12a99af609b8d63351d74549.sol",
+                  "filename_short": "Benchmarks/Study_SamplesSet/c36165ab12a99af609b8d63351d74549.sol",
+                  "is_dependency": false,
+                  "lines": [
+                    32,
+                    33,
+                    34,
+                    35,
+                    36,
+                    37,
+                    38
+                  ],
+                  "starting_column": 5,
+                  "ending_column": 6
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "WhaleGiveaway1",
+                    "source_mapping": {
+                      "start": 26,
+                      "length": 9210,
+                      "filename_relative": "Benchmarks/Study_SamplesSet/c36165ab12a99af609b8d63351d74549.sol",
+                      "filename_absolute": "/home/shikah/Documents/PhD/VulDet/Benchmarks/Study_SamplesSet/c36165ab12a99af609b8d63351d74549.sol",
+                      "filename_short": "Benchmarks/Study_SamplesSet/c36165ab12a99af609b8d63351d74549.sol",
+                      "is_dependency": false,
+                      "lines": [
+                        3,
+                        4,
+                        5,
+                        6,
+                        7,
+                        8,
+                        9,
+                        10,
+                        11,
+                        12,
+                        13,
+                        14,
+                        15,
+                        16,
+                        17,
+                        18,
+                        19,
+                        20,
+                        21,
+                        22,
+                        23,
+                        24,
+                        25,
+                        26,
+                        27,
+                        28,
+                        29,
+                        30,
+                        31,
+                        32,
+                        33,
+                        34,
+                        35,
+                        36,
+                        37,
+                        38,
+                        39,
+                        40
+                      ],
+                      "starting_column": 1,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "Command(address,bytes)"
+                }
+              }
+            }
+          }
+        ],
+        "description": "WhaleGiveaway1.Command(address,bytes).adr (Benchmarks/Study_SamplesSet/c36165ab12a99af609b8d63351d74549.sol#32) lacks a zero-check on :\n\t\t- adr.call.value(msg.value)(data) (Benchmarks/Study_SamplesSet/c36165ab12a99af609b8d63351d74549.sol#37)\n",
+        "markdown": "[WhaleGiveaway1.Command(address,bytes).adr](Benchmarks/Study_SamplesSet/c36165ab12a99af609b8d63351d74549.sol#L32) lacks a zero-check on :\n\t\t- [adr.call.value(msg.value)(data)](Benchmarks/Study_SamplesSet/c36165ab12a99af609b8d63351d74549.sol#L37)\n",
+        "first_markdown_element": "Benchmarks/Study_SamplesSet/c36165ab12a99af609b8d63351d74549.sol#L32",
+        "id": "6c2d6b190ac56821bae36c0677436695da2244b0543a1e4c3ac66828df660dd2",
+        "check": "missing-zero-check",
+        "impact": "Low",
+        "confidence": "Medium"
+      },
+      {
+        "elements": [
+          {
+            "type": "pragma",
+            "name": "^0.4.19",
+            "source_mapping": {
+              "start": 0,
+              "length": 24,
+              "filename_relative": "Benchmarks/Study_SamplesSet/c36165ab12a99af609b8d63351d74549.sol",
+              "filename_absolute": "/home/shikah/Documents/PhD/VulDet/Benchmarks/Study_SamplesSet/c36165ab12a99af609b8d63351d74549.sol",
+              "filename_short": "Benchmarks/Study_SamplesSet/c36165ab12a99af609b8d63351d74549.sol",
+              "is_dependency": false,
+              "lines": [
+                1
+              ],
+              "starting_column": 1,
+              "ending_column": 25
+            },
+            "type_specific_fields": {
+              "directive": [
+                "solidity",
+                "^",
+                "0.4",
+                ".19"
+              ]
+            }
+          }
+        ],
+        "description": "Pragma version^0.4.19 (Benchmarks/Study_SamplesSet/c36165ab12a99af609b8d63351d74549.sol#1) allows old versions\n",
+        "markdown": "Pragma version[^0.4.19](Benchmarks/Study_SamplesSet/c36165ab12a99af609b8d63351d74549.sol#L1) allows old versions\n",
+        "first_markdown_element": "Benchmarks/Study_SamplesSet/c36165ab12a99af609b8d63351d74549.sol#L1",
+        "id": "0043fa6a1326d3d8581e91d20744777f3a7901313ed2a90b4d602a2d0eb51182",
+        "check": "solc-version",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [],
+        "description": "solc-0.4.19 is not recommended for deployment\n",
+        "markdown": "solc-0.4.19 is not recommended for deployment\n",
+        "first_markdown_element": "",
+        "id": "6c57d3efd769b2c1ca361b3d06ff1f2677845be92f7b50762125a4196d71725a",
+        "check": "solc-version",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "Command",
+            "source_mapping": {
+              "start": 9080,
+              "length": 154,
+              "filename_relative": "Benchmarks/Study_SamplesSet/c36165ab12a99af609b8d63351d74549.sol",
+              "filename_absolute": "/home/shikah/Documents/PhD/VulDet/Benchmarks/Study_SamplesSet/c36165ab12a99af609b8d63351d74549.sol",
+              "filename_short": "Benchmarks/Study_SamplesSet/c36165ab12a99af609b8d63351d74549.sol",
+              "is_dependency": false,
+              "lines": [
+                32,
+                33,
+                34,
+                35,
+                36,
+                37,
+                38
+              ],
+              "starting_column": 5,
+              "ending_column": 6
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "WhaleGiveaway1",
+                "source_mapping": {
+                  "start": 26,
+                  "length": 9210,
+                  "filename_relative": "Benchmarks/Study_SamplesSet/c36165ab12a99af609b8d63351d74549.sol",
+                  "filename_absolute": "/home/shikah/Documents/PhD/VulDet/Benchmarks/Study_SamplesSet/c36165ab12a99af609b8d63351d74549.sol",
+                  "filename_short": "Benchmarks/Study_SamplesSet/c36165ab12a99af609b8d63351d74549.sol",
+                  "is_dependency": false,
+                  "lines": [
+                    3,
+                    4,
+                    5,
+                    6,
+                    7,
+                    8,
+                    9,
+                    10,
+                    11,
+                    12,
+                    13,
+                    14,
+                    15,
+                    16,
+                    17,
+                    18,
+                    19,
+                    20,
+                    21,
+                    22,
+                    23,
+                    24,
+                    25,
+                    26,
+                    27,
+                    28,
+                    29,
+                    30,
+                    31,
+                    32,
+                    33,
+                    34,
+                    35,
+                    36,
+                    37,
+                    38,
+                    39,
+                    40
+                  ],
+                  "starting_column": 1,
+                  "ending_column": 0
+                }
+              },
+              "signature": "Command(address,bytes)"
+            }
+          },
+          {
+            "type": "node",
+            "name": "adr.call.value(msg.value)(data)",
+            "source_mapping": {
+              "start": 9196,
+              "length": 31,
+              "filename_relative": "Benchmarks/Study_SamplesSet/c36165ab12a99af609b8d63351d74549.sol",
+              "filename_absolute": "/home/shikah/Documents/PhD/VulDet/Benchmarks/Study_SamplesSet/c36165ab12a99af609b8d63351d74549.sol",
+              "filename_short": "Benchmarks/Study_SamplesSet/c36165ab12a99af609b8d63351d74549.sol",
+              "is_dependency": false,
+              "lines": [
+                37
+              ],
+              "starting_column": 9,
+              "ending_column": 40
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "Command",
+                "source_mapping": {
+                  "start": 9080,
+                  "length": 154,
+                  "filename_relative": "Benchmarks/Study_SamplesSet/c36165ab12a99af609b8d63351d74549.sol",
+                  "filename_absolute": "/home/shikah/Documents/PhD/VulDet/Benchmarks/Study_SamplesSet/c36165ab12a99af609b8d63351d74549.sol",
+                  "filename_short": "Benchmarks/Study_SamplesSet/c36165ab12a99af609b8d63351d74549.sol",
+                  "is_dependency": false,
+                  "lines": [
+                    32,
+                    33,
+                    34,
+                    35,
+                    36,
+                    37,
+                    38
+                  ],
+                  "starting_column": 5,
+                  "ending_column": 6
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "WhaleGiveaway1",
+                    "source_mapping": {
+                      "start": 26,
+                      "length": 9210,
+                      "filename_relative": "Benchmarks/Study_SamplesSet/c36165ab12a99af609b8d63351d74549.sol",
+                      "filename_absolute": "/home/shikah/Documents/PhD/VulDet/Benchmarks/Study_SamplesSet/c36165ab12a99af609b8d63351d74549.sol",
+                      "filename_short": "Benchmarks/Study_SamplesSet/c36165ab12a99af609b8d63351d74549.sol",
+                      "is_dependency": false,
+                      "lines": [
+                        3,
+                        4,
+                        5,
+                        6,
+                        7,
+                        8,
+                        9,
+                        10,
+                        11,
+                        12,
+                        13,
+                        14,
+                        15,
+                        16,
+                        17,
+                        18,
+                        19,
+                        20,
+                        21,
+                        22,
+                        23,
+                        24,
+                        25,
+                        26,
+                        27,
+                        28,
+                        29,
+                        30,
+                        31,
+                        32,
+                        33,
+                        34,
+                        35,
+                        36,
+                        37,
+                        38,
+                        39,
+                        40
+                      ],
+                      "starting_column": 1,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "Command(address,bytes)"
+                }
+              }
+            }
+          }
+        ],
+        "description": "Low level call in WhaleGiveaway1.Command(address,bytes) (Benchmarks/Study_SamplesSet/c36165ab12a99af609b8d63351d74549.sol#32-38):\n\t- adr.call.value(msg.value)(data) (Benchmarks/Study_SamplesSet/c36165ab12a99af609b8d63351d74549.sol#37)\n",
+        "markdown": "Low level call in [WhaleGiveaway1.Command(address,bytes)](Benchmarks/Study_SamplesSet/c36165ab12a99af609b8d63351d74549.sol#L32-L38):\n\t- [adr.call.value(msg.value)(data)](Benchmarks/Study_SamplesSet/c36165ab12a99af609b8d63351d74549.sol#L37)\n",
+        "first_markdown_element": "Benchmarks/Study_SamplesSet/c36165ab12a99af609b8d63351d74549.sol#L32-L38",
+        "id": "01c0131cae70bdd21d18fd9858f11dac1cf4714d286971b2c2943ad5960a52bb",
+        "check": "low-level-calls",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "Command",
+            "source_mapping": {
+              "start": 9080,
+              "length": 154,
+              "filename_relative": "Benchmarks/Study_SamplesSet/c36165ab12a99af609b8d63351d74549.sol",
+              "filename_absolute": "/home/shikah/Documents/PhD/VulDet/Benchmarks/Study_SamplesSet/c36165ab12a99af609b8d63351d74549.sol",
+              "filename_short": "Benchmarks/Study_SamplesSet/c36165ab12a99af609b8d63351d74549.sol",
+              "is_dependency": false,
+              "lines": [
+                32,
+                33,
+                34,
+                35,
+                36,
+                37,
+                38
+              ],
+              "starting_column": 5,
+              "ending_column": 6
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "WhaleGiveaway1",
+                "source_mapping": {
+                  "start": 26,
+                  "length": 9210,
+                  "filename_relative": "Benchmarks/Study_SamplesSet/c36165ab12a99af609b8d63351d74549.sol",
+                  "filename_absolute": "/home/shikah/Documents/PhD/VulDet/Benchmarks/Study_SamplesSet/c36165ab12a99af609b8d63351d74549.sol",
+                  "filename_short": "Benchmarks/Study_SamplesSet/c36165ab12a99af609b8d63351d74549.sol",
+                  "is_dependency": false,
+                  "lines": [
+                    3,
+                    4,
+                    5,
+                    6,
+                    7,
+                    8,
+                    9,
+                    10,
+                    11,
+                    12,
+                    13,
+                    14,
+                    15,
+                    16,
+                    17,
+                    18,
+                    19,
+                    20,
+                    21,
+                    22,
+                    23,
+                    24,
+                    25,
+                    26,
+                    27,
+                    28,
+                    29,
+                    30,
+                    31,
+                    32,
+                    33,
+                    34,
+                    35,
+                    36,
+                    37,
+                    38,
+                    39,
+                    40
+                  ],
+                  "starting_column": 1,
+                  "ending_column": 0
+                }
+              },
+              "signature": "Command(address,bytes)"
+            },
+            "additional_fields": {
+              "target": "function",
+              "convention": "mixedCase"
+            }
+          }
+        ],
+        "description": "Function WhaleGiveaway1.Command(address,bytes) (Benchmarks/Study_SamplesSet/c36165ab12a99af609b8d63351d74549.sol#32-38) is not in mixedCase\n",
+        "markdown": "Function [WhaleGiveaway1.Command(address,bytes)](Benchmarks/Study_SamplesSet/c36165ab12a99af609b8d63351d74549.sol#L32-L38) is not in mixedCase\n",
+        "first_markdown_element": "Benchmarks/Study_SamplesSet/c36165ab12a99af609b8d63351d74549.sol#L32-L38",
+        "id": "ba02719f1fb9ee976740243cfcb489f29381dc44ffca327f6a285376e551d389",
+        "check": "naming-convention",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "Owner",
+            "source_mapping": {
+              "start": 56,
+              "length": 33,
+              "filename_relative": "Benchmarks/Study_SamplesSet/c36165ab12a99af609b8d63351d74549.sol",
+              "filename_absolute": "/home/shikah/Documents/PhD/VulDet/Benchmarks/Study_SamplesSet/c36165ab12a99af609b8d63351d74549.sol",
+              "filename_short": "Benchmarks/Study_SamplesSet/c36165ab12a99af609b8d63351d74549.sol",
+              "is_dependency": false,
+              "lines": [
+                5
+              ],
+              "starting_column": 5,
+              "ending_column": 38
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "WhaleGiveaway1",
+                "source_mapping": {
+                  "start": 26,
+                  "length": 9210,
+                  "filename_relative": "Benchmarks/Study_SamplesSet/c36165ab12a99af609b8d63351d74549.sol",
+                  "filename_absolute": "/home/shikah/Documents/PhD/VulDet/Benchmarks/Study_SamplesSet/c36165ab12a99af609b8d63351d74549.sol",
+                  "filename_short": "Benchmarks/Study_SamplesSet/c36165ab12a99af609b8d63351d74549.sol",
+                  "is_dependency": false,
+                  "lines": [
+                    3,
+                    4,
+                    5,
+                    6,
+                    7,
+                    8,
+                    9,
+                    10,
+                    11,
+                    12,
+                    13,
+                    14,
+                    15,
+                    16,
+                    17,
+                    18,
+                    19,
+                    20,
+                    21,
+                    22,
+                    23,
+                    24,
+                    25,
+                    26,
+                    27,
+                    28,
+                    29,
+                    30,
+                    31,
+                    32,
+                    33,
+                    34,
+                    35,
+                    36,
+                    37,
+                    38,
+                    39,
+                    40
+                  ],
+                  "starting_column": 1,
+                  "ending_column": 0
+                }
+              }
+            },
+            "additional_fields": {
+              "target": "variable",
+              "convention": "mixedCase"
+            }
+          }
+        ],
+        "description": "Variable WhaleGiveaway1.Owner (Benchmarks/Study_SamplesSet/c36165ab12a99af609b8d63351d74549.sol#5) is not in mixedCase\n",
+        "markdown": "Variable [WhaleGiveaway1.Owner](Benchmarks/Study_SamplesSet/c36165ab12a99af609b8d63351d74549.sol#L5) is not in mixedCase\n",
+        "first_markdown_element": "Benchmarks/Study_SamplesSet/c36165ab12a99af609b8d63351d74549.sol#L5",
+        "id": "bc9572eb0d953610626f1bc17e0c4b0c8b40424cc7c91b00d5c9f82c8bc0e159",
+        "check": "naming-convention",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "GetFreebie",
+            "source_mapping": {
+              "start": 162,
+              "length": 5657,
+              "filename_relative": "Benchmarks/Study_SamplesSet/c36165ab12a99af609b8d63351d74549.sol",
+              "filename_absolute": "/home/shikah/Documents/PhD/VulDet/Benchmarks/Study_SamplesSet/c36165ab12a99af609b8d63351d74549.sol",
+              "filename_short": "Benchmarks/Study_SamplesSet/c36165ab12a99af609b8d63351d74549.sol",
+              "is_dependency": false,
+              "lines": [
+                14,
+                15,
+                16,
+                17,
+                18,
+                19,
+                20,
+                21,
+                22
+              ],
+              "starting_column": 5,
+              "ending_column": 6
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "WhaleGiveaway1",
+                "source_mapping": {
+                  "start": 26,
+                  "length": 9210,
+                  "filename_relative": "Benchmarks/Study_SamplesSet/c36165ab12a99af609b8d63351d74549.sol",
+                  "filename_absolute": "/home/shikah/Documents/PhD/VulDet/Benchmarks/Study_SamplesSet/c36165ab12a99af609b8d63351d74549.sol",
+                  "filename_short": "Benchmarks/Study_SamplesSet/c36165ab12a99af609b8d63351d74549.sol",
+                  "is_dependency": false,
+                  "lines": [
+                    3,
+                    4,
+                    5,
+                    6,
+                    7,
+                    8,
+                    9,
+                    10,
+                    11,
+                    12,
+                    13,
+                    14,
+                    15,
+                    16,
+                    17,
+                    18,
+                    19,
+                    20,
+                    21,
+                    22,
+                    23,
+                    24,
+                    25,
+                    26,
+                    27,
+                    28,
+                    29,
+                    30,
+                    31,
+                    32,
+                    33,
+                    34,
+                    35,
+                    36,
+                    37,
+                    38,
+                    39,
+                    40
+                  ],
+                  "starting_column": 1,
+                  "ending_column": 0
+                }
+              },
+              "signature": "GetFreebie()"
+            },
+            "additional_fields": {
+              "target": "function",
+              "convention": "mixedCase"
+            }
+          }
+        ],
+        "description": "Function WhaleGiveaway1.GetFreebie() (Benchmarks/Study_SamplesSet/c36165ab12a99af609b8d63351d74549.sol#14-22) is not in mixedCase\n",
+        "markdown": "Function [WhaleGiveaway1.GetFreebie()](Benchmarks/Study_SamplesSet/c36165ab12a99af609b8d63351d74549.sol#L14-L22) is not in mixedCase\n",
+        "first_markdown_element": "Benchmarks/Study_SamplesSet/c36165ab12a99af609b8d63351d74549.sol#L14-L22",
+        "id": "c02c796b408376ccba21dd3d8d283d1dbd05dcbb1baf530aaf29479c48001e80",
+        "check": "naming-convention",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "Command",
+            "source_mapping": {
+              "start": 9080,
+              "length": 154,
+              "filename_relative": "Benchmarks/Study_SamplesSet/c36165ab12a99af609b8d63351d74549.sol",
+              "filename_absolute": "/home/shikah/Documents/PhD/VulDet/Benchmarks/Study_SamplesSet/c36165ab12a99af609b8d63351d74549.sol",
+              "filename_short": "Benchmarks/Study_SamplesSet/c36165ab12a99af609b8d63351d74549.sol",
+              "is_dependency": false,
+              "lines": [
+                32,
+                33,
+                34,
+                35,
+                36,
+                37,
+                38
+              ],
+              "starting_column": 5,
+              "ending_column": 6
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "WhaleGiveaway1",
+                "source_mapping": {
+                  "start": 26,
+                  "length": 9210,
+                  "filename_relative": "Benchmarks/Study_SamplesSet/c36165ab12a99af609b8d63351d74549.sol",
+                  "filename_absolute": "/home/shikah/Documents/PhD/VulDet/Benchmarks/Study_SamplesSet/c36165ab12a99af609b8d63351d74549.sol",
+                  "filename_short": "Benchmarks/Study_SamplesSet/c36165ab12a99af609b8d63351d74549.sol",
+                  "is_dependency": false,
+                  "lines": [
+                    3,
+                    4,
+                    5,
+                    6,
+                    7,
+                    8,
+                    9,
+                    10,
+                    11,
+                    12,
+                    13,
+                    14,
+                    15,
+                    16,
+                    17,
+                    18,
+                    19,
+                    20,
+                    21,
+                    22,
+                    23,
+                    24,
+                    25,
+                    26,
+                    27,
+                    28,
+                    29,
+                    30,
+                    31,
+                    32,
+                    33,
+                    34,
+                    35,
+                    36,
+                    37,
+                    38,
+                    39,
+                    40
+                  ],
+                  "starting_column": 1,
+                  "ending_column": 0
+                }
+              },
+              "signature": "Command(address,bytes)"
+            }
+          }
+        ],
+        "description": "Command(address,bytes) should be declared external:\n\t- WhaleGiveaway1.Command(address,bytes) (Benchmarks/Study_SamplesSet/c36165ab12a99af609b8d63351d74549.sol#32-38)\n",
+        "markdown": "Command(address,bytes) should be declared external:\n\t- [WhaleGiveaway1.Command(address,bytes)](Benchmarks/Study_SamplesSet/c36165ab12a99af609b8d63351d74549.sol#L32-L38)\n",
+        "first_markdown_element": "Benchmarks/Study_SamplesSet/c36165ab12a99af609b8d63351d74549.sol#L32-L38",
+        "id": "784978aa7e81d07e0c9582bde0a40ed10760c89e85bcfe2fda7917a96eb721a0",
+        "check": "external-function",
+        "impact": "Optimization",
+        "confidence": "High"
+      }
+    ]
+  }
+}

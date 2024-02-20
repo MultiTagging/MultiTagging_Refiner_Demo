@@ -1,0 +1,1669 @@
+{
+  "success": true,
+  "error": null,
+  "results": {
+    "detectors": [
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "access",
+            "source_mapping": {
+              "start": 653,
+              "length": 135,
+              "filename_relative": "Benchmarks/Study_SamplesSet/febaedbde0766554de402e7847baa424.sol",
+              "filename_absolute": "/home/shikah/Documents/PhD/VulDet/Benchmarks/Study_SamplesSet/febaedbde0766554de402e7847baa424.sol",
+              "filename_short": "Benchmarks/Study_SamplesSet/febaedbde0766554de402e7847baa424.sol",
+              "is_dependency": false,
+              "lines": [
+                35,
+                36,
+                37,
+                38,
+                39
+              ],
+              "starting_column": 5,
+              "ending_column": 6
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "GIFT_CARD",
+                "source_mapping": {
+                  "start": 26,
+                  "length": 993,
+                  "filename_relative": "Benchmarks/Study_SamplesSet/febaedbde0766554de402e7847baa424.sol",
+                  "filename_absolute": "/home/shikah/Documents/PhD/VulDet/Benchmarks/Study_SamplesSet/febaedbde0766554de402e7847baa424.sol",
+                  "filename_short": "Benchmarks/Study_SamplesSet/febaedbde0766554de402e7847baa424.sol",
+                  "is_dependency": false,
+                  "lines": [
+                    3,
+                    4,
+                    5,
+                    6,
+                    7,
+                    8,
+                    9,
+                    10,
+                    11,
+                    12,
+                    13,
+                    14,
+                    15,
+                    16,
+                    17,
+                    18,
+                    19,
+                    20,
+                    21,
+                    22,
+                    23,
+                    24,
+                    25,
+                    26,
+                    27,
+                    28,
+                    29,
+                    30,
+                    31,
+                    32,
+                    33,
+                    34,
+                    35,
+                    36,
+                    37,
+                    38,
+                    39,
+                    40,
+                    41,
+                    42,
+                    43,
+                    44,
+                    45,
+                    46,
+                    47,
+                    48,
+                    49
+                  ],
+                  "starting_column": 1,
+                  "ending_column": 0
+                }
+              },
+              "signature": "access(bytes)"
+            }
+          }
+        ],
+        "description": "Modifier GIFT_CARD.access(bytes) (Benchmarks/Study_SamplesSet/febaedbde0766554de402e7847baa424.sol#35-39) does not always execute _; or revert",
+        "markdown": "Modifier [GIFT_CARD.access(bytes)](Benchmarks/Study_SamplesSet/febaedbde0766554de402e7847baa424.sol#L35-L39) does not always execute _; or revert",
+        "first_markdown_element": "Benchmarks/Study_SamplesSet/febaedbde0766554de402e7847baa424.sol#L35-L39",
+        "id": "121e94b42e02aefe25e64f5a3baec3927ea45dead5f8dbb53cd942aed6fe9671",
+        "check": "incorrect-modifier",
+        "impact": "Low",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "Take",
+            "source_mapping": {
+              "start": 297,
+              "length": 232,
+              "filename_relative": "Benchmarks/Study_SamplesSet/febaedbde0766554de402e7847baa424.sol",
+              "filename_absolute": "/home/shikah/Documents/PhD/VulDet/Benchmarks/Study_SamplesSet/febaedbde0766554de402e7847baa424.sol",
+              "filename_short": "Benchmarks/Study_SamplesSet/febaedbde0766554de402e7847baa424.sol",
+              "is_dependency": false,
+              "lines": [
+                16,
+                17,
+                18,
+                19,
+                20,
+                21,
+                22,
+                23,
+                24,
+                25
+              ],
+              "starting_column": 5,
+              "ending_column": 6
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "GIFT_CARD",
+                "source_mapping": {
+                  "start": 26,
+                  "length": 993,
+                  "filename_relative": "Benchmarks/Study_SamplesSet/febaedbde0766554de402e7847baa424.sol",
+                  "filename_absolute": "/home/shikah/Documents/PhD/VulDet/Benchmarks/Study_SamplesSet/febaedbde0766554de402e7847baa424.sol",
+                  "filename_short": "Benchmarks/Study_SamplesSet/febaedbde0766554de402e7847baa424.sol",
+                  "is_dependency": false,
+                  "lines": [
+                    3,
+                    4,
+                    5,
+                    6,
+                    7,
+                    8,
+                    9,
+                    10,
+                    11,
+                    12,
+                    13,
+                    14,
+                    15,
+                    16,
+                    17,
+                    18,
+                    19,
+                    20,
+                    21,
+                    22,
+                    23,
+                    24,
+                    25,
+                    26,
+                    27,
+                    28,
+                    29,
+                    30,
+                    31,
+                    32,
+                    33,
+                    34,
+                    35,
+                    36,
+                    37,
+                    38,
+                    39,
+                    40,
+                    41,
+                    42,
+                    43,
+                    44,
+                    45,
+                    46,
+                    47,
+                    48,
+                    49
+                  ],
+                  "starting_column": 1,
+                  "ending_column": 0
+                }
+              },
+              "signature": "Take(bytes)"
+            }
+          },
+          {
+            "type": "node",
+            "name": "hashPass == keccak256()(_pass) && now > unlockTime && msg.sender == tx.origin",
+            "source_mapping": {
+              "start": 384,
+              "length": 71,
+              "filename_relative": "Benchmarks/Study_SamplesSet/febaedbde0766554de402e7847baa424.sol",
+              "filename_absolute": "/home/shikah/Documents/PhD/VulDet/Benchmarks/Study_SamplesSet/febaedbde0766554de402e7847baa424.sol",
+              "filename_short": "Benchmarks/Study_SamplesSet/febaedbde0766554de402e7847baa424.sol",
+              "is_dependency": false,
+              "lines": [
+                21
+              ],
+              "starting_column": 12,
+              "ending_column": 83
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "Take",
+                "source_mapping": {
+                  "start": 297,
+                  "length": 232,
+                  "filename_relative": "Benchmarks/Study_SamplesSet/febaedbde0766554de402e7847baa424.sol",
+                  "filename_absolute": "/home/shikah/Documents/PhD/VulDet/Benchmarks/Study_SamplesSet/febaedbde0766554de402e7847baa424.sol",
+                  "filename_short": "Benchmarks/Study_SamplesSet/febaedbde0766554de402e7847baa424.sol",
+                  "is_dependency": false,
+                  "lines": [
+                    16,
+                    17,
+                    18,
+                    19,
+                    20,
+                    21,
+                    22,
+                    23,
+                    24,
+                    25
+                  ],
+                  "starting_column": 5,
+                  "ending_column": 6
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "GIFT_CARD",
+                    "source_mapping": {
+                      "start": 26,
+                      "length": 993,
+                      "filename_relative": "Benchmarks/Study_SamplesSet/febaedbde0766554de402e7847baa424.sol",
+                      "filename_absolute": "/home/shikah/Documents/PhD/VulDet/Benchmarks/Study_SamplesSet/febaedbde0766554de402e7847baa424.sol",
+                      "filename_short": "Benchmarks/Study_SamplesSet/febaedbde0766554de402e7847baa424.sol",
+                      "is_dependency": false,
+                      "lines": [
+                        3,
+                        4,
+                        5,
+                        6,
+                        7,
+                        8,
+                        9,
+                        10,
+                        11,
+                        12,
+                        13,
+                        14,
+                        15,
+                        16,
+                        17,
+                        18,
+                        19,
+                        20,
+                        21,
+                        22,
+                        23,
+                        24,
+                        25,
+                        26,
+                        27,
+                        28,
+                        29,
+                        30,
+                        31,
+                        32,
+                        33,
+                        34,
+                        35,
+                        36,
+                        37,
+                        38,
+                        39,
+                        40,
+                        41,
+                        42,
+                        43,
+                        44,
+                        45,
+                        46,
+                        47,
+                        48,
+                        49
+                      ],
+                      "starting_column": 1,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "Take(bytes)"
+                }
+              }
+            }
+          }
+        ],
+        "description": "GIFT_CARD.Take(bytes) (Benchmarks/Study_SamplesSet/febaedbde0766554de402e7847baa424.sol#16-25) uses timestamp for comparisons\n\tDangerous comparisons:\n\t- hashPass == keccak256()(_pass) && now > unlockTime && msg.sender == tx.origin (Benchmarks/Study_SamplesSet/febaedbde0766554de402e7847baa424.sol#21)\n",
+        "markdown": "[GIFT_CARD.Take(bytes)](Benchmarks/Study_SamplesSet/febaedbde0766554de402e7847baa424.sol#L16-L25) uses timestamp for comparisons\n\tDangerous comparisons:\n\t- [hashPass == keccak256()(_pass) && now > unlockTime && msg.sender == tx.origin](Benchmarks/Study_SamplesSet/febaedbde0766554de402e7847baa424.sol#L21)\n",
+        "first_markdown_element": "Benchmarks/Study_SamplesSet/febaedbde0766554de402e7847baa424.sol#L16-L25",
+        "id": "14de0ee4a6161f070a4809e64e7f9fbafb0b39f61de786a40da9aeaab92e8cd6",
+        "check": "timestamp",
+        "impact": "Low",
+        "confidence": "Medium"
+      },
+      {
+        "elements": [],
+        "description": "solc-0.4.19 is not recommended for deployment\n",
+        "markdown": "solc-0.4.19 is not recommended for deployment\n",
+        "first_markdown_element": "",
+        "id": "6c57d3efd769b2c1ca361b3d06ff1f2677845be92f7b50762125a4196d71725a",
+        "check": "solc-version",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "pragma",
+            "name": "^0.4.19",
+            "source_mapping": {
+              "start": 0,
+              "length": 24,
+              "filename_relative": "Benchmarks/Study_SamplesSet/febaedbde0766554de402e7847baa424.sol",
+              "filename_absolute": "/home/shikah/Documents/PhD/VulDet/Benchmarks/Study_SamplesSet/febaedbde0766554de402e7847baa424.sol",
+              "filename_short": "Benchmarks/Study_SamplesSet/febaedbde0766554de402e7847baa424.sol",
+              "is_dependency": false,
+              "lines": [
+                1
+              ],
+              "starting_column": 1,
+              "ending_column": 25
+            },
+            "type_specific_fields": {
+              "directive": [
+                "solidity",
+                "^",
+                "0.4",
+                ".19"
+              ]
+            }
+          }
+        ],
+        "description": "Pragma version^0.4.19 (Benchmarks/Study_SamplesSet/febaedbde0766554de402e7847baa424.sol#1) allows old versions\n",
+        "markdown": "Pragma version[^0.4.19](Benchmarks/Study_SamplesSet/febaedbde0766554de402e7847baa424.sol#L1) allows old versions\n",
+        "first_markdown_element": "Benchmarks/Study_SamplesSet/febaedbde0766554de402e7847baa424.sol#L1",
+        "id": "9a2e8e9c02cf6ba69835606f68a61761878b2784272c016fd2b7919ef7b69d22",
+        "check": "solc-version",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "_pass",
+            "source_mapping": {
+              "start": 553,
+              "length": 11,
+              "filename_relative": "Benchmarks/Study_SamplesSet/febaedbde0766554de402e7847baa424.sol",
+              "filename_absolute": "/home/shikah/Documents/PhD/VulDet/Benchmarks/Study_SamplesSet/febaedbde0766554de402e7847baa424.sol",
+              "filename_short": "Benchmarks/Study_SamplesSet/febaedbde0766554de402e7847baa424.sol",
+              "is_dependency": false,
+              "lines": [
+                27
+              ],
+              "starting_column": 19,
+              "ending_column": 30
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "Lock",
+                "source_mapping": {
+                  "start": 539,
+                  "length": 104,
+                  "filename_relative": "Benchmarks/Study_SamplesSet/febaedbde0766554de402e7847baa424.sol",
+                  "filename_absolute": "/home/shikah/Documents/PhD/VulDet/Benchmarks/Study_SamplesSet/febaedbde0766554de402e7847baa424.sol",
+                  "filename_short": "Benchmarks/Study_SamplesSet/febaedbde0766554de402e7847baa424.sol",
+                  "is_dependency": false,
+                  "lines": [
+                    27,
+                    28,
+                    29,
+                    30,
+                    31,
+                    32,
+                    33
+                  ],
+                  "starting_column": 5,
+                  "ending_column": 6
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "GIFT_CARD",
+                    "source_mapping": {
+                      "start": 26,
+                      "length": 993,
+                      "filename_relative": "Benchmarks/Study_SamplesSet/febaedbde0766554de402e7847baa424.sol",
+                      "filename_absolute": "/home/shikah/Documents/PhD/VulDet/Benchmarks/Study_SamplesSet/febaedbde0766554de402e7847baa424.sol",
+                      "filename_short": "Benchmarks/Study_SamplesSet/febaedbde0766554de402e7847baa424.sol",
+                      "is_dependency": false,
+                      "lines": [
+                        3,
+                        4,
+                        5,
+                        6,
+                        7,
+                        8,
+                        9,
+                        10,
+                        11,
+                        12,
+                        13,
+                        14,
+                        15,
+                        16,
+                        17,
+                        18,
+                        19,
+                        20,
+                        21,
+                        22,
+                        23,
+                        24,
+                        25,
+                        26,
+                        27,
+                        28,
+                        29,
+                        30,
+                        31,
+                        32,
+                        33,
+                        34,
+                        35,
+                        36,
+                        37,
+                        38,
+                        39,
+                        40,
+                        41,
+                        42,
+                        43,
+                        44,
+                        45,
+                        46,
+                        47,
+                        48,
+                        49
+                      ],
+                      "starting_column": 1,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "Lock(bytes)"
+                }
+              }
+            },
+            "additional_fields": {
+              "target": "parameter",
+              "convention": "mixedCase"
+            }
+          }
+        ],
+        "description": "Parameter GIFT_CARD.Lock(bytes)._pass (Benchmarks/Study_SamplesSet/febaedbde0766554de402e7847baa424.sol#27) is not in mixedCase\n",
+        "markdown": "Parameter [GIFT_CARD.Lock(bytes)._pass](Benchmarks/Study_SamplesSet/febaedbde0766554de402e7847baa424.sol#L27) is not in mixedCase\n",
+        "first_markdown_element": "Benchmarks/Study_SamplesSet/febaedbde0766554de402e7847baa424.sol#L27",
+        "id": "00d7103a913266f296d4b20a89af690d75ff2d3b3e0426df5064f0f198082d87",
+        "check": "naming-convention",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "_unlockTime",
+            "source_mapping": {
+              "start": 79,
+              "length": 16,
+              "filename_relative": "Benchmarks/Study_SamplesSet/febaedbde0766554de402e7847baa424.sol",
+              "filename_absolute": "/home/shikah/Documents/PhD/VulDet/Benchmarks/Study_SamplesSet/febaedbde0766554de402e7847baa424.sol",
+              "filename_short": "Benchmarks/Study_SamplesSet/febaedbde0766554de402e7847baa424.sol",
+              "is_dependency": false,
+              "lines": [
+                5
+              ],
+              "starting_column": 33,
+              "ending_column": 49
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "Put",
+                "source_mapping": {
+                  "start": 51,
+                  "length": 236,
+                  "filename_relative": "Benchmarks/Study_SamplesSet/febaedbde0766554de402e7847baa424.sol",
+                  "filename_absolute": "/home/shikah/Documents/PhD/VulDet/Benchmarks/Study_SamplesSet/febaedbde0766554de402e7847baa424.sol",
+                  "filename_short": "Benchmarks/Study_SamplesSet/febaedbde0766554de402e7847baa424.sol",
+                  "is_dependency": false,
+                  "lines": [
+                    5,
+                    6,
+                    7,
+                    8,
+                    9,
+                    10,
+                    11,
+                    12,
+                    13,
+                    14
+                  ],
+                  "starting_column": 5,
+                  "ending_column": 6
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "GIFT_CARD",
+                    "source_mapping": {
+                      "start": 26,
+                      "length": 993,
+                      "filename_relative": "Benchmarks/Study_SamplesSet/febaedbde0766554de402e7847baa424.sol",
+                      "filename_absolute": "/home/shikah/Documents/PhD/VulDet/Benchmarks/Study_SamplesSet/febaedbde0766554de402e7847baa424.sol",
+                      "filename_short": "Benchmarks/Study_SamplesSet/febaedbde0766554de402e7847baa424.sol",
+                      "is_dependency": false,
+                      "lines": [
+                        3,
+                        4,
+                        5,
+                        6,
+                        7,
+                        8,
+                        9,
+                        10,
+                        11,
+                        12,
+                        13,
+                        14,
+                        15,
+                        16,
+                        17,
+                        18,
+                        19,
+                        20,
+                        21,
+                        22,
+                        23,
+                        24,
+                        25,
+                        26,
+                        27,
+                        28,
+                        29,
+                        30,
+                        31,
+                        32,
+                        33,
+                        34,
+                        35,
+                        36,
+                        37,
+                        38,
+                        39,
+                        40,
+                        41,
+                        42,
+                        43,
+                        44,
+                        45,
+                        46,
+                        47,
+                        48,
+                        49
+                      ],
+                      "starting_column": 1,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "Put(bytes32,uint256)"
+                }
+              }
+            },
+            "additional_fields": {
+              "target": "parameter",
+              "convention": "mixedCase"
+            }
+          }
+        ],
+        "description": "Parameter GIFT_CARD.Put(bytes32,uint256)._unlockTime (Benchmarks/Study_SamplesSet/febaedbde0766554de402e7847baa424.sol#5) is not in mixedCase\n",
+        "markdown": "Parameter [GIFT_CARD.Put(bytes32,uint256)._unlockTime](Benchmarks/Study_SamplesSet/febaedbde0766554de402e7847baa424.sol#L5) is not in mixedCase\n",
+        "first_markdown_element": "Benchmarks/Study_SamplesSet/febaedbde0766554de402e7847baa424.sol#L5",
+        "id": "1eed6acfdf932709bf59ebd055a2a563b00fc55bc984c02c170f7952dcbebc7a",
+        "check": "naming-convention",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "_pass",
+            "source_mapping": {
+              "start": 311,
+              "length": 11,
+              "filename_relative": "Benchmarks/Study_SamplesSet/febaedbde0766554de402e7847baa424.sol",
+              "filename_absolute": "/home/shikah/Documents/PhD/VulDet/Benchmarks/Study_SamplesSet/febaedbde0766554de402e7847baa424.sol",
+              "filename_short": "Benchmarks/Study_SamplesSet/febaedbde0766554de402e7847baa424.sol",
+              "is_dependency": false,
+              "lines": [
+                16
+              ],
+              "starting_column": 19,
+              "ending_column": 30
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "Take",
+                "source_mapping": {
+                  "start": 297,
+                  "length": 232,
+                  "filename_relative": "Benchmarks/Study_SamplesSet/febaedbde0766554de402e7847baa424.sol",
+                  "filename_absolute": "/home/shikah/Documents/PhD/VulDet/Benchmarks/Study_SamplesSet/febaedbde0766554de402e7847baa424.sol",
+                  "filename_short": "Benchmarks/Study_SamplesSet/febaedbde0766554de402e7847baa424.sol",
+                  "is_dependency": false,
+                  "lines": [
+                    16,
+                    17,
+                    18,
+                    19,
+                    20,
+                    21,
+                    22,
+                    23,
+                    24,
+                    25
+                  ],
+                  "starting_column": 5,
+                  "ending_column": 6
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "GIFT_CARD",
+                    "source_mapping": {
+                      "start": 26,
+                      "length": 993,
+                      "filename_relative": "Benchmarks/Study_SamplesSet/febaedbde0766554de402e7847baa424.sol",
+                      "filename_absolute": "/home/shikah/Documents/PhD/VulDet/Benchmarks/Study_SamplesSet/febaedbde0766554de402e7847baa424.sol",
+                      "filename_short": "Benchmarks/Study_SamplesSet/febaedbde0766554de402e7847baa424.sol",
+                      "is_dependency": false,
+                      "lines": [
+                        3,
+                        4,
+                        5,
+                        6,
+                        7,
+                        8,
+                        9,
+                        10,
+                        11,
+                        12,
+                        13,
+                        14,
+                        15,
+                        16,
+                        17,
+                        18,
+                        19,
+                        20,
+                        21,
+                        22,
+                        23,
+                        24,
+                        25,
+                        26,
+                        27,
+                        28,
+                        29,
+                        30,
+                        31,
+                        32,
+                        33,
+                        34,
+                        35,
+                        36,
+                        37,
+                        38,
+                        39,
+                        40,
+                        41,
+                        42,
+                        43,
+                        44,
+                        45,
+                        46,
+                        47,
+                        48,
+                        49
+                      ],
+                      "starting_column": 1,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "Take(bytes)"
+                }
+              }
+            },
+            "additional_fields": {
+              "target": "parameter",
+              "convention": "mixedCase"
+            }
+          }
+        ],
+        "description": "Parameter GIFT_CARD.Take(bytes)._pass (Benchmarks/Study_SamplesSet/febaedbde0766554de402e7847baa424.sol#16) is not in mixedCase\n",
+        "markdown": "Parameter [GIFT_CARD.Take(bytes)._pass](Benchmarks/Study_SamplesSet/febaedbde0766554de402e7847baa424.sol#L16) is not in mixedCase\n",
+        "first_markdown_element": "Benchmarks/Study_SamplesSet/febaedbde0766554de402e7847baa424.sol#L16",
+        "id": "82916cd4b1e5e1098bee1aa2f1253845322f9c53728179333d896447e5c971bc",
+        "check": "naming-convention",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "Take",
+            "source_mapping": {
+              "start": 297,
+              "length": 232,
+              "filename_relative": "Benchmarks/Study_SamplesSet/febaedbde0766554de402e7847baa424.sol",
+              "filename_absolute": "/home/shikah/Documents/PhD/VulDet/Benchmarks/Study_SamplesSet/febaedbde0766554de402e7847baa424.sol",
+              "filename_short": "Benchmarks/Study_SamplesSet/febaedbde0766554de402e7847baa424.sol",
+              "is_dependency": false,
+              "lines": [
+                16,
+                17,
+                18,
+                19,
+                20,
+                21,
+                22,
+                23,
+                24,
+                25
+              ],
+              "starting_column": 5,
+              "ending_column": 6
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "GIFT_CARD",
+                "source_mapping": {
+                  "start": 26,
+                  "length": 993,
+                  "filename_relative": "Benchmarks/Study_SamplesSet/febaedbde0766554de402e7847baa424.sol",
+                  "filename_absolute": "/home/shikah/Documents/PhD/VulDet/Benchmarks/Study_SamplesSet/febaedbde0766554de402e7847baa424.sol",
+                  "filename_short": "Benchmarks/Study_SamplesSet/febaedbde0766554de402e7847baa424.sol",
+                  "is_dependency": false,
+                  "lines": [
+                    3,
+                    4,
+                    5,
+                    6,
+                    7,
+                    8,
+                    9,
+                    10,
+                    11,
+                    12,
+                    13,
+                    14,
+                    15,
+                    16,
+                    17,
+                    18,
+                    19,
+                    20,
+                    21,
+                    22,
+                    23,
+                    24,
+                    25,
+                    26,
+                    27,
+                    28,
+                    29,
+                    30,
+                    31,
+                    32,
+                    33,
+                    34,
+                    35,
+                    36,
+                    37,
+                    38,
+                    39,
+                    40,
+                    41,
+                    42,
+                    43,
+                    44,
+                    45,
+                    46,
+                    47,
+                    48,
+                    49
+                  ],
+                  "starting_column": 1,
+                  "ending_column": 0
+                }
+              },
+              "signature": "Take(bytes)"
+            },
+            "additional_fields": {
+              "target": "function",
+              "convention": "mixedCase"
+            }
+          }
+        ],
+        "description": "Function GIFT_CARD.Take(bytes) (Benchmarks/Study_SamplesSet/febaedbde0766554de402e7847baa424.sol#16-25) is not in mixedCase\n",
+        "markdown": "Function [GIFT_CARD.Take(bytes)](Benchmarks/Study_SamplesSet/febaedbde0766554de402e7847baa424.sol#L16-L25) is not in mixedCase\n",
+        "first_markdown_element": "Benchmarks/Study_SamplesSet/febaedbde0766554de402e7847baa424.sol#L16-L25",
+        "id": "a846c0b7abf5629f1b60f1b1d0d1c466eb784e9863e4925968c12a6882b52d68",
+        "check": "naming-convention",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "Lock",
+            "source_mapping": {
+              "start": 539,
+              "length": 104,
+              "filename_relative": "Benchmarks/Study_SamplesSet/febaedbde0766554de402e7847baa424.sol",
+              "filename_absolute": "/home/shikah/Documents/PhD/VulDet/Benchmarks/Study_SamplesSet/febaedbde0766554de402e7847baa424.sol",
+              "filename_short": "Benchmarks/Study_SamplesSet/febaedbde0766554de402e7847baa424.sol",
+              "is_dependency": false,
+              "lines": [
+                27,
+                28,
+                29,
+                30,
+                31,
+                32,
+                33
+              ],
+              "starting_column": 5,
+              "ending_column": 6
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "GIFT_CARD",
+                "source_mapping": {
+                  "start": 26,
+                  "length": 993,
+                  "filename_relative": "Benchmarks/Study_SamplesSet/febaedbde0766554de402e7847baa424.sol",
+                  "filename_absolute": "/home/shikah/Documents/PhD/VulDet/Benchmarks/Study_SamplesSet/febaedbde0766554de402e7847baa424.sol",
+                  "filename_short": "Benchmarks/Study_SamplesSet/febaedbde0766554de402e7847baa424.sol",
+                  "is_dependency": false,
+                  "lines": [
+                    3,
+                    4,
+                    5,
+                    6,
+                    7,
+                    8,
+                    9,
+                    10,
+                    11,
+                    12,
+                    13,
+                    14,
+                    15,
+                    16,
+                    17,
+                    18,
+                    19,
+                    20,
+                    21,
+                    22,
+                    23,
+                    24,
+                    25,
+                    26,
+                    27,
+                    28,
+                    29,
+                    30,
+                    31,
+                    32,
+                    33,
+                    34,
+                    35,
+                    36,
+                    37,
+                    38,
+                    39,
+                    40,
+                    41,
+                    42,
+                    43,
+                    44,
+                    45,
+                    46,
+                    47,
+                    48,
+                    49
+                  ],
+                  "starting_column": 1,
+                  "ending_column": 0
+                }
+              },
+              "signature": "Lock(bytes)"
+            },
+            "additional_fields": {
+              "target": "function",
+              "convention": "mixedCase"
+            }
+          }
+        ],
+        "description": "Function GIFT_CARD.Lock(bytes) (Benchmarks/Study_SamplesSet/febaedbde0766554de402e7847baa424.sol#27-33) is not in mixedCase\n",
+        "markdown": "Function [GIFT_CARD.Lock(bytes)](Benchmarks/Study_SamplesSet/febaedbde0766554de402e7847baa424.sol#L27-L33) is not in mixedCase\n",
+        "first_markdown_element": "Benchmarks/Study_SamplesSet/febaedbde0766554de402e7847baa424.sol#L27-L33",
+        "id": "e45429fafbe9b78671aa9cd001637b22d05e54b30a9e31cdee671fa2ccf80f2b",
+        "check": "naming-convention",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "_hash",
+            "source_mapping": {
+              "start": 64,
+              "length": 13,
+              "filename_relative": "Benchmarks/Study_SamplesSet/febaedbde0766554de402e7847baa424.sol",
+              "filename_absolute": "/home/shikah/Documents/PhD/VulDet/Benchmarks/Study_SamplesSet/febaedbde0766554de402e7847baa424.sol",
+              "filename_short": "Benchmarks/Study_SamplesSet/febaedbde0766554de402e7847baa424.sol",
+              "is_dependency": false,
+              "lines": [
+                5
+              ],
+              "starting_column": 18,
+              "ending_column": 31
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "Put",
+                "source_mapping": {
+                  "start": 51,
+                  "length": 236,
+                  "filename_relative": "Benchmarks/Study_SamplesSet/febaedbde0766554de402e7847baa424.sol",
+                  "filename_absolute": "/home/shikah/Documents/PhD/VulDet/Benchmarks/Study_SamplesSet/febaedbde0766554de402e7847baa424.sol",
+                  "filename_short": "Benchmarks/Study_SamplesSet/febaedbde0766554de402e7847baa424.sol",
+                  "is_dependency": false,
+                  "lines": [
+                    5,
+                    6,
+                    7,
+                    8,
+                    9,
+                    10,
+                    11,
+                    12,
+                    13,
+                    14
+                  ],
+                  "starting_column": 5,
+                  "ending_column": 6
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "GIFT_CARD",
+                    "source_mapping": {
+                      "start": 26,
+                      "length": 993,
+                      "filename_relative": "Benchmarks/Study_SamplesSet/febaedbde0766554de402e7847baa424.sol",
+                      "filename_absolute": "/home/shikah/Documents/PhD/VulDet/Benchmarks/Study_SamplesSet/febaedbde0766554de402e7847baa424.sol",
+                      "filename_short": "Benchmarks/Study_SamplesSet/febaedbde0766554de402e7847baa424.sol",
+                      "is_dependency": false,
+                      "lines": [
+                        3,
+                        4,
+                        5,
+                        6,
+                        7,
+                        8,
+                        9,
+                        10,
+                        11,
+                        12,
+                        13,
+                        14,
+                        15,
+                        16,
+                        17,
+                        18,
+                        19,
+                        20,
+                        21,
+                        22,
+                        23,
+                        24,
+                        25,
+                        26,
+                        27,
+                        28,
+                        29,
+                        30,
+                        31,
+                        32,
+                        33,
+                        34,
+                        35,
+                        36,
+                        37,
+                        38,
+                        39,
+                        40,
+                        41,
+                        42,
+                        43,
+                        44,
+                        45,
+                        46,
+                        47,
+                        48,
+                        49
+                      ],
+                      "starting_column": 1,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "Put(bytes32,uint256)"
+                }
+              }
+            },
+            "additional_fields": {
+              "target": "parameter",
+              "convention": "mixedCase"
+            }
+          }
+        ],
+        "description": "Parameter GIFT_CARD.Put(bytes32,uint256)._hash (Benchmarks/Study_SamplesSet/febaedbde0766554de402e7847baa424.sol#5) is not in mixedCase\n",
+        "markdown": "Parameter [GIFT_CARD.Put(bytes32,uint256)._hash](Benchmarks/Study_SamplesSet/febaedbde0766554de402e7847baa424.sol#L5) is not in mixedCase\n",
+        "first_markdown_element": "Benchmarks/Study_SamplesSet/febaedbde0766554de402e7847baa424.sol#L5",
+        "id": "ea2d364a9f2e707ecf7ccdbfc0e0f1e7bdc0fbbc308a0ce232c559362efa967e",
+        "check": "naming-convention",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "contract",
+            "name": "GIFT_CARD",
+            "source_mapping": {
+              "start": 26,
+              "length": 993,
+              "filename_relative": "Benchmarks/Study_SamplesSet/febaedbde0766554de402e7847baa424.sol",
+              "filename_absolute": "/home/shikah/Documents/PhD/VulDet/Benchmarks/Study_SamplesSet/febaedbde0766554de402e7847baa424.sol",
+              "filename_short": "Benchmarks/Study_SamplesSet/febaedbde0766554de402e7847baa424.sol",
+              "is_dependency": false,
+              "lines": [
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10,
+                11,
+                12,
+                13,
+                14,
+                15,
+                16,
+                17,
+                18,
+                19,
+                20,
+                21,
+                22,
+                23,
+                24,
+                25,
+                26,
+                27,
+                28,
+                29,
+                30,
+                31,
+                32,
+                33,
+                34,
+                35,
+                36,
+                37,
+                38,
+                39,
+                40,
+                41,
+                42,
+                43,
+                44,
+                45,
+                46,
+                47,
+                48,
+                49
+              ],
+              "starting_column": 1,
+              "ending_column": 0
+            },
+            "additional_fields": {
+              "target": "contract",
+              "convention": "CapWords"
+            }
+          }
+        ],
+        "description": "Contract GIFT_CARD (Benchmarks/Study_SamplesSet/febaedbde0766554de402e7847baa424.sol#3-49) is not in CapWords\n",
+        "markdown": "Contract [GIFT_CARD](Benchmarks/Study_SamplesSet/febaedbde0766554de402e7847baa424.sol#L3-L49) is not in CapWords\n",
+        "first_markdown_element": "Benchmarks/Study_SamplesSet/febaedbde0766554de402e7847baa424.sol#L3-L49",
+        "id": "fa3a9202df663193f033511efff5c000f5d3b091e2d5fd86bc74eee514ad082a",
+        "check": "naming-convention",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "GetHash",
+            "source_mapping": {
+              "start": 892,
+              "length": 88,
+              "filename_relative": "Benchmarks/Study_SamplesSet/febaedbde0766554de402e7847baa424.sol",
+              "filename_absolute": "/home/shikah/Documents/PhD/VulDet/Benchmarks/Study_SamplesSet/febaedbde0766554de402e7847baa424.sol",
+              "filename_short": "Benchmarks/Study_SamplesSet/febaedbde0766554de402e7847baa424.sol",
+              "is_dependency": false,
+              "lines": [
+                45
+              ],
+              "starting_column": 5,
+              "ending_column": 93
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "GIFT_CARD",
+                "source_mapping": {
+                  "start": 26,
+                  "length": 993,
+                  "filename_relative": "Benchmarks/Study_SamplesSet/febaedbde0766554de402e7847baa424.sol",
+                  "filename_absolute": "/home/shikah/Documents/PhD/VulDet/Benchmarks/Study_SamplesSet/febaedbde0766554de402e7847baa424.sol",
+                  "filename_short": "Benchmarks/Study_SamplesSet/febaedbde0766554de402e7847baa424.sol",
+                  "is_dependency": false,
+                  "lines": [
+                    3,
+                    4,
+                    5,
+                    6,
+                    7,
+                    8,
+                    9,
+                    10,
+                    11,
+                    12,
+                    13,
+                    14,
+                    15,
+                    16,
+                    17,
+                    18,
+                    19,
+                    20,
+                    21,
+                    22,
+                    23,
+                    24,
+                    25,
+                    26,
+                    27,
+                    28,
+                    29,
+                    30,
+                    31,
+                    32,
+                    33,
+                    34,
+                    35,
+                    36,
+                    37,
+                    38,
+                    39,
+                    40,
+                    41,
+                    42,
+                    43,
+                    44,
+                    45,
+                    46,
+                    47,
+                    48,
+                    49
+                  ],
+                  "starting_column": 1,
+                  "ending_column": 0
+                }
+              },
+              "signature": "GetHash(bytes)"
+            },
+            "additional_fields": {
+              "target": "function",
+              "convention": "mixedCase"
+            }
+          }
+        ],
+        "description": "Function GIFT_CARD.GetHash(bytes) (Benchmarks/Study_SamplesSet/febaedbde0766554de402e7847baa424.sol#45) is not in mixedCase\n",
+        "markdown": "Function [GIFT_CARD.GetHash(bytes)](Benchmarks/Study_SamplesSet/febaedbde0766554de402e7847baa424.sol#L45) is not in mixedCase\n",
+        "first_markdown_element": "Benchmarks/Study_SamplesSet/febaedbde0766554de402e7847baa424.sol#L45",
+        "id": "fb05b3f71ff5abfd82ab6856aadd508e5bc1c748706a6b776262ac8f7e777f9e",
+        "check": "naming-convention",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "Put",
+            "source_mapping": {
+              "start": 51,
+              "length": 236,
+              "filename_relative": "Benchmarks/Study_SamplesSet/febaedbde0766554de402e7847baa424.sol",
+              "filename_absolute": "/home/shikah/Documents/PhD/VulDet/Benchmarks/Study_SamplesSet/febaedbde0766554de402e7847baa424.sol",
+              "filename_short": "Benchmarks/Study_SamplesSet/febaedbde0766554de402e7847baa424.sol",
+              "is_dependency": false,
+              "lines": [
+                5,
+                6,
+                7,
+                8,
+                9,
+                10,
+                11,
+                12,
+                13,
+                14
+              ],
+              "starting_column": 5,
+              "ending_column": 6
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "GIFT_CARD",
+                "source_mapping": {
+                  "start": 26,
+                  "length": 993,
+                  "filename_relative": "Benchmarks/Study_SamplesSet/febaedbde0766554de402e7847baa424.sol",
+                  "filename_absolute": "/home/shikah/Documents/PhD/VulDet/Benchmarks/Study_SamplesSet/febaedbde0766554de402e7847baa424.sol",
+                  "filename_short": "Benchmarks/Study_SamplesSet/febaedbde0766554de402e7847baa424.sol",
+                  "is_dependency": false,
+                  "lines": [
+                    3,
+                    4,
+                    5,
+                    6,
+                    7,
+                    8,
+                    9,
+                    10,
+                    11,
+                    12,
+                    13,
+                    14,
+                    15,
+                    16,
+                    17,
+                    18,
+                    19,
+                    20,
+                    21,
+                    22,
+                    23,
+                    24,
+                    25,
+                    26,
+                    27,
+                    28,
+                    29,
+                    30,
+                    31,
+                    32,
+                    33,
+                    34,
+                    35,
+                    36,
+                    37,
+                    38,
+                    39,
+                    40,
+                    41,
+                    42,
+                    43,
+                    44,
+                    45,
+                    46,
+                    47,
+                    48,
+                    49
+                  ],
+                  "starting_column": 1,
+                  "ending_column": 0
+                }
+              },
+              "signature": "Put(bytes32,uint256)"
+            },
+            "additional_fields": {
+              "target": "function",
+              "convention": "mixedCase"
+            }
+          }
+        ],
+        "description": "Function GIFT_CARD.Put(bytes32,uint256) (Benchmarks/Study_SamplesSet/febaedbde0766554de402e7847baa424.sol#5-14) is not in mixedCase\n",
+        "markdown": "Function [GIFT_CARD.Put(bytes32,uint256)](Benchmarks/Study_SamplesSet/febaedbde0766554de402e7847baa424.sol#L5-L14) is not in mixedCase\n",
+        "first_markdown_element": "Benchmarks/Study_SamplesSet/febaedbde0766554de402e7847baa424.sol#L5-L14",
+        "id": "fd29770588bac1bef9618ac41122b5ed4c9f5c0127d544709925c5ccfb51d70e",
+        "check": "naming-convention",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "Put",
+            "source_mapping": {
+              "start": 51,
+              "length": 236,
+              "filename_relative": "Benchmarks/Study_SamplesSet/febaedbde0766554de402e7847baa424.sol",
+              "filename_absolute": "/home/shikah/Documents/PhD/VulDet/Benchmarks/Study_SamplesSet/febaedbde0766554de402e7847baa424.sol",
+              "filename_short": "Benchmarks/Study_SamplesSet/febaedbde0766554de402e7847baa424.sol",
+              "is_dependency": false,
+              "lines": [
+                5,
+                6,
+                7,
+                8,
+                9,
+                10,
+                11,
+                12,
+                13,
+                14
+              ],
+              "starting_column": 5,
+              "ending_column": 6
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "GIFT_CARD",
+                "source_mapping": {
+                  "start": 26,
+                  "length": 993,
+                  "filename_relative": "Benchmarks/Study_SamplesSet/febaedbde0766554de402e7847baa424.sol",
+                  "filename_absolute": "/home/shikah/Documents/PhD/VulDet/Benchmarks/Study_SamplesSet/febaedbde0766554de402e7847baa424.sol",
+                  "filename_short": "Benchmarks/Study_SamplesSet/febaedbde0766554de402e7847baa424.sol",
+                  "is_dependency": false,
+                  "lines": [
+                    3,
+                    4,
+                    5,
+                    6,
+                    7,
+                    8,
+                    9,
+                    10,
+                    11,
+                    12,
+                    13,
+                    14,
+                    15,
+                    16,
+                    17,
+                    18,
+                    19,
+                    20,
+                    21,
+                    22,
+                    23,
+                    24,
+                    25,
+                    26,
+                    27,
+                    28,
+                    29,
+                    30,
+                    31,
+                    32,
+                    33,
+                    34,
+                    35,
+                    36,
+                    37,
+                    38,
+                    39,
+                    40,
+                    41,
+                    42,
+                    43,
+                    44,
+                    45,
+                    46,
+                    47,
+                    48,
+                    49
+                  ],
+                  "starting_column": 1,
+                  "ending_column": 0
+                }
+              },
+              "signature": "Put(bytes32,uint256)"
+            }
+          },
+          {
+            "type": "node",
+            "name": "! locked && msg.value > 200000000000000000",
+            "source_mapping": {
+              "start": 137,
+              "length": 41,
+              "filename_relative": "Benchmarks/Study_SamplesSet/febaedbde0766554de402e7847baa424.sol",
+              "filename_absolute": "/home/shikah/Documents/PhD/VulDet/Benchmarks/Study_SamplesSet/febaedbde0766554de402e7847baa424.sol",
+              "filename_short": "Benchmarks/Study_SamplesSet/febaedbde0766554de402e7847baa424.sol",
+              "is_dependency": false,
+              "lines": [
+                9
+              ],
+              "starting_column": 12,
+              "ending_column": 53
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "Put",
+                "source_mapping": {
+                  "start": 51,
+                  "length": 236,
+                  "filename_relative": "Benchmarks/Study_SamplesSet/febaedbde0766554de402e7847baa424.sol",
+                  "filename_absolute": "/home/shikah/Documents/PhD/VulDet/Benchmarks/Study_SamplesSet/febaedbde0766554de402e7847baa424.sol",
+                  "filename_short": "Benchmarks/Study_SamplesSet/febaedbde0766554de402e7847baa424.sol",
+                  "is_dependency": false,
+                  "lines": [
+                    5,
+                    6,
+                    7,
+                    8,
+                    9,
+                    10,
+                    11,
+                    12,
+                    13,
+                    14
+                  ],
+                  "starting_column": 5,
+                  "ending_column": 6
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "GIFT_CARD",
+                    "source_mapping": {
+                      "start": 26,
+                      "length": 993,
+                      "filename_relative": "Benchmarks/Study_SamplesSet/febaedbde0766554de402e7847baa424.sol",
+                      "filename_absolute": "/home/shikah/Documents/PhD/VulDet/Benchmarks/Study_SamplesSet/febaedbde0766554de402e7847baa424.sol",
+                      "filename_short": "Benchmarks/Study_SamplesSet/febaedbde0766554de402e7847baa424.sol",
+                      "is_dependency": false,
+                      "lines": [
+                        3,
+                        4,
+                        5,
+                        6,
+                        7,
+                        8,
+                        9,
+                        10,
+                        11,
+                        12,
+                        13,
+                        14,
+                        15,
+                        16,
+                        17,
+                        18,
+                        19,
+                        20,
+                        21,
+                        22,
+                        23,
+                        24,
+                        25,
+                        26,
+                        27,
+                        28,
+                        29,
+                        30,
+                        31,
+                        32,
+                        33,
+                        34,
+                        35,
+                        36,
+                        37,
+                        38,
+                        39,
+                        40,
+                        41,
+                        42,
+                        43,
+                        44,
+                        45,
+                        46,
+                        47,
+                        48,
+                        49
+                      ],
+                      "starting_column": 1,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "Put(bytes32,uint256)"
+                }
+              }
+            }
+          }
+        ],
+        "description": "GIFT_CARD.Put(bytes32,uint256) (Benchmarks/Study_SamplesSet/febaedbde0766554de402e7847baa424.sol#5-14) uses literals with too many digits:\n\t- ! locked && msg.value > 200000000000000000 (Benchmarks/Study_SamplesSet/febaedbde0766554de402e7847baa424.sol#9)\n",
+        "markdown": "[GIFT_CARD.Put(bytes32,uint256)](Benchmarks/Study_SamplesSet/febaedbde0766554de402e7847baa424.sol#L5-L14) uses literals with too many digits:\n\t- [! locked && msg.value > 200000000000000000](Benchmarks/Study_SamplesSet/febaedbde0766554de402e7847baa424.sol#L9)\n",
+        "first_markdown_element": "Benchmarks/Study_SamplesSet/febaedbde0766554de402e7847baa424.sol#L5-L14",
+        "id": "6dec0d3d9fbc1a3cc4d6298229b6ea736fe2a81585b2304c7914cdc50705e7aa",
+        "check": "too-many-digits",
+        "impact": "Informational",
+        "confidence": "Medium"
+      },
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "GetHash",
+            "source_mapping": {
+              "start": 892,
+              "length": 88,
+              "filename_relative": "Benchmarks/Study_SamplesSet/febaedbde0766554de402e7847baa424.sol",
+              "filename_absolute": "/home/shikah/Documents/PhD/VulDet/Benchmarks/Study_SamplesSet/febaedbde0766554de402e7847baa424.sol",
+              "filename_short": "Benchmarks/Study_SamplesSet/febaedbde0766554de402e7847baa424.sol",
+              "is_dependency": false,
+              "lines": [
+                45
+              ],
+              "starting_column": 5,
+              "ending_column": 93
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "GIFT_CARD",
+                "source_mapping": {
+                  "start": 26,
+                  "length": 993,
+                  "filename_relative": "Benchmarks/Study_SamplesSet/febaedbde0766554de402e7847baa424.sol",
+                  "filename_absolute": "/home/shikah/Documents/PhD/VulDet/Benchmarks/Study_SamplesSet/febaedbde0766554de402e7847baa424.sol",
+                  "filename_short": "Benchmarks/Study_SamplesSet/febaedbde0766554de402e7847baa424.sol",
+                  "is_dependency": false,
+                  "lines": [
+                    3,
+                    4,
+                    5,
+                    6,
+                    7,
+                    8,
+                    9,
+                    10,
+                    11,
+                    12,
+                    13,
+                    14,
+                    15,
+                    16,
+                    17,
+                    18,
+                    19,
+                    20,
+                    21,
+                    22,
+                    23,
+                    24,
+                    25,
+                    26,
+                    27,
+                    28,
+                    29,
+                    30,
+                    31,
+                    32,
+                    33,
+                    34,
+                    35,
+                    36,
+                    37,
+                    38,
+                    39,
+                    40,
+                    41,
+                    42,
+                    43,
+                    44,
+                    45,
+                    46,
+                    47,
+                    48,
+                    49
+                  ],
+                  "starting_column": 1,
+                  "ending_column": 0
+                }
+              },
+              "signature": "GetHash(bytes)"
+            }
+          }
+        ],
+        "description": "GetHash(bytes) should be declared external:\n\t- GIFT_CARD.GetHash(bytes) (Benchmarks/Study_SamplesSet/febaedbde0766554de402e7847baa424.sol#45)\n",
+        "markdown": "GetHash(bytes) should be declared external:\n\t- [GIFT_CARD.GetHash(bytes)](Benchmarks/Study_SamplesSet/febaedbde0766554de402e7847baa424.sol#L45)\n",
+        "first_markdown_element": "Benchmarks/Study_SamplesSet/febaedbde0766554de402e7847baa424.sol#L45",
+        "id": "e4fbc250af06d199038f53f6b5ba9f62efbc13f24a1311d33e685757c45da271",
+        "check": "external-function",
+        "impact": "Optimization",
+        "confidence": "High"
+      }
+    ]
+  }
+}

@@ -1,0 +1,56 @@
+{
+  "fileName": "Benchmarks/Study_SamplesSet/6d9482b4cd3474f56302fa9e0aa11b9a.sol",
+  "baseName": "6d9482b4cd3474f56302fa9e0aa11b9a.sol",
+  "iter": 11,
+  "time": "0.811012",
+  "errMsg": null,
+  "result": [
+    {
+      "no": "1",
+      "kind": "IO",
+      "line": 14,
+      "signatures": [
+        {
+          "contractName": "SimpleWallet",
+          "methodName": "@fallback",
+          "argTypes": []
+        }
+      ],
+      "exp": "(depositsCount + 1)",
+      "status": "unproven"
+    },
+    {
+      "no": "2",
+      "kind": "ETH_LEAK",
+      "line": 22,
+      "signatures": [
+        {
+          "contractName": "SimpleWallet",
+          "methodName": "withdraw",
+          "argTypes": [ "uint256" ]
+        },
+        {
+          "contractName": "SimpleWallet",
+          "methodName": "withdrawAll",
+          "argTypes": []
+        }
+      ],
+      "exp": "msg.sender.transfer(_value);",
+      "status": "proven"
+    },
+    {
+      "no": "3",
+      "kind": "ETH_LEAK",
+      "line": 26,
+      "signatures": [
+        {
+          "contractName": "SimpleWallet",
+          "methodName": "sendMoney",
+          "argTypes": [ "address", "uint256" ]
+        }
+      ],
+      "exp": "_target.call.value(_value)();",
+      "status": "proven"
+    }
+  ]
+}

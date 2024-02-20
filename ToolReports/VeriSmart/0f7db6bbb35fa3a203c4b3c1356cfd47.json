@@ -1,0 +1,233 @@
+{
+  "fileName": "Benchmarks/Study_SamplesSet/0f7db6bbb35fa3a203c4b3c1356cfd47.sol",
+  "baseName": "0f7db6bbb35fa3a203c4b3c1356cfd47.sol",
+  "iter": 93,
+  "time": "300.859343",
+  "errMsg": null,
+  "result": [
+    {
+      "no": "1",
+      "kind": "IO",
+      "line": 23,
+      "signatures": [
+        {
+          "contractName": "EthMashMount",
+          "methodName": "publicGetState",
+          "argTypes": []
+        }
+      ],
+      "exp": "(round - 6)",
+      "status": "unproven"
+    },
+    {
+      "no": "2",
+      "kind": "IO",
+      "line": 24,
+      "signatures": [
+        {
+          "contractName": "EthMashMount",
+          "methodName": "publicGetState",
+          "argTypes": []
+        }
+      ],
+      "exp": "(round - 5)",
+      "status": "unproven"
+    },
+    {
+      "no": "3",
+      "kind": "IO",
+      "line": 25,
+      "signatures": [
+        {
+          "contractName": "EthMashMount",
+          "methodName": "publicGetState",
+          "argTypes": []
+        }
+      ],
+      "exp": "(round - 4)",
+      "status": "unproven"
+    },
+    {
+      "no": "4",
+      "kind": "IO",
+      "line": 26,
+      "signatures": [
+        {
+          "contractName": "EthMashMount",
+          "methodName": "publicGetState",
+          "argTypes": []
+        }
+      ],
+      "exp": "(round - 3)",
+      "status": "unproven"
+    },
+    {
+      "no": "5",
+      "kind": "IO",
+      "line": 27,
+      "signatures": [
+        {
+          "contractName": "EthMashMount",
+          "methodName": "publicGetState",
+          "argTypes": []
+        }
+      ],
+      "exp": "(round - 2)",
+      "status": "unproven"
+    },
+    {
+      "no": "6",
+      "kind": "IO",
+      "line": 28,
+      "signatures": [
+        {
+          "contractName": "EthMashMount",
+          "methodName": "publicGetState",
+          "argTypes": []
+        }
+      ],
+      "exp": "(round - 1)",
+      "status": "unproven"
+    },
+    {
+      "no": "7",
+      "kind": "IO",
+      "line": 43,
+      "signatures": [
+        {
+          "contractName": "EthMashMount",
+          "methodName": "userRegister",
+          "argTypes": []
+        }
+      ],
+      "exp": "(withdrawals[owner] + 5000000000000000)",
+      "status": "unproven"
+    },
+    {
+      "no": "8",
+      "kind": "IO",
+      "line": 46,
+      "signatures": [
+        {
+          "contractName": "EthMashMount",
+          "methodName": "userRegister",
+          "argTypes": []
+        }
+      ],
+      "exp": "((uint256(blockhash((block.number - 1))) + uint256(participants[round][0])) + uint256(participants[round][1]))",
+      "status": "unproven"
+    },
+    {
+      "no": "9",
+      "kind": "IO",
+      "line": 46,
+      "signatures": [
+        {
+          "contractName": "EthMashMount",
+          "methodName": "userRegister",
+          "argTypes": []
+        }
+      ],
+      "exp": "(block.number - 1)",
+      "status": "unproven"
+    },
+    {
+      "no": "10",
+      "kind": "IO",
+      "line": 46,
+      "signatures": [
+        {
+          "contractName": "EthMashMount",
+          "methodName": "userRegister",
+          "argTypes": []
+        }
+      ],
+      "exp": "(uint256(blockhash((block.number - 1))) + uint256(participants[round][0]))",
+      "status": "unproven"
+    },
+    {
+      "no": "11",
+      "kind": "IO",
+      "line": 50,
+      "signatures": [
+        {
+          "contractName": "EthMashMount",
+          "methodName": "userRegister",
+          "argTypes": []
+        }
+      ],
+      "exp": "(withdrawals[participants[round][0]] + 100000000000000000)",
+      "status": "unproven"
+    },
+    {
+      "no": "12",
+      "kind": "IO",
+      "line": 54,
+      "signatures": [
+        {
+          "contractName": "EthMashMount",
+          "methodName": "userRegister",
+          "argTypes": []
+        }
+      ],
+      "exp": "(withdrawals[participants[round][1]] + 100000000000000000)",
+      "status": "unproven"
+    },
+    {
+      "no": "13",
+      "kind": "IO",
+      "line": 57,
+      "signatures": [
+        {
+          "contractName": "EthMashMount",
+          "methodName": "userRegister",
+          "argTypes": []
+        }
+      ],
+      "exp": "(round + 1)",
+      "status": "unproven"
+    },
+    {
+      "no": "14",
+      "kind": "IO",
+      "line": 58,
+      "signatures": [
+        {
+          "contractName": "EthMashMount",
+          "methodName": "userRegister",
+          "argTypes": []
+        }
+      ],
+      "exp": "(round - 1)",
+      "status": "unproven"
+    },
+    {
+      "no": "15",
+      "kind": "DZ",
+      "line": 48,
+      "signatures": [
+        {
+          "contractName": "EthMashMount",
+          "methodName": "userRegister",
+          "argTypes": []
+        }
+      ],
+      "exp": "(random % 2)",
+      "status": "proven"
+    },
+    {
+      "no": "16",
+      "kind": "ETH_LEAK",
+      "line": 37,
+      "signatures": [
+        {
+          "contractName": "EthMashMount",
+          "methodName": "userWithdraw",
+          "argTypes": []
+        }
+      ],
+      "exp": "msg.sender.transfer(amount);",
+      "status": "unproven"
+    }
+  ]
+}

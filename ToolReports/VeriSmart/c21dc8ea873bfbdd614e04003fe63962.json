@@ -1,0 +1,51 @@
+{
+  "fileName": "Benchmarks/Study_SamplesSet/c21dc8ea873bfbdd614e04003fe63962.sol",
+  "baseName": "c21dc8ea873bfbdd614e04003fe63962.sol",
+  "iter": 3,
+  "time": "0.462489",
+  "errMsg": null,
+  "result": [
+    {
+      "no": "1",
+      "kind": "IO",
+      "line": 22,
+      "signatures": [
+        {
+          "contractName": "Multiplicator",
+          "methodName": "multiplicate",
+          "argTypes": [ "address" ]
+        }
+      ],
+      "exp": "(this.balance + msg.value)",
+      "status": "unproven"
+    },
+    {
+      "no": "2",
+      "kind": "ETH_LEAK",
+      "line": 14,
+      "signatures": [
+        {
+          "contractName": "Multiplicator",
+          "methodName": "withdraw",
+          "argTypes": []
+        }
+      ],
+      "exp": "Owner.transfer(this.balance);",
+      "status": "proven"
+    },
+    {
+      "no": "3",
+      "kind": "ETH_LEAK",
+      "line": 22,
+      "signatures": [
+        {
+          "contractName": "Multiplicator",
+          "methodName": "multiplicate",
+          "argTypes": [ "address" ]
+        }
+      ],
+      "exp": "adr.transfer((this.balance + msg.value));",
+      "status": "proven"
+    }
+  ]
+}

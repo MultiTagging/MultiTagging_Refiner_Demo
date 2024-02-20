@@ -1,0 +1,710 @@
+{
+  "success": true,
+  "error": null,
+  "results": {
+    "detectors": [
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "tokenAddress",
+            "source_mapping": {
+              "start": 1801,
+              "length": 20,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "tokenAddress",
+                "source_mapping": {
+                  "start": 1759,
+                  "length": 109,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "DestructionContract",
+                    "source_mapping": {
+                      "start": 814,
+                      "length": 1096,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "tokenAddress()"
+                }
+              }
+            }
+          },
+          {
+            "type": "function",
+            "name": "tokenAddress",
+            "source_mapping": {
+              "start": 1759,
+              "length": 109,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "DestructionContract",
+                "source_mapping": {
+                  "start": 814,
+                  "length": 1096,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              },
+              "signature": "tokenAddress()"
+            }
+          }
+        ],
+        "description": "DestructionContract.tokenAddress().tokenAddress () shadows:\n\t- DestructionContract.tokenAddress() () (function)\n",
+        "markdown": "[DestructionContract.tokenAddress().tokenAddress]() shadows:\n\t- [DestructionContract.tokenAddress()]() (function)\n",
+        "first_markdown_element": "",
+        "id": "3d072448e61be154e0b492c50f13ac2b2630cb8c36c1fbd2cc0d0c3276440b21",
+        "check": "shadowing-local",
+        "impact": "Low",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "_curatorAdress",
+            "source_mapping": {
+              "start": 1254,
+              "length": 22,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "setDestructionCurator",
+                "source_mapping": {
+                  "start": 1223,
+                  "length": 179,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "DestructionContract",
+                    "source_mapping": {
+                      "start": 814,
+                      "length": 1096,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "setDestructionCurator(address)"
+                }
+              }
+            }
+          },
+          {
+            "type": "node",
+            "name": "curator = _curatorAdress",
+            "source_mapping": {
+              "start": 1353,
+              "length": 24,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "setDestructionCurator",
+                "source_mapping": {
+                  "start": 1223,
+                  "length": 179,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "DestructionContract",
+                    "source_mapping": {
+                      "start": 814,
+                      "length": 1096,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "setDestructionCurator(address)"
+                }
+              }
+            }
+          }
+        ],
+        "description": "DestructionContract.setDestructionCurator(address)._curatorAdress () lacks a zero-check on :\n\t\t- curator = _curatorAdress ()\n",
+        "markdown": "[DestructionContract.setDestructionCurator(address)._curatorAdress]() lacks a zero-check on :\n\t\t- [curator = _curatorAdress]()\n",
+        "first_markdown_element": "",
+        "id": "513af2c378424d0b4c7973b42afcf06654122bdb621aaa6657c37ec5e38a56b9",
+        "check": "missing-zero-check",
+        "impact": "Low",
+        "confidence": "Medium"
+      },
+      {
+        "elements": [
+          {
+            "type": "node",
+            "name": "",
+            "source_mapping": {
+              "start": 1896,
+              "length": 5,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "fallback",
+                "source_mapping": {
+                  "start": 1874,
+                  "length": 34,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "DestructionContract",
+                    "source_mapping": {
+                      "start": 814,
+                      "length": 1096,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "fallback()"
+                }
+              }
+            }
+          }
+        ],
+        "description": "Deprecated standard detected THROW ():\n\t- Usage of \"throw\" should be replaced with \"revert()\"\n",
+        "markdown": "Deprecated standard detected [THROW]():\n\t- Usage of \"throw\" should be replaced with \"revert()\"\n",
+        "first_markdown_element": "",
+        "id": "f5556cf1c70b64b9e4b1fc32044dd970b5f2c8b9fc21b7971fda01971033f2d5",
+        "check": "deprecated-standards",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "pragma",
+            "name": "^0.4.8",
+            "source_mapping": {
+              "start": 0,
+              "length": 23,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "directive": [
+                "solidity",
+                "^",
+                "0.4",
+                ".8"
+              ]
+            }
+          }
+        ],
+        "description": "Pragma version^0.4.8 () allows old versions\n",
+        "markdown": "Pragma version[^0.4.8]() allows old versions\n",
+        "first_markdown_element": "",
+        "id": "dd43bca9b08bc1fa7b94a3e619671f3c2c98a72b8b3bf0caf1e1f86665ec4569",
+        "check": "solc-version",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [],
+        "description": "solc-0.4.8 is not recommended for deployment\n",
+        "markdown": "solc-0.4.8 is not recommended for deployment\n",
+        "first_markdown_element": "",
+        "id": "ebbd8e423b3c73a93e118f8daed7c9ac33b0d525351f79b5ea41076caa3c1bc5",
+        "check": "solc-version",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "_curatorAdress",
+            "source_mapping": {
+              "start": 1254,
+              "length": 22,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "setDestructionCurator",
+                "source_mapping": {
+                  "start": 1223,
+                  "length": 179,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "DestructionContract",
+                    "source_mapping": {
+                      "start": 814,
+                      "length": 1096,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "setDestructionCurator(address)"
+                }
+              }
+            },
+            "additional_fields": {
+              "target": "parameter",
+              "convention": "mixedCase"
+            }
+          }
+        ],
+        "description": "Parameter DestructionContract.setDestructionCurator(address)._curatorAdress () is not in mixedCase\n",
+        "markdown": "Parameter [DestructionContract.setDestructionCurator(address)._curatorAdress]() is not in mixedCase\n",
+        "first_markdown_element": "",
+        "id": "4e1ed3960ce8d20afcca6c582e475af6d869bc47d324904f3df01979dfb9716e",
+        "check": "naming-convention",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "_details",
+            "source_mapping": {
+              "start": 1039,
+              "length": 15,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "destroy",
+                "source_mapping": {
+                  "start": 1008,
+                  "length": 209,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "DestructionContract",
+                    "source_mapping": {
+                      "start": 814,
+                      "length": 1096,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "destroy(uint256,string)"
+                }
+              }
+            },
+            "additional_fields": {
+              "target": "parameter",
+              "convention": "mixedCase"
+            }
+          }
+        ],
+        "description": "Parameter DestructionContract.destroy(uint256,string)._details () is not in mixedCase\n",
+        "markdown": "Parameter [DestructionContract.destroy(uint256,string)._details]() is not in mixedCase\n",
+        "first_markdown_element": "",
+        "id": "61c433d53f17cd4048f23fac368ef15a61bad0b9b42b0d60afc7db6a4d90cc73",
+        "check": "naming-convention",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "_contractAddress",
+            "source_mapping": {
+              "start": 1434,
+              "length": 24,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "setTokenContract",
+                "source_mapping": {
+                  "start": 1408,
+                  "length": 196,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "DestructionContract",
+                    "source_mapping": {
+                      "start": 814,
+                      "length": 1096,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "setTokenContract(address)"
+                }
+              }
+            },
+            "additional_fields": {
+              "target": "parameter",
+              "convention": "mixedCase"
+            }
+          }
+        ],
+        "description": "Parameter DestructionContract.setTokenContract(address)._contractAddress () is not in mixedCase\n",
+        "markdown": "Parameter [DestructionContract.setTokenContract(address)._contractAddress]() is not in mixedCase\n",
+        "first_markdown_element": "",
+        "id": "83a7328a433e822e1ae1661104cf02bc5bb2e768c3033864f52c5f01dba8ffe8",
+        "check": "naming-convention",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "_amount",
+            "source_mapping": {
+              "start": 1025,
+              "length": 12,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "destroy",
+                "source_mapping": {
+                  "start": 1008,
+                  "length": 209,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "DestructionContract",
+                    "source_mapping": {
+                      "start": 814,
+                      "length": 1096,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "destroy(uint256,string)"
+                }
+              }
+            },
+            "additional_fields": {
+              "target": "parameter",
+              "convention": "mixedCase"
+            }
+          }
+        ],
+        "description": "Parameter DestructionContract.destroy(uint256,string)._amount () is not in mixedCase\n",
+        "markdown": "Parameter [DestructionContract.destroy(uint256,string)._amount]() is not in mixedCase\n",
+        "first_markdown_element": "",
+        "id": "af656179979e88ac39fc03cf3ab85637e66a5e99573edbfd6f315cbe5139aebe",
+        "check": "naming-convention",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "destroyOldCoins",
+            "source_mapping": {
+              "start": 709,
+              "length": 101,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "IToken",
+                "source_mapping": {
+                  "start": 25,
+                  "length": 787,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              },
+              "signature": "destroyOldCoins(address,uint256,string)"
+            }
+          }
+        ],
+        "description": "destroyOldCoins(address,uint256,string) should be declared external:\n\t- IToken.destroyOldCoins(address,uint256,string) ()\n",
+        "markdown": "destroyOldCoins(address,uint256,string) should be declared external:\n\t- [IToken.destroyOldCoins(address,uint256,string)]()\n",
+        "first_markdown_element": "",
+        "id": "53dc1fa97a1638c2a143d9c4ddf809748bb25d5f1c862a4de651bfa4616c92d6",
+        "check": "external-function",
+        "impact": "Optimization",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "issueNewCoins",
+            "source_mapping": {
+              "start": 606,
+              "length": 98,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "IToken",
+                "source_mapping": {
+                  "start": 25,
+                  "length": 787,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              },
+              "signature": "issueNewCoins(address,uint256,string)"
+            }
+          }
+        ],
+        "description": "issueNewCoins(address,uint256,string) should be declared external:\n\t- IToken.issueNewCoins(address,uint256,string) ()\n",
+        "markdown": "issueNewCoins(address,uint256,string) should be declared external:\n\t- [IToken.issueNewCoins(address,uint256,string)]()\n",
+        "first_markdown_element": "",
+        "id": "a6243ec1aaab1e0fa2d2713ad4b0f4424dc87cf8734f93108b1e069f11afe25c",
+        "check": "external-function",
+        "impact": "Optimization",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "destroy",
+            "source_mapping": {
+              "start": 1008,
+              "length": 209,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "DestructionContract",
+                "source_mapping": {
+                  "start": 814,
+                  "length": 1096,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              },
+              "signature": "destroy(uint256,string)"
+            }
+          }
+        ],
+        "description": "destroy(uint256,string) should be declared external:\n\t- DestructionContract.destroy(uint256,string) ()\n",
+        "markdown": "destroy(uint256,string) should be declared external:\n\t- [DestructionContract.destroy(uint256,string)]()\n",
+        "first_markdown_element": "",
+        "id": "cc5166b6c77b677d0457a892a3e181af793b2cdb157cc4ffb083cfbf4dc95603",
+        "check": "external-function",
+        "impact": "Optimization",
+        "confidence": "High"
+      }
+    ]
+  }
+}

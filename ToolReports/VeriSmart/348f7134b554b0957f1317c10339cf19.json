@@ -1,0 +1,251 @@
+{
+  "fileName": "Benchmarks/Study_SamplesSet/348f7134b554b0957f1317c10339cf19.sol",
+  "baseName": "348f7134b554b0957f1317c10339cf19.sol",
+  "iter": 262,
+  "time": "300.062939",
+  "errMsg": null,
+  "result": [
+    {
+      "no": "1",
+      "kind": "IO",
+      "line": 5,
+      "signatures": [
+        {
+          "contractName": "Ethmax",
+          "methodName": "@fallback",
+          "argTypes": []
+        },
+        {
+          "contractName": "Ethmax",
+          "methodName": "getTokens",
+          "argTypes": []
+        }
+      ],
+      "exp": "(a * b)",
+      "status": "unproven"
+    },
+    {
+      "no": "2",
+      "kind": "IO",
+      "line": 17,
+      "signatures": [
+        { "contractName": "Ethmax", "methodName": "Ethmax", "argTypes": [] },
+        {
+          "contractName": "Ethmax",
+          "methodName": "burn",
+          "argTypes": [ "uint256" ]
+        },
+        {
+          "contractName": "Ethmax",
+          "methodName": "distr",
+          "argTypes": [ "address", "uint256" ]
+        },
+        {
+          "contractName": "Ethmax",
+          "methodName": "transfer",
+          "argTypes": [ "address", "uint256" ]
+        },
+        {
+          "contractName": "Ethmax",
+          "methodName": "transferFrom",
+          "argTypes": [ "address", "address", "uint256" ]
+        }
+      ],
+      "exp": "(a - b)",
+      "status": "proven"
+    },
+    {
+      "no": "3",
+      "kind": "IO",
+      "line": 21,
+      "signatures": [
+        {
+          "contractName": "Ethmax",
+          "methodName": "distr",
+          "argTypes": [ "address", "uint256" ]
+        },
+        {
+          "contractName": "Ethmax",
+          "methodName": "transfer",
+          "argTypes": [ "address", "uint256" ]
+        },
+        {
+          "contractName": "Ethmax",
+          "methodName": "transferFrom",
+          "argTypes": [ "address", "address", "uint256" ]
+        }
+      ],
+      "exp": "(a + b)",
+      "status": "unproven"
+    },
+    {
+      "no": "4",
+      "kind": "IO",
+      "line": 110,
+      "signatures": [
+        {
+          "contractName": "Ethmax",
+          "methodName": "enableWhitelist",
+          "argTypes": [ "address[]" ]
+        }
+      ],
+      "exp": "(i + 1)",
+      "status": "proven"
+    },
+    {
+      "no": "5",
+      "kind": "IO",
+      "line": 116,
+      "signatures": [
+        {
+          "contractName": "Ethmax",
+          "methodName": "disableWhitelist",
+          "argTypes": [ "address[]" ]
+        }
+      ],
+      "exp": "(i + 1)",
+      "status": "proven"
+    },
+    {
+      "no": "6",
+      "kind": "IO",
+      "line": 145,
+      "signatures": [
+        {
+          "contractName": "Ethmax",
+          "methodName": "airdrop",
+          "argTypes": [ "address[]" ]
+        }
+      ],
+      "exp": "(i + 1)",
+      "status": "proven"
+    },
+    {
+      "no": "7",
+      "kind": "IO",
+      "line": 160,
+      "signatures": [
+        {
+          "contractName": "Ethmax",
+          "methodName": "distribution",
+          "argTypes": [ "address[]", "uint256" ]
+        }
+      ],
+      "exp": "(i + 1)",
+      "status": "proven"
+    },
+    {
+      "no": "8",
+      "kind": "IO",
+      "line": 175,
+      "signatures": [
+        {
+          "contractName": "Ethmax",
+          "methodName": "distributeAmounts",
+          "argTypes": [ "address[]", "uint256[]" ]
+        }
+      ],
+      "exp": "(i + 1)",
+      "status": "unproven"
+    },
+    {
+      "no": "9",
+      "kind": "IO",
+      "line": 219,
+      "signatures": [
+        {
+          "contractName": "Ethmax",
+          "methodName": "transfer",
+          "argTypes": [ "address", "uint256" ]
+        },
+        {
+          "contractName": "Ethmax",
+          "methodName": "transferFrom",
+          "argTypes": [ "address", "address", "uint256" ]
+        }
+      ],
+      "exp": "(size + 4)",
+      "status": "proven"
+    },
+    {
+      "no": "10",
+      "kind": "IO",
+      "line": 223,
+      "signatures": [
+        {
+          "contractName": "Ethmax",
+          "methodName": "transfer",
+          "argTypes": [ "address", "uint256" ]
+        }
+      ],
+      "exp": "(2 * 32)",
+      "status": "proven"
+    },
+    {
+      "no": "11",
+      "kind": "IO",
+      "line": 234,
+      "signatures": [
+        {
+          "contractName": "Ethmax",
+          "methodName": "transferFrom",
+          "argTypes": [ "address", "address", "uint256" ]
+        }
+      ],
+      "exp": "(3 * 32)",
+      "status": "proven"
+    },
+    {
+      "no": "12",
+      "kind": "DZ",
+      "line": 6,
+      "signatures": [
+        {
+          "contractName": "Ethmax",
+          "methodName": "@fallback",
+          "argTypes": []
+        },
+        {
+          "contractName": "Ethmax",
+          "methodName": "getTokens",
+          "argTypes": []
+        }
+      ],
+      "exp": "(c / a)",
+      "status": "unproven"
+    },
+    {
+      "no": "13",
+      "kind": "DZ",
+      "line": 11,
+      "signatures": [
+        {
+          "contractName": "Ethmax",
+          "methodName": "@fallback",
+          "argTypes": []
+        },
+        {
+          "contractName": "Ethmax",
+          "methodName": "getTokens",
+          "argTypes": []
+        }
+      ],
+      "exp": "(a / b)",
+      "status": "proven"
+    },
+    {
+      "no": "14",
+      "kind": "ETH_LEAK",
+      "line": 267,
+      "signatures": [
+        {
+          "contractName": "Ethmax",
+          "methodName": "withdraw",
+          "argTypes": []
+        }
+      ],
+      "exp": "owner.transfer(etherBalance);",
+      "status": "proven"
+    }
+  ]
+}

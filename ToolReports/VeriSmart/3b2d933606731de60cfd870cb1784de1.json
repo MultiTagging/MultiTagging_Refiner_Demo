@@ -1,0 +1,135 @@
+{
+  "fileName": "Benchmarks/Study_SamplesSet/3b2d933606731de60cfd870cb1784de1.sol",
+  "baseName": "3b2d933606731de60cfd870cb1784de1.sol",
+  "iter": 44,
+  "time": "314.63656",
+  "errMsg": null,
+  "result": [
+    {
+      "no": "1",
+      "kind": "IO",
+      "line": 80,
+      "signatures": [
+        {
+          "contractName": "DrainMe",
+          "methodName": "manipulateSecret",
+          "argTypes": []
+        }
+      ],
+      "exp": "(block.number - 1)",
+      "status": "unproven"
+    },
+    {
+      "no": "2",
+      "kind": "IO",
+      "line": 110,
+      "signatures": [
+        {
+          "contractName": "DrainMe",
+          "methodName": "guessSeed",
+          "argTypes": [ "uint256" ]
+        }
+      ],
+      "exp": "(seed[0] * seed[1])",
+      "status": "unproven"
+    },
+    {
+      "no": "3",
+      "kind": "DZ",
+      "line": 82,
+      "signatures": [
+        {
+          "contractName": "DrainMe",
+          "methodName": "manipulateSecret",
+          "argTypes": []
+        }
+      ],
+      "exp": "(secret % 5)",
+      "status": "proven"
+    },
+    {
+      "no": "4",
+      "kind": "DZ",
+      "line": 110,
+      "signatures": [
+        {
+          "contractName": "DrainMe",
+          "methodName": "guessSeed",
+          "argTypes": [ "uint256" ]
+        }
+      ],
+      "exp": "(_seed / (seed[0] * seed[1]))",
+      "status": "unproven"
+    },
+    {
+      "no": "5",
+      "kind": "ETH_LEAK",
+      "line": 75,
+      "signatures": [
+        {
+          "contractName": "DrainMe",
+          "methodName": "manipulateSecret",
+          "argTypes": []
+        }
+      ],
+      "exp": "msg.sender.transfer(amount);",
+      "status": "proven"
+    },
+    {
+      "no": "6",
+      "kind": "ETH_LEAK",
+      "line": 93,
+      "signatures": [
+        {
+          "contractName": "DrainMe",
+          "methodName": "callFirstTarget",
+          "argTypes": []
+        }
+      ],
+      "exp": "firstTarget.call.value(msg.value)();",
+      "status": "proven"
+    },
+    {
+      "no": "7",
+      "kind": "ETH_LEAK",
+      "line": 98,
+      "signatures": [
+        {
+          "contractName": "DrainMe",
+          "methodName": "callSecondTarget",
+          "argTypes": []
+        }
+      ],
+      "exp": "secondTarget.call.value(msg.value)();",
+      "status": "proven"
+    },
+    {
+      "no": "8",
+      "kind": "ETH_LEAK",
+      "line": 124,
+      "signatures": [
+        {
+          "contractName": "DrainMe",
+          "methodName": "winPrize",
+          "argTypes": []
+        }
+      ],
+      "exp": "owner.call.value(1)();",
+      "status": "unproven"
+    },
+    {
+      "no": "9",
+      "kind": "ETH_LEAK",
+      "line": 128,
+      "signatures": [
+        {
+          "contractName": "DrainMe",
+          "methodName": "claimPrize",
+          "argTypes": []
+        }
+      ],
+      "exp": "winner.transfer(address(this).balance);",
+      "status": "unproven"
+    }
+  ]
+}

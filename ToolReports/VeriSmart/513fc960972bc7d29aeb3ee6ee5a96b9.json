@@ -1,0 +1,93 @@
+{
+  "fileName": "Benchmarks/Study_SamplesSet/513fc960972bc7d29aeb3ee6ee5a96b9.sol",
+  "baseName": "513fc960972bc7d29aeb3ee6ee5a96b9.sol",
+  "iter": 656,
+  "time": "261.408322",
+  "errMsg": null,
+  "result": [
+    {
+      "no": "1",
+      "kind": "IO",
+      "line": 20,
+      "signatures": [
+        {
+          "contractName": "Multiplexer",
+          "methodName": "sendEth",
+          "argTypes": [ "address[]", "uint256[]" ]
+        }
+      ],
+      "exp": "(i + 1)",
+      "status": "unproven"
+    },
+    {
+      "no": "2",
+      "kind": "IO",
+      "line": 21,
+      "signatures": [
+        {
+          "contractName": "Multiplexer",
+          "methodName": "sendEth",
+          "argTypes": [ "address[]", "uint256[]" ]
+        }
+      ],
+      "exp": "(afterValue + _value[i])",
+      "status": "unproven"
+    },
+    {
+      "no": "3",
+      "kind": "IO",
+      "line": 25,
+      "signatures": [
+        {
+          "contractName": "Multiplexer",
+          "methodName": "sendEth",
+          "argTypes": [ "address[]", "uint256[]" ]
+        }
+      ],
+      "exp": "(beforeValue - afterValue)",
+      "status": "unproven"
+    },
+    {
+      "no": "4",
+      "kind": "IO",
+      "line": 39,
+      "signatures": [
+        {
+          "contractName": "Multiplexer",
+          "methodName": "sendErc20",
+          "argTypes": [ "address", "address[]", "uint256[]" ]
+        }
+      ],
+      "exp": "(i + 1)",
+      "status": "unproven"
+    },
+    {
+      "no": "5",
+      "kind": "ETH_LEAK",
+      "line": 22,
+      "signatures": [
+        {
+          "contractName": "Multiplexer",
+          "methodName": "sendEth",
+          "argTypes": [ "address[]", "uint256[]" ]
+        }
+      ],
+      "exp": "_to[i].send(_value[i])",
+      "status": "unproven"
+    },
+    {
+      "no": "6",
+      "kind": "ETH_LEAK",
+      "line": 27,
+      "signatures": [
+        {
+          "contractName": "Multiplexer",
+          "methodName": "sendEth",
+          "argTypes": [ "address[]", "uint256[]" ]
+        }
+      ],
+      "exp": "msg.sender.send(remainingValue)",
+      "status": "unproven"
+    }
+  ]
+}

@@ -1,0 +1,155 @@
+{
+  "fileName": "Benchmarks/Study_SamplesSet/80331543bdcfb5768404ab38798c0cfd.sol",
+  "baseName": "80331543bdcfb5768404ab38798c0cfd.sol",
+  "iter": 35,
+  "time": "301.84775",
+  "errMsg": null,
+  "result": [
+    {
+      "no": "1",
+      "kind": "IO",
+      "line": 8,
+      "signatures": [
+        { "contractName": "IG", "methodName": "@fallback", "argTypes": [] },
+        { "contractName": "IG", "methodName": "getTokens", "argTypes": [] }
+      ],
+      "exp": "(a * b)",
+      "status": "unproven"
+    },
+    {
+      "no": "2",
+      "kind": "IO",
+      "line": 20,
+      "signatures": [
+        { "contractName": "IG", "methodName": "IG", "argTypes": [] },
+        {
+          "contractName": "IG",
+          "methodName": "burn",
+          "argTypes": [ "uint256" ]
+        },
+        {
+          "contractName": "IG",
+          "methodName": "distr",
+          "argTypes": [ "address", "uint256" ]
+        },
+        { "contractName": "IG", "methodName": "getTokens", "argTypes": [] },
+        {
+          "contractName": "IG",
+          "methodName": "transfer",
+          "argTypes": [ "address", "uint256" ]
+        },
+        {
+          "contractName": "IG",
+          "methodName": "transferFrom",
+          "argTypes": [ "address", "address", "uint256" ]
+        }
+      ],
+      "exp": "(a - b)",
+      "status": "proven"
+    },
+    {
+      "no": "3",
+      "kind": "IO",
+      "line": 24,
+      "signatures": [
+        {
+          "contractName": "IG",
+          "methodName": "distr",
+          "argTypes": [ "address", "uint256" ]
+        },
+        { "contractName": "IG", "methodName": "getTokens", "argTypes": [] },
+        {
+          "contractName": "IG",
+          "methodName": "transfer",
+          "argTypes": [ "address", "uint256" ]
+        },
+        {
+          "contractName": "IG",
+          "methodName": "transferFrom",
+          "argTypes": [ "address", "address", "uint256" ]
+        }
+      ],
+      "exp": "(a + b)",
+      "status": "unproven"
+    },
+    {
+      "no": "4",
+      "kind": "IO",
+      "line": 160,
+      "signatures": [
+        {
+          "contractName": "IG",
+          "methodName": "transfer",
+          "argTypes": [ "address", "uint256" ]
+        },
+        {
+          "contractName": "IG",
+          "methodName": "transferFrom",
+          "argTypes": [ "address", "address", "uint256" ]
+        }
+      ],
+      "exp": "(size + 4)",
+      "status": "proven"
+    },
+    {
+      "no": "5",
+      "kind": "IO",
+      "line": 164,
+      "signatures": [
+        {
+          "contractName": "IG",
+          "methodName": "transfer",
+          "argTypes": [ "address", "uint256" ]
+        }
+      ],
+      "exp": "(2 * 32)",
+      "status": "proven"
+    },
+    {
+      "no": "6",
+      "kind": "IO",
+      "line": 174,
+      "signatures": [
+        {
+          "contractName": "IG",
+          "methodName": "transferFrom",
+          "argTypes": [ "address", "address", "uint256" ]
+        }
+      ],
+      "exp": "(3 * 32)",
+      "status": "proven"
+    },
+    {
+      "no": "7",
+      "kind": "DZ",
+      "line": 9,
+      "signatures": [
+        { "contractName": "IG", "methodName": "@fallback", "argTypes": [] },
+        { "contractName": "IG", "methodName": "getTokens", "argTypes": [] }
+      ],
+      "exp": "(c / a)",
+      "status": "unproven"
+    },
+    {
+      "no": "8",
+      "kind": "DZ",
+      "line": 14,
+      "signatures": [
+        { "contractName": "IG", "methodName": "@fallback", "argTypes": [] },
+        { "contractName": "IG", "methodName": "getTokens", "argTypes": [] }
+      ],
+      "exp": "(a / b)",
+      "status": "proven"
+    },
+    {
+      "no": "9",
+      "kind": "ETH_LEAK",
+      "line": 205,
+      "signatures": [
+        { "contractName": "IG", "methodName": "withdraw", "argTypes": [] }
+      ],
+      "exp": "owner.transfer(etherBalance);",
+      "status": "proven"
+    }
+  ]
+}

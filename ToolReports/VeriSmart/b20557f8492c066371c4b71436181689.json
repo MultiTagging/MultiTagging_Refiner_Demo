@@ -1,0 +1,65 @@
+{
+  "fileName": "Benchmarks/Study_SamplesSet/b20557f8492c066371c4b71436181689.sol",
+  "baseName": "b20557f8492c066371c4b71436181689.sol",
+  "iter": 3409,
+  "time": "300.061961",
+  "errMsg": null,
+  "result": [
+    {
+      "no": "1",
+      "kind": "IO",
+      "line": 14,
+      "signatures": [
+        {
+          "contractName": "BIAToken",
+          "methodName": "burn",
+          "argTypes": [ "uint256" ]
+        }
+      ],
+      "exp": "(a - b)",
+      "status": "proven"
+    },
+    {
+      "no": "2",
+      "kind": "IO",
+      "line": 18,
+      "signatures": [
+        {
+          "contractName": "BIAToken",
+          "methodName": "mint",
+          "argTypes": [ "address", "uint256" ]
+        }
+      ],
+      "exp": "(a + b)",
+      "status": "unproven"
+    },
+    {
+      "no": "3",
+      "kind": "IO",
+      "line": 312,
+      "signatures": [
+        {
+          "contractName": "BIAToken",
+          "methodName": "BIAToken",
+          "argTypes": []
+        }
+      ],
+      "exp": "(10 ** uint256(decimals))",
+      "status": "proven"
+    },
+    {
+      "no": "4",
+      "kind": "IO",
+      "line": 312,
+      "signatures": [
+        {
+          "contractName": "BIAToken",
+          "methodName": "BIAToken",
+          "argTypes": []
+        }
+      ],
+      "exp": "(10000 * (10 ** uint256(decimals)))",
+      "status": "proven"
+    }
+  ]
+}

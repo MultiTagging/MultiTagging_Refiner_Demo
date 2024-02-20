@@ -1,0 +1,23 @@
+{
+  "fileName": "Benchmarks/Study_SamplesSet/d2228307271503f9b22a30d9f98b6dba.sol",
+  "baseName": "d2228307271503f9b22a30d9f98b6dba.sol",
+  "iter": 1,
+  "time": "0.064829",
+  "errMsg": null,
+  "result": [
+    {
+      "no": "1",
+      "kind": "ETH_LEAK",
+      "line": 150,
+      "signatures": [
+        {
+          "contractName": "CvcProxy",
+          "methodName": "upgradeToAndCall",
+          "argTypes": [ "address", "dbytes" ]
+        }
+      ],
+      "exp": "address(this).call.value(msg.value)(_data)",
+      "status": "proven"
+    }
+  ]
+}

@@ -1,0 +1,195 @@
+{
+  "fileName": "Benchmarks/Study_SamplesSet/dfa832e10daf56a32699db3250437f77.sol",
+  "baseName": "dfa832e10daf56a32699db3250437f77.sol",
+  "iter": 35,
+  "time": "303.095802",
+  "errMsg": null,
+  "result": [
+    {
+      "no": "1",
+      "kind": "IO",
+      "line": 5,
+      "signatures": [
+        {
+          "contractName": "SuperSkyNet",
+          "methodName": "@fallback",
+          "argTypes": []
+        },
+        {
+          "contractName": "SuperSkyNet",
+          "methodName": "getTokens",
+          "argTypes": []
+        }
+      ],
+      "exp": "(a * b)",
+      "status": "unproven"
+    },
+    {
+      "no": "2",
+      "kind": "IO",
+      "line": 17,
+      "signatures": [
+        {
+          "contractName": "SuperSkyNet",
+          "methodName": "SuperSkyNet",
+          "argTypes": []
+        },
+        {
+          "contractName": "SuperSkyNet",
+          "methodName": "burn",
+          "argTypes": [ "uint256" ]
+        },
+        {
+          "contractName": "SuperSkyNet",
+          "methodName": "distr",
+          "argTypes": [ "address", "uint256" ]
+        },
+        {
+          "contractName": "SuperSkyNet",
+          "methodName": "getTokens",
+          "argTypes": []
+        },
+        {
+          "contractName": "SuperSkyNet",
+          "methodName": "transfer",
+          "argTypes": [ "address", "uint256" ]
+        },
+        {
+          "contractName": "SuperSkyNet",
+          "methodName": "transferFrom",
+          "argTypes": [ "address", "address", "uint256" ]
+        }
+      ],
+      "exp": "(a - b)",
+      "status": "proven"
+    },
+    {
+      "no": "3",
+      "kind": "IO",
+      "line": 21,
+      "signatures": [
+        {
+          "contractName": "SuperSkyNet",
+          "methodName": "distr",
+          "argTypes": [ "address", "uint256" ]
+        },
+        {
+          "contractName": "SuperSkyNet",
+          "methodName": "getTokens",
+          "argTypes": []
+        },
+        {
+          "contractName": "SuperSkyNet",
+          "methodName": "transfer",
+          "argTypes": [ "address", "uint256" ]
+        },
+        {
+          "contractName": "SuperSkyNet",
+          "methodName": "transferFrom",
+          "argTypes": [ "address", "address", "uint256" ]
+        }
+      ],
+      "exp": "(a + b)",
+      "status": "unproven"
+    },
+    {
+      "no": "4",
+      "kind": "IO",
+      "line": 157,
+      "signatures": [
+        {
+          "contractName": "SuperSkyNet",
+          "methodName": "transfer",
+          "argTypes": [ "address", "uint256" ]
+        },
+        {
+          "contractName": "SuperSkyNet",
+          "methodName": "transferFrom",
+          "argTypes": [ "address", "address", "uint256" ]
+        }
+      ],
+      "exp": "(size + 4)",
+      "status": "proven"
+    },
+    {
+      "no": "5",
+      "kind": "IO",
+      "line": 161,
+      "signatures": [
+        {
+          "contractName": "SuperSkyNet",
+          "methodName": "transfer",
+          "argTypes": [ "address", "uint256" ]
+        }
+      ],
+      "exp": "(2 * 32)",
+      "status": "proven"
+    },
+    {
+      "no": "6",
+      "kind": "IO",
+      "line": 171,
+      "signatures": [
+        {
+          "contractName": "SuperSkyNet",
+          "methodName": "transferFrom",
+          "argTypes": [ "address", "address", "uint256" ]
+        }
+      ],
+      "exp": "(3 * 32)",
+      "status": "proven"
+    },
+    {
+      "no": "7",
+      "kind": "DZ",
+      "line": 6,
+      "signatures": [
+        {
+          "contractName": "SuperSkyNet",
+          "methodName": "@fallback",
+          "argTypes": []
+        },
+        {
+          "contractName": "SuperSkyNet",
+          "methodName": "getTokens",
+          "argTypes": []
+        }
+      ],
+      "exp": "(c / a)",
+      "status": "unproven"
+    },
+    {
+      "no": "8",
+      "kind": "DZ",
+      "line": 11,
+      "signatures": [
+        {
+          "contractName": "SuperSkyNet",
+          "methodName": "@fallback",
+          "argTypes": []
+        },
+        {
+          "contractName": "SuperSkyNet",
+          "methodName": "getTokens",
+          "argTypes": []
+        }
+      ],
+      "exp": "(a / b)",
+      "status": "proven"
+    },
+    {
+      "no": "9",
+      "kind": "ETH_LEAK",
+      "line": 202,
+      "signatures": [
+        {
+          "contractName": "SuperSkyNet",
+          "methodName": "withdraw",
+          "argTypes": []
+        }
+      ],
+      "exp": "owner.transfer(etherBalance);",
+      "status": "proven"
+    }
+  ]
+}

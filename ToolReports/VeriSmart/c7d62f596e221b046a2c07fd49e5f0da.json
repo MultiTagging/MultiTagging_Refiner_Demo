@@ -1,0 +1,253 @@
+{
+  "fileName": "Benchmarks/Study_SamplesSet/c7d62f596e221b046a2c07fd49e5f0da.sol",
+  "baseName": "c7d62f596e221b046a2c07fd49e5f0da.sol",
+  "iter": 28,
+  "time": "328.512747",
+  "errMsg": null,
+  "result": [
+    {
+      "no": "1",
+      "kind": "IO",
+      "line": 24,
+      "signatures": [
+        {
+          "contractName": "PreSale",
+          "methodName": "prepareSell",
+          "argTypes": [ "address", "uint256" ]
+        }
+      ],
+      "exp": "(a * b)",
+      "status": "unproven"
+    },
+    {
+      "no": "2",
+      "kind": "IO",
+      "line": 48,
+      "signatures": [
+        {
+          "contractName": "PreSale",
+          "methodName": "prepareSell",
+          "argTypes": [ "address", "uint256" ]
+        }
+      ],
+      "exp": "(a - b)",
+      "status": "proven"
+    },
+    {
+      "no": "3",
+      "kind": "IO",
+      "line": 57,
+      "signatures": [
+        {
+          "contractName": "PreSale",
+          "methodName": "prepareSell",
+          "argTypes": [ "address", "uint256" ]
+        }
+      ],
+      "exp": "(a + b)",
+      "status": "unproven"
+    },
+    {
+      "no": "4",
+      "kind": "IO",
+      "line": 210,
+      "signatures": [
+        {
+          "contractName": "PreSale",
+          "methodName": "prepareSell",
+          "argTypes": [ "address", "uint256" ]
+        }
+      ],
+      "exp": "(currentLevel + 1)",
+      "status": "proven"
+    },
+    {
+      "no": "5",
+      "kind": "IO",
+      "line": 243,
+      "signatures": [
+        {
+          "contractName": "PreSale",
+          "methodName": "prepareSell",
+          "argTypes": [ "address", "uint256" ]
+        }
+      ],
+      "exp": "(10 ** 18)",
+      "status": "proven"
+    },
+    {
+      "no": "6",
+      "kind": "IO",
+      "line": 243,
+      "signatures": [
+        {
+          "contractName": "PreSale",
+          "methodName": "prepareSell",
+          "argTypes": [ "address", "uint256" ]
+        }
+      ],
+      "exp": "(_tokens * (10 ** 18))",
+      "status": "unproven"
+    },
+    {
+      "no": "7",
+      "kind": "IO",
+      "line": 244,
+      "signatures": [
+        {
+          "contractName": "PreSale",
+          "methodName": "prepareSell",
+          "argTypes": [ "address", "uint256" ]
+        }
+      ],
+      "exp": "(tokensSold + _tokens)",
+      "status": "unproven"
+    },
+    {
+      "no": "8",
+      "kind": "IO",
+      "line": 263,
+      "signatures": [
+        {
+          "contractName": "PreSale",
+          "methodName": "PreSale",
+          "argTypes": []
+        },
+        {
+          "contractName": "PreSale",
+          "methodName": "setUsdEthValue",
+          "argTypes": [ "uint256" ]
+        }
+      ],
+      "exp": "(1 * (10 ** 16))",
+      "status": "proven"
+    },
+    {
+      "no": "9",
+      "kind": "IO",
+      "line": 263,
+      "signatures": [
+        {
+          "contractName": "PreSale",
+          "methodName": "PreSale",
+          "argTypes": []
+        },
+        {
+          "contractName": "PreSale",
+          "methodName": "setUsdEthValue",
+          "argTypes": [ "uint256" ]
+        }
+      ],
+      "exp": "(10 ** 16)",
+      "status": "proven"
+    },
+    {
+      "no": "10",
+      "kind": "DZ",
+      "line": 25,
+      "signatures": [
+        {
+          "contractName": "PreSale",
+          "methodName": "prepareSell",
+          "argTypes": [ "address", "uint256" ]
+        }
+      ],
+      "exp": "(c / a)",
+      "status": "proven"
+    },
+    {
+      "no": "11",
+      "kind": "DZ",
+      "line": 36,
+      "signatures": [
+        {
+          "contractName": "PreSale",
+          "methodName": "PreSale",
+          "argTypes": []
+        },
+        {
+          "contractName": "PreSale",
+          "methodName": "prepareSell",
+          "argTypes": [ "address", "uint256" ]
+        },
+        {
+          "contractName": "PreSale",
+          "methodName": "setUsdEthValue",
+          "argTypes": [ "uint256" ]
+        }
+      ],
+      "exp": "(a / b)",
+      "status": "unproven"
+    },
+    {
+      "no": "12",
+      "kind": "ETH_LEAK",
+      "line": 202,
+      "signatures": [
+        {
+          "contractName": "PreSale",
+          "methodName": "prepareSell",
+          "argTypes": [ "address", "uint256" ]
+        }
+      ],
+      "exp": "owner.transfer(_amount);",
+      "status": "proven"
+    },
+    {
+      "no": "13",
+      "kind": "ETH_LEAK",
+      "line": 223,
+      "signatures": [
+        {
+          "contractName": "PreSale",
+          "methodName": "prepareSell",
+          "argTypes": [ "address", "uint256" ]
+        }
+      ],
+      "exp": "owner.transfer(amount);",
+      "status": "proven"
+    },
+    {
+      "no": "14",
+      "kind": "ETH_LEAK",
+      "line": 228,
+      "signatures": [
+        {
+          "contractName": "PreSale",
+          "methodName": "prepareSell",
+          "argTypes": [ "address", "uint256" ]
+        }
+      ],
+      "exp": "investor.transfer(remaining);",
+      "status": "unproven"
+    },
+    {
+      "no": "15",
+      "kind": "ETH_LEAK",
+      "line": 229,
+      "signatures": [
+        {
+          "contractName": "PreSale",
+          "methodName": "prepareSell",
+          "argTypes": [ "address", "uint256" ]
+        }
+      ],
+      "exp": "owner.transfer(address(this).balance);",
+      "status": "proven"
+    },
+    {
+      "no": "16",
+      "kind": "ETH_LEAK",
+      "line": 305,
+      "signatures": [
+        {
+          "contractName": "PreSale",
+          "methodName": "getFunds",
+          "argTypes": []
+        }
+      ],
+      "exp": "owner.transfer(address(this).balance);",
+      "status": "proven"
+    }
+  ]
+}

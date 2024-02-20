@@ -1,0 +1,65 @@
+{
+  "fileName": "Benchmarks/Study_SamplesSet/a168eace6972245ace67bab1421e7cab.sol",
+  "baseName": "a168eace6972245ace67bab1421e7cab.sol",
+  "iter": 260,
+  "time": "305.022579",
+  "errMsg": null,
+  "result": [
+    {
+      "no": "1",
+      "kind": "IO",
+      "line": 155,
+      "signatures": [
+        {
+          "contractName": "RefStorage",
+          "methodName": "newTicket",
+          "argTypes": []
+        }
+      ],
+      "exp": "(players[tx.origin].tickets + 1)",
+      "status": "unproven"
+    },
+    {
+      "no": "2",
+      "kind": "IO",
+      "line": 156,
+      "signatures": [
+        {
+          "contractName": "RefStorage",
+          "methodName": "newTicket",
+          "argTypes": []
+        }
+      ],
+      "exp": "(players[tx.origin].tickets - players[tx.origin].checkpoint)",
+      "status": "unproven"
+    },
+    {
+      "no": "3",
+      "kind": "IO",
+      "line": 157,
+      "signatures": [
+        {
+          "contractName": "RefStorage",
+          "methodName": "newTicket",
+          "argTypes": []
+        }
+      ],
+      "exp": "(prize * 2)",
+      "status": "unproven"
+    },
+    {
+      "no": "4",
+      "kind": "DZ",
+      "line": 156,
+      "signatures": [
+        {
+          "contractName": "RefStorage",
+          "methodName": "newTicket",
+          "argTypes": []
+        }
+      ],
+      "exp": "((players[tx.origin].tickets - players[tx.origin].checkpoint) % interval)",
+      "status": "unproven"
+    }
+  ]
+}

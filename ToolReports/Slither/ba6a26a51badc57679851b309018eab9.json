@@ -1,0 +1,3452 @@
+{
+  "success": true,
+  "error": null,
+  "results": {
+    "detectors": [
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "confirm",
+            "source_mapping": {
+              "start": 13791,
+              "length": 338,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "Wallet",
+                "source_mapping": {
+                  "start": 11597,
+                  "length": 2887,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              },
+              "signature": "confirm(bytes32)"
+            }
+          },
+          {
+            "type": "node",
+            "name": "rc = m_txs[_h].to.call.value(m_txs[_h].value)(m_txs[_h].data)",
+            "source_mapping": {
+              "start": 13901,
+              "length": 66,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "confirm",
+                "source_mapping": {
+                  "start": 13791,
+                  "length": 338,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "Wallet",
+                    "source_mapping": {
+                      "start": 11597,
+                      "length": 2887,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "confirm(bytes32)"
+                }
+              }
+            },
+            "additional_fields": {
+              "underlying_type": "external_calls"
+            }
+          },
+          {
+            "type": "node",
+            "name": "delete m_txs[_h]",
+            "source_mapping": {
+              "start": 14071,
+              "length": 16,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "confirm",
+                "source_mapping": {
+                  "start": 13791,
+                  "length": 338,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "Wallet",
+                    "source_mapping": {
+                      "start": 11597,
+                      "length": 2887,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "confirm(bytes32)"
+                }
+              }
+            },
+            "additional_fields": {
+              "underlying_type": "variables_written",
+              "variable_name": "m_txs"
+            }
+          }
+        ],
+        "description": "Reentrancy in Wallet.confirm(bytes32) ():\n\tExternal calls:\n\t- rc = m_txs[_h].to.call.value(m_txs[_h].value)(m_txs[_h].data) ()\n\tState variables written after the call(s):\n\t- delete m_txs[_h] ()\n\tWallet.m_txs () can be used in cross function reentrancies:\n\t- Wallet.clearPending() ()\n\t- Wallet.confirm(bytes32) ()\n\t- Wallet.execute(address,uint256,bytes) ()\n",
+        "markdown": "Reentrancy in [Wallet.confirm(bytes32)]():\n\tExternal calls:\n\t- [rc = m_txs[_h].to.call.value(m_txs[_h].value)(m_txs[_h].data)]()\n\tState variables written after the call(s):\n\t- [delete m_txs[_h]]()\n\t[Wallet.m_txs]() can be used in cross function reentrancies:\n\t- [Wallet.clearPending()]()\n\t- [Wallet.confirm(bytes32)]()\n\t- [Wallet.execute(address,uint256,bytes)]()\n",
+        "first_markdown_element": "",
+        "id": "19fe24c6f60d903eea38ccb5a3d26bab1160ca3766956462a0fc0f65fb0a227b",
+        "check": "reentrancy-eth",
+        "impact": "High",
+        "confidence": "Medium"
+      },
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "execute",
+            "source_mapping": {
+              "start": 12878,
+              "length": 725,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "Wallet",
+                "source_mapping": {
+                  "start": 11597,
+                  "length": 2887,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              },
+              "signature": "execute(address,uint256,bytes)"
+            }
+          },
+          {
+            "type": "node",
+            "name": "! confirm(_r) && m_txs[_r].to == 0",
+            "source_mapping": {
+              "start": 13377,
+              "length": 33,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "execute",
+                "source_mapping": {
+                  "start": 12878,
+                  "length": 725,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "Wallet",
+                    "source_mapping": {
+                      "start": 11597,
+                      "length": 2887,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "execute(address,uint256,bytes)"
+                }
+              }
+            },
+            "additional_fields": {
+              "underlying_type": "external_calls"
+            }
+          },
+          {
+            "type": "node",
+            "name": "rc = m_txs[_h].to.call.value(m_txs[_h].value)(m_txs[_h].data)",
+            "source_mapping": {
+              "start": 13901,
+              "length": 66,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "confirm",
+                "source_mapping": {
+                  "start": 13791,
+                  "length": 338,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "Wallet",
+                    "source_mapping": {
+                      "start": 11597,
+                      "length": 2887,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "confirm(bytes32)"
+                }
+              }
+            },
+            "additional_fields": {
+              "underlying_type": "external_calls_sending_eth"
+            }
+          },
+          {
+            "type": "node",
+            "name": "m_txs[_r].to = _to",
+            "source_mapping": {
+              "start": 13426,
+              "length": 18,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "execute",
+                "source_mapping": {
+                  "start": 12878,
+                  "length": 725,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "Wallet",
+                    "source_mapping": {
+                      "start": 11597,
+                      "length": 2887,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "execute(address,uint256,bytes)"
+                }
+              }
+            },
+            "additional_fields": {
+              "underlying_type": "variables_written",
+              "variable_name": "m_txs"
+            }
+          },
+          {
+            "type": "node",
+            "name": "m_txs[_r].value = _value",
+            "source_mapping": {
+              "start": 13458,
+              "length": 24,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "execute",
+                "source_mapping": {
+                  "start": 12878,
+                  "length": 725,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "Wallet",
+                    "source_mapping": {
+                      "start": 11597,
+                      "length": 2887,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "execute(address,uint256,bytes)"
+                }
+              }
+            },
+            "additional_fields": {
+              "underlying_type": "variables_written",
+              "variable_name": "m_txs"
+            }
+          },
+          {
+            "type": "node",
+            "name": "m_txs[_r].data = _data",
+            "source_mapping": {
+              "start": 13496,
+              "length": 22,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "execute",
+                "source_mapping": {
+                  "start": 12878,
+                  "length": 725,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "Wallet",
+                    "source_mapping": {
+                      "start": 11597,
+                      "length": 2887,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "execute(address,uint256,bytes)"
+                }
+              }
+            },
+            "additional_fields": {
+              "underlying_type": "variables_written",
+              "variable_name": "m_txs"
+            }
+          }
+        ],
+        "description": "Reentrancy in Wallet.execute(address,uint256,bytes) ():\n\tExternal calls:\n\t- ! confirm(_r) && m_txs[_r].to == 0 ()\n\t\t- rc = m_txs[_h].to.call.value(m_txs[_h].value)(m_txs[_h].data) ()\n\tState variables written after the call(s):\n\t- m_txs[_r].to = _to ()\n\tWallet.m_txs () can be used in cross function reentrancies:\n\t- Wallet.clearPending() ()\n\t- Wallet.confirm(bytes32) ()\n\t- Wallet.execute(address,uint256,bytes) ()\n\t- m_txs[_r].value = _value ()\n\tWallet.m_txs () can be used in cross function reentrancies:\n\t- Wallet.clearPending() ()\n\t- Wallet.confirm(bytes32) ()\n\t- Wallet.execute(address,uint256,bytes) ()\n\t- m_txs[_r].data = _data ()\n\tWallet.m_txs () can be used in cross function reentrancies:\n\t- Wallet.clearPending() ()\n\t- Wallet.confirm(bytes32) ()\n\t- Wallet.execute(address,uint256,bytes) ()\n",
+        "markdown": "Reentrancy in [Wallet.execute(address,uint256,bytes)]():\n\tExternal calls:\n\t- [! confirm(_r) && m_txs[_r].to == 0]()\n\t\t- [rc = m_txs[_h].to.call.value(m_txs[_h].value)(m_txs[_h].data)]()\n\tState variables written after the call(s):\n\t- [m_txs[_r].to = _to]()\n\t[Wallet.m_txs]() can be used in cross function reentrancies:\n\t- [Wallet.clearPending()]()\n\t- [Wallet.confirm(bytes32)]()\n\t- [Wallet.execute(address,uint256,bytes)]()\n\t- [m_txs[_r].value = _value]()\n\t[Wallet.m_txs]() can be used in cross function reentrancies:\n\t- [Wallet.clearPending()]()\n\t- [Wallet.confirm(bytes32)]()\n\t- [Wallet.execute(address,uint256,bytes)]()\n\t- [m_txs[_r].data = _data]()\n\t[Wallet.m_txs]() can be used in cross function reentrancies:\n\t- [Wallet.clearPending()]()\n\t- [Wallet.confirm(bytes32)]()\n\t- [Wallet.execute(address,uint256,bytes)]()\n",
+        "first_markdown_element": "",
+        "id": "ee7f294fd54b6c6e5716939482b72e0fac646a437d5292046cca0f01e571fa73",
+        "check": "reentrancy-eth",
+        "impact": "High",
+        "confidence": "Medium"
+      },
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "kill",
+            "source_mapping": {
+              "start": 12180,
+              "length": 96,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "Wallet",
+                "source_mapping": {
+                  "start": 11597,
+                  "length": 2887,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              },
+              "signature": "kill(address)"
+            }
+          }
+        ],
+        "description": "Wallet.kill(address) () allows anyone to destruct the contract\n",
+        "markdown": "[Wallet.kill(address)]() allows anyone to destruct the contract\n",
+        "first_markdown_element": "",
+        "id": "7a661474cbf977b297ab2a7396a119b53e005a0e283963b2109f486795d5c5cb",
+        "check": "suicidal",
+        "impact": "High",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "_to",
+            "source_mapping": {
+              "start": 12895,
+              "length": 11,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "execute",
+                "source_mapping": {
+                  "start": 12878,
+                  "length": 725,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "Wallet",
+                    "source_mapping": {
+                      "start": 11597,
+                      "length": 2887,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "execute(address,uint256,bytes)"
+                }
+              }
+            }
+          },
+          {
+            "type": "node",
+            "name": "rc = _to.call.value(_value)(_data)",
+            "source_mapping": {
+              "start": 13208,
+              "length": 39,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "execute",
+                "source_mapping": {
+                  "start": 12878,
+                  "length": 725,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "Wallet",
+                    "source_mapping": {
+                      "start": 11597,
+                      "length": 2887,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "execute(address,uint256,bytes)"
+                }
+              }
+            }
+          }
+        ],
+        "description": "Wallet.execute(address,uint256,bytes)._to () lacks a zero-check on :\n\t\t- rc = _to.call.value(_value)(_data) ()\n",
+        "markdown": "[Wallet.execute(address,uint256,bytes)._to]() lacks a zero-check on :\n\t\t- [rc = _to.call.value(_value)(_data)]()\n",
+        "first_markdown_element": "",
+        "id": "afbfc6ca0df0c04b720efafbb65703c426b7d08b65df8a2f658dd0a1f1fe798f",
+        "check": "missing-zero-check",
+        "impact": "Low",
+        "confidence": "Medium"
+      },
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "limitedDaily",
+            "source_mapping": {
+              "start": 8674,
+              "length": 89,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "daylimit",
+                "source_mapping": {
+                  "start": 8580,
+                  "length": 1830,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              },
+              "signature": "limitedDaily(uint256)"
+            }
+          }
+        ],
+        "description": "Modifier daylimit.limitedDaily(uint256) () does not always execute _; or revert",
+        "markdown": "Modifier [daylimit.limitedDaily(uint256)]() does not always execute _; or revert",
+        "first_markdown_element": "",
+        "id": "2213b8cc87880d725aca2c8776b1237b37455bf383ffc446d907911ff17bf659",
+        "check": "incorrect-modifier",
+        "impact": "Low",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "onlymanyowners",
+            "source_mapping": {
+              "start": 1697,
+              "length": 107,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "multiowned",
+                "source_mapping": {
+                  "start": 572,
+                  "length": 7741,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              },
+              "signature": "onlymanyowners(bytes32)"
+            }
+          }
+        ],
+        "description": "Modifier multiowned.onlymanyowners(bytes32) () does not always execute _; or revert",
+        "markdown": "Modifier [multiowned.onlymanyowners(bytes32)]() does not always execute _; or revert",
+        "first_markdown_element": "",
+        "id": "3f20263480b58f1cdd358e308b1e7fd3b3dad4477cfce5947d1faeec3be31ea6",
+        "check": "incorrect-modifier",
+        "impact": "Low",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "onlyowner",
+            "source_mapping": {
+              "start": 1415,
+              "length": 74,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "multiowned",
+                "source_mapping": {
+                  "start": 572,
+                  "length": 7741,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              },
+              "signature": "onlyowner()"
+            }
+          }
+        ],
+        "description": "Modifier multiowned.onlyowner() () does not always execute _; or revert",
+        "markdown": "Modifier [multiowned.onlyowner()]() does not always execute _; or revert",
+        "first_markdown_element": "",
+        "id": "b1e17f7bacd9c231a01c37db4ce6d8e0b5db3966a29b0274a24605ccaff521e7",
+        "check": "incorrect-modifier",
+        "impact": "Low",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "execute",
+            "source_mapping": {
+              "start": 12878,
+              "length": 725,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "Wallet",
+                "source_mapping": {
+                  "start": 11597,
+                  "length": 2887,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              },
+              "signature": "execute(address,uint256,bytes)"
+            }
+          },
+          {
+            "type": "node",
+            "name": "! confirm(_r) && m_txs[_r].to == 0",
+            "source_mapping": {
+              "start": 13377,
+              "length": 33,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "execute",
+                "source_mapping": {
+                  "start": 12878,
+                  "length": 725,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "Wallet",
+                    "source_mapping": {
+                      "start": 11597,
+                      "length": 2887,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "execute(address,uint256,bytes)"
+                }
+              }
+            },
+            "additional_fields": {
+              "underlying_type": "external_calls"
+            }
+          },
+          {
+            "type": "node",
+            "name": "rc = m_txs[_h].to.call.value(m_txs[_h].value)(m_txs[_h].data)",
+            "source_mapping": {
+              "start": 13901,
+              "length": 66,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "confirm",
+                "source_mapping": {
+                  "start": 13791,
+                  "length": 338,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "Wallet",
+                    "source_mapping": {
+                      "start": 11597,
+                      "length": 2887,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "confirm(bytes32)"
+                }
+              }
+            },
+            "additional_fields": {
+              "underlying_type": "external_calls_sending_eth"
+            }
+          },
+          {
+            "type": "node",
+            "name": "ConfirmationNeeded(_r,msg.sender,_value,_to,_data)",
+            "source_mapping": {
+              "start": 13532,
+              "length": 54,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "execute",
+                "source_mapping": {
+                  "start": 12878,
+                  "length": 725,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "Wallet",
+                    "source_mapping": {
+                      "start": 11597,
+                      "length": 2887,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "execute(address,uint256,bytes)"
+                }
+              }
+            },
+            "additional_fields": {
+              "underlying_type": "event"
+            }
+          }
+        ],
+        "description": "Reentrancy in Wallet.execute(address,uint256,bytes) ():\n\tExternal calls:\n\t- ! confirm(_r) && m_txs[_r].to == 0 ()\n\t\t- rc = m_txs[_h].to.call.value(m_txs[_h].value)(m_txs[_h].data) ()\n\tEvent emitted after the call(s):\n\t- ConfirmationNeeded(_r,msg.sender,_value,_to,_data) ()\n",
+        "markdown": "Reentrancy in [Wallet.execute(address,uint256,bytes)]():\n\tExternal calls:\n\t- [! confirm(_r) && m_txs[_r].to == 0]()\n\t\t- [rc = m_txs[_h].to.call.value(m_txs[_h].value)(m_txs[_h].data)]()\n\tEvent emitted after the call(s):\n\t- [ConfirmationNeeded(_r,msg.sender,_value,_to,_data)]()\n",
+        "first_markdown_element": "",
+        "id": "03dc26842b60f7dba649cd7c90d54fb503cbae5785ad438ab8d9273d78e2924b",
+        "check": "reentrancy-events",
+        "impact": "Low",
+        "confidence": "Medium"
+      },
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "confirm",
+            "source_mapping": {
+              "start": 13791,
+              "length": 338,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "Wallet",
+                "source_mapping": {
+                  "start": 11597,
+                  "length": 2887,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              },
+              "signature": "confirm(bytes32)"
+            }
+          },
+          {
+            "type": "node",
+            "name": "rc = m_txs[_h].to.call.value(m_txs[_h].value)(m_txs[_h].data)",
+            "source_mapping": {
+              "start": 13901,
+              "length": 66,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "confirm",
+                "source_mapping": {
+                  "start": 13791,
+                  "length": 338,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "Wallet",
+                    "source_mapping": {
+                      "start": 11597,
+                      "length": 2887,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "confirm(bytes32)"
+                }
+              }
+            },
+            "additional_fields": {
+              "underlying_type": "external_calls"
+            }
+          },
+          {
+            "type": "node",
+            "name": "MultiTransact(msg.sender,_h,m_txs[_h].value,m_txs[_h].to,m_txs[_h].data)",
+            "source_mapping": {
+              "start": 13981,
+              "length": 76,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "confirm",
+                "source_mapping": {
+                  "start": 13791,
+                  "length": 338,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "Wallet",
+                    "source_mapping": {
+                      "start": 11597,
+                      "length": 2887,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "confirm(bytes32)"
+                }
+              }
+            },
+            "additional_fields": {
+              "underlying_type": "event"
+            }
+          }
+        ],
+        "description": "Reentrancy in Wallet.confirm(bytes32) ():\n\tExternal calls:\n\t- rc = m_txs[_h].to.call.value(m_txs[_h].value)(m_txs[_h].data) ()\n\tEvent emitted after the call(s):\n\t- MultiTransact(msg.sender,_h,m_txs[_h].value,m_txs[_h].to,m_txs[_h].data) ()\n",
+        "markdown": "Reentrancy in [Wallet.confirm(bytes32)]():\n\tExternal calls:\n\t- [rc = m_txs[_h].to.call.value(m_txs[_h].value)(m_txs[_h].data)]()\n\tEvent emitted after the call(s):\n\t- [MultiTransact(msg.sender,_h,m_txs[_h].value,m_txs[_h].to,m_txs[_h].data)]()\n",
+        "first_markdown_element": "",
+        "id": "4f6a4afba1ac3f4c169bd650d97296958283fe88d92eac3803f03f098e040254",
+        "check": "reentrancy-events",
+        "impact": "Low",
+        "confidence": "Medium"
+      },
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "underLimit",
+            "source_mapping": {
+              "start": 9599,
+              "length": 598,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "daylimit",
+                "source_mapping": {
+                  "start": 8580,
+                  "length": 1830,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              },
+              "signature": "underLimit(uint256)"
+            }
+          },
+          {
+            "type": "node",
+            "name": "today() > m_lastDay",
+            "source_mapping": {
+              "start": 9755,
+              "length": 19,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "underLimit",
+                "source_mapping": {
+                  "start": 9599,
+                  "length": 598,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "daylimit",
+                    "source_mapping": {
+                      "start": 8580,
+                      "length": 1830,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "underLimit(uint256)"
+                }
+              }
+            }
+          }
+        ],
+        "description": "daylimit.underLimit(uint256) () uses timestamp for comparisons\n\tDangerous comparisons:\n\t- today() > m_lastDay ()\n",
+        "markdown": "[daylimit.underLimit(uint256)]() uses timestamp for comparisons\n\tDangerous comparisons:\n\t- [today() > m_lastDay]()\n",
+        "first_markdown_element": "",
+        "id": "aa5eb0ea8bb07780a7468b7d993635fa17d4abf77a5dd6bcb5dad3fa96fa2f61",
+        "check": "timestamp",
+        "impact": "Low",
+        "confidence": "Medium"
+      },
+      {
+        "elements": [
+          {
+            "type": "node",
+            "name": "_r = sha3()(msg.data,block.number)",
+            "source_mapping": {
+              "start": 13330,
+              "length": 33,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "execute",
+                "source_mapping": {
+                  "start": 12878,
+                  "length": 725,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "Wallet",
+                    "source_mapping": {
+                      "start": 11597,
+                      "length": 2887,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "execute(address,uint256,bytes)"
+                }
+              }
+            }
+          }
+        ],
+        "description": "Deprecated standard detected _r = sha3()(msg.data,block.number) ():\n\t- Usage of \"sha3()\" should be replaced with \"keccak256()\"\n",
+        "markdown": "Deprecated standard detected [_r = sha3()(msg.data,block.number)]():\n\t- Usage of \"sha3()\" should be replaced with \"keccak256()\"\n",
+        "first_markdown_element": "",
+        "id": "220840f0cf398c4acdbff888fc4ab1c7c505bf90688789fb53fcf5a7703ddc84",
+        "check": "deprecated-standards",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "node",
+            "name": "onlymanyowners(sha3()(msg.data))",
+            "source_mapping": {
+              "start": 3029,
+              "length": 30,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "changeOwner",
+                "source_mapping": {
+                  "start": 2980,
+                  "length": 406,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "multiowned",
+                    "source_mapping": {
+                      "start": 572,
+                      "length": 7741,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "changeOwner(address,address)"
+                }
+              }
+            }
+          }
+        ],
+        "description": "Deprecated standard detected onlymanyowners(sha3()(msg.data)) ():\n\t- Usage of \"sha3()\" should be replaced with \"keccak256()\"\n",
+        "markdown": "Deprecated standard detected [onlymanyowners(sha3()(msg.data))]():\n\t- Usage of \"sha3()\" should be replaced with \"keccak256()\"\n",
+        "first_markdown_element": "",
+        "id": "34f8948488b38c787af2fa2134e9ed4e8cf159a191b0954509d3c0a2459386ef",
+        "check": "deprecated-standards",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "node",
+            "name": "suicide(address)(_to)",
+            "source_mapping": {
+              "start": 12257,
+              "length": 12,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "kill",
+                "source_mapping": {
+                  "start": 12180,
+                  "length": 96,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "Wallet",
+                    "source_mapping": {
+                      "start": 11597,
+                      "length": 2887,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "kill(address)"
+                }
+              }
+            }
+          }
+        ],
+        "description": "Deprecated standard detected suicide(address)(_to) ():\n\t- Usage of \"suicide()\" should be replaced with \"selfdestruct()\"\n",
+        "markdown": "Deprecated standard detected [suicide(address)(_to)]():\n\t- Usage of \"suicide()\" should be replaced with \"selfdestruct()\"\n",
+        "first_markdown_element": "",
+        "id": "dfc2c4d264ef109c7fb8c9e58b054e488eb1aa93017e81bc7f41c01fcc7d3111",
+        "check": "deprecated-standards",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "pragma",
+            "name": "^0.4.6",
+            "source_mapping": {
+              "start": 547,
+              "length": 23,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "directive": [
+                "solidity",
+                "^",
+                "0.4",
+                ".6"
+              ]
+            }
+          }
+        ],
+        "description": "Pragma version^0.4.6 () allows old versions\n",
+        "markdown": "Pragma version[^0.4.6]() allows old versions\n",
+        "first_markdown_element": "",
+        "id": "54eae9514d5e93f8fb467cb6e12380204cb269720316b950ba80b399a769bf71",
+        "check": "solc-version",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [],
+        "description": "solc-0.4.6 is not recommended for deployment\n",
+        "markdown": "solc-0.4.6 is not recommended for deployment\n",
+        "first_markdown_element": "",
+        "id": "b2e09ce9c0c37029707bd5645a9a2972adb1c4c04948009825bacc17fa383ec8",
+        "check": "solc-version",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "confirm",
+            "source_mapping": {
+              "start": 13791,
+              "length": 338,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "Wallet",
+                "source_mapping": {
+                  "start": 11597,
+                  "length": 2887,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              },
+              "signature": "confirm(bytes32)"
+            }
+          },
+          {
+            "type": "node",
+            "name": "rc = m_txs[_h].to.call.value(m_txs[_h].value)(m_txs[_h].data)",
+            "source_mapping": {
+              "start": 13901,
+              "length": 66,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "confirm",
+                "source_mapping": {
+                  "start": 13791,
+                  "length": 338,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "Wallet",
+                    "source_mapping": {
+                      "start": 11597,
+                      "length": 2887,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "confirm(bytes32)"
+                }
+              }
+            }
+          }
+        ],
+        "description": "Low level call in Wallet.confirm(bytes32) ():\n\t- rc = m_txs[_h].to.call.value(m_txs[_h].value)(m_txs[_h].data) ()\n",
+        "markdown": "Low level call in [Wallet.confirm(bytes32)]():\n\t- [rc = m_txs[_h].to.call.value(m_txs[_h].value)(m_txs[_h].data)]()\n",
+        "first_markdown_element": "",
+        "id": "239d119fabd2116b209e8540043b5767f47d9ed0c68284e927f6688556f26484",
+        "check": "low-level-calls",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "execute",
+            "source_mapping": {
+              "start": 12878,
+              "length": 725,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "Wallet",
+                "source_mapping": {
+                  "start": 11597,
+                  "length": 2887,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              },
+              "signature": "execute(address,uint256,bytes)"
+            }
+          },
+          {
+            "type": "node",
+            "name": "rc = _to.call.value(_value)(_data)",
+            "source_mapping": {
+              "start": 13208,
+              "length": 39,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "execute",
+                "source_mapping": {
+                  "start": 12878,
+                  "length": 725,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "Wallet",
+                    "source_mapping": {
+                      "start": 11597,
+                      "length": 2887,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "execute(address,uint256,bytes)"
+                }
+              }
+            }
+          }
+        ],
+        "description": "Low level call in Wallet.execute(address,uint256,bytes) ():\n\t- rc = _to.call.value(_value)(_data) ()\n",
+        "markdown": "Low level call in [Wallet.execute(address,uint256,bytes)]():\n\t- [rc = _to.call.value(_value)(_data)]()\n",
+        "first_markdown_element": "",
+        "id": "9d29986e774474bb96513fca6a82d7fbe14b478281e4405be4ddf3820410e146",
+        "check": "low-level-calls",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "_operation",
+            "source_mapping": {
+              "start": 4907,
+              "length": 18,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "hasConfirmed",
+                "source_mapping": {
+                  "start": 4885,
+                  "length": 426,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "multiowned",
+                    "source_mapping": {
+                      "start": 572,
+                      "length": 7741,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "hasConfirmed(bytes32,address)"
+                }
+              }
+            },
+            "additional_fields": {
+              "target": "parameter",
+              "convention": "mixedCase"
+            }
+          }
+        ],
+        "description": "Parameter multiowned.hasConfirmed(bytes32,address)._operation () is not in mixedCase\n",
+        "markdown": "Parameter [multiowned.hasConfirmed(bytes32,address)._operation]() is not in mixedCase\n",
+        "first_markdown_element": "",
+        "id": "056c355d83e6a99f2d0d712ec88546f0e4be3d46e9c1ad958131d3a15602ced5",
+        "check": "naming-convention",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "m_pendingIndex",
+            "source_mapping": {
+              "start": 8279,
+              "length": 31,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "multiowned",
+                "source_mapping": {
+                  "start": 572,
+                  "length": 7741,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              }
+            },
+            "additional_fields": {
+              "target": "variable",
+              "convention": "mixedCase"
+            }
+          }
+        ],
+        "description": "Variable multiowned.m_pendingIndex () is not in mixedCase\n",
+        "markdown": "Variable [multiowned.m_pendingIndex]() is not in mixedCase\n",
+        "first_markdown_element": "",
+        "id": "0dfe9ec7ea8d9fda70cf7b56ad42dae05eb921c0cc0e2900d55803ebe7dea9ca",
+        "check": "naming-convention",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "m_owners",
+            "source_mapping": {
+              "start": 8019,
+              "length": 25,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "multiowned",
+                "source_mapping": {
+                  "start": 572,
+                  "length": 7741,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              }
+            },
+            "additional_fields": {
+              "target": "variable",
+              "convention": "mixedCase"
+            }
+          }
+        ],
+        "description": "Variable multiowned.m_owners () is not in mixedCase\n",
+        "markdown": "Variable [multiowned.m_owners]() is not in mixedCase\n",
+        "first_markdown_element": "",
+        "id": "15760d94c51821e1ca589969fb0ea8dde57e01d7b0e1a837face080d3ffc5350",
+        "check": "naming-convention",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "_owner",
+            "source_mapping": {
+              "start": 3414,
+              "length": 14,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "addOwner",
+                "source_mapping": {
+                  "start": 3396,
+                  "length": 422,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "multiowned",
+                    "source_mapping": {
+                      "start": 572,
+                      "length": 7741,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "addOwner(address)"
+                }
+              }
+            },
+            "additional_fields": {
+              "target": "parameter",
+              "convention": "mixedCase"
+            }
+          }
+        ],
+        "description": "Parameter multiowned.addOwner(address)._owner () is not in mixedCase\n",
+        "markdown": "Parameter [multiowned.addOwner(address)._owner]() is not in mixedCase\n",
+        "first_markdown_element": "",
+        "id": "22e2600b683859e0c31c49f421710e6e1081f2c7db45907c3dbb79e056ef6980",
+        "check": "naming-convention",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "_owner",
+            "source_mapping": {
+              "start": 3849,
+              "length": 14,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "removeOwner",
+                "source_mapping": {
+                  "start": 3828,
+                  "length": 481,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "multiowned",
+                    "source_mapping": {
+                      "start": 572,
+                      "length": 7741,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "removeOwner(address)"
+                }
+              }
+            },
+            "additional_fields": {
+              "target": "parameter",
+              "convention": "mixedCase"
+            }
+          }
+        ],
+        "description": "Parameter multiowned.removeOwner(address)._owner () is not in mixedCase\n",
+        "markdown": "Parameter [multiowned.removeOwner(address)._owner]() is not in mixedCase\n",
+        "first_markdown_element": "",
+        "id": "35851015103d74217553692a4d941cd705ee79196ee740b411cb6e217b23a5c4",
+        "check": "naming-convention",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "m_lastDay",
+            "source_mapping": {
+              "start": 10386,
+              "length": 21,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "daylimit",
+                "source_mapping": {
+                  "start": 8580,
+                  "length": 1830,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              }
+            },
+            "additional_fields": {
+              "target": "variable",
+              "convention": "mixedCase"
+            }
+          }
+        ],
+        "description": "Variable daylimit.m_lastDay () is not in mixedCase\n",
+        "markdown": "Variable [daylimit.m_lastDay]() is not in mixedCase\n",
+        "first_markdown_element": "",
+        "id": "36f6bc8d2ab60206de9da186074c41b36cc757159ada542a49f5d07ce6fc786c",
+        "check": "naming-convention",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "_to",
+            "source_mapping": {
+              "start": 3016,
+              "length": 11,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "changeOwner",
+                "source_mapping": {
+                  "start": 2980,
+                  "length": 406,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "multiowned",
+                    "source_mapping": {
+                      "start": 572,
+                      "length": 7741,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "changeOwner(address,address)"
+                }
+              }
+            },
+            "additional_fields": {
+              "target": "parameter",
+              "convention": "mixedCase"
+            }
+          }
+        ],
+        "description": "Parameter multiowned.changeOwner(address,address)._to () is not in mixedCase\n",
+        "markdown": "Parameter [multiowned.changeOwner(address,address)._to]() is not in mixedCase\n",
+        "first_markdown_element": "",
+        "id": "3a14c40392958b93f7c8f89cba05169c1886eb2c5ff06c79ea97045f4b58d01d",
+        "check": "naming-convention",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "_operation",
+            "source_mapping": {
+              "start": 2469,
+              "length": 18,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "revoke",
+                "source_mapping": {
+                  "start": 2453,
+                  "length": 464,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "multiowned",
+                    "source_mapping": {
+                      "start": 572,
+                      "length": 7741,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "revoke(bytes32)"
+                }
+              }
+            },
+            "additional_fields": {
+              "target": "parameter",
+              "convention": "mixedCase"
+            }
+          }
+        ],
+        "description": "Parameter multiowned.revoke(bytes32)._operation () is not in mixedCase\n",
+        "markdown": "Parameter [multiowned.revoke(bytes32)._operation]() is not in mixedCase\n",
+        "first_markdown_element": "",
+        "id": "4b79cd05fd36744b99cb15fa4d2feab7dee6d7662caeb96e5a49a44181b9f205",
+        "check": "naming-convention",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "m_txs",
+            "source_mapping": {
+              "start": 14436,
+              "length": 45,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "Wallet",
+                "source_mapping": {
+                  "start": 11597,
+                  "length": 2887,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              }
+            },
+            "additional_fields": {
+              "target": "variable",
+              "convention": "mixedCase"
+            }
+          }
+        ],
+        "description": "Variable Wallet.m_txs () is not in mixedCase\n",
+        "markdown": "Variable [Wallet.m_txs]() is not in mixedCase\n",
+        "first_markdown_element": "",
+        "id": "51e738d0e98b840bb2e46a975c71131d0c53c87b83f72b6c0ce9aa3a9af49586",
+        "check": "naming-convention",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "contract",
+            "name": "multisig",
+            "source_mapping": {
+              "start": 10484,
+              "length": 991,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "additional_fields": {
+              "target": "contract",
+              "convention": "CapWords"
+            }
+          }
+        ],
+        "description": "Contract multisig () is not in CapWords\n",
+        "markdown": "Contract [multisig]() is not in CapWords\n",
+        "first_markdown_element": "",
+        "id": "5429269152bc69bb29fe9a9bf7e6f7d8ec72685fb8368db90e0a0fba8b4c7526",
+        "check": "naming-convention",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "_value",
+            "source_mapping": {
+              "start": 9619,
+              "length": 11,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "underLimit",
+                "source_mapping": {
+                  "start": 9599,
+                  "length": 598,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "daylimit",
+                    "source_mapping": {
+                      "start": 8580,
+                      "length": 1830,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "underLimit(uint256)"
+                }
+              }
+            },
+            "additional_fields": {
+              "target": "parameter",
+              "convention": "mixedCase"
+            }
+          }
+        ],
+        "description": "Parameter daylimit.underLimit(uint256)._value () is not in mixedCase\n",
+        "markdown": "Parameter [daylimit.underLimit(uint256)._value]() is not in mixedCase\n",
+        "first_markdown_element": "",
+        "id": "699f782d77f07b2fef07b44d8a2452a042246b50682af587d5a3c3d6ab84f53d",
+        "check": "naming-convention",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "_newLimit",
+            "source_mapping": {
+              "start": 9109,
+              "length": 14,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "setDailyLimit",
+                "source_mapping": {
+                  "start": 9086,
+                  "length": 120,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "daylimit",
+                    "source_mapping": {
+                      "start": 8580,
+                      "length": 1830,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "setDailyLimit(uint256)"
+                }
+              }
+            },
+            "additional_fields": {
+              "target": "parameter",
+              "convention": "mixedCase"
+            }
+          }
+        ],
+        "description": "Parameter daylimit.setDailyLimit(uint256)._newLimit () is not in mixedCase\n",
+        "markdown": "Parameter [daylimit.setDailyLimit(uint256)._newLimit]() is not in mixedCase\n",
+        "first_markdown_element": "",
+        "id": "6a2f426917c2711b69710b842c8ac109e740e6ec7859c69d80b1ef76dc7fc486",
+        "check": "naming-convention",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "m_ownerIndex",
+            "source_mapping": {
+              "start": 8146,
+              "length": 41,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "multiowned",
+                "source_mapping": {
+                  "start": 572,
+                  "length": 7741,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              }
+            },
+            "additional_fields": {
+              "target": "variable",
+              "convention": "mixedCase"
+            }
+          }
+        ],
+        "description": "Variable multiowned.m_ownerIndex () is not in mixedCase\n",
+        "markdown": "Variable [multiowned.m_ownerIndex]() is not in mixedCase\n",
+        "first_markdown_element": "",
+        "id": "78e0dfb505b8e3d0f9c83a579624b422ae0be8f7b6e255ada5c63d20fb74d14d",
+        "check": "naming-convention",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "_from",
+            "source_mapping": {
+              "start": 3001,
+              "length": 13,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "changeOwner",
+                "source_mapping": {
+                  "start": 2980,
+                  "length": 406,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "multiowned",
+                    "source_mapping": {
+                      "start": 572,
+                      "length": 7741,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "changeOwner(address,address)"
+                }
+              }
+            },
+            "additional_fields": {
+              "target": "parameter",
+              "convention": "mixedCase"
+            }
+          }
+        ],
+        "description": "Parameter multiowned.changeOwner(address,address)._from () is not in mixedCase\n",
+        "markdown": "Parameter [multiowned.changeOwner(address,address)._from]() is not in mixedCase\n",
+        "first_markdown_element": "",
+        "id": "8825925de795971678f140ec3c671dc74dac7411c19b7733e1ca96996ac0f832",
+        "check": "naming-convention",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "c_maxOwners",
+            "source_mapping": {
+              "start": 8050,
+              "length": 31,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "multiowned",
+                "source_mapping": {
+                  "start": 572,
+                  "length": 7741,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              }
+            },
+            "additional_fields": {
+              "target": "variable",
+              "convention": "mixedCase"
+            }
+          }
+        ],
+        "description": "Variable multiowned.c_maxOwners () is not in mixedCase\n",
+        "markdown": "Variable [multiowned.c_maxOwners]() is not in mixedCase\n",
+        "first_markdown_element": "",
+        "id": "8b1d96c841286f25a5b20f37907da579f2565b0f5e80beda74fc3a62bf333466",
+        "check": "naming-convention",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "_value",
+            "source_mapping": {
+              "start": 12908,
+              "length": 11,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "execute",
+                "source_mapping": {
+                  "start": 12878,
+                  "length": 725,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "Wallet",
+                    "source_mapping": {
+                      "start": 11597,
+                      "length": 2887,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "execute(address,uint256,bytes)"
+                }
+              }
+            },
+            "additional_fields": {
+              "target": "parameter",
+              "convention": "mixedCase"
+            }
+          }
+        ],
+        "description": "Parameter Wallet.execute(address,uint256,bytes)._value () is not in mixedCase\n",
+        "markdown": "Parameter [Wallet.execute(address,uint256,bytes)._value]() is not in mixedCase\n",
+        "first_markdown_element": "",
+        "id": "8bdd96c030ecc51a3324697e43c3ed119b5666c284052aacd27355c058577b73",
+        "check": "naming-convention",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "contract",
+            "name": "multiowned",
+            "source_mapping": {
+              "start": 572,
+              "length": 7741,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "additional_fields": {
+              "target": "contract",
+              "convention": "CapWords"
+            }
+          }
+        ],
+        "description": "Contract multiowned () is not in CapWords\n",
+        "markdown": "Contract [multiowned]() is not in CapWords\n",
+        "first_markdown_element": "",
+        "id": "8cda7fbe07fc4535ed36f16704ac54ae9d9db14ab81c7249f6a3e62460142ab9",
+        "check": "naming-convention",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "m_required",
+            "source_mapping": {
+              "start": 7883,
+              "length": 22,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "multiowned",
+                "source_mapping": {
+                  "start": 572,
+                  "length": 7741,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              }
+            },
+            "additional_fields": {
+              "target": "variable",
+              "convention": "mixedCase"
+            }
+          }
+        ],
+        "description": "Variable multiowned.m_required () is not in mixedCase\n",
+        "markdown": "Variable [multiowned.m_required]() is not in mixedCase\n",
+        "first_markdown_element": "",
+        "id": "8f17ba202fcfe4cc96e1a5cc7534702d0789a15519c92f622e76806359a6a3f9",
+        "check": "naming-convention",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "contract",
+            "name": "daylimit",
+            "source_mapping": {
+              "start": 8580,
+              "length": 1830,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "additional_fields": {
+              "target": "contract",
+              "convention": "CapWords"
+            }
+          }
+        ],
+        "description": "Contract daylimit () is not in CapWords\n",
+        "markdown": "Contract [daylimit]() is not in CapWords\n",
+        "first_markdown_element": "",
+        "id": "91019d1189f5aabc495c1abfdc178455fe24cc1705021bb750c7a45ea4f87df8",
+        "check": "naming-convention",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "m_pending",
+            "source_mapping": {
+              "start": 8224,
+              "length": 49,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "multiowned",
+                "source_mapping": {
+                  "start": 572,
+                  "length": 7741,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              }
+            },
+            "additional_fields": {
+              "target": "variable",
+              "convention": "mixedCase"
+            }
+          }
+        ],
+        "description": "Variable multiowned.m_pending () is not in mixedCase\n",
+        "markdown": "Variable [multiowned.m_pending]() is not in mixedCase\n",
+        "first_markdown_element": "",
+        "id": "999dad9982f0d811c28f45955b2692616ecf1117609f0002cf932c4581eceae8",
+        "check": "naming-convention",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "_to",
+            "source_mapping": {
+              "start": 12895,
+              "length": 11,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "execute",
+                "source_mapping": {
+                  "start": 12878,
+                  "length": 725,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "Wallet",
+                    "source_mapping": {
+                      "start": 11597,
+                      "length": 2887,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "execute(address,uint256,bytes)"
+                }
+              }
+            },
+            "additional_fields": {
+              "target": "parameter",
+              "convention": "mixedCase"
+            }
+          }
+        ],
+        "description": "Parameter Wallet.execute(address,uint256,bytes)._to () is not in mixedCase\n",
+        "markdown": "Parameter [Wallet.execute(address,uint256,bytes)._to]() is not in mixedCase\n",
+        "first_markdown_element": "",
+        "id": "a024475cfd7ea1db9da80557dd8588fa816e631d988468209843d9544c112be7",
+        "check": "naming-convention",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "_operation",
+            "source_mapping": {
+              "start": 5371,
+              "length": 18,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "confirmAndCheck",
+                "source_mapping": {
+                  "start": 5346,
+                  "length": 1617,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "multiowned",
+                    "source_mapping": {
+                      "start": 572,
+                      "length": 7741,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "confirmAndCheck(bytes32)"
+                }
+              }
+            },
+            "additional_fields": {
+              "target": "parameter",
+              "convention": "mixedCase"
+            }
+          }
+        ],
+        "description": "Parameter multiowned.confirmAndCheck(bytes32)._operation () is not in mixedCase\n",
+        "markdown": "Parameter [multiowned.confirmAndCheck(bytes32)._operation]() is not in mixedCase\n",
+        "first_markdown_element": "",
+        "id": "a3fe59dd578f23dc1078f903b30ee3ade673adcecb9a633f5a1c9e72182ead84",
+        "check": "naming-convention",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "_data",
+            "source_mapping": {
+              "start": 12921,
+              "length": 11,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "execute",
+                "source_mapping": {
+                  "start": 12878,
+                  "length": 725,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "Wallet",
+                    "source_mapping": {
+                      "start": 11597,
+                      "length": 2887,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "execute(address,uint256,bytes)"
+                }
+              }
+            },
+            "additional_fields": {
+              "target": "parameter",
+              "convention": "mixedCase"
+            }
+          }
+        ],
+        "description": "Parameter Wallet.execute(address,uint256,bytes)._data () is not in mixedCase\n",
+        "markdown": "Parameter [Wallet.execute(address,uint256,bytes)._data]() is not in mixedCase\n",
+        "first_markdown_element": "",
+        "id": "aef91bcf1ccf842748d53c6282c16c50fb3ee2359bf2bf47d5f4953aaa1278d2",
+        "check": "naming-convention",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "m_dailyLimit",
+            "source_mapping": {
+              "start": 10326,
+              "length": 24,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "daylimit",
+                "source_mapping": {
+                  "start": 8580,
+                  "length": 1830,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              }
+            },
+            "additional_fields": {
+              "target": "variable",
+              "convention": "mixedCase"
+            }
+          }
+        ],
+        "description": "Variable daylimit.m_dailyLimit () is not in mixedCase\n",
+        "markdown": "Variable [daylimit.m_dailyLimit]() is not in mixedCase\n",
+        "first_markdown_element": "",
+        "id": "bc11e705e1e97c8aac0ed117882e1f687d6f302863390b58f5fdc9435a2428ba",
+        "check": "naming-convention",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "_h",
+            "source_mapping": {
+              "start": 13808,
+              "length": 10,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "confirm",
+                "source_mapping": {
+                  "start": 13791,
+                  "length": 338,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "Wallet",
+                    "source_mapping": {
+                      "start": 11597,
+                      "length": 2887,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "confirm(bytes32)"
+                }
+              }
+            },
+            "additional_fields": {
+              "target": "parameter",
+              "convention": "mixedCase"
+            }
+          }
+        ],
+        "description": "Parameter Wallet.confirm(bytes32)._h () is not in mixedCase\n",
+        "markdown": "Parameter [Wallet.confirm(bytes32)._h]() is not in mixedCase\n",
+        "first_markdown_element": "",
+        "id": "c06e281c1c3c492f71f45e2334fa1583bd0e4dce87bda651000de5aed3c4b67c",
+        "check": "naming-convention",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "_to",
+            "source_mapping": {
+              "start": 12194,
+              "length": 11,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "kill",
+                "source_mapping": {
+                  "start": 12180,
+                  "length": 96,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "Wallet",
+                    "source_mapping": {
+                      "start": 11597,
+                      "length": 2887,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "kill(address)"
+                }
+              }
+            },
+            "additional_fields": {
+              "target": "parameter",
+              "convention": "mixedCase"
+            }
+          }
+        ],
+        "description": "Parameter Wallet.kill(address)._to () is not in mixedCase\n",
+        "markdown": "Parameter [Wallet.kill(address)._to]() is not in mixedCase\n",
+        "first_markdown_element": "",
+        "id": "c8dfff6e9852d82f0b32ad6d750ff16c1b1637eced2fd6567b207b44c2c1ca5b",
+        "check": "naming-convention",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "m_numOwners",
+            "source_mapping": {
+              "start": 7963,
+              "length": 23,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "multiowned",
+                "source_mapping": {
+                  "start": 572,
+                  "length": 7741,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              }
+            },
+            "additional_fields": {
+              "target": "variable",
+              "convention": "mixedCase"
+            }
+          }
+        ],
+        "description": "Variable multiowned.m_numOwners () is not in mixedCase\n",
+        "markdown": "Variable [multiowned.m_numOwners]() is not in mixedCase\n",
+        "first_markdown_element": "",
+        "id": "d23837556bcd46e8acd21e5032674ba4b1d9d3e4e65d9fff5cb5e9910cbf0378",
+        "check": "naming-convention",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "_owner",
+            "source_mapping": {
+              "start": 4927,
+              "length": 14,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "hasConfirmed",
+                "source_mapping": {
+                  "start": 4885,
+                  "length": 426,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "multiowned",
+                    "source_mapping": {
+                      "start": 572,
+                      "length": 7741,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "hasConfirmed(bytes32,address)"
+                }
+              }
+            },
+            "additional_fields": {
+              "target": "parameter",
+              "convention": "mixedCase"
+            }
+          }
+        ],
+        "description": "Parameter multiowned.hasConfirmed(bytes32,address)._owner () is not in mixedCase\n",
+        "markdown": "Parameter [multiowned.hasConfirmed(bytes32,address)._owner]() is not in mixedCase\n",
+        "first_markdown_element": "",
+        "id": "d86d78c0c9a465027707b06a4726e5d5e3baa97e1ab0a9e62ea84660d523861a",
+        "check": "naming-convention",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "m_spentToday",
+            "source_mapping": {
+              "start": 10356,
+              "length": 24,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "daylimit",
+                "source_mapping": {
+                  "start": 8580,
+                  "length": 1830,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              }
+            },
+            "additional_fields": {
+              "target": "variable",
+              "convention": "mixedCase"
+            }
+          }
+        ],
+        "description": "Variable daylimit.m_spentToday () is not in mixedCase\n",
+        "markdown": "Variable [daylimit.m_spentToday]() is not in mixedCase\n",
+        "first_markdown_element": "",
+        "id": "e20c6bcfe6b77fa58dd468422f49e65d48b25146b7e434eaded21d8cb428aaf3",
+        "check": "naming-convention",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "_newRequired",
+            "source_mapping": {
+              "start": 4346,
+              "length": 17,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "changeRequirement",
+                "source_mapping": {
+                  "start": 4319,
+                  "length": 242,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "multiowned",
+                    "source_mapping": {
+                      "start": 572,
+                      "length": 7741,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "changeRequirement(uint256)"
+                }
+              }
+            },
+            "additional_fields": {
+              "target": "parameter",
+              "convention": "mixedCase"
+            }
+          }
+        ],
+        "description": "Parameter multiowned.changeRequirement(uint256)._newRequired () is not in mixedCase\n",
+        "markdown": "Parameter [multiowned.changeRequirement(uint256)._newRequired]() is not in mixedCase\n",
+        "first_markdown_element": "",
+        "id": "e56855281f2217037b2d1af6884df6e6f609b37b219ab3424e36f9ef526df526",
+        "check": "naming-convention",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "_addr",
+            "source_mapping": {
+              "start": 4792,
+              "length": 13,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "isOwner",
+                "source_mapping": {
+                  "start": 4775,
+                  "length": 100,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "multiowned",
+                    "source_mapping": {
+                      "start": 572,
+                      "length": 7741,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "isOwner(address)"
+                }
+              }
+            },
+            "additional_fields": {
+              "target": "parameter",
+              "convention": "mixedCase"
+            }
+          }
+        ],
+        "description": "Parameter multiowned.isOwner(address)._addr () is not in mixedCase\n",
+        "markdown": "Parameter [multiowned.isOwner(address)._addr]() is not in mixedCase\n",
+        "first_markdown_element": "",
+        "id": "fa6d7cd4448b595f0cefc08f0a5574786fc099bd39f334cfb11bc7654ad07182",
+        "check": "naming-convention",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "c_maxOwners",
+            "source_mapping": {
+              "start": 8050,
+              "length": 31,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "multiowned",
+                "source_mapping": {
+                  "start": 572,
+                  "length": 7741,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              }
+            }
+          }
+        ],
+        "description": "multiowned.c_maxOwners () should be constant \n",
+        "markdown": "[multiowned.c_maxOwners]() should be constant \n",
+        "first_markdown_element": "",
+        "id": "eec6a0593b46860a8fd87e5a22afaf2e4145fdf31b0f4c751700732a4075c6f0",
+        "check": "constable-states",
+        "impact": "Optimization",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "execute",
+            "source_mapping": {
+              "start": 12878,
+              "length": 725,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "Wallet",
+                "source_mapping": {
+                  "start": 11597,
+                  "length": 2887,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              },
+              "signature": "execute(address,uint256,bytes)"
+            }
+          },
+          {
+            "type": "function",
+            "name": "execute",
+            "source_mapping": {
+              "start": 11341,
+              "length": 83,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "multisig",
+                "source_mapping": {
+                  "start": 10484,
+                  "length": 991,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              },
+              "signature": "execute(address,uint256,bytes)"
+            }
+          }
+        ],
+        "description": "execute(address,uint256,bytes) should be declared external:\n\t- Wallet.execute(address,uint256,bytes) ()\n\t- multisig.execute(address,uint256,bytes) ()\n",
+        "markdown": "execute(address,uint256,bytes) should be declared external:\n\t- [Wallet.execute(address,uint256,bytes)]()\n\t- [multisig.execute(address,uint256,bytes)]()\n",
+        "first_markdown_element": "",
+        "id": "28a191836c228f92f4956f4007a4a95c0142e381f531a8b3c1571105acb297b4",
+        "check": "external-function",
+        "impact": "Optimization",
+        "confidence": "High"
+      }
+    ]
+  }
+}

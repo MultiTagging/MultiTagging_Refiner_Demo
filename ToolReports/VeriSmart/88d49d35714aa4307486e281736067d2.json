@@ -1,0 +1,37 @@
+{
+  "fileName": "Benchmarks/Study_SamplesSet/88d49d35714aa4307486e281736067d2.sol",
+  "baseName": "88d49d35714aa4307486e281736067d2.sol",
+  "iter": 33,
+  "time": "0.617054",
+  "errMsg": null,
+  "result": [
+    {
+      "no": "1",
+      "kind": "IO",
+      "line": 8,
+      "signatures": [
+        {
+          "contractName": "GuessTheRandomNumberChallenge",
+          "methodName": "GuessTheRandomNumberChallenge",
+          "argTypes": []
+        }
+      ],
+      "exp": "(block.number - 1)",
+      "status": "unproven"
+    },
+    {
+      "no": "2",
+      "kind": "ETH_LEAK",
+      "line": 19,
+      "signatures": [
+        {
+          "contractName": "GuessTheRandomNumberChallenge",
+          "methodName": "guess",
+          "argTypes": [ "uint8" ]
+        }
+      ],
+      "exp": "msg.sender.transfer(2000000000000000000);",
+      "status": "unproven"
+    }
+  ]
+}

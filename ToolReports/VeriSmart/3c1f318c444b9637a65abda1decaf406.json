@@ -1,0 +1,373 @@
+{
+  "fileName": "Benchmarks/Study_SamplesSet/3c1f318c444b9637a65abda1decaf406.sol",
+  "baseName": "3c1f318c444b9637a65abda1decaf406.sol",
+  "iter": 8,
+  "time": "427.209926",
+  "errMsg": null,
+  "result": [
+    {
+      "no": "1",
+      "kind": "IO",
+      "line": 63,
+      "signatures": [
+        {
+          "contractName": "CryptoChamps",
+          "methodName": "createPerson",
+          "argTypes": [ "uint32", "string", "uint256" ]
+        }
+      ],
+      "exp": "(totalSupply + 1)",
+      "status": "unproven"
+    },
+    {
+      "no": "2",
+      "kind": "IO",
+      "line": 85,
+      "signatures": [
+        {
+          "contractName": "CryptoChamps",
+          "methodName": "purchase",
+          "argTypes": [ "uint32" ]
+        }
+      ],
+      "exp": "(msg.value - price)",
+      "status": "proven"
+    },
+    {
+      "no": "3",
+      "kind": "IO",
+      "line": 124,
+      "signatures": [
+        {
+          "contractName": "CryptoChamps",
+          "methodName": "purchase",
+          "argTypes": [ "uint32" ]
+        }
+      ],
+      "exp": "(noOfPersonsOwned[_owner] - 1)",
+      "status": "unproven"
+    },
+    {
+      "no": "4",
+      "kind": "IO",
+      "line": 125,
+      "signatures": [
+        {
+          "contractName": "CryptoChamps",
+          "methodName": "purchase",
+          "argTypes": [ "uint32" ]
+        }
+      ],
+      "exp": "(noOfPersonsOwned[msg.sender] + 1)",
+      "status": "unproven"
+    },
+    {
+      "no": "5",
+      "kind": "IO",
+      "line": 129,
+      "signatures": [
+        {
+          "contractName": "CryptoChamps",
+          "methodName": "purchase",
+          "argTypes": [ "uint32" ]
+        }
+      ],
+      "exp": "(_price * 10)",
+      "status": "unproven"
+    },
+    {
+      "no": "6",
+      "kind": "IO",
+      "line": 131,
+      "signatures": [
+        {
+          "contractName": "CryptoChamps",
+          "methodName": "purchase",
+          "argTypes": [ "uint32" ]
+        }
+      ],
+      "exp": "(_price - commision)",
+      "status": "unproven"
+    },
+    {
+      "no": "7",
+      "kind": "IO",
+      "line": 137,
+      "signatures": [
+        {
+          "contractName": "CryptoChamps",
+          "methodName": "_shareProfit",
+          "argTypes": [ "uint256", "uint256", "address" ]
+        }
+      ],
+      "exp": "(_price - _oldPrice)",
+      "status": "unproven"
+    },
+    {
+      "no": "8",
+      "kind": "IO",
+      "line": 139,
+      "signatures": [
+        {
+          "contractName": "CryptoChamps",
+          "methodName": "_shareProfit",
+          "argTypes": [ "uint256", "uint256", "address" ]
+        }
+      ],
+      "exp": "(profit * 30)",
+      "status": "unproven"
+    },
+    {
+      "no": "9",
+      "kind": "IO",
+      "line": 141,
+      "signatures": [
+        {
+          "contractName": "CryptoChamps",
+          "methodName": "_shareProfit",
+          "argTypes": [ "uint256", "uint256", "address" ]
+        }
+      ],
+      "exp": "(_price - commision)",
+      "status": "unproven"
+    },
+    {
+      "no": "10",
+      "kind": "IO",
+      "line": 163,
+      "signatures": [
+        {
+          "contractName": "CryptoChamps",
+          "methodName": "_onPersonSale",
+          "argTypes": [ "struct CryptoChamps.Person" ]
+        }
+      ],
+      "exp": "(currentPrice * percent)",
+      "status": "unproven"
+    },
+    {
+      "no": "11",
+      "kind": "IO",
+      "line": 166,
+      "signatures": [
+        {
+          "contractName": "CryptoChamps",
+          "methodName": "_onPersonSale",
+          "argTypes": [ "struct CryptoChamps.Person" ]
+        }
+      ],
+      "exp": "(_person.txCount + 1)",
+      "status": "unproven"
+    },
+    {
+      "no": "12",
+      "kind": "IO",
+      "line": 175,
+      "signatures": [
+        {
+          "contractName": "CryptoChamps",
+          "methodName": "_onPersonSale",
+          "argTypes": [ "struct CryptoChamps.Person" ]
+        }
+      ],
+      "exp": "(10 ** 14)",
+      "status": "proven"
+    },
+    {
+      "no": "13",
+      "kind": "IO",
+      "line": 176,
+      "signatures": [
+        {
+          "contractName": "CryptoChamps",
+          "methodName": "_onPersonSale",
+          "argTypes": [ "struct CryptoChamps.Person" ]
+        }
+      ],
+      "exp": "(10 ** 14)",
+      "status": "proven"
+    },
+    {
+      "no": "14",
+      "kind": "IO",
+      "line": 176,
+      "signatures": [
+        {
+          "contractName": "CryptoChamps",
+          "methodName": "_onPersonSale",
+          "argTypes": [ "struct CryptoChamps.Person" ]
+        }
+      ],
+      "exp": "(product * (10 ** 14))",
+      "status": "unproven"
+    },
+    {
+      "no": "15",
+      "kind": "IO",
+      "line": 181,
+      "signatures": [
+        {
+          "contractName": "CryptoChamps",
+          "methodName": "transfer",
+          "argTypes": [ "address", "uint32" ]
+        }
+      ],
+      "exp": "(noOfPersonsOwned[_to] + 1)",
+      "status": "unproven"
+    },
+    {
+      "no": "16",
+      "kind": "IO",
+      "line": 182,
+      "signatures": [
+        {
+          "contractName": "CryptoChamps",
+          "methodName": "transfer",
+          "argTypes": [ "address", "uint32" ]
+        }
+      ],
+      "exp": "(noOfPersonsOwned[msg.sender] - 1)",
+      "status": "unproven"
+    },
+    {
+      "no": "17",
+      "kind": "DZ",
+      "line": 129,
+      "signatures": [
+        {
+          "contractName": "CryptoChamps",
+          "methodName": "purchase",
+          "argTypes": [ "uint32" ]
+        }
+      ],
+      "exp": "((_price * 10) / 100)",
+      "status": "proven"
+    },
+    {
+      "no": "18",
+      "kind": "DZ",
+      "line": 139,
+      "signatures": [
+        {
+          "contractName": "CryptoChamps",
+          "methodName": "_shareProfit",
+          "argTypes": [ "uint256", "uint256", "address" ]
+        }
+      ],
+      "exp": "((profit * 30) / 100)",
+      "status": "proven"
+    },
+    {
+      "no": "19",
+      "kind": "DZ",
+      "line": 163,
+      "signatures": [
+        {
+          "contractName": "CryptoChamps",
+          "methodName": "_onPersonSale",
+          "argTypes": [ "struct CryptoChamps.Person" ]
+        }
+      ],
+      "exp": "((currentPrice * percent) / 100)",
+      "status": "proven"
+    },
+    {
+      "no": "20",
+      "kind": "DZ",
+      "line": 175,
+      "signatures": [
+        {
+          "contractName": "CryptoChamps",
+          "methodName": "_onPersonSale",
+          "argTypes": [ "struct CryptoChamps.Person" ]
+        }
+      ],
+      "exp": "(_price / (10 ** 14))",
+      "status": "proven"
+    },
+    {
+      "no": "21",
+      "kind": "ETH_LEAK",
+      "line": 85,
+      "signatures": [
+        {
+          "contractName": "CryptoChamps",
+          "methodName": "purchase",
+          "argTypes": [ "uint32" ]
+        }
+      ],
+      "exp": "msg.sender.transfer((msg.value - price));",
+      "status": "proven"
+    },
+    {
+      "no": "22",
+      "kind": "ETH_LEAK",
+      "line": 131,
+      "signatures": [
+        {
+          "contractName": "CryptoChamps",
+          "methodName": "purchase",
+          "argTypes": [ "uint32" ]
+        }
+      ],
+      "exp": "_target.transfer((_price - commision));",
+      "status": "unproven"
+    },
+    {
+      "no": "23",
+      "kind": "ETH_LEAK",
+      "line": 133,
+      "signatures": [
+        {
+          "contractName": "CryptoChamps",
+          "methodName": "purchase",
+          "argTypes": [ "uint32" ]
+        }
+      ],
+      "exp": "owner.transfer(commision);",
+      "status": "proven"
+    },
+    {
+      "no": "24",
+      "kind": "ETH_LEAK",
+      "line": 141,
+      "signatures": [
+        {
+          "contractName": "CryptoChamps",
+          "methodName": "_shareProfit",
+          "argTypes": [ "uint256", "uint256", "address" ]
+        }
+      ],
+      "exp": "_target.transfer((_price - commision));",
+      "status": "unproven"
+    },
+    {
+      "no": "25",
+      "kind": "ETH_LEAK",
+      "line": 143,
+      "signatures": [
+        {
+          "contractName": "CryptoChamps",
+          "methodName": "_shareProfit",
+          "argTypes": [ "uint256", "uint256", "address" ]
+        }
+      ],
+      "exp": "owner.transfer(commision);",
+      "status": "proven"
+    },
+    {
+      "no": "26",
+      "kind": "ETH_LEAK",
+      "line": 213,
+      "signatures": [
+        {
+          "contractName": "CryptoChamps",
+          "methodName": "withdraw",
+          "argTypes": []
+        }
+      ],
+      "exp": "owner.transfer(this.balance);",
+      "status": "proven"
+    }
+  ]
+}

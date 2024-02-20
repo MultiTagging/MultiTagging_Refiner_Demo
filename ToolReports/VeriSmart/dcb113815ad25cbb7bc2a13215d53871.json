@@ -1,0 +1,66 @@
+{
+  "fileName": "Benchmarks/Study_SamplesSet/dcb113815ad25cbb7bc2a13215d53871.sol",
+  "baseName": "dcb113815ad25cbb7bc2a13215d53871.sol",
+  "iter": 679,
+  "time": "300.563633",
+  "errMsg": null,
+  "result": [
+    {
+      "no": "1",
+      "kind": "IO",
+      "line": 102,
+      "signatures": [
+        {
+          "contractName": "BeatOrgTokenMainSale",
+          "methodName": "@fallback",
+          "argTypes": []
+        },
+        {
+          "contractName": "BeatOrgTokenMainSale",
+          "methodName": "buyTokens",
+          "argTypes": [ "address" ]
+        }
+      ],
+      "exp": "(purchases[beneficiary] + weiAmount)",
+      "status": "unproven"
+    },
+    {
+      "no": "2",
+      "kind": "IO",
+      "line": 103,
+      "signatures": [
+        {
+          "contractName": "BeatOrgTokenMainSale",
+          "methodName": "@fallback",
+          "argTypes": []
+        },
+        {
+          "contractName": "BeatOrgTokenMainSale",
+          "methodName": "buyTokens",
+          "argTypes": [ "address" ]
+        }
+      ],
+      "exp": "(weiRaised + weiAmount)",
+      "status": "unproven"
+    },
+    {
+      "no": "3",
+      "kind": "ETH_LEAK",
+      "line": 107,
+      "signatures": [
+        {
+          "contractName": "BeatOrgTokenMainSale",
+          "methodName": "@fallback",
+          "argTypes": []
+        },
+        {
+          "contractName": "BeatOrgTokenMainSale",
+          "methodName": "buyTokens",
+          "argTypes": [ "address" ]
+        }
+      ],
+      "exp": "wallet.transfer(weiAmount);",
+      "status": "proven"
+    }
+  ]
+}

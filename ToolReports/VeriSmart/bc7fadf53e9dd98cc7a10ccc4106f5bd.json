@@ -1,0 +1,286 @@
+{
+  "fileName": "Benchmarks/Study_SamplesSet/bc7fadf53e9dd98cc7a10ccc4106f5bd.sol",
+  "baseName": "bc7fadf53e9dd98cc7a10ccc4106f5bd.sol",
+  "iter": 15,
+  "time": "305.228",
+  "errMsg": null,
+  "result": [
+    {
+      "no": "1",
+      "kind": "IO",
+      "line": 30,
+      "signatures": [
+        {
+          "contractName": "AvPresale",
+          "methodName": "AvPresale",
+          "argTypes": []
+        }
+      ],
+      "exp": "(MIN_TOTAL_AMOUNT_GET_ETH * 1000000000000000000)",
+      "status": "proven"
+    },
+    {
+      "no": "2",
+      "kind": "IO",
+      "line": 31,
+      "signatures": [
+        {
+          "contractName": "AvPresale",
+          "methodName": "AvPresale",
+          "argTypes": []
+        }
+      ],
+      "exp": "(MAX_TOTAL_AMOUNT_GET_ETH * 1000000000000000000)",
+      "status": "proven"
+    },
+    {
+      "no": "3",
+      "kind": "IO",
+      "line": 32,
+      "signatures": [
+        {
+          "contractName": "AvPresale",
+          "methodName": "AvPresale",
+          "argTypes": []
+        }
+      ],
+      "exp": "(MIN_GET_AMOUNT_FINNEY * 1000000000000000)",
+      "status": "proven"
+    },
+    {
+      "no": "4",
+      "kind": "IO",
+      "line": 101,
+      "signatures": [
+        {
+          "contractName": "AvPresale",
+          "methodName": "getMoney",
+          "argTypes": []
+        }
+      ],
+      "exp": "(total_amount + msg.value)",
+      "status": "unproven"
+    },
+    {
+      "no": "5",
+      "kind": "IO",
+      "line": 102,
+      "signatures": [
+        {
+          "contractName": "AvPresale",
+          "methodName": "getMoney",
+          "argTypes": []
+        }
+      ],
+      "exp": "((total_amount + msg.value) - MAX_TOTAL_AMOUNT_GET)",
+      "status": "proven"
+    },
+    {
+      "no": "6",
+      "kind": "IO",
+      "line": 102,
+      "signatures": [
+        {
+          "contractName": "AvPresale",
+          "methodName": "getMoney",
+          "argTypes": []
+        }
+      ],
+      "exp": "(total_amount + msg.value)",
+      "status": "unproven"
+    },
+    {
+      "no": "7",
+      "kind": "IO",
+      "line": 103,
+      "signatures": [
+        {
+          "contractName": "AvPresale",
+          "methodName": "getMoney",
+          "argTypes": []
+        }
+      ],
+      "exp": "(MAX_TOTAL_AMOUNT_GET - total_amount)",
+      "status": "unproven"
+    },
+    {
+      "no": "8",
+      "kind": "IO",
+      "line": 104,
+      "signatures": [
+        {
+          "contractName": "AvPresale",
+          "methodName": "getMoney",
+          "argTypes": []
+        }
+      ],
+      "exp": "(balances[msg.sender] + acceptable_remainder)",
+      "status": "unproven"
+    },
+    {
+      "no": "9",
+      "kind": "IO",
+      "line": 105,
+      "signatures": [
+        {
+          "contractName": "AvPresale",
+          "methodName": "getMoney",
+          "argTypes": []
+        }
+      ],
+      "exp": "(total_amount + acceptable_remainder)",
+      "status": "unproven"
+    },
+    {
+      "no": "10",
+      "kind": "IO",
+      "line": 108,
+      "signatures": [
+        {
+          "contractName": "AvPresale",
+          "methodName": "getMoney",
+          "argTypes": []
+        }
+      ],
+      "exp": "(balances[msg.sender] + msg.value)",
+      "status": "unproven"
+    },
+    {
+      "no": "11",
+      "kind": "IO",
+      "line": 109,
+      "signatures": [
+        {
+          "contractName": "AvPresale",
+          "methodName": "getMoney",
+          "argTypes": []
+        }
+      ],
+      "exp": "(total_amount + msg.value)",
+      "status": "unproven"
+    },
+    {
+      "no": "12",
+      "kind": "IO",
+      "line": 115,
+      "signatures": [
+        {
+          "contractName": "AvPresale",
+          "methodName": "@fallback",
+          "argTypes": []
+        },
+        {
+          "contractName": "AvPresale",
+          "methodName": "moneyBack",
+          "argTypes": []
+        }
+      ],
+      "exp": "(this.balance - msg.value)",
+      "status": "unproven"
+    },
+    {
+      "no": "13",
+      "kind": "IO",
+      "line": 116,
+      "signatures": [
+        {
+          "contractName": "AvPresale",
+          "methodName": "@fallback",
+          "argTypes": []
+        },
+        {
+          "contractName": "AvPresale",
+          "methodName": "moneyBack",
+          "argTypes": []
+        }
+      ],
+      "exp": "(balances[msg.sender] - amount_to_money_back)",
+      "status": "proven"
+    },
+    {
+      "no": "14",
+      "kind": "IO",
+      "line": 117,
+      "signatures": [
+        {
+          "contractName": "AvPresale",
+          "methodName": "@fallback",
+          "argTypes": []
+        },
+        {
+          "contractName": "AvPresale",
+          "methodName": "moneyBack",
+          "argTypes": []
+        }
+      ],
+      "exp": "(total_money_back + amount_to_money_back)",
+      "status": "unproven"
+    },
+    {
+      "no": "15",
+      "kind": "IO",
+      "line": 118,
+      "signatures": [
+        {
+          "contractName": "AvPresale",
+          "methodName": "@fallback",
+          "argTypes": []
+        },
+        {
+          "contractName": "AvPresale",
+          "methodName": "moneyBack",
+          "argTypes": []
+        }
+      ],
+      "exp": "(amount_to_money_back + msg.value)",
+      "status": "unproven"
+    },
+    {
+      "no": "16",
+      "kind": "ETH_LEAK",
+      "line": 48,
+      "signatures": [
+        {
+          "contractName": "AvPresale",
+          "methodName": "sendMoneyOwner",
+          "argTypes": []
+        }
+      ],
+      "exp": "OWNER.transfer(this.balance);",
+      "status": "proven"
+    },
+    {
+      "no": "17",
+      "kind": "ETH_LEAK",
+      "line": 106,
+      "signatures": [
+        {
+          "contractName": "AvPresale",
+          "methodName": "getMoney",
+          "argTypes": []
+        }
+      ],
+      "exp": "msg.sender.transfer(change_to_return);",
+      "status": "unproven"
+    },
+    {
+      "no": "18",
+      "kind": "ETH_LEAK",
+      "line": 118,
+      "signatures": [
+        {
+          "contractName": "AvPresale",
+          "methodName": "@fallback",
+          "argTypes": []
+        },
+        {
+          "contractName": "AvPresale",
+          "methodName": "moneyBack",
+          "argTypes": []
+        }
+      ],
+      "exp": "msg.sender.transfer((amount_to_money_back + msg.value));",
+      "status": "unproven"
+    }
+  ]
+}

@@ -1,0 +1,134 @@
+{
+  "fileName": "Benchmarks/Study_SamplesSet/45c24011c68a85bea39d0e3760db60b1.sol",
+  "baseName": "45c24011c68a85bea39d0e3760db60b1.sol",
+  "iter": 46,
+  "time": "301.798487",
+  "errMsg": null,
+  "result": [
+    {
+      "no": "1",
+      "kind": "IO",
+      "line": 23,
+      "signatures": [
+        {
+          "contractName": "Nitrocoin",
+          "methodName": "burn",
+          "argTypes": [ "uint256" ]
+        },
+        {
+          "contractName": "Nitrocoin",
+          "methodName": "burnFrom",
+          "argTypes": [ "address", "uint256" ]
+        },
+        {
+          "contractName": "Nitrocoin",
+          "methodName": "originBurn",
+          "argTypes": [ "uint256" ]
+        },
+        {
+          "contractName": "Nitrocoin",
+          "methodName": "originTransfer",
+          "argTypes": [ "address", "uint256" ]
+        },
+        {
+          "contractName": "StandardToken",
+          "methodName": "transfer",
+          "argTypes": [ "address", "uint256", "dbytes", "string" ]
+        },
+        {
+          "contractName": "StandardToken",
+          "methodName": "transferFrom",
+          "argTypes": [ "address", "address", "uint256" ]
+        },
+        {
+          "contractName": "StartToken",
+          "methodName": "decreaseApproval",
+          "argTypes": [ "address", "uint256" ]
+        },
+        {
+          "contractName": "StartToken",
+          "methodName": "transferFunction",
+          "argTypes": [ "address", "address", "uint256" ]
+        }
+      ],
+      "exp": "(a - b)",
+      "status": "proven"
+    },
+    {
+      "no": "2",
+      "kind": "IO",
+      "line": 27,
+      "signatures": [
+        {
+          "contractName": "Nitrocoin",
+          "methodName": "originTransfer",
+          "argTypes": [ "address", "uint256" ]
+        },
+        {
+          "contractName": "StandardToken",
+          "methodName": "transfer",
+          "argTypes": [ "address", "uint256", "dbytes", "string" ]
+        },
+        {
+          "contractName": "StandardToken",
+          "methodName": "transferFrom",
+          "argTypes": [ "address", "address", "uint256" ]
+        },
+        {
+          "contractName": "StartToken",
+          "methodName": "increaseApproval",
+          "argTypes": [ "address", "uint256" ]
+        },
+        {
+          "contractName": "StartToken",
+          "methodName": "transferFunction",
+          "argTypes": [ "address", "address", "uint256" ]
+        }
+      ],
+      "exp": "(a + b)",
+      "status": "unproven"
+    },
+    {
+      "no": "3",
+      "kind": "IO",
+      "line": 437,
+      "signatures": [
+        {
+          "contractName": "Nitrocoin",
+          "methodName": "Token",
+          "argTypes": []
+        }
+      ],
+      "exp": "(10 ** uint256(decimals))",
+      "status": "proven"
+    },
+    {
+      "no": "4",
+      "kind": "IO",
+      "line": 437,
+      "signatures": [
+        {
+          "contractName": "Nitrocoin",
+          "methodName": "Token",
+          "argTypes": []
+        }
+      ],
+      "exp": "(25000000 * (10 ** uint256(decimals)))",
+      "status": "proven"
+    },
+    {
+      "no": "5",
+      "kind": "ETH_LEAK",
+      "line": 191,
+      "signatures": [
+        {
+          "contractName": "StandardToken",
+          "methodName": "transfer",
+          "argTypes": [ "address", "uint256", "dbytes", "string" ]
+        }
+      ],
+      "exp": "_to.call.value(0)(bytes4(keccak256(_custom_fallback)), msg.sender, _value, _data);",
+      "status": "proven"
+    }
+  ]
+}

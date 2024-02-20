@@ -1,0 +1,221 @@
+{
+  "fileName": "Benchmarks/Study_SamplesSet/2aa0463eab2d032082704363d95d759b.sol",
+  "baseName": "2aa0463eab2d032082704363d95d759b.sol",
+  "iter": 1,
+  "time": "973.905384",
+  "errMsg": null,
+  "result": [
+    {
+      "no": "1",
+      "kind": "IO",
+      "line": 10,
+      "signatures": [
+        {
+          "contractName": "Etherhero",
+          "methodName": "makeDeposit",
+          "argTypes": []
+        },
+        {
+          "contractName": "Etherhero",
+          "methodName": "receivePercent",
+          "argTypes": []
+        }
+      ],
+      "exp": "(a * b)",
+      "status": "unproven"
+    },
+    {
+      "no": "2",
+      "kind": "IO",
+      "line": 24,
+      "signatures": [
+        {
+          "contractName": "Etherhero",
+          "methodName": "calculationOfPayment",
+          "argTypes": []
+        },
+        {
+          "contractName": "Etherhero",
+          "methodName": "receivePercent",
+          "argTypes": []
+        }
+      ],
+      "exp": "(a - b)",
+      "status": "proven"
+    },
+    {
+      "no": "3",
+      "kind": "IO",
+      "line": 28,
+      "signatures": [
+        {
+          "contractName": "Etherhero",
+          "methodName": "makeDeposit",
+          "argTypes": []
+        },
+        {
+          "contractName": "Etherhero",
+          "methodName": "receivePercent",
+          "argTypes": []
+        }
+      ],
+      "exp": "(a + b)",
+      "status": "unproven"
+    },
+    {
+      "no": "4",
+      "kind": "IO",
+      "line": 138,
+      "signatures": [
+        {
+          "contractName": "Etherhero",
+          "methodName": "insertBeneficiaries",
+          "argTypes": [ "address", "uint256", "uint256", "uint256" ]
+        }
+      ],
+      "exp": "(counterBeneficiaries + 1)",
+      "status": "unproven"
+    },
+    {
+      "no": "5",
+      "kind": "IO",
+      "line": 140,
+      "signatures": [
+        {
+          "contractName": "Etherhero",
+          "methodName": "insertBeneficiaries",
+          "argTypes": [ "address", "uint256", "uint256", "uint256" ]
+        }
+      ],
+      "exp": "(s_beneficiaries.percentWithdraw + _percentWithdraw)",
+      "status": "unproven"
+    },
+    {
+      "no": "6",
+      "kind": "IO",
+      "line": 141,
+      "signatures": [
+        {
+          "contractName": "Etherhero",
+          "methodName": "insertBeneficiaries",
+          "argTypes": [ "address", "uint256", "uint256", "uint256" ]
+        }
+      ],
+      "exp": "(s_beneficiaries.ethWithdraw + _ethWithdraw)",
+      "status": "unproven"
+    },
+    {
+      "no": "7",
+      "kind": "IO",
+      "line": 216,
+      "signatures": [
+        {
+          "contractName": "Etherhero",
+          "methodName": "receivePercent",
+          "argTypes": []
+        }
+      ],
+      "exp": "(counterPercents + rate)",
+      "status": "unproven"
+    },
+    {
+      "no": "8",
+      "kind": "IO",
+      "line": 240,
+      "signatures": [
+        {
+          "contractName": "Etherhero",
+          "methodName": "makeDeposit",
+          "argTypes": []
+        }
+      ],
+      "exp": "(counterDeposits + msg.value)",
+      "status": "unproven"
+    },
+    {
+      "no": "9",
+      "kind": "DZ",
+      "line": 11,
+      "signatures": [
+        {
+          "contractName": "Etherhero",
+          "methodName": "makeDeposit",
+          "argTypes": []
+        },
+        {
+          "contractName": "Etherhero",
+          "methodName": "receivePercent",
+          "argTypes": []
+        }
+      ],
+      "exp": "(c / a)",
+      "status": "unproven"
+    },
+    {
+      "no": "10",
+      "kind": "DZ",
+      "line": 17,
+      "signatures": [
+        {
+          "contractName": "Etherhero",
+          "methodName": "calculationOfPayment",
+          "argTypes": []
+        },
+        {
+          "contractName": "Etherhero",
+          "methodName": "makeDeposit",
+          "argTypes": []
+        },
+        {
+          "contractName": "Etherhero",
+          "methodName": "receivePercent",
+          "argTypes": []
+        }
+      ],
+      "exp": "(a / b)",
+      "status": "proven"
+    },
+    {
+      "no": "11",
+      "kind": "ETH_LEAK",
+      "line": 63,
+      "signatures": [
+        {
+          "contractName": "EtherheroStabilizationFund",
+          "methodName": "ReturnEthToEtherhero",
+          "argTypes": []
+        }
+      ],
+      "exp": "etherHero.call.value(address(this).balance).gas(estGas)()",
+      "status": "unproven"
+    },
+    {
+      "no": "12",
+      "kind": "ETH_LEAK",
+      "line": 215,
+      "signatures": [
+        {
+          "contractName": "Etherhero",
+          "methodName": "receivePercent",
+          "argTypes": []
+        }
+      ],
+      "exp": "msg.sender.transfer(rate);",
+      "status": "unproven"
+    },
+    {
+      "no": "13",
+      "kind": "ETH_LEAK",
+      "line": 238,
+      "signatures": [
+        {
+          "contractName": "Etherhero",
+          "methodName": "makeDeposit",
+          "argTypes": []
+        }
+      ],
+      "exp": "projectFund.transfer(calcProjectPercent);",
+      "status": "unproven"
+    }
+  ]
+}

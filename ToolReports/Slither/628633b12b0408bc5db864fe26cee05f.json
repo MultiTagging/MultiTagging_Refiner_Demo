@@ -1,0 +1,1247 @@
+{
+  "success": true,
+  "error": null,
+  "results": {
+    "detectors": [
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "withdrawNexiums",
+            "source_mapping": {
+              "start": 2398,
+              "length": 134,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "BonusDealer",
+                "source_mapping": {
+                  "start": 180,
+                  "length": 2396,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              },
+              "signature": "withdrawNexiums(address)"
+            }
+          },
+          {
+            "type": "node",
+            "name": "nexium.transfer(a,nexium.balanceOf(this))",
+            "source_mapping": {
+              "start": 2483,
+              "length": 42,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "withdrawNexiums",
+                "source_mapping": {
+                  "start": 2398,
+                  "length": 134,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "BonusDealer",
+                    "source_mapping": {
+                      "start": 180,
+                      "length": 2396,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "withdrawNexiums(address)"
+                }
+              }
+            }
+          }
+        ],
+        "description": "BonusDealer.withdrawNexiums(address) () ignores return value by nexium.transfer(a,nexium.balanceOf(this)) ()\n",
+        "markdown": "[BonusDealer.withdrawNexiums(address)]() ignores return value by [nexium.transfer(a,nexium.balanceOf(this))]()\n",
+        "first_markdown_element": "",
+        "id": "4289770cef666d86cdf588482dbb48c609a8a4dac8606172361178641a58c72d",
+        "check": "unchecked-transfer",
+        "impact": "High",
+        "confidence": "Medium"
+      },
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "payDiff",
+            "source_mapping": {
+              "start": 1912,
+              "length": 476,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "BonusDealer",
+                "source_mapping": {
+                  "start": 180,
+                  "length": 2396,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              },
+              "signature": "payDiff(address,uint256)"
+            }
+          },
+          {
+            "type": "node",
+            "name": "! nexium.transfer(backer,totalToPay)",
+            "source_mapping": {
+              "start": 2240,
+              "length": 36,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "payDiff",
+                "source_mapping": {
+                  "start": 1912,
+                  "length": 476,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "BonusDealer",
+                    "source_mapping": {
+                      "start": 180,
+                      "length": 2396,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "payDiff(address,uint256)"
+                }
+              }
+            },
+            "additional_fields": {
+              "underlying_type": "external_calls"
+            }
+          },
+          {
+            "type": "node",
+            "name": "paid[backer] += totalToPay",
+            "source_mapping": {
+              "start": 2293,
+              "length": 26,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "payDiff",
+                "source_mapping": {
+                  "start": 1912,
+                  "length": 476,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "BonusDealer",
+                    "source_mapping": {
+                      "start": 180,
+                      "length": 2396,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "payDiff(address,uint256)"
+                }
+              }
+            },
+            "additional_fields": {
+              "underlying_type": "variables_written",
+              "variable_name": "paid"
+            }
+          }
+        ],
+        "description": "Reentrancy in BonusDealer.payDiff(address,uint256) ():\n\tExternal calls:\n\t- ! nexium.transfer(backer,totalToPay) ()\n\tState variables written after the call(s):\n\t- paid[backer] += totalToPay ()\n\tBonusDealer.paid () can be used in cross function reentrancies:\n\t- BonusDealer.payDiff(address,uint256) ()\n",
+        "markdown": "Reentrancy in [BonusDealer.payDiff(address,uint256)]():\n\tExternal calls:\n\t- [! nexium.transfer(backer,totalToPay)]()\n\tState variables written after the call(s):\n\t- [paid[backer] += totalToPay]()\n\t[BonusDealer.paid]() can be used in cross function reentrancies:\n\t- [BonusDealer.payDiff(address,uint256)]()\n",
+        "first_markdown_element": "",
+        "id": "0e8b8b0ae25340ae9711d169e12e6678cfa4002891cf6842260c2f05b1da7823",
+        "check": "reentrancy-no-eth",
+        "impact": "Medium",
+        "confidence": "Medium"
+      },
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "payDiff",
+            "source_mapping": {
+              "start": 1912,
+              "length": 476,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "BonusDealer",
+                "source_mapping": {
+                  "start": 180,
+                  "length": 2396,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              },
+              "signature": "payDiff(address,uint256)"
+            }
+          },
+          {
+            "type": "node",
+            "name": "! nexium.transfer(backer,totalToPay)",
+            "source_mapping": {
+              "start": 2240,
+              "length": 36,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "payDiff",
+                "source_mapping": {
+                  "start": 1912,
+                  "length": 476,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "BonusDealer",
+                    "source_mapping": {
+                      "start": 180,
+                      "length": 2396,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "payDiff(address,uint256)"
+                }
+              }
+            },
+            "additional_fields": {
+              "underlying_type": "external_calls"
+            }
+          },
+          {
+            "type": "node",
+            "name": "! nexium.transfer(backer,totalToPay)",
+            "source_mapping": {
+              "start": 2240,
+              "length": 36,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "payDiff",
+                "source_mapping": {
+                  "start": 1912,
+                  "length": 476,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "BonusDealer",
+                    "source_mapping": {
+                      "start": 180,
+                      "length": 2396,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "payDiff(address,uint256)"
+                }
+              }
+            },
+            "additional_fields": {
+              "underlying_type": "external_calls_sending_eth"
+            }
+          },
+          {
+            "type": "node",
+            "name": "totalDistributed += totalToPay",
+            "source_mapping": {
+              "start": 2329,
+              "length": 30,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "payDiff",
+                "source_mapping": {
+                  "start": 1912,
+                  "length": 476,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "BonusDealer",
+                    "source_mapping": {
+                      "start": 180,
+                      "length": 2396,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "payDiff(address,uint256)"
+                }
+              }
+            },
+            "additional_fields": {
+              "underlying_type": "variables_written",
+              "variable_name": "totalDistributed"
+            }
+          }
+        ],
+        "description": "Reentrancy in BonusDealer.payDiff(address,uint256) ():\n\tExternal calls:\n\t- ! nexium.transfer(backer,totalToPay) ()\n\tState variables written after the call(s):\n\t- totalDistributed += totalToPay ()\n",
+        "markdown": "Reentrancy in [BonusDealer.payDiff(address,uint256)]():\n\tExternal calls:\n\t- [! nexium.transfer(backer,totalToPay)]()\n\tState variables written after the call(s):\n\t- [totalDistributed += totalToPay]()\n",
+        "first_markdown_element": "",
+        "id": "ef18d5ce2a8a3d29f8e5093bd4ad479e2e984b29d05dcc6679f5f1b3b192da99",
+        "check": "reentrancy-benign",
+        "impact": "Low",
+        "confidence": "Medium"
+      },
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "payDiff",
+            "source_mapping": {
+              "start": 1912,
+              "length": 476,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "BonusDealer",
+                "source_mapping": {
+                  "start": 180,
+                  "length": 2396,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              },
+              "signature": "payDiff(address,uint256)"
+            }
+          },
+          {
+            "type": "node",
+            "name": "! nexium.transfer(backer,totalToPay)",
+            "source_mapping": {
+              "start": 2240,
+              "length": 36,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "payDiff",
+                "source_mapping": {
+                  "start": 1912,
+                  "length": 476,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "BonusDealer",
+                    "source_mapping": {
+                      "start": 180,
+                      "length": 2396,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "payDiff(address,uint256)"
+                }
+              }
+            },
+            "additional_fields": {
+              "underlying_type": "external_calls"
+            }
+          },
+          {
+            "type": "node",
+            "name": "Paid(backer)",
+            "source_mapping": {
+              "start": 2369,
+              "length": 12,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "payDiff",
+                "source_mapping": {
+                  "start": 1912,
+                  "length": 476,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "BonusDealer",
+                    "source_mapping": {
+                      "start": 180,
+                      "length": 2396,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "payDiff(address,uint256)"
+                }
+              }
+            },
+            "additional_fields": {
+              "underlying_type": "event"
+            }
+          }
+        ],
+        "description": "Reentrancy in BonusDealer.payDiff(address,uint256) ():\n\tExternal calls:\n\t- ! nexium.transfer(backer,totalToPay) ()\n\tEvent emitted after the call(s):\n\t- Paid(backer) ()\n",
+        "markdown": "Reentrancy in [BonusDealer.payDiff(address,uint256)]():\n\tExternal calls:\n\t- [! nexium.transfer(backer,totalToPay)]()\n\tEvent emitted after the call(s):\n\t- [Paid(backer)]()\n",
+        "first_markdown_element": "",
+        "id": "be2e5dc6b523a8b1bb6b287bf996fccdfaf6e79006846f23bfde26933da4ec15",
+        "check": "reentrancy-events",
+        "impact": "Low",
+        "confidence": "Medium"
+      },
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "recursiveCalculation",
+            "source_mapping": {
+              "start": 1687,
+              "length": 215,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "BonusDealer",
+                "source_mapping": {
+                  "start": 180,
+                  "length": 2396,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              },
+              "signature": "recursiveCalculation()"
+            }
+          },
+          {
+            "type": "node",
+            "name": "nxcBought -= bonuses[i].step",
+            "source_mapping": {
+              "start": 1829,
+              "length": 28,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "recursiveCalculation",
+                "source_mapping": {
+                  "start": 1687,
+                  "length": 215,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "BonusDealer",
+                    "source_mapping": {
+                      "start": 180,
+                      "length": 2396,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "recursiveCalculation()"
+                }
+              }
+            }
+          }
+        ],
+        "description": "BonusDealer.recursiveCalculation() () has costly operations inside a loop:\n\t- nxcBought -= bonuses[i].step ()\n",
+        "markdown": "[BonusDealer.recursiveCalculation()]() has costly operations inside a loop:\n\t- [nxcBought -= bonuses[i].step]()\n",
+        "first_markdown_element": "",
+        "id": "e94d276eb8b4c07640b67109bf507daa93c10856d60770f11977c87c5f0bf3fb",
+        "check": "costly-loop",
+        "impact": "Informational",
+        "confidence": "Medium"
+      },
+      {
+        "elements": [
+          {
+            "type": "node",
+            "name": "",
+            "source_mapping": {
+              "start": 2000,
+              "length": 5,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "payDiff",
+                "source_mapping": {
+                  "start": 1912,
+                  "length": 476,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "BonusDealer",
+                    "source_mapping": {
+                      "start": 180,
+                      "length": 2396,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "payDiff(address,uint256)"
+                }
+              }
+            }
+          }
+        ],
+        "description": "Deprecated standard detected THROW ():\n\t- Usage of \"throw\" should be replaced with \"revert()\"\n",
+        "markdown": "Deprecated standard detected [THROW]():\n\t- Usage of \"throw\" should be replaced with \"revert()\"\n",
+        "first_markdown_element": "",
+        "id": "f5556cf1c70b64b9e4b1fc32044dd970b5f2c8b9fc21b7971fda01971033f2d5",
+        "check": "deprecated-standards",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "pragma",
+            "name": "^0.4.2",
+            "source_mapping": {
+              "start": 0,
+              "length": 23,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "directive": [
+                "solidity",
+                "^",
+                "0.4",
+                ".2"
+              ]
+            }
+          }
+        ],
+        "description": "Pragma version^0.4.2 () allows old versions\n",
+        "markdown": "Pragma version[^0.4.2]() allows old versions\n",
+        "first_markdown_element": "",
+        "id": "684a56cd27e54ff2efdccacdc31c1f9807e03d1014a0a136c00240d60a2f3a67",
+        "check": "solc-version",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [],
+        "description": "solc-0.4.2 is not recommended for deployment\n",
+        "markdown": "solc-0.4.2 is not recommended for deployment\n",
+        "first_markdown_element": "",
+        "id": "707dbfcfdf84b6816d84949bbe947a3701cd8aa49952e3db1879e122f1f0990d",
+        "check": "solc-version",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "_nxcBought",
+            "source_mapping": {
+              "start": 1404,
+              "length": 15,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "bonusCalculation",
+                "source_mapping": {
+                  "start": 1378,
+                  "length": 299,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "BonusDealer",
+                    "source_mapping": {
+                      "start": 180,
+                      "length": 2396,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "bonusCalculation(uint256)"
+                }
+              }
+            },
+            "additional_fields": {
+              "target": "parameter",
+              "convention": "mixedCase"
+            }
+          }
+        ],
+        "description": "Parameter BonusDealer.bonusCalculation(uint256)._nxcBought () is not in mixedCase\n",
+        "markdown": "Parameter [BonusDealer.bonusCalculation(uint256)._nxcBought]() is not in mixedCase\n",
+        "first_markdown_element": "",
+        "id": "924fc323e0e462d880e854c7dc01094ee66db6de1e182adf1d36d96c36641d9d",
+        "check": "naming-convention",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "BonusDealer",
+            "source_mapping": {
+              "start": 528,
+              "length": 840,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "BonusDealer",
+                "source_mapping": {
+                  "start": 180,
+                  "length": 2396,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              },
+              "signature": "BonusDealer()"
+            }
+          },
+          {
+            "type": "node",
+            "name": "bonuses[7] = Bonus(140000 * 1000,1000000 * 1000)",
+            "source_mapping": {
+              "start": 1235,
+              "length": 45,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "BonusDealer",
+                "source_mapping": {
+                  "start": 528,
+                  "length": 840,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "BonusDealer",
+                    "source_mapping": {
+                      "start": 180,
+                      "length": 2396,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "BonusDealer()"
+                }
+              }
+            }
+          }
+        ],
+        "description": "BonusDealer.BonusDealer() () uses literals with too many digits:\n\t- bonuses[7] = Bonus(140000 * 1000,1000000 * 1000) ()\n",
+        "markdown": "[BonusDealer.BonusDealer()]() uses literals with too many digits:\n\t- [bonuses[7] = Bonus(140000 * 1000,1000000 * 1000)]()\n",
+        "first_markdown_element": "",
+        "id": "197a6aea1ba49e6adebdf14a8340e77d3e1ec9bc028b350c38fb31c018278c97",
+        "check": "too-many-digits",
+        "impact": "Informational",
+        "confidence": "Medium"
+      },
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "BonusDealer",
+            "source_mapping": {
+              "start": 528,
+              "length": 840,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "BonusDealer",
+                "source_mapping": {
+                  "start": 180,
+                  "length": 2396,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              },
+              "signature": "BonusDealer()"
+            }
+          },
+          {
+            "type": "node",
+            "name": "bonuses[8] = Bonus(272000 * 1000,1700000 * 1000)",
+            "source_mapping": {
+              "start": 1316,
+              "length": 45,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "BonusDealer",
+                "source_mapping": {
+                  "start": 528,
+                  "length": 840,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "BonusDealer",
+                    "source_mapping": {
+                      "start": 180,
+                      "length": 2396,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "BonusDealer()"
+                }
+              }
+            }
+          }
+        ],
+        "description": "BonusDealer.BonusDealer() () uses literals with too many digits:\n\t- bonuses[8] = Bonus(272000 * 1000,1700000 * 1000) ()\n",
+        "markdown": "[BonusDealer.BonusDealer()]() uses literals with too many digits:\n\t- [bonuses[8] = Bonus(272000 * 1000,1700000 * 1000)]()\n",
+        "first_markdown_element": "",
+        "id": "48b59752d4301ab2816516c953f2daebc3ecce69638d89bc9452441c7a024865",
+        "check": "too-many-digits",
+        "impact": "Informational",
+        "confidence": "Medium"
+      },
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "BonusDealer",
+            "source_mapping": {
+              "start": 528,
+              "length": 840,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "BonusDealer",
+                "source_mapping": {
+                  "start": 180,
+                  "length": 2396,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              },
+              "signature": "BonusDealer()"
+            }
+          },
+          {
+            "type": "node",
+            "name": "bonuses[5] = Bonus(40000 * 1000,400000 * 1000)",
+            "source_mapping": {
+              "start": 1077,
+              "length": 43,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "BonusDealer",
+                "source_mapping": {
+                  "start": 528,
+                  "length": 840,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "BonusDealer",
+                    "source_mapping": {
+                      "start": 180,
+                      "length": 2396,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "BonusDealer()"
+                }
+              }
+            }
+          }
+        ],
+        "description": "BonusDealer.BonusDealer() () uses literals with too many digits:\n\t- bonuses[5] = Bonus(40000 * 1000,400000 * 1000) ()\n",
+        "markdown": "[BonusDealer.BonusDealer()]() uses literals with too many digits:\n\t- [bonuses[5] = Bonus(40000 * 1000,400000 * 1000)]()\n",
+        "first_markdown_element": "",
+        "id": "74d8542f71f1255ffab469f0c7c2cd93c3256dfad789430bff8ccfd527942a03",
+        "check": "too-many-digits",
+        "impact": "Informational",
+        "confidence": "Medium"
+      },
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "BonusDealer",
+            "source_mapping": {
+              "start": 528,
+              "length": 840,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "BonusDealer",
+                "source_mapping": {
+                  "start": 180,
+                  "length": 2396,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              },
+              "signature": "BonusDealer()"
+            }
+          },
+          {
+            "type": "node",
+            "name": "bonuses[4] = Bonus(8000 * 1000,100000 * 1000)",
+            "source_mapping": {
+              "start": 999,
+              "length": 42,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "BonusDealer",
+                "source_mapping": {
+                  "start": 528,
+                  "length": 840,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "BonusDealer",
+                    "source_mapping": {
+                      "start": 180,
+                      "length": 2396,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "BonusDealer()"
+                }
+              }
+            }
+          }
+        ],
+        "description": "BonusDealer.BonusDealer() () uses literals with too many digits:\n\t- bonuses[4] = Bonus(8000 * 1000,100000 * 1000) ()\n",
+        "markdown": "[BonusDealer.BonusDealer()]() uses literals with too many digits:\n\t- [bonuses[4] = Bonus(8000 * 1000,100000 * 1000)]()\n",
+        "first_markdown_element": "",
+        "id": "ccd36f2ed4b7968d883da22a1ea2c9e58aa4d4f2d3c6a303147b33d16b65f61a",
+        "check": "too-many-digits",
+        "impact": "Informational",
+        "confidence": "Medium"
+      }
+    ]
+  }
+}

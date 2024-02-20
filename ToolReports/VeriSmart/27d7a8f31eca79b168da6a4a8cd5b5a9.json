@@ -1,0 +1,112 @@
+{
+  "fileName": "Benchmarks/Study_SamplesSet/27d7a8f31eca79b168da6a4a8cd5b5a9.sol",
+  "baseName": "27d7a8f31eca79b168da6a4a8cd5b5a9.sol",
+  "iter": 65,
+  "time": "300.516274",
+  "errMsg": null,
+  "result": [
+    {
+      "no": "1",
+      "kind": "IO",
+      "line": 55,
+      "signatures": [
+        {
+          "contractName": "ChristmasClub",
+          "methodName": "withdraw",
+          "argTypes": []
+        }
+      ],
+      "exp": "(a * b)",
+      "status": "unproven"
+    },
+    {
+      "no": "2",
+      "kind": "IO",
+      "line": 73,
+      "signatures": [
+        {
+          "contractName": "ChristmasClub",
+          "methodName": "deposit",
+          "argTypes": []
+        },
+        {
+          "contractName": "ChristmasClub",
+          "methodName": "withdraw",
+          "argTypes": []
+        }
+      ],
+      "exp": "(a + b)",
+      "status": "unproven"
+    },
+    {
+      "no": "3",
+      "kind": "IO",
+      "line": 94,
+      "signatures": [
+        {
+          "contractName": "ChristmasClub",
+          "methodName": "withdraw",
+          "argTypes": []
+        }
+      ],
+      "exp": "(100 - earlyWithdrawalFeePct)",
+      "status": "proven"
+    },
+    {
+      "no": "4",
+      "kind": "IO",
+      "line": 95,
+      "signatures": [
+        {
+          "contractName": "ChristmasClub",
+          "methodName": "withdraw",
+          "argTypes": []
+        }
+      ],
+      "exp": "(balances[msg.sender] - toWithdraw)",
+      "status": "unproven"
+    },
+    {
+      "no": "5",
+      "kind": "DZ",
+      "line": 56,
+      "signatures": [
+        {
+          "contractName": "ChristmasClub",
+          "methodName": "withdraw",
+          "argTypes": []
+        }
+      ],
+      "exp": "(c / a)",
+      "status": "proven"
+    },
+    {
+      "no": "6",
+      "kind": "DZ",
+      "line": 62,
+      "signatures": [
+        {
+          "contractName": "ChristmasClub",
+          "methodName": "withdraw",
+          "argTypes": []
+        }
+      ],
+      "exp": "(a / b)",
+      "status": "proven"
+    },
+    {
+      "no": "7",
+      "kind": "ETH_LEAK",
+      "line": 98,
+      "signatures": [
+        {
+          "contractName": "ChristmasClub",
+          "methodName": "withdraw",
+          "argTypes": []
+        }
+      ],
+      "exp": "msg.sender.transfer(toWithdraw);",
+      "status": "unproven"
+    }
+  ]
+}

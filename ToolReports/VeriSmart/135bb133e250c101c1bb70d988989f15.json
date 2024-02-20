@@ -1,0 +1,118 @@
+{
+  "fileName": "Benchmarks/Study_SamplesSet/135bb133e250c101c1bb70d988989f15.sol",
+  "baseName": "135bb133e250c101c1bb70d988989f15.sol",
+  "iter": 733,
+  "time": "300.031943",
+  "errMsg": null,
+  "result": [
+    {
+      "no": "1",
+      "kind": "IO",
+      "line": 15,
+      "signatures": [
+        {
+          "contractName": "PreIcoCrowdsale",
+          "methodName": "acceptContribution",
+          "argTypes": [ "address", "uint256" ]
+        },
+        {
+          "contractName": "PreIcoCrowdsale",
+          "methodName": "calculateContribution",
+          "argTypes": [ "uint256" ]
+        }
+      ],
+      "exp": "(a * b)",
+      "status": "unproven"
+    },
+    {
+      "no": "2",
+      "kind": "IO",
+      "line": 29,
+      "signatures": [
+        {
+          "contractName": "PreIcoCrowdsale",
+          "methodName": "acceptContribution",
+          "argTypes": [ "address", "uint256" ]
+        },
+        {
+          "contractName": "PreIcoCrowdsale",
+          "methodName": "registerContribution",
+          "argTypes": [ "bytes32", "address", "uint256" ]
+        }
+      ],
+      "exp": "(a - b)",
+      "status": "proven"
+    },
+    {
+      "no": "3",
+      "kind": "IO",
+      "line": 324,
+      "signatures": [
+        {
+          "contractName": "PreIcoCrowdsale",
+          "methodName": "acceptContribution",
+          "argTypes": [ "address", "uint256" ]
+        },
+        {
+          "contractName": "PreIcoCrowdsale",
+          "methodName": "calculateContribution",
+          "argTypes": [ "uint256" ]
+        }
+      ],
+      "exp": "(10 ** token.decimals())",
+      "status": "unproven"
+    },
+    {
+      "no": "4",
+      "kind": "DZ",
+      "line": 16,
+      "signatures": [
+        {
+          "contractName": "PreIcoCrowdsale",
+          "methodName": "acceptContribution",
+          "argTypes": [ "address", "uint256" ]
+        },
+        {
+          "contractName": "PreIcoCrowdsale",
+          "methodName": "calculateContribution",
+          "argTypes": [ "uint256" ]
+        }
+      ],
+      "exp": "(c / a)",
+      "status": "proven"
+    },
+    {
+      "no": "5",
+      "kind": "DZ",
+      "line": 22,
+      "signatures": [
+        {
+          "contractName": "PreIcoCrowdsale",
+          "methodName": "acceptContribution",
+          "argTypes": [ "address", "uint256" ]
+        },
+        {
+          "contractName": "PreIcoCrowdsale",
+          "methodName": "calculateContribution",
+          "argTypes": [ "uint256" ]
+        }
+      ],
+      "exp": "(a / b)",
+      "status": "unproven"
+    },
+    {
+      "no": "6",
+      "kind": "ETH_LEAK",
+      "line": 337,
+      "signatures": [
+        {
+          "contractName": "PreIcoCrowdsale",
+          "methodName": "acceptContribution",
+          "argTypes": [ "address", "uint256" ]
+        }
+      ],
+      "exp": "wallet.transfer(value);",
+      "status": "proven"
+    }
+  ]
+}

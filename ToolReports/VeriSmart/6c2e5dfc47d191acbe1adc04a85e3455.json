@@ -1,0 +1,93 @@
+{
+  "fileName": "Benchmarks/Study_SamplesSet/6c2e5dfc47d191acbe1adc04a85e3455.sol",
+  "baseName": "6c2e5dfc47d191acbe1adc04a85e3455.sol",
+  "iter": 3,
+  "time": "3.957082",
+  "errMsg": null,
+  "result": [
+    {
+      "no": "1",
+      "kind": "IO",
+      "line": 54,
+      "signatures": [
+        {
+          "contractName": "DragonBallZ",
+          "methodName": "purchaseHero",
+          "argTypes": [ "uint256" ]
+        }
+      ],
+      "exp": "(msg.value - devFee)",
+      "status": "unproven"
+    },
+    {
+      "no": "2",
+      "kind": "IO",
+      "line": 107,
+      "signatures": [
+        {
+          "contractName": "DragonBallZ",
+          "methodName": "purchaseHero",
+          "argTypes": [ "uint256" ]
+        }
+      ],
+      "exp": "(a * b)",
+      "status": "unproven"
+    },
+    {
+      "no": "3",
+      "kind": "DZ",
+      "line": 51,
+      "signatures": [
+        {
+          "contractName": "DragonBallZ",
+          "methodName": "purchaseHero",
+          "argTypes": [ "uint256" ]
+        }
+      ],
+      "exp": "(msg.value / 10)",
+      "status": "proven"
+    },
+    {
+      "no": "4",
+      "kind": "DZ",
+      "line": 108,
+      "signatures": [
+        {
+          "contractName": "DragonBallZ",
+          "methodName": "purchaseHero",
+          "argTypes": [ "uint256" ]
+        }
+      ],
+      "exp": "(c / a)",
+      "status": "proven"
+    },
+    {
+      "no": "5",
+      "kind": "ETH_LEAK",
+      "line": 55,
+      "signatures": [
+        {
+          "contractName": "DragonBallZ",
+          "methodName": "purchaseHero",
+          "argTypes": [ "uint256" ]
+        }
+      ],
+      "exp": "heroes[_heroId].ownerAddress.transfer(commissionOwner);",
+      "status": "unproven"
+    },
+    {
+      "no": "6",
+      "kind": "ETH_LEAK",
+      "line": 58,
+      "signatures": [
+        {
+          "contractName": "DragonBallZ",
+          "methodName": "purchaseHero",
+          "argTypes": [ "uint256" ]
+        }
+      ],
+      "exp": "devFeeAddress.transfer(devFee);",
+      "status": "proven"
+    }
+  ]
+}

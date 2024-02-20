@@ -1,0 +1,126 @@
+{
+  "fileName": "Benchmarks/Study_SamplesSet/e343f8fca22f2e70b0933ca10dab53de.sol",
+  "baseName": "e343f8fca22f2e70b0933ca10dab53de.sol",
+  "iter": 1226,
+  "time": "250.307907",
+  "errMsg": null,
+  "result": [
+    {
+      "no": "1",
+      "kind": "IO",
+      "line": 82,
+      "signatures": [
+        {
+          "contractName": "DEC15v1Contract",
+          "methodName": "transfer",
+          "argTypes": [ "address", "uint256" ]
+        }
+      ],
+      "exp": "(balances[_to] + _amount)",
+      "status": "unproven"
+    },
+    {
+      "no": "2",
+      "kind": "IO",
+      "line": 83,
+      "signatures": [
+        {
+          "contractName": "DEC15v1Contract",
+          "methodName": "transfer",
+          "argTypes": [ "address", "uint256" ]
+        }
+      ],
+      "exp": "(balances[msg.sender] - _amount)",
+      "status": "proven"
+    },
+    {
+      "no": "3",
+      "kind": "IO",
+      "line": 84,
+      "signatures": [
+        {
+          "contractName": "DEC15v1Contract",
+          "methodName": "transfer",
+          "argTypes": [ "address", "uint256" ]
+        }
+      ],
+      "exp": "(balances[_to] + _amount)",
+      "status": "proven"
+    },
+    {
+      "no": "4",
+      "kind": "IO",
+      "line": 106,
+      "signatures": [
+        {
+          "contractName": "DEC15v1Contract",
+          "methodName": "transferFrom",
+          "argTypes": [ "address", "address", "uint256" ]
+        }
+      ],
+      "exp": "(balances[_to] + _amount)",
+      "status": "unproven"
+    },
+    {
+      "no": "5",
+      "kind": "IO",
+      "line": 107,
+      "signatures": [
+        {
+          "contractName": "DEC15v1Contract",
+          "methodName": "transferFrom",
+          "argTypes": [ "address", "address", "uint256" ]
+        }
+      ],
+      "exp": "(balances[_from] - _amount)",
+      "status": "proven"
+    },
+    {
+      "no": "6",
+      "kind": "IO",
+      "line": 108,
+      "signatures": [
+        {
+          "contractName": "DEC15v1Contract",
+          "methodName": "transferFrom",
+          "argTypes": [ "address", "address", "uint256" ]
+        }
+      ],
+      "exp": "(allowed[_from][msg.sender] - _amount)",
+      "status": "proven"
+    },
+    {
+      "no": "7",
+      "kind": "IO",
+      "line": 109,
+      "signatures": [
+        {
+          "contractName": "DEC15v1Contract",
+          "methodName": "transferFrom",
+          "argTypes": [ "address", "address", "uint256" ]
+        }
+      ],
+      "exp": "(balances[_to] + _amount)",
+      "status": "proven"
+    },
+    {
+      "no": "8",
+      "kind": "IO",
+      "line": 136,
+      "signatures": [
+        {
+          "contractName": "DEC15v1Contract",
+          "methodName": "@fallback",
+          "argTypes": []
+        },
+        {
+          "contractName": "DEC15v1Contract",
+          "methodName": "deposit",
+          "argTypes": []
+        }
+      ],
+      "exp": "(balances[msg.sender] + msg.value)",
+      "status": "unproven"
+    }
+  ]
+}

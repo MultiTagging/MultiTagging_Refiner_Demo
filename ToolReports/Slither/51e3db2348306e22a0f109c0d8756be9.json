@@ -1,0 +1,331 @@
+{
+  "success": true,
+  "error": null,
+  "results": {
+    "detectors": [
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "solvePuzzle",
+            "source_mapping": {
+              "start": 905,
+              "length": 524,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "BirthdayPuzzle",
+                "source_mapping": {
+                  "start": 212,
+                  "length": 1219,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              },
+              "signature": "solvePuzzle(uint256)"
+            }
+          },
+          {
+            "type": "node",
+            "name": "msg.sender.send(balance)",
+            "source_mapping": {
+              "start": 1326,
+              "length": 24,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "solvePuzzle",
+                "source_mapping": {
+                  "start": 905,
+                  "length": 524,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "BirthdayPuzzle",
+                    "source_mapping": {
+                      "start": 212,
+                      "length": 1219,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "solvePuzzle(uint256)"
+                }
+              }
+            }
+          }
+        ],
+        "description": "BirthdayPuzzle.solvePuzzle(uint256) () ignores return value by msg.sender.send(balance) ()\n",
+        "markdown": "[BirthdayPuzzle.solvePuzzle(uint256)]() ignores return value by [msg.sender.send(balance)]()\n",
+        "first_markdown_element": "",
+        "id": "af913106550fcfb3c2a6cf9fc63c253fe3dd193c594a401c2ed4bdea8d33ec5f",
+        "check": "unchecked-send",
+        "impact": "Medium",
+        "confidence": "Medium"
+      },
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "fallback",
+            "source_mapping": {
+              "start": 295,
+              "length": 66,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "BirthdayPuzzle",
+                "source_mapping": {
+                  "start": 212,
+                  "length": 1219,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              },
+              "signature": "fallback()"
+            }
+          },
+          {
+            "type": "node",
+            "name": "balance += msg.value",
+            "source_mapping": {
+              "start": 334,
+              "length": 20,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "fallback",
+                "source_mapping": {
+                  "start": 295,
+                  "length": 66,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "BirthdayPuzzle",
+                    "source_mapping": {
+                      "start": 212,
+                      "length": 1219,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "fallback()"
+                }
+              }
+            }
+          }
+        ],
+        "description": "BirthdayPuzzle.fallback() () should emit an event for: \n\t- balance += msg.value () \n",
+        "markdown": "[BirthdayPuzzle.fallback()]() should emit an event for: \n\t- [balance += msg.value]() \n",
+        "first_markdown_element": "",
+        "id": "7e2529185fa0ba01ac7e8818eb0ba985fbc2e52c302c6f1afb1082bb0d084932",
+        "check": "events-maths",
+        "impact": "Low",
+        "confidence": "Medium"
+      },
+      {
+        "elements": [
+          {
+            "type": "node",
+            "name": "",
+            "source_mapping": {
+              "start": 185,
+              "length": 5,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "onlyOwner",
+                "source_mapping": {
+                  "start": 131,
+                  "length": 77,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "owned",
+                    "source_mapping": {
+                      "start": 25,
+                      "length": 185,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "onlyOwner()"
+                }
+              }
+            }
+          }
+        ],
+        "description": "Deprecated standard detected THROW ():\n\t- Usage of \"throw\" should be replaced with \"revert()\"\n",
+        "markdown": "Deprecated standard detected [THROW]():\n\t- Usage of \"throw\" should be replaced with \"revert()\"\n",
+        "first_markdown_element": "",
+        "id": "f5556cf1c70b64b9e4b1fc32044dd970b5f2c8b9fc21b7971fda01971033f2d5",
+        "check": "deprecated-standards",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "pragma",
+            "name": "^0.4.9",
+            "source_mapping": {
+              "start": 0,
+              "length": 23,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "directive": [
+                "solidity",
+                "^",
+                "0.4",
+                ".9"
+              ]
+            }
+          }
+        ],
+        "description": "Pragma version^0.4.9 () allows old versions\n",
+        "markdown": "Pragma version[^0.4.9]() allows old versions\n",
+        "first_markdown_element": "",
+        "id": "3c5ff4f844f57b89efd6e4b54c2f202ca55c1f958c7074785f69d87ba6721a7e",
+        "check": "solc-version",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [],
+        "description": "solc-0.4.9 is not recommended for deployment\n",
+        "markdown": "solc-0.4.9 is not recommended for deployment\n",
+        "first_markdown_element": "",
+        "id": "8c74976b741e43fce2257e92f2bfb4a12e0d13318de6b2af88024745746120b1",
+        "check": "solc-version",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "contract",
+            "name": "owned",
+            "source_mapping": {
+              "start": 25,
+              "length": 185,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "additional_fields": {
+              "target": "contract",
+              "convention": "CapWords"
+            }
+          }
+        ],
+        "description": "Contract owned () is not in CapWords\n",
+        "markdown": "Contract [owned]() is not in CapWords\n",
+        "first_markdown_element": "",
+        "id": "01bc58369f2fd81680c634b453fa427ba4b0127f990d30f7be7154dc8da22427",
+        "check": "naming-convention",
+        "impact": "Informational",
+        "confidence": "High"
+      }
+    ]
+  }
+}

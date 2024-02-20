@@ -1,0 +1,121 @@
+{
+  "fileName": "Benchmarks/Study_SamplesSet/4703a8f7b7da3f307b26c9344414169c.sol",
+  "baseName": "4703a8f7b7da3f307b26c9344414169c.sol",
+  "iter": 2866,
+  "time": "300.029776",
+  "errMsg": null,
+  "result": [
+    {
+      "no": "1",
+      "kind": "IO",
+      "line": 36,
+      "signatures": [
+        {
+          "contractName": "batchTransfer",
+          "methodName": "distribute",
+          "argTypes": [ "address[]" ]
+        }
+      ],
+      "exp": "(a - b)",
+      "status": "proven"
+    },
+    {
+      "no": "2",
+      "kind": "IO",
+      "line": 43,
+      "signatures": [
+        {
+          "contractName": "batchTransfer",
+          "methodName": "distribute",
+          "argTypes": [ "address[]" ]
+        }
+      ],
+      "exp": "(a + b)",
+      "status": "unproven"
+    },
+    {
+      "no": "3",
+      "kind": "IO",
+      "line": 71,
+      "signatures": [
+        {
+          "contractName": "batchTransfer",
+          "methodName": "distribute",
+          "argTypes": [ "address[]" ]
+        }
+      ],
+      "exp": "(i + 1)",
+      "status": "proven"
+    },
+    {
+      "no": "4",
+      "kind": "IO",
+      "line": 76,
+      "signatures": [
+        {
+          "contractName": "batchTransfer",
+          "methodName": "distribute",
+          "argTypes": [ "address[]" ]
+        }
+      ],
+      "exp": "(myAddresses.length - 1)",
+      "status": "unproven"
+    },
+    {
+      "no": "5",
+      "kind": "DZ",
+      "line": 26,
+      "signatures": [
+        {
+          "contractName": "batchTransfer",
+          "methodName": "distribute",
+          "argTypes": [ "address[]" ]
+        }
+      ],
+      "exp": "(a / b)",
+      "status": "proven"
+    },
+    {
+      "no": "6",
+      "kind": "ETH_LEAK",
+      "line": 68,
+      "signatures": [
+        {
+          "contractName": "batchTransfer",
+          "methodName": "distribute",
+          "argTypes": [ "address[]" ]
+        }
+      ],
+      "exp": "myAddresses[0].transfer(value);",
+      "status": "proven"
+    },
+    {
+      "no": "7",
+      "kind": "ETH_LEAK",
+      "line": 73,
+      "signatures": [
+        {
+          "contractName": "batchTransfer",
+          "methodName": "distribute",
+          "argTypes": [ "address[]" ]
+        }
+      ],
+      "exp": "myAddresses[i].transfer(distr);",
+      "status": "unproven"
+    },
+    {
+      "no": "8",
+      "kind": "ETH_LEAK",
+      "line": 76,
+      "signatures": [
+        {
+          "contractName": "batchTransfer",
+          "methodName": "distribute",
+          "argTypes": [ "address[]" ]
+        }
+      ],
+      "exp": "myAddresses[(myAddresses.length - 1)].transfer(value);",
+      "status": "unproven"
+    }
+  ]
+}

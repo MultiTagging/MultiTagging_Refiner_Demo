@@ -1,0 +1,220 @@
+{
+  "fileName": "Benchmarks/Study_SamplesSet/273d60e1f34f2dfbb2e6bc4126de6e7b.sol",
+  "baseName": "273d60e1f34f2dfbb2e6bc4126de6e7b.sol",
+  "iter": 98,
+  "time": "300.923107",
+  "errMsg": null,
+  "result": [
+    {
+      "no": "1",
+      "kind": "IO",
+      "line": 12,
+      "signatures": [
+        {
+          "contractName": "XmasCoinCrowdsale",
+          "methodName": "buyTokens",
+          "argTypes": [ "address" ]
+        }
+      ],
+      "exp": "(a * b)",
+      "status": "unproven"
+    },
+    {
+      "no": "2",
+      "kind": "IO",
+      "line": 26,
+      "signatures": [
+        {
+          "contractName": "SafeMath",
+          "methodName": "sub",
+          "argTypes": [ "uint256", "uint256" ]
+        },
+        {
+          "contractName": "XmasCoinCrowdsale",
+          "methodName": "buyTokens",
+          "argTypes": [ "address" ]
+        },
+        {
+          "contractName": "XmasCoinCrowdsale",
+          "methodName": "finalize",
+          "argTypes": []
+        }
+      ],
+      "exp": "(a - b)",
+      "status": "proven"
+    },
+    {
+      "no": "3",
+      "kind": "IO",
+      "line": 30,
+      "signatures": [
+        {
+          "contractName": "SafeMath",
+          "methodName": "add",
+          "argTypes": [ "uint256", "uint256" ]
+        },
+        {
+          "contractName": "XmasCoinCrowdsale",
+          "methodName": "buyTokens",
+          "argTypes": [ "address" ]
+        }
+      ],
+      "exp": "(a + b)",
+      "status": "unproven"
+    },
+    {
+      "no": "4",
+      "kind": "IO",
+      "line": 141,
+      "signatures": [
+        {
+          "contractName": "XmasCoinCrowdsale",
+          "methodName": "destroy",
+          "argTypes": [ "address[]" ]
+        }
+      ],
+      "exp": "(i + 1)",
+      "status": "proven"
+    },
+    {
+      "no": "5",
+      "kind": "IO",
+      "line": 331,
+      "signatures": [
+        {
+          "contractName": "XmasCoin",
+          "methodName": "burn",
+          "argTypes": [ "uint256" ]
+        }
+      ],
+      "exp": "(balances[owner] - _value)",
+      "status": "unproven"
+    },
+    {
+      "no": "6",
+      "kind": "IO",
+      "line": 332,
+      "signatures": [
+        {
+          "contractName": "XmasCoin",
+          "methodName": "burn",
+          "argTypes": [ "uint256" ]
+        }
+      ],
+      "exp": "(totalSupply - _value)",
+      "status": "unproven"
+    },
+    {
+      "no": "7",
+      "kind": "IO",
+      "line": 355,
+      "signatures": [
+        {
+          "contractName": "XmasCoinCrowdsale",
+          "methodName": "XmasCoinCrowdsale",
+          "argTypes": []
+        }
+      ],
+      "exp": "(10 ** uint256(18))",
+      "status": "proven"
+    },
+    {
+      "no": "8",
+      "kind": "IO",
+      "line": 355,
+      "signatures": [
+        {
+          "contractName": "XmasCoinCrowdsale",
+          "methodName": "XmasCoinCrowdsale",
+          "argTypes": []
+        }
+      ],
+      "exp": "(7500000 * (10 ** uint256(18)))",
+      "status": "proven"
+    },
+    {
+      "no": "9",
+      "kind": "DZ",
+      "line": 13,
+      "signatures": [
+        {
+          "contractName": "XmasCoinCrowdsale",
+          "methodName": "buyTokens",
+          "argTypes": [ "address" ]
+        }
+      ],
+      "exp": "(c / a)",
+      "status": "proven"
+    },
+    {
+      "no": "10",
+      "kind": "DZ",
+      "line": 19,
+      "signatures": [
+        {
+          "contractName": "XmasCoinCrowdsale",
+          "methodName": "buyTokens",
+          "argTypes": [ "address" ]
+        }
+      ],
+      "exp": "(a / b)",
+      "status": "proven"
+    },
+    {
+      "no": "11",
+      "kind": "KA",
+      "line": 148,
+      "signatures": [
+        {
+          "contractName": "XmasCoinCrowdsale",
+          "methodName": "destroy",
+          "argTypes": [ "address[]" ]
+        }
+      ],
+      "exp": "selfdestruct(owner);",
+      "status": "unproven"
+    },
+    {
+      "no": "12",
+      "kind": "ETH_LEAK",
+      "line": 148,
+      "signatures": [
+        {
+          "contractName": "XmasCoinCrowdsale",
+          "methodName": "destroy",
+          "argTypes": [ "address[]" ]
+        }
+      ],
+      "exp": "selfdestruct(owner);",
+      "status": "proven"
+    },
+    {
+      "no": "13",
+      "kind": "ETH_LEAK",
+      "line": 412,
+      "signatures": [
+        {
+          "contractName": "XmasCoinCrowdsale",
+          "methodName": "buyTokens",
+          "argTypes": [ "address" ]
+        }
+      ],
+      "exp": "wallet.transfer(msg.value);",
+      "status": "proven"
+    },
+    {
+      "no": "14",
+      "kind": "ETH_LEAK",
+      "line": 433,
+      "signatures": [
+        {
+          "contractName": "XmasCoinCrowdsale",
+          "methodName": "finalize",
+          "argTypes": []
+        }
+      ],
+      "exp": "wallet.send(this.balance)",
+      "status": "proven"
+    }
+  ]
+}

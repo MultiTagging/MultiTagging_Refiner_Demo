@@ -1,0 +1,357 @@
+{
+  "success": true,
+  "error": null,
+  "results": {
+    "detectors": [
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "withdraw",
+            "source_mapping": {
+              "start": 470,
+              "length": 133,
+              "filename_relative": "Benchmarks/Study_SamplesSet/fc315b19f0d4629032969dae3a4fa14b.sol",
+              "filename_absolute": "/home/shikah/Documents/PhD/VulDet/Benchmarks/Study_SamplesSet/fc315b19f0d4629032969dae3a4fa14b.sol",
+              "filename_short": "Benchmarks/Study_SamplesSet/fc315b19f0d4629032969dae3a4fa14b.sol",
+              "is_dependency": false,
+              "lines": [
+                20,
+                21,
+                22,
+                23
+              ],
+              "starting_column": 5,
+              "ending_column": 6
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "NoHoneyPot",
+                "source_mapping": {
+                  "start": 47,
+                  "length": 558,
+                  "filename_relative": "Benchmarks/Study_SamplesSet/fc315b19f0d4629032969dae3a4fa14b.sol",
+                  "filename_absolute": "/home/shikah/Documents/PhD/VulDet/Benchmarks/Study_SamplesSet/fc315b19f0d4629032969dae3a4fa14b.sol",
+                  "filename_short": "Benchmarks/Study_SamplesSet/fc315b19f0d4629032969dae3a4fa14b.sol",
+                  "is_dependency": false,
+                  "lines": [
+                    5,
+                    6,
+                    7,
+                    8,
+                    9,
+                    10,
+                    11,
+                    12,
+                    13,
+                    14,
+                    15,
+                    16,
+                    17,
+                    18,
+                    19,
+                    20,
+                    21,
+                    22,
+                    23,
+                    24,
+                    25
+                  ],
+                  "starting_column": 1,
+                  "ending_column": 0
+                }
+              },
+              "signature": "withdraw()"
+            }
+          },
+          {
+            "type": "node",
+            "name": "msg.sender.transfer(address(this).balance)",
+            "source_mapping": {
+              "start": 554,
+              "length": 42,
+              "filename_relative": "Benchmarks/Study_SamplesSet/fc315b19f0d4629032969dae3a4fa14b.sol",
+              "filename_absolute": "/home/shikah/Documents/PhD/VulDet/Benchmarks/Study_SamplesSet/fc315b19f0d4629032969dae3a4fa14b.sol",
+              "filename_short": "Benchmarks/Study_SamplesSet/fc315b19f0d4629032969dae3a4fa14b.sol",
+              "is_dependency": false,
+              "lines": [
+                22
+              ],
+              "starting_column": 9,
+              "ending_column": 51
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "withdraw",
+                "source_mapping": {
+                  "start": 470,
+                  "length": 133,
+                  "filename_relative": "Benchmarks/Study_SamplesSet/fc315b19f0d4629032969dae3a4fa14b.sol",
+                  "filename_absolute": "/home/shikah/Documents/PhD/VulDet/Benchmarks/Study_SamplesSet/fc315b19f0d4629032969dae3a4fa14b.sol",
+                  "filename_short": "Benchmarks/Study_SamplesSet/fc315b19f0d4629032969dae3a4fa14b.sol",
+                  "is_dependency": false,
+                  "lines": [
+                    20,
+                    21,
+                    22,
+                    23
+                  ],
+                  "starting_column": 5,
+                  "ending_column": 6
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "NoHoneyPot",
+                    "source_mapping": {
+                      "start": 47,
+                      "length": 558,
+                      "filename_relative": "Benchmarks/Study_SamplesSet/fc315b19f0d4629032969dae3a4fa14b.sol",
+                      "filename_absolute": "/home/shikah/Documents/PhD/VulDet/Benchmarks/Study_SamplesSet/fc315b19f0d4629032969dae3a4fa14b.sol",
+                      "filename_short": "Benchmarks/Study_SamplesSet/fc315b19f0d4629032969dae3a4fa14b.sol",
+                      "is_dependency": false,
+                      "lines": [
+                        5,
+                        6,
+                        7,
+                        8,
+                        9,
+                        10,
+                        11,
+                        12,
+                        13,
+                        14,
+                        15,
+                        16,
+                        17,
+                        18,
+                        19,
+                        20,
+                        21,
+                        22,
+                        23,
+                        24,
+                        25
+                      ],
+                      "starting_column": 1,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "withdraw()"
+                }
+              }
+            }
+          }
+        ],
+        "description": "NoHoneyPot.withdraw() (Benchmarks/Study_SamplesSet/fc315b19f0d4629032969dae3a4fa14b.sol#20-23) sends eth to arbitrary user\n\tDangerous calls:\n\t- msg.sender.transfer(address(this).balance) (Benchmarks/Study_SamplesSet/fc315b19f0d4629032969dae3a4fa14b.sol#22)\n",
+        "markdown": "[NoHoneyPot.withdraw()](Benchmarks/Study_SamplesSet/fc315b19f0d4629032969dae3a4fa14b.sol#L20-L23) sends eth to arbitrary user\n\tDangerous calls:\n\t- [msg.sender.transfer(address(this).balance)](Benchmarks/Study_SamplesSet/fc315b19f0d4629032969dae3a4fa14b.sol#L22)\n",
+        "first_markdown_element": "Benchmarks/Study_SamplesSet/fc315b19f0d4629032969dae3a4fa14b.sol#L20-L23",
+        "id": "ef6829c2def0be471c573044d0d70662ec19439ba4f15749713ef0e7ea3de035",
+        "check": "arbitrary-send-eth",
+        "impact": "High",
+        "confidence": "Medium"
+      },
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "doAssembly",
+            "source_mapping": {
+              "start": 340,
+              "length": 124,
+              "filename_relative": "Benchmarks/Study_SamplesSet/fc315b19f0d4629032969dae3a4fa14b.sol",
+              "filename_absolute": "/home/shikah/Documents/PhD/VulDet/Benchmarks/Study_SamplesSet/fc315b19f0d4629032969dae3a4fa14b.sol",
+              "filename_short": "Benchmarks/Study_SamplesSet/fc315b19f0d4629032969dae3a4fa14b.sol",
+              "is_dependency": false,
+              "lines": [
+                14,
+                15,
+                16,
+                17,
+                18
+              ],
+              "starting_column": 5,
+              "ending_column": 6
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "NoHoneyPot",
+                "source_mapping": {
+                  "start": 47,
+                  "length": 558,
+                  "filename_relative": "Benchmarks/Study_SamplesSet/fc315b19f0d4629032969dae3a4fa14b.sol",
+                  "filename_absolute": "/home/shikah/Documents/PhD/VulDet/Benchmarks/Study_SamplesSet/fc315b19f0d4629032969dae3a4fa14b.sol",
+                  "filename_short": "Benchmarks/Study_SamplesSet/fc315b19f0d4629032969dae3a4fa14b.sol",
+                  "is_dependency": false,
+                  "lines": [
+                    5,
+                    6,
+                    7,
+                    8,
+                    9,
+                    10,
+                    11,
+                    12,
+                    13,
+                    14,
+                    15,
+                    16,
+                    17,
+                    18,
+                    19,
+                    20,
+                    21,
+                    22,
+                    23,
+                    24,
+                    25
+                  ],
+                  "starting_column": 1,
+                  "ending_column": 0
+                }
+              },
+              "signature": "doAssembly()"
+            }
+          },
+          {
+            "type": "node",
+            "name": "",
+            "source_mapping": {
+              "start": 404,
+              "length": 54,
+              "filename_relative": "Benchmarks/Study_SamplesSet/fc315b19f0d4629032969dae3a4fa14b.sol",
+              "filename_absolute": "/home/shikah/Documents/PhD/VulDet/Benchmarks/Study_SamplesSet/fc315b19f0d4629032969dae3a4fa14b.sol",
+              "filename_short": "Benchmarks/Study_SamplesSet/fc315b19f0d4629032969dae3a4fa14b.sol",
+              "is_dependency": false,
+              "lines": [
+                15,
+                16,
+                17
+              ],
+              "starting_column": 8,
+              "ending_column": 9
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "doAssembly",
+                "source_mapping": {
+                  "start": 340,
+                  "length": 124,
+                  "filename_relative": "Benchmarks/Study_SamplesSet/fc315b19f0d4629032969dae3a4fa14b.sol",
+                  "filename_absolute": "/home/shikah/Documents/PhD/VulDet/Benchmarks/Study_SamplesSet/fc315b19f0d4629032969dae3a4fa14b.sol",
+                  "filename_short": "Benchmarks/Study_SamplesSet/fc315b19f0d4629032969dae3a4fa14b.sol",
+                  "is_dependency": false,
+                  "lines": [
+                    14,
+                    15,
+                    16,
+                    17,
+                    18
+                  ],
+                  "starting_column": 5,
+                  "ending_column": 6
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "NoHoneyPot",
+                    "source_mapping": {
+                      "start": 47,
+                      "length": 558,
+                      "filename_relative": "Benchmarks/Study_SamplesSet/fc315b19f0d4629032969dae3a4fa14b.sol",
+                      "filename_absolute": "/home/shikah/Documents/PhD/VulDet/Benchmarks/Study_SamplesSet/fc315b19f0d4629032969dae3a4fa14b.sol",
+                      "filename_short": "Benchmarks/Study_SamplesSet/fc315b19f0d4629032969dae3a4fa14b.sol",
+                      "is_dependency": false,
+                      "lines": [
+                        5,
+                        6,
+                        7,
+                        8,
+                        9,
+                        10,
+                        11,
+                        12,
+                        13,
+                        14,
+                        15,
+                        16,
+                        17,
+                        18,
+                        19,
+                        20,
+                        21,
+                        22,
+                        23,
+                        24,
+                        25
+                      ],
+                      "starting_column": 1,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "doAssembly()"
+                }
+              }
+            }
+          }
+        ],
+        "description": "NoHoneyPot.doAssembly() (Benchmarks/Study_SamplesSet/fc315b19f0d4629032969dae3a4fa14b.sol#14-18) uses assembly\n\t- INLINE ASM (Benchmarks/Study_SamplesSet/fc315b19f0d4629032969dae3a4fa14b.sol#15-17)\n",
+        "markdown": "[NoHoneyPot.doAssembly()](Benchmarks/Study_SamplesSet/fc315b19f0d4629032969dae3a4fa14b.sol#L14-L18) uses assembly\n\t- [INLINE ASM](Benchmarks/Study_SamplesSet/fc315b19f0d4629032969dae3a4fa14b.sol#L15-L17)\n",
+        "first_markdown_element": "Benchmarks/Study_SamplesSet/fc315b19f0d4629032969dae3a4fa14b.sol#L14-L18",
+        "id": "93559cd85def1554d2808beec3ccd6aff9374456a3dab350ad75a7bd8057dcbf",
+        "check": "assembly",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [],
+        "description": "solc-0.6.2 is not recommended for deployment\n",
+        "markdown": "solc-0.6.2 is not recommended for deployment\n",
+        "first_markdown_element": "",
+        "id": "85be45f004356d2929e31227e265fddf1357b605efbb44915ec5bae212e8dc23",
+        "check": "solc-version",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "pragma",
+            "name": "0.6.2",
+            "source_mapping": {
+              "start": 0,
+              "length": 22,
+              "filename_relative": "Benchmarks/Study_SamplesSet/fc315b19f0d4629032969dae3a4fa14b.sol",
+              "filename_absolute": "/home/shikah/Documents/PhD/VulDet/Benchmarks/Study_SamplesSet/fc315b19f0d4629032969dae3a4fa14b.sol",
+              "filename_short": "Benchmarks/Study_SamplesSet/fc315b19f0d4629032969dae3a4fa14b.sol",
+              "is_dependency": false,
+              "lines": [
+                1
+              ],
+              "starting_column": 1,
+              "ending_column": 23
+            },
+            "type_specific_fields": {
+              "directive": [
+                "solidity",
+                "0.6",
+                ".2"
+              ]
+            }
+          }
+        ],
+        "description": "Pragma version0.6.2 (Benchmarks/Study_SamplesSet/fc315b19f0d4629032969dae3a4fa14b.sol#1) allows old versions\n",
+        "markdown": "Pragma version[0.6.2](Benchmarks/Study_SamplesSet/fc315b19f0d4629032969dae3a4fa14b.sol#L1) allows old versions\n",
+        "first_markdown_element": "Benchmarks/Study_SamplesSet/fc315b19f0d4629032969dae3a4fa14b.sol#L1",
+        "id": "ceb617411e608eede7add3ea0fead9873b5768d86a5cc7cb207300b69cf877b7",
+        "check": "solc-version",
+        "impact": "Informational",
+        "confidence": "High"
+      }
+    ]
+  }
+}

@@ -1,0 +1,123 @@
+{
+  "fileName": "Benchmarks/Study_SamplesSet/c845997a2f576caa71bf1c98d901058e.sol",
+  "baseName": "c845997a2f576caa71bf1c98d901058e.sol",
+  "iter": 53,
+  "time": "8.006269",
+  "errMsg": null,
+  "result": [
+    {
+      "no": "1",
+      "kind": "IO",
+      "line": 695,
+      "signatures": [
+        {
+          "contractName": "MifflinMarket",
+          "methodName": "exchangeTokensByAddress",
+          "argTypes": [ "uint256", "address", "address" ]
+        },
+        {
+          "contractName": "MifflinMarket",
+          "methodName": "exchangeTokensById",
+          "argTypes": [ "uint256", "uint8", "uint8" ]
+        }
+      ],
+      "exp": "(fromAmount * fromPrice)",
+      "status": "unproven"
+    },
+    {
+      "no": "2",
+      "kind": "IO",
+      "line": 696,
+      "signatures": [
+        {
+          "contractName": "MifflinMarket",
+          "methodName": "exchangeTokensByAddress",
+          "argTypes": [ "uint256", "address", "address" ]
+        },
+        {
+          "contractName": "MifflinMarket",
+          "methodName": "exchangeTokensById",
+          "argTypes": [ "uint256", "uint8", "uint8" ]
+        }
+      ],
+      "exp": "(toAmount * toPrice)",
+      "status": "proven"
+    },
+    {
+      "no": "3",
+      "kind": "IO",
+      "line": 702,
+      "signatures": [
+        {
+          "contractName": "MifflinMarket",
+          "methodName": "exchangeTokensByAddress",
+          "argTypes": [ "uint256", "address", "address" ]
+        },
+        {
+          "contractName": "MifflinMarket",
+          "methodName": "exchangeTokensById",
+          "argTypes": [ "uint256", "uint8", "uint8" ]
+        }
+      ],
+      "exp": "(totalExchanged[fromId][toId] + int256(toAmount))",
+      "status": "unproven"
+    },
+    {
+      "no": "4",
+      "kind": "IO",
+      "line": 703,
+      "signatures": [
+        {
+          "contractName": "MifflinMarket",
+          "methodName": "exchangeTokensByAddress",
+          "argTypes": [ "uint256", "address", "address" ]
+        },
+        {
+          "contractName": "MifflinMarket",
+          "methodName": "exchangeTokensById",
+          "argTypes": [ "uint256", "uint8", "uint8" ]
+        }
+      ],
+      "exp": "(totalExchanged[toId][fromId] - int256(takeAmount))",
+      "status": "unproven"
+    },
+    {
+      "no": "5",
+      "kind": "DZ",
+      "line": 695,
+      "signatures": [
+        {
+          "contractName": "MifflinMarket",
+          "methodName": "exchangeTokensByAddress",
+          "argTypes": [ "uint256", "address", "address" ]
+        },
+        {
+          "contractName": "MifflinMarket",
+          "methodName": "exchangeTokensById",
+          "argTypes": [ "uint256", "uint8", "uint8" ]
+        }
+      ],
+      "exp": "((fromAmount * fromPrice) / toPrice)",
+      "status": "unproven"
+    },
+    {
+      "no": "6",
+      "kind": "DZ",
+      "line": 696,
+      "signatures": [
+        {
+          "contractName": "MifflinMarket",
+          "methodName": "exchangeTokensByAddress",
+          "argTypes": [ "uint256", "address", "address" ]
+        },
+        {
+          "contractName": "MifflinMarket",
+          "methodName": "exchangeTokensById",
+          "argTypes": [ "uint256", "uint8", "uint8" ]
+        }
+      ],
+      "exp": "((toAmount * toPrice) / fromPrice)",
+      "status": "unproven"
+    }
+  ]
+}

@@ -1,0 +1,263 @@
+{
+  "fileName": "Benchmarks/Study_SamplesSet/d307e1847a3d80e690e6fe57fef9001c.sol",
+  "baseName": "d307e1847a3d80e690e6fe57fef9001c.sol",
+  "iter": 36,
+  "time": "314.728124",
+  "errMsg": null,
+  "result": [
+    {
+      "no": "1",
+      "kind": "IO",
+      "line": 37,
+      "signatures": [
+        {
+          "contractName": "Dividend",
+          "methodName": "invest",
+          "argTypes": []
+        }
+      ],
+      "exp": "(now - startTime)",
+      "status": "unproven"
+    },
+    {
+      "no": "2",
+      "kind": "IO",
+      "line": 39,
+      "signatures": [
+        {
+          "contractName": "Dividend",
+          "methodName": "invest",
+          "argTypes": []
+        }
+      ],
+      "exp": "(i - 1)",
+      "status": "proven"
+    },
+    {
+      "no": "3",
+      "kind": "IO",
+      "line": 40,
+      "signatures": [
+        {
+          "contractName": "Dividend",
+          "methodName": "invest",
+          "argTypes": []
+        }
+      ],
+      "exp": "(i - 1)",
+      "status": "proven"
+    },
+    {
+      "no": "4",
+      "kind": "IO",
+      "line": 41,
+      "signatures": [
+        {
+          "contractName": "Dividend",
+          "methodName": "invest",
+          "argTypes": []
+        }
+      ],
+      "exp": "(rec.balance + ((value * rec.shares) / totalShares))",
+      "status": "unproven"
+    },
+    {
+      "no": "5",
+      "kind": "IO",
+      "line": 41,
+      "signatures": [
+        {
+          "contractName": "Dividend",
+          "methodName": "invest",
+          "argTypes": []
+        }
+      ],
+      "exp": "(value * rec.shares)",
+      "status": "unproven"
+    },
+    {
+      "no": "6",
+      "kind": "IO",
+      "line": 46,
+      "signatures": [
+        {
+          "contractName": "Dividend",
+          "methodName": "invest",
+          "argTypes": []
+        }
+      ],
+      "exp": "(rec.shares + shares)",
+      "status": "unproven"
+    },
+    {
+      "no": "7",
+      "kind": "IO",
+      "line": 51,
+      "signatures": [
+        {
+          "contractName": "Dividend",
+          "methodName": "invest",
+          "argTypes": []
+        }
+      ],
+      "exp": "(totalShares + shares)",
+      "status": "unproven"
+    },
+    {
+      "no": "8",
+      "kind": "IO",
+      "line": 65,
+      "signatures": [
+        {
+          "contractName": "Dividend",
+          "methodName": "withdraw",
+          "argTypes": []
+        }
+      ],
+      "exp": "(now - lastInvestmentTime)",
+      "status": "unproven"
+    },
+    {
+      "no": "9",
+      "kind": "IO",
+      "line": 72,
+      "signatures": [
+        {
+          "contractName": "Dividend",
+          "methodName": "Dividend",
+          "argTypes": []
+        },
+        {
+          "contractName": "Dividend",
+          "methodName": "allocateShares",
+          "argTypes": [ "uint256", "uint256" ]
+        },
+        {
+          "contractName": "Dividend",
+          "methodName": "invest",
+          "argTypes": []
+        }
+      ],
+      "exp": "(1000 + bonus)",
+      "status": "unproven"
+    },
+    {
+      "no": "10",
+      "kind": "IO",
+      "line": 72,
+      "signatures": [
+        {
+          "contractName": "Dividend",
+          "methodName": "Dividend",
+          "argTypes": []
+        },
+        {
+          "contractName": "Dividend",
+          "methodName": "allocateShares",
+          "argTypes": [ "uint256", "uint256" ]
+        },
+        {
+          "contractName": "Dividend",
+          "methodName": "invest",
+          "argTypes": []
+        }
+      ],
+      "exp": "(weis * (1000 + bonus))",
+      "status": "unproven"
+    },
+    {
+      "no": "11",
+      "kind": "DZ",
+      "line": 37,
+      "signatures": [
+        {
+          "contractName": "Dividend",
+          "methodName": "invest",
+          "argTypes": []
+        }
+      ],
+      "exp": "((now - startTime) / 3600)",
+      "status": "proven"
+    },
+    {
+      "no": "12",
+      "kind": "DZ",
+      "line": 41,
+      "signatures": [
+        {
+          "contractName": "Dividend",
+          "methodName": "invest",
+          "argTypes": []
+        }
+      ],
+      "exp": "((value * rec.shares) / totalShares)",
+      "status": "unproven"
+    },
+    {
+      "no": "13",
+      "kind": "DZ",
+      "line": 72,
+      "signatures": [
+        {
+          "contractName": "Dividend",
+          "methodName": "Dividend",
+          "argTypes": []
+        },
+        {
+          "contractName": "Dividend",
+          "methodName": "allocateShares",
+          "argTypes": [ "uint256", "uint256" ]
+        },
+        {
+          "contractName": "Dividend",
+          "methodName": "invest",
+          "argTypes": []
+        }
+      ],
+      "exp": "((weis * (1000 + bonus)) / 1000000000000000000)",
+      "status": "proven"
+    },
+    {
+      "no": "14",
+      "kind": "KA",
+      "line": 66,
+      "signatures": [
+        {
+          "contractName": "Dividend",
+          "methodName": "withdraw",
+          "argTypes": []
+        }
+      ],
+      "exp": "selfdestruct(funder);",
+      "status": "unproven"
+    },
+    {
+      "no": "15",
+      "kind": "ETH_LEAK",
+      "line": 62,
+      "signatures": [
+        {
+          "contractName": "Dividend",
+          "methodName": "withdraw",
+          "argTypes": []
+        }
+      ],
+      "exp": "msg.sender.transfer(balance);",
+      "status": "unproven"
+    },
+    {
+      "no": "16",
+      "kind": "ETH_LEAK",
+      "line": 66,
+      "signatures": [
+        {
+          "contractName": "Dividend",
+          "methodName": "withdraw",
+          "argTypes": []
+        }
+      ],
+      "exp": "selfdestruct(funder);",
+      "status": "proven"
+    }
+  ]
+}

@@ -1,0 +1,219 @@
+{
+  "fileName": "Benchmarks/Study_SamplesSet/57b9bdeb65d7e8d48c256144f0387bd3.sol",
+  "baseName": "57b9bdeb65d7e8d48c256144f0387bd3.sol",
+  "iter": 6228,
+  "time": "300.035315",
+  "errMsg": null,
+  "result": [
+    {
+      "no": "1",
+      "kind": "IO",
+      "line": 64,
+      "signatures": [
+        {
+          "contractName": "DeltaBalances",
+          "methodName": "deltaBalances",
+          "argTypes": [ "address", "address", "address[]" ]
+        }
+      ],
+      "exp": "(i + 1)",
+      "status": "proven"
+    },
+    {
+      "no": "2",
+      "kind": "IO",
+      "line": 78,
+      "signatures": [
+        {
+          "contractName": "DeltaBalances",
+          "methodName": "multiDeltaBalances",
+          "argTypes": [ "address[]", "address", "address[]" ]
+        }
+      ],
+      "exp": "(tokens.length * exchanges.length)",
+      "status": "unproven"
+    },
+    {
+      "no": "3",
+      "kind": "IO",
+      "line": 80,
+      "signatures": [
+        {
+          "contractName": "DeltaBalances",
+          "methodName": "multiDeltaBalances",
+          "argTypes": [ "address[]", "address", "address[]" ]
+        }
+      ],
+      "exp": "(i + 1)",
+      "status": "unproven"
+    },
+    {
+      "no": "4",
+      "kind": "IO",
+      "line": 83,
+      "signatures": [
+        {
+          "contractName": "DeltaBalances",
+          "methodName": "multiDeltaBalances",
+          "argTypes": [ "address[]", "address", "address[]" ]
+        }
+      ],
+      "exp": "(j + 1)",
+      "status": "proven"
+    },
+    {
+      "no": "5",
+      "kind": "IO",
+      "line": 85,
+      "signatures": [
+        {
+          "contractName": "DeltaBalances",
+          "methodName": "multiDeltaBalances",
+          "argTypes": [ "address[]", "address", "address[]" ]
+        }
+      ],
+      "exp": "((j * exchanges.length) + i)",
+      "status": "unproven"
+    },
+    {
+      "no": "6",
+      "kind": "IO",
+      "line": 85,
+      "signatures": [
+        {
+          "contractName": "DeltaBalances",
+          "methodName": "multiDeltaBalances",
+          "argTypes": [ "address[]", "address", "address[]" ]
+        }
+      ],
+      "exp": "(j * exchanges.length)",
+      "status": "unproven"
+    },
+    {
+      "no": "7",
+      "kind": "IO",
+      "line": 125,
+      "signatures": [
+        {
+          "contractName": "DeltaBalances",
+          "methodName": "walletBalances",
+          "argTypes": [ "address", "address[]" ]
+        }
+      ],
+      "exp": "(i + 1)",
+      "status": "proven"
+    },
+    {
+      "no": "8",
+      "kind": "IO",
+      "line": 145,
+      "signatures": [
+        {
+          "contractName": "DeltaBalances",
+          "methodName": "allBalances",
+          "argTypes": [ "address", "address", "address[]" ]
+        }
+      ],
+      "exp": "(tokens.length * 2)",
+      "status": "unproven"
+    },
+    {
+      "no": "9",
+      "kind": "IO",
+      "line": 147,
+      "signatures": [
+        {
+          "contractName": "DeltaBalances",
+          "methodName": "allBalances",
+          "argTypes": [ "address", "address", "address[]" ]
+        }
+      ],
+      "exp": "(i + 1)",
+      "status": "proven"
+    },
+    {
+      "no": "10",
+      "kind": "IO",
+      "line": 148,
+      "signatures": [
+        {
+          "contractName": "DeltaBalances",
+          "methodName": "allBalances",
+          "argTypes": [ "address", "address", "address[]" ]
+        }
+      ],
+      "exp": "(i * 2)",
+      "status": "unproven"
+    },
+    {
+      "no": "11",
+      "kind": "IO",
+      "line": 151,
+      "signatures": [
+        {
+          "contractName": "DeltaBalances",
+          "methodName": "allBalances",
+          "argTypes": [ "address", "address", "address[]" ]
+        }
+      ],
+      "exp": "(j + 1)",
+      "status": "proven"
+    },
+    {
+      "no": "12",
+      "kind": "IO",
+      "line": 153,
+      "signatures": [
+        {
+          "contractName": "DeltaBalances",
+          "methodName": "allBalances",
+          "argTypes": [ "address", "address", "address[]" ]
+        }
+      ],
+      "exp": "(j + 1)",
+      "status": "proven"
+    },
+    {
+      "no": "13",
+      "kind": "KA",
+      "line": 40,
+      "signatures": [
+        {
+          "contractName": "DeltaBalances",
+          "methodName": "destruct",
+          "argTypes": []
+        }
+      ],
+      "exp": "selfdestruct(admin);",
+      "status": "proven"
+    },
+    {
+      "no": "14",
+      "kind": "ETH_LEAK",
+      "line": 40,
+      "signatures": [
+        {
+          "contractName": "DeltaBalances",
+          "methodName": "destruct",
+          "argTypes": []
+        }
+      ],
+      "exp": "selfdestruct(admin);",
+      "status": "proven"
+    },
+    {
+      "no": "15",
+      "kind": "ETH_LEAK",
+      "line": 45,
+      "signatures": [
+        {
+          "contractName": "DeltaBalances",
+          "methodName": "withdraw",
+          "argTypes": []
+        }
+      ],
+      "exp": "admin.transfer(this.balance);",
+      "status": "proven"
+    }
+  ]
+}

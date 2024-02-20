@@ -1,0 +1,37 @@
+{
+  "fileName": "Benchmarks/Study_SamplesSet/13c35b7783bc190e74b7d3b0269f2fd7.sol",
+  "baseName": "13c35b7783bc190e74b7d3b0269f2fd7.sol",
+  "iter": 2,
+  "time": "0.102368",
+  "errMsg": null,
+  "result": [
+    {
+      "no": "1",
+      "kind": "ETH_LEAK",
+      "line": 24,
+      "signatures": [
+        {
+          "contractName": "Gift_Box",
+          "methodName": "GetGift",
+          "argTypes": [ "dbytes" ]
+        }
+      ],
+      "exp": "msg.sender.transfer(this.balance);",
+      "status": "proven"
+    },
+    {
+      "no": "2",
+      "kind": "ETH_LEAK",
+      "line": 27,
+      "signatures": [
+        {
+          "contractName": "Gift_Box",
+          "methodName": "GetGift",
+          "argTypes": [ "dbytes" ]
+        }
+      ],
+      "exp": "msg.sender.transfer(this.balance);",
+      "status": "proven"
+    }
+  ]
+}

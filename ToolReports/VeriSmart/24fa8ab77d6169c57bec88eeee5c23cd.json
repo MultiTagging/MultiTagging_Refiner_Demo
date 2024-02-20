@@ -1,0 +1,52 @@
+{
+  "fileName": "Benchmarks/Study_SamplesSet/24fa8ab77d6169c57bec88eeee5c23cd.sol",
+  "baseName": "24fa8ab77d6169c57bec88eeee5c23cd.sol",
+  "iter": 129,
+  "time": "13.840782",
+  "errMsg": null,
+  "result": [
+    {
+      "no": "1",
+      "kind": "IO",
+      "line": 10,
+      "signatures": [
+        {
+          "contractName": "CryptoHole",
+          "methodName": "decreaseApproval",
+          "argTypes": [ "address", "uint256" ]
+        },
+        {
+          "contractName": "CryptoHole",
+          "methodName": "transfer",
+          "argTypes": [ "address", "uint256" ]
+        },
+        {
+          "contractName": "CryptoHole",
+          "methodName": "transferFrom",
+          "argTypes": [ "address", "address", "uint256" ]
+        }
+      ],
+      "exp": "(a - b)",
+      "status": "proven"
+    },
+    {
+      "no": "2",
+      "kind": "IO",
+      "line": 14,
+      "signatures": [
+        {
+          "contractName": "CryptoHole",
+          "methodName": "@fallback",
+          "argTypes": []
+        },
+        {
+          "contractName": "CryptoHole",
+          "methodName": "increaseApproval",
+          "argTypes": [ "address", "uint256" ]
+        }
+      ],
+      "exp": "(a + b)",
+      "status": "unproven"
+    }
+  ]
+}

@@ -1,0 +1,53 @@
+{
+  "fileName": "Benchmarks/Study_SamplesSet/0120a2934d0ffe4b904830fe899f554b.sol",
+  "baseName": "0120a2934d0ffe4b904830fe899f554b.sol",
+  "iter": 2,
+  "time": "0.865606",
+  "errMsg": null,
+  "result": [
+    {
+      "no": "1",
+      "kind": "ETH_LEAK",
+      "line": 19,
+      "signatures": [
+        { "contractName": "Pie", "methodName": "Get", "argTypes": [] }
+      ],
+      "exp": "Owner.transfer(this.balance);",
+      "status": "proven"
+    },
+    {
+      "no": "2",
+      "kind": "ETH_LEAK",
+      "line": 20,
+      "signatures": [
+        { "contractName": "Pie", "methodName": "Get", "argTypes": [] }
+      ],
+      "exp": "msg.sender.transfer(this.balance);",
+      "status": "proven"
+    },
+    {
+      "no": "3",
+      "kind": "ETH_LEAK",
+      "line": 29,
+      "signatures": [
+        { "contractName": "Pie", "methodName": "withdraw", "argTypes": [] }
+      ],
+      "exp": "Owner.transfer(this.balance);",
+      "status": "proven"
+    },
+    {
+      "no": "4",
+      "kind": "ETH_LEAK",
+      "line": 37,
+      "signatures": [
+        {
+          "contractName": "Pie",
+          "methodName": "Command",
+          "argTypes": [ "address", "dbytes" ]
+        }
+      ],
+      "exp": "adr.call.value(msg.value)(data);",
+      "status": "proven"
+    }
+  ]
+}

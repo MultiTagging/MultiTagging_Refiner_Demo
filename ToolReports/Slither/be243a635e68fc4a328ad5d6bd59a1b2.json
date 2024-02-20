@@ -1,0 +1,460 @@
+{
+  "success": true,
+  "error": null,
+  "results": {
+    "detectors": [
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "sweep",
+            "source_mapping": {
+              "start": 414,
+              "length": 163,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "UserWallet",
+                "source_mapping": {
+                  "start": 59,
+                  "length": 520,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              },
+              "signature": "sweep(address,uint256)"
+            }
+          },
+          {
+            "type": "node",
+            "name": "sweeperList.sweeperOf(_token).delegatecall(msg.data)",
+            "source_mapping": {
+              "start": 511,
+              "length": 59,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "sweep",
+                "source_mapping": {
+                  "start": 414,
+                  "length": 163,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "UserWallet",
+                    "source_mapping": {
+                      "start": 59,
+                      "length": 520,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "sweep(address,uint256)"
+                }
+              }
+            }
+          }
+        ],
+        "description": "UserWallet.sweep(address,uint256) () uses delegatecall to a input-controlled function id\n\t- sweeperList.sweeperOf(_token).delegatecall(msg.data) ()\n",
+        "markdown": "[UserWallet.sweep(address,uint256)]() uses delegatecall to a input-controlled function id\n\t- [sweeperList.sweeperOf(_token).delegatecall(msg.data)]()\n",
+        "first_markdown_element": "",
+        "id": "e8d4fcf29f75dadca97b543615193eff92925b493ac1201b98568eaa9c9d8620",
+        "check": "controlled-delegatecall",
+        "impact": "High",
+        "confidence": "Medium"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "_token",
+            "source_mapping": {
+              "start": 429,
+              "length": 14,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "sweep",
+                "source_mapping": {
+                  "start": 414,
+                  "length": 163,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "UserWallet",
+                    "source_mapping": {
+                      "start": 59,
+                      "length": 520,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "sweep(address,uint256)"
+                }
+              }
+            }
+          },
+          {
+            "type": "node",
+            "name": "sweeperList.sweeperOf(_token).delegatecall(msg.data)",
+            "source_mapping": {
+              "start": 511,
+              "length": 59,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "sweep",
+                "source_mapping": {
+                  "start": 414,
+                  "length": 163,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "UserWallet",
+                    "source_mapping": {
+                      "start": 59,
+                      "length": 520,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "sweep(address,uint256)"
+                }
+              }
+            }
+          }
+        ],
+        "description": "UserWallet.sweep(address,uint256)._token () lacks a zero-check on :\n\t\t- sweeperList.sweeperOf(_token).delegatecall(msg.data) ()\n",
+        "markdown": "[UserWallet.sweep(address,uint256)._token]() lacks a zero-check on :\n\t\t- [sweeperList.sweeperOf(_token).delegatecall(msg.data)]()\n",
+        "first_markdown_element": "",
+        "id": "6ae6c33206c561d5f32bcc1f2ee0f6529425b130551a65c2154af15903ff98e1",
+        "check": "missing-zero-check",
+        "impact": "Low",
+        "confidence": "Medium"
+      },
+      {
+        "elements": [],
+        "description": "solc-0.4.10 is not recommended for deployment\n",
+        "markdown": "solc-0.4.10 is not recommended for deployment\n",
+        "first_markdown_element": "",
+        "id": "0eb2863571dc5faae5942bcb279abacd3e70424aa95146384321c9743a3cf58c",
+        "check": "solc-version",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "pragma",
+            "name": "^0.4.10",
+            "source_mapping": {
+              "start": 0,
+              "length": 24,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "directive": [
+                "solidity",
+                "^",
+                "0.4",
+                ".10"
+              ]
+            }
+          }
+        ],
+        "description": "Pragma version^0.4.10 () allows old versions\n",
+        "markdown": "Pragma version[^0.4.10]() allows old versions\n",
+        "first_markdown_element": "",
+        "id": "585d0efb95cc5ddba951b2df4d1064a238c383e91df65f88a41cec6cca3a639d",
+        "check": "solc-version",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "sweep",
+            "source_mapping": {
+              "start": 414,
+              "length": 163,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "UserWallet",
+                "source_mapping": {
+                  "start": 59,
+                  "length": 520,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              },
+              "signature": "sweep(address,uint256)"
+            }
+          },
+          {
+            "type": "node",
+            "name": "sweeperList.sweeperOf(_token).delegatecall(msg.data)",
+            "source_mapping": {
+              "start": 511,
+              "length": 59,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "sweep",
+                "source_mapping": {
+                  "start": 414,
+                  "length": 163,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "UserWallet",
+                    "source_mapping": {
+                      "start": 59,
+                      "length": 520,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "sweep(address,uint256)"
+                }
+              }
+            }
+          }
+        ],
+        "description": "Low level call in UserWallet.sweep(address,uint256) ():\n\t- sweeperList.sweeperOf(_token).delegatecall(msg.data) ()\n",
+        "markdown": "Low level call in [UserWallet.sweep(address,uint256)]():\n\t- [sweeperList.sweeperOf(_token).delegatecall(msg.data)]()\n",
+        "first_markdown_element": "",
+        "id": "e9f2e44b0a1304ca5e0a653dadb200dc754a878cb3d79f123fad00613680d28a",
+        "check": "low-level-calls",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "_token",
+            "source_mapping": {
+              "start": 429,
+              "length": 14,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "sweep",
+                "source_mapping": {
+                  "start": 414,
+                  "length": 163,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "UserWallet",
+                    "source_mapping": {
+                      "start": 59,
+                      "length": 520,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "sweep(address,uint256)"
+                }
+              }
+            },
+            "additional_fields": {
+              "target": "parameter",
+              "convention": "mixedCase"
+            }
+          }
+        ],
+        "description": "Parameter UserWallet.sweep(address,uint256)._token () is not in mixedCase\n",
+        "markdown": "Parameter [UserWallet.sweep(address,uint256)._token]() is not in mixedCase\n",
+        "first_markdown_element": "",
+        "id": "24744f132b2fe8f88628b3857cddc1ada72c3a56e67ba8bc1151a93168b43ed3",
+        "check": "naming-convention",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "tokenFallback",
+            "source_mapping": {
+              "start": 280,
+              "length": 128,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "UserWallet",
+                "source_mapping": {
+                  "start": 59,
+                  "length": 520,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              },
+              "signature": "tokenFallback(address,uint256,bytes)"
+            }
+          }
+        ],
+        "description": "tokenFallback(address,uint256,bytes) should be declared external:\n\t- UserWallet.tokenFallback(address,uint256,bytes) ()\n",
+        "markdown": "tokenFallback(address,uint256,bytes) should be declared external:\n\t- [UserWallet.tokenFallback(address,uint256,bytes)]()\n",
+        "first_markdown_element": "",
+        "id": "18f57dd8e647c80c001ebca0e7f9eef46b82d6662cef5cfe3007ad725f5637e4",
+        "check": "external-function",
+        "impact": "Optimization",
+        "confidence": "High"
+      }
+    ]
+  }
+}

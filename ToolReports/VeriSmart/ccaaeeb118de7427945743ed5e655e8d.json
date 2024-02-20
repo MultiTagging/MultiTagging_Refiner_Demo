@@ -1,0 +1,142 @@
+{
+  "fileName": "Benchmarks/Study_SamplesSet/ccaaeeb118de7427945743ed5e655e8d.sol",
+  "baseName": "ccaaeeb118de7427945743ed5e655e8d.sol",
+  "iter": 22,
+  "time": "307.406308",
+  "errMsg": null,
+  "result": [
+    {
+      "no": "1",
+      "kind": "IO",
+      "line": 40,
+      "signatures": [
+        {
+          "contractName": "LZLCoin",
+          "methodName": "eT",
+          "argTypes": [ "address", "uint256", "uint256" ]
+        },
+        {
+          "contractName": "LZLCoin",
+          "methodName": "transfer",
+          "argTypes": [ "address", "uint256" ]
+        },
+        {
+          "contractName": "LZLCoin",
+          "methodName": "transferFrom",
+          "argTypes": [ "address", "address", "uint256" ]
+        },
+        {
+          "contractName": "StandardToken",
+          "methodName": "transfer",
+          "argTypes": [ "address", "uint256" ]
+        }
+      ],
+      "exp": "(a - b)",
+      "status": "proven"
+    },
+    {
+      "no": "2",
+      "kind": "IO",
+      "line": 44,
+      "signatures": [
+        {
+          "contractName": "LZLCoin",
+          "methodName": "eT",
+          "argTypes": [ "address", "uint256", "uint256" ]
+        },
+        {
+          "contractName": "LZLCoin",
+          "methodName": "transfer",
+          "argTypes": [ "address", "uint256" ]
+        },
+        {
+          "contractName": "LZLCoin",
+          "methodName": "transferFrom",
+          "argTypes": [ "address", "address", "uint256" ]
+        },
+        {
+          "contractName": "LZLCoin",
+          "methodName": "transferOwnership",
+          "argTypes": [ "address" ]
+        },
+        {
+          "contractName": "StandardToken",
+          "methodName": "transfer",
+          "argTypes": [ "address", "uint256" ]
+        }
+      ],
+      "exp": "(a + b)",
+      "status": "unproven"
+    },
+    {
+      "no": "3",
+      "kind": "IO",
+      "line": 128,
+      "signatures": [
+        {
+          "contractName": "LZLCoin",
+          "methodName": "LZLCoin",
+          "argTypes": []
+        }
+      ],
+      "exp": "((1 * (10 ** 9)) * (10 ** 18))",
+      "status": "proven"
+    },
+    {
+      "no": "4",
+      "kind": "IO",
+      "line": 128,
+      "signatures": [
+        {
+          "contractName": "LZLCoin",
+          "methodName": "LZLCoin",
+          "argTypes": []
+        }
+      ],
+      "exp": "(1 * (10 ** 9))",
+      "status": "proven"
+    },
+    {
+      "no": "5",
+      "kind": "IO",
+      "line": 128,
+      "signatures": [
+        {
+          "contractName": "LZLCoin",
+          "methodName": "LZLCoin",
+          "argTypes": []
+        }
+      ],
+      "exp": "(10 ** 18)",
+      "status": "proven"
+    },
+    {
+      "no": "6",
+      "kind": "IO",
+      "line": 128,
+      "signatures": [
+        {
+          "contractName": "LZLCoin",
+          "methodName": "LZLCoin",
+          "argTypes": []
+        }
+      ],
+      "exp": "(10 ** 9)",
+      "status": "proven"
+    },
+    {
+      "no": "7",
+      "kind": "ETH_LEAK",
+      "line": 136,
+      "signatures": [
+        {
+          "contractName": "LZLCoin",
+          "methodName": "eT",
+          "argTypes": [ "address", "uint256", "uint256" ]
+        }
+      ],
+      "exp": "_pd.call.value(_etA)()",
+      "status": "unproven"
+    }
+  ]
+}

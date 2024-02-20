@@ -1,0 +1,126 @@
+{
+  "fileName": "Benchmarks/Study_SamplesSet/76c0fb3498bd12505069726eabf3f30f.sol",
+  "baseName": "76c0fb3498bd12505069726eabf3f30f.sol",
+  "iter": 5,
+  "time": "369.074921",
+  "errMsg": null,
+  "result": [
+    {
+      "no": "1",
+      "kind": "IO",
+      "line": 17,
+      "signatures": [
+        {
+          "contractName": "LympoICO",
+          "methodName": "exchange",
+          "argTypes": [ "address" ]
+        }
+      ],
+      "exp": "(a * b)",
+      "status": "unproven"
+    },
+    {
+      "no": "2",
+      "kind": "IO",
+      "line": 28,
+      "signatures": [
+        {
+          "contractName": "LympoICO",
+          "methodName": "checkGoalReached",
+          "argTypes": []
+        },
+        {
+          "contractName": "LympoICO",
+          "methodName": "exchange",
+          "argTypes": [ "address" ]
+        }
+      ],
+      "exp": "(a + b)",
+      "status": "unproven"
+    },
+    {
+      "no": "3",
+      "kind": "IO",
+      "line": 139,
+      "signatures": [
+        {
+          "contractName": "LympoICO",
+          "methodName": "getPrice",
+          "argTypes": []
+        }
+      ],
+      "exp": "(i + 1)",
+      "status": "proven"
+    },
+    {
+      "no": "4",
+      "kind": "IO",
+      "line": 143,
+      "signatures": [
+        {
+          "contractName": "LympoICO",
+          "methodName": "getPrice",
+          "argTypes": []
+        }
+      ],
+      "exp": "(pre_prices.length - 1)",
+      "status": "unproven"
+    },
+    {
+      "no": "5",
+      "kind": "IO",
+      "line": 146,
+      "signatures": [
+        {
+          "contractName": "LympoICO",
+          "methodName": "getPrice",
+          "argTypes": []
+        }
+      ],
+      "exp": "(prices.length - 1)",
+      "status": "unproven"
+    },
+    {
+      "no": "6",
+      "kind": "DZ",
+      "line": 18,
+      "signatures": [
+        {
+          "contractName": "LympoICO",
+          "methodName": "exchange",
+          "argTypes": [ "address" ]
+        }
+      ],
+      "exp": "(c / a)",
+      "status": "unproven"
+    },
+    {
+      "no": "7",
+      "kind": "ETH_LEAK",
+      "line": 119,
+      "signatures": [
+        {
+          "contractName": "LympoICO",
+          "methodName": "exchange",
+          "argTypes": [ "address" ]
+        }
+      ],
+      "exp": "wallet.transfer(amount);",
+      "status": "unproven"
+    },
+    {
+      "no": "8",
+      "kind": "ETH_LEAK",
+      "line": 167,
+      "signatures": [
+        {
+          "contractName": "LympoICO",
+          "methodName": "safeWithdrawal",
+          "argTypes": []
+        }
+      ],
+      "exp": "msg.sender.transfer(amount);",
+      "status": "unproven"
+    }
+  ]
+}

@@ -1,0 +1,137 @@
+{
+  "fileName": "Benchmarks/Study_SamplesSet/cae97654b597003da41941406a92b94b.sol",
+  "baseName": "cae97654b597003da41941406a92b94b.sol",
+  "iter": 1680,
+  "time": "300.093777",
+  "errMsg": null,
+  "result": [
+    {
+      "no": "1",
+      "kind": "IO",
+      "line": 26,
+      "signatures": [
+        {
+          "contractName": "UnicornBreeding",
+          "methodName": "createPresaleUnicorns",
+          "argTypes": [ "uint256", "address" ]
+        },
+        {
+          "contractName": "UnicornBreeding",
+          "methodName": "createUnicorn",
+          "argTypes": []
+        },
+        {
+          "contractName": "UnicornBreeding",
+          "methodName": "createUnicornForCandy",
+          "argTypes": []
+        },
+        {
+          "contractName": "UnicornBreeding",
+          "methodName": "setGen0Limit",
+          "argTypes": []
+        }
+      ],
+      "exp": "(a + b)",
+      "status": "unproven"
+    },
+    {
+      "no": "2",
+      "kind": "IO",
+      "line": 263,
+      "signatures": [
+        {
+          "contractName": "UnicornBreeding",
+          "methodName": "makeHybridization",
+          "argTypes": [ "uint256", "uint256" ]
+        }
+      ],
+      "exp": "(hybridizationListSize + 1)",
+      "status": "unproven"
+    },
+    {
+      "no": "3",
+      "kind": "IO",
+      "line": 303,
+      "signatures": [
+        {
+          "contractName": "UnicornBreeding",
+          "methodName": "acceptHybridization",
+          "argTypes": [ "uint256", "uint256" ]
+        },
+        {
+          "contractName": "UnicornBreeding",
+          "methodName": "cancelHybridization",
+          "argTypes": [ "uint256" ]
+        },
+        {
+          "contractName": "UnicornBreeding",
+          "methodName": "deleteHybridization",
+          "argTypes": [ "uint256" ]
+        }
+      ],
+      "exp": "(hybridizationListSize - 1)",
+      "status": "unproven"
+    },
+    {
+      "no": "4",
+      "kind": "IO",
+      "line": 327,
+      "signatures": [
+        {
+          "contractName": "UnicornBreeding",
+          "methodName": "createPresaleUnicorns",
+          "argTypes": [ "uint256", "address" ]
+        }
+      ],
+      "exp": "(i + 1)",
+      "status": "proven"
+    },
+    {
+      "no": "5",
+      "kind": "IO",
+      "line": 442,
+      "signatures": [
+        {
+          "contractName": "UnicornBreeding",
+          "methodName": "sellUnicorn",
+          "argTypes": [ "uint256", "uint256" ]
+        }
+      ],
+      "exp": "(marketSize + 1)",
+      "status": "unproven"
+    },
+    {
+      "no": "6",
+      "kind": "IO",
+      "line": 477,
+      "signatures": [
+        {
+          "contractName": "UnicornBreeding",
+          "methodName": "deleteOffer",
+          "argTypes": [ "uint256" ]
+        },
+        {
+          "contractName": "UnicornBreeding",
+          "methodName": "revokeUnicorn",
+          "argTypes": [ "uint256" ]
+        }
+      ],
+      "exp": "(marketSize - 1)",
+      "status": "unproven"
+    },
+    {
+      "no": "7",
+      "kind": "ETH_LEAK",
+      "line": 458,
+      "signatures": [
+        {
+          "contractName": "UnicornBreeding",
+          "methodName": "buyUnicorn",
+          "argTypes": [ "uint256" ]
+        }
+      ],
+      "exp": "owner.transfer(price);",
+      "status": "unproven"
+    }
+  ]
+}

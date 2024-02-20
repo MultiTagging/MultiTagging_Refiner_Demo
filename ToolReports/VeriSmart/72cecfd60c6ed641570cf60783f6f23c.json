@@ -1,0 +1,82 @@
+{
+  "fileName": "Benchmarks/Study_SamplesSet/72cecfd60c6ed641570cf60783f6f23c.sol",
+  "baseName": "72cecfd60c6ed641570cf60783f6f23c.sol",
+  "iter": 2016,
+  "time": "300.149115",
+  "errMsg": null,
+  "result": [
+    {
+      "no": "1",
+      "kind": "IO",
+      "line": 15,
+      "signatures": [
+        {
+          "contractName": "BTCx",
+          "methodName": "burn",
+          "argTypes": [ "uint256" ]
+        },
+        {
+          "contractName": "BTCx",
+          "methodName": "burnFrom",
+          "argTypes": [ "address", "uint256" ]
+        },
+        {
+          "contractName": "BTCx",
+          "methodName": "transfer",
+          "argTypes": [ "address", "uint256" ]
+        },
+        {
+          "contractName": "BTCx",
+          "methodName": "transferFrom",
+          "argTypes": [ "address", "address", "uint256" ]
+        }
+      ],
+      "exp": "(a - b)",
+      "status": "proven"
+    },
+    {
+      "no": "2",
+      "kind": "IO",
+      "line": 19,
+      "signatures": [
+        {
+          "contractName": "BTCx",
+          "methodName": "mintToken",
+          "argTypes": [ "address", "uint256" ]
+        },
+        {
+          "contractName": "BTCx",
+          "methodName": "transfer",
+          "argTypes": [ "address", "uint256" ]
+        },
+        {
+          "contractName": "BTCx",
+          "methodName": "transferFrom",
+          "argTypes": [ "address", "address", "uint256" ]
+        }
+      ],
+      "exp": "(a + b)",
+      "status": "unproven"
+    },
+    {
+      "no": "3",
+      "kind": "IO",
+      "line": 76,
+      "signatures": [
+        { "contractName": "BTCx", "methodName": "BTCx", "argTypes": [] }
+      ],
+      "exp": "(10 ** uint256(decimals))",
+      "status": "proven"
+    },
+    {
+      "no": "4",
+      "kind": "IO",
+      "line": 76,
+      "signatures": [
+        { "contractName": "BTCx", "methodName": "BTCx", "argTypes": [] }
+      ],
+      "exp": "(initialSupply * (10 ** uint256(decimals)))",
+      "status": "proven"
+    }
+  ]
+}

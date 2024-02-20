@@ -1,0 +1,208 @@
+{
+  "fileName": "Benchmarks/Study_SamplesSet/2905d6a52900c3e1bb5a32ebf9b6ca31.sol",
+  "baseName": "2905d6a52900c3e1bb5a32ebf9b6ca31.sol",
+  "iter": 623,
+  "time": "300.345412",
+  "errMsg": null,
+  "result": [
+    {
+      "no": "1",
+      "kind": "IO",
+      "line": 9,
+      "signatures": [
+        {
+          "contractName": "JoysoCrowdsale",
+          "methodName": "buyTokens",
+          "argTypes": [ "address" ]
+        },
+        {
+          "contractName": "JoysoCrowdsale",
+          "methodName": "calculateObtainedJOY",
+          "argTypes": [ "uint256" ]
+        }
+      ],
+      "exp": "(a * b)",
+      "status": "unproven"
+    },
+    {
+      "no": "2",
+      "kind": "IO",
+      "line": 27,
+      "signatures": [
+        {
+          "contractName": "JoysoCrowdsale",
+          "methodName": "@fallback",
+          "argTypes": []
+        },
+        {
+          "contractName": "JoysoCrowdsale",
+          "methodName": "buyTokens",
+          "argTypes": [ "address" ]
+        }
+      ],
+      "exp": "(a + b)",
+      "status": "unproven"
+    },
+    {
+      "no": "3",
+      "kind": "IO",
+      "line": 115,
+      "signatures": [
+        {
+          "contractName": "JoysoCrowdsale",
+          "methodName": "buyTokens",
+          "argTypes": [ "address" ]
+        },
+        {
+          "contractName": "JoysoCrowdsale",
+          "methodName": "calculateObtainedJOY",
+          "argTypes": [ "uint256" ]
+        }
+      ],
+      "exp": "(10 ** 12)",
+      "status": "proven"
+    },
+    {
+      "no": "4",
+      "kind": "IO",
+      "line": 126,
+      "signatures": [
+        {
+          "contractName": "JoysoCrowdsale",
+          "methodName": "hasEnded",
+          "argTypes": []
+        },
+        {
+          "contractName": "JoysoCrowdsale",
+          "methodName": "releaseJoyToken",
+          "argTypes": []
+        }
+      ],
+      "exp": "(10 ** (8 + 6))",
+      "status": "proven"
+    },
+    {
+      "no": "5",
+      "kind": "IO",
+      "line": 126,
+      "signatures": [
+        {
+          "contractName": "JoysoCrowdsale",
+          "methodName": "hasEnded",
+          "argTypes": []
+        },
+        {
+          "contractName": "JoysoCrowdsale",
+          "methodName": "releaseJoyToken",
+          "argTypes": []
+        }
+      ],
+      "exp": "(2 * (10 ** (8 + 6)))",
+      "status": "proven"
+    },
+    {
+      "no": "6",
+      "kind": "IO",
+      "line": 126,
+      "signatures": [
+        {
+          "contractName": "JoysoCrowdsale",
+          "methodName": "hasEnded",
+          "argTypes": []
+        },
+        {
+          "contractName": "JoysoCrowdsale",
+          "methodName": "releaseJoyToken",
+          "argTypes": []
+        }
+      ],
+      "exp": "(8 + 6)",
+      "status": "proven"
+    },
+    {
+      "no": "7",
+      "kind": "IO",
+      "line": 133,
+      "signatures": [
+        {
+          "contractName": "JoysoCrowdsale",
+          "methodName": "releaseJoyToken",
+          "argTypes": []
+        }
+      ],
+      "exp": "(endTime + 864000)",
+      "status": "unproven"
+    },
+    {
+      "no": "8",
+      "kind": "IO",
+      "line": 143,
+      "signatures": [
+        {
+          "contractName": "JoysoCrowdsale",
+          "methodName": "start",
+          "argTypes": []
+        }
+      ],
+      "exp": "(now + 86400)",
+      "status": "unproven"
+    },
+    {
+      "no": "9",
+      "kind": "DZ",
+      "line": 10,
+      "signatures": [
+        {
+          "contractName": "JoysoCrowdsale",
+          "methodName": "buyTokens",
+          "argTypes": [ "address" ]
+        },
+        {
+          "contractName": "JoysoCrowdsale",
+          "methodName": "calculateObtainedJOY",
+          "argTypes": [ "uint256" ]
+        }
+      ],
+      "exp": "(c / a)",
+      "status": "unproven"
+    },
+    {
+      "no": "10",
+      "kind": "DZ",
+      "line": 16,
+      "signatures": [
+        {
+          "contractName": "JoysoCrowdsale",
+          "methodName": "buyTokens",
+          "argTypes": [ "address" ]
+        },
+        {
+          "contractName": "JoysoCrowdsale",
+          "methodName": "calculateObtainedJOY",
+          "argTypes": [ "uint256" ]
+        }
+      ],
+      "exp": "(a / b)",
+      "status": "proven"
+    },
+    {
+      "no": "11",
+      "kind": "ETH_LEAK",
+      "line": 111,
+      "signatures": [
+        {
+          "contractName": "JoysoCrowdsale",
+          "methodName": "@fallback",
+          "argTypes": []
+        },
+        {
+          "contractName": "JoysoCrowdsale",
+          "methodName": "buyTokens",
+          "argTypes": [ "address" ]
+        }
+      ],
+      "exp": "joysoWallet.transfer(msg.value);",
+      "status": "proven"
+    }
+  ]
+}

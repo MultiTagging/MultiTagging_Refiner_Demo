@@ -1,0 +1,995 @@
+{
+  "success": true,
+  "error": null,
+  "results": {
+    "detectors": [
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "sendFundsToFriend",
+            "source_mapping": {
+              "start": 4503,
+              "length": 535,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "marketpayUnwiredApp",
+                "source_mapping": {
+                  "start": 242,
+                  "length": 4798,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              },
+              "signature": "sendFundsToFriend(address)"
+            }
+          },
+          {
+            "type": "node",
+            "name": "dummy = to.send(1000000000000000000)",
+            "source_mapping": {
+              "start": 4926,
+              "length": 41,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "sendFundsToFriend",
+                "source_mapping": {
+                  "start": 4503,
+                  "length": 535,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "marketpayUnwiredApp",
+                    "source_mapping": {
+                      "start": 242,
+                      "length": 4798,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "sendFundsToFriend(address)"
+                }
+              }
+            }
+          }
+        ],
+        "description": "marketpayUnwiredApp.sendFundsToFriend(address) () sends eth to arbitrary user\n\tDangerous calls:\n\t- dummy = to.send(1000000000000000000) ()\n",
+        "markdown": "[marketpayUnwiredApp.sendFundsToFriend(address)]() sends eth to arbitrary user\n\tDangerous calls:\n\t- [dummy = to.send(1000000000000000000)]()\n",
+        "first_markdown_element": "",
+        "id": "ac1584e6960decab51a46fc7e365483793e1f77111169f1552884194b60feae8",
+        "check": "arbitrary-send-eth",
+        "impact": "High",
+        "confidence": "Medium"
+      },
+      {
+        "elements": [
+          {
+            "type": "node",
+            "name": "suicide(address)(owner)",
+            "source_mapping": {
+              "start": 221,
+              "length": 14,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "kill",
+                "source_mapping": {
+                  "start": 178,
+                  "length": 60,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "mortal",
+                    "source_mapping": {
+                      "start": 100,
+                      "length": 140,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "kill()"
+                }
+              }
+            }
+          }
+        ],
+        "description": "Deprecated standard detected suicide(address)(owner) ():\n\t- Usage of \"suicide()\" should be replaced with \"selfdestruct()\"\n",
+        "markdown": "Deprecated standard detected [suicide(address)(owner)]():\n\t- Usage of \"suicide()\" should be replaced with \"selfdestruct()\"\n",
+        "first_markdown_element": "",
+        "id": "af38f120e2d6ce3d7567404eb936f0124e2e9b2e954f0ddc56088aa4c884e377",
+        "check": "deprecated-standards",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "node",
+            "name": "",
+            "source_mapping": {
+              "start": 4661,
+              "length": 5,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "sendFundsToFriend",
+                "source_mapping": {
+                  "start": 4503,
+                  "length": 535,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "marketpayUnwiredApp",
+                    "source_mapping": {
+                      "start": 242,
+                      "length": 4798,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "sendFundsToFriend(address)"
+                }
+              }
+            }
+          }
+        ],
+        "description": "Deprecated standard detected THROW ():\n\t- Usage of \"throw\" should be replaced with \"revert()\"\n",
+        "markdown": "Deprecated standard detected [THROW]():\n\t- Usage of \"throw\" should be replaced with \"revert()\"\n",
+        "first_markdown_element": "",
+        "id": "f5556cf1c70b64b9e4b1fc32044dd970b5f2c8b9fc21b7971fda01971033f2d5",
+        "check": "deprecated-standards",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "pragma",
+            "name": "^0.4.6",
+            "source_mapping": {
+              "start": 75,
+              "length": 23,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "directive": [
+                "solidity",
+                "^",
+                "0.4",
+                ".6"
+              ]
+            }
+          }
+        ],
+        "description": "Pragma version^0.4.6 () allows old versions\n",
+        "markdown": "Pragma version[^0.4.6]() allows old versions\n",
+        "first_markdown_element": "",
+        "id": "54eae9514d5e93f8fb467cb6e12380204cb269720316b950ba80b399a769bf71",
+        "check": "solc-version",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [],
+        "description": "solc-0.4.6 is not recommended for deployment\n",
+        "markdown": "solc-0.4.6 is not recommended for deployment\n",
+        "first_markdown_element": "",
+        "id": "b2e09ce9c0c37029707bd5645a9a2972adb1c4c04948009825bacc17fa383ec8",
+        "check": "solc-version",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "event",
+            "name": "calledSendMessage",
+            "source_mapping": {
+              "start": 1047,
+              "length": 69,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "marketpayUnwiredApp",
+                "source_mapping": {
+                  "start": 242,
+                  "length": 4798,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              },
+              "signature": "calledSendMessage(address,address,uint256)"
+            },
+            "additional_fields": {
+              "target": "event",
+              "convention": "CapWords"
+            }
+          }
+        ],
+        "description": "Event marketpayUnwiredApp.calledSendMessage(address,address,uint256) () is not in CapWords\n",
+        "markdown": "Event [marketpayUnwiredApp.calledSendMessage(address,address,uint256)]() is not in CapWords\n",
+        "first_markdown_element": "",
+        "id": "43de2638ee2de1dcfff6b5d0a63272f578042bb973d18ba59bd90695cce77078",
+        "check": "naming-convention",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "event",
+            "name": "calledRefillFunds",
+            "source_mapping": {
+              "start": 910,
+              "length": 73,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "marketpayUnwiredApp",
+                "source_mapping": {
+                  "start": 242,
+                  "length": 4798,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              },
+              "signature": "calledRefillFunds(address,uint256,uint256)"
+            },
+            "additional_fields": {
+              "target": "event",
+              "convention": "CapWords"
+            }
+          }
+        ],
+        "description": "Event marketpayUnwiredApp.calledRefillFunds(address,uint256,uint256) () is not in CapWords\n",
+        "markdown": "Event [marketpayUnwiredApp.calledRefillFunds(address,uint256,uint256)]() is not in CapWords\n",
+        "first_markdown_element": "",
+        "id": "4f40bcb16056c54b47010a9a05d3da54a39507c27f49ad560c3c0105e7ecc0ef",
+        "check": "naming-convention",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "struct",
+            "name": "mssg",
+            "source_mapping": {
+              "start": 315,
+              "length": 128,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "marketpayUnwiredApp",
+                "source_mapping": {
+                  "start": 242,
+                  "length": 4798,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              }
+            },
+            "additional_fields": {
+              "target": "structure",
+              "convention": "CapWords"
+            }
+          }
+        ],
+        "description": "Struct marketpayUnwiredApp.mssg () is not in CapWords\n",
+        "markdown": "Struct [marketpayUnwiredApp.mssg]() is not in CapWords\n",
+        "first_markdown_element": "",
+        "id": "543509455a613fee39a04eb58fe132afc6db5fbc18717f6e5d0913f178c52485",
+        "check": "naming-convention",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "event",
+            "name": "faucetResult",
+            "source_mapping": {
+              "start": 985,
+              "length": 60,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "marketpayUnwiredApp",
+                "source_mapping": {
+                  "start": 242,
+                  "length": 4798,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              },
+              "signature": "faucetResult(address,address,string)"
+            },
+            "additional_fields": {
+              "target": "event",
+              "convention": "CapWords"
+            }
+          }
+        ],
+        "description": "Event marketpayUnwiredApp.faucetResult(address,address,string) () is not in CapWords\n",
+        "markdown": "Event [marketpayUnwiredApp.faucetResult(address,address,string)]() is not in CapWords\n",
+        "first_markdown_element": "",
+        "id": "895aee70227476c417023a13af4f9f96aa4e13b73842f00b22349faf6b7eb85e",
+        "check": "naming-convention",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "contract",
+            "name": "marketpayUnwiredApp",
+            "source_mapping": {
+              "start": 242,
+              "length": 4798,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "additional_fields": {
+              "target": "contract",
+              "convention": "CapWords"
+            }
+          }
+        ],
+        "description": "Contract marketpayUnwiredApp () is not in CapWords\n",
+        "markdown": "Contract [marketpayUnwiredApp]() is not in CapWords\n",
+        "first_markdown_element": "",
+        "id": "dbdb4b818f1b5622276854b601e9774a0821e28e54d09ec372c805456bb81b02",
+        "check": "naming-convention",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "contract",
+            "name": "mortal",
+            "source_mapping": {
+              "start": 100,
+              "length": 140,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "additional_fields": {
+              "target": "contract",
+              "convention": "CapWords"
+            }
+          }
+        ],
+        "description": "Contract mortal () is not in CapWords\n",
+        "markdown": "Contract [mortal]() is not in CapWords\n",
+        "first_markdown_element": "",
+        "id": "ec6fd981aa3723a7397bb4a654ba23bb07bb6139fc284c36be7e9c9ad45c3105",
+        "check": "naming-convention",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "sendFundsToFriend",
+            "source_mapping": {
+              "start": 4503,
+              "length": 535,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "marketpayUnwiredApp",
+                "source_mapping": {
+                  "start": 242,
+                  "length": 4798,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              },
+              "signature": "sendFundsToFriend(address)"
+            }
+          },
+          {
+            "type": "node",
+            "name": "dummy = to.send(1000000000000000000)",
+            "source_mapping": {
+              "start": 4926,
+              "length": 41,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "sendFundsToFriend",
+                "source_mapping": {
+                  "start": 4503,
+                  "length": 535,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "marketpayUnwiredApp",
+                    "source_mapping": {
+                      "start": 242,
+                      "length": 4798,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "sendFundsToFriend(address)"
+                }
+              }
+            },
+            "additional_fields": {
+              "underlying_type": "external_calls"
+            }
+          },
+          {
+            "type": "node",
+            "name": "faucetResult(msg.sender,to,Sent 1 Ether to friends account)",
+            "source_mapping": {
+              "start": 4971,
+              "length": 63,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "sendFundsToFriend",
+                "source_mapping": {
+                  "start": 4503,
+                  "length": 535,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "marketpayUnwiredApp",
+                    "source_mapping": {
+                      "start": 242,
+                      "length": 4798,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "sendFundsToFriend(address)"
+                }
+              }
+            },
+            "additional_fields": {
+              "underlying_type": "event"
+            }
+          }
+        ],
+        "description": "Reentrancy in marketpayUnwiredApp.sendFundsToFriend(address) ():\n\tExternal calls:\n\t- dummy = to.send(1000000000000000000) ()\n\tEvent emitted after the call(s):\n\t- faucetResult(msg.sender,to,Sent 1 Ether to friends account) ()\n",
+        "markdown": "Reentrancy in [marketpayUnwiredApp.sendFundsToFriend(address)]():\n\tExternal calls:\n\t- [dummy = to.send(1000000000000000000)]()\n\tEvent emitted after the call(s):\n\t- [faucetResult(msg.sender,to,Sent 1 Ether to friends account)]()\n",
+        "first_markdown_element": "",
+        "id": "58d5a90782a328812ed257581c17c0d3bd16953b559061bafe4837c320df1e80",
+        "check": "reentrancy-unlimited-gas",
+        "impact": "Informational",
+        "confidence": "Medium"
+      },
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "sendFundsToFriend",
+            "source_mapping": {
+              "start": 4503,
+              "length": 535,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "marketpayUnwiredApp",
+                "source_mapping": {
+                  "start": 242,
+                  "length": 4798,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              },
+              "signature": "sendFundsToFriend(address)"
+            }
+          },
+          {
+            "type": "node",
+            "name": "to.balance > 1000000000000000000",
+            "source_mapping": {
+              "start": 4550,
+              "length": 32,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "sendFundsToFriend",
+                "source_mapping": {
+                  "start": 4503,
+                  "length": 535,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "marketpayUnwiredApp",
+                    "source_mapping": {
+                      "start": 242,
+                      "length": 4798,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "sendFundsToFriend(address)"
+                }
+              }
+            }
+          }
+        ],
+        "description": "marketpayUnwiredApp.sendFundsToFriend(address) () uses literals with too many digits:\n\t- to.balance > 1000000000000000000 ()\n",
+        "markdown": "[marketpayUnwiredApp.sendFundsToFriend(address)]() uses literals with too many digits:\n\t- [to.balance > 1000000000000000000]()\n",
+        "first_markdown_element": "",
+        "id": "04c93f852c1bea4e4091ca14a5f057f40d5e0819e4f45bdfe0b75734b2e868b6",
+        "check": "too-many-digits",
+        "impact": "Informational",
+        "confidence": "Medium"
+      },
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "sendFundsToFriend",
+            "source_mapping": {
+              "start": 4503,
+              "length": 535,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "marketpayUnwiredApp",
+                "source_mapping": {
+                  "start": 242,
+                  "length": 4798,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              },
+              "signature": "sendFundsToFriend(address)"
+            }
+          },
+          {
+            "type": "node",
+            "name": "this.balance < 1000000000000000000",
+            "source_mapping": {
+              "start": 4741,
+              "length": 34,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "sendFundsToFriend",
+                "source_mapping": {
+                  "start": 4503,
+                  "length": 535,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "marketpayUnwiredApp",
+                    "source_mapping": {
+                      "start": 242,
+                      "length": 4798,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "sendFundsToFriend(address)"
+                }
+              }
+            }
+          }
+        ],
+        "description": "marketpayUnwiredApp.sendFundsToFriend(address) () uses literals with too many digits:\n\t- this.balance < 1000000000000000000 ()\n",
+        "markdown": "[marketpayUnwiredApp.sendFundsToFriend(address)]() uses literals with too many digits:\n\t- [this.balance < 1000000000000000000]()\n",
+        "first_markdown_element": "",
+        "id": "b33b9b2712de4494071f93106579e9d33f449d0c9d8477129b8ef81c87db02d9",
+        "check": "too-many-digits",
+        "impact": "Informational",
+        "confidence": "Medium"
+      },
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "sendFundsToFriend",
+            "source_mapping": {
+              "start": 4503,
+              "length": 535,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "marketpayUnwiredApp",
+                "source_mapping": {
+                  "start": 242,
+                  "length": 4798,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              },
+              "signature": "sendFundsToFriend(address)"
+            }
+          },
+          {
+            "type": "node",
+            "name": "dummy = to.send(1000000000000000000)",
+            "source_mapping": {
+              "start": 4926,
+              "length": 41,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "sendFundsToFriend",
+                "source_mapping": {
+                  "start": 4503,
+                  "length": 535,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "marketpayUnwiredApp",
+                    "source_mapping": {
+                      "start": 242,
+                      "length": 4798,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "sendFundsToFriend(address)"
+                }
+              }
+            }
+          }
+        ],
+        "description": "marketpayUnwiredApp.sendFundsToFriend(address) () uses literals with too many digits:\n\t- dummy = to.send(1000000000000000000) ()\n",
+        "markdown": "[marketpayUnwiredApp.sendFundsToFriend(address)]() uses literals with too many digits:\n\t- [dummy = to.send(1000000000000000000)]()\n",
+        "first_markdown_element": "",
+        "id": "e7313fa34d6caf59c54379e47f62d3fb7cfd0025905f46dadda145fb923f6796",
+        "check": "too-many-digits",
+        "impact": "Informational",
+        "confidence": "Medium"
+      },
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "sendMessage",
+            "source_mapping": {
+              "start": 2987,
+              "length": 998,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "marketpayUnwiredApp",
+                "source_mapping": {
+                  "start": 242,
+                  "length": 4798,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              },
+              "signature": "sendMessage(address,string)"
+            }
+          }
+        ],
+        "description": "sendMessage(address,string) should be declared external:\n\t- marketpayUnwiredApp.sendMessage(address,string) ()\n",
+        "markdown": "sendMessage(address,string) should be declared external:\n\t- [marketpayUnwiredApp.sendMessage(address,string)]()\n",
+        "first_markdown_element": "",
+        "id": "2333a10488358002e4f5b8e0b9410f328a7fbc561848503f7897aa961b0ceea2",
+        "check": "external-function",
+        "impact": "Optimization",
+        "confidence": "High"
+      }
+    ]
+  }
+}

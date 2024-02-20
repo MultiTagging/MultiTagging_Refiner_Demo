@@ -1,0 +1,99 @@
+{
+  "fileName": "Benchmarks/Study_SamplesSet/716c1f1a5b62d378764b9cdb7be9cfb9.sol",
+  "baseName": "716c1f1a5b62d378764b9cdb7be9cfb9.sol",
+  "iter": 2095,
+  "time": "300.081708",
+  "errMsg": null,
+  "result": [
+    {
+      "no": "1",
+      "kind": "IO",
+      "line": 13,
+      "signatures": [
+        {
+          "contractName": "ICURYToken",
+          "methodName": "ICURYToken",
+          "argTypes": [ "uint256", "string", "string" ]
+        }
+      ],
+      "exp": "(a * b)",
+      "status": "unproven"
+    },
+    {
+      "no": "2",
+      "kind": "IO",
+      "line": 27,
+      "signatures": [
+        {
+          "contractName": "ICURYToken",
+          "methodName": "burn",
+          "argTypes": [ "uint256" ]
+        },
+        {
+          "contractName": "ICURYToken",
+          "methodName": "transfer",
+          "argTypes": [ "address", "uint256" ]
+        },
+        {
+          "contractName": "ICURYToken",
+          "methodName": "transferFrom",
+          "argTypes": [ "address", "address", "uint256" ]
+        }
+      ],
+      "exp": "(a - b)",
+      "status": "proven"
+    },
+    {
+      "no": "3",
+      "kind": "IO",
+      "line": 31,
+      "signatures": [
+        {
+          "contractName": "ICURYToken",
+          "methodName": "mint",
+          "argTypes": [ "address", "uint256" ]
+        },
+        {
+          "contractName": "ICURYToken",
+          "methodName": "transfer",
+          "argTypes": [ "address", "uint256" ]
+        },
+        {
+          "contractName": "ICURYToken",
+          "methodName": "transferFrom",
+          "argTypes": [ "address", "address", "uint256" ]
+        }
+      ],
+      "exp": "(a + b)",
+      "status": "unproven"
+    },
+    {
+      "no": "4",
+      "kind": "IO",
+      "line": 297,
+      "signatures": [
+        {
+          "contractName": "ICURYToken",
+          "methodName": "ICURYToken",
+          "argTypes": [ "uint256", "string", "string" ]
+        }
+      ],
+      "exp": "(10 ** uint256(decimals))",
+      "status": "proven"
+    },
+    {
+      "no": "5",
+      "kind": "DZ",
+      "line": 14,
+      "signatures": [
+        {
+          "contractName": "ICURYToken",
+          "methodName": "ICURYToken",
+          "argTypes": [ "uint256", "string", "string" ]
+        }
+      ],
+      "exp": "(c / a)",
+      "status": "proven"
+    }
+  ]
+}

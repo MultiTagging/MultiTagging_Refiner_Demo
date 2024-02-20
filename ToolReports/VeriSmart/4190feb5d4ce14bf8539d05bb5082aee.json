@@ -1,0 +1,219 @@
+{
+  "fileName": "Benchmarks/Study_SamplesSet/4190feb5d4ce14bf8539d05bb5082aee.sol",
+  "baseName": "4190feb5d4ce14bf8539d05bb5082aee.sol",
+  "iter": 1130,
+  "time": "375.16954",
+  "errMsg": null,
+  "result": [
+    {
+      "no": "1",
+      "kind": "IO",
+      "line": 11,
+      "signatures": [
+        {
+          "contractName": "TAMCContract",
+          "methodName": "play_tmstmp35",
+          "argTypes": [ "uint256" ]
+        }
+      ],
+      "exp": "(5 * 86400)",
+      "status": "proven"
+    },
+    {
+      "no": "2",
+      "kind": "IO",
+      "line": 11,
+      "signatures": [
+        {
+          "contractName": "TAMCContract",
+          "methodName": "play_tmstmp35",
+          "argTypes": [ "uint256" ]
+        }
+      ],
+      "exp": "(startTime + (5 * 86400))",
+      "status": "unproven"
+    },
+    {
+      "no": "3",
+      "kind": "IO",
+      "line": 32,
+      "signatures": [
+        {
+          "contractName": "TAMCContract",
+          "methodName": "play_tmstmp27",
+          "argTypes": [ "uint256" ]
+        }
+      ],
+      "exp": "(5 * 86400)",
+      "status": "proven"
+    },
+    {
+      "no": "4",
+      "kind": "IO",
+      "line": 32,
+      "signatures": [
+        {
+          "contractName": "TAMCContract",
+          "methodName": "play_tmstmp27",
+          "argTypes": [ "uint256" ]
+        }
+      ],
+      "exp": "(startTime + (5 * 86400))",
+      "status": "unproven"
+    },
+    {
+      "no": "5",
+      "kind": "IO",
+      "line": 35,
+      "signatures": [
+        {
+          "contractName": "TAMCContract",
+          "methodName": "TAMCContract",
+          "argTypes": []
+        }
+      ],
+      "exp": "(1000000000 * (uint256(10) ** decimals))",
+      "status": "proven"
+    },
+    {
+      "no": "6",
+      "kind": "IO",
+      "line": 35,
+      "signatures": [
+        {
+          "contractName": "TAMCContract",
+          "methodName": "TAMCContract",
+          "argTypes": []
+        }
+      ],
+      "exp": "(uint256(10) ** decimals)",
+      "status": "proven"
+    },
+    {
+      "no": "7",
+      "kind": "IO",
+      "line": 50,
+      "signatures": [
+        {
+          "contractName": "TAMCContract",
+          "methodName": "transfer",
+          "argTypes": [ "address", "uint256" ]
+        }
+      ],
+      "exp": "(balanceOf[msg.sender] - value)",
+      "status": "proven"
+    },
+    {
+      "no": "8",
+      "kind": "IO",
+      "line": 51,
+      "signatures": [
+        {
+          "contractName": "TAMCContract",
+          "methodName": "transfer",
+          "argTypes": [ "address", "uint256" ]
+        }
+      ],
+      "exp": "(balanceOf[to] + value)",
+      "status": "proven"
+    },
+    {
+      "no": "9",
+      "kind": "IO",
+      "line": 63,
+      "signatures": [
+        {
+          "contractName": "TAMCContract",
+          "methodName": "play_tmstmp31",
+          "argTypes": [ "uint256" ]
+        }
+      ],
+      "exp": "(5 * 86400)",
+      "status": "proven"
+    },
+    {
+      "no": "10",
+      "kind": "IO",
+      "line": 63,
+      "signatures": [
+        {
+          "contractName": "TAMCContract",
+          "methodName": "play_tmstmp31",
+          "argTypes": [ "uint256" ]
+        }
+      ],
+      "exp": "(startTime + (5 * 86400))",
+      "status": "unproven"
+    },
+    {
+      "no": "11",
+      "kind": "IO",
+      "line": 84,
+      "signatures": [
+        {
+          "contractName": "TAMCContract",
+          "methodName": "transferFrom",
+          "argTypes": [ "address", "address", "uint256" ]
+        }
+      ],
+      "exp": "(balanceOf[from] - value)",
+      "status": "proven"
+    },
+    {
+      "no": "12",
+      "kind": "IO",
+      "line": 85,
+      "signatures": [
+        {
+          "contractName": "TAMCContract",
+          "methodName": "transferFrom",
+          "argTypes": [ "address", "address", "uint256" ]
+        }
+      ],
+      "exp": "(balanceOf[to] + value)",
+      "status": "proven"
+    },
+    {
+      "no": "13",
+      "kind": "IO",
+      "line": 86,
+      "signatures": [
+        {
+          "contractName": "TAMCContract",
+          "methodName": "transferFrom",
+          "argTypes": [ "address", "address", "uint256" ]
+        }
+      ],
+      "exp": "(allowance[from][msg.sender] - value)",
+      "status": "proven"
+    },
+    {
+      "no": "14",
+      "kind": "DZ",
+      "line": 20,
+      "signatures": [
+        {
+          "contractName": "TAMCContract",
+          "methodName": "bug_tmstmp40",
+          "argTypes": []
+        }
+      ],
+      "exp": "(now % 15)",
+      "status": "proven"
+    },
+    {
+      "no": "15",
+      "kind": "ETH_LEAK",
+      "line": 21,
+      "signatures": [
+        {
+          "contractName": "TAMCContract",
+          "methodName": "bug_tmstmp40",
+          "argTypes": []
+        }
+      ],
+      "exp": "msg.sender.transfer(address(this).balance);",
+      "status": "unproven"
+    }
+  ]
+}

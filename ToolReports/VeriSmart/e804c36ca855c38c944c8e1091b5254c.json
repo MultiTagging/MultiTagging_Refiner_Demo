@@ -1,0 +1,233 @@
+{
+  "fileName": "Benchmarks/Study_SamplesSet/e804c36ca855c38c944c8e1091b5254c.sol",
+  "baseName": "e804c36ca855c38c944c8e1091b5254c.sol",
+  "iter": 253,
+  "time": "302.76468",
+  "errMsg": null,
+  "result": [
+    {
+      "no": "1",
+      "kind": "IO",
+      "line": 105,
+      "signatures": [
+        {
+          "contractName": "EnjinBuyer",
+          "methodName": "withdraw",
+          "argTypes": [ "address", "address" ]
+        }
+      ],
+      "exp": "(earliest_buy_time + 3600)",
+      "status": "proven"
+    },
+    {
+      "no": "2",
+      "kind": "IO",
+      "line": 130,
+      "signatures": [
+        {
+          "contractName": "EnjinBuyer",
+          "methodName": "withdraw",
+          "argTypes": [ "address", "address" ]
+        }
+      ],
+      "exp": "(balances[user] * contract_token_balance)",
+      "status": "unproven"
+    },
+    {
+      "no": "3",
+      "kind": "IO",
+      "line": 132,
+      "signatures": [
+        {
+          "contractName": "EnjinBuyer",
+          "methodName": "withdraw",
+          "argTypes": [ "address", "address" ]
+        }
+      ],
+      "exp": "(contract_eth_value - balances[user])",
+      "status": "unproven"
+    },
+    {
+      "no": "4",
+      "kind": "IO",
+      "line": 145,
+      "signatures": [
+        {
+          "contractName": "EnjinBuyer",
+          "methodName": "withdraw",
+          "argTypes": [ "address", "address" ]
+        }
+      ],
+      "exp": "(withdraw_bounty - claimed_bounty)",
+      "status": "unproven"
+    },
+    {
+      "no": "5",
+      "kind": "IO",
+      "line": 155,
+      "signatures": [
+        {
+          "contractName": "EnjinBuyer",
+          "methodName": "add_to_buy_bounty",
+          "argTypes": []
+        }
+      ],
+      "exp": "(buy_bounty + msg.value)",
+      "status": "unproven"
+    },
+    {
+      "no": "6",
+      "kind": "IO",
+      "line": 163,
+      "signatures": [
+        {
+          "contractName": "EnjinBuyer",
+          "methodName": "add_to_withdraw_bounty",
+          "argTypes": []
+        }
+      ],
+      "exp": "(withdraw_bounty + msg.value)",
+      "status": "unproven"
+    },
+    {
+      "no": "7",
+      "kind": "IO",
+      "line": 187,
+      "signatures": [
+        {
+          "contractName": "EnjinBuyer",
+          "methodName": "claim_bounty",
+          "argTypes": []
+        }
+      ],
+      "exp": "(claimed_bounty + withdraw_bounty)",
+      "status": "unproven"
+    },
+    {
+      "no": "8",
+      "kind": "IO",
+      "line": 187,
+      "signatures": [
+        {
+          "contractName": "EnjinBuyer",
+          "methodName": "claim_bounty",
+          "argTypes": []
+        }
+      ],
+      "exp": "(this.balance - (claimed_bounty + withdraw_bounty))",
+      "status": "unproven"
+    },
+    {
+      "no": "9",
+      "kind": "IO",
+      "line": 205,
+      "signatures": [
+        {
+          "contractName": "EnjinBuyer",
+          "methodName": "@fallback",
+          "argTypes": []
+        }
+      ],
+      "exp": "(balances[msg.sender] + msg.value)",
+      "status": "unproven"
+    },
+    {
+      "no": "10",
+      "kind": "DZ",
+      "line": 130,
+      "signatures": [
+        {
+          "contractName": "EnjinBuyer",
+          "methodName": "withdraw",
+          "argTypes": [ "address", "address" ]
+        }
+      ],
+      "exp": "((balances[user] * contract_token_balance) / contract_eth_value)",
+      "status": "unproven"
+    },
+    {
+      "no": "11",
+      "kind": "DZ",
+      "line": 143,
+      "signatures": [
+        {
+          "contractName": "EnjinBuyer",
+          "methodName": "withdraw",
+          "argTypes": [ "address", "address" ]
+        }
+      ],
+      "exp": "(withdraw_bounty / 100)",
+      "status": "proven"
+    },
+    {
+      "no": "12",
+      "kind": "ETH_LEAK",
+      "line": 93,
+      "signatures": [
+        {
+          "contractName": "EnjinBuyer",
+          "methodName": "activate_kill_switch",
+          "argTypes": [ "string" ]
+        }
+      ],
+      "exp": "msg.sender.transfer(claimed_bounty);",
+      "status": "unproven"
+    },
+    {
+      "no": "13",
+      "kind": "ETH_LEAK",
+      "line": 115,
+      "signatures": [
+        {
+          "contractName": "EnjinBuyer",
+          "methodName": "withdraw",
+          "argTypes": [ "address", "address" ]
+        }
+      ],
+      "exp": "user.transfer(eth_to_withdraw);",
+      "status": "unproven"
+    },
+    {
+      "no": "14",
+      "kind": "ETH_LEAK",
+      "line": 147,
+      "signatures": [
+        {
+          "contractName": "EnjinBuyer",
+          "methodName": "withdraw",
+          "argTypes": [ "address", "address" ]
+        }
+      ],
+      "exp": "msg.sender.transfer(claimed_bounty);",
+      "status": "unproven"
+    },
+    {
+      "no": "15",
+      "kind": "ETH_LEAK",
+      "line": 191,
+      "signatures": [
+        {
+          "contractName": "EnjinBuyer",
+          "methodName": "claim_bounty",
+          "argTypes": []
+        }
+      ],
+      "exp": "sale.call.value(contract_eth_value)()",
+      "status": "proven"
+    },
+    {
+      "no": "16",
+      "kind": "ETH_LEAK",
+      "line": 193,
+      "signatures": [
+        {
+          "contractName": "EnjinBuyer",
+          "methodName": "claim_bounty",
+          "argTypes": []
+        }
+      ],
+      "exp": "msg.sender.transfer(claimed_bounty);",
+      "status": "unproven"
+    }
+  ]
+}

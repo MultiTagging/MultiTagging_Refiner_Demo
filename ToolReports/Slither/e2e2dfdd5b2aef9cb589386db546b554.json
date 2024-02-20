@@ -1,0 +1,3872 @@
+{
+  "success": true,
+  "error": null,
+  "results": {
+    "detectors": [
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "cancel",
+            "source_mapping": {
+              "start": 7639,
+              "length": 935,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "TownCrier",
+                "source_mapping": {
+                  "start": 25,
+                  "length": 8551,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              },
+              "signature": "cancel(uint64)"
+            }
+          },
+          {
+            "type": "node",
+            "name": "! msg.sender.call.value(fee - CANCELLATION_FEE)()",
+            "source_mapping": {
+              "start": 8167,
+              "length": 48,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "cancel",
+                "source_mapping": {
+                  "start": 7639,
+                  "length": 935,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "TownCrier",
+                    "source_mapping": {
+                      "start": 25,
+                      "length": 8551,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "cancel(uint64)"
+                }
+              }
+            },
+            "additional_fields": {
+              "underlying_type": "external_calls"
+            }
+          },
+          {
+            "type": "node",
+            "name": "externalCallFlag = false",
+            "source_mapping": {
+              "start": 8268,
+              "length": 24,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "cancel",
+                "source_mapping": {
+                  "start": 7639,
+                  "length": 935,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "TownCrier",
+                    "source_mapping": {
+                      "start": 25,
+                      "length": 8551,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "cancel(uint64)"
+                }
+              }
+            },
+            "additional_fields": {
+              "underlying_type": "variables_written",
+              "variable_name": "externalCallFlag"
+            }
+          }
+        ],
+        "description": "Reentrancy in TownCrier.cancel(uint64) ():\n\tExternal calls:\n\t- ! msg.sender.call.value(fee - CANCELLATION_FEE)() ()\n\tState variables written after the call(s):\n\t- externalCallFlag = false ()\n\tTownCrier.externalCallFlag () can be used in cross function reentrancies:\n\t- TownCrier.TownCrier() ()\n\t- TownCrier.cancel(uint64) ()\n\t- TownCrier.deliver(uint64,bytes32,uint64,bytes32) ()\n\t- TownCrier.request(uint8,address,bytes4,uint256,bytes32[]) ()\n",
+        "markdown": "Reentrancy in [TownCrier.cancel(uint64)]():\n\tExternal calls:\n\t- [! msg.sender.call.value(fee - CANCELLATION_FEE)()]()\n\tState variables written after the call(s):\n\t- [externalCallFlag = false]()\n\t[TownCrier.externalCallFlag]() can be used in cross function reentrancies:\n\t- [TownCrier.TownCrier()]()\n\t- [TownCrier.cancel(uint64)]()\n\t- [TownCrier.deliver(uint64,bytes32,uint64,bytes32)]()\n\t- [TownCrier.request(uint8,address,bytes4,uint256,bytes32[])]()\n",
+        "first_markdown_element": "",
+        "id": "224ac5a921c23549119b41b27d8f9738fa2ac7d05ebb39674a8baf7f0e73e77b",
+        "check": "reentrancy-eth",
+        "impact": "High",
+        "confidence": "Medium"
+      },
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "request",
+            "source_mapping": {
+              "start": 3823,
+              "length": 1562,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "TownCrier",
+                "source_mapping": {
+                  "start": 25,
+                  "length": 8551,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              },
+              "signature": "request(uint8,address,bytes4,uint256,bytes32[])"
+            }
+          },
+          {
+            "type": "node",
+            "name": "! msg.sender.call.value(msg.value)()",
+            "source_mapping": {
+              "start": 4112,
+              "length": 35,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "request",
+                "source_mapping": {
+                  "start": 3823,
+                  "length": 1562,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "TownCrier",
+                    "source_mapping": {
+                      "start": 25,
+                      "length": 8551,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "request(uint8,address,bytes4,uint256,bytes32[])"
+                }
+              }
+            },
+            "additional_fields": {
+              "underlying_type": "external_calls"
+            }
+          },
+          {
+            "type": "node",
+            "name": "externalCallFlag = false",
+            "source_mapping": {
+              "start": 4200,
+              "length": 24,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "request",
+                "source_mapping": {
+                  "start": 3823,
+                  "length": 1562,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "TownCrier",
+                    "source_mapping": {
+                      "start": 25,
+                      "length": 8551,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "request(uint8,address,bytes4,uint256,bytes32[])"
+                }
+              }
+            },
+            "additional_fields": {
+              "underlying_type": "variables_written",
+              "variable_name": "externalCallFlag"
+            }
+          }
+        ],
+        "description": "Reentrancy in TownCrier.request(uint8,address,bytes4,uint256,bytes32[]) ():\n\tExternal calls:\n\t- ! msg.sender.call.value(msg.value)() ()\n\tState variables written after the call(s):\n\t- externalCallFlag = false ()\n\tTownCrier.externalCallFlag () can be used in cross function reentrancies:\n\t- TownCrier.TownCrier() ()\n\t- TownCrier.cancel(uint64) ()\n\t- TownCrier.deliver(uint64,bytes32,uint64,bytes32) ()\n\t- TownCrier.request(uint8,address,bytes4,uint256,bytes32[]) ()\n",
+        "markdown": "Reentrancy in [TownCrier.request(uint8,address,bytes4,uint256,bytes32[])]():\n\tExternal calls:\n\t- [! msg.sender.call.value(msg.value)()]()\n\tState variables written after the call(s):\n\t- [externalCallFlag = false]()\n\t[TownCrier.externalCallFlag]() can be used in cross function reentrancies:\n\t- [TownCrier.TownCrier()]()\n\t- [TownCrier.cancel(uint64)]()\n\t- [TownCrier.deliver(uint64,bytes32,uint64,bytes32)]()\n\t- [TownCrier.request(uint8,address,bytes4,uint256,bytes32[])]()\n",
+        "first_markdown_element": "",
+        "id": "d6acc1ff390221d17ee929f5ccb17b223411075007b9f49c6fef74ab69dbeed8",
+        "check": "reentrancy-eth",
+        "impact": "High",
+        "confidence": "Medium"
+      },
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "deliver",
+            "source_mapping": {
+              "start": 5391,
+              "length": 2242,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "TownCrier",
+                "source_mapping": {
+                  "start": 25,
+                  "length": 8551,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              },
+              "signature": "deliver(uint64,bytes32,uint64,bytes32)"
+            }
+          },
+          {
+            "type": "node",
+            "name": "requests[requestId].requester.call.gas(2300).value(fee)()",
+            "source_mapping": {
+              "start": 6936,
+              "length": 57,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "deliver",
+                "source_mapping": {
+                  "start": 5391,
+                  "length": 2242,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "TownCrier",
+                    "source_mapping": {
+                      "start": 25,
+                      "length": 8551,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "deliver(uint64,bytes32,uint64,bytes32)"
+                }
+              }
+            }
+          }
+        ],
+        "description": "TownCrier.deliver(uint64,bytes32,uint64,bytes32) () ignores return value by requests[requestId].requester.call.gas(2300).value(fee)() ()\n",
+        "markdown": "[TownCrier.deliver(uint64,bytes32,uint64,bytes32)]() ignores return value by [requests[requestId].requester.call.gas(2300).value(fee)()]()\n",
+        "first_markdown_element": "",
+        "id": "0dfa78d3628c3f1a9474802dc423da9ee201e36d44e81a784fb50c7a22292aa5",
+        "check": "unchecked-lowlevel",
+        "impact": "Medium",
+        "confidence": "Medium"
+      },
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "deliver",
+            "source_mapping": {
+              "start": 5391,
+              "length": 2242,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "TownCrier",
+                "source_mapping": {
+                  "start": 25,
+                  "length": 8551,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              },
+              "signature": "deliver(uint64,bytes32,uint64,bytes32)"
+            }
+          },
+          {
+            "type": "node",
+            "name": "requests[requestId].callbackAddr.call.gas(callbackGas)(requests[requestId].callbackFID,requestId,error,respData)",
+            "source_mapping": {
+              "start": 7419,
+              "length": 115,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "deliver",
+                "source_mapping": {
+                  "start": 5391,
+                  "length": 2242,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "TownCrier",
+                    "source_mapping": {
+                      "start": 25,
+                      "length": 8551,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "deliver(uint64,bytes32,uint64,bytes32)"
+                }
+              }
+            }
+          }
+        ],
+        "description": "TownCrier.deliver(uint64,bytes32,uint64,bytes32) () ignores return value by requests[requestId].callbackAddr.call.gas(callbackGas)(requests[requestId].callbackFID,requestId,error,respData) ()\n",
+        "markdown": "[TownCrier.deliver(uint64,bytes32,uint64,bytes32)]() ignores return value by [requests[requestId].callbackAddr.call.gas(callbackGas)(requests[requestId].callbackFID,requestId,error,respData)]()\n",
+        "first_markdown_element": "",
+        "id": "f5faa0327059104abfca386338c851ecdadc7e23675185df06d528661e938c93",
+        "check": "unchecked-lowlevel",
+        "impact": "Medium",
+        "confidence": "Medium"
+      },
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "deliver",
+            "source_mapping": {
+              "start": 5391,
+              "length": 2242,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "TownCrier",
+                "source_mapping": {
+                  "start": 25,
+                  "length": 8551,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              },
+              "signature": "deliver(uint64,bytes32,uint64,bytes32)"
+            }
+          },
+          {
+            "type": "node",
+            "name": "SGX_ADDRESS.send(fee)",
+            "source_mapping": {
+              "start": 6788,
+              "length": 21,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "deliver",
+                "source_mapping": {
+                  "start": 5391,
+                  "length": 2242,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "TownCrier",
+                    "source_mapping": {
+                      "start": 25,
+                      "length": 8551,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "deliver(uint64,bytes32,uint64,bytes32)"
+                }
+              }
+            }
+          }
+        ],
+        "description": "TownCrier.deliver(uint64,bytes32,uint64,bytes32) () ignores return value by SGX_ADDRESS.send(fee) ()\n",
+        "markdown": "[TownCrier.deliver(uint64,bytes32,uint64,bytes32)]() ignores return value by [SGX_ADDRESS.send(fee)]()\n",
+        "first_markdown_element": "",
+        "id": "696a8dfbf68c04ed6582abd38aba6dd61468355a5db870ba2a99d2cbe36bddcb",
+        "check": "unchecked-send",
+        "impact": "Medium",
+        "confidence": "Medium"
+      },
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "deliver",
+            "source_mapping": {
+              "start": 5391,
+              "length": 2242,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "TownCrier",
+                "source_mapping": {
+                  "start": 25,
+                  "length": 8551,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              },
+              "signature": "deliver(uint64,bytes32,uint64,bytes32)"
+            }
+          },
+          {
+            "type": "node",
+            "name": "SGX_ADDRESS.send(CANCELLATION_FEE)",
+            "source_mapping": {
+              "start": 6369,
+              "length": 34,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "deliver",
+                "source_mapping": {
+                  "start": 5391,
+                  "length": 2242,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "TownCrier",
+                    "source_mapping": {
+                      "start": 25,
+                      "length": 8551,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "deliver(uint64,bytes32,uint64,bytes32)"
+                }
+              }
+            }
+          }
+        ],
+        "description": "TownCrier.deliver(uint64,bytes32,uint64,bytes32) () ignores return value by SGX_ADDRESS.send(CANCELLATION_FEE) ()\n",
+        "markdown": "[TownCrier.deliver(uint64,bytes32,uint64,bytes32)]() ignores return value by [SGX_ADDRESS.send(CANCELLATION_FEE)]()\n",
+        "first_markdown_element": "",
+        "id": "9e2c0146b6c824f2891972702d88eb09815b41302c994f76506ced155dcec21e",
+        "check": "unchecked-send",
+        "impact": "Medium",
+        "confidence": "Medium"
+      },
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "deliver",
+            "source_mapping": {
+              "start": 5391,
+              "length": 2242,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "TownCrier",
+                "source_mapping": {
+                  "start": 25,
+                  "length": 8551,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              },
+              "signature": "deliver(uint64,bytes32,uint64,bytes32)"
+            }
+          },
+          {
+            "type": "node",
+            "name": "requests[requestId].requester.call.gas(2300).value(fee)()",
+            "source_mapping": {
+              "start": 6936,
+              "length": 57,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "deliver",
+                "source_mapping": {
+                  "start": 5391,
+                  "length": 2242,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "TownCrier",
+                    "source_mapping": {
+                      "start": 25,
+                      "length": 8551,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "deliver(uint64,bytes32,uint64,bytes32)"
+                }
+              }
+            },
+            "additional_fields": {
+              "underlying_type": "external_calls"
+            }
+          },
+          {
+            "type": "node",
+            "name": "requests[requestId].requester.call.gas(2300).value(fee)()",
+            "source_mapping": {
+              "start": 6936,
+              "length": 57,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "deliver",
+                "source_mapping": {
+                  "start": 5391,
+                  "length": 2242,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "TownCrier",
+                    "source_mapping": {
+                      "start": 25,
+                      "length": 8551,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "deliver(uint64,bytes32,uint64,bytes32)"
+                }
+              }
+            },
+            "additional_fields": {
+              "underlying_type": "external_calls_sending_eth"
+            }
+          },
+          {
+            "type": "node",
+            "name": "externalCallFlag = true",
+            "source_mapping": {
+              "start": 7386,
+              "length": 23,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "deliver",
+                "source_mapping": {
+                  "start": 5391,
+                  "length": 2242,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "TownCrier",
+                    "source_mapping": {
+                      "start": 25,
+                      "length": 8551,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "deliver(uint64,bytes32,uint64,bytes32)"
+                }
+              }
+            },
+            "additional_fields": {
+              "underlying_type": "variables_written",
+              "variable_name": "externalCallFlag"
+            }
+          }
+        ],
+        "description": "Reentrancy in TownCrier.deliver(uint64,bytes32,uint64,bytes32) ():\n\tExternal calls:\n\t- requests[requestId].requester.call.gas(2300).value(fee)() ()\n\tExternal calls sending eth:\n\t- SGX_ADDRESS.send(fee) ()\n\t- requests[requestId].requester.call.gas(2300).value(fee)() ()\n\tState variables written after the call(s):\n\t- externalCallFlag = true ()\n",
+        "markdown": "Reentrancy in [TownCrier.deliver(uint64,bytes32,uint64,bytes32)]():\n\tExternal calls:\n\t- [requests[requestId].requester.call.gas(2300).value(fee)()]()\n\tExternal calls sending eth:\n\t- [SGX_ADDRESS.send(fee)]()\n\t- [requests[requestId].requester.call.gas(2300).value(fee)()]()\n\tState variables written after the call(s):\n\t- [externalCallFlag = true]()\n",
+        "first_markdown_element": "",
+        "id": "151c551e9d23b0d92c4426b5bfbc7068668ab004561dbfc41a4cc362b6fd1553",
+        "check": "reentrancy-benign",
+        "impact": "Low",
+        "confidence": "Medium"
+      },
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "deliver",
+            "source_mapping": {
+              "start": 5391,
+              "length": 2242,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "TownCrier",
+                "source_mapping": {
+                  "start": 25,
+                  "length": 8551,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              },
+              "signature": "deliver(uint64,bytes32,uint64,bytes32)"
+            }
+          },
+          {
+            "type": "node",
+            "name": "requests[requestId].requester.call.gas(2300).value(fee)()",
+            "source_mapping": {
+              "start": 6936,
+              "length": 57,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "deliver",
+                "source_mapping": {
+                  "start": 5391,
+                  "length": 2242,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "TownCrier",
+                    "source_mapping": {
+                      "start": 25,
+                      "length": 8551,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "deliver(uint64,bytes32,uint64,bytes32)"
+                }
+              }
+            },
+            "additional_fields": {
+              "underlying_type": "external_calls"
+            }
+          },
+          {
+            "type": "node",
+            "name": "externalCallFlag = false",
+            "source_mapping": {
+              "start": 7007,
+              "length": 24,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "deliver",
+                "source_mapping": {
+                  "start": 5391,
+                  "length": 2242,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "TownCrier",
+                    "source_mapping": {
+                      "start": 25,
+                      "length": 8551,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "deliver(uint64,bytes32,uint64,bytes32)"
+                }
+              }
+            },
+            "additional_fields": {
+              "underlying_type": "variables_written",
+              "variable_name": "externalCallFlag"
+            }
+          }
+        ],
+        "description": "Reentrancy in TownCrier.deliver(uint64,bytes32,uint64,bytes32) ():\n\tExternal calls:\n\t- requests[requestId].requester.call.gas(2300).value(fee)() ()\n\tState variables written after the call(s):\n\t- externalCallFlag = false ()\n",
+        "markdown": "Reentrancy in [TownCrier.deliver(uint64,bytes32,uint64,bytes32)]():\n\tExternal calls:\n\t- [requests[requestId].requester.call.gas(2300).value(fee)()]()\n\tState variables written after the call(s):\n\t- [externalCallFlag = false]()\n",
+        "first_markdown_element": "",
+        "id": "8f199b60fc8a29563ba0e94d34c34f1d9805d4674aef5eb8db441b611d3f3e58",
+        "check": "reentrancy-benign",
+        "impact": "Low",
+        "confidence": "Medium"
+      },
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "deliver",
+            "source_mapping": {
+              "start": 5391,
+              "length": 2242,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "TownCrier",
+                "source_mapping": {
+                  "start": 25,
+                  "length": 8551,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              },
+              "signature": "deliver(uint64,bytes32,uint64,bytes32)"
+            }
+          },
+          {
+            "type": "node",
+            "name": "requests[requestId].requester.call.gas(2300).value(fee)()",
+            "source_mapping": {
+              "start": 6936,
+              "length": 57,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "deliver",
+                "source_mapping": {
+                  "start": 5391,
+                  "length": 2242,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "TownCrier",
+                    "source_mapping": {
+                      "start": 25,
+                      "length": 8551,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "deliver(uint64,bytes32,uint64,bytes32)"
+                }
+              }
+            },
+            "additional_fields": {
+              "underlying_type": "external_calls"
+            }
+          },
+          {
+            "type": "node",
+            "name": "requests[requestId].callbackAddr.call.gas(callbackGas)(requests[requestId].callbackFID,requestId,error,respData)",
+            "source_mapping": {
+              "start": 7419,
+              "length": 115,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "deliver",
+                "source_mapping": {
+                  "start": 5391,
+                  "length": 2242,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "TownCrier",
+                    "source_mapping": {
+                      "start": 25,
+                      "length": 8551,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "deliver(uint64,bytes32,uint64,bytes32)"
+                }
+              }
+            },
+            "additional_fields": {
+              "underlying_type": "external_calls"
+            }
+          },
+          {
+            "type": "node",
+            "name": "requests[requestId].requester.call.gas(2300).value(fee)()",
+            "source_mapping": {
+              "start": 6936,
+              "length": 57,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "deliver",
+                "source_mapping": {
+                  "start": 5391,
+                  "length": 2242,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "TownCrier",
+                    "source_mapping": {
+                      "start": 25,
+                      "length": 8551,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "deliver(uint64,bytes32,uint64,bytes32)"
+                }
+              }
+            },
+            "additional_fields": {
+              "underlying_type": "external_calls_sending_eth"
+            }
+          },
+          {
+            "type": "node",
+            "name": "requests[requestId].callbackAddr.call.gas(callbackGas)(requests[requestId].callbackFID,requestId,error,respData)",
+            "source_mapping": {
+              "start": 7419,
+              "length": 115,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "deliver",
+                "source_mapping": {
+                  "start": 5391,
+                  "length": 2242,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "TownCrier",
+                    "source_mapping": {
+                      "start": 25,
+                      "length": 8551,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "deliver(uint64,bytes32,uint64,bytes32)"
+                }
+              }
+            },
+            "additional_fields": {
+              "underlying_type": "external_calls_sending_eth"
+            }
+          },
+          {
+            "type": "node",
+            "name": "externalCallFlag = false",
+            "source_mapping": {
+              "start": 7602,
+              "length": 24,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "deliver",
+                "source_mapping": {
+                  "start": 5391,
+                  "length": 2242,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "TownCrier",
+                    "source_mapping": {
+                      "start": 25,
+                      "length": 8551,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "deliver(uint64,bytes32,uint64,bytes32)"
+                }
+              }
+            },
+            "additional_fields": {
+              "underlying_type": "variables_written",
+              "variable_name": "externalCallFlag"
+            }
+          }
+        ],
+        "description": "Reentrancy in TownCrier.deliver(uint64,bytes32,uint64,bytes32) ():\n\tExternal calls:\n\t- requests[requestId].requester.call.gas(2300).value(fee)() ()\n\t- requests[requestId].callbackAddr.call.gas(callbackGas)(requests[requestId].callbackFID,requestId,error,respData) ()\n\tExternal calls sending eth:\n\t- SGX_ADDRESS.send(fee) ()\n\t- requests[requestId].requester.call.gas(2300).value(fee)() ()\n\tState variables written after the call(s):\n\t- externalCallFlag = false ()\n",
+        "markdown": "Reentrancy in [TownCrier.deliver(uint64,bytes32,uint64,bytes32)]():\n\tExternal calls:\n\t- [requests[requestId].requester.call.gas(2300).value(fee)()]()\n\t- [requests[requestId].callbackAddr.call.gas(callbackGas)(requests[requestId].callbackFID,requestId,error,respData)]()\n\tExternal calls sending eth:\n\t- [SGX_ADDRESS.send(fee)]()\n\t- [requests[requestId].requester.call.gas(2300).value(fee)()]()\n\tState variables written after the call(s):\n\t- [externalCallFlag = false]()\n",
+        "first_markdown_element": "",
+        "id": "cdbab6174c1a8df363f4023c700f279a69fd89a67abd47c777cab7db8be0ac0b",
+        "check": "reentrancy-benign",
+        "impact": "Low",
+        "confidence": "Medium"
+      },
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "deliver",
+            "source_mapping": {
+              "start": 5391,
+              "length": 2242,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "TownCrier",
+                "source_mapping": {
+                  "start": 25,
+                  "length": 8551,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              },
+              "signature": "deliver(uint64,bytes32,uint64,bytes32)"
+            }
+          },
+          {
+            "type": "node",
+            "name": "requests[requestId].requester.call.gas(2300).value(fee)()",
+            "source_mapping": {
+              "start": 6936,
+              "length": 57,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "deliver",
+                "source_mapping": {
+                  "start": 5391,
+                  "length": 2242,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "TownCrier",
+                    "source_mapping": {
+                      "start": 25,
+                      "length": 8551,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "deliver(uint64,bytes32,uint64,bytes32)"
+                }
+              }
+            },
+            "additional_fields": {
+              "underlying_type": "external_calls"
+            }
+          },
+          {
+            "type": "node",
+            "name": "SGX_ADDRESS.send(fee)",
+            "source_mapping": {
+              "start": 6788,
+              "length": 21,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "deliver",
+                "source_mapping": {
+                  "start": 5391,
+                  "length": 2242,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "TownCrier",
+                    "source_mapping": {
+                      "start": 25,
+                      "length": 8551,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "deliver(uint64,bytes32,uint64,bytes32)"
+                }
+              }
+            },
+            "additional_fields": {
+              "underlying_type": "external_calls_sending_eth"
+            }
+          },
+          {
+            "type": "node",
+            "name": "requests[requestId].requester.call.gas(2300).value(fee)()",
+            "source_mapping": {
+              "start": 6936,
+              "length": 57,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "deliver",
+                "source_mapping": {
+                  "start": 5391,
+                  "length": 2242,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "TownCrier",
+                    "source_mapping": {
+                      "start": 25,
+                      "length": 8551,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "deliver(uint64,bytes32,uint64,bytes32)"
+                }
+              }
+            },
+            "additional_fields": {
+              "underlying_type": "external_calls_sending_eth"
+            }
+          },
+          {
+            "type": "node",
+            "name": "DeliverInfo(requestId,fee,tx.gasprice,msg.gas,callbackGas,paramsHash,error,respData)",
+            "source_mapping": {
+              "start": 7148,
+              "length": 91,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "deliver",
+                "source_mapping": {
+                  "start": 5391,
+                  "length": 2242,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "TownCrier",
+                    "source_mapping": {
+                      "start": 25,
+                      "length": 8551,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "deliver(uint64,bytes32,uint64,bytes32)"
+                }
+              }
+            },
+            "additional_fields": {
+              "underlying_type": "event"
+            }
+          }
+        ],
+        "description": "Reentrancy in TownCrier.deliver(uint64,bytes32,uint64,bytes32) ():\n\tExternal calls:\n\t- requests[requestId].requester.call.gas(2300).value(fee)() ()\n\tExternal calls sending eth:\n\t- SGX_ADDRESS.send(fee) ()\n\t- requests[requestId].requester.call.gas(2300).value(fee)() ()\n\tEvent emitted after the call(s):\n\t- DeliverInfo(requestId,fee,tx.gasprice,msg.gas,callbackGas,paramsHash,error,respData) ()\n",
+        "markdown": "Reentrancy in [TownCrier.deliver(uint64,bytes32,uint64,bytes32)]():\n\tExternal calls:\n\t- [requests[requestId].requester.call.gas(2300).value(fee)()]()\n\tExternal calls sending eth:\n\t- [SGX_ADDRESS.send(fee)]()\n\t- [requests[requestId].requester.call.gas(2300).value(fee)()]()\n\tEvent emitted after the call(s):\n\t- [DeliverInfo(requestId,fee,tx.gasprice,msg.gas,callbackGas,paramsHash,error,respData)]()\n",
+        "first_markdown_element": "",
+        "id": "327faf6589317eb44daa85444f4dc78201f74556502fc37702e610a92ef0a203",
+        "check": "reentrancy-events",
+        "impact": "Low",
+        "confidence": "Medium"
+      },
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "cancel",
+            "source_mapping": {
+              "start": 7639,
+              "length": 935,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "TownCrier",
+                "source_mapping": {
+                  "start": 25,
+                  "length": 8551,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              },
+              "signature": "cancel(uint64)"
+            }
+          },
+          {
+            "type": "node",
+            "name": "! msg.sender.call.value(fee - CANCELLATION_FEE)()",
+            "source_mapping": {
+              "start": 8167,
+              "length": 48,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "cancel",
+                "source_mapping": {
+                  "start": 7639,
+                  "length": 935,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "TownCrier",
+                    "source_mapping": {
+                      "start": 25,
+                      "length": 8551,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "cancel(uint64)"
+                }
+              }
+            },
+            "additional_fields": {
+              "underlying_type": "external_calls"
+            }
+          },
+          {
+            "type": "node",
+            "name": "Cancel(requestId,msg.sender,requests[requestId].requester,requests[requestId].fee,1)",
+            "source_mapping": {
+              "start": 8306,
+              "length": 88,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "cancel",
+                "source_mapping": {
+                  "start": 7639,
+                  "length": 935,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "TownCrier",
+                    "source_mapping": {
+                      "start": 25,
+                      "length": 8551,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "cancel(uint64)"
+                }
+              }
+            },
+            "additional_fields": {
+              "underlying_type": "event"
+            }
+          }
+        ],
+        "description": "Reentrancy in TownCrier.cancel(uint64) ():\n\tExternal calls:\n\t- ! msg.sender.call.value(fee - CANCELLATION_FEE)() ()\n\tEvent emitted after the call(s):\n\t- Cancel(requestId,msg.sender,requests[requestId].requester,requests[requestId].fee,1) ()\n",
+        "markdown": "Reentrancy in [TownCrier.cancel(uint64)]():\n\tExternal calls:\n\t- [! msg.sender.call.value(fee - CANCELLATION_FEE)()]()\n\tEvent emitted after the call(s):\n\t- [Cancel(requestId,msg.sender,requests[requestId].requester,requests[requestId].fee,1)]()\n",
+        "first_markdown_element": "",
+        "id": "4891d883d5beb5768dae1d8825a408a43974789028d867240566a765f99e0315",
+        "check": "reentrancy-events",
+        "impact": "Low",
+        "confidence": "Medium"
+      },
+      {
+        "elements": [
+          {
+            "type": "node",
+            "name": "paramsHash = sha3()(requestType,requestData)",
+            "source_mapping": {
+              "start": 4813,
+              "length": 51,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "request",
+                "source_mapping": {
+                  "start": 3823,
+                  "length": 1562,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "TownCrier",
+                    "source_mapping": {
+                      "start": 25,
+                      "length": 8551,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "request(uint8,address,bytes4,uint256,bytes32[])"
+                }
+              }
+            }
+          }
+        ],
+        "description": "Deprecated standard detected paramsHash = sha3()(requestType,requestData) ():\n\t- Usage of \"sha3()\" should be replaced with \"keccak256()\"\n",
+        "markdown": "Deprecated standard detected [paramsHash = sha3()(requestType,requestData)]():\n\t- Usage of \"sha3()\" should be replaced with \"keccak256()\"\n",
+        "first_markdown_element": "",
+        "id": "31863dabc0839efae10acd5aad5636eff0319d215cf691adea84ff5cf7b81192",
+        "check": "deprecated-standards",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "node",
+            "name": "DeliverInfo(requestId,fee,tx.gasprice,msg.gas,callbackGas,paramsHash,error,respData)",
+            "source_mapping": {
+              "start": 7148,
+              "length": 91,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "deliver",
+                "source_mapping": {
+                  "start": 5391,
+                  "length": 2242,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "TownCrier",
+                    "source_mapping": {
+                      "start": 25,
+                      "length": 8551,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "deliver(uint64,bytes32,uint64,bytes32)"
+                }
+              }
+            }
+          }
+        ],
+        "description": "Deprecated standard detected DeliverInfo(requestId,fee,tx.gasprice,msg.gas,callbackGas,paramsHash,error,respData) ():\n\t- Usage of \"msg.gas\" should be replaced with \"gasleft()\"\n",
+        "markdown": "Deprecated standard detected [DeliverInfo(requestId,fee,tx.gasprice,msg.gas,callbackGas,paramsHash,error,respData)]():\n\t- Usage of \"msg.gas\" should be replaced with \"gasleft()\"\n",
+        "first_markdown_element": "",
+        "id": "56de1b76f11f287ea8f691e174b5402ca1ab01de9b671e7be646accea630da6c",
+        "check": "deprecated-standards",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "node",
+            "name": "callbackGas = msg.gas - 5000",
+            "source_mapping": {
+              "start": 7329,
+              "length": 28,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "deliver",
+                "source_mapping": {
+                  "start": 5391,
+                  "length": 2242,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "TownCrier",
+                    "source_mapping": {
+                      "start": 25,
+                      "length": 8551,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "deliver(uint64,bytes32,uint64,bytes32)"
+                }
+              }
+            }
+          }
+        ],
+        "description": "Deprecated standard detected callbackGas = msg.gas - 5000 ():\n\t- Usage of \"msg.gas\" should be replaced with \"gasleft()\"\n",
+        "markdown": "Deprecated standard detected [callbackGas = msg.gas - 5000]():\n\t- Usage of \"msg.gas\" should be replaced with \"gasleft()\"\n",
+        "first_markdown_element": "",
+        "id": "a8d7e10453f0637be230bfc0202aa35dd1499d9b3f8ee7717fcda4efcb21af2a",
+        "check": "deprecated-standards",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "node",
+            "name": "callbackGas > msg.gas - 5000",
+            "source_mapping": {
+              "start": 7285,
+              "length": 28,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "deliver",
+                "source_mapping": {
+                  "start": 5391,
+                  "length": 2242,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "TownCrier",
+                    "source_mapping": {
+                      "start": 25,
+                      "length": 8551,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "deliver(uint64,bytes32,uint64,bytes32)"
+                }
+              }
+            }
+          }
+        ],
+        "description": "Deprecated standard detected callbackGas > msg.gas - 5000 ():\n\t- Usage of \"msg.gas\" should be replaced with \"gasleft()\"\n",
+        "markdown": "Deprecated standard detected [callbackGas > msg.gas - 5000]():\n\t- Usage of \"msg.gas\" should be replaced with \"gasleft()\"\n",
+        "first_markdown_element": "",
+        "id": "d6c0d8abebd106c84c4f98a754e84af6df74f63d278b93b79ca7f4234c291ba1",
+        "check": "deprecated-standards",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "node",
+            "name": "",
+            "source_mapping": {
+              "start": 3781,
+              "length": 5,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "withdraw",
+                "source_mapping": {
+                  "start": 3593,
+                  "length": 224,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "TownCrier",
+                    "source_mapping": {
+                      "start": 25,
+                      "length": 8551,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "withdraw()"
+                }
+              }
+            }
+          }
+        ],
+        "description": "Deprecated standard detected THROW ():\n\t- Usage of \"throw\" should be replaced with \"revert()\"\n",
+        "markdown": "Deprecated standard detected [THROW]():\n\t- Usage of \"throw\" should be replaced with \"revert()\"\n",
+        "first_markdown_element": "",
+        "id": "f5556cf1c70b64b9e4b1fc32044dd970b5f2c8b9fc21b7971fda01971033f2d5",
+        "check": "deprecated-standards",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "MIN_FEE",
+            "source_mapping": {
+              "start": 1285,
+              "length": 39,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "TownCrier",
+                "source_mapping": {
+                  "start": 25,
+                  "length": 8551,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              }
+            }
+          }
+        ],
+        "description": "TownCrier.MIN_FEE () is set pre-construction with a non-constant function or state variable:\n\t- 30000 * GAS_PRICE\n",
+        "markdown": "[TownCrier.MIN_FEE]() is set pre-construction with a non-constant function or state variable:\n\t- 30000 * GAS_PRICE\n",
+        "first_markdown_element": "",
+        "id": "d7609bbae00e0e19cef07e28a847cdee7dfd3df56d6d477a60907e68eaa4243d",
+        "check": "function-init-state",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "CANCELLATION_FEE",
+            "source_mapping": {
+              "start": 1433,
+              "length": 48,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "TownCrier",
+                "source_mapping": {
+                  "start": 25,
+                  "length": 8551,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              }
+            }
+          }
+        ],
+        "description": "TownCrier.CANCELLATION_FEE () is set pre-construction with a non-constant function or state variable:\n\t- 25000 * GAS_PRICE\n",
+        "markdown": "[TownCrier.CANCELLATION_FEE]() is set pre-construction with a non-constant function or state variable:\n\t- 25000 * GAS_PRICE\n",
+        "first_markdown_element": "",
+        "id": "ed0fdf7f11fa5093286036ba1abcaa145264f68fbf26befb5bc2190652164e5b",
+        "check": "function-init-state",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "pragma",
+            "name": "^0.4.9",
+            "source_mapping": {
+              "start": 0,
+              "length": 23,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "directive": [
+                "solidity",
+                "^",
+                "0.4",
+                ".9"
+              ]
+            }
+          }
+        ],
+        "description": "Pragma version^0.4.9 () allows old versions\n",
+        "markdown": "Pragma version[^0.4.9]() allows old versions\n",
+        "first_markdown_element": "",
+        "id": "3c5ff4f844f57b89efd6e4b54c2f202ca55c1f958c7074785f69d87ba6721a7e",
+        "check": "solc-version",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [],
+        "description": "solc-0.4.9 is not recommended for deployment\n",
+        "markdown": "solc-0.4.9 is not recommended for deployment\n",
+        "first_markdown_element": "",
+        "id": "8c74976b741e43fce2257e92f2bfb4a12e0d13318de6b2af88024745746120b1",
+        "check": "solc-version",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "deliver",
+            "source_mapping": {
+              "start": 5391,
+              "length": 2242,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "TownCrier",
+                "source_mapping": {
+                  "start": 25,
+                  "length": 8551,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              },
+              "signature": "deliver(uint64,bytes32,uint64,bytes32)"
+            }
+          },
+          {
+            "type": "node",
+            "name": "requests[requestId].requester.call.gas(2300).value(fee)()",
+            "source_mapping": {
+              "start": 6936,
+              "length": 57,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "deliver",
+                "source_mapping": {
+                  "start": 5391,
+                  "length": 2242,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "TownCrier",
+                    "source_mapping": {
+                      "start": 25,
+                      "length": 8551,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "deliver(uint64,bytes32,uint64,bytes32)"
+                }
+              }
+            }
+          },
+          {
+            "type": "node",
+            "name": "requests[requestId].callbackAddr.call.gas(callbackGas)(requests[requestId].callbackFID,requestId,error,respData)",
+            "source_mapping": {
+              "start": 7419,
+              "length": 115,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "deliver",
+                "source_mapping": {
+                  "start": 5391,
+                  "length": 2242,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "TownCrier",
+                    "source_mapping": {
+                      "start": 25,
+                      "length": 8551,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "deliver(uint64,bytes32,uint64,bytes32)"
+                }
+              }
+            }
+          }
+        ],
+        "description": "Low level call in TownCrier.deliver(uint64,bytes32,uint64,bytes32) ():\n\t- requests[requestId].requester.call.gas(2300).value(fee)() ()\n\t- requests[requestId].callbackAddr.call.gas(callbackGas)(requests[requestId].callbackFID,requestId,error,respData) ()\n",
+        "markdown": "Low level call in [TownCrier.deliver(uint64,bytes32,uint64,bytes32)]():\n\t- [requests[requestId].requester.call.gas(2300).value(fee)()]()\n\t- [requests[requestId].callbackAddr.call.gas(callbackGas)(requests[requestId].callbackFID,requestId,error,respData)]()\n",
+        "first_markdown_element": "",
+        "id": "69920b9a41cfd7813c845dce677565518fd8f6dab3dfc0ec65e437699072a5f4",
+        "check": "low-level-calls",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "withdraw",
+            "source_mapping": {
+              "start": 3593,
+              "length": 224,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "TownCrier",
+                "source_mapping": {
+                  "start": 25,
+                  "length": 8551,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              },
+              "signature": "withdraw()"
+            }
+          },
+          {
+            "type": "node",
+            "name": "! requests[0].requester.call.value(this.balance)()",
+            "source_mapping": {
+              "start": 3712,
+              "length": 49,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "withdraw",
+                "source_mapping": {
+                  "start": 3593,
+                  "length": 224,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "TownCrier",
+                    "source_mapping": {
+                      "start": 25,
+                      "length": 8551,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "withdraw()"
+                }
+              }
+            }
+          }
+        ],
+        "description": "Low level call in TownCrier.withdraw() ():\n\t- ! requests[0].requester.call.value(this.balance)() ()\n",
+        "markdown": "Low level call in [TownCrier.withdraw()]():\n\t- [! requests[0].requester.call.value(this.balance)()]()\n",
+        "first_markdown_element": "",
+        "id": "78bf93023fc25639a8cff97507429a3281038c995e83bdd1a283bdb65442b300",
+        "check": "low-level-calls",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "request",
+            "source_mapping": {
+              "start": 3823,
+              "length": 1562,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "TownCrier",
+                "source_mapping": {
+                  "start": 25,
+                  "length": 8551,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              },
+              "signature": "request(uint8,address,bytes4,uint256,bytes32[])"
+            }
+          },
+          {
+            "type": "node",
+            "name": "! msg.sender.call.value(msg.value)()",
+            "source_mapping": {
+              "start": 4112,
+              "length": 35,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "request",
+                "source_mapping": {
+                  "start": 3823,
+                  "length": 1562,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "TownCrier",
+                    "source_mapping": {
+                      "start": 25,
+                      "length": 8551,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "request(uint8,address,bytes4,uint256,bytes32[])"
+                }
+              }
+            }
+          },
+          {
+            "type": "node",
+            "name": "! msg.sender.call.value(msg.value)()",
+            "source_mapping": {
+              "start": 4505,
+              "length": 35,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "request",
+                "source_mapping": {
+                  "start": 3823,
+                  "length": 1562,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "TownCrier",
+                    "source_mapping": {
+                      "start": 25,
+                      "length": 8551,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "request(uint8,address,bytes4,uint256,bytes32[])"
+                }
+              }
+            }
+          }
+        ],
+        "description": "Low level call in TownCrier.request(uint8,address,bytes4,uint256,bytes32[]) ():\n\t- ! msg.sender.call.value(msg.value)() ()\n\t- ! msg.sender.call.value(msg.value)() ()\n",
+        "markdown": "Low level call in [TownCrier.request(uint8,address,bytes4,uint256,bytes32[])]():\n\t- [! msg.sender.call.value(msg.value)()]()\n\t- [! msg.sender.call.value(msg.value)()]()\n",
+        "first_markdown_element": "",
+        "id": "7f4edd4849f684f15a0734203a4f8e0be9fb1dfd81fa31a42d4f1147cdc71b55",
+        "check": "low-level-calls",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "cancel",
+            "source_mapping": {
+              "start": 7639,
+              "length": 935,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "TownCrier",
+                "source_mapping": {
+                  "start": 25,
+                  "length": 8551,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              },
+              "signature": "cancel(uint64)"
+            }
+          },
+          {
+            "type": "node",
+            "name": "! msg.sender.call.value(fee - CANCELLATION_FEE)()",
+            "source_mapping": {
+              "start": 8167,
+              "length": 48,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "cancel",
+                "source_mapping": {
+                  "start": 7639,
+                  "length": 935,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "TownCrier",
+                    "source_mapping": {
+                      "start": 25,
+                      "length": 8551,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "cancel(uint64)"
+                }
+              }
+            }
+          }
+        ],
+        "description": "Low level call in TownCrier.cancel(uint64) ():\n\t- ! msg.sender.call.value(fee - CANCELLATION_FEE)() ()\n",
+        "markdown": "Low level call in [TownCrier.cancel(uint64)]():\n\t- [! msg.sender.call.value(fee - CANCELLATION_FEE)()]()\n",
+        "first_markdown_element": "",
+        "id": "c3b8382bbd409a0f76fbfe8621cf4f3f16d3ed31fe50d05305b1533648d6aa2c",
+        "check": "low-level-calls",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "DELIVERED_FEE_FLAG",
+            "source_mapping": {
+              "start": 1607,
+              "length": 43,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "TownCrier",
+                "source_mapping": {
+                  "start": 25,
+                  "length": 8551,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              }
+            },
+            "additional_fields": {
+              "target": "variable",
+              "convention": "mixedCase"
+            }
+          }
+        ],
+        "description": "Variable TownCrier.DELIVERED_FEE_FLAG () is not in mixedCase\n",
+        "markdown": "Variable [TownCrier.DELIVERED_FEE_FLAG]() is not in mixedCase\n",
+        "first_markdown_element": "",
+        "id": "1bcb55391e5fc34081528754d305de048532a017b72d992acf816ea261636f41",
+        "check": "naming-convention",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "SUCCESS_FLAG",
+            "source_mapping": {
+              "start": 1703,
+              "length": 36,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "TownCrier",
+                "source_mapping": {
+                  "start": 25,
+                  "length": 8551,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              }
+            },
+            "additional_fields": {
+              "target": "variable",
+              "convention": "mixedCase"
+            }
+          }
+        ],
+        "description": "Variable TownCrier.SUCCESS_FLAG () is not in mixedCase\n",
+        "markdown": "Variable [TownCrier.SUCCESS_FLAG]() is not in mixedCase\n",
+        "first_markdown_element": "",
+        "id": "287ab6d81736afb0347184789040cb6b98e21a79c34b9ab6ebd5f78aa0dcde84",
+        "check": "naming-convention",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "CANCELLATION_FEE",
+            "source_mapping": {
+              "start": 1433,
+              "length": 48,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "TownCrier",
+                "source_mapping": {
+                  "start": 25,
+                  "length": 8551,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              }
+            },
+            "additional_fields": {
+              "target": "variable",
+              "convention": "mixedCase"
+            }
+          }
+        ],
+        "description": "Variable TownCrier.CANCELLATION_FEE () is not in mixedCase\n",
+        "markdown": "Variable [TownCrier.CANCELLATION_FEE]() is not in mixedCase\n",
+        "first_markdown_element": "",
+        "id": "52789a672943d375548d2a1449e7a89287e3a952d3b46c924bf88a5c8a1e520e",
+        "check": "naming-convention",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "CANCELLED_FEE_FLAG",
+            "source_mapping": {
+              "start": 1558,
+              "length": 43,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "TownCrier",
+                "source_mapping": {
+                  "start": 25,
+                  "length": 8551,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              }
+            },
+            "additional_fields": {
+              "target": "variable",
+              "convention": "mixedCase"
+            }
+          }
+        ],
+        "description": "Variable TownCrier.CANCELLED_FEE_FLAG () is not in mixedCase\n",
+        "markdown": "Variable [TownCrier.CANCELLED_FEE_FLAG]() is not in mixedCase\n",
+        "first_markdown_element": "",
+        "id": "a10f2ea22ec315d17a40883e170165da9b0d1e73122e2931b10050490f3fb104",
+        "check": "naming-convention",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "MIN_FEE",
+            "source_mapping": {
+              "start": 1285,
+              "length": 39,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "TownCrier",
+                "source_mapping": {
+                  "start": 25,
+                  "length": 8551,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              }
+            },
+            "additional_fields": {
+              "target": "variable",
+              "convention": "mixedCase"
+            }
+          }
+        ],
+        "description": "Variable TownCrier.MIN_FEE () is not in mixedCase\n",
+        "markdown": "Variable [TownCrier.MIN_FEE]() is not in mixedCase\n",
+        "first_markdown_element": "",
+        "id": "e99fb487034d676366ab13014e2155a6c1a2501dd7226d53b220409d9a433c51",
+        "check": "naming-convention",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "GAS_PRICE",
+            "source_mapping": {
+              "start": 1245,
+              "length": 34,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "TownCrier",
+                "source_mapping": {
+                  "start": 25,
+                  "length": 8551,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              }
+            },
+            "additional_fields": {
+              "target": "variable",
+              "convention": "mixedCase"
+            }
+          }
+        ],
+        "description": "Variable TownCrier.GAS_PRICE () is not in mixedCase\n",
+        "markdown": "Variable [TownCrier.GAS_PRICE]() is not in mixedCase\n",
+        "first_markdown_element": "",
+        "id": "f33dc3bdc481b853104e8a7b89fba65898a4c71e98142277f38250e51f050a5c",
+        "check": "naming-convention",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "FAIL_FLAG",
+            "source_mapping": {
+              "start": 1656,
+              "length": 41,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "TownCrier",
+                "source_mapping": {
+                  "start": 25,
+                  "length": 8551,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              }
+            },
+            "additional_fields": {
+              "target": "variable",
+              "convention": "mixedCase"
+            }
+          }
+        ],
+        "description": "Variable TownCrier.FAIL_FLAG () is not in mixedCase\n",
+        "markdown": "Variable [TownCrier.FAIL_FLAG]() is not in mixedCase\n",
+        "first_markdown_element": "",
+        "id": "f578e47a28498f26f7096d77c273c373bb9436c9c89385ea689141024c49641b",
+        "check": "naming-convention",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "SGX_ADDRESS",
+            "source_mapping": {
+              "start": 1129,
+              "length": 80,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "TownCrier",
+                "source_mapping": {
+                  "start": 25,
+                  "length": 8551,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              }
+            },
+            "additional_fields": {
+              "target": "variable",
+              "convention": "mixedCase"
+            }
+          }
+        ],
+        "description": "Variable TownCrier.SGX_ADDRESS () is not in mixedCase\n",
+        "markdown": "Variable [TownCrier.SGX_ADDRESS]() is not in mixedCase\n",
+        "first_markdown_element": "",
+        "id": "fb18cf6e5208615af07d4879f2c5e97d386d7029fee03eb7e7ea86e3b86da8bf",
+        "check": "naming-convention",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "deliver",
+            "source_mapping": {
+              "start": 5391,
+              "length": 2242,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "TownCrier",
+                "source_mapping": {
+                  "start": 25,
+                  "length": 8551,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              },
+              "signature": "deliver(uint64,bytes32,uint64,bytes32)"
+            }
+          },
+          {
+            "type": "node",
+            "name": "SGX_ADDRESS.send(CANCELLATION_FEE)",
+            "source_mapping": {
+              "start": 6369,
+              "length": 34,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "deliver",
+                "source_mapping": {
+                  "start": 5391,
+                  "length": 2242,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "TownCrier",
+                    "source_mapping": {
+                      "start": 25,
+                      "length": 8551,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "deliver(uint64,bytes32,uint64,bytes32)"
+                }
+              }
+            },
+            "additional_fields": {
+              "underlying_type": "external_calls"
+            }
+          },
+          {
+            "type": "node",
+            "name": "requests[requestId].fee = DELIVERED_FEE_FLAG",
+            "source_mapping": {
+              "start": 6417,
+              "length": 44,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "deliver",
+                "source_mapping": {
+                  "start": 5391,
+                  "length": 2242,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "TownCrier",
+                    "source_mapping": {
+                      "start": 25,
+                      "length": 8551,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "deliver(uint64,bytes32,uint64,bytes32)"
+                }
+              }
+            },
+            "additional_fields": {
+              "underlying_type": "variables_written",
+              "variable_name": "requests"
+            }
+          },
+          {
+            "type": "node",
+            "name": "unrespondedCnt --",
+            "source_mapping": {
+              "start": 6475,
+              "length": 16,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "deliver",
+                "source_mapping": {
+                  "start": 5391,
+                  "length": 2242,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "TownCrier",
+                    "source_mapping": {
+                      "start": 25,
+                      "length": 8551,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "deliver(uint64,bytes32,uint64,bytes32)"
+                }
+              }
+            },
+            "additional_fields": {
+              "underlying_type": "variables_written",
+              "variable_name": "unrespondedCnt"
+            }
+          }
+        ],
+        "description": "Reentrancy in TownCrier.deliver(uint64,bytes32,uint64,bytes32) ():\n\tExternal calls:\n\t- SGX_ADDRESS.send(CANCELLATION_FEE) ()\n\tState variables written after the call(s):\n\t- requests[requestId].fee = DELIVERED_FEE_FLAG ()\n\t- unrespondedCnt -- ()\n",
+        "markdown": "Reentrancy in [TownCrier.deliver(uint64,bytes32,uint64,bytes32)]():\n\tExternal calls:\n\t- [SGX_ADDRESS.send(CANCELLATION_FEE)]()\n\tState variables written after the call(s):\n\t- [requests[requestId].fee = DELIVERED_FEE_FLAG]()\n\t- [unrespondedCnt --]()\n",
+        "first_markdown_element": "",
+        "id": "87b845b5f0febc4f9e8241890db7d134aa1a5c330ab6f877aaeb65fe9af3d782",
+        "check": "reentrancy-unlimited-gas",
+        "impact": "Informational",
+        "confidence": "Medium"
+      },
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "deliver",
+            "source_mapping": {
+              "start": 5391,
+              "length": 2242,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "TownCrier",
+                "source_mapping": {
+                  "start": 25,
+                  "length": 8551,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              },
+              "signature": "deliver(uint64,bytes32,uint64,bytes32)"
+            }
+          },
+          {
+            "type": "node",
+            "name": "SGX_ADDRESS.send(fee)",
+            "source_mapping": {
+              "start": 6788,
+              "length": 21,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "deliver",
+                "source_mapping": {
+                  "start": 5391,
+                  "length": 2242,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "TownCrier",
+                    "source_mapping": {
+                      "start": 25,
+                      "length": 8551,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "deliver(uint64,bytes32,uint64,bytes32)"
+                }
+              }
+            },
+            "additional_fields": {
+              "underlying_type": "external_calls"
+            }
+          },
+          {
+            "type": "node",
+            "name": "SGX_ADDRESS.send(fee)",
+            "source_mapping": {
+              "start": 6788,
+              "length": 21,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "deliver",
+                "source_mapping": {
+                  "start": 5391,
+                  "length": 2242,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "TownCrier",
+                    "source_mapping": {
+                      "start": 25,
+                      "length": 8551,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "deliver(uint64,bytes32,uint64,bytes32)"
+                }
+              }
+            },
+            "additional_fields": {
+              "underlying_type": "external_calls_sending_eth"
+            }
+          },
+          {
+            "type": "node",
+            "name": "requests[requestId].requester.call.gas(2300).value(fee)()",
+            "source_mapping": {
+              "start": 6936,
+              "length": 57,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "deliver",
+                "source_mapping": {
+                  "start": 5391,
+                  "length": 2242,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "TownCrier",
+                    "source_mapping": {
+                      "start": 25,
+                      "length": 8551,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "deliver(uint64,bytes32,uint64,bytes32)"
+                }
+              }
+            },
+            "additional_fields": {
+              "underlying_type": "external_calls_sending_eth"
+            }
+          },
+          {
+            "type": "node",
+            "name": "externalCallFlag = true",
+            "source_mapping": {
+              "start": 7386,
+              "length": 23,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "deliver",
+                "source_mapping": {
+                  "start": 5391,
+                  "length": 2242,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "TownCrier",
+                    "source_mapping": {
+                      "start": 25,
+                      "length": 8551,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "deliver(uint64,bytes32,uint64,bytes32)"
+                }
+              }
+            },
+            "additional_fields": {
+              "underlying_type": "variables_written",
+              "variable_name": "externalCallFlag"
+            }
+          },
+          {
+            "type": "node",
+            "name": "externalCallFlag = false",
+            "source_mapping": {
+              "start": 7602,
+              "length": 24,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "deliver",
+                "source_mapping": {
+                  "start": 5391,
+                  "length": 2242,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "TownCrier",
+                    "source_mapping": {
+                      "start": 25,
+                      "length": 8551,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "deliver(uint64,bytes32,uint64,bytes32)"
+                }
+              }
+            },
+            "additional_fields": {
+              "underlying_type": "variables_written",
+              "variable_name": "externalCallFlag"
+            }
+          },
+          {
+            "type": "node",
+            "name": "DeliverInfo(requestId,fee,tx.gasprice,msg.gas,callbackGas,paramsHash,error,respData)",
+            "source_mapping": {
+              "start": 7148,
+              "length": 91,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "deliver",
+                "source_mapping": {
+                  "start": 5391,
+                  "length": 2242,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "TownCrier",
+                    "source_mapping": {
+                      "start": 25,
+                      "length": 8551,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "deliver(uint64,bytes32,uint64,bytes32)"
+                }
+              }
+            },
+            "additional_fields": {
+              "underlying_type": "event"
+            }
+          }
+        ],
+        "description": "Reentrancy in TownCrier.deliver(uint64,bytes32,uint64,bytes32) ():\n\tExternal calls:\n\t- SGX_ADDRESS.send(fee) ()\n\tExternal calls sending eth:\n\t- SGX_ADDRESS.send(fee) ()\n\t- requests[requestId].requester.call.gas(2300).value(fee)() ()\n\tState variables written after the call(s):\n\t- externalCallFlag = true ()\n\t- externalCallFlag = false ()\n\tEvent emitted after the call(s):\n\t- DeliverInfo(requestId,fee,tx.gasprice,msg.gas,callbackGas,paramsHash,error,respData) ()\n",
+        "markdown": "Reentrancy in [TownCrier.deliver(uint64,bytes32,uint64,bytes32)]():\n\tExternal calls:\n\t- [SGX_ADDRESS.send(fee)]()\n\tExternal calls sending eth:\n\t- [SGX_ADDRESS.send(fee)]()\n\t- [requests[requestId].requester.call.gas(2300).value(fee)()]()\n\tState variables written after the call(s):\n\t- [externalCallFlag = true]()\n\t- [externalCallFlag = false]()\n\tEvent emitted after the call(s):\n\t- [DeliverInfo(requestId,fee,tx.gasprice,msg.gas,callbackGas,paramsHash,error,respData)]()\n",
+        "first_markdown_element": "",
+        "id": "f54873dcbf177ea964ca34a5c559e53e697bf63c2e8b2898e32e643f86e4bd05",
+        "check": "reentrancy-unlimited-gas",
+        "impact": "Informational",
+        "confidence": "Medium"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "SGX_ADDRESS",
+            "source_mapping": {
+              "start": 1129,
+              "length": 80,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "TownCrier",
+                "source_mapping": {
+                  "start": 25,
+                  "length": 8551,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              }
+            }
+          }
+        ],
+        "description": "TownCrier.SGX_ADDRESS () should be constant \n",
+        "markdown": "[TownCrier.SGX_ADDRESS]() should be constant \n",
+        "first_markdown_element": "",
+        "id": "4b3d3dbc92774f7394f05c65dc3520d30b2dd73ef9650ffb7e1d6952e1e121d8",
+        "check": "constable-states",
+        "impact": "Optimization",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "FAIL_FLAG",
+            "source_mapping": {
+              "start": 1656,
+              "length": 41,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "TownCrier",
+                "source_mapping": {
+                  "start": 25,
+                  "length": 8551,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              }
+            }
+          }
+        ],
+        "description": "TownCrier.FAIL_FLAG () should be constant \n",
+        "markdown": "[TownCrier.FAIL_FLAG]() should be constant \n",
+        "first_markdown_element": "",
+        "id": "9b32d11a94a0f48fb4ca1332af979f9b75196e2477d88405ddfc57a680ce3623",
+        "check": "constable-states",
+        "impact": "Optimization",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "SUCCESS_FLAG",
+            "source_mapping": {
+              "start": 1703,
+              "length": 36,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "TownCrier",
+                "source_mapping": {
+                  "start": 25,
+                  "length": 8551,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              }
+            }
+          }
+        ],
+        "description": "TownCrier.SUCCESS_FLAG () should be constant \n",
+        "markdown": "[TownCrier.SUCCESS_FLAG]() should be constant \n",
+        "first_markdown_element": "",
+        "id": "a072b3d14147cf47a88af58f1795e02489a85b90b10039eea1a65a974d1b0c53",
+        "check": "constable-states",
+        "impact": "Optimization",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "DELIVERED_FEE_FLAG",
+            "source_mapping": {
+              "start": 1607,
+              "length": 43,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "TownCrier",
+                "source_mapping": {
+                  "start": 25,
+                  "length": 8551,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              }
+            }
+          }
+        ],
+        "description": "TownCrier.DELIVERED_FEE_FLAG () should be constant \n",
+        "markdown": "[TownCrier.DELIVERED_FEE_FLAG]() should be constant \n",
+        "first_markdown_element": "",
+        "id": "d9a2d208a907bd35a85d00dacd6a120c8c0e798e0c05e180494b6de2b8d9c254",
+        "check": "constable-states",
+        "impact": "Optimization",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "CANCELLED_FEE_FLAG",
+            "source_mapping": {
+              "start": 1558,
+              "length": 43,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "TownCrier",
+                "source_mapping": {
+                  "start": 25,
+                  "length": 8551,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              }
+            }
+          }
+        ],
+        "description": "TownCrier.CANCELLED_FEE_FLAG () should be constant \n",
+        "markdown": "[TownCrier.CANCELLED_FEE_FLAG]() should be constant \n",
+        "first_markdown_element": "",
+        "id": "f47f030226a987452ae992438fc7d9c046d36bf4920077d9b28d1c7acf3bd5f7",
+        "check": "constable-states",
+        "impact": "Optimization",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "request",
+            "source_mapping": {
+              "start": 3823,
+              "length": 1562,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "TownCrier",
+                "source_mapping": {
+                  "start": 25,
+                  "length": 8551,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              },
+              "signature": "request(uint8,address,bytes4,uint256,bytes32[])"
+            }
+          }
+        ],
+        "description": "request(uint8,address,bytes4,uint256,bytes32[]) should be declared external:\n\t- TownCrier.request(uint8,address,bytes4,uint256,bytes32[]) ()\n",
+        "markdown": "request(uint8,address,bytes4,uint256,bytes32[]) should be declared external:\n\t- [TownCrier.request(uint8,address,bytes4,uint256,bytes32[])]()\n",
+        "first_markdown_element": "",
+        "id": "15069203698a3440677be7ceca46412907340c1bee61f25ecc931119d51a743b",
+        "check": "external-function",
+        "impact": "Optimization",
+        "confidence": "High"
+      }
+    ]
+  }
+}

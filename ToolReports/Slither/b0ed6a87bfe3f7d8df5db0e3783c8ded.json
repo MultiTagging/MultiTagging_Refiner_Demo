@@ -1,0 +1,1740 @@
+{
+  "success": true,
+  "error": null,
+  "results": {
+    "detectors": [
+      {
+        "elements": [
+          {
+            "type": "contract",
+            "name": "Investment",
+            "source_mapping": {
+              "start": 24,
+              "length": 4078,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            }
+          },
+          {
+            "type": "node",
+            "name": "investors.push(msg.sender)",
+            "source_mapping": {
+              "start": 1354,
+              "length": 26,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "invest",
+                "source_mapping": {
+                  "start": 1196,
+                  "length": 358,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "Investment",
+                    "source_mapping": {
+                      "start": 24,
+                      "length": 4078,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "invest()"
+                }
+              }
+            }
+          }
+        ],
+        "description": "Investment () contract sets array length with a user-controlled value:\n\t- investors.push(msg.sender) ()\n",
+        "markdown": "[Investment]() contract sets array length with a user-controlled value:\n\t- [investors.push(msg.sender)]()\n",
+        "first_markdown_element": "",
+        "id": "b27af83d338c03d01fa2dbd7cdccd1fa202d2843f805a371cec8f50e1624e818",
+        "check": "controlled-array-length",
+        "impact": "High",
+        "confidence": "Medium"
+      },
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "calcReturnValue",
+            "source_mapping": {
+              "start": 1892,
+              "length": 639,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "Investment",
+                "source_mapping": {
+                  "start": 24,
+                  "length": 4078,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              },
+              "signature": "calcReturnValue(uint256,uint256)"
+            }
+          },
+          {
+            "type": "node",
+            "name": "value / 10 * rates[i]",
+            "source_mapping": {
+              "start": 2473,
+              "length": 24,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "calcReturnValue",
+                "source_mapping": {
+                  "start": 1892,
+                  "length": 639,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "Investment",
+                    "source_mapping": {
+                      "start": 24,
+                      "length": 4078,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "calcReturnValue(uint256,uint256)"
+                }
+              }
+            }
+          }
+        ],
+        "description": "Investment.calcReturnValue(uint256,uint256) () performs a multiplication on the result of a division:\n\t- value / 10 * rates[i] ()\n",
+        "markdown": "[Investment.calcReturnValue(uint256,uint256)]() performs a multiplication on the result of a division:\n\t- [value / 10 * rates[i]]()\n",
+        "first_markdown_element": "",
+        "id": "635a5f1d8eedc07579b03e50053495097933f0d2f9fa3a91801635499d5e2daa",
+        "check": "divide-before-multiply",
+        "impact": "Medium",
+        "confidence": "Medium"
+      },
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "calcReturnValue",
+            "source_mapping": {
+              "start": 1892,
+              "length": 639,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "Investment",
+                "source_mapping": {
+                  "start": 24,
+                  "length": 4078,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              },
+              "signature": "calcReturnValue(uint256,uint256)"
+            }
+          },
+          {
+            "type": "node",
+            "name": "(value - remainingVal) / 10 * rates[i] + calcReturnValue(remainingVal,limits[i + 1])",
+            "source_mapping": {
+              "start": 2324,
+              "length": 86,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "calcReturnValue",
+                "source_mapping": {
+                  "start": 1892,
+                  "length": 639,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "Investment",
+                    "source_mapping": {
+                      "start": 24,
+                      "length": 4078,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "calcReturnValue(uint256,uint256)"
+                }
+              }
+            }
+          }
+        ],
+        "description": "Investment.calcReturnValue(uint256,uint256) () performs a multiplication on the result of a division:\n\t- (value - remainingVal) / 10 * rates[i] + calcReturnValue(remainingVal,limits[i + 1]) ()\n",
+        "markdown": "[Investment.calcReturnValue(uint256,uint256)]() performs a multiplication on the result of a division:\n\t- [(value - remainingVal) / 10 * rates[i] + calcReturnValue(remainingVal,limits[i + 1])]()\n",
+        "first_markdown_element": "",
+        "id": "e0e3ce5158c5ee64685753cd474add8c340da8d88a806c72ef4040713e4bc9bc",
+        "check": "divide-before-multiply",
+        "impact": "Medium",
+        "confidence": "Medium"
+      },
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "calcReturnValue",
+            "source_mapping": {
+              "start": 1892,
+              "length": 639,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "Investment",
+                "source_mapping": {
+                  "start": 24,
+                  "length": 4078,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              },
+              "signature": "calcReturnValue(uint256,uint256)"
+            }
+          },
+          {
+            "type": "node",
+            "name": "value / 10 * rates[limits.length - 1]",
+            "source_mapping": {
+              "start": 2010,
+              "length": 38,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "calcReturnValue",
+                "source_mapping": {
+                  "start": 1892,
+                  "length": 639,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "Investment",
+                    "source_mapping": {
+                      "start": 24,
+                      "length": 4078,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "calcReturnValue(uint256,uint256)"
+                }
+              }
+            }
+          }
+        ],
+        "description": "Investment.calcReturnValue(uint256,uint256) () performs a multiplication on the result of a division:\n\t- value / 10 * rates[limits.length - 1] ()\n",
+        "markdown": "[Investment.calcReturnValue(uint256,uint256)]() performs a multiplication on the result of a division:\n\t- [value / 10 * rates[limits.length - 1]]()\n",
+        "first_markdown_element": "",
+        "id": "e2e72a87015a4290d2749ecd573e941a282799dbfb3141cfe893258f851a31a0",
+        "check": "divide-before-multiply",
+        "impact": "Medium",
+        "confidence": "Medium"
+      },
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "calcReturnValue",
+            "source_mapping": {
+              "start": 1892,
+              "length": 639,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "Investment",
+                "source_mapping": {
+                  "start": 24,
+                  "length": 4078,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              },
+              "signature": "calcReturnValue(uint256,uint256)"
+            }
+          },
+          {
+            "type": "node",
+            "name": "i >= 0",
+            "source_mapping": {
+              "start": 2089,
+              "length": 6,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "calcReturnValue",
+                "source_mapping": {
+                  "start": 1892,
+                  "length": 639,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "Investment",
+                    "source_mapping": {
+                      "start": 24,
+                      "length": 4078,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "calcReturnValue(uint256,uint256)"
+                }
+              }
+            }
+          }
+        ],
+        "description": "Investment.calcReturnValue(uint256,uint256) () contains a tautology or contradiction:\n\t- i >= 0 ()\n",
+        "markdown": "[Investment.calcReturnValue(uint256,uint256)]() contains a tautology or contradiction:\n\t- [i >= 0]()\n",
+        "first_markdown_element": "",
+        "id": "2f456eb1f34d43bb949c80b18813f57de2e9c2b37a5ef18ade71ae1d77a41ead",
+        "check": "tautology",
+        "impact": "Medium",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "withdraw",
+            "source_mapping": {
+              "start": 2611,
+              "length": 114,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "Investment",
+                "source_mapping": {
+                  "start": 24,
+                  "length": 4078,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              },
+              "signature": "withdraw()"
+            }
+          },
+          {
+            "type": "node",
+            "name": "msg.sender.send(this.balance)",
+            "source_mapping": {
+              "start": 2677,
+              "length": 29,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "withdraw",
+                "source_mapping": {
+                  "start": 2611,
+                  "length": 114,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "Investment",
+                    "source_mapping": {
+                      "start": 24,
+                      "length": 4078,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "withdraw()"
+                }
+              }
+            }
+          }
+        ],
+        "description": "Investment.withdraw() () ignores return value by msg.sender.send(this.balance) ()\n",
+        "markdown": "[Investment.withdraw()]() ignores return value by [msg.sender.send(this.balance)]()\n",
+        "first_markdown_element": "",
+        "id": "6b9e854e7e00560be61473adb147afa9c412837b2a59a2f944f2f2ad3958b39b",
+        "check": "unchecked-send",
+        "impact": "Medium",
+        "confidence": "Medium"
+      },
+      {
+        "elements": [
+          {
+            "type": "node",
+            "name": "",
+            "source_mapping": {
+              "start": 1243,
+              "length": 5,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "invest",
+                "source_mapping": {
+                  "start": 1196,
+                  "length": 358,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "Investment",
+                    "source_mapping": {
+                      "start": 24,
+                      "length": 4078,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "invest()"
+                }
+              }
+            }
+          }
+        ],
+        "description": "Deprecated standard detected THROW ():\n\t- Usage of \"throw\" should be replaced with \"revert()\"\n",
+        "markdown": "Deprecated standard detected [THROW]():\n\t- Usage of \"throw\" should be replaced with \"revert()\"\n",
+        "first_markdown_element": "",
+        "id": "f5556cf1c70b64b9e4b1fc32044dd970b5f2c8b9fc21b7971fda01971033f2d5",
+        "check": "deprecated-standards",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "pragma",
+            "name": "^0.4.7",
+            "source_mapping": {
+              "start": 0,
+              "length": 23,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "directive": [
+                "solidity",
+                "^",
+                "0.4",
+                ".7"
+              ]
+            }
+          }
+        ],
+        "description": "Pragma version^0.4.7 () allows old versions\n",
+        "markdown": "Pragma version[^0.4.7]() allows old versions\n",
+        "first_markdown_element": "",
+        "id": "19b4e6fe0c8fd473181729d79ef9f54084b896dfc8e5bf978fcdbcfffa45e4ec",
+        "check": "solc-version",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [],
+        "description": "solc-0.4.7 is not recommended for deployment\n",
+        "markdown": "solc-0.4.7 is not recommended for deployment\n",
+        "first_markdown_element": "",
+        "id": "855c0e909efe68facf4fb6d0d5e26ae5c0c40476f3ff7031fd529142c651bb4d",
+        "check": "solc-version",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "returnInvestmentRecursive",
+            "source_mapping": {
+              "start": 3008,
+              "length": 728,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "Investment",
+                "source_mapping": {
+                  "start": 24,
+                  "length": 4078,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              },
+              "signature": "returnInvestmentRecursive(uint256)"
+            }
+          },
+          {
+            "type": "node",
+            "name": "! investors[investorIndex].send(val)",
+            "source_mapping": {
+              "start": 3497,
+              "length": 35,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "returnInvestmentRecursive",
+                "source_mapping": {
+                  "start": 3008,
+                  "length": 728,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "Investment",
+                    "source_mapping": {
+                      "start": 24,
+                      "length": 4078,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "returnInvestmentRecursive(uint256)"
+                }
+              }
+            },
+            "additional_fields": {
+              "underlying_type": "external_calls"
+            }
+          },
+          {
+            "type": "node",
+            "name": "returnInvestmentRecursive(value - val)",
+            "source_mapping": {
+              "start": 3582,
+              "length": 36,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "returnInvestmentRecursive",
+                "source_mapping": {
+                  "start": 3008,
+                  "length": 728,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "Investment",
+                    "source_mapping": {
+                      "start": 24,
+                      "length": 4078,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "returnInvestmentRecursive(uint256)"
+                }
+              }
+            },
+            "additional_fields": {
+              "underlying_type": "external_calls"
+            }
+          },
+          {
+            "type": "node",
+            "name": "! investors[investorIndex].send(value)",
+            "source_mapping": {
+              "start": 3260,
+              "length": 37,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "returnInvestmentRecursive",
+                "source_mapping": {
+                  "start": 3008,
+                  "length": 728,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "Investment",
+                    "source_mapping": {
+                      "start": 24,
+                      "length": 4078,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "returnInvestmentRecursive(uint256)"
+                }
+              }
+            },
+            "additional_fields": {
+              "underlying_type": "external_calls_sending_eth"
+            }
+          },
+          {
+            "type": "node",
+            "name": "! investors[investorIndex].send(val)",
+            "source_mapping": {
+              "start": 3497,
+              "length": 35,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "returnInvestmentRecursive",
+                "source_mapping": {
+                  "start": 3008,
+                  "length": 728,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "Investment",
+                    "source_mapping": {
+                      "start": 24,
+                      "length": 4078,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "returnInvestmentRecursive(uint256)"
+                }
+              }
+            },
+            "additional_fields": {
+              "underlying_type": "external_calls_sending_eth"
+            }
+          },
+          {
+            "type": "node",
+            "name": "returnInvestmentRecursive(value - val)",
+            "source_mapping": {
+              "start": 3582,
+              "length": 36,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "returnInvestmentRecursive",
+                "source_mapping": {
+                  "start": 3008,
+                  "length": 728,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "Investment",
+                    "source_mapping": {
+                      "start": 24,
+                      "length": 4078,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "returnInvestmentRecursive(uint256)"
+                }
+              }
+            },
+            "additional_fields": {
+              "underlying_type": "variables_written",
+              "variable_name": "balances"
+            }
+          },
+          {
+            "type": "node",
+            "name": "balances[investors[investorIndex]] -= value",
+            "source_mapping": {
+              "start": 3202,
+              "length": 41,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "returnInvestmentRecursive",
+                "source_mapping": {
+                  "start": 3008,
+                  "length": 728,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "Investment",
+                    "source_mapping": {
+                      "start": 24,
+                      "length": 4078,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "returnInvestmentRecursive(uint256)"
+                }
+              }
+            },
+            "additional_fields": {
+              "underlying_type": "variables_written",
+              "variable_name": "balances"
+            }
+          },
+          {
+            "type": "node",
+            "name": "balances[investors[investorIndex]] = 0",
+            "source_mapping": {
+              "start": 3444,
+              "length": 36,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "returnInvestmentRecursive",
+                "source_mapping": {
+                  "start": 3008,
+                  "length": 728,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "Investment",
+                    "source_mapping": {
+                      "start": 24,
+                      "length": 4078,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "returnInvestmentRecursive(uint256)"
+                }
+              }
+            },
+            "additional_fields": {
+              "underlying_type": "variables_written",
+              "variable_name": "balances"
+            }
+          },
+          {
+            "type": "node",
+            "name": "returnInvestmentRecursive(value - val)",
+            "source_mapping": {
+              "start": 3582,
+              "length": 36,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "returnInvestmentRecursive",
+                "source_mapping": {
+                  "start": 3008,
+                  "length": 728,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "Investment",
+                    "source_mapping": {
+                      "start": 24,
+                      "length": 4078,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "returnInvestmentRecursive(uint256)"
+                }
+              }
+            },
+            "additional_fields": {
+              "underlying_type": "variables_written",
+              "variable_name": "investorIndex"
+            }
+          },
+          {
+            "type": "node",
+            "name": "investorIndex ++",
+            "source_mapping": {
+              "start": 3553,
+              "length": 15,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "returnInvestmentRecursive",
+                "source_mapping": {
+                  "start": 3008,
+                  "length": 728,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "Investment",
+                    "source_mapping": {
+                      "start": 24,
+                      "length": 4078,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "returnInvestmentRecursive(uint256)"
+                }
+              }
+            },
+            "additional_fields": {
+              "underlying_type": "variables_written",
+              "variable_name": "investorIndex"
+            }
+          },
+          {
+            "type": "node",
+            "name": "investorIndex ++",
+            "source_mapping": {
+              "start": 3657,
+              "length": 15,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "returnInvestmentRecursive",
+                "source_mapping": {
+                  "start": 3008,
+                  "length": 728,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "Investment",
+                    "source_mapping": {
+                      "start": 24,
+                      "length": 4078,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "returnInvestmentRecursive(uint256)"
+                }
+              }
+            },
+            "additional_fields": {
+              "underlying_type": "variables_written",
+              "variable_name": "investorIndex"
+            }
+          }
+        ],
+        "description": "Reentrancy in Investment.returnInvestmentRecursive(uint256) ():\n\tExternal calls:\n\t- ! investors[investorIndex].send(val) ()\n\t- returnInvestmentRecursive(value - val) ()\n\t\t- ! investors[investorIndex].send(value) ()\n\t\t- ! investors[investorIndex].send(val) ()\n\tState variables written after the call(s):\n\t- returnInvestmentRecursive(value - val) ()\n\t\t- balances[investors[investorIndex]] -= value ()\n\t\t- balances[investors[investorIndex]] = 0 ()\n\t- returnInvestmentRecursive(value - val) ()\n\t\t- investorIndex ++ ()\n\t\t- investorIndex ++ ()\n",
+        "markdown": "Reentrancy in [Investment.returnInvestmentRecursive(uint256)]():\n\tExternal calls:\n\t- [! investors[investorIndex].send(val)]()\n\t- [returnInvestmentRecursive(value - val)]()\n\t\t- [! investors[investorIndex].send(value)]()\n\t\t- [! investors[investorIndex].send(val)]()\n\tState variables written after the call(s):\n\t- [returnInvestmentRecursive(value - val)]()\n\t\t- [balances[investors[investorIndex]] -= value]()\n\t\t- [balances[investors[investorIndex]] = 0]()\n\t- [returnInvestmentRecursive(value - val)]()\n\t\t- [investorIndex ++]()\n\t\t- [investorIndex ++]()\n",
+        "first_markdown_element": "",
+        "id": "24e81d8fb55ef7461126ef65114599f13040a7d84121bbcc9915e1c7cbae8268",
+        "check": "reentrancy-unlimited-gas",
+        "impact": "Informational",
+        "confidence": "Medium"
+      },
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "returnInvestmentRecursive",
+            "source_mapping": {
+              "start": 3008,
+              "length": 728,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "Investment",
+                "source_mapping": {
+                  "start": 24,
+                  "length": 4078,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              },
+              "signature": "returnInvestmentRecursive(uint256)"
+            }
+          },
+          {
+            "type": "node",
+            "name": "! investors[investorIndex].send(val)",
+            "source_mapping": {
+              "start": 3497,
+              "length": 35,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "returnInvestmentRecursive",
+                "source_mapping": {
+                  "start": 3008,
+                  "length": 728,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "Investment",
+                    "source_mapping": {
+                      "start": 24,
+                      "length": 4078,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "returnInvestmentRecursive(uint256)"
+                }
+              }
+            },
+            "additional_fields": {
+              "underlying_type": "external_calls"
+            }
+          },
+          {
+            "type": "node",
+            "name": "investorIndex ++",
+            "source_mapping": {
+              "start": 3553,
+              "length": 15,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "returnInvestmentRecursive",
+                "source_mapping": {
+                  "start": 3008,
+                  "length": 728,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "Investment",
+                    "source_mapping": {
+                      "start": 24,
+                      "length": 4078,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "returnInvestmentRecursive(uint256)"
+                }
+              }
+            },
+            "additional_fields": {
+              "underlying_type": "variables_written",
+              "variable_name": "investorIndex"
+            }
+          }
+        ],
+        "description": "Reentrancy in Investment.returnInvestmentRecursive(uint256) ():\n\tExternal calls:\n\t- ! investors[investorIndex].send(val) ()\n\tState variables written after the call(s):\n\t- investorIndex ++ ()\n",
+        "markdown": "Reentrancy in [Investment.returnInvestmentRecursive(uint256)]():\n\tExternal calls:\n\t- [! investors[investorIndex].send(val)]()\n\tState variables written after the call(s):\n\t- [investorIndex ++]()\n",
+        "first_markdown_element": "",
+        "id": "2a377a36177312fb51dc52e566fef54268229f890af2c11c1764960e6d47e9d4",
+        "check": "reentrancy-unlimited-gas",
+        "impact": "Informational",
+        "confidence": "Medium"
+      },
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "returnInvestment",
+            "source_mapping": {
+              "start": 2792,
+              "length": 118,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "Investment",
+                "source_mapping": {
+                  "start": 24,
+                  "length": 4078,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              },
+              "signature": "returnInvestment()"
+            }
+          },
+          {
+            "type": "node",
+            "name": "returnInvestmentRecursive(msg.value)",
+            "source_mapping": {
+              "start": 2837,
+              "length": 36,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "returnInvestment",
+                "source_mapping": {
+                  "start": 2792,
+                  "length": 118,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "Investment",
+                    "source_mapping": {
+                      "start": 24,
+                      "length": 4078,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "returnInvestment()"
+                }
+              }
+            },
+            "additional_fields": {
+              "underlying_type": "external_calls"
+            }
+          },
+          {
+            "type": "node",
+            "name": "! investors[investorIndex].send(value)",
+            "source_mapping": {
+              "start": 3260,
+              "length": 37,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "returnInvestmentRecursive",
+                "source_mapping": {
+                  "start": 3008,
+                  "length": 728,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "Investment",
+                    "source_mapping": {
+                      "start": 24,
+                      "length": 4078,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "returnInvestmentRecursive(uint256)"
+                }
+              }
+            },
+            "additional_fields": {
+              "underlying_type": "external_calls_sending_eth"
+            }
+          },
+          {
+            "type": "node",
+            "name": "! investors[investorIndex].send(val)",
+            "source_mapping": {
+              "start": 3497,
+              "length": 35,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "returnInvestmentRecursive",
+                "source_mapping": {
+                  "start": 3008,
+                  "length": 728,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "Investment",
+                    "source_mapping": {
+                      "start": 24,
+                      "length": 4078,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "returnInvestmentRecursive(uint256)"
+                }
+              }
+            },
+            "additional_fields": {
+              "underlying_type": "external_calls_sending_eth"
+            }
+          },
+          {
+            "type": "node",
+            "name": "Returned(msg.value)",
+            "source_mapping": {
+              "start": 2883,
+              "length": 19,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "returnInvestment",
+                "source_mapping": {
+                  "start": 2792,
+                  "length": 118,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "Investment",
+                    "source_mapping": {
+                      "start": 24,
+                      "length": 4078,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "returnInvestment()"
+                }
+              }
+            },
+            "additional_fields": {
+              "underlying_type": "event"
+            }
+          }
+        ],
+        "description": "Reentrancy in Investment.returnInvestment() ():\n\tExternal calls:\n\t- returnInvestmentRecursive(msg.value) ()\n\t\t- ! investors[investorIndex].send(value) ()\n\t\t- ! investors[investorIndex].send(val) ()\n\tEvent emitted after the call(s):\n\t- Returned(msg.value) ()\n",
+        "markdown": "Reentrancy in [Investment.returnInvestment()]():\n\tExternal calls:\n\t- [returnInvestmentRecursive(msg.value)]()\n\t\t- [! investors[investorIndex].send(value)]()\n\t\t- [! investors[investorIndex].send(val)]()\n\tEvent emitted after the call(s):\n\t- [Returned(msg.value)]()\n",
+        "first_markdown_element": "",
+        "id": "699dbe374d3ff97cfdda68b77ce400e924df41480b626b2700bf15966fedb9df",
+        "check": "reentrancy-unlimited-gas",
+        "impact": "Informational",
+        "confidence": "Medium"
+      },
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "Investment",
+            "source_mapping": {
+              "start": 849,
+              "length": 193,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "Investment",
+                "source_mapping": {
+                  "start": 24,
+                  "length": 4078,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              },
+              "signature": "Investment()"
+            }
+          },
+          {
+            "type": "node",
+            "name": "limits = (0,1000000000000000000000,4000000000000000000000,10000000000000000000000)",
+            "source_mapping": {
+              "start": 908,
+              "length": 84,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "Investment",
+                "source_mapping": {
+                  "start": 849,
+                  "length": 193,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "Investment",
+                    "source_mapping": {
+                      "start": 24,
+                      "length": 4078,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "Investment()"
+                }
+              }
+            }
+          }
+        ],
+        "description": "Investment.Investment() () uses literals with too many digits:\n\t- limits = (0,1000000000000000000000,4000000000000000000000,10000000000000000000000) ()\n",
+        "markdown": "[Investment.Investment()]() uses literals with too many digits:\n\t- [limits = (0,1000000000000000000000,4000000000000000000000,10000000000000000000000)]()\n",
+        "first_markdown_element": "",
+        "id": "a893761b300152584f8d3376a2cb3faaf35b24711a38a8e7f88463e87dbb5c70",
+        "check": "too-many-digits",
+        "impact": "Informational",
+        "confidence": "Medium"
+      }
+    ]
+  }
+}

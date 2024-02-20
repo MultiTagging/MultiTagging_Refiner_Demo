@@ -1,0 +1,756 @@
+{
+  "success": true,
+  "error": null,
+  "results": {
+    "detectors": [
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "collect",
+            "source_mapping": {
+              "start": 2750,
+              "length": 548,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "Remittances",
+                "source_mapping": {
+                  "start": 221,
+                  "length": 3721,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              },
+              "signature": "collect(bytes8,bytes8)"
+            }
+          },
+          {
+            "type": "node",
+            "name": "! msg.sender.call.value(amount)()",
+            "source_mapping": {
+              "start": 3125,
+              "length": 32,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "collect",
+                "source_mapping": {
+                  "start": 2750,
+                  "length": 548,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "Remittances",
+                    "source_mapping": {
+                      "start": 221,
+                      "length": 3721,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "collect(bytes8,bytes8)"
+                }
+              }
+            }
+          }
+        ],
+        "description": "Remittances.collect(bytes8,bytes8) () sends eth to arbitrary user\n\tDangerous calls:\n\t- ! msg.sender.call.value(amount)() ()\n",
+        "markdown": "[Remittances.collect(bytes8,bytes8)]() sends eth to arbitrary user\n\tDangerous calls:\n\t- [! msg.sender.call.value(amount)()]()\n",
+        "first_markdown_element": "",
+        "id": "192b7f875732ce2eb720aa68bf8832d60fb1a4b265f85628353cbbbfb8e069e1",
+        "check": "arbitrary-send-eth",
+        "impact": "High",
+        "confidence": "Medium"
+      },
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "collect",
+            "source_mapping": {
+              "start": 2750,
+              "length": 548,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "Remittances",
+                "source_mapping": {
+                  "start": 221,
+                  "length": 3721,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              },
+              "signature": "collect(bytes8,bytes8)"
+            }
+          },
+          {
+            "type": "node",
+            "name": "! msg.sender.call.value(amount)()",
+            "source_mapping": {
+              "start": 3125,
+              "length": 32,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "collect",
+                "source_mapping": {
+                  "start": 2750,
+                  "length": 548,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "Remittances",
+                    "source_mapping": {
+                      "start": 221,
+                      "length": 3721,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "collect(bytes8,bytes8)"
+                }
+              }
+            },
+            "additional_fields": {
+              "underlying_type": "external_calls"
+            }
+          },
+          {
+            "type": "node",
+            "name": "LogRemittanceCollected(remittance.sender,hash,agentCode,receiverCode)",
+            "source_mapping": {
+              "start": 3198,
+              "length": 72,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "collect",
+                "source_mapping": {
+                  "start": 2750,
+                  "length": 548,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "Remittances",
+                    "source_mapping": {
+                      "start": 221,
+                      "length": 3721,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "collect(bytes8,bytes8)"
+                }
+              }
+            },
+            "additional_fields": {
+              "underlying_type": "event"
+            }
+          }
+        ],
+        "description": "Reentrancy in Remittances.collect(bytes8,bytes8) ():\n\tExternal calls:\n\t- ! msg.sender.call.value(amount)() ()\n\tEvent emitted after the call(s):\n\t- LogRemittanceCollected(remittance.sender,hash,agentCode,receiverCode) ()\n",
+        "markdown": "Reentrancy in [Remittances.collect(bytes8,bytes8)]():\n\tExternal calls:\n\t- [! msg.sender.call.value(amount)()]()\n\tEvent emitted after the call(s):\n\t- [LogRemittanceCollected(remittance.sender,hash,agentCode,receiverCode)]()\n",
+        "first_markdown_element": "",
+        "id": "3df0d11e02fe88f3d445acc37b459b66d097a561724d0b6e3da686620aa099a9",
+        "check": "reentrancy-events",
+        "impact": "Low",
+        "confidence": "Medium"
+      },
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "returnToSender",
+            "source_mapping": {
+              "start": 3487,
+              "length": 453,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "Remittances",
+                "source_mapping": {
+                  "start": 221,
+                  "length": 3721,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              },
+              "signature": "returnToSender(bytes32)"
+            }
+          },
+          {
+            "type": "node",
+            "name": "! remittance.sender.call.value(amount)()",
+            "source_mapping": {
+              "start": 3786,
+              "length": 39,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "returnToSender",
+                "source_mapping": {
+                  "start": 3487,
+                  "length": 453,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "Remittances",
+                    "source_mapping": {
+                      "start": 221,
+                      "length": 3721,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "returnToSender(bytes32)"
+                }
+              }
+            },
+            "additional_fields": {
+              "underlying_type": "external_calls"
+            }
+          },
+          {
+            "type": "node",
+            "name": "LogRemittanceReturned(remittance.sender,hash)",
+            "source_mapping": {
+              "start": 3866,
+              "length": 46,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "returnToSender",
+                "source_mapping": {
+                  "start": 3487,
+                  "length": 453,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "Remittances",
+                    "source_mapping": {
+                      "start": 221,
+                      "length": 3721,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "returnToSender(bytes32)"
+                }
+              }
+            },
+            "additional_fields": {
+              "underlying_type": "event"
+            }
+          }
+        ],
+        "description": "Reentrancy in Remittances.returnToSender(bytes32) ():\n\tExternal calls:\n\t- ! remittance.sender.call.value(amount)() ()\n\tEvent emitted after the call(s):\n\t- LogRemittanceReturned(remittance.sender,hash) ()\n",
+        "markdown": "Reentrancy in [Remittances.returnToSender(bytes32)]():\n\tExternal calls:\n\t- [! remittance.sender.call.value(amount)()]()\n\tEvent emitted after the call(s):\n\t- [LogRemittanceReturned(remittance.sender,hash)]()\n",
+        "first_markdown_element": "",
+        "id": "b78f13877a238d1627e62a788a81ae95d6903d2b026b9565a15c34ebf2a835de",
+        "check": "reentrancy-events",
+        "impact": "Low",
+        "confidence": "Medium"
+      },
+      {
+        "elements": [
+          {
+            "type": "node",
+            "name": "sha3()(agentCode,receiverCode)",
+            "source_mapping": {
+              "start": 1677,
+              "length": 36,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "anonymise",
+                "source_mapping": {
+                  "start": 1561,
+                  "length": 159,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "Remittances",
+                    "source_mapping": {
+                      "start": 221,
+                      "length": 3721,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "anonymise(bytes8,bytes8)"
+                }
+              }
+            }
+          }
+        ],
+        "description": "Deprecated standard detected sha3()(agentCode,receiverCode) ():\n\t- Usage of \"sha3()\" should be replaced with \"keccak256()\"\n",
+        "markdown": "Deprecated standard detected [sha3()(agentCode,receiverCode)]():\n\t- Usage of \"sha3()\" should be replaced with \"keccak256()\"\n",
+        "first_markdown_element": "",
+        "id": "5cde0f51c6fcc8d3448e120358537085bbcf62ca7d20a42940e8fbca6204b778",
+        "check": "deprecated-standards",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "node",
+            "name": "",
+            "source_mapping": {
+              "start": 2178,
+              "length": 5,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "sendTo",
+                "source_mapping": {
+                  "start": 1951,
+                  "length": 499,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "Remittances",
+                    "source_mapping": {
+                      "start": 221,
+                      "length": 3721,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "sendTo(bytes32,uint256)"
+                }
+              }
+            }
+          }
+        ],
+        "description": "Deprecated standard detected THROW ():\n\t- Usage of \"throw\" should be replaced with \"revert()\"\n",
+        "markdown": "Deprecated standard detected [THROW]():\n\t- Usage of \"throw\" should be replaced with \"revert()\"\n",
+        "first_markdown_element": "",
+        "id": "f5556cf1c70b64b9e4b1fc32044dd970b5f2c8b9fc21b7971fda01971033f2d5",
+        "check": "deprecated-standards",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "pragma",
+            "name": "^0.4.2",
+            "source_mapping": {
+              "start": 0,
+              "length": 23,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "directive": [
+                "solidity",
+                "^",
+                "0.4",
+                ".2"
+              ]
+            }
+          }
+        ],
+        "description": "Pragma version^0.4.2 () allows old versions\n",
+        "markdown": "Pragma version[^0.4.2]() allows old versions\n",
+        "first_markdown_element": "",
+        "id": "684a56cd27e54ff2efdccacdc31c1f9807e03d1014a0a136c00240d60a2f3a67",
+        "check": "solc-version",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [],
+        "description": "solc-0.4.2 is not recommended for deployment\n",
+        "markdown": "solc-0.4.2 is not recommended for deployment\n",
+        "first_markdown_element": "",
+        "id": "707dbfcfdf84b6816d84949bbe947a3701cd8aa49952e3db1879e122f1f0990d",
+        "check": "solc-version",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "returnToSender",
+            "source_mapping": {
+              "start": 3487,
+              "length": 453,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "Remittances",
+                "source_mapping": {
+                  "start": 221,
+                  "length": 3721,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              },
+              "signature": "returnToSender(bytes32)"
+            }
+          },
+          {
+            "type": "node",
+            "name": "! remittance.sender.call.value(amount)()",
+            "source_mapping": {
+              "start": 3786,
+              "length": 39,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "returnToSender",
+                "source_mapping": {
+                  "start": 3487,
+                  "length": 453,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "Remittances",
+                    "source_mapping": {
+                      "start": 221,
+                      "length": 3721,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "returnToSender(bytes32)"
+                }
+              }
+            }
+          }
+        ],
+        "description": "Low level call in Remittances.returnToSender(bytes32) ():\n\t- ! remittance.sender.call.value(amount)() ()\n",
+        "markdown": "Low level call in [Remittances.returnToSender(bytes32)]():\n\t- [! remittance.sender.call.value(amount)()]()\n",
+        "first_markdown_element": "",
+        "id": "9df425dbcc466b3cad3dbecd257be907e3c5313563d0799e96a9570c3bcbe49b",
+        "check": "low-level-calls",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "collect",
+            "source_mapping": {
+              "start": 2750,
+              "length": 548,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "Remittances",
+                "source_mapping": {
+                  "start": 221,
+                  "length": 3721,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              },
+              "signature": "collect(bytes8,bytes8)"
+            }
+          },
+          {
+            "type": "node",
+            "name": "! msg.sender.call.value(amount)()",
+            "source_mapping": {
+              "start": 3125,
+              "length": 32,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "collect",
+                "source_mapping": {
+                  "start": 2750,
+                  "length": 548,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "Remittances",
+                    "source_mapping": {
+                      "start": 221,
+                      "length": 3721,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "collect(bytes8,bytes8)"
+                }
+              }
+            }
+          }
+        ],
+        "description": "Low level call in Remittances.collect(bytes8,bytes8) ():\n\t- ! msg.sender.call.value(amount)() ()\n",
+        "markdown": "Low level call in [Remittances.collect(bytes8,bytes8)]():\n\t- [! msg.sender.call.value(amount)()]()\n",
+        "first_markdown_element": "",
+        "id": "af689d53f4c39a9144c87c4283668be0ed1921807225c30b5bf4464a95cba1c3",
+        "check": "low-level-calls",
+        "impact": "Informational",
+        "confidence": "High"
+      }
+    ]
+  }
+}

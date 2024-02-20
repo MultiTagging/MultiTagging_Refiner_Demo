@@ -1,0 +1,37 @@
+{
+  "fileName": "Benchmarks/Study_SamplesSet/8e061a4e61f736ba659ad1191f2ae82c.sol",
+  "baseName": "8e061a4e61f736ba659ad1191f2ae82c.sol",
+  "iter": 4,
+  "time": "0.127147",
+  "errMsg": null,
+  "result": [
+    {
+      "no": "1",
+      "kind": "KA",
+      "line": 35,
+      "signatures": [
+        {
+          "contractName": "EtherealId",
+          "methodName": "Deactivate",
+          "argTypes": []
+        }
+      ],
+      "exp": "selfdestruct(Owner);",
+      "status": "unproven"
+    },
+    {
+      "no": "2",
+      "kind": "ETH_LEAK",
+      "line": 35,
+      "signatures": [
+        {
+          "contractName": "EtherealId",
+          "methodName": "Deactivate",
+          "argTypes": []
+        }
+      ],
+      "exp": "selfdestruct(Owner);",
+      "status": "proven"
+    }
+  ]
+}

@@ -1,0 +1,262 @@
+{
+  "fileName": "Benchmarks/Study_SamplesSet/85119ee7b315f8c3791bb0164ef0fa17.sol",
+  "baseName": "85119ee7b315f8c3791bb0164ef0fa17.sol",
+  "iter": 24,
+  "time": "311.408082",
+  "errMsg": null,
+  "result": [
+    {
+      "no": "1",
+      "kind": "IO",
+      "line": 7,
+      "signatures": [
+        {
+          "contractName": "CryptoDuels",
+          "methodName": "deposit",
+          "argTypes": []
+        },
+        {
+          "contractName": "CryptoDuels",
+          "methodName": "duel",
+          "argTypes": [ "address" ]
+        }
+      ],
+      "exp": "(x + y)",
+      "status": "unproven"
+    },
+    {
+      "no": "2",
+      "kind": "IO",
+      "line": 10,
+      "signatures": [
+        {
+          "contractName": "CryptoDuels",
+          "methodName": "adminPayout",
+          "argTypes": [ "uint256" ]
+        },
+        {
+          "contractName": "CryptoDuels",
+          "methodName": "duel",
+          "argTypes": [ "address" ]
+        },
+        {
+          "contractName": "CryptoDuels",
+          "methodName": "withdraw",
+          "argTypes": [ "uint256" ]
+        }
+      ],
+      "exp": "(x - y)",
+      "status": "unproven"
+    },
+    {
+      "no": "3",
+      "kind": "IO",
+      "line": 13,
+      "signatures": [
+        {
+          "contractName": "CryptoDuels",
+          "methodName": "duel",
+          "argTypes": [ "address" ]
+        }
+      ],
+      "exp": "(x * y)",
+      "status": "unproven"
+    },
+    {
+      "no": "4",
+      "kind": "IO",
+      "line": 105,
+      "signatures": [
+        {
+          "contractName": "CryptoDuels",
+          "methodName": "adminSetBlock",
+          "argTypes": [ "uint256", "uint256" ]
+        }
+      ],
+      "exp": "(block.number + 6000)",
+      "status": "unproven"
+    },
+    {
+      "no": "5",
+      "kind": "IO",
+      "line": 153,
+      "signatures": [
+        {
+          "contractName": "CryptoDuels",
+          "methodName": "withdraw",
+          "argTypes": [ "uint256" ]
+        }
+      ],
+      "exp": "(playerList.length - 1)",
+      "status": "unproven"
+    },
+    {
+      "no": "6",
+      "kind": "IO",
+      "line": 155,
+      "signatures": [
+        {
+          "contractName": "CryptoDuels",
+          "methodName": "withdraw",
+          "argTypes": [ "uint256" ]
+        }
+      ],
+      "exp": "(playerList.length - 1)",
+      "status": "proven"
+    },
+    {
+      "no": "7",
+      "kind": "IO",
+      "line": 161,
+      "signatures": [
+        {
+          "contractName": "CryptoDuels",
+          "methodName": "duel",
+          "argTypes": [ "address" ]
+        }
+      ],
+      "exp": "(fatigueBlock + player[msg.sender].lastDuel)",
+      "status": "unproven"
+    },
+    {
+      "no": "8",
+      "kind": "IO",
+      "line": 162,
+      "signatures": [
+        {
+          "contractName": "CryptoDuels",
+          "methodName": "duel",
+          "argTypes": [ "address" ]
+        }
+      ],
+      "exp": "(safeBlock + player[opp].lastJoin)",
+      "status": "unproven"
+    },
+    {
+      "no": "9",
+      "kind": "IO",
+      "line": 174,
+      "signatures": [
+        {
+          "contractName": "CryptoDuels",
+          "methodName": "duel",
+          "argTypes": [ "address" ]
+        }
+      ],
+      "exp": "(block.number - 1)",
+      "status": "unproven"
+    },
+    {
+      "no": "10",
+      "kind": "IO",
+      "line": 196,
+      "signatures": [
+        {
+          "contractName": "CryptoDuels",
+          "methodName": "duel",
+          "argTypes": [ "address" ]
+        }
+      ],
+      "exp": "(playerList.length - 1)",
+      "status": "unproven"
+    },
+    {
+      "no": "11",
+      "kind": "IO",
+      "line": 197,
+      "signatures": [
+        {
+          "contractName": "CryptoDuels",
+          "methodName": "duel",
+          "argTypes": [ "address" ]
+        }
+      ],
+      "exp": "(playerList.length - 1)",
+      "status": "proven"
+    },
+    {
+      "no": "12",
+      "kind": "IO",
+      "line": 198,
+      "signatures": [
+        {
+          "contractName": "CryptoDuels",
+          "methodName": "duel",
+          "argTypes": [ "address" ]
+        }
+      ],
+      "exp": "(playerList.length - 1)",
+      "status": "proven"
+    },
+    {
+      "no": "13",
+      "kind": "DZ",
+      "line": 13,
+      "signatures": [
+        {
+          "contractName": "CryptoDuels",
+          "methodName": "duel",
+          "argTypes": [ "address" ]
+        }
+      ],
+      "exp": "(z / y)",
+      "status": "proven"
+    },
+    {
+      "no": "14",
+      "kind": "DZ",
+      "line": 176,
+      "signatures": [
+        {
+          "contractName": "CryptoDuels",
+          "methodName": "duel",
+          "argTypes": [ "address" ]
+        }
+      ],
+      "exp": "(fakeRandom % ethPlayer.add(ethOpp))",
+      "status": "proven"
+    },
+    {
+      "no": "15",
+      "kind": "DZ",
+      "line": 188,
+      "signatures": [
+        {
+          "contractName": "CryptoDuels",
+          "methodName": "duel",
+          "argTypes": [ "address" ]
+        }
+      ],
+      "exp": "(amt.mul(divCut) / 1000)",
+      "status": "proven"
+    },
+    {
+      "no": "16",
+      "kind": "ETH_LEAK",
+      "line": 115,
+      "signatures": [
+        {
+          "contractName": "CryptoDuels",
+          "methodName": "adminPayout",
+          "argTypes": [ "uint256" ]
+        }
+      ],
+      "exp": "ceoAddress.transfer(wad);",
+      "status": "proven"
+    },
+    {
+      "no": "17",
+      "kind": "ETH_LEAK",
+      "line": 149,
+      "signatures": [
+        {
+          "contractName": "CryptoDuels",
+          "methodName": "withdraw",
+          "argTypes": [ "uint256" ]
+        }
+      ],
+      "exp": "msg.sender.transfer(wad);",
+      "status": "unproven"
+    }
+  ]
+}

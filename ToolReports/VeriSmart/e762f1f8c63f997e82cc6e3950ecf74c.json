@@ -1,0 +1,79 @@
+{
+  "fileName": "Benchmarks/Study_SamplesSet/e762f1f8c63f997e82cc6e3950ecf74c.sol",
+  "baseName": "e762f1f8c63f997e82cc6e3950ecf74c.sol",
+  "iter": 2,
+  "time": "0.562437",
+  "errMsg": null,
+  "result": [
+    {
+      "no": "1",
+      "kind": "IO",
+      "line": 17,
+      "signatures": [
+        {
+          "contractName": "gray_Game",
+          "methodName": "oddOrEven",
+          "argTypes": [ "bool" ]
+        }
+      ],
+      "exp": "((msg.value * 2) - fee)",
+      "status": "unproven"
+    },
+    {
+      "no": "2",
+      "kind": "IO",
+      "line": 17,
+      "signatures": [
+        {
+          "contractName": "gray_Game",
+          "methodName": "oddOrEven",
+          "argTypes": [ "bool" ]
+        }
+      ],
+      "exp": "(msg.value * 2)",
+      "status": "unproven"
+    },
+    {
+      "no": "3",
+      "kind": "DZ",
+      "line": 15,
+      "signatures": [
+        {
+          "contractName": "gray_Game",
+          "methodName": "oddOrEven",
+          "argTypes": [ "bool" ]
+        }
+      ],
+      "exp": "(uint256(block.coinbase) % 2)",
+      "status": "proven"
+    },
+    {
+      "no": "4",
+      "kind": "DZ",
+      "line": 16,
+      "signatures": [
+        {
+          "contractName": "gray_Game",
+          "methodName": "oddOrEven",
+          "argTypes": [ "bool" ]
+        }
+      ],
+      "exp": "(msg.value / 10)",
+      "status": "proven"
+    },
+    {
+      "no": "5",
+      "kind": "ETH_LEAK",
+      "line": 17,
+      "signatures": [
+        {
+          "contractName": "gray_Game",
+          "methodName": "oddOrEven",
+          "argTypes": [ "bool" ]
+        }
+      ],
+      "exp": "msg.sender.transfer(((msg.value * 2) - fee));",
+      "status": "unproven"
+    }
+  ]
+}

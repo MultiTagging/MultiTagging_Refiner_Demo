@@ -1,0 +1,75 @@
+{
+  "fileName": "Benchmarks/Study_SamplesSet/8fe4bdcbc46db4e9bb7d853e10cbdb5d.sol",
+  "baseName": "8fe4bdcbc46db4e9bb7d853e10cbdb5d.sol",
+  "iter": 43,
+  "time": "314.759437",
+  "errMsg": null,
+  "result": [
+    {
+      "no": "1",
+      "kind": "IO",
+      "line": 62,
+      "signatures": [
+        {
+          "contractName": "KnowledgeProxy",
+          "methodName": "addOwner",
+          "argTypes": [ "address" ]
+        },
+        {
+          "contractName": "KnowledgeProxy",
+          "methodName": "removeOwner",
+          "argTypes": [ "uint256" ]
+        },
+        {
+          "contractName": "KnowledgeProxy",
+          "methodName": "upgradeTo",
+          "argTypes": [ "address" ]
+        }
+      ],
+      "exp": "(i + 1)",
+      "status": "proven"
+    },
+    {
+      "no": "2",
+      "kind": "IO",
+      "line": 79,
+      "signatures": [
+        {
+          "contractName": "KnowledgeProxy",
+          "methodName": "addOwner",
+          "argTypes": [ "address" ]
+        }
+      ],
+      "exp": "(owners.push(newOwner) - 1)",
+      "status": "unproven"
+    },
+    {
+      "no": "3",
+      "kind": "IO",
+      "line": 88,
+      "signatures": [
+        {
+          "contractName": "KnowledgeProxy",
+          "methodName": "removeOwner",
+          "argTypes": [ "uint256" ]
+        }
+      ],
+      "exp": "(owners.length - 1)",
+      "status": "proven"
+    },
+    {
+      "no": "4",
+      "kind": "IO",
+      "line": 89,
+      "signatures": [
+        {
+          "contractName": "KnowledgeProxy",
+          "methodName": "removeOwner",
+          "argTypes": [ "uint256" ]
+        }
+      ],
+      "exp": "(owners.length - 1)",
+      "status": "proven"
+    }
+  ]
+}

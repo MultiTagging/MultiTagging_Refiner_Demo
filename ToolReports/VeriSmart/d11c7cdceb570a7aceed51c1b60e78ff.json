@@ -1,0 +1,65 @@
+{
+  "fileName": "Benchmarks/Study_SamplesSet/d11c7cdceb570a7aceed51c1b60e78ff.sol",
+  "baseName": "d11c7cdceb570a7aceed51c1b60e78ff.sol",
+  "iter": 6881,
+  "time": "183.656037",
+  "errMsg": null,
+  "result": [
+    {
+      "no": "1",
+      "kind": "IO",
+      "line": 31,
+      "signatures": [
+        {
+          "contractName": "GuessTheRandomNumberChallenge",
+          "methodName": "recover",
+          "argTypes": []
+        }
+      ],
+      "exp": "(block.number - 256)",
+      "status": "unproven"
+    },
+    {
+      "no": "2",
+      "kind": "IO",
+      "line": 31,
+      "signatures": [
+        {
+          "contractName": "GuessTheRandomNumberChallenge",
+          "methodName": "recover",
+          "argTypes": []
+        }
+      ],
+      "exp": "(commitBlock + 20)",
+      "status": "unproven"
+    },
+    {
+      "no": "3",
+      "kind": "IO",
+      "line": 34,
+      "signatures": [
+        {
+          "contractName": "GuessTheRandomNumberChallenge",
+          "methodName": "recover",
+          "argTypes": []
+        }
+      ],
+      "exp": "(commitBlock + 20)",
+      "status": "unproven"
+    },
+    {
+      "no": "4",
+      "kind": "ETH_LEAK",
+      "line": 35,
+      "signatures": [
+        {
+          "contractName": "GuessTheRandomNumberChallenge",
+          "methodName": "recover",
+          "argTypes": []
+        }
+      ],
+      "exp": "msg.sender.transfer(2000000000000000000);",
+      "status": "unproven"
+    }
+  ]
+}

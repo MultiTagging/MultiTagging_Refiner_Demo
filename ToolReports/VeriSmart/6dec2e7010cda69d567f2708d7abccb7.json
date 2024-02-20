@@ -1,0 +1,65 @@
+{
+  "fileName": "Benchmarks/Study_SamplesSet/6dec2e7010cda69d567f2708d7abccb7.sol",
+  "baseName": "6dec2e7010cda69d567f2708d7abccb7.sol",
+  "iter": 4,
+  "time": "0.222668",
+  "errMsg": null,
+  "result": [
+    {
+      "no": "1",
+      "kind": "IO",
+      "line": 17,
+      "signatures": [
+        {
+          "contractName": "MultiSendEth",
+          "methodName": "sendEth",
+          "argTypes": [ "address[]", "uint256[]" ]
+        }
+      ],
+      "exp": "(i + 1)",
+      "status": "proven"
+    },
+    {
+      "no": "2",
+      "kind": "KA",
+      "line": 23,
+      "signatures": [
+        {
+          "contractName": "MultiSendEth",
+          "methodName": "kill",
+          "argTypes": []
+        }
+      ],
+      "exp": "selfdestruct(owner);",
+      "status": "proven"
+    },
+    {
+      "no": "3",
+      "kind": "ETH_LEAK",
+      "line": 16,
+      "signatures": [
+        {
+          "contractName": "MultiSendEth",
+          "methodName": "sendEth",
+          "argTypes": [ "address[]", "uint256[]" ]
+        }
+      ],
+      "exp": "dests[i].transfer(values[i]);",
+      "status": "proven"
+    },
+    {
+      "no": "4",
+      "kind": "ETH_LEAK",
+      "line": 23,
+      "signatures": [
+        {
+          "contractName": "MultiSendEth",
+          "methodName": "kill",
+          "argTypes": []
+        }
+      ],
+      "exp": "selfdestruct(owner);",
+      "status": "proven"
+    }
+  ]
+}

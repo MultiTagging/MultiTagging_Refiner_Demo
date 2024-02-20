@@ -1,0 +1,250 @@
+{
+  "success": true,
+  "error": null,
+  "results": {
+    "detectors": [
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "reward",
+            "source_mapping": {
+              "start": 50,
+              "length": 1210,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "Reward",
+                "source_mapping": {
+                  "start": 24,
+                  "length": 1243,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              },
+              "signature": "reward(uint32[],address[])"
+            }
+          },
+          {
+            "type": "node",
+            "name": "winners[k].send(value)",
+            "source_mapping": {
+              "start": 1029,
+              "length": 22,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "reward",
+                "source_mapping": {
+                  "start": 50,
+                  "length": 1210,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "Reward",
+                    "source_mapping": {
+                      "start": 24,
+                      "length": 1243,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "reward(uint32[],address[])"
+                }
+              }
+            }
+          }
+        ],
+        "description": "Reward.reward(uint32[],address[]) () has external calls inside a loop: winners[k].send(value) ()\n",
+        "markdown": "[Reward.reward(uint32[],address[])]() has external calls inside a loop: [winners[k].send(value)]()\n",
+        "first_markdown_element": "",
+        "id": "fa41c10a883ff27c7fb441fd9d627d3522bbc5e793c957093009a9269875afe2",
+        "check": "calls-loop",
+        "impact": "Low",
+        "confidence": "Medium"
+      },
+      {
+        "elements": [
+          {
+            "type": "node",
+            "name": "",
+            "source_mapping": {
+              "start": 246,
+              "length": 5,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "reward",
+                "source_mapping": {
+                  "start": 50,
+                  "length": 1210,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "Reward",
+                    "source_mapping": {
+                      "start": 24,
+                      "length": 1243,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "reward(uint32[],address[])"
+                }
+              }
+            }
+          }
+        ],
+        "description": "Deprecated standard detected THROW ():\n\t- Usage of \"throw\" should be replaced with \"revert()\"\n",
+        "markdown": "Deprecated standard detected [THROW]():\n\t- Usage of \"throw\" should be replaced with \"revert()\"\n",
+        "first_markdown_element": "",
+        "id": "f5556cf1c70b64b9e4b1fc32044dd970b5f2c8b9fc21b7971fda01971033f2d5",
+        "check": "deprecated-standards",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "pragma",
+            "name": "0.4.4",
+            "source_mapping": {
+              "start": 0,
+              "length": 22,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "directive": [
+                "solidity",
+                "0.4",
+                ".4"
+              ]
+            }
+          }
+        ],
+        "description": "Pragma version0.4.4 () allows old versions\n",
+        "markdown": "Pragma version[0.4.4]() allows old versions\n",
+        "first_markdown_element": "",
+        "id": "0e5c2961f6871f02d759fb0e93a19dedbeb893f692b1430b23e6b3cece2f53e3",
+        "check": "solc-version",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [],
+        "description": "solc-0.4.4 is not recommended for deployment\n",
+        "markdown": "solc-0.4.4 is not recommended for deployment\n",
+        "first_markdown_element": "",
+        "id": "d3c9a9a2694f771324145f36235e7a11e1b0352ba5bffd7634afad1f93f9692b",
+        "check": "solc-version",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "reward",
+            "source_mapping": {
+              "start": 50,
+              "length": 1210,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "Reward",
+                "source_mapping": {
+                  "start": 24,
+                  "length": 1243,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              },
+              "signature": "reward(uint32[],address[])"
+            }
+          }
+        ],
+        "description": "reward(uint32[],address[]) should be declared external:\n\t- Reward.reward(uint32[],address[]) ()\n",
+        "markdown": "reward(uint32[],address[]) should be declared external:\n\t- [Reward.reward(uint32[],address[])]()\n",
+        "first_markdown_element": "",
+        "id": "2c45e5866a6fb472ff01e44736df7ee8a62d6ebdf582ad65b990e3a3a89d232e",
+        "check": "external-function",
+        "impact": "Optimization",
+        "confidence": "High"
+      }
+    ]
+  }
+}

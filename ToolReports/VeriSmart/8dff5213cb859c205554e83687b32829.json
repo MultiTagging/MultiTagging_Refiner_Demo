@@ -1,0 +1,181 @@
+{
+  "fileName": "Benchmarks/Study_SamplesSet/8dff5213cb859c205554e83687b32829.sol",
+  "baseName": "8dff5213cb859c205554e83687b32829.sol",
+  "iter": 23,
+  "time": "338.774045",
+  "errMsg": null,
+  "result": [
+    {
+      "no": "1",
+      "kind": "IO",
+      "line": 21,
+      "signatures": [
+        {
+          "contractName": "ClaimsToken",
+          "methodName": "@fallback",
+          "argTypes": []
+        },
+        {
+          "contractName": "ClaimsToken",
+          "methodName": "ClaimsToken",
+          "argTypes": []
+        },
+        {
+          "contractName": "ClaimsToken",
+          "methodName": "mint",
+          "argTypes": []
+        },
+        {
+          "contractName": "ClaimsToken",
+          "methodName": "transfer",
+          "argTypes": [ "address", "uint256" ]
+        },
+        {
+          "contractName": "ClaimsToken",
+          "methodName": "transferFrom",
+          "argTypes": [ "address", "address", "uint256" ]
+        }
+      ],
+      "exp": "(a + b)",
+      "status": "unproven"
+    },
+    {
+      "no": "2",
+      "kind": "IO",
+      "line": 26,
+      "signatures": [
+        {
+          "contractName": "ClaimsToken",
+          "methodName": "@fallback",
+          "argTypes": []
+        },
+        {
+          "contractName": "ClaimsToken",
+          "methodName": "ClaimsToken",
+          "argTypes": []
+        },
+        {
+          "contractName": "ClaimsToken",
+          "methodName": "mint",
+          "argTypes": []
+        },
+        {
+          "contractName": "ClaimsToken",
+          "methodName": "transfer",
+          "argTypes": [ "address", "uint256" ]
+        },
+        {
+          "contractName": "ClaimsToken",
+          "methodName": "transferFrom",
+          "argTypes": [ "address", "address", "uint256" ]
+        }
+      ],
+      "exp": "(a - b)",
+      "status": "proven"
+    },
+    {
+      "no": "3",
+      "kind": "IO",
+      "line": 29,
+      "signatures": [
+        {
+          "contractName": "ClaimsToken",
+          "methodName": "mint",
+          "argTypes": []
+        },
+        {
+          "contractName": "ClaimsToken",
+          "methodName": "transfer",
+          "argTypes": [ "address", "uint256" ]
+        }
+      ],
+      "exp": "(a * b)",
+      "status": "unproven"
+    },
+    {
+      "no": "4",
+      "kind": "IO",
+      "line": 153,
+      "signatures": [
+        {
+          "contractName": "ClaimsToken",
+          "methodName": "ClaimsToken",
+          "argTypes": []
+        }
+      ],
+      "exp": "(totalSupply - tokensDistributed)",
+      "status": "proven"
+    },
+    {
+      "no": "5",
+      "kind": "DZ",
+      "line": 30,
+      "signatures": [
+        {
+          "contractName": "ClaimsToken",
+          "methodName": "mint",
+          "argTypes": []
+        },
+        {
+          "contractName": "ClaimsToken",
+          "methodName": "transfer",
+          "argTypes": [ "address", "uint256" ]
+        }
+      ],
+      "exp": "(c / a)",
+      "status": "proven"
+    },
+    {
+      "no": "6",
+      "kind": "DZ",
+      "line": 34,
+      "signatures": [
+        {
+          "contractName": "ClaimsToken",
+          "methodName": "mint",
+          "argTypes": []
+        },
+        {
+          "contractName": "ClaimsToken",
+          "methodName": "transfer",
+          "argTypes": [ "address", "uint256" ]
+        },
+        {
+          "contractName": "ClaimsToken",
+          "methodName": "transferFrom",
+          "argTypes": [ "address", "address", "uint256" ]
+        }
+      ],
+      "exp": "(a / b)",
+      "status": "proven"
+    },
+    {
+      "no": "7",
+      "kind": "DZ",
+      "line": 153,
+      "signatures": [
+        {
+          "contractName": "ClaimsToken",
+          "methodName": "ClaimsToken",
+          "argTypes": []
+        }
+      ],
+      "exp": "((totalSupply - tokensDistributed) / unitsPerTransaction)",
+      "status": "proven"
+    },
+    {
+      "no": "8",
+      "kind": "ETH_LEAK",
+      "line": 343,
+      "signatures": [
+        {
+          "contractName": "ClaimsToken",
+          "methodName": "@fallback",
+          "argTypes": []
+        }
+      ],
+      "exp": "msg.sender.transfer(msg.value);",
+      "status": "proven"
+    }
+  ]
+}

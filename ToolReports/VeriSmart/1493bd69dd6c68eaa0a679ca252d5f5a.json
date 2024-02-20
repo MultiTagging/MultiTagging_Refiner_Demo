@@ -1,0 +1,37 @@
+{
+  "fileName": "Benchmarks/Study_SamplesSet/1493bd69dd6c68eaa0a679ca252d5f5a.sol",
+  "baseName": "1493bd69dd6c68eaa0a679ca252d5f5a.sol",
+  "iter": 2,
+  "time": "0.017027",
+  "errMsg": null,
+  "result": [
+    {
+      "no": "1",
+      "kind": "KA",
+      "line": 22,
+      "signatures": [
+        {
+          "contractName": "DeprecatedSimpleFixed",
+          "methodName": "useDeprecatedFixed",
+          "argTypes": []
+        }
+      ],
+      "exp": "selfdestruct(address(0));",
+      "status": "unproven"
+    },
+    {
+      "no": "2",
+      "kind": "ETH_LEAK",
+      "line": 22,
+      "signatures": [
+        {
+          "contractName": "DeprecatedSimpleFixed",
+          "methodName": "useDeprecatedFixed",
+          "argTypes": []
+        }
+      ],
+      "exp": "selfdestruct(address(0));",
+      "status": "proven"
+    }
+  ]
+}

@@ -1,0 +1,252 @@
+{
+  "fileName": "Benchmarks/Study_SamplesSet/905bd154dfa43b7cb1c0840a291a0ed3.sol",
+  "baseName": "905bd154dfa43b7cb1c0840a291a0ed3.sol",
+  "iter": 1,
+  "time": "10064.307541",
+  "errMsg": null,
+  "result": [
+    {
+      "no": "1",
+      "kind": "IO",
+      "line": 12,
+      "signatures": [
+        { "contractName": "BitkomSale", "methodName": "buy", "argTypes": [] }
+      ],
+      "exp": "(a * b)",
+      "status": "unproven"
+    },
+    {
+      "no": "2",
+      "kind": "IO",
+      "line": 26,
+      "signatures": [
+        { "contractName": "BitkomSale", "methodName": "buy", "argTypes": [] },
+        {
+          "contractName": "SafeMath",
+          "methodName": "sub",
+          "argTypes": [ "uint256", "uint256" ]
+        }
+      ],
+      "exp": "(a - b)",
+      "status": "proven"
+    },
+    {
+      "no": "3",
+      "kind": "IO",
+      "line": 30,
+      "signatures": [
+        { "contractName": "BitkomSale", "methodName": "buy", "argTypes": [] },
+        {
+          "contractName": "BitkomSale",
+          "methodName": "refund",
+          "argTypes": []
+        },
+        {
+          "contractName": "SafeMath",
+          "methodName": "add",
+          "argTypes": [ "uint256", "uint256" ]
+        }
+      ],
+      "exp": "(a + b)",
+      "status": "unproven"
+    },
+    {
+      "no": "4",
+      "kind": "IO",
+      "line": 435,
+      "signatures": [
+        {
+          "contractName": "BitkomSale",
+          "methodName": "BitkomSale",
+          "argTypes": [
+            "address", "uint256", "uint256", "uint256", "address"
+          ]
+        }
+      ],
+      "exp": "(33500000 * 1000000000000000000)",
+      "status": "proven"
+    },
+    {
+      "no": "5",
+      "kind": "IO",
+      "line": 445,
+      "signatures": [
+        {
+          "contractName": "BitkomSale",
+          "methodName": "BitkomSale",
+          "argTypes": [
+            "address", "uint256", "uint256", "uint256", "address"
+          ]
+        }
+      ],
+      "exp": "(1600000 * 1000000000000000000)",
+      "status": "proven"
+    },
+    {
+      "no": "6",
+      "kind": "IO",
+      "line": 501,
+      "signatures": [
+        {
+          "contractName": "BitkomSale",
+          "methodName": "BitkomSale",
+          "argTypes": [
+            "address", "uint256", "uint256", "uint256", "address"
+          ]
+        }
+      ],
+      "exp": "(fundingCapInEthers * 1000000000000000000)",
+      "status": "unproven"
+    },
+    {
+      "no": "7",
+      "kind": "IO",
+      "line": 503,
+      "signatures": [
+        {
+          "contractName": "BitkomSale",
+          "methodName": "BitkomSale",
+          "argTypes": [
+            "address", "uint256", "uint256", "uint256", "address"
+          ]
+        }
+      ],
+      "exp": "(durationInDays * 86400)",
+      "status": "unproven"
+    },
+    {
+      "no": "8",
+      "kind": "IO",
+      "line": 503,
+      "signatures": [
+        {
+          "contractName": "BitkomSale",
+          "methodName": "BitkomSale",
+          "argTypes": [
+            "address", "uint256", "uint256", "uint256", "address"
+          ]
+        }
+      ],
+      "exp": "(start + (durationInDays * 86400))",
+      "status": "unproven"
+    },
+    {
+      "no": "9",
+      "kind": "IO",
+      "line": 629,
+      "signatures": [
+        { "contractName": "BitkomSale", "methodName": "buy", "argTypes": [] }
+      ],
+      "exp": "(10000000 * 1000000000000000000)",
+      "status": "proven"
+    },
+    {
+      "no": "10",
+      "kind": "IO",
+      "line": 631,
+      "signatures": [
+        { "contractName": "BitkomSale", "methodName": "buy", "argTypes": [] }
+      ],
+      "exp": "(10000000 * 1000000000000000000)",
+      "status": "proven"
+    },
+    {
+      "no": "11",
+      "kind": "IO",
+      "line": 631,
+      "signatures": [
+        { "contractName": "BitkomSale", "methodName": "buy", "argTypes": [] }
+      ],
+      "exp": "(20000000 * 1000000000000000000)",
+      "status": "proven"
+    },
+    {
+      "no": "12",
+      "kind": "IO",
+      "line": 633,
+      "signatures": [
+        { "contractName": "BitkomSale", "methodName": "buy", "argTypes": [] }
+      ],
+      "exp": "(20000000 * 1000000000000000000)",
+      "status": "proven"
+    },
+    {
+      "no": "13",
+      "kind": "IO",
+      "line": 633,
+      "signatures": [
+        { "contractName": "BitkomSale", "methodName": "buy", "argTypes": [] }
+      ],
+      "exp": "(30000000 * 1000000000000000000)",
+      "status": "proven"
+    },
+    {
+      "no": "14",
+      "kind": "DZ",
+      "line": 13,
+      "signatures": [
+        { "contractName": "BitkomSale", "methodName": "buy", "argTypes": [] }
+      ],
+      "exp": "(c / a)",
+      "status": "proven"
+    },
+    {
+      "no": "15",
+      "kind": "DZ",
+      "line": 19,
+      "signatures": [
+        { "contractName": "BitkomSale", "methodName": "buy", "argTypes": [] }
+      ],
+      "exp": "(a / b)",
+      "status": "proven"
+    },
+    {
+      "no": "16",
+      "kind": "ETH_LEAK",
+      "line": 534,
+      "signatures": [
+        { "contractName": "BitkomSale", "methodName": "buy", "argTypes": [] }
+      ],
+      "exp": "msg.sender.transfer(overflow);",
+      "status": "proven"
+    },
+    {
+      "no": "17",
+      "kind": "ETH_LEAK",
+      "line": 552,
+      "signatures": [
+        { "contractName": "BitkomSale", "methodName": "buy", "argTypes": [] }
+      ],
+      "exp": "msg.sender.transfer(overflowInWei);",
+      "status": "unproven"
+    },
+    {
+      "no": "18",
+      "kind": "ETH_LEAK",
+      "line": 595,
+      "signatures": [
+        {
+          "contractName": "BitkomSale",
+          "methodName": "ownerSafeWithdrawal",
+          "argTypes": []
+        }
+      ],
+      "exp": "beneficiary.transfer(balanceToSend);",
+      "status": "unproven"
+    },
+    {
+      "no": "19",
+      "kind": "ETH_LEAK",
+      "line": 652,
+      "signatures": [
+        {
+          "contractName": "BitkomSale",
+          "methodName": "refund",
+          "argTypes": []
+        }
+      ],
+      "exp": "msg.sender.send(refund)",
+      "status": "unproven"
+    }
+  ]
+}

@@ -1,0 +1,51 @@
+{
+  "fileName": "Benchmarks/Study_SamplesSet/442e57d4af51ebf3235eb454babb6796.sol",
+  "baseName": "442e57d4af51ebf3235eb454babb6796.sol",
+  "iter": 3,
+  "time": "0.105673",
+  "errMsg": null,
+  "result": [
+    {
+      "no": "1",
+      "kind": "KA",
+      "line": 39,
+      "signatures": [
+        {
+          "contractName": "CompanyFundsWallet",
+          "methodName": "clear",
+          "argTypes": []
+        }
+      ],
+      "exp": "selfdestruct(owner);",
+      "status": "proven"
+    },
+    {
+      "no": "2",
+      "kind": "ETH_LEAK",
+      "line": 17,
+      "signatures": [
+        {
+          "contractName": "CompanyFundsWallet",
+          "methodName": "withdraw",
+          "argTypes": [ "string" ]
+        }
+      ],
+      "exp": "msg.sender.transfer(address(this).balance);",
+      "status": "unproven"
+    },
+    {
+      "no": "3",
+      "kind": "ETH_LEAK",
+      "line": 39,
+      "signatures": [
+        {
+          "contractName": "CompanyFundsWallet",
+          "methodName": "clear",
+          "argTypes": []
+        }
+      ],
+      "exp": "selfdestruct(owner);",
+      "status": "proven"
+    }
+  ]
+}

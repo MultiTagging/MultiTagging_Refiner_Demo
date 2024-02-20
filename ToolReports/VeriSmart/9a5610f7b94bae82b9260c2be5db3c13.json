@@ -1,0 +1,172 @@
+{
+  "fileName": "Benchmarks/Study_SamplesSet/9a5610f7b94bae82b9260c2be5db3c13.sol",
+  "baseName": "9a5610f7b94bae82b9260c2be5db3c13.sol",
+  "iter": 570,
+  "time": "300.203508",
+  "errMsg": null,
+  "result": [
+    {
+      "no": "1",
+      "kind": "IO",
+      "line": 59,
+      "signatures": [
+        { "contractName": "GC8", "methodName": "@fallback", "argTypes": [] }
+      ],
+      "exp": "(a * b)",
+      "status": "unproven"
+    },
+    {
+      "no": "2",
+      "kind": "IO",
+      "line": 79,
+      "signatures": [
+        { "contractName": "GC8", "methodName": "@fallback", "argTypes": [] },
+        {
+          "contractName": "GC8",
+          "methodName": "burn",
+          "argTypes": [ "uint256" ]
+        },
+        {
+          "contractName": "GC8",
+          "methodName": "decreaseApproval",
+          "argTypes": [ "address", "uint256" ]
+        },
+        {
+          "contractName": "GC8",
+          "methodName": "transfer",
+          "argTypes": [ "address", "uint256" ]
+        },
+        {
+          "contractName": "GC8",
+          "methodName": "transferFrom",
+          "argTypes": [ "address", "address", "uint256" ]
+        }
+      ],
+      "exp": "(a - b)",
+      "status": "proven"
+    },
+    {
+      "no": "3",
+      "kind": "IO",
+      "line": 86,
+      "signatures": [
+        { "contractName": "GC8", "methodName": "@fallback", "argTypes": [] },
+        {
+          "contractName": "GC8",
+          "methodName": "increaseApproval",
+          "argTypes": [ "address", "uint256" ]
+        },
+        {
+          "contractName": "GC8",
+          "methodName": "transfer",
+          "argTypes": [ "address", "uint256" ]
+        },
+        {
+          "contractName": "GC8",
+          "methodName": "transferFrom",
+          "argTypes": [ "address", "address", "uint256" ]
+        }
+      ],
+      "exp": "(a + b)",
+      "status": "unproven"
+    },
+    {
+      "no": "4",
+      "kind": "IO",
+      "line": 297,
+      "signatures": [
+        { "contractName": "GC8", "methodName": "GC8", "argTypes": [] }
+      ],
+      "exp": "(10 ** uint256(decimals))",
+      "status": "proven"
+    },
+    {
+      "no": "5",
+      "kind": "IO",
+      "line": 297,
+      "signatures": [
+        { "contractName": "GC8", "methodName": "GC8", "argTypes": [] }
+      ],
+      "exp": "(66800000000 * (10 ** uint256(decimals)))",
+      "status": "proven"
+    },
+    {
+      "no": "6",
+      "kind": "IO",
+      "line": 300,
+      "signatures": [
+        { "contractName": "GC8", "methodName": "GC8", "argTypes": [] }
+      ],
+      "exp": "(10 ** uint256(decimals))",
+      "status": "proven"
+    },
+    {
+      "no": "7",
+      "kind": "IO",
+      "line": 300,
+      "signatures": [
+        { "contractName": "GC8", "methodName": "GC8", "argTypes": [] }
+      ],
+      "exp": "(100000 * (10 ** uint256(decimals)))",
+      "status": "proven"
+    },
+    {
+      "no": "8",
+      "kind": "IO",
+      "line": 315,
+      "signatures": [
+        { "contractName": "GC8", "methodName": "@fallback", "argTypes": [] }
+      ],
+      "exp": "(balances[_to] + _value)",
+      "status": "unproven"
+    },
+    {
+      "no": "9",
+      "kind": "IO",
+      "line": 339,
+      "signatures": [
+        {
+          "contractName": "GC8",
+          "methodName": "setFreeCount",
+          "argTypes": [ "uint256" ]
+        }
+      ],
+      "exp": "(10 ** uint256(decimals))",
+      "status": "proven"
+    },
+    {
+      "no": "10",
+      "kind": "IO",
+      "line": 339,
+      "signatures": [
+        {
+          "contractName": "GC8",
+          "methodName": "setFreeCount",
+          "argTypes": [ "uint256" ]
+        }
+      ],
+      "exp": "(free * (10 ** uint256(decimals)))",
+      "status": "unproven"
+    },
+    {
+      "no": "11",
+      "kind": "DZ",
+      "line": 60,
+      "signatures": [
+        { "contractName": "GC8", "methodName": "@fallback", "argTypes": [] }
+      ],
+      "exp": "(c / a)",
+      "status": "proven"
+    },
+    {
+      "no": "12",
+      "kind": "ETH_LEAK",
+      "line": 333,
+      "signatures": [
+        { "contractName": "GC8", "methodName": "@fallback", "argTypes": [] }
+      ],
+      "exp": "mainAddr.transfer(amount);",
+      "status": "proven"
+    }
+  ]
+}

@@ -1,0 +1,212 @@
+{
+  "fileName": "Benchmarks/Study_SamplesSet/af01837047f6c40d0299e4b51c112fe4.sol",
+  "baseName": "af01837047f6c40d0299e4b51c112fe4.sol",
+  "iter": 4,
+  "time": "345.52912",
+  "errMsg": null,
+  "result": [
+    {
+      "no": "1",
+      "kind": "IO",
+      "line": 5,
+      "signatures": [
+        {
+          "contractName": "ethairdrop",
+          "methodName": "getTokens",
+          "argTypes": []
+        }
+      ],
+      "exp": "(a * b)",
+      "status": "unproven"
+    },
+    {
+      "no": "2",
+      "kind": "IO",
+      "line": 17,
+      "signatures": [
+        {
+          "contractName": "ethairdrop",
+          "methodName": "burn",
+          "argTypes": [ "uint256" ]
+        },
+        {
+          "contractName": "ethairdrop",
+          "methodName": "ethairdrop",
+          "argTypes": []
+        },
+        {
+          "contractName": "ethairdrop",
+          "methodName": "getTokens",
+          "argTypes": []
+        },
+        {
+          "contractName": "ethairdrop",
+          "methodName": "transfer",
+          "argTypes": [ "address", "uint256" ]
+        },
+        {
+          "contractName": "ethairdrop",
+          "methodName": "transferFrom",
+          "argTypes": [ "address", "address", "uint256" ]
+        }
+      ],
+      "exp": "(a - b)",
+      "status": "proven"
+    },
+    {
+      "no": "3",
+      "kind": "IO",
+      "line": 21,
+      "signatures": [
+        {
+          "contractName": "ethairdrop",
+          "methodName": "getTokens",
+          "argTypes": []
+        },
+        {
+          "contractName": "ethairdrop",
+          "methodName": "transfer",
+          "argTypes": [ "address", "uint256" ]
+        },
+        {
+          "contractName": "ethairdrop",
+          "methodName": "transferFrom",
+          "argTypes": [ "address", "address", "uint256" ]
+        }
+      ],
+      "exp": "(a + b)",
+      "status": "unproven"
+    },
+    {
+      "no": "4",
+      "kind": "IO",
+      "line": 126,
+      "signatures": [
+        {
+          "contractName": "ethairdrop",
+          "methodName": "getTokens",
+          "argTypes": []
+        }
+      ],
+      "exp": "(now + 86400)",
+      "status": "unproven"
+    },
+    {
+      "no": "5",
+      "kind": "IO",
+      "line": 154,
+      "signatures": [
+        {
+          "contractName": "ethairdrop",
+          "methodName": "transfer",
+          "argTypes": [ "address", "uint256" ]
+        },
+        {
+          "contractName": "ethairdrop",
+          "methodName": "transferFrom",
+          "argTypes": [ "address", "address", "uint256" ]
+        }
+      ],
+      "exp": "(size + 4)",
+      "status": "proven"
+    },
+    {
+      "no": "6",
+      "kind": "IO",
+      "line": 158,
+      "signatures": [
+        {
+          "contractName": "ethairdrop",
+          "methodName": "transfer",
+          "argTypes": [ "address", "uint256" ]
+        }
+      ],
+      "exp": "(2 * 32)",
+      "status": "proven"
+    },
+    {
+      "no": "7",
+      "kind": "IO",
+      "line": 168,
+      "signatures": [
+        {
+          "contractName": "ethairdrop",
+          "methodName": "transferFrom",
+          "argTypes": [ "address", "address", "uint256" ]
+        }
+      ],
+      "exp": "(3 * 32)",
+      "status": "proven"
+    },
+    {
+      "no": "8",
+      "kind": "DZ",
+      "line": 6,
+      "signatures": [
+        {
+          "contractName": "ethairdrop",
+          "methodName": "getTokens",
+          "argTypes": []
+        }
+      ],
+      "exp": "(c / a)",
+      "status": "unproven"
+    },
+    {
+      "no": "9",
+      "kind": "DZ",
+      "line": 11,
+      "signatures": [
+        {
+          "contractName": "ethairdrop",
+          "methodName": "getTokens",
+          "argTypes": []
+        }
+      ],
+      "exp": "(a / b)",
+      "status": "proven"
+    },
+    {
+      "no": "10",
+      "kind": "ETH_LEAK",
+      "line": 131,
+      "signatures": [
+        {
+          "contractName": "ethairdrop",
+          "methodName": "getTokens",
+          "argTypes": []
+        }
+      ],
+      "exp": "address(549983410788834837030058243496913778174161059840).transfer(msg.value);",
+      "status": "proven"
+    },
+    {
+      "no": "11",
+      "kind": "ETH_LEAK",
+      "line": 135,
+      "signatures": [
+        {
+          "contractName": "ethairdrop",
+          "methodName": "getTokens",
+          "argTypes": []
+        }
+      ],
+      "exp": "address(549983410788834837030058243496913778174161059840).transfer(msg.value);",
+      "status": "proven"
+    },
+    {
+      "no": "12",
+      "kind": "ETH_LEAK",
+      "line": 199,
+      "signatures": [
+        {
+          "contractName": "ethairdrop",
+          "methodName": "withdraw",
+          "argTypes": []
+        }
+      ],
+      "exp": "owner.transfer(etherBalance);",
+      "status": "proven"
+    }
+  ]
+}

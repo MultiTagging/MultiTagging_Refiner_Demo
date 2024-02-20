@@ -1,0 +1,261 @@
+{
+  "fileName": "Benchmarks/Study_SamplesSet/fe26ab984b28c3245a9312aba657f5ed.sol",
+  "baseName": "fe26ab984b28c3245a9312aba657f5ed.sol",
+  "iter": 74,
+  "time": "302.614794",
+  "errMsg": null,
+  "result": [
+    {
+      "no": "1",
+      "kind": "IO",
+      "line": 48,
+      "signatures": [
+        {
+          "contractName": "RaisingToken",
+          "methodName": "buy",
+          "argTypes": []
+        }
+      ],
+      "exp": "(msg.value * totalSupply)",
+      "status": "unproven"
+    },
+    {
+      "no": "2",
+      "kind": "IO",
+      "line": 54,
+      "signatures": [
+        {
+          "contractName": "RaisingToken",
+          "methodName": "buy",
+          "argTypes": []
+        }
+      ],
+      "exp": "(totalSupply + count)",
+      "status": "unproven"
+    },
+    {
+      "no": "3",
+      "kind": "IO",
+      "line": 57,
+      "signatures": [
+        {
+          "contractName": "RaisingToken",
+          "methodName": "buy",
+          "argTypes": []
+        }
+      ],
+      "exp": "(balanceOf[msg.sender] + count)",
+      "status": "unproven"
+    },
+    {
+      "no": "4",
+      "kind": "IO",
+      "line": 78,
+      "signatures": [
+        {
+          "contractName": "RaisingToken",
+          "methodName": "sell",
+          "argTypes": [ "uint256" ]
+        }
+      ],
+      "exp": "(_value * this.balance)",
+      "status": "unproven"
+    },
+    {
+      "no": "5",
+      "kind": "IO",
+      "line": 85,
+      "signatures": [
+        {
+          "contractName": "RaisingToken",
+          "methodName": "sell",
+          "argTypes": [ "uint256" ]
+        }
+      ],
+      "exp": "(balanceOf[msg.sender] - _value)",
+      "status": "proven"
+    },
+    {
+      "no": "6",
+      "kind": "IO",
+      "line": 88,
+      "signatures": [
+        {
+          "contractName": "RaisingToken",
+          "methodName": "sell",
+          "argTypes": [ "uint256" ]
+        }
+      ],
+      "exp": "(totalSupply - _value)",
+      "status": "proven"
+    },
+    {
+      "no": "7",
+      "kind": "IO",
+      "line": 139,
+      "signatures": [
+        {
+          "contractName": "RaisingToken",
+          "methodName": "transfer",
+          "argTypes": [ "address", "uint256" ]
+        }
+      ],
+      "exp": "(balanceOf[msg.sender] - _value)",
+      "status": "unproven"
+    },
+    {
+      "no": "8",
+      "kind": "IO",
+      "line": 142,
+      "signatures": [
+        {
+          "contractName": "RaisingToken",
+          "methodName": "transfer",
+          "argTypes": [ "address", "uint256" ]
+        }
+      ],
+      "exp": "(_value - 1)",
+      "status": "proven"
+    },
+    {
+      "no": "9",
+      "kind": "IO",
+      "line": 145,
+      "signatures": [
+        {
+          "contractName": "RaisingToken",
+          "methodName": "transfer",
+          "argTypes": [ "address", "uint256" ]
+        }
+      ],
+      "exp": "(balanceOf[_to] + _value)",
+      "status": "unproven"
+    },
+    {
+      "no": "10",
+      "kind": "IO",
+      "line": 148,
+      "signatures": [
+        {
+          "contractName": "RaisingToken",
+          "methodName": "transfer",
+          "argTypes": [ "address", "uint256" ]
+        }
+      ],
+      "exp": "(totalSupply - 1)",
+      "status": "unproven"
+    },
+    {
+      "no": "11",
+      "kind": "IO",
+      "line": 183,
+      "signatures": [
+        {
+          "contractName": "RaisingToken",
+          "methodName": "transferFrom",
+          "argTypes": [ "address", "address", "uint256" ]
+        }
+      ],
+      "exp": "(allowance[_from][msg.sender] - _value)",
+      "status": "unproven"
+    },
+    {
+      "no": "12",
+      "kind": "IO",
+      "line": 186,
+      "signatures": [
+        {
+          "contractName": "RaisingToken",
+          "methodName": "transferFrom",
+          "argTypes": [ "address", "address", "uint256" ]
+        }
+      ],
+      "exp": "(balanceOf[_from] - _value)",
+      "status": "unproven"
+    },
+    {
+      "no": "13",
+      "kind": "IO",
+      "line": 189,
+      "signatures": [
+        {
+          "contractName": "RaisingToken",
+          "methodName": "transferFrom",
+          "argTypes": [ "address", "address", "uint256" ]
+        }
+      ],
+      "exp": "(_value - 1)",
+      "status": "proven"
+    },
+    {
+      "no": "14",
+      "kind": "IO",
+      "line": 192,
+      "signatures": [
+        {
+          "contractName": "RaisingToken",
+          "methodName": "transferFrom",
+          "argTypes": [ "address", "address", "uint256" ]
+        }
+      ],
+      "exp": "(balanceOf[_to] + _value)",
+      "status": "unproven"
+    },
+    {
+      "no": "15",
+      "kind": "IO",
+      "line": 195,
+      "signatures": [
+        {
+          "contractName": "RaisingToken",
+          "methodName": "transferFrom",
+          "argTypes": [ "address", "address", "uint256" ]
+        }
+      ],
+      "exp": "(totalSupply - 1)",
+      "status": "unproven"
+    },
+    {
+      "no": "16",
+      "kind": "DZ",
+      "line": 48,
+      "signatures": [
+        {
+          "contractName": "RaisingToken",
+          "methodName": "buy",
+          "argTypes": []
+        }
+      ],
+      "exp": "((msg.value * totalSupply) / this.balance)",
+      "status": "unproven"
+    },
+    {
+      "no": "17",
+      "kind": "DZ",
+      "line": 78,
+      "signatures": [
+        {
+          "contractName": "RaisingToken",
+          "methodName": "sell",
+          "argTypes": [ "uint256" ]
+        }
+      ],
+      "exp": "((_value * this.balance) / totalSupply)",
+      "status": "proven"
+    },
+    {
+      "no": "18",
+      "kind": "ETH_LEAK",
+      "line": 81,
+      "signatures": [
+        {
+          "contractName": "RaisingToken",
+          "methodName": "sell",
+          "argTypes": [ "uint256" ]
+        }
+      ],
+      "exp": "msg.sender.send(toSend)",
+      "status": "unproven"
+    }
+  ]
+}

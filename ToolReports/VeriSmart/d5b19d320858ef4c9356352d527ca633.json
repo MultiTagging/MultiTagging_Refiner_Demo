@@ -1,0 +1,113 @@
+{
+  "fileName": "Benchmarks/Study_SamplesSet/d5b19d320858ef4c9356352d527ca633.sol",
+  "baseName": "d5b19d320858ef4c9356352d527ca633.sol",
+  "iter": 5260,
+  "time": "301.043153",
+  "errMsg": null,
+  "result": [
+    {
+      "no": "1",
+      "kind": "IO",
+      "line": 20,
+      "signatures": [
+        { "contractName": "Fermat", "methodName": "Fermat", "argTypes": [] }
+      ],
+      "exp": "(now + 8640000)",
+      "status": "unproven"
+    },
+    {
+      "no": "2",
+      "kind": "IO",
+      "line": 93,
+      "signatures": [
+        {
+          "contractName": "Fermat",
+          "methodName": "power",
+          "argTypes": [ "int256", "int256" ]
+        }
+      ],
+      "exp": "(i + 1)",
+      "status": "proven"
+    },
+    {
+      "no": "3",
+      "kind": "IO",
+      "line": 94,
+      "signatures": [
+        {
+          "contractName": "Fermat",
+          "methodName": "power",
+          "argTypes": [ "int256", "int256" ]
+        }
+      ],
+      "exp": "(result * a)",
+      "status": "unproven"
+    },
+    {
+      "no": "4",
+      "kind": "IO",
+      "line": 104,
+      "signatures": [
+        {
+          "contractName": "Fermat",
+          "methodName": "claim",
+          "argTypes": [ "int256", "int256", "int256", "int256" ]
+        },
+        {
+          "contractName": "Fermat",
+          "methodName": "solve",
+          "argTypes": [ "int256", "int256", "int256", "int256" ]
+        }
+      ],
+      "exp": "(a + b)",
+      "status": "unproven"
+    },
+    {
+      "no": "5",
+      "kind": "IO",
+      "line": 114,
+      "signatures": [
+        {
+          "contractName": "Fermat",
+          "methodName": "claim",
+          "argTypes": [ "int256", "int256", "int256", "int256" ]
+        },
+        {
+          "contractName": "Fermat",
+          "methodName": "solve",
+          "argTypes": [ "int256", "int256", "int256", "int256" ]
+        }
+      ],
+      "exp": "(a - b)",
+      "status": "proven"
+    },
+    {
+      "no": "6",
+      "kind": "ETH_LEAK",
+      "line": 49,
+      "signatures": [
+        {
+          "contractName": "Fermat",
+          "methodName": "withdraw",
+          "argTypes": []
+        }
+      ],
+      "exp": "msg.sender.transfer(this.balance);",
+      "status": "proven"
+    },
+    {
+      "no": "7",
+      "kind": "ETH_LEAK",
+      "line": 64,
+      "signatures": [
+        {
+          "contractName": "Fermat",
+          "methodName": "claim",
+          "argTypes": [ "int256", "int256", "int256", "int256" ]
+        }
+      ],
+      "exp": "msg.sender.transfer(this.balance);",
+      "status": "unproven"
+    }
+  ]
+}

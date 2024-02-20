@@ -1,0 +1,109 @@
+{
+  "fileName": "Benchmarks/Study_SamplesSet/a79ec22b241e52baa50d4e1ec4c8490c.sol",
+  "baseName": "a79ec22b241e52baa50d4e1ec4c8490c.sol",
+  "iter": 60,
+  "time": "309.263474",
+  "errMsg": null,
+  "result": [
+    {
+      "no": "1",
+      "kind": "IO",
+      "line": 62,
+      "signatures": [
+        {
+          "contractName": "D2GBToken",
+          "methodName": "_transfer",
+          "argTypes": [ "address", "address", "uint256" ]
+        },
+        {
+          "contractName": "D2GBToken",
+          "methodName": "transfer",
+          "argTypes": [ "address", "uint256" ]
+        },
+        {
+          "contractName": "D2GBToken",
+          "methodName": "transferFrom",
+          "argTypes": [ "address", "address", "uint256" ]
+        }
+      ],
+      "exp": "(a - b)",
+      "status": "proven"
+    },
+    {
+      "no": "2",
+      "kind": "IO",
+      "line": 71,
+      "signatures": [
+        {
+          "contractName": "D2GBToken",
+          "methodName": "_transfer",
+          "argTypes": [ "address", "address", "uint256" ]
+        },
+        {
+          "contractName": "D2GBToken",
+          "methodName": "transfer",
+          "argTypes": [ "address", "uint256" ]
+        },
+        {
+          "contractName": "D2GBToken",
+          "methodName": "transferFrom",
+          "argTypes": [ "address", "address", "uint256" ]
+        }
+      ],
+      "exp": "(a + b)",
+      "status": "unproven"
+    },
+    {
+      "no": "3",
+      "kind": "IO",
+      "line": 119,
+      "signatures": [
+        {
+          "contractName": "D2GBToken",
+          "methodName": "approve",
+          "argTypes": [ "address", "uint256" ]
+        },
+        {
+          "contractName": "D2GBToken",
+          "methodName": "transfer",
+          "argTypes": [ "address", "uint256" ]
+        },
+        {
+          "contractName": "D2GBToken",
+          "methodName": "transferFrom",
+          "argTypes": [ "address", "address", "uint256" ]
+        }
+      ],
+      "exp": "(_totalSupply + _airdropAmount)",
+      "status": "unproven"
+    },
+    {
+      "no": "4",
+      "kind": "IO",
+      "line": 213,
+      "signatures": [
+        {
+          "contractName": "D2GBToken",
+          "methodName": "D2GBToken",
+          "argTypes": []
+        }
+      ],
+      "exp": "(10 ** uint256(decimals))",
+      "status": "proven"
+    },
+    {
+      "no": "5",
+      "kind": "IO",
+      "line": 213,
+      "signatures": [
+        {
+          "contractName": "D2GBToken",
+          "methodName": "D2GBToken",
+          "argTypes": []
+        }
+      ],
+      "exp": "(20000000000 * (10 ** uint256(decimals)))",
+      "status": "proven"
+    }
+  ]
+}

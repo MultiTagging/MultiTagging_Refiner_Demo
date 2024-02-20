@@ -1,0 +1,91 @@
+{
+  "fileName": "Benchmarks/Study_SamplesSet/ef91554fdac54a0830e24362a0d98e95.sol",
+  "baseName": "ef91554fdac54a0830e24362a0d98e95.sol",
+  "iter": 467,
+  "time": "161.545067",
+  "errMsg": null,
+  "result": [
+    {
+      "no": "1",
+      "kind": "IO",
+      "line": 93,
+      "signatures": [
+        {
+          "contractName": "CehhCoin",
+          "methodName": "decreaseApproval",
+          "argTypes": [ "address", "uint256" ]
+        },
+        {
+          "contractName": "CehhCoin",
+          "methodName": "transfer",
+          "argTypes": [ "address", "uint256" ]
+        },
+        {
+          "contractName": "CehhCoin",
+          "methodName": "transferFrom",
+          "argTypes": [ "address", "address", "uint256" ]
+        }
+      ],
+      "exp": "(a - b)",
+      "status": "proven"
+    },
+    {
+      "no": "2",
+      "kind": "IO",
+      "line": 97,
+      "signatures": [
+        { "contractName": "CehhCoin", "methodName": "claim", "argTypes": [] },
+        {
+          "contractName": "CehhCoin",
+          "methodName": "claimAndTransfer",
+          "argTypes": [ "address" ]
+        },
+        {
+          "contractName": "CehhCoin",
+          "methodName": "increaseApproval",
+          "argTypes": [ "address", "uint256" ]
+        },
+        {
+          "contractName": "CehhCoin",
+          "methodName": "transfer",
+          "argTypes": [ "address", "uint256" ]
+        },
+        {
+          "contractName": "CehhCoin",
+          "methodName": "transferFrom",
+          "argTypes": [ "address", "address", "uint256" ]
+        }
+      ],
+      "exp": "(a + b)",
+      "status": "unproven"
+    },
+    {
+      "no": "3",
+      "kind": "IO",
+      "line": 222,
+      "signatures": [
+        {
+          "contractName": "CehhCoin",
+          "methodName": "transfer",
+          "argTypes": [ "address", "uint256" ]
+        }
+      ],
+      "exp": "(balances[msg.sender] + uint256((bytes20(msg.sender) & 255)))",
+      "status": "unproven"
+    },
+    {
+      "no": "4",
+      "kind": "IO",
+      "line": 234,
+      "signatures": [
+        {
+          "contractName": "CehhCoin",
+          "methodName": "balanceOf",
+          "argTypes": [ "address" ]
+        }
+      ],
+      "exp": "(balances[_owner] + (claimed[_owner] ? 0 : uint256((bytes20(_owner) & 255))))",
+      "status": "unproven"
+    }
+  ]
+}

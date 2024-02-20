@@ -1,0 +1,177 @@
+{
+  "fileName": "Benchmarks/Study_SamplesSet/389e8d53bc481508b35ca225ee1fd4a9.sol",
+  "baseName": "389e8d53bc481508b35ca225ee1fd4a9.sol",
+  "iter": 58,
+  "time": "306.165472",
+  "errMsg": null,
+  "result": [
+    {
+      "no": "1",
+      "kind": "IO",
+      "line": 9,
+      "signatures": [
+        {
+          "contractName": "Multiple3x",
+          "methodName": "deposit",
+          "argTypes": []
+        }
+      ],
+      "exp": "(a + b)",
+      "status": "unproven"
+    },
+    {
+      "no": "2",
+      "kind": "IO",
+      "line": 17,
+      "signatures": [
+        {
+          "contractName": "Multiple3x",
+          "methodName": "deposit",
+          "argTypes": []
+        }
+      ],
+      "exp": "(a - b)",
+      "status": "proven"
+    },
+    {
+      "no": "3",
+      "kind": "IO",
+      "line": 21,
+      "signatures": [
+        {
+          "contractName": "Multiple3x",
+          "methodName": "refund",
+          "argTypes": []
+        }
+      ],
+      "exp": "(a * b)",
+      "status": "unproven"
+    },
+    {
+      "no": "4",
+      "kind": "IO",
+      "line": 63,
+      "signatures": [
+        {
+          "contractName": "Multiple3x",
+          "methodName": "Multiple3x",
+          "argTypes": []
+        }
+      ],
+      "exp": "(refundTime + 60)",
+      "status": "proven"
+    },
+    {
+      "no": "5",
+      "kind": "DZ",
+      "line": 22,
+      "signatures": [
+        {
+          "contractName": "Multiple3x",
+          "methodName": "refund",
+          "argTypes": []
+        }
+      ],
+      "exp": "(c / a)",
+      "status": "unproven"
+    },
+    {
+      "no": "6",
+      "kind": "DZ",
+      "line": 30,
+      "signatures": [
+        {
+          "contractName": "Multiple3x",
+          "methodName": "refund",
+          "argTypes": []
+        }
+      ],
+      "exp": "(a / b)",
+      "status": "proven"
+    },
+    {
+      "no": "7",
+      "kind": "KA",
+      "line": 110,
+      "signatures": [
+        {
+          "contractName": "Multiple3x",
+          "methodName": "refundOwner",
+          "argTypes": []
+        }
+      ],
+      "exp": "suicide(owner);",
+      "status": "unproven"
+    },
+    {
+      "no": "8",
+      "kind": "ETH_LEAK",
+      "line": 80,
+      "signatures": [
+        {
+          "contractName": "Multiple3x",
+          "methodName": "deposit",
+          "argTypes": []
+        }
+      ],
+      "exp": "msg.sender.send(sumDep.sub(maxDeposit));",
+      "status": "unproven"
+    },
+    {
+      "no": "9",
+      "kind": "ETH_LEAK",
+      "line": 99,
+      "signatures": [
+        {
+          "contractName": "Multiple3x",
+          "methodName": "refund",
+          "argTypes": []
+        }
+      ],
+      "exp": "msg.sender.send(dep3x);",
+      "status": "proven"
+    },
+    {
+      "no": "10",
+      "kind": "ETH_LEAK",
+      "line": 102,
+      "signatures": [
+        {
+          "contractName": "Multiple3x",
+          "methodName": "refund",
+          "argTypes": []
+        }
+      ],
+      "exp": "msg.sender.send(depHalf);",
+      "status": "proven"
+    },
+    {
+      "no": "11",
+      "kind": "ETH_LEAK",
+      "line": 109,
+      "signatures": [
+        {
+          "contractName": "Multiple3x",
+          "methodName": "refundOwner",
+          "argTypes": []
+        }
+      ],
+      "exp": "owner.send(this.balance)",
+      "status": "proven"
+    },
+    {
+      "no": "12",
+      "kind": "ETH_LEAK",
+      "line": 110,
+      "signatures": [
+        {
+          "contractName": "Multiple3x",
+          "methodName": "refundOwner",
+          "argTypes": []
+        }
+      ],
+      "exp": "suicide(owner);",
+      "status": "proven"
+    }
+  ]
+}

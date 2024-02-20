@@ -1,0 +1,75 @@
+{
+  "fileName": "Benchmarks/Study_SamplesSet/ef6061d5de563dbff5b33c33776c95db.sol",
+  "baseName": "ef6061d5de563dbff5b33c33776c95db.sol",
+  "iter": 418,
+  "time": "300.456493",
+  "errMsg": null,
+  "result": [
+    {
+      "no": "1",
+      "kind": "IO",
+      "line": 71,
+      "signatures": [
+        {
+          "contractName": "SafeDeposit",
+          "methodName": "@fallback",
+          "argTypes": []
+        },
+        {
+          "contractName": "SafeDeposit",
+          "methodName": "deposit",
+          "argTypes": []
+        },
+        {
+          "contractName": "SafeDeposit",
+          "methodName": "initVault",
+          "argTypes": []
+        }
+      ],
+      "exp": "(Deposits[msg.sender] + msg.value)",
+      "status": "unproven"
+    },
+    {
+      "no": "2",
+      "kind": "KA",
+      "line": 93,
+      "signatures": [
+        {
+          "contractName": "SafeDeposit",
+          "methodName": "kill",
+          "argTypes": []
+        }
+      ],
+      "exp": "selfdestruct(Owner);",
+      "status": "unproven"
+    },
+    {
+      "no": "3",
+      "kind": "ETH_LEAK",
+      "line": 85,
+      "signatures": [
+        {
+          "contractName": "SafeDeposit",
+          "methodName": "withdraw",
+          "argTypes": [ "address", "uint256" ]
+        }
+      ],
+      "exp": "to.transfer(amount);",
+      "status": "unproven"
+    },
+    {
+      "no": "4",
+      "kind": "ETH_LEAK",
+      "line": 93,
+      "signatures": [
+        {
+          "contractName": "SafeDeposit",
+          "methodName": "kill",
+          "argTypes": []
+        }
+      ],
+      "exp": "selfdestruct(Owner);",
+      "status": "proven"
+    }
+  ]
+}

@@ -1,0 +1,331 @@
+{
+  "fileName": "Benchmarks/Study_SamplesSet/698fe22adf47361ab45d0d3fc6a93c56.sol",
+  "baseName": "698fe22adf47361ab45d0d3fc6a93c56.sol",
+  "iter": 10,
+  "time": "301.192524",
+  "errMsg": null,
+  "result": [
+    {
+      "no": "1",
+      "kind": "IO",
+      "line": 76,
+      "signatures": [
+        {
+          "contractName": "eth666",
+          "methodName": "@fallback",
+          "argTypes": []
+        }
+      ],
+      "exp": "(((deposited[msg.sender] * 666) / 10000) * (block.number - blocklock[msg.sender]))",
+      "status": "unproven"
+    },
+    {
+      "no": "2",
+      "kind": "IO",
+      "line": 76,
+      "signatures": [
+        {
+          "contractName": "eth666",
+          "methodName": "@fallback",
+          "argTypes": []
+        }
+      ],
+      "exp": "(block.number - blocklock[msg.sender])",
+      "status": "unproven"
+    },
+    {
+      "no": "3",
+      "kind": "IO",
+      "line": 76,
+      "signatures": [
+        {
+          "contractName": "eth666",
+          "methodName": "@fallback",
+          "argTypes": []
+        }
+      ],
+      "exp": "(deposited[msg.sender] * 666)",
+      "status": "unproven"
+    },
+    {
+      "no": "4",
+      "kind": "IO",
+      "line": 79,
+      "signatures": [
+        {
+          "contractName": "eth666",
+          "methodName": "@fallback",
+          "argTypes": []
+        }
+      ],
+      "exp": "(withdrew[msg.sender] + depositsPercents)",
+      "status": "unproven"
+    },
+    {
+      "no": "5",
+      "kind": "IO",
+      "line": 80,
+      "signatures": [
+        {
+          "contractName": "eth666",
+          "methodName": "@fallback",
+          "argTypes": []
+        }
+      ],
+      "exp": "(totalWithdrewWei + depositsPercents)",
+      "status": "unproven"
+    },
+    {
+      "no": "6",
+      "kind": "IO",
+      "line": 82,
+      "signatures": [
+        {
+          "contractName": "eth666",
+          "methodName": "@fallback",
+          "argTypes": []
+        }
+      ],
+      "exp": "(investorNum + 1)",
+      "status": "unproven"
+    },
+    {
+      "no": "7",
+      "kind": "IO",
+      "line": 87,
+      "signatures": [
+        {
+          "contractName": "eth666",
+          "methodName": "@fallback",
+          "argTypes": []
+        }
+      ],
+      "exp": "(refearned[referrer] + advPerc)",
+      "status": "unproven"
+    },
+    {
+      "no": "8",
+      "kind": "IO",
+      "line": 91,
+      "signatures": [
+        {
+          "contractName": "eth666",
+          "methodName": "@fallback",
+          "argTypes": []
+        }
+      ],
+      "exp": "(deposited[msg.sender] + msg.value)",
+      "status": "unproven"
+    },
+    {
+      "no": "9",
+      "kind": "IO",
+      "line": 92,
+      "signatures": [
+        {
+          "contractName": "eth666",
+          "methodName": "@fallback",
+          "argTypes": []
+        }
+      ],
+      "exp": "(totalDepositedWei + msg.value)",
+      "status": "unproven"
+    },
+    {
+      "no": "10",
+      "kind": "IO",
+      "line": 113,
+      "signatures": [
+        {
+          "contractName": "eth666",
+          "methodName": "userDividendsWei",
+          "argTypes": [ "address" ]
+        }
+      ],
+      "exp": "(((deposited[_address] * 666) / 10000) * (block.number - blocklock[_address]))",
+      "status": "unproven"
+    },
+    {
+      "no": "11",
+      "kind": "IO",
+      "line": 113,
+      "signatures": [
+        {
+          "contractName": "eth666",
+          "methodName": "userDividendsWei",
+          "argTypes": [ "address" ]
+        }
+      ],
+      "exp": "(block.number - blocklock[_address])",
+      "status": "unproven"
+    },
+    {
+      "no": "12",
+      "kind": "IO",
+      "line": 113,
+      "signatures": [
+        {
+          "contractName": "eth666",
+          "methodName": "userDividendsWei",
+          "argTypes": [ "address" ]
+        }
+      ],
+      "exp": "(deposited[_address] * 666)",
+      "status": "unproven"
+    },
+    {
+      "no": "13",
+      "kind": "DZ",
+      "line": 65,
+      "signatures": [
+        {
+          "contractName": "eth666",
+          "methodName": "@fallback",
+          "argTypes": []
+        }
+      ],
+      "exp": "(msg.value / 10)",
+      "status": "proven"
+    },
+    {
+      "no": "14",
+      "kind": "DZ",
+      "line": 66,
+      "signatures": [
+        {
+          "contractName": "eth666",
+          "methodName": "@fallback",
+          "argTypes": []
+        }
+      ],
+      "exp": "(msg.value / 20)",
+      "status": "proven"
+    },
+    {
+      "no": "15",
+      "kind": "DZ",
+      "line": 76,
+      "signatures": [
+        {
+          "contractName": "eth666",
+          "methodName": "@fallback",
+          "argTypes": []
+        }
+      ],
+      "exp": "((((deposited[msg.sender] * 666) / 10000) * (block.number - blocklock[msg.sender])) / 5900)",
+      "status": "proven"
+    },
+    {
+      "no": "16",
+      "kind": "DZ",
+      "line": 76,
+      "signatures": [
+        {
+          "contractName": "eth666",
+          "methodName": "@fallback",
+          "argTypes": []
+        }
+      ],
+      "exp": "((deposited[msg.sender] * 666) / 10000)",
+      "status": "proven"
+    },
+    {
+      "no": "17",
+      "kind": "DZ",
+      "line": 113,
+      "signatures": [
+        {
+          "contractName": "eth666",
+          "methodName": "userDividendsWei",
+          "argTypes": [ "address" ]
+        }
+      ],
+      "exp": "((((deposited[_address] * 666) / 10000) * (block.number - blocklock[_address])) / 5900)",
+      "status": "proven"
+    },
+    {
+      "no": "18",
+      "kind": "DZ",
+      "line": 113,
+      "signatures": [
+        {
+          "contractName": "eth666",
+          "methodName": "userDividendsWei",
+          "argTypes": [ "address" ]
+        }
+      ],
+      "exp": "((deposited[_address] * 666) / 10000)",
+      "status": "proven"
+    },
+    {
+      "no": "19",
+      "kind": "ETH_LEAK",
+      "line": 68,
+      "signatures": [
+        {
+          "contractName": "eth666",
+          "methodName": "@fallback",
+          "argTypes": []
+        }
+      ],
+      "exp": "owner.transfer(admRefPerc);",
+      "status": "proven"
+    },
+    {
+      "no": "20",
+      "kind": "ETH_LEAK",
+      "line": 69,
+      "signatures": [
+        {
+          "contractName": "eth666",
+          "methodName": "@fallback",
+          "argTypes": []
+        }
+      ],
+      "exp": "partner.transfer(advPerc);",
+      "status": "proven"
+    },
+    {
+      "no": "21",
+      "kind": "ETH_LEAK",
+      "line": 77,
+      "signatures": [
+        {
+          "contractName": "eth666",
+          "methodName": "@fallback",
+          "argTypes": []
+        }
+      ],
+      "exp": "investor.transfer(depositsPercents);",
+      "status": "unproven"
+    },
+    {
+      "no": "22",
+      "kind": "ETH_LEAK",
+      "line": 86,
+      "signatures": [
+        {
+          "contractName": "eth666",
+          "methodName": "@fallback",
+          "argTypes": []
+        }
+      ],
+      "exp": "referrer.transfer(admRefPerc);",
+      "status": "unproven"
+    },
+    {
+      "no": "23",
+      "kind": "ETH_LEAK",
+      "line": 100,
+      "signatures": [
+        {
+          "contractName": "eth666",
+          "methodName": "reFund",
+          "argTypes": [ "address", "uint256" ]
+        }
+      ],
+      "exp": "exitUser.transfer(a);",
+      "status": "proven"
+    }
+  ]
+}

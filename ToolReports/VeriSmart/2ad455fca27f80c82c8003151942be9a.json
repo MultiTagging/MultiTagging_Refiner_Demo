@@ -1,0 +1,39 @@
+{
+  "fileName": "Benchmarks/Study_SamplesSet/2ad455fca27f80c82c8003151942be9a.sol",
+  "baseName": "2ad455fca27f80c82c8003151942be9a.sol",
+  "iter": 1037,
+  "time": "149.342913",
+  "errMsg": null,
+  "result": [
+    {
+      "no": "1",
+      "kind": "IO",
+      "line": 23,
+      "signatures": [
+        { "contractName": "waste4", "methodName": "join", "argTypes": [] }
+      ],
+      "exp": "(participants.length * earnings)",
+      "status": "unproven"
+    },
+    {
+      "no": "2",
+      "kind": "IO",
+      "line": 25,
+      "signatures": [
+        { "contractName": "waste4", "methodName": "join", "argTypes": [] }
+      ],
+      "exp": "(number + 1)",
+      "status": "unproven"
+    },
+    {
+      "no": "3",
+      "kind": "ETH_LEAK",
+      "line": 24,
+      "signatures": [
+        { "contractName": "waste4", "methodName": "join", "argTypes": [] }
+      ],
+      "exp": "msg.sender.transfer(money);",
+      "status": "unproven"
+    }
+  ]
+}

@@ -1,0 +1,795 @@
+{
+  "success": true,
+  "error": null,
+  "results": {
+    "detectors": [
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "convertTo",
+            "source_mapping": {
+              "start": 1403,
+              "length": 319,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "EtherUnitConverter",
+                "source_mapping": {
+                  "start": 25,
+                  "length": 3215,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              },
+              "signature": "convertTo(uint256,string,string)"
+            }
+          },
+          {
+            "type": "node",
+            "name": "amount * (input / output)",
+            "source_mapping": {
+              "start": 1624,
+              "length": 32,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "convertTo",
+                "source_mapping": {
+                  "start": 1403,
+                  "length": 319,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "EtherUnitConverter",
+                    "source_mapping": {
+                      "start": 25,
+                      "length": 3215,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "convertTo(uint256,string,string)"
+                }
+              }
+            }
+          }
+        ],
+        "description": "EtherUnitConverter.convertTo(uint256,string,string) () performs a multiplication on the result of a division:\n\t- amount * (input / output) ()\n",
+        "markdown": "[EtherUnitConverter.convertTo(uint256,string,string)]() performs a multiplication on the result of a division:\n\t- [amount * (input / output)]()\n",
+        "first_markdown_element": "",
+        "id": "2c9092db0c55fb1505a838656d7bae784915a9d410414cf452b638560b35b24c",
+        "check": "divide-before-multiply",
+        "impact": "Medium",
+        "confidence": "Medium"
+      },
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "convertToEach",
+            "source_mapping": {
+              "start": 1863,
+              "length": 424,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "EtherUnitConverter",
+                "source_mapping": {
+                  "start": 25,
+                  "length": 3215,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              },
+              "signature": "convertToEach(uint256,string,uint256)"
+            }
+          },
+          {
+            "type": "node",
+            "name": "convAmt = (amount * (input / output))",
+            "source_mapping": {
+              "start": 2137,
+              "length": 37,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "convertToEach",
+                "source_mapping": {
+                  "start": 1863,
+                  "length": 424,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "EtherUnitConverter",
+                    "source_mapping": {
+                      "start": 25,
+                      "length": 3215,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "convertToEach(uint256,string,uint256)"
+                }
+              }
+            }
+          }
+        ],
+        "description": "EtherUnitConverter.convertToEach(uint256,string,uint256) () performs a multiplication on the result of a division:\n\t- convAmt = (amount * (input / output)) ()\n",
+        "markdown": "[EtherUnitConverter.convertToEach(uint256,string,uint256)]() performs a multiplication on the result of a division:\n\t- [convAmt = (amount * (input / output))]()\n",
+        "first_markdown_element": "",
+        "id": "499717c3c8aa84b2f02c8b8cca1b8c6c941b629e1fe8d1247f8cebb9f34de3d9",
+        "check": "divide-before-multiply",
+        "impact": "Medium",
+        "confidence": "Medium"
+      },
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "iterateTable",
+            "source_mapping": {
+              "start": 2752,
+              "length": 486,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "EtherUnitConverter",
+                "source_mapping": {
+                  "start": 25,
+                  "length": 3215,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              },
+              "signature": "iterateTable(uint256,uint256)"
+            }
+          },
+          {
+            "type": "node",
+            "name": "c[i] = (_amt * (_input / output))",
+            "source_mapping": {
+              "start": 3067,
+              "length": 33,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "iterateTable",
+                "source_mapping": {
+                  "start": 2752,
+                  "length": 486,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "EtherUnitConverter",
+                    "source_mapping": {
+                      "start": 25,
+                      "length": 3215,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "iterateTable(uint256,uint256)"
+                }
+              }
+            }
+          }
+        ],
+        "description": "EtherUnitConverter.iterateTable(uint256,uint256) () performs a multiplication on the result of a division:\n\t- c[i] = (_amt * (_input / output)) ()\n",
+        "markdown": "[EtherUnitConverter.iterateTable(uint256,uint256)]() performs a multiplication on the result of a division:\n\t- [c[i] = (_amt * (_input / output))]()\n",
+        "first_markdown_element": "",
+        "id": "c593c4e4bfbadf7c96f5cb72c1e39d59ec194a96587c895e3ae08edcdb3d529a",
+        "check": "divide-before-multiply",
+        "impact": "Medium",
+        "confidence": "Medium"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "c",
+            "source_mapping": {
+              "start": 2881,
+              "length": 7,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "iterateTable",
+                "source_mapping": {
+                  "start": 2752,
+                  "length": 486,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "EtherUnitConverter",
+                    "source_mapping": {
+                      "start": 25,
+                      "length": 3215,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "iterateTable(uint256,uint256)"
+                }
+              }
+            }
+          }
+        ],
+        "description": "EtherUnitConverter.iterateTable(uint256,uint256).c () is a local variable never initialized\n",
+        "markdown": "[EtherUnitConverter.iterateTable(uint256,uint256).c]() is a local variable never initialized\n",
+        "first_markdown_element": "",
+        "id": "7ee9486dc06533082363e750e4172406cf082fa533a8e9de5b7a976fdfd54dd9",
+        "check": "uninitialized-local",
+        "impact": "Medium",
+        "confidence": "Medium"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "convertTo",
+            "source_mapping": {
+              "start": 1448,
+              "length": 16,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "convertTo",
+                "source_mapping": {
+                  "start": 1403,
+                  "length": 319,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "EtherUnitConverter",
+                    "source_mapping": {
+                      "start": 25,
+                      "length": 3215,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "convertTo(uint256,string,string)"
+                }
+              }
+            }
+          },
+          {
+            "type": "function",
+            "name": "convertTo",
+            "source_mapping": {
+              "start": 1403,
+              "length": 319,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "EtherUnitConverter",
+                "source_mapping": {
+                  "start": 25,
+                  "length": 3215,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              },
+              "signature": "convertTo(uint256,string,string)"
+            }
+          }
+        ],
+        "description": "EtherUnitConverter.convertTo(uint256,string,string).convertTo () shadows:\n\t- EtherUnitConverter.convertTo(uint256,string,string) () (function)\n",
+        "markdown": "[EtherUnitConverter.convertTo(uint256,string,string).convertTo]() shadows:\n\t- [EtherUnitConverter.convertTo(uint256,string,string)]() (function)\n",
+        "first_markdown_element": "",
+        "id": "7626afbb7270dcc524e43c50bb4d7f921dcaf9cbe53809387d5450207e26a1c7",
+        "check": "shadowing-local",
+        "impact": "Low",
+        "confidence": "High"
+      },
+      {
+        "elements": [],
+        "description": "solc-0.4.0 is not recommended for deployment\n",
+        "markdown": "solc-0.4.0 is not recommended for deployment\n",
+        "first_markdown_element": "",
+        "id": "e676d9e89e623fa7675baecce41eb7ab21d1d8ec9e856bc5b047e6cfb50b37ca",
+        "check": "solc-version",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "pragma",
+            "name": "^0.4.0",
+            "source_mapping": {
+              "start": 0,
+              "length": 23,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "directive": [
+                "solidity",
+                "^",
+                "0.4",
+                ".0"
+              ]
+            }
+          }
+        ],
+        "description": "Pragma version^0.4.0 () allows old versions\n",
+        "markdown": "Pragma version[^0.4.0]() allows old versions\n",
+        "first_markdown_element": "",
+        "id": "f4d0f96f990510a571c7ae954763f848d217d6f86fa5953d251f28f5221969e2",
+        "check": "solc-version",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "_input",
+            "source_mapping": {
+              "start": 2785,
+              "length": 11,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "iterateTable",
+                "source_mapping": {
+                  "start": 2752,
+                  "length": 486,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "EtherUnitConverter",
+                    "source_mapping": {
+                      "start": 25,
+                      "length": 3215,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "iterateTable(uint256,uint256)"
+                }
+              }
+            },
+            "additional_fields": {
+              "target": "parameter",
+              "convention": "mixedCase"
+            }
+          }
+        ],
+        "description": "Parameter EtherUnitConverter.iterateTable(uint256,uint256)._input () is not in mixedCase\n",
+        "markdown": "Parameter [EtherUnitConverter.iterateTable(uint256,uint256)._input]() is not in mixedCase\n",
+        "first_markdown_element": "",
+        "id": "0f6699caa0f42140b34e6f25cb13811a9bc434dffcf637c444dfac7c67c5aa7d",
+        "check": "naming-convention",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "_amt",
+            "source_mapping": {
+              "start": 2774,
+              "length": 9,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "iterateTable",
+                "source_mapping": {
+                  "start": 2752,
+                  "length": 486,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "EtherUnitConverter",
+                    "source_mapping": {
+                      "start": 25,
+                      "length": 3215,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "iterateTable(uint256,uint256)"
+                }
+              }
+            },
+            "additional_fields": {
+              "target": "parameter",
+              "convention": "mixedCase"
+            }
+          }
+        ],
+        "description": "Parameter EtherUnitConverter.iterateTable(uint256,uint256)._amt () is not in mixedCase\n",
+        "markdown": "Parameter [EtherUnitConverter.iterateTable(uint256,uint256)._amt]() is not in mixedCase\n",
+        "first_markdown_element": "",
+        "id": "eb251c4bb0dc934c2deed42d76c75663cabe90db54f7ed52f9add3ed7ea3486c",
+        "check": "naming-convention",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "convertToAllTable",
+            "source_mapping": {
+              "start": 2297,
+              "length": 445,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "EtherUnitConverter",
+                "source_mapping": {
+                  "start": 25,
+                  "length": 3215,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              },
+              "signature": "convertToAllTable(uint256,string)"
+            }
+          }
+        ],
+        "description": "convertToAllTable(uint256,string) should be declared external:\n\t- EtherUnitConverter.convertToAllTable(uint256,string) ()\n",
+        "markdown": "convertToAllTable(uint256,string) should be declared external:\n\t- [EtherUnitConverter.convertToAllTable(uint256,string)]()\n",
+        "first_markdown_element": "",
+        "id": "0a2364200eeb79272d2556bc5e4653253463eae1328854b9ebb15c9c32b8ca56",
+        "check": "external-function",
+        "impact": "Optimization",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "convertToWei",
+            "source_mapping": {
+              "start": 1263,
+              "length": 130,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "EtherUnitConverter",
+                "source_mapping": {
+                  "start": 25,
+                  "length": 3215,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              },
+              "signature": "convertToWei(uint256,string)"
+            }
+          }
+        ],
+        "description": "convertToWei(uint256,string) should be declared external:\n\t- EtherUnitConverter.convertToWei(uint256,string) ()\n",
+        "markdown": "convertToWei(uint256,string) should be declared external:\n\t- [EtherUnitConverter.convertToWei(uint256,string)]()\n",
+        "first_markdown_element": "",
+        "id": "0eade8f9db58dfa39152c639664646b60543efdf46558a2bf4a3c309536dbb18",
+        "check": "external-function",
+        "impact": "Optimization",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "convertToEach",
+            "source_mapping": {
+              "start": 1863,
+              "length": 424,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "EtherUnitConverter",
+                "source_mapping": {
+                  "start": 25,
+                  "length": 3215,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              },
+              "signature": "convertToEach(uint256,string,uint256)"
+            }
+          }
+        ],
+        "description": "convertToEach(uint256,string,uint256) should be declared external:\n\t- EtherUnitConverter.convertToEach(uint256,string,uint256) ()\n",
+        "markdown": "convertToEach(uint256,string,uint256) should be declared external:\n\t- [EtherUnitConverter.convertToEach(uint256,string,uint256)]()\n",
+        "first_markdown_element": "",
+        "id": "51bdb081d46f2fbc3b3b4a9e809838512fa22bce9c9bee94d5e062cd7dbb93cb",
+        "check": "external-function",
+        "impact": "Optimization",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "convertTo",
+            "source_mapping": {
+              "start": 1403,
+              "length": 319,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "EtherUnitConverter",
+                "source_mapping": {
+                  "start": 25,
+                  "length": 3215,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              },
+              "signature": "convertTo(uint256,string,string)"
+            }
+          }
+        ],
+        "description": "convertTo(uint256,string,string) should be declared external:\n\t- EtherUnitConverter.convertTo(uint256,string,string) ()\n",
+        "markdown": "convertTo(uint256,string,string) should be declared external:\n\t- [EtherUnitConverter.convertTo(uint256,string,string)]()\n",
+        "first_markdown_element": "",
+        "id": "d1126bef12f6a1b99794c1c5262b0b70924e5c2dc940481198422345767e077f",
+        "check": "external-function",
+        "impact": "Optimization",
+        "confidence": "High"
+      }
+    ]
+  }
+}

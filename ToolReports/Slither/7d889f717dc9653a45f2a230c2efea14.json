@@ -1,0 +1,3106 @@
+{
+  "success": true,
+  "error": null,
+  "results": {
+    "detectors": [
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "userStatuses",
+            "source_mapping": {
+              "start": 147,
+              "length": 52,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "OrangeGov_Main",
+                "source_mapping": {
+                  "start": 25,
+                  "length": 3699,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              }
+            }
+          },
+          {
+            "type": "function",
+            "name": "getHasPermission",
+            "source_mapping": {
+              "start": 421,
+              "length": 279,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "OrangeGov_Main",
+                "source_mapping": {
+                  "start": 25,
+                  "length": 3699,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              },
+              "signature": "getHasPermission(address,string,string)"
+            }
+          }
+        ],
+        "description": "OrangeGov_Main.userStatuses () is never initialized. It is used in:\n\t- OrangeGov_Main.getHasPermission(address,string,string) ()\n",
+        "markdown": "[OrangeGov_Main.userStatuses]() is never initialized. It is used in:\n\t- [OrangeGov_Main.getHasPermission(address,string,string)]()\n",
+        "first_markdown_element": "",
+        "id": "fe377ba416177d9fd9c5ab4dae00b94fd14c8a54ed606d9ea8ae0b98d53670ea",
+        "check": "uninitialized-state",
+        "impact": "High",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "update",
+            "source_mapping": {
+              "start": 2629,
+              "length": 523,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "OrangeGov_Main",
+                "source_mapping": {
+                  "start": 25,
+                  "length": 3699,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              },
+              "signature": "update(bytes)"
+            }
+          },
+          {
+            "type": "node",
+            "name": "addr.call.gas(msg.gas)(bytes4(sha3()(tellPreviousContract(address))),currentContract)",
+            "source_mapping": {
+              "start": 2866,
+              "length": 85,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "update",
+                "source_mapping": {
+                  "start": 2629,
+                  "length": 523,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "OrangeGov_Main",
+                    "source_mapping": {
+                      "start": 25,
+                      "length": 3699,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "update(bytes)"
+                }
+              }
+            },
+            "additional_fields": {
+              "underlying_type": "external_calls"
+            }
+          },
+          {
+            "type": "node",
+            "name": "currentContract = addr",
+            "source_mapping": {
+              "start": 2961,
+              "length": 22,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "update",
+                "source_mapping": {
+                  "start": 2629,
+                  "length": 523,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "OrangeGov_Main",
+                    "source_mapping": {
+                      "start": 25,
+                      "length": 3699,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "update(bytes)"
+                }
+              }
+            },
+            "additional_fields": {
+              "underlying_type": "variables_written",
+              "variable_name": "currentContract"
+            }
+          }
+        ],
+        "description": "Reentrancy in OrangeGov_Main.update(bytes) ():\n\tExternal calls:\n\t- addr.call.gas(msg.gas)(bytes4(sha3()(tellPreviousContract(address))),currentContract) ()\n\tState variables written after the call(s):\n\t- currentContract = addr ()\n\tOrangeGov_Main.currentContract () can be used in cross function reentrancies:\n\t- OrangeGov_Main.removeContract(string) ()\n\t- OrangeGov_Main.update(bytes) ()\n",
+        "markdown": "Reentrancy in [OrangeGov_Main.update(bytes)]():\n\tExternal calls:\n\t- [addr.call.gas(msg.gas)(bytes4(sha3()(tellPreviousContract(address))),currentContract)]()\n\tState variables written after the call(s):\n\t- [currentContract = addr]()\n\t[OrangeGov_Main.currentContract]() can be used in cross function reentrancies:\n\t- [OrangeGov_Main.removeContract(string)]()\n\t- [OrangeGov_Main.update(bytes)]()\n",
+        "first_markdown_element": "",
+        "id": "034603557d7b4769c667da822a0bcaa8f1fcbb0c0edc6f86a8f7ad089736f890",
+        "check": "reentrancy-no-eth",
+        "impact": "Medium",
+        "confidence": "Medium"
+      },
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "removeContract",
+            "source_mapping": {
+              "start": 2313,
+              "length": 314,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "OrangeGov_Main",
+                "source_mapping": {
+                  "start": 25,
+                  "length": 3699,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              },
+              "signature": "removeContract(string)"
+            }
+          },
+          {
+            "type": "node",
+            "name": "contractIDs[ID].call.gas(msg.gas)(bytes4(sha3()(changeCurrentContract(address))),currentContract)",
+            "source_mapping": {
+              "start": 2427,
+              "length": 97,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "removeContract",
+                "source_mapping": {
+                  "start": 2313,
+                  "length": 314,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "OrangeGov_Main",
+                    "source_mapping": {
+                      "start": 25,
+                      "length": 3699,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "removeContract(string)"
+                }
+              }
+            }
+          }
+        ],
+        "description": "OrangeGov_Main.removeContract(string) () ignores return value by contractIDs[ID].call.gas(msg.gas)(bytes4(sha3()(changeCurrentContract(address))),currentContract) ()\n",
+        "markdown": "[OrangeGov_Main.removeContract(string)]() ignores return value by [contractIDs[ID].call.gas(msg.gas)(bytes4(sha3()(changeCurrentContract(address))),currentContract)]()\n",
+        "first_markdown_element": "",
+        "id": "02d3a7ba1a98b34fa2b854e0f3a8019e0173772c4af9edb92bee6cd663a65e89",
+        "check": "unchecked-lowlevel",
+        "impact": "Medium",
+        "confidence": "Medium"
+      },
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "update",
+            "source_mapping": {
+              "start": 2629,
+              "length": 523,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "OrangeGov_Main",
+                "source_mapping": {
+                  "start": 25,
+                  "length": 3699,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              },
+              "signature": "update(bytes)"
+            }
+          },
+          {
+            "type": "node",
+            "name": "contractArray[x].call.gas(msg.gas)(bytes4(sha3()(changeMain(address))),currentContract)",
+            "source_mapping": {
+              "start": 3051,
+              "length": 87,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "update",
+                "source_mapping": {
+                  "start": 2629,
+                  "length": 523,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "OrangeGov_Main",
+                    "source_mapping": {
+                      "start": 25,
+                      "length": 3699,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "update(bytes)"
+                }
+              }
+            }
+          }
+        ],
+        "description": "OrangeGov_Main.update(bytes) () ignores return value by contractArray[x].call.gas(msg.gas)(bytes4(sha3()(changeMain(address))),currentContract) ()\n",
+        "markdown": "[OrangeGov_Main.update(bytes)]() ignores return value by [contractArray[x].call.gas(msg.gas)(bytes4(sha3()(changeMain(address))),currentContract)]()\n",
+        "first_markdown_element": "",
+        "id": "559d72c0e828c4250474e3b2b9039fdca2c98f6a4bfa6da1e9c23132b06edf1a",
+        "check": "unchecked-lowlevel",
+        "impact": "Medium",
+        "confidence": "Medium"
+      },
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "addContract",
+            "source_mapping": {
+              "start": 1560,
+              "length": 751,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "OrangeGov_Main",
+                "source_mapping": {
+                  "start": 25,
+                  "length": 3699,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              },
+              "signature": "addContract(string,bytes)"
+            }
+          },
+          {
+            "type": "node",
+            "name": "oldAddr.call.gas(msg.gas)(bytes4(sha3()(changeCurrentContract(address))),addr)",
+            "source_mapping": {
+              "start": 1916,
+              "length": 78,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "addContract",
+                "source_mapping": {
+                  "start": 1560,
+                  "length": 751,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "OrangeGov_Main",
+                    "source_mapping": {
+                      "start": 25,
+                      "length": 3699,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "addContract(string,bytes)"
+                }
+              }
+            }
+          }
+        ],
+        "description": "OrangeGov_Main.addContract(string,bytes) () ignores return value by oldAddr.call.gas(msg.gas)(bytes4(sha3()(changeCurrentContract(address))),addr) ()\n",
+        "markdown": "[OrangeGov_Main.addContract(string,bytes)]() ignores return value by [oldAddr.call.gas(msg.gas)(bytes4(sha3()(changeCurrentContract(address))),addr)]()\n",
+        "first_markdown_element": "",
+        "id": "c5e983229ba64ebdf7b8357c60582f3cc40fca823753948fbcb6fad1eafb5689",
+        "check": "unchecked-lowlevel",
+        "impact": "Medium",
+        "confidence": "Medium"
+      },
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "update",
+            "source_mapping": {
+              "start": 2629,
+              "length": 523,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "OrangeGov_Main",
+                "source_mapping": {
+                  "start": 25,
+                  "length": 3699,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              },
+              "signature": "update(bytes)"
+            }
+          },
+          {
+            "type": "node",
+            "name": "addr.call.gas(msg.gas)(bytes4(sha3()(tellPreviousContract(address))),currentContract)",
+            "source_mapping": {
+              "start": 2866,
+              "length": 85,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "update",
+                "source_mapping": {
+                  "start": 2629,
+                  "length": 523,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "OrangeGov_Main",
+                    "source_mapping": {
+                      "start": 25,
+                      "length": 3699,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "update(bytes)"
+                }
+              }
+            }
+          }
+        ],
+        "description": "OrangeGov_Main.update(bytes) () ignores return value by addr.call.gas(msg.gas)(bytes4(sha3()(tellPreviousContract(address))),currentContract) ()\n",
+        "markdown": "[OrangeGov_Main.update(bytes)]() ignores return value by [addr.call.gas(msg.gas)(bytes4(sha3()(tellPreviousContract(address))),currentContract)]()\n",
+        "first_markdown_element": "",
+        "id": "f0634dbb283d0bc1102fcfdb3fa5f9f55790de7293e85da2127624889de7b9db",
+        "check": "unchecked-lowlevel",
+        "impact": "Medium",
+        "confidence": "Medium"
+      },
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "addContract",
+            "source_mapping": {
+              "start": 1560,
+              "length": 751,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "OrangeGov_Main",
+                "source_mapping": {
+                  "start": 25,
+                  "length": 3699,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              },
+              "signature": "addContract(string,bytes)"
+            }
+          },
+          {
+            "type": "node",
+            "name": "addr.call.gas(msg.gas)(bytes4(sha3()(tellPreviousContract(address))),oldAddr)",
+            "source_mapping": {
+              "start": 2067,
+              "length": 77,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "addContract",
+                "source_mapping": {
+                  "start": 1560,
+                  "length": 751,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "OrangeGov_Main",
+                    "source_mapping": {
+                      "start": 25,
+                      "length": 3699,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "addContract(string,bytes)"
+                }
+              }
+            }
+          }
+        ],
+        "description": "OrangeGov_Main.addContract(string,bytes) () ignores return value by addr.call.gas(msg.gas)(bytes4(sha3()(tellPreviousContract(address))),oldAddr) ()\n",
+        "markdown": "[OrangeGov_Main.addContract(string,bytes)]() ignores return value by [addr.call.gas(msg.gas)(bytes4(sha3()(tellPreviousContract(address))),oldAddr)]()\n",
+        "first_markdown_element": "",
+        "id": "f271f9c5101acb00c58e85dbffca0506d2456b10b65fc131289d6ad3a162347c",
+        "check": "unchecked-lowlevel",
+        "impact": "Medium",
+        "confidence": "Medium"
+      },
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "update",
+            "source_mapping": {
+              "start": 2629,
+              "length": 523,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "OrangeGov_Main",
+                "source_mapping": {
+                  "start": 25,
+                  "length": 3699,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              },
+              "signature": "update(bytes)"
+            }
+          },
+          {
+            "type": "node",
+            "name": "contractArray[x].call.gas(msg.gas)(bytes4(sha3()(changeMain(address))),currentContract)",
+            "source_mapping": {
+              "start": 3051,
+              "length": 87,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "update",
+                "source_mapping": {
+                  "start": 2629,
+                  "length": 523,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "OrangeGov_Main",
+                    "source_mapping": {
+                      "start": 25,
+                      "length": 3699,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "update(bytes)"
+                }
+              }
+            }
+          }
+        ],
+        "description": "OrangeGov_Main.update(bytes) () has external calls inside a loop: contractArray[x].call.gas(msg.gas)(bytes4(sha3()(changeMain(address))),currentContract) ()\n",
+        "markdown": "[OrangeGov_Main.update(bytes)]() has external calls inside a loop: [contractArray[x].call.gas(msg.gas)(bytes4(sha3()(changeMain(address))),currentContract)]()\n",
+        "first_markdown_element": "",
+        "id": "20cc882c26110d3d9d1b083b9e9606c1fa46145dd9a63daf63284e8aa994090a",
+        "check": "calls-loop",
+        "impact": "Low",
+        "confidence": "Medium"
+      },
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "removeContract",
+            "source_mapping": {
+              "start": 2313,
+              "length": 314,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "OrangeGov_Main",
+                "source_mapping": {
+                  "start": 25,
+                  "length": 3699,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              },
+              "signature": "removeContract(string)"
+            }
+          },
+          {
+            "type": "node",
+            "name": "contractIDs[ID].call.gas(msg.gas)(bytes4(sha3()(changeCurrentContract(address))),currentContract)",
+            "source_mapping": {
+              "start": 2427,
+              "length": 97,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "removeContract",
+                "source_mapping": {
+                  "start": 2313,
+                  "length": 314,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "OrangeGov_Main",
+                    "source_mapping": {
+                      "start": 25,
+                      "length": 3699,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "removeContract(string)"
+                }
+              }
+            },
+            "additional_fields": {
+              "underlying_type": "external_calls"
+            }
+          },
+          {
+            "type": "node",
+            "name": "contractIDs[ID].call.gas(msg.gas)(bytes4(sha3()(changeCurrentContract(address))),currentContract)",
+            "source_mapping": {
+              "start": 2427,
+              "length": 97,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "removeContract",
+                "source_mapping": {
+                  "start": 2313,
+                  "length": 314,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "OrangeGov_Main",
+                    "source_mapping": {
+                      "start": 25,
+                      "length": 3699,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "removeContract(string)"
+                }
+              }
+            },
+            "additional_fields": {
+              "underlying_type": "external_calls_sending_eth"
+            }
+          },
+          {
+            "type": "node",
+            "name": "removeFromContractIDArray(contractIDs[ID])",
+            "source_mapping": {
+              "start": 2581,
+              "length": 42,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "removeContract",
+                "source_mapping": {
+                  "start": 2313,
+                  "length": 314,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "OrangeGov_Main",
+                    "source_mapping": {
+                      "start": 25,
+                      "length": 3699,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "removeContract(string)"
+                }
+              }
+            },
+            "additional_fields": {
+              "underlying_type": "variables_written",
+              "variable_name": "contractArray"
+            }
+          },
+          {
+            "type": "node",
+            "name": "contractArray[x] = contractArray[contractArray.length - 1]",
+            "source_mapping": {
+              "start": 1410,
+              "length": 54,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "removeFromContractIDArray",
+                "source_mapping": {
+                  "start": 1223,
+                  "length": 330,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "OrangeGov_Main",
+                    "source_mapping": {
+                      "start": 25,
+                      "length": 3699,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "removeFromContractIDArray(address)"
+                }
+              }
+            },
+            "additional_fields": {
+              "underlying_type": "variables_written",
+              "variable_name": "contractArray"
+            }
+          },
+          {
+            "type": "node",
+            "name": "contractArray.length --",
+            "source_mapping": {
+              "start": 1479,
+              "length": 22,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "removeFromContractIDArray",
+                "source_mapping": {
+                  "start": 1223,
+                  "length": 330,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "OrangeGov_Main",
+                    "source_mapping": {
+                      "start": 25,
+                      "length": 3699,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "removeFromContractIDArray(address)"
+                }
+              }
+            },
+            "additional_fields": {
+              "underlying_type": "variables_written",
+              "variable_name": "contractArray"
+            }
+          }
+        ],
+        "description": "Reentrancy in OrangeGov_Main.removeContract(string) ():\n\tExternal calls:\n\t- contractIDs[ID].call.gas(msg.gas)(bytes4(sha3()(changeCurrentContract(address))),currentContract) ()\n\tState variables written after the call(s):\n\t- removeFromContractIDArray(contractIDs[ID]) ()\n\t\t- contractArray[x] = contractArray[contractArray.length - 1] ()\n\t\t- contractArray.length -- ()\n",
+        "markdown": "Reentrancy in [OrangeGov_Main.removeContract(string)]():\n\tExternal calls:\n\t- [contractIDs[ID].call.gas(msg.gas)(bytes4(sha3()(changeCurrentContract(address))),currentContract)]()\n\tState variables written after the call(s):\n\t- [removeFromContractIDArray(contractIDs[ID])]()\n\t\t- [contractArray[x] = contractArray[contractArray.length - 1]]()\n\t\t- [contractArray.length --]()\n",
+        "first_markdown_element": "",
+        "id": "c1a5de2693fa4ec1b59982669f21550527473f3f0afee640a8795d9bbca0a65b",
+        "check": "reentrancy-benign",
+        "impact": "Low",
+        "confidence": "Medium"
+      },
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "addContract",
+            "source_mapping": {
+              "start": 1560,
+              "length": 751,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "OrangeGov_Main",
+                "source_mapping": {
+                  "start": 25,
+                  "length": 3699,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              },
+              "signature": "addContract(string,bytes)"
+            }
+          },
+          {
+            "type": "node",
+            "name": "oldAddr.call.gas(msg.gas)(bytes4(sha3()(changeCurrentContract(address))),addr)",
+            "source_mapping": {
+              "start": 1916,
+              "length": 78,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "addContract",
+                "source_mapping": {
+                  "start": 1560,
+                  "length": 751,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "OrangeGov_Main",
+                    "source_mapping": {
+                      "start": 25,
+                      "length": 3699,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "addContract(string,bytes)"
+                }
+              }
+            },
+            "additional_fields": {
+              "underlying_type": "external_calls"
+            }
+          },
+          {
+            "type": "node",
+            "name": "addr.call.gas(msg.gas)(bytes4(sha3()(tellPreviousContract(address))),oldAddr)",
+            "source_mapping": {
+              "start": 2067,
+              "length": 77,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "addContract",
+                "source_mapping": {
+                  "start": 1560,
+                  "length": 751,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "OrangeGov_Main",
+                    "source_mapping": {
+                      "start": 25,
+                      "length": 3699,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "addContract(string,bytes)"
+                }
+              }
+            },
+            "additional_fields": {
+              "underlying_type": "external_calls"
+            }
+          },
+          {
+            "type": "node",
+            "name": "oldAddr.call.gas(msg.gas)(bytes4(sha3()(changeCurrentContract(address))),addr)",
+            "source_mapping": {
+              "start": 1916,
+              "length": 78,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "addContract",
+                "source_mapping": {
+                  "start": 1560,
+                  "length": 751,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "OrangeGov_Main",
+                    "source_mapping": {
+                      "start": 25,
+                      "length": 3699,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "addContract(string,bytes)"
+                }
+              }
+            },
+            "additional_fields": {
+              "underlying_type": "external_calls_sending_eth"
+            }
+          },
+          {
+            "type": "node",
+            "name": "addr.call.gas(msg.gas)(bytes4(sha3()(tellPreviousContract(address))),oldAddr)",
+            "source_mapping": {
+              "start": 2067,
+              "length": 77,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "addContract",
+                "source_mapping": {
+                  "start": 1560,
+                  "length": 751,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "OrangeGov_Main",
+                    "source_mapping": {
+                      "start": 25,
+                      "length": 3699,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "addContract(string,bytes)"
+                }
+              }
+            },
+            "additional_fields": {
+              "underlying_type": "external_calls_sending_eth"
+            }
+          },
+          {
+            "type": "node",
+            "name": "removeFromContractIDArray(addr)",
+            "source_mapping": {
+              "start": 2198,
+              "length": 31,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "addContract",
+                "source_mapping": {
+                  "start": 1560,
+                  "length": 751,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "OrangeGov_Main",
+                    "source_mapping": {
+                      "start": 25,
+                      "length": 3699,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "addContract(string,bytes)"
+                }
+              }
+            },
+            "additional_fields": {
+              "underlying_type": "variables_written",
+              "variable_name": "contractArray"
+            }
+          },
+          {
+            "type": "node",
+            "name": "contractArray[x] = contractArray[contractArray.length - 1]",
+            "source_mapping": {
+              "start": 1410,
+              "length": 54,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "removeFromContractIDArray",
+                "source_mapping": {
+                  "start": 1223,
+                  "length": 330,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "OrangeGov_Main",
+                    "source_mapping": {
+                      "start": 25,
+                      "length": 3699,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "removeFromContractIDArray(address)"
+                }
+              }
+            },
+            "additional_fields": {
+              "underlying_type": "variables_written",
+              "variable_name": "contractArray"
+            }
+          },
+          {
+            "type": "node",
+            "name": "contractArray.length --",
+            "source_mapping": {
+              "start": 1479,
+              "length": 22,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "removeFromContractIDArray",
+                "source_mapping": {
+                  "start": 1223,
+                  "length": 330,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "OrangeGov_Main",
+                    "source_mapping": {
+                      "start": 25,
+                      "length": 3699,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "removeFromContractIDArray(address)"
+                }
+              }
+            },
+            "additional_fields": {
+              "underlying_type": "variables_written",
+              "variable_name": "contractArray"
+            }
+          },
+          {
+            "type": "node",
+            "name": "contractArray.length ++",
+            "source_mapping": {
+              "start": 2236,
+              "length": 22,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "addContract",
+                "source_mapping": {
+                  "start": 1560,
+                  "length": 751,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "OrangeGov_Main",
+                    "source_mapping": {
+                      "start": 25,
+                      "length": 3699,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "addContract(string,bytes)"
+                }
+              }
+            },
+            "additional_fields": {
+              "underlying_type": "variables_written",
+              "variable_name": "contractArray"
+            }
+          },
+          {
+            "type": "node",
+            "name": "contractArray[contractArray.length - 1] = addr",
+            "source_mapping": {
+              "start": 2265,
+              "length": 42,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "addContract",
+                "source_mapping": {
+                  "start": 1560,
+                  "length": 751,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "OrangeGov_Main",
+                    "source_mapping": {
+                      "start": 25,
+                      "length": 3699,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "addContract(string,bytes)"
+                }
+              }
+            },
+            "additional_fields": {
+              "underlying_type": "variables_written",
+              "variable_name": "contractArray"
+            }
+          }
+        ],
+        "description": "Reentrancy in OrangeGov_Main.addContract(string,bytes) ():\n\tExternal calls:\n\t- oldAddr.call.gas(msg.gas)(bytes4(sha3()(changeCurrentContract(address))),addr) ()\n\t- addr.call.gas(msg.gas)(bytes4(sha3()(tellPreviousContract(address))),oldAddr) ()\n\tState variables written after the call(s):\n\t- removeFromContractIDArray(addr) ()\n\t\t- contractArray[x] = contractArray[contractArray.length - 1] ()\n\t\t- contractArray.length -- ()\n\t- contractArray.length ++ ()\n\t- contractArray[contractArray.length - 1] = addr ()\n",
+        "markdown": "Reentrancy in [OrangeGov_Main.addContract(string,bytes)]():\n\tExternal calls:\n\t- [oldAddr.call.gas(msg.gas)(bytes4(sha3()(changeCurrentContract(address))),addr)]()\n\t- [addr.call.gas(msg.gas)(bytes4(sha3()(tellPreviousContract(address))),oldAddr)]()\n\tState variables written after the call(s):\n\t- [removeFromContractIDArray(addr)]()\n\t\t- [contractArray[x] = contractArray[contractArray.length - 1]]()\n\t\t- [contractArray.length --]()\n\t- [contractArray.length ++]()\n\t- [contractArray[contractArray.length - 1] = addr]()\n",
+        "first_markdown_element": "",
+        "id": "dff9b18f2d24686dd24b02cb85b416b17ba1f8f5e5da7352abdf303e3d9da2f8",
+        "check": "reentrancy-benign",
+        "impact": "Low",
+        "confidence": "Medium"
+      },
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "addContract",
+            "source_mapping": {
+              "start": 1560,
+              "length": 751,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "OrangeGov_Main",
+                "source_mapping": {
+                  "start": 25,
+                  "length": 3699,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              },
+              "signature": "addContract(string,bytes)"
+            }
+          },
+          {
+            "type": "node",
+            "name": "",
+            "source_mapping": {
+              "start": 1668,
+              "length": 156,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "addContract",
+                "source_mapping": {
+                  "start": 1560,
+                  "length": 751,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "OrangeGov_Main",
+                    "source_mapping": {
+                      "start": 25,
+                      "length": 3699,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "addContract(string,bytes)"
+                }
+              }
+            }
+          }
+        ],
+        "description": "OrangeGov_Main.addContract(string,bytes) () uses assembly\n\t- INLINE ASM ()\n",
+        "markdown": "[OrangeGov_Main.addContract(string,bytes)]() uses assembly\n\t- [INLINE ASM]()\n",
+        "first_markdown_element": "",
+        "id": "297f916a15fbbb9f94f928a811ace352c88bd361ee3779533cf9c2b76b58f850",
+        "check": "assembly",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "update",
+            "source_mapping": {
+              "start": 2629,
+              "length": 523,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "OrangeGov_Main",
+                "source_mapping": {
+                  "start": 25,
+                  "length": 3699,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              },
+              "signature": "update(bytes)"
+            }
+          },
+          {
+            "type": "node",
+            "name": "",
+            "source_mapping": {
+              "start": 2717,
+              "length": 153,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "update",
+                "source_mapping": {
+                  "start": 2629,
+                  "length": 523,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "OrangeGov_Main",
+                    "source_mapping": {
+                      "start": 25,
+                      "length": 3699,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "update(bytes)"
+                }
+              }
+            }
+          }
+        ],
+        "description": "OrangeGov_Main.update(bytes) () uses assembly\n\t- INLINE ASM ()\n",
+        "markdown": "[OrangeGov_Main.update(bytes)]() uses assembly\n\t- [INLINE ASM]()\n",
+        "first_markdown_element": "",
+        "id": "836dd3f13f6471eb2e737e9dfa93af7628f7ffd360d5034a1a2c4f26bf32f795",
+        "check": "assembly",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "node",
+            "name": "addr.call.gas(msg.gas)(bytes4(sha3()(tellPreviousContract(address))),currentContract)",
+            "source_mapping": {
+              "start": 2866,
+              "length": 85,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "update",
+                "source_mapping": {
+                  "start": 2629,
+                  "length": 523,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "OrangeGov_Main",
+                    "source_mapping": {
+                      "start": 25,
+                      "length": 3699,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "update(bytes)"
+                }
+              }
+            }
+          }
+        ],
+        "description": "Deprecated standard detected addr.call.gas(msg.gas)(bytes4(sha3()(tellPreviousContract(address))),currentContract) ():\n\t- Usage of \"msg.gas\" should be replaced with \"gasleft()\"\n\t- Usage of \"sha3()\" should be replaced with \"keccak256()\"\n",
+        "markdown": "Deprecated standard detected [addr.call.gas(msg.gas)(bytes4(sha3()(tellPreviousContract(address))),currentContract)]():\n\t- Usage of \"msg.gas\" should be replaced with \"gasleft()\"\n\t- Usage of \"sha3()\" should be replaced with \"keccak256()\"\n",
+        "first_markdown_element": "",
+        "id": "1ee840d2b00bba658d08fe9592f0be329b606642e522e3cb9c342be0dfd850bd",
+        "check": "deprecated-standards",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "node",
+            "name": "oldAddr.call.gas(msg.gas)(bytes4(sha3()(changeCurrentContract(address))),addr)",
+            "source_mapping": {
+              "start": 1916,
+              "length": 78,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "addContract",
+                "source_mapping": {
+                  "start": 1560,
+                  "length": 751,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "OrangeGov_Main",
+                    "source_mapping": {
+                      "start": 25,
+                      "length": 3699,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "addContract(string,bytes)"
+                }
+              }
+            }
+          }
+        ],
+        "description": "Deprecated standard detected oldAddr.call.gas(msg.gas)(bytes4(sha3()(changeCurrentContract(address))),addr) ():\n\t- Usage of \"msg.gas\" should be replaced with \"gasleft()\"\n\t- Usage of \"sha3()\" should be replaced with \"keccak256()\"\n",
+        "markdown": "Deprecated standard detected [oldAddr.call.gas(msg.gas)(bytes4(sha3()(changeCurrentContract(address))),addr)]():\n\t- Usage of \"msg.gas\" should be replaced with \"gasleft()\"\n\t- Usage of \"sha3()\" should be replaced with \"keccak256()\"\n",
+        "first_markdown_element": "",
+        "id": "4fdbd63eb9f7f72539254ada67ca48cb2296e5444fe7a8dc78acf11acdfed1e9",
+        "check": "deprecated-standards",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "node",
+            "name": "contractIDs[ID].call.gas(msg.gas)(bytes4(sha3()(changeCurrentContract(address))),currentContract)",
+            "source_mapping": {
+              "start": 2427,
+              "length": 97,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "removeContract",
+                "source_mapping": {
+                  "start": 2313,
+                  "length": 314,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "OrangeGov_Main",
+                    "source_mapping": {
+                      "start": 25,
+                      "length": 3699,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "removeContract(string)"
+                }
+              }
+            }
+          }
+        ],
+        "description": "Deprecated standard detected contractIDs[ID].call.gas(msg.gas)(bytes4(sha3()(changeCurrentContract(address))),currentContract) ():\n\t- Usage of \"msg.gas\" should be replaced with \"gasleft()\"\n\t- Usage of \"sha3()\" should be replaced with \"keccak256()\"\n",
+        "markdown": "Deprecated standard detected [contractIDs[ID].call.gas(msg.gas)(bytes4(sha3()(changeCurrentContract(address))),currentContract)]():\n\t- Usage of \"msg.gas\" should be replaced with \"gasleft()\"\n\t- Usage of \"sha3()\" should be replaced with \"keccak256()\"\n",
+        "first_markdown_element": "",
+        "id": "50288f01dd1fff4687ec831937c13a36b6e19e5f60d8a30691d707e49022c30e",
+        "check": "deprecated-standards",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "node",
+            "name": "contractArray[x].call.gas(msg.gas)(bytes4(sha3()(changeMain(address))),currentContract)",
+            "source_mapping": {
+              "start": 3051,
+              "length": 87,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "update",
+                "source_mapping": {
+                  "start": 2629,
+                  "length": 523,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "OrangeGov_Main",
+                    "source_mapping": {
+                      "start": 25,
+                      "length": 3699,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "update(bytes)"
+                }
+              }
+            }
+          }
+        ],
+        "description": "Deprecated standard detected contractArray[x].call.gas(msg.gas)(bytes4(sha3()(changeMain(address))),currentContract) ():\n\t- Usage of \"msg.gas\" should be replaced with \"gasleft()\"\n\t- Usage of \"sha3()\" should be replaced with \"keccak256()\"\n",
+        "markdown": "Deprecated standard detected [contractArray[x].call.gas(msg.gas)(bytes4(sha3()(changeMain(address))),currentContract)]():\n\t- Usage of \"msg.gas\" should be replaced with \"gasleft()\"\n\t- Usage of \"sha3()\" should be replaced with \"keccak256()\"\n",
+        "first_markdown_element": "",
+        "id": "7536798af584236f1ed9ae18c09abce8a18a4f4989e4630fa8917311e4462a99",
+        "check": "deprecated-standards",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "node",
+            "name": "addr.call.gas(msg.gas)(bytes4(sha3()(tellPreviousContract(address))),oldAddr)",
+            "source_mapping": {
+              "start": 2067,
+              "length": 77,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "addContract",
+                "source_mapping": {
+                  "start": 1560,
+                  "length": 751,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "OrangeGov_Main",
+                    "source_mapping": {
+                      "start": 25,
+                      "length": 3699,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "addContract(string,bytes)"
+                }
+              }
+            }
+          }
+        ],
+        "description": "Deprecated standard detected addr.call.gas(msg.gas)(bytes4(sha3()(tellPreviousContract(address))),oldAddr) ():\n\t- Usage of \"msg.gas\" should be replaced with \"gasleft()\"\n\t- Usage of \"sha3()\" should be replaced with \"keccak256()\"\n",
+        "markdown": "Deprecated standard detected [addr.call.gas(msg.gas)(bytes4(sha3()(tellPreviousContract(address))),oldAddr)]():\n\t- Usage of \"msg.gas\" should be replaced with \"gasleft()\"\n\t- Usage of \"sha3()\" should be replaced with \"keccak256()\"\n",
+        "first_markdown_element": "",
+        "id": "c47a9a2f941640c6f65902eb9d336f0c2dff4373273d281da8ba61263ba618bf",
+        "check": "deprecated-standards",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "node",
+            "name": "",
+            "source_mapping": {
+              "start": 3357,
+              "length": 5,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "spendEther",
+                "source_mapping": {
+                  "start": 3241,
+                  "length": 125,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "OrangeGov_Main",
+                    "source_mapping": {
+                      "start": 25,
+                      "length": 3699,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "spendEther(address,uint256)"
+                }
+              }
+            }
+          }
+        ],
+        "description": "Deprecated standard detected THROW ():\n\t- Usage of \"throw\" should be replaced with \"revert()\"\n",
+        "markdown": "Deprecated standard detected [THROW]():\n\t- Usage of \"throw\" should be replaced with \"revert()\"\n",
+        "first_markdown_element": "",
+        "id": "f5556cf1c70b64b9e4b1fc32044dd970b5f2c8b9fc21b7971fda01971033f2d5",
+        "check": "deprecated-standards",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "pragma",
+            "name": "^0.4.9",
+            "source_mapping": {
+              "start": 0,
+              "length": 23,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "directive": [
+                "solidity",
+                "^",
+                "0.4",
+                ".9"
+              ]
+            }
+          }
+        ],
+        "description": "Pragma version^0.4.9 () allows old versions\n",
+        "markdown": "Pragma version[^0.4.9]() allows old versions\n",
+        "first_markdown_element": "",
+        "id": "3c5ff4f844f57b89efd6e4b54c2f202ca55c1f958c7074785f69d87ba6721a7e",
+        "check": "solc-version",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [],
+        "description": "solc-0.4.9 is not recommended for deployment\n",
+        "markdown": "solc-0.4.9 is not recommended for deployment\n",
+        "first_markdown_element": "",
+        "id": "8c74976b741e43fce2257e92f2bfb4a12e0d13318de6b2af88024745746120b1",
+        "check": "solc-version",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "addContract",
+            "source_mapping": {
+              "start": 1560,
+              "length": 751,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "OrangeGov_Main",
+                "source_mapping": {
+                  "start": 25,
+                  "length": 3699,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              },
+              "signature": "addContract(string,bytes)"
+            }
+          },
+          {
+            "type": "node",
+            "name": "oldAddr.call.gas(msg.gas)(bytes4(sha3()(changeCurrentContract(address))),addr)",
+            "source_mapping": {
+              "start": 1916,
+              "length": 78,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "addContract",
+                "source_mapping": {
+                  "start": 1560,
+                  "length": 751,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "OrangeGov_Main",
+                    "source_mapping": {
+                      "start": 25,
+                      "length": 3699,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "addContract(string,bytes)"
+                }
+              }
+            }
+          },
+          {
+            "type": "node",
+            "name": "addr.call.gas(msg.gas)(bytes4(sha3()(tellPreviousContract(address))),oldAddr)",
+            "source_mapping": {
+              "start": 2067,
+              "length": 77,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "addContract",
+                "source_mapping": {
+                  "start": 1560,
+                  "length": 751,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "OrangeGov_Main",
+                    "source_mapping": {
+                      "start": 25,
+                      "length": 3699,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "addContract(string,bytes)"
+                }
+              }
+            }
+          }
+        ],
+        "description": "Low level call in OrangeGov_Main.addContract(string,bytes) ():\n\t- oldAddr.call.gas(msg.gas)(bytes4(sha3()(changeCurrentContract(address))),addr) ()\n\t- addr.call.gas(msg.gas)(bytes4(sha3()(tellPreviousContract(address))),oldAddr) ()\n",
+        "markdown": "Low level call in [OrangeGov_Main.addContract(string,bytes)]():\n\t- [oldAddr.call.gas(msg.gas)(bytes4(sha3()(changeCurrentContract(address))),addr)]()\n\t- [addr.call.gas(msg.gas)(bytes4(sha3()(tellPreviousContract(address))),oldAddr)]()\n",
+        "first_markdown_element": "",
+        "id": "725ea7b5f5813921158d2d524c2cd9709b3ba3d8990dcc7ae5149c55083a4d19",
+        "check": "low-level-calls",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "update",
+            "source_mapping": {
+              "start": 2629,
+              "length": 523,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "OrangeGov_Main",
+                "source_mapping": {
+                  "start": 25,
+                  "length": 3699,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              },
+              "signature": "update(bytes)"
+            }
+          },
+          {
+            "type": "node",
+            "name": "addr.call.gas(msg.gas)(bytes4(sha3()(tellPreviousContract(address))),currentContract)",
+            "source_mapping": {
+              "start": 2866,
+              "length": 85,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "update",
+                "source_mapping": {
+                  "start": 2629,
+                  "length": 523,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "OrangeGov_Main",
+                    "source_mapping": {
+                      "start": 25,
+                      "length": 3699,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "update(bytes)"
+                }
+              }
+            }
+          },
+          {
+            "type": "node",
+            "name": "contractArray[x].call.gas(msg.gas)(bytes4(sha3()(changeMain(address))),currentContract)",
+            "source_mapping": {
+              "start": 3051,
+              "length": 87,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "update",
+                "source_mapping": {
+                  "start": 2629,
+                  "length": 523,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "OrangeGov_Main",
+                    "source_mapping": {
+                      "start": 25,
+                      "length": 3699,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "update(bytes)"
+                }
+              }
+            }
+          }
+        ],
+        "description": "Low level call in OrangeGov_Main.update(bytes) ():\n\t- addr.call.gas(msg.gas)(bytes4(sha3()(tellPreviousContract(address))),currentContract) ()\n\t- contractArray[x].call.gas(msg.gas)(bytes4(sha3()(changeMain(address))),currentContract) ()\n",
+        "markdown": "Low level call in [OrangeGov_Main.update(bytes)]():\n\t- [addr.call.gas(msg.gas)(bytes4(sha3()(tellPreviousContract(address))),currentContract)]()\n\t- [contractArray[x].call.gas(msg.gas)(bytes4(sha3()(changeMain(address))),currentContract)]()\n",
+        "first_markdown_element": "",
+        "id": "c691498867dc6c9fdfa958aedc87c25802c2395bf05cd14102309e03056bdd06",
+        "check": "low-level-calls",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "removeContract",
+            "source_mapping": {
+              "start": 2313,
+              "length": 314,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "OrangeGov_Main",
+                "source_mapping": {
+                  "start": 25,
+                  "length": 3699,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              },
+              "signature": "removeContract(string)"
+            }
+          },
+          {
+            "type": "node",
+            "name": "contractIDs[ID].call.gas(msg.gas)(bytes4(sha3()(changeCurrentContract(address))),currentContract)",
+            "source_mapping": {
+              "start": 2427,
+              "length": 97,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "removeContract",
+                "source_mapping": {
+                  "start": 2313,
+                  "length": 314,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "OrangeGov_Main",
+                    "source_mapping": {
+                      "start": 25,
+                      "length": 3699,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "removeContract(string)"
+                }
+              }
+            }
+          }
+        ],
+        "description": "Low level call in OrangeGov_Main.removeContract(string) ():\n\t- contractIDs[ID].call.gas(msg.gas)(bytes4(sha3()(changeCurrentContract(address))),currentContract) ()\n",
+        "markdown": "Low level call in [OrangeGov_Main.removeContract(string)]():\n\t- [contractIDs[ID].call.gas(msg.gas)(bytes4(sha3()(changeCurrentContract(address))),currentContract)]()\n",
+        "first_markdown_element": "",
+        "id": "eb9ac4e919ebea9d1e72d123b9750d08154bf8bbe847eb7b463e0f0d8b21bec7",
+        "check": "low-level-calls",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "ID",
+            "source_mapping": {
+              "start": 727,
+              "length": 9,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "getContractByID",
+                "source_mapping": {
+                  "start": 702,
+                  "length": 154,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "OrangeGov_Main",
+                    "source_mapping": {
+                      "start": 25,
+                      "length": 3699,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "getContractByID(string)"
+                }
+              }
+            },
+            "additional_fields": {
+              "target": "parameter",
+              "convention": "mixedCase"
+            }
+          }
+        ],
+        "description": "Parameter OrangeGov_Main.getContractByID(string).ID () is not in mixedCase\n",
+        "markdown": "Parameter [OrangeGov_Main.getContractByID(string).ID]() is not in mixedCase\n",
+        "first_markdown_element": "",
+        "id": "6048afe5d981eb5b22f661053725271267018b05e92d09ced34c9a57d2380fb7",
+        "check": "naming-convention",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "ID",
+            "source_mapping": {
+              "start": 2337,
+              "length": 9,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "removeContract",
+                "source_mapping": {
+                  "start": 2313,
+                  "length": 314,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "OrangeGov_Main",
+                    "source_mapping": {
+                      "start": 25,
+                      "length": 3699,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "removeContract(string)"
+                }
+              }
+            },
+            "additional_fields": {
+              "target": "parameter",
+              "convention": "mixedCase"
+            }
+          }
+        ],
+        "description": "Parameter OrangeGov_Main.removeContract(string).ID () is not in mixedCase\n",
+        "markdown": "Parameter [OrangeGov_Main.removeContract(string).ID]() is not in mixedCase\n",
+        "first_markdown_element": "",
+        "id": "c1379b1739cbcbd5074ab18aec25f74d74a7e05433d5900c1a9799c69dad2e1a",
+        "check": "naming-convention",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "ID",
+            "source_mapping": {
+              "start": 1581,
+              "length": 9,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "addContract",
+                "source_mapping": {
+                  "start": 1560,
+                  "length": 751,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "OrangeGov_Main",
+                    "source_mapping": {
+                      "start": 25,
+                      "length": 3699,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "addContract(string,bytes)"
+                }
+              }
+            },
+            "additional_fields": {
+              "target": "parameter",
+              "convention": "mixedCase"
+            }
+          }
+        ],
+        "description": "Parameter OrangeGov_Main.addContract(string,bytes).ID () is not in mixedCase\n",
+        "markdown": "Parameter [OrangeGov_Main.addContract(string,bytes).ID]() is not in mixedCase\n",
+        "first_markdown_element": "",
+        "id": "c84cdffb541a3ae9a447146319f7af734435424f0c2dcff47e2b97efda4faf04",
+        "check": "naming-convention",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "contract",
+            "name": "OrangeGov_Main",
+            "source_mapping": {
+              "start": 25,
+              "length": 3699,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "additional_fields": {
+              "target": "contract",
+              "convention": "CapWords"
+            }
+          }
+        ],
+        "description": "Contract OrangeGov_Main () is not in CapWords\n",
+        "markdown": "Contract [OrangeGov_Main]() is not in CapWords\n",
+        "first_markdown_element": "",
+        "id": "e90c48d934236f7ee2ebc97884665d91867b0144fb5e18c41dcf4230b0731981",
+        "check": "naming-convention",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "givePermission",
+            "source_mapping": {
+              "start": 3368,
+              "length": 206,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "OrangeGov_Main",
+                "source_mapping": {
+                  "start": 25,
+                  "length": 3699,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              },
+              "signature": "givePermission(address,string)"
+            }
+          }
+        ],
+        "description": "givePermission(address,string) should be declared external:\n\t- OrangeGov_Main.givePermission(address,string) ()\n",
+        "markdown": "givePermission(address,string) should be declared external:\n\t- [OrangeGov_Main.givePermission(address,string)]()\n",
+        "first_markdown_element": "",
+        "id": "357ce5863b4b8c43956cc5bd5bf5a3a5bfcd169c6ff23660c6ff4dbddef021d4",
+        "check": "external-function",
+        "impact": "Optimization",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "addContract",
+            "source_mapping": {
+              "start": 1560,
+              "length": 751,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "OrangeGov_Main",
+                "source_mapping": {
+                  "start": 25,
+                  "length": 3699,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              },
+              "signature": "addContract(string,bytes)"
+            }
+          }
+        ],
+        "description": "addContract(string,bytes) should be declared external:\n\t- OrangeGov_Main.addContract(string,bytes) ()\n",
+        "markdown": "addContract(string,bytes) should be declared external:\n\t- [OrangeGov_Main.addContract(string,bytes)]()\n",
+        "first_markdown_element": "",
+        "id": "58c81b45b71f480e6b8d68e573d6b2ebb281f1b7e55619f75afc7601ac5ccd36",
+        "check": "external-function",
+        "impact": "Optimization",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "removeContract",
+            "source_mapping": {
+              "start": 2313,
+              "length": 314,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "OrangeGov_Main",
+                "source_mapping": {
+                  "start": 25,
+                  "length": 3699,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              },
+              "signature": "removeContract(string)"
+            }
+          }
+        ],
+        "description": "removeContract(string) should be declared external:\n\t- OrangeGov_Main.removeContract(string) ()\n",
+        "markdown": "removeContract(string) should be declared external:\n\t- [OrangeGov_Main.removeContract(string)]()\n",
+        "first_markdown_element": "",
+        "id": "713ae0f2539b6663e97385b80b1e8a2302a516c0f88b1eae77df26a57a28cc43",
+        "check": "external-function",
+        "impact": "Optimization",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "getContractByID",
+            "source_mapping": {
+              "start": 702,
+              "length": 154,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "OrangeGov_Main",
+                "source_mapping": {
+                  "start": 25,
+                  "length": 3699,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              },
+              "signature": "getContractByID(string)"
+            }
+          }
+        ],
+        "description": "getContractByID(string) should be declared external:\n\t- OrangeGov_Main.getContractByID(string) ()\n",
+        "markdown": "getContractByID(string) should be declared external:\n\t- [OrangeGov_Main.getContractByID(string)]()\n",
+        "first_markdown_element": "",
+        "id": "a1141eb1460333ffc57b747b5970dc08e2e852b89b653d948db6fd9eea0d4a78",
+        "check": "external-function",
+        "impact": "Optimization",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "update",
+            "source_mapping": {
+              "start": 2629,
+              "length": 523,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "OrangeGov_Main",
+                "source_mapping": {
+                  "start": 25,
+                  "length": 3699,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              },
+              "signature": "update(bytes)"
+            }
+          }
+        ],
+        "description": "update(bytes) should be declared external:\n\t- OrangeGov_Main.update(bytes) ()\n",
+        "markdown": "update(bytes) should be declared external:\n\t- [OrangeGov_Main.update(bytes)]()\n",
+        "first_markdown_element": "",
+        "id": "c395f7be26fa0c8f72b32492213eec0562a6c4b96a1741c7fd7c8d54adee6b6c",
+        "check": "external-function",
+        "impact": "Optimization",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "removePermission",
+            "source_mapping": {
+              "start": 3576,
+              "length": 146,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "OrangeGov_Main",
+                "source_mapping": {
+                  "start": 25,
+                  "length": 3699,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              },
+              "signature": "removePermission(address,string)"
+            }
+          }
+        ],
+        "description": "removePermission(address,string) should be declared external:\n\t- OrangeGov_Main.removePermission(address,string) ()\n",
+        "markdown": "removePermission(address,string) should be declared external:\n\t- [OrangeGov_Main.removePermission(address,string)]()\n",
+        "first_markdown_element": "",
+        "id": "fd02015a026ca641c995a055b1d896672e6e61204ab540d452a5f971b6e278d3",
+        "check": "external-function",
+        "impact": "Optimization",
+        "confidence": "High"
+      }
+    ]
+  }
+}

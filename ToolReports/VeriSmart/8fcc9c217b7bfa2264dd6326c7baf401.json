@@ -1,0 +1,229 @@
+{
+  "fileName": "Benchmarks/Study_SamplesSet/8fcc9c217b7bfa2264dd6326c7baf401.sol",
+  "baseName": "8fcc9c217b7bfa2264dd6326c7baf401.sol",
+  "iter": 104,
+  "time": "301.326341",
+  "errMsg": null,
+  "result": [
+    {
+      "no": "1",
+      "kind": "IO",
+      "line": 53,
+      "signatures": [
+        {
+          "contractName": "GPSPresale",
+          "methodName": "GPSPresale",
+          "argTypes": []
+        }
+      ],
+      "exp": "(MIN_TOTAL_AMOUNT_TO_RECEIVE_ETH * 1000000000000000000)",
+      "status": "proven"
+    },
+    {
+      "no": "2",
+      "kind": "IO",
+      "line": 54,
+      "signatures": [
+        {
+          "contractName": "GPSPresale",
+          "methodName": "GPSPresale",
+          "argTypes": []
+        }
+      ],
+      "exp": "(MAX_TOTAL_AMOUNT_TO_RECEIVE_ETH * 1000000000000000000)",
+      "status": "proven"
+    },
+    {
+      "no": "3",
+      "kind": "IO",
+      "line": 55,
+      "signatures": [
+        {
+          "contractName": "GPSPresale",
+          "methodName": "GPSPresale",
+          "argTypes": []
+        }
+      ],
+      "exp": "(MIN_ACCEPTED_AMOUNT_FINNEY * 1000000000000000)",
+      "status": "proven"
+    },
+    {
+      "no": "4",
+      "kind": "IO",
+      "line": 120,
+      "signatures": [
+        {
+          "contractName": "GPSPresale",
+          "methodName": "@fallback",
+          "argTypes": []
+        },
+        {
+          "contractName": "GPSPresale",
+          "methodName": "refund",
+          "argTypes": []
+        }
+      ],
+      "exp": "(balances[msg.sender] + msg.value)",
+      "status": "unproven"
+    },
+    {
+      "no": "5",
+      "kind": "IO",
+      "line": 130,
+      "signatures": [
+        {
+          "contractName": "GPSPresale",
+          "methodName": "receiveFunds",
+          "argTypes": []
+        }
+      ],
+      "exp": "(total_received_amount + msg.value)",
+      "status": "unproven"
+    },
+    {
+      "no": "6",
+      "kind": "IO",
+      "line": 132,
+      "signatures": [
+        {
+          "contractName": "GPSPresale",
+          "methodName": "receiveFunds",
+          "argTypes": []
+        }
+      ],
+      "exp": "((total_received_amount + msg.value) - MAX_TOTAL_AMOUNT_TO_RECEIVE)",
+      "status": "proven"
+    },
+    {
+      "no": "7",
+      "kind": "IO",
+      "line": 132,
+      "signatures": [
+        {
+          "contractName": "GPSPresale",
+          "methodName": "receiveFunds",
+          "argTypes": []
+        }
+      ],
+      "exp": "(total_received_amount + msg.value)",
+      "status": "unproven"
+    },
+    {
+      "no": "8",
+      "kind": "IO",
+      "line": 135,
+      "signatures": [
+        {
+          "contractName": "GPSPresale",
+          "methodName": "receiveFunds",
+          "argTypes": []
+        }
+      ],
+      "exp": "(MAX_TOTAL_AMOUNT_TO_RECEIVE - total_received_amount)",
+      "status": "unproven"
+    },
+    {
+      "no": "9",
+      "kind": "IO",
+      "line": 136,
+      "signatures": [
+        {
+          "contractName": "GPSPresale",
+          "methodName": "receiveFunds",
+          "argTypes": []
+        }
+      ],
+      "exp": "(balances[msg.sender] + acceptable_remainder)",
+      "status": "unproven"
+    },
+    {
+      "no": "10",
+      "kind": "IO",
+      "line": 137,
+      "signatures": [
+        {
+          "contractName": "GPSPresale",
+          "methodName": "receiveFunds",
+          "argTypes": []
+        }
+      ],
+      "exp": "(total_received_amount + acceptable_remainder)",
+      "status": "unproven"
+    },
+    {
+      "no": "11",
+      "kind": "IO",
+      "line": 140,
+      "signatures": [
+        {
+          "contractName": "GPSPresale",
+          "methodName": "receiveFunds",
+          "argTypes": []
+        }
+      ],
+      "exp": "(balances[msg.sender] + msg.value)",
+      "status": "unproven"
+    },
+    {
+      "no": "12",
+      "kind": "IO",
+      "line": 141,
+      "signatures": [
+        {
+          "contractName": "GPSPresale",
+          "methodName": "receiveFunds",
+          "argTypes": []
+        }
+      ],
+      "exp": "(total_received_amount + msg.value)",
+      "status": "unproven"
+    },
+    {
+      "no": "13",
+      "kind": "ETH_LEAK",
+      "line": 96,
+      "signatures": [
+        {
+          "contractName": "GPSPresale",
+          "methodName": "withdrawFunds",
+          "argTypes": []
+        }
+      ],
+      "exp": "OWNER.send(this.balance)",
+      "status": "proven"
+    },
+    {
+      "no": "14",
+      "kind": "ETH_LEAK",
+      "line": 124,
+      "signatures": [
+        {
+          "contractName": "GPSPresale",
+          "methodName": "@fallback",
+          "argTypes": []
+        },
+        {
+          "contractName": "GPSPresale",
+          "methodName": "refund",
+          "argTypes": []
+        }
+      ],
+      "exp": "msg.sender.send(amount_to_refund)",
+      "status": "unproven"
+    },
+    {
+      "no": "15",
+      "kind": "ETH_LEAK",
+      "line": 133,
+      "signatures": [
+        {
+          "contractName": "GPSPresale",
+          "methodName": "receiveFunds",
+          "argTypes": []
+        }
+      ],
+      "exp": "msg.sender.send(change_to_return)",
+      "status": "unproven"
+    }
+  ]
+}

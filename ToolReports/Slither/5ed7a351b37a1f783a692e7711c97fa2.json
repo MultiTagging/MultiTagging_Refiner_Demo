@@ -1,0 +1,877 @@
+{
+  "success": true,
+  "error": null,
+  "results": {
+    "detectors": [
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "registrantApprove",
+            "source_mapping": {
+              "start": 2871,
+              "length": 209,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "FipsNotary",
+                "source_mapping": {
+                  "start": 25,
+                  "length": 3390,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              },
+              "signature": "registrantApprove(address)"
+            }
+          },
+          {
+            "type": "node",
+            "name": "registrants[registrant] != true",
+            "source_mapping": {
+              "start": 2942,
+              "length": 31,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "registrantApprove",
+                "source_mapping": {
+                  "start": 2871,
+                  "length": 209,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "FipsNotary",
+                    "source_mapping": {
+                      "start": 25,
+                      "length": 3390,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "registrantApprove(address)"
+                }
+              }
+            }
+          }
+        ],
+        "description": "FipsNotary.registrantApprove(address) () compares to a boolean constant:\n\t-registrants[registrant] != true ()\n",
+        "markdown": "[FipsNotary.registrantApprove(address)]() compares to a boolean constant:\n\t-[registrants[registrant] != true]()\n",
+        "first_markdown_element": "",
+        "id": "191d046f9265ddc2e77eb6d6d47a018f9d63200b1f889955a5b3fff13aa7f113",
+        "check": "boolean-equal",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "fipsRegister",
+            "source_mapping": {
+              "start": 2208,
+              "length": 464,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "FipsNotary",
+                "source_mapping": {
+                  "start": 25,
+                  "length": 3390,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              },
+              "signature": "fipsRegister(uint256,address,bytes)"
+            }
+          },
+          {
+            "type": "node",
+            "name": "registrants[msg.sender] != true",
+            "source_mapping": {
+              "start": 2283,
+              "length": 31,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "fipsRegister",
+                "source_mapping": {
+                  "start": 2208,
+                  "length": 464,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "FipsNotary",
+                    "source_mapping": {
+                      "start": 25,
+                      "length": 3390,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "fipsRegister(uint256,address,bytes)"
+                }
+              }
+            }
+          }
+        ],
+        "description": "FipsNotary.fipsRegister(uint256,address,bytes) () compares to a boolean constant:\n\t-registrants[msg.sender] != true ()\n",
+        "markdown": "[FipsNotary.fipsRegister(uint256,address,bytes)]() compares to a boolean constant:\n\t-[registrants[msg.sender] != true]()\n",
+        "first_markdown_element": "",
+        "id": "89956bc3dd5c5361eb6077c911511f421ec2ac318aa8f99eaffb0034ca52c3be",
+        "check": "boolean-equal",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "registrantRemove",
+            "source_mapping": {
+              "start": 3086,
+              "length": 208,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "FipsNotary",
+                "source_mapping": {
+                  "start": 25,
+                  "length": 3390,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              },
+              "signature": "registrantRemove(address)"
+            }
+          },
+          {
+            "type": "node",
+            "name": "registrants[registrant] == true",
+            "source_mapping": {
+              "start": 3156,
+              "length": 31,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "registrantRemove",
+                "source_mapping": {
+                  "start": 3086,
+                  "length": 208,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "FipsNotary",
+                    "source_mapping": {
+                      "start": 25,
+                      "length": 3390,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "registrantRemove(address)"
+                }
+              }
+            }
+          }
+        ],
+        "description": "FipsNotary.registrantRemove(address) () compares to a boolean constant:\n\t-registrants[registrant] == true ()\n",
+        "markdown": "[FipsNotary.registrantRemove(address)]() compares to a boolean constant:\n\t-[registrants[registrant] == true]()\n",
+        "first_markdown_element": "",
+        "id": "d2ba6caf3d5801445d1a0dc9c3baba51fd76907da9a44f7271694053dfa26c81",
+        "check": "boolean-equal",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "fipsLegacyRegister",
+            "source_mapping": {
+              "start": 1956,
+              "length": 246,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "FipsNotary",
+                "source_mapping": {
+                  "start": 25,
+                  "length": 3390,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              },
+              "signature": "fipsLegacyRegister(bytes20[],address)"
+            }
+          },
+          {
+            "type": "node",
+            "name": "registrants[msg.sender] != true",
+            "source_mapping": {
+              "start": 2029,
+              "length": 31,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "fipsLegacyRegister",
+                "source_mapping": {
+                  "start": 1956,
+                  "length": 246,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "FipsNotary",
+                    "source_mapping": {
+                      "start": 25,
+                      "length": 3390,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "fipsLegacyRegister(bytes20[],address)"
+                }
+              }
+            }
+          }
+        ],
+        "description": "FipsNotary.fipsLegacyRegister(bytes20[],address) () compares to a boolean constant:\n\t-registrants[msg.sender] != true ()\n",
+        "markdown": "[FipsNotary.fipsLegacyRegister(bytes20[],address)]() compares to a boolean constant:\n\t-[registrants[msg.sender] != true]()\n",
+        "first_markdown_element": "",
+        "id": "d9b9aedadebe9a52f0b78c70aaf3da777940994e5f9b90d85f42c799fbd57f9e",
+        "check": "boolean-equal",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "node",
+            "name": "fips = ripemd160()(block.blockhash(block.number),sha256()(msg.sender,block.number,block.timestamp,msg.gas))",
+            "source_mapping": {
+              "start": 1732,
+              "length": 107,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "fipsGenerate",
+                "source_mapping": {
+                  "start": 1666,
+                  "length": 284,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "FipsNotary",
+                    "source_mapping": {
+                      "start": 25,
+                      "length": 3390,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "fipsGenerate()"
+                }
+              }
+            }
+          }
+        ],
+        "description": "Deprecated standard detected fips = ripemd160()(block.blockhash(block.number),sha256()(msg.sender,block.number,block.timestamp,msg.gas)) ():\n\t- Usage of \"block.blockhash()\" should be replaced with \"blockhash()\"\n\t- Usage of \"msg.gas\" should be replaced with \"gasleft()\"\n",
+        "markdown": "Deprecated standard detected [fips = ripemd160()(block.blockhash(block.number),sha256()(msg.sender,block.number,block.timestamp,msg.gas))]():\n\t- Usage of \"block.blockhash()\" should be replaced with \"blockhash()\"\n\t- Usage of \"msg.gas\" should be replaced with \"gasleft()\"\n",
+        "first_markdown_element": "",
+        "id": "bb13daab462207ccbd7ea4d5167b6a86f51fc1b84b3ad637968da52cedcec716",
+        "check": "deprecated-standards",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "node",
+            "name": "",
+            "source_mapping": {
+              "start": 639,
+              "length": 5,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "fallback",
+                "source_mapping": {
+                  "start": 618,
+                  "length": 33,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "FipsNotary",
+                    "source_mapping": {
+                      "start": 25,
+                      "length": 3390,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "fallback()"
+                }
+              }
+            }
+          }
+        ],
+        "description": "Deprecated standard detected THROW ():\n\t- Usage of \"throw\" should be replaced with \"revert()\"\n",
+        "markdown": "Deprecated standard detected [THROW]():\n\t- Usage of \"throw\" should be replaced with \"revert()\"\n",
+        "first_markdown_element": "",
+        "id": "f5556cf1c70b64b9e4b1fc32044dd970b5f2c8b9fc21b7971fda01971033f2d5",
+        "check": "deprecated-standards",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [],
+        "description": "solc-0.4.1 is not recommended for deployment\n",
+        "markdown": "solc-0.4.1 is not recommended for deployment\n",
+        "first_markdown_element": "",
+        "id": "5f358785dc4df92a048a5fc84402e36cf62b579fef6cf958ffdcbfbb1adaec9e",
+        "check": "solc-version",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "pragma",
+            "name": "^0.4.1",
+            "source_mapping": {
+              "start": 0,
+              "length": 23,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "directive": [
+                "solidity",
+                "^",
+                "0.4",
+                ".1"
+              ]
+            }
+          }
+        ],
+        "description": "Pragma version^0.4.1 () allows old versions\n",
+        "markdown": "Pragma version[^0.4.1]() allows old versions\n",
+        "first_markdown_element": "",
+        "id": "7e5f39572985ae5b079b47280cf47e2c2ce61d305c41927c88e2763b6317d832",
+        "check": "solc-version",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "new_owner",
+            "source_mapping": {
+              "start": 1473,
+              "length": 17,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "fipsChangeOwner",
+                "source_mapping": {
+                  "start": 1415,
+                  "length": 245,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "FipsNotary",
+                    "source_mapping": {
+                      "start": 25,
+                      "length": 3390,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "fipsChangeOwner(bytes20,address,address)"
+                }
+              }
+            },
+            "additional_fields": {
+              "target": "parameter",
+              "convention": "mixedCase"
+            }
+          }
+        ],
+        "description": "Parameter FipsNotary.fipsChangeOwner(bytes20,address,address).new_owner () is not in mixedCase\n",
+        "markdown": "Parameter [FipsNotary.fipsChangeOwner(bytes20,address,address).new_owner]() is not in mixedCase\n",
+        "first_markdown_element": "",
+        "id": "6caaa1829cd68d63688b65775bd9863f889947bae6cb50922cda6b8da6868580",
+        "check": "naming-convention",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "old_owner",
+            "source_mapping": {
+              "start": 1454,
+              "length": 17,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "fipsChangeOwner",
+                "source_mapping": {
+                  "start": 1415,
+                  "length": 245,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "FipsNotary",
+                    "source_mapping": {
+                      "start": 25,
+                      "length": 3390,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "fipsChangeOwner(bytes20,address,address)"
+                }
+              }
+            },
+            "additional_fields": {
+              "target": "parameter",
+              "convention": "mixedCase"
+            }
+          }
+        ],
+        "description": "Parameter FipsNotary.fipsChangeOwner(bytes20,address,address).old_owner () is not in mixedCase\n",
+        "markdown": "Parameter [FipsNotary.fipsChangeOwner(bytes20,address,address).old_owner]() is not in mixedCase\n",
+        "first_markdown_element": "",
+        "id": "89997af26974c421952c7fff36f87d67924fb731720d8a778926940dd7096896",
+        "check": "naming-convention",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "new_owner",
+            "source_mapping": {
+              "start": 2714,
+              "length": 17,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "fipsTransfer",
+                "source_mapping": {
+                  "start": 2678,
+                  "length": 187,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "FipsNotary",
+                    "source_mapping": {
+                      "start": 25,
+                      "length": 3390,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "fipsTransfer(bytes20,address)"
+                }
+              }
+            },
+            "additional_fields": {
+              "target": "parameter",
+              "convention": "mixedCase"
+            }
+          }
+        ],
+        "description": "Parameter FipsNotary.fipsTransfer(bytes20,address).new_owner () is not in mixedCase\n",
+        "markdown": "Parameter [FipsNotary.fipsTransfer(bytes20,address).new_owner]() is not in mixedCase\n",
+        "first_markdown_element": "",
+        "id": "a15d56ffff14f52351eaeadcce615ead85a9c644f81eca1a7b6f2a22be2507f0",
+        "check": "naming-convention",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "fipsRegister",
+            "source_mapping": {
+              "start": 2208,
+              "length": 464,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "FipsNotary",
+                "source_mapping": {
+                  "start": 25,
+                  "length": 3390,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              },
+              "signature": "fipsRegister(uint256,address,bytes)"
+            }
+          }
+        ],
+        "description": "fipsRegister(uint256,address,bytes) should be declared external:\n\t- FipsNotary.fipsRegister(uint256,address,bytes) ()\n",
+        "markdown": "fipsRegister(uint256,address,bytes) should be declared external:\n\t- [FipsNotary.fipsRegister(uint256,address,bytes)]()\n",
+        "first_markdown_element": "",
+        "id": "25160163077f13bcd35581aa26526ab0b9e27b70a35eb903357ca05c4cb09891",
+        "check": "external-function",
+        "impact": "Optimization",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "fipsLegacyRegister",
+            "source_mapping": {
+              "start": 1956,
+              "length": 246,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "FipsNotary",
+                "source_mapping": {
+                  "start": 25,
+                  "length": 3390,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              },
+              "signature": "fipsLegacyRegister(bytes20[],address)"
+            }
+          }
+        ],
+        "description": "fipsLegacyRegister(bytes20[],address) should be declared external:\n\t- FipsNotary.fipsLegacyRegister(bytes20[],address) ()\n",
+        "markdown": "fipsLegacyRegister(bytes20[],address) should be declared external:\n\t- [FipsNotary.fipsLegacyRegister(bytes20[],address)]()\n",
+        "first_markdown_element": "",
+        "id": "2e1f1560355fdf566b5e58fe70854c3708f1652d70e0fb15c32811f101708ef0",
+        "check": "external-function",
+        "impact": "Optimization",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "fipsPublishData",
+            "source_mapping": {
+              "start": 999,
+              "length": 198,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "FipsNotary",
+                "source_mapping": {
+                  "start": 25,
+                  "length": 3390,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              },
+              "signature": "fipsPublishData(bytes20,bytes)"
+            }
+          }
+        ],
+        "description": "fipsPublishData(bytes20,bytes) should be declared external:\n\t- FipsNotary.fipsPublishData(bytes20,bytes) ()\n",
+        "markdown": "fipsPublishData(bytes20,bytes) should be declared external:\n\t- [FipsNotary.fipsPublishData(bytes20,bytes)]()\n",
+        "first_markdown_element": "",
+        "id": "fa7d4651c8958db18a54ce78b1c0c2fb669bf2b9135421e788bac82099d6f0c0",
+        "check": "external-function",
+        "impact": "Optimization",
+        "confidence": "High"
+      }
+    ]
+  }
+}

@@ -1,0 +1,2191 @@
+{
+  "success": true,
+  "error": null,
+  "results": {
+    "detectors": [
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "getRandomNumber",
+            "source_mapping": {
+              "start": 2108,
+              "length": 383,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "DeckLib",
+                "source_mapping": {
+                  "start": 466,
+                  "length": 2027,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              },
+              "signature": "getRandomNumber(uint256,address,uint256,uint256,uint256)"
+            }
+          },
+          {
+            "type": "node",
+            "name": "uint256(uint256(keccak256()(blockHash,player,gameID,n)) % m)",
+            "source_mapping": {
+              "start": 2421,
+              "length": 65,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "getRandomNumber",
+                "source_mapping": {
+                  "start": 2108,
+                  "length": 383,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "DeckLib",
+                    "source_mapping": {
+                      "start": 466,
+                      "length": 2027,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "getRandomNumber(uint256,address,uint256,uint256,uint256)"
+                }
+              }
+            }
+          }
+        ],
+        "description": "DeckLib.getRandomNumber(uint256,address,uint256,uint256,uint256) () uses a weak PRNG: \"uint256(uint256(keccak256()(blockHash,player,gameID,n)) % m) ()\" \n",
+        "markdown": "[DeckLib.getRandomNumber(uint256,address,uint256,uint256,uint256)]() uses a weak PRNG: \"[uint256(uint256(keccak256()(blockHash,player,gameID,n)) % m)]()\" \n",
+        "first_markdown_element": "",
+        "id": "5cd3ab92b91c37dbf61b6f5eab25a079cd91f5da684c1c3afa0a999e9b580ab3",
+        "check": "weak-prng",
+        "impact": "High",
+        "confidence": "Medium"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "emojiSuit",
+            "source_mapping": {
+              "start": 1536,
+              "length": 24,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "cardEmojified",
+                "source_mapping": {
+                  "start": 1464,
+                  "length": 389,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "DeckLib",
+                    "source_mapping": {
+                      "start": 466,
+                      "length": 2027,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "cardEmojified(uint8)"
+                }
+              }
+            }
+          }
+        ],
+        "description": "DeckLib.cardEmojified(uint8).emojiSuit () is a local variable never initialized\n",
+        "markdown": "[DeckLib.cardEmojified(uint8).emojiSuit]() is a local variable never initialized\n",
+        "first_markdown_element": "",
+        "id": "2f0ad94de826977896e921652871eb34e180769b88579e2fd134338b19c5dcc2",
+        "check": "uninitialized-local",
+        "impact": "Medium",
+        "confidence": "Medium"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "notSent",
+            "source_mapping": {
+              "start": 15016,
+              "length": 16,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "shareProfits",
+                "source_mapping": {
+                  "start": 14845,
+                  "length": 462,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "Blockjack",
+                    "source_mapping": {
+                      "start": 9503,
+                      "length": 5811,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "shareProfits()"
+                }
+              }
+            }
+          }
+        ],
+        "description": "Blockjack.shareProfits().notSent () is a local variable never initialized\n",
+        "markdown": "[Blockjack.shareProfits().notSent]() is a local variable never initialized\n",
+        "first_markdown_element": "",
+        "id": "ea7a02f5fe7d8e810656456e183e0ad2185aa4fefbff6658f33e24f5ae359ad7",
+        "check": "uninitialized-local",
+        "impact": "Medium",
+        "confidence": "Medium"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "bestSum",
+            "source_mapping": {
+              "start": 8462,
+              "length": 13,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "bestSum",
+                "source_mapping": {
+                  "start": 8413,
+                  "length": 298,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "GameLib",
+                    "source_mapping": {
+                      "start": 2497,
+                      "length": 7004,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "bestSum(uint8[])"
+                }
+              }
+            }
+          },
+          {
+            "type": "function",
+            "name": "bestSum",
+            "source_mapping": {
+              "start": 8413,
+              "length": 298,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "GameLib",
+                "source_mapping": {
+                  "start": 2497,
+                  "length": 7004,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              },
+              "signature": "bestSum(uint8[])"
+            }
+          }
+        ],
+        "description": "GameLib.bestSum(uint8[]).bestSum () shadows:\n\t- GameLib.bestSum(uint8[]) () (function)\n",
+        "markdown": "[GameLib.bestSum(uint8[]).bestSum]() shadows:\n\t- [GameLib.bestSum(uint8[])]() (function)\n",
+        "first_markdown_element": "",
+        "id": "e2d3ecf021b99ad5b910fad5febc75295f86f86f442c1b0ab3ee9dbd7e780925",
+        "check": "shadowing-local",
+        "impact": "Low",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "addBankroll",
+            "source_mapping": {
+              "start": 14536,
+              "length": 113,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "Blockjack",
+                "source_mapping": {
+                  "start": 9503,
+                  "length": 5811,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              },
+              "signature": "addBankroll()"
+            }
+          },
+          {
+            "type": "node",
+            "name": "currentBankroll += msg.value",
+            "source_mapping": {
+              "start": 14616,
+              "length": 28,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "addBankroll",
+                "source_mapping": {
+                  "start": 14536,
+                  "length": 113,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "Blockjack",
+                    "source_mapping": {
+                      "start": 9503,
+                      "length": 5811,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "addBankroll()"
+                }
+              }
+            }
+          }
+        ],
+        "description": "Blockjack.addBankroll() () should emit an event for: \n\t- currentBankroll += msg.value () \n",
+        "markdown": "[Blockjack.addBankroll()]() should emit an event for: \n\t- [currentBankroll += msg.value]() \n",
+        "first_markdown_element": "",
+        "id": "470fcf761384ef3eae9f5d959884bcb8283b2152e4d9fe6061c4f90cad97aff6",
+        "check": "events-maths",
+        "impact": "Low",
+        "confidence": "Medium"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "newDev",
+            "source_mapping": {
+              "start": 13809,
+              "length": 14,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "changeDev",
+                "source_mapping": {
+                  "start": 13790,
+                  "length": 119,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "Blockjack",
+                    "source_mapping": {
+                      "start": 9503,
+                      "length": 5811,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "changeDev(address)"
+                }
+              }
+            }
+          },
+          {
+            "type": "node",
+            "name": "DEV = newDev",
+            "source_mapping": {
+              "start": 13867,
+              "length": 12,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "changeDev",
+                "source_mapping": {
+                  "start": 13790,
+                  "length": 119,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "Blockjack",
+                    "source_mapping": {
+                      "start": 9503,
+                      "length": 5811,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "changeDev(address)"
+                }
+              }
+            }
+          }
+        ],
+        "description": "Blockjack.changeDev(address).newDev () lacks a zero-check on :\n\t\t- DEV = newDev ()\n",
+        "markdown": "[Blockjack.changeDev(address).newDev]() lacks a zero-check on :\n\t\t- [DEV = newDev]()\n",
+        "first_markdown_element": "",
+        "id": "0db1a5eb05c5b459b4ab167c51acb5f29fe0c80fba6708e073f7c05649246e26",
+        "check": "missing-zero-check",
+        "impact": "Low",
+        "confidence": "Medium"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "_DEV",
+            "source_mapping": {
+              "start": 10662,
+              "length": 12,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "Blockjack",
+                "source_mapping": {
+                  "start": 10630,
+                  "length": 240,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "Blockjack",
+                    "source_mapping": {
+                      "start": 9503,
+                      "length": 5811,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "Blockjack(address,address)"
+                }
+              }
+            }
+          },
+          {
+            "type": "node",
+            "name": "DEV = _DEV",
+            "source_mapping": {
+              "start": 10696,
+              "length": 10,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "Blockjack",
+                "source_mapping": {
+                  "start": 10630,
+                  "length": 240,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "Blockjack",
+                    "source_mapping": {
+                      "start": 9503,
+                      "length": 5811,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "Blockjack(address,address)"
+                }
+              }
+            }
+          }
+        ],
+        "description": "Blockjack.Blockjack(address,address)._DEV () lacks a zero-check on :\n\t\t- DEV = _DEV ()\n",
+        "markdown": "[Blockjack.Blockjack(address,address)._DEV]() lacks a zero-check on :\n\t\t- [DEV = _DEV]()\n",
+        "first_markdown_element": "",
+        "id": "54d9dd58e08395c8d798051b6783c6f53dfe2073aa8cffc30acb6865220fff7c",
+        "check": "missing-zero-check",
+        "impact": "Low",
+        "confidence": "Medium"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "newDX",
+            "source_mapping": {
+              "start": 13931,
+              "length": 13,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "changeDX",
+                "source_mapping": {
+                  "start": 13913,
+                  "length": 112,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "Blockjack",
+                    "source_mapping": {
+                      "start": 9503,
+                      "length": 5811,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "changeDX(address)"
+                }
+              }
+            }
+          },
+          {
+            "type": "node",
+            "name": "DX = newDX",
+            "source_mapping": {
+              "start": 13986,
+              "length": 10,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "changeDX",
+                "source_mapping": {
+                  "start": 13913,
+                  "length": 112,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "Blockjack",
+                    "source_mapping": {
+                      "start": 9503,
+                      "length": 5811,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "changeDX(address)"
+                }
+              }
+            }
+          }
+        ],
+        "description": "Blockjack.changeDX(address).newDX () lacks a zero-check on :\n\t\t- DX = newDX ()\n",
+        "markdown": "[Blockjack.changeDX(address).newDX]() lacks a zero-check on :\n\t\t- [DX = newDX]()\n",
+        "first_markdown_element": "",
+        "id": "89997591a49cadc741fd9f23ca016fcc42660bdce0208aeba7327cb9a36715ec",
+        "check": "missing-zero-check",
+        "impact": "Low",
+        "confidence": "Medium"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "_DX",
+            "source_mapping": {
+              "start": 10649,
+              "length": 11,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "Blockjack",
+                "source_mapping": {
+                  "start": 10630,
+                  "length": 240,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "Blockjack",
+                    "source_mapping": {
+                      "start": 9503,
+                      "length": 5811,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "Blockjack(address,address)"
+                }
+              }
+            }
+          },
+          {
+            "type": "node",
+            "name": "DX = _DX",
+            "source_mapping": {
+              "start": 10682,
+              "length": 8,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "Blockjack",
+                "source_mapping": {
+                  "start": 10630,
+                  "length": 240,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "Blockjack",
+                    "source_mapping": {
+                      "start": 9503,
+                      "length": 5811,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "Blockjack(address,address)"
+                }
+              }
+            }
+          }
+        ],
+        "description": "Blockjack.Blockjack(address,address)._DX () lacks a zero-check on :\n\t\t- DX = _DX ()\n",
+        "markdown": "[Blockjack.Blockjack(address,address)._DX]() lacks a zero-check on :\n\t\t- [DX = _DX]()\n",
+        "first_markdown_element": "",
+        "id": "d7b6b680533f18e063f85c1208bc7644124c0cf8289d450e0bceaf211038781e",
+        "check": "missing-zero-check",
+        "impact": "Low",
+        "confidence": "Medium"
+      },
+      {
+        "elements": [
+          {
+            "type": "node",
+            "name": "blockHash = block.blockhash(b)",
+            "source_mapping": {
+              "start": 2348,
+              "length": 38,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "getRandomNumber",
+                "source_mapping": {
+                  "start": 2108,
+                  "length": 383,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "DeckLib",
+                    "source_mapping": {
+                      "start": 466,
+                      "length": 2027,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "getRandomNumber(uint256,address,uint256,uint256,uint256)"
+                }
+              }
+            }
+          }
+        ],
+        "description": "Deprecated standard detected blockHash = block.blockhash(b) ():\n\t- Usage of \"block.blockhash()\" should be replaced with \"blockhash()\"\n",
+        "markdown": "Deprecated standard detected [blockHash = block.blockhash(b)]():\n\t- Usage of \"block.blockhash()\" should be replaced with \"blockhash()\"\n",
+        "first_markdown_element": "",
+        "id": "132360c607f45447f9e1d000a9f9d751560c41f6feb2fc8defb765825cdd1192",
+        "check": "deprecated-standards",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "node",
+            "name": "suicide(address)(DX)",
+            "source_mapping": {
+              "start": 14737,
+              "length": 11,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "migrateBlockjack",
+                "source_mapping": {
+                  "start": 14653,
+                  "length": 100,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "Blockjack",
+                    "source_mapping": {
+                      "start": 9503,
+                      "length": 5811,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "migrateBlockjack()"
+                }
+              }
+            }
+          }
+        ],
+        "description": "Deprecated standard detected suicide(address)(DX) ():\n\t- Usage of \"suicide()\" should be replaced with \"selfdestruct()\"\n",
+        "markdown": "Deprecated standard detected [suicide(address)(DX)]():\n\t- Usage of \"suicide()\" should be replaced with \"selfdestruct()\"\n",
+        "first_markdown_element": "",
+        "id": "2bd3af659f8962d33e2e610c6cf892a5329fa1a62e03b7b7229e0839697c432a",
+        "check": "deprecated-standards",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "node",
+            "name": "",
+            "source_mapping": {
+              "start": 1073,
+              "length": 5,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "getCard",
+                "source_mapping": {
+                  "start": 923,
+                  "length": 404,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "DeckLib",
+                    "source_mapping": {
+                      "start": 466,
+                      "length": 2027,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "getCard(DeckLib.Deck,uint256)"
+                }
+              }
+            }
+          }
+        ],
+        "description": "Deprecated standard detected THROW ():\n\t- Usage of \"throw\" should be replaced with \"revert()\"\n",
+        "markdown": "Deprecated standard detected [THROW]():\n\t- Usage of \"throw\" should be replaced with \"revert()\"\n",
+        "first_markdown_element": "",
+        "id": "f5556cf1c70b64b9e4b1fc32044dd970b5f2c8b9fc21b7971fda01971033f2d5",
+        "check": "deprecated-standards",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "totalCards",
+            "source_mapping": {
+              "start": 624,
+              "length": 48,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "DeckLib",
+                "source_mapping": {
+                  "start": 466,
+                  "length": 2027,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              }
+            }
+          }
+        ],
+        "description": "DeckLib.totalCards () is set pre-construction with a non-constant function or state variable:\n\t- cardsPerSuit * suits\n",
+        "markdown": "[DeckLib.totalCards]() is set pre-construction with a non-constant function or state variable:\n\t- cardsPerSuit * suits\n",
+        "first_markdown_element": "",
+        "id": "177f45d28d8fee964982c87d74bb55b7da96b996d60121bb79f1b96604ccce0d",
+        "check": "function-init-state",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "pragma",
+            "name": "^0.4.8",
+            "source_mapping": {
+              "start": 0,
+              "length": 23,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "directive": [
+                "solidity",
+                "^",
+                "0.4",
+                ".8"
+              ]
+            }
+          }
+        ],
+        "description": "Pragma version^0.4.8 () allows old versions\n",
+        "markdown": "Pragma version[^0.4.8]() allows old versions\n",
+        "first_markdown_element": "",
+        "id": "dd43bca9b08bc1fa7b94a3e619671f3c2c98a72b8b3bf0caf1e1f86665ec4569",
+        "check": "solc-version",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [],
+        "description": "solc-0.4.8 is not recommended for deployment\n",
+        "markdown": "solc-0.4.8 is not recommended for deployment\n",
+        "first_markdown_element": "",
+        "id": "ebbd8e423b3c73a93e118f8daed7c9ac33b0d525351f79b5ea41076caa3c1bc5",
+        "check": "solc-version",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "PROFITS_BASE",
+            "source_mapping": {
+              "start": 14812,
+              "length": 26,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "Blockjack",
+                "source_mapping": {
+                  "start": 9503,
+                  "length": 5811,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              }
+            },
+            "additional_fields": {
+              "target": "variable",
+              "convention": "mixedCase"
+            }
+          }
+        ],
+        "description": "Variable Blockjack.PROFITS_BASE () is not in mixedCase\n",
+        "markdown": "Variable [Blockjack.PROFITS_BASE]() is not in mixedCase\n",
+        "first_markdown_element": "",
+        "id": "0b033ad93bc08357810e4f6ac596c885ee14153d05e233fb1aa3c756534d1915",
+        "check": "naming-convention",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "DX_PROFITS",
+            "source_mapping": {
+              "start": 14757,
+              "length": 23,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "Blockjack",
+                "source_mapping": {
+                  "start": 9503,
+                  "length": 5811,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              }
+            },
+            "additional_fields": {
+              "target": "variable",
+              "convention": "mixedCase"
+            }
+          }
+        ],
+        "description": "Variable Blockjack.DX_PROFITS () is not in mixedCase\n",
+        "markdown": "Variable [Blockjack.DX_PROFITS]() is not in mixedCase\n",
+        "first_markdown_element": "",
+        "id": "215e4aa2acaeed9fb091eef1fd3655dbf2b9f17e2edbfa8c323eea881c4ee938",
+        "check": "naming-convention",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "DEV",
+            "source_mapping": {
+              "start": 10101,
+              "length": 18,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "Blockjack",
+                "source_mapping": {
+                  "start": 9503,
+                  "length": 5811,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              }
+            },
+            "additional_fields": {
+              "target": "variable",
+              "convention": "mixedCase"
+            }
+          }
+        ],
+        "description": "Variable Blockjack.DEV () is not in mixedCase\n",
+        "markdown": "Variable [Blockjack.DEV]() is not in mixedCase\n",
+        "first_markdown_element": "",
+        "id": "43b2b137f7bcd7508f4b44c6280c83719b099730e343d7ead138d29d6047eb97",
+        "check": "naming-convention",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "DEV_PROFITS",
+            "source_mapping": {
+              "start": 14784,
+              "length": 24,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "Blockjack",
+                "source_mapping": {
+                  "start": 9503,
+                  "length": 5811,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              }
+            },
+            "additional_fields": {
+              "target": "variable",
+              "convention": "mixedCase"
+            }
+          }
+        ],
+        "description": "Variable Blockjack.DEV_PROFITS () is not in mixedCase\n",
+        "markdown": "Variable [Blockjack.DEV_PROFITS]() is not in mixedCase\n",
+        "first_markdown_element": "",
+        "id": "56db7f12ab9bce51bb0c213def369093d09522fb29d2e2a535a5997aee7fbb91",
+        "check": "naming-convention",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "_old_watcher",
+            "source_mapping": {
+              "start": 14318,
+              "length": 20,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "removeOwner",
+                "source_mapping": {
+                  "start": 14297,
+                  "length": 92,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "Blockjack",
+                    "source_mapping": {
+                      "start": 9503,
+                      "length": 5811,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "removeOwner(address)"
+                }
+              }
+            },
+            "additional_fields": {
+              "target": "parameter",
+              "convention": "mixedCase"
+            }
+          }
+        ],
+        "description": "Parameter Blockjack.removeOwner(address)._old_watcher () is not in mixedCase\n",
+        "markdown": "Parameter [Blockjack.removeOwner(address)._old_watcher]() is not in mixedCase\n",
+        "first_markdown_element": "",
+        "id": "6ca1a737ca46f17d60fe51c8cbe06481f82d4f4a44f745395431cf3b39118532",
+        "check": "naming-convention",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "_max",
+            "source_mapping": {
+              "start": 14064,
+              "length": 12,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "setSettings",
+                "source_mapping": {
+                  "start": 14029,
+                  "length": 167,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "Blockjack",
+                    "source_mapping": {
+                      "start": 9503,
+                      "length": 5811,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "setSettings(uint256,uint256,uint256)"
+                }
+              }
+            },
+            "additional_fields": {
+              "target": "parameter",
+              "convention": "mixedCase"
+            }
+          }
+        ],
+        "description": "Parameter Blockjack.setSettings(uint256,uint256,uint256)._max () is not in mixedCase\n",
+        "markdown": "Parameter [Blockjack.setSettings(uint256,uint256,uint256)._max]() is not in mixedCase\n",
+        "first_markdown_element": "",
+        "id": "a27e6d61343c3110519aef520a1f015b7e511a53c58885c1866a0a9b0eba8b2c",
+        "check": "naming-convention",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "_new_watcher",
+            "source_mapping": {
+              "start": 14223,
+              "length": 20,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "registerOwner",
+                "source_mapping": {
+                  "start": 14200,
+                  "length": 93,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "Blockjack",
+                    "source_mapping": {
+                      "start": 9503,
+                      "length": 5811,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "registerOwner(address)"
+                }
+              }
+            },
+            "additional_fields": {
+              "target": "parameter",
+              "convention": "mixedCase"
+            }
+          }
+        ],
+        "description": "Parameter Blockjack.registerOwner(address)._new_watcher () is not in mixedCase\n",
+        "markdown": "Parameter [Blockjack.registerOwner(address)._new_watcher]() is not in mixedCase\n",
+        "first_markdown_element": "",
+        "id": "a69a0ef3cb386a5dc3f5fcf0b222392f76cb9c201bf5b7cc50d52aeb258e69d5",
+        "check": "naming-convention",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "_maxBlockActions",
+            "source_mapping": {
+              "start": 14078,
+              "length": 24,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "setSettings",
+                "source_mapping": {
+                  "start": 14029,
+                  "length": 167,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "Blockjack",
+                    "source_mapping": {
+                      "start": 9503,
+                      "length": 5811,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "setSettings(uint256,uint256,uint256)"
+                }
+              }
+            },
+            "additional_fields": {
+              "target": "parameter",
+              "convention": "mixedCase"
+            }
+          }
+        ],
+        "description": "Parameter Blockjack.setSettings(uint256,uint256,uint256)._maxBlockActions () is not in mixedCase\n",
+        "markdown": "Parameter [Blockjack.setSettings(uint256,uint256,uint256)._maxBlockActions]() is not in mixedCase\n",
+        "first_markdown_element": "",
+        "id": "de983143fe3180fff92891ef656afce910f88f45bc82e64f35bfb158bbbcc02e",
+        "check": "naming-convention",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "_min",
+            "source_mapping": {
+              "start": 14050,
+              "length": 12,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "setSettings",
+                "source_mapping": {
+                  "start": 14029,
+                  "length": 167,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "Blockjack",
+                    "source_mapping": {
+                      "start": 9503,
+                      "length": 5811,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "setSettings(uint256,uint256,uint256)"
+                }
+              }
+            },
+            "additional_fields": {
+              "target": "parameter",
+              "convention": "mixedCase"
+            }
+          }
+        ],
+        "description": "Parameter Blockjack.setSettings(uint256,uint256,uint256)._min () is not in mixedCase\n",
+        "markdown": "Parameter [Blockjack.setSettings(uint256,uint256,uint256)._min]() is not in mixedCase\n",
+        "first_markdown_element": "",
+        "id": "e002f789b57fb87e05954d0f5c7e7fdae88e3ec9600772b09fa01c5a823bdb08",
+        "check": "naming-convention",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "DX",
+            "source_mapping": {
+              "start": 10080,
+              "length": 17,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "Blockjack",
+                "source_mapping": {
+                  "start": 9503,
+                  "length": 5811,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              }
+            },
+            "additional_fields": {
+              "target": "variable",
+              "convention": "mixedCase"
+            }
+          }
+        ],
+        "description": "Variable Blockjack.DX () is not in mixedCase\n",
+        "markdown": "Variable [Blockjack.DX]() is not in mixedCase\n",
+        "first_markdown_element": "",
+        "id": "f704c77639222d303ce27e49dddb897c489faa27ba977271514501a8e5ee1c53",
+        "check": "naming-convention",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "shareProfits",
+            "source_mapping": {
+              "start": 14845,
+              "length": 462,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "Blockjack",
+                "source_mapping": {
+                  "start": 9503,
+                  "length": 5811,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              },
+              "signature": "shareProfits()"
+            }
+          },
+          {
+            "type": "node",
+            "name": "! DX.send(profit * DX_PROFITS / PROFITS_BASE)",
+            "source_mapping": {
+              "start": 15041,
+              "length": 44,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "shareProfits",
+                "source_mapping": {
+                  "start": 14845,
+                  "length": 462,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "Blockjack",
+                    "source_mapping": {
+                      "start": 9503,
+                      "length": 5811,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "shareProfits()"
+                }
+              }
+            },
+            "additional_fields": {
+              "underlying_type": "external_calls"
+            }
+          },
+          {
+            "type": "node",
+            "name": "! DEV.send(profit * DEV_PROFITS / PROFITS_BASE)",
+            "source_mapping": {
+              "start": 15155,
+              "length": 46,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "shareProfits",
+                "source_mapping": {
+                  "start": 14845,
+                  "length": 462,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "Blockjack",
+                    "source_mapping": {
+                      "start": 9503,
+                      "length": 5811,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "shareProfits()"
+                }
+              }
+            },
+            "additional_fields": {
+              "underlying_type": "external_calls"
+            }
+          },
+          {
+            "type": "node",
+            "name": "currentBankroll -= profit - notSent",
+            "source_mapping": {
+              "start": 15267,
+              "length": 35,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "shareProfits",
+                "source_mapping": {
+                  "start": 14845,
+                  "length": 462,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "Blockjack",
+                    "source_mapping": {
+                      "start": 9503,
+                      "length": 5811,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "shareProfits()"
+                }
+              }
+            },
+            "additional_fields": {
+              "underlying_type": "variables_written",
+              "variable_name": "currentBankroll"
+            }
+          }
+        ],
+        "description": "Reentrancy in Blockjack.shareProfits() ():\n\tExternal calls:\n\t- ! DX.send(profit * DX_PROFITS / PROFITS_BASE) ()\n\t- ! DEV.send(profit * DEV_PROFITS / PROFITS_BASE) ()\n\tState variables written after the call(s):\n\t- currentBankroll -= profit - notSent ()\n",
+        "markdown": "Reentrancy in [Blockjack.shareProfits()]():\n\tExternal calls:\n\t- [! DX.send(profit * DX_PROFITS / PROFITS_BASE)]()\n\t- [! DEV.send(profit * DEV_PROFITS / PROFITS_BASE)]()\n\tState variables written after the call(s):\n\t- [currentBankroll -= profit - notSent]()\n",
+        "first_markdown_element": "",
+        "id": "185cef87d4a77a79f07ab355ba37128c929ae126d4a3eb5c1187de6f784c748e",
+        "check": "reentrancy-unlimited-gas",
+        "impact": "Informational",
+        "confidence": "Medium"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "suits",
+            "source_mapping": {
+              "start": 597,
+              "length": 24,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "DeckLib",
+                "source_mapping": {
+                  "start": 466,
+                  "length": 2027,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              }
+            }
+          }
+        ],
+        "description": "DeckLib.suits () should be constant \n",
+        "markdown": "[DeckLib.suits]() should be constant \n",
+        "first_markdown_element": "",
+        "id": "0ac151845e7de72e235b940bc75e9d5d6e8ebbc099c2897db3224525d5d099f6",
+        "check": "constable-states",
+        "impact": "Optimization",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "DX_PROFITS",
+            "source_mapping": {
+              "start": 14757,
+              "length": 23,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "Blockjack",
+                "source_mapping": {
+                  "start": 9503,
+                  "length": 5811,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              }
+            }
+          }
+        ],
+        "description": "Blockjack.DX_PROFITS () should be constant \n",
+        "markdown": "[Blockjack.DX_PROFITS]() should be constant \n",
+        "first_markdown_element": "",
+        "id": "3dc052c8b99d2a7026c30e5a54f12c887fbe93950a2ab9b4a7b89e2cb8196705",
+        "check": "constable-states",
+        "impact": "Optimization",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "target",
+            "source_mapping": {
+              "start": 2575,
+              "length": 26,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "GameLib",
+                "source_mapping": {
+                  "start": 2497,
+                  "length": 7004,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              }
+            }
+          }
+        ],
+        "description": "GameLib.target () should be constant \n",
+        "markdown": "[GameLib.target]() should be constant \n",
+        "first_markdown_element": "",
+        "id": "48d9ce9aa46695bc96aeff125091f29b4ff219a4c3f028236162ec9b17ae6eed",
+        "check": "constable-states",
+        "impact": "Optimization",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "DEV_PROFITS",
+            "source_mapping": {
+              "start": 14784,
+              "length": 24,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "Blockjack",
+                "source_mapping": {
+                  "start": 9503,
+                  "length": 5811,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              }
+            }
+          }
+        ],
+        "description": "Blockjack.DEV_PROFITS () should be constant \n",
+        "markdown": "[Blockjack.DEV_PROFITS]() should be constant \n",
+        "first_markdown_element": "",
+        "id": "70d6d2a0300c71072fdabb853a9bcdfd64fe3fbe8ddc827d6e064a2ce0acfcc1",
+        "check": "constable-states",
+        "impact": "Optimization",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "PROFITS_BASE",
+            "source_mapping": {
+              "start": 14812,
+              "length": 26,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "Blockjack",
+                "source_mapping": {
+                  "start": 9503,
+                  "length": 5811,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              }
+            }
+          }
+        ],
+        "description": "Blockjack.PROFITS_BASE () should be constant \n",
+        "markdown": "[Blockjack.PROFITS_BASE]() should be constant \n",
+        "first_markdown_element": "",
+        "id": "891ecdd3be8b32b7fd3da0dacc5d36ca963590df36c718668776621a737eb96a",
+        "check": "constable-states",
+        "impact": "Optimization",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "cardsPerSuit",
+            "source_mapping": {
+              "start": 562,
+              "length": 32,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "DeckLib",
+                "source_mapping": {
+                  "start": 466,
+                  "length": 2027,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              }
+            }
+          }
+        ],
+        "description": "DeckLib.cardsPerSuit () should be constant \n",
+        "markdown": "[DeckLib.cardsPerSuit]() should be constant \n",
+        "first_markdown_element": "",
+        "id": "ad30e42998782389d45d193f02edbab369d80ebf3c8e74462f7d4eb286eed6ac",
+        "check": "constable-states",
+        "impact": "Optimization",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "houseLimit",
+            "source_mapping": {
+              "start": 2541,
+              "length": 30,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "GameLib",
+                "source_mapping": {
+                  "start": 2497,
+                  "length": 7004,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              }
+            }
+          }
+        ],
+        "description": "GameLib.houseLimit () should be constant \n",
+        "markdown": "[GameLib.houseLimit]() should be constant \n",
+        "first_markdown_element": "",
+        "id": "e19b265676be5b4a984b49add968ad0404f97c2096a485eed4a1746c704183b6",
+        "check": "constable-states",
+        "impact": "Optimization",
+        "confidence": "High"
+      }
+    ]
+  }
+}

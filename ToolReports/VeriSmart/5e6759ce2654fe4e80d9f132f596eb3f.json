@@ -1,0 +1,216 @@
+{
+  "fileName": "Benchmarks/Study_SamplesSet/5e6759ce2654fe4e80d9f132f596eb3f.sol",
+  "baseName": "5e6759ce2654fe4e80d9f132f596eb3f.sol",
+  "iter": 4932,
+  "time": "300.075165",
+  "errMsg": null,
+  "result": [
+    {
+      "no": "1",
+      "kind": "IO",
+      "line": 27,
+      "signatures": [
+        {
+          "contractName": "EthereumPepe",
+          "methodName": "EthereumPepe",
+          "argTypes": []
+        }
+      ],
+      "exp": "(10 ** uint256(decimals))",
+      "status": "proven"
+    },
+    {
+      "no": "2",
+      "kind": "IO",
+      "line": 27,
+      "signatures": [
+        {
+          "contractName": "EthereumPepe",
+          "methodName": "EthereumPepe",
+          "argTypes": []
+        }
+      ],
+      "exp": "(initSupply * (10 ** uint256(decimals)))",
+      "status": "proven"
+    },
+    {
+      "no": "3",
+      "kind": "IO",
+      "line": 35,
+      "signatures": [
+        {
+          "contractName": "EthereumPepe",
+          "methodName": "transfer",
+          "argTypes": [ "address", "uint256" ]
+        },
+        {
+          "contractName": "EthereumPepe",
+          "methodName": "transferFrom",
+          "argTypes": [ "address", "address", "uint256" ]
+        }
+      ],
+      "exp": "(balances[_to] + _value)",
+      "status": "unproven"
+    },
+    {
+      "no": "4",
+      "kind": "IO",
+      "line": 37,
+      "signatures": [
+        {
+          "contractName": "EthereumPepe",
+          "methodName": "transfer",
+          "argTypes": [ "address", "uint256" ]
+        },
+        {
+          "contractName": "EthereumPepe",
+          "methodName": "transferFrom",
+          "argTypes": [ "address", "address", "uint256" ]
+        }
+      ],
+      "exp": "(balances[_from] + balances[_to])",
+      "status": "unproven"
+    },
+    {
+      "no": "5",
+      "kind": "IO",
+      "line": 39,
+      "signatures": [
+        {
+          "contractName": "EthereumPepe",
+          "methodName": "transfer",
+          "argTypes": [ "address", "uint256" ]
+        },
+        {
+          "contractName": "EthereumPepe",
+          "methodName": "transferFrom",
+          "argTypes": [ "address", "address", "uint256" ]
+        }
+      ],
+      "exp": "(balances[_from] - _value)",
+      "status": "proven"
+    },
+    {
+      "no": "6",
+      "kind": "IO",
+      "line": 40,
+      "signatures": [
+        {
+          "contractName": "EthereumPepe",
+          "methodName": "transfer",
+          "argTypes": [ "address", "uint256" ]
+        },
+        {
+          "contractName": "EthereumPepe",
+          "methodName": "transferFrom",
+          "argTypes": [ "address", "address", "uint256" ]
+        }
+      ],
+      "exp": "(balances[_to] + _value)",
+      "status": "proven"
+    },
+    {
+      "no": "7",
+      "kind": "IO",
+      "line": 44,
+      "signatures": [
+        {
+          "contractName": "EthereumPepe",
+          "methodName": "transfer",
+          "argTypes": [ "address", "uint256" ]
+        },
+        {
+          "contractName": "EthereumPepe",
+          "methodName": "transferFrom",
+          "argTypes": [ "address", "address", "uint256" ]
+        }
+      ],
+      "exp": "(balances[_from] + balances[_to])",
+      "status": "unproven"
+    },
+    {
+      "no": "8",
+      "kind": "IO",
+      "line": 57,
+      "signatures": [
+        {
+          "contractName": "EthereumPepe",
+          "methodName": "transferFrom",
+          "argTypes": [ "address", "address", "uint256" ]
+        }
+      ],
+      "exp": "(allowed[_from][msg.sender] - _value)",
+      "status": "proven"
+    },
+    {
+      "no": "9",
+      "kind": "IO",
+      "line": 75,
+      "signatures": [
+        {
+          "contractName": "EthereumPepe",
+          "methodName": "burn",
+          "argTypes": [ "uint256" ]
+        }
+      ],
+      "exp": "(balances[msg.sender] - _value)",
+      "status": "proven"
+    },
+    {
+      "no": "10",
+      "kind": "IO",
+      "line": 76,
+      "signatures": [
+        {
+          "contractName": "EthereumPepe",
+          "methodName": "burn",
+          "argTypes": [ "uint256" ]
+        }
+      ],
+      "exp": "(totalSupply - _value)",
+      "status": "proven"
+    },
+    {
+      "no": "11",
+      "kind": "IO",
+      "line": 87,
+      "signatures": [
+        {
+          "contractName": "EthereumPepe",
+          "methodName": "burnFrom",
+          "argTypes": [ "address", "uint256" ]
+        }
+      ],
+      "exp": "(balances[_from] - _value)",
+      "status": "proven"
+    },
+    {
+      "no": "12",
+      "kind": "IO",
+      "line": 88,
+      "signatures": [
+        {
+          "contractName": "EthereumPepe",
+          "methodName": "burnFrom",
+          "argTypes": [ "address", "uint256" ]
+        }
+      ],
+      "exp": "(allowed[_from][msg.sender] - _value)",
+      "status": "proven"
+    },
+    {
+      "no": "13",
+      "kind": "IO",
+      "line": 89,
+      "signatures": [
+        {
+          "contractName": "EthereumPepe",
+          "methodName": "burnFrom",
+          "argTypes": [ "address", "uint256" ]
+        }
+      ],
+      "exp": "(totalSupply - _value)",
+      "status": "proven"
+    }
+  ]
+}

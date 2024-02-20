@@ -1,0 +1,4608 @@
+{
+  "success": true,
+  "error": null,
+  "results": {
+    "detectors": [
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "Validated",
+            "source_mapping": {
+              "start": 5438,
+              "length": 14,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "LastValidated",
+                "source_mapping": {
+                  "start": 5362,
+                  "length": 170,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "MetaPoc",
+                    "source_mapping": {
+                      "start": 25,
+                      "length": 8927,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "LastValidated()"
+                }
+              }
+            }
+          },
+          {
+            "type": "event",
+            "name": "Validated",
+            "source_mapping": {
+              "start": 984,
+              "length": 45,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "MetaPoc",
+                "source_mapping": {
+                  "start": 25,
+                  "length": 8927,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              },
+              "signature": "Validated(string,uint256)"
+            }
+          }
+        ],
+        "description": "MetaPoc.LastValidated().Validated () shadows:\n\t- MetaPoc.Validated(string,uint256) () (event)\n",
+        "markdown": "[MetaPoc.LastValidated().Validated]() shadows:\n\t- [MetaPoc.Validated(string,uint256)]() (event)\n",
+        "first_markdown_element": "",
+        "id": "6991626d85ab7dffca229e015ba81a04e9925c18be2adb3061375274d982a218",
+        "check": "shadowing-local",
+        "impact": "Low",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "filiate",
+            "source_mapping": {
+              "start": 1369,
+              "length": 15,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "MetaPoc",
+                "source_mapping": {
+                  "start": 1352,
+                  "length": 98,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "MetaPoc",
+                    "source_mapping": {
+                      "start": 25,
+                      "length": 8927,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "MetaPoc(address)"
+                }
+              }
+            }
+          },
+          {
+            "type": "node",
+            "name": "_filiate = filiate",
+            "source_mapping": {
+              "start": 1425,
+              "length": 18,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "MetaPoc",
+                "source_mapping": {
+                  "start": 1352,
+                  "length": 98,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "MetaPoc",
+                    "source_mapping": {
+                      "start": 25,
+                      "length": 8927,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "MetaPoc(address)"
+                }
+              }
+            }
+          }
+        ],
+        "description": "MetaPoc.MetaPoc(address).filiate () lacks a zero-check on :\n\t\t- _filiate = filiate ()\n",
+        "markdown": "[MetaPoc.MetaPoc(address).filiate]() lacks a zero-check on :\n\t\t- [_filiate = filiate]()\n",
+        "first_markdown_element": "",
+        "id": "8780744210f7a2c274e7e687f763cf24b3cab88f10aa4db21f14f18d03e02988",
+        "check": "missing-zero-check",
+        "impact": "Low",
+        "confidence": "Medium"
+      },
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "strEqual",
+            "source_mapping": {
+              "start": 7438,
+              "length": 266,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "MetaPoc",
+                "source_mapping": {
+                  "start": 25,
+                  "length": 8927,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              },
+              "signature": "strEqual(string,string)"
+            }
+          },
+          {
+            "type": "node",
+            "name": "a.length != b.length",
+            "source_mapping": {
+              "start": 7569,
+              "length": 20,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "strEqual",
+                "source_mapping": {
+                  "start": 7438,
+                  "length": 266,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "MetaPoc",
+                    "source_mapping": {
+                      "start": 25,
+                      "length": 8927,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "strEqual(string,string)"
+                }
+              }
+            }
+          },
+          {
+            "type": "node",
+            "name": "i < a.length",
+            "source_mapping": {
+              "start": 7628,
+              "length": 12,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "strEqual",
+                "source_mapping": {
+                  "start": 7438,
+                  "length": 266,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "MetaPoc",
+                    "source_mapping": {
+                      "start": 25,
+                      "length": 8927,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "strEqual(string,string)"
+                }
+              }
+            }
+          },
+          {
+            "type": "node",
+            "name": "a[i] != b[i]",
+            "source_mapping": {
+              "start": 7655,
+              "length": 12,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "strEqual",
+                "source_mapping": {
+                  "start": 7438,
+                  "length": 266,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "MetaPoc",
+                    "source_mapping": {
+                      "start": 25,
+                      "length": 8927,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "strEqual(string,string)"
+                }
+              }
+            }
+          }
+        ],
+        "description": "MetaPoc.strEqual(string,string) () uses timestamp for comparisons\n\tDangerous comparisons:\n\t- a.length != b.length ()\n\t- i < a.length ()\n\t- a[i] != b[i] ()\n",
+        "markdown": "[MetaPoc.strEqual(string,string)]() uses timestamp for comparisons\n\tDangerous comparisons:\n\t- [a.length != b.length]()\n\t- [i < a.length]()\n\t- [a[i] != b[i]]()\n",
+        "first_markdown_element": "",
+        "id": "19f17c6e61a6c171bd55b72992feb3dfbb76e043b93715bc85ed2c3b0a5402c8",
+        "check": "timestamp",
+        "impact": "Low",
+        "confidence": "Medium"
+      },
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "MajListVal",
+            "source_mapping": {
+              "start": 5927,
+              "length": 384,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "MetaPoc",
+                "source_mapping": {
+                  "start": 25,
+                  "length": 8927,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              },
+              "signature": "MajListVal()"
+            }
+          },
+          {
+            "type": "node",
+            "name": "i < executions.length",
+            "source_mapping": {
+              "start": 6010,
+              "length": 21,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "MajListVal",
+                "source_mapping": {
+                  "start": 5927,
+                  "length": 384,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "MetaPoc",
+                    "source_mapping": {
+                      "start": 25,
+                      "length": 8927,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "MajListVal()"
+                }
+              }
+            }
+          },
+          {
+            "type": "node",
+            "name": "executions[i].dateCreated >= val_since && executions[i].validated",
+            "source_mapping": {
+              "start": 6055,
+              "length": 65,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "MajListVal",
+                "source_mapping": {
+                  "start": 5927,
+                  "length": 384,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "MetaPoc",
+                    "source_mapping": {
+                      "start": 25,
+                      "length": 8927,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "MajListVal()"
+                }
+              }
+            }
+          }
+        ],
+        "description": "MetaPoc.MajListVal() () uses timestamp for comparisons\n\tDangerous comparisons:\n\t- i < executions.length ()\n\t- executions[i].dateCreated >= val_since && executions[i].validated ()\n",
+        "markdown": "[MetaPoc.MajListVal()]() uses timestamp for comparisons\n\tDangerous comparisons:\n\t- [i < executions.length]()\n\t- [executions[i].dateCreated >= val_since && executions[i].validated]()\n",
+        "first_markdown_element": "",
+        "id": "95841c0dbaf3a5f0dbf0e74cc45419d527bb9d5935e87cdcc38d7bb9a1e0d53a",
+        "check": "timestamp",
+        "impact": "Low",
+        "confidence": "Medium"
+      },
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "MajLastNotVal",
+            "source_mapping": {
+              "start": 6737,
+              "length": 675,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "MetaPoc",
+                "source_mapping": {
+                  "start": 25,
+                  "length": 8927,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              },
+              "signature": "MajLastNotVal()"
+            }
+          },
+          {
+            "type": "node",
+            "name": "executions.length > 0",
+            "source_mapping": {
+              "start": 6849,
+              "length": 21,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "MajLastNotVal",
+                "source_mapping": {
+                  "start": 6737,
+                  "length": 675,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "MetaPoc",
+                    "source_mapping": {
+                      "start": 25,
+                      "length": 8927,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "MajLastNotVal()"
+                }
+              }
+            }
+          },
+          {
+            "type": "node",
+            "name": "i > 0",
+            "source_mapping": {
+              "start": 7097,
+              "length": 5,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "MajLastNotVal",
+                "source_mapping": {
+                  "start": 6737,
+                  "length": 675,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "MetaPoc",
+                    "source_mapping": {
+                      "start": 25,
+                      "length": 8927,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "MajLastNotVal()"
+                }
+              }
+            }
+          },
+          {
+            "type": "node",
+            "name": "! executions[i].validated && executions[i].dateCreated > notVal_lastDateCreated",
+            "source_mapping": {
+              "start": 7130,
+              "length": 78,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "MajLastNotVal",
+                "source_mapping": {
+                  "start": 6737,
+                  "length": 675,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "MetaPoc",
+                    "source_mapping": {
+                      "start": 25,
+                      "length": 8927,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "MajLastNotVal()"
+                }
+              }
+            }
+          }
+        ],
+        "description": "MetaPoc.MajLastNotVal() () uses timestamp for comparisons\n\tDangerous comparisons:\n\t- executions.length > 0 ()\n\t- i > 0 ()\n\t- ! executions[i].validated && executions[i].dateCreated > notVal_lastDateCreated ()\n",
+        "markdown": "[MetaPoc.MajLastNotVal()]() uses timestamp for comparisons\n\tDangerous comparisons:\n\t- [executions.length > 0]()\n\t- [i > 0]()\n\t- [! executions[i].validated && executions[i].dateCreated > notVal_lastDateCreated]()\n",
+        "first_markdown_element": "",
+        "id": "a9d7b8aab589e5b6c36f9a9d18c64d32f54b33586014be83071b3d890bd18c1a",
+        "check": "timestamp",
+        "impact": "Low",
+        "confidence": "Medium"
+      },
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "MajListNotVal",
+            "source_mapping": {
+              "start": 6321,
+              "length": 406,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "MetaPoc",
+                "source_mapping": {
+                  "start": 25,
+                  "length": 8927,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              },
+              "signature": "MajListNotVal()"
+            }
+          },
+          {
+            "type": "node",
+            "name": "i < executions.length",
+            "source_mapping": {
+              "start": 6410,
+              "length": 21,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "MajListNotVal",
+                "source_mapping": {
+                  "start": 6321,
+                  "length": 406,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "MetaPoc",
+                    "source_mapping": {
+                      "start": 25,
+                      "length": 8927,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "MajListNotVal()"
+                }
+              }
+            }
+          },
+          {
+            "type": "node",
+            "name": "executions[i].dateCreated >= notVal_since && ! executions[i].validated",
+            "source_mapping": {
+              "start": 6455,
+              "length": 69,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "MajListNotVal",
+                "source_mapping": {
+                  "start": 6321,
+                  "length": 406,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "MetaPoc",
+                    "source_mapping": {
+                      "start": 25,
+                      "length": 8927,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "MajListNotVal()"
+                }
+              }
+            }
+          }
+        ],
+        "description": "MetaPoc.MajListNotVal() () uses timestamp for comparisons\n\tDangerous comparisons:\n\t- i < executions.length ()\n\t- executions[i].dateCreated >= notVal_since && ! executions[i].validated ()\n",
+        "markdown": "[MetaPoc.MajListNotVal()]() uses timestamp for comparisons\n\tDangerous comparisons:\n\t- [i < executions.length]()\n\t- [executions[i].dateCreated >= notVal_since && ! executions[i].validated]()\n",
+        "first_markdown_element": "",
+        "id": "e559e83f04eb605cc0673f1f9c77cecc749ed972edc03f433271abcc5e7ad125",
+        "check": "timestamp",
+        "impact": "Low",
+        "confidence": "Medium"
+      },
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "map",
+            "source_mapping": {
+              "start": 1478,
+              "length": 196,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "MetaPoc",
+                "source_mapping": {
+                  "start": 25,
+                  "length": 8927,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              },
+              "signature": "map(string)"
+            }
+          },
+          {
+            "type": "node",
+            "name": "ret >= executions.length || ! strEqual(executions[ret].hash,hash)",
+            "source_mapping": {
+              "start": 1575,
+              "length": 65,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "map",
+                "source_mapping": {
+                  "start": 1478,
+                  "length": 196,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "MetaPoc",
+                    "source_mapping": {
+                      "start": 25,
+                      "length": 8927,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "map(string)"
+                }
+              }
+            }
+          }
+        ],
+        "description": "MetaPoc.map(string) () uses timestamp for comparisons\n\tDangerous comparisons:\n\t- ret >= executions.length || ! strEqual(executions[ret].hash,hash) ()\n",
+        "markdown": "[MetaPoc.map(string)]() uses timestamp for comparisons\n\tDangerous comparisons:\n\t- [ret >= executions.length || ! strEqual(executions[ret].hash,hash)]()\n",
+        "first_markdown_element": "",
+        "id": "f34b23b2784282db088fe484d05bc56c7b91482d7a693324aabeb8cc8cbc4891",
+        "check": "timestamp",
+        "impact": "Low",
+        "confidence": "Medium"
+      },
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "strConcat",
+            "source_mapping": {
+              "start": 8826,
+              "length": 119,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "MetaPoc",
+                "source_mapping": {
+                  "start": 25,
+                  "length": 8927,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              },
+              "signature": "strConcat(string,string)"
+            }
+          }
+        ],
+        "description": "MetaPoc.strConcat(string,string) () is never used and should be removed\n",
+        "markdown": "[MetaPoc.strConcat(string,string)]() is never used and should be removed\n",
+        "first_markdown_element": "",
+        "id": "5e54c48a0e4bcbbc032bbd2eae3476e786a4d7339e6505737789b02f5a5a0b5a",
+        "check": "dead-code",
+        "impact": "Informational",
+        "confidence": "Medium"
+      },
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "strConcat",
+            "source_mapping": {
+              "start": 8535,
+              "length": 141,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "MetaPoc",
+                "source_mapping": {
+                  "start": 25,
+                  "length": 8927,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              },
+              "signature": "strConcat(string,string,string,string)"
+            }
+          }
+        ],
+        "description": "MetaPoc.strConcat(string,string,string,string) () is never used and should be removed\n",
+        "markdown": "[MetaPoc.strConcat(string,string,string,string)]() is never used and should be removed\n",
+        "first_markdown_element": "",
+        "id": "8f2849076e7648f79351c5bae49b2a6833db329d69b30152ec2e42bb18606689",
+        "check": "dead-code",
+        "impact": "Informational",
+        "confidence": "Medium"
+      },
+      {
+        "elements": [
+          {
+            "type": "node",
+            "name": "suicide(address)(_owner)",
+            "source_mapping": {
+              "start": 2889,
+              "length": 15,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "kill",
+                "source_mapping": {
+                  "start": 2848,
+                  "length": 63,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "MetaPoc",
+                    "source_mapping": {
+                      "start": 25,
+                      "length": 8927,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "kill()"
+                }
+              }
+            }
+          }
+        ],
+        "description": "Deprecated standard detected suicide(address)(_owner) ():\n\t- Usage of \"suicide()\" should be replaced with \"selfdestruct()\"\n",
+        "markdown": "Deprecated standard detected [suicide(address)(_owner)]():\n\t- Usage of \"suicide()\" should be replaced with \"selfdestruct()\"\n",
+        "first_markdown_element": "",
+        "id": "91fe93212a52f3c7b3f77aeb3c70721742dbfcd3d303e87f8e6824dd03d86edf",
+        "check": "deprecated-standards",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "node",
+            "name": "",
+            "source_mapping": {
+              "start": 1642,
+              "length": 5,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "map",
+                "source_mapping": {
+                  "start": 1478,
+                  "length": 196,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "MetaPoc",
+                    "source_mapping": {
+                      "start": 25,
+                      "length": 8927,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "map(string)"
+                }
+              }
+            }
+          }
+        ],
+        "description": "Deprecated standard detected THROW ():\n\t- Usage of \"throw\" should be replaced with \"revert()\"\n",
+        "markdown": "Deprecated standard detected [THROW]():\n\t- Usage of \"throw\" should be replaced with \"revert()\"\n",
+        "first_markdown_element": "",
+        "id": "f5556cf1c70b64b9e4b1fc32044dd970b5f2c8b9fc21b7971fda01971033f2d5",
+        "check": "deprecated-standards",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "pragma",
+            "name": "^0.4.6",
+            "source_mapping": {
+              "start": 0,
+              "length": 23,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "directive": [
+                "solidity",
+                "^",
+                "0.4",
+                ".6"
+              ]
+            }
+          }
+        ],
+        "description": "Pragma version^0.4.6 () allows old versions\n",
+        "markdown": "Pragma version[^0.4.6]() allows old versions\n",
+        "first_markdown_element": "",
+        "id": "54eae9514d5e93f8fb467cb6e12380204cb269720316b950ba80b399a769bf71",
+        "check": "solc-version",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [],
+        "description": "solc-0.4.6 is not recommended for deployment\n",
+        "markdown": "solc-0.4.6 is not recommended for deployment\n",
+        "first_markdown_element": "",
+        "id": "b2e09ce9c0c37029707bd5645a9a2972adb1c4c04948009825bacc17fa383ec8",
+        "check": "solc-version",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "MajLastNotVal",
+            "source_mapping": {
+              "start": 6737,
+              "length": 675,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "MetaPoc",
+                "source_mapping": {
+                  "start": 25,
+                  "length": 8927,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              },
+              "signature": "MajLastNotVal()"
+            },
+            "additional_fields": {
+              "target": "function",
+              "convention": "mixedCase"
+            }
+          }
+        ],
+        "description": "Function MetaPoc.MajLastNotVal() () is not in mixedCase\n",
+        "markdown": "Function [MetaPoc.MajLastNotVal()]() is not in mixedCase\n",
+        "first_markdown_element": "",
+        "id": "0181a6ed3490542f075e459d7df28f05068a6e0e546b00ca003fe4d6feb0136d",
+        "check": "naming-convention",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "nb_val",
+            "source_mapping": {
+              "start": 433,
+              "length": 23,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "MetaPoc",
+                "source_mapping": {
+                  "start": 25,
+                  "length": 8927,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              }
+            },
+            "additional_fields": {
+              "target": "variable",
+              "convention": "mixedCase"
+            }
+          }
+        ],
+        "description": "Variable MetaPoc.nb_val () is not in mixedCase\n",
+        "markdown": "Variable [MetaPoc.nb_val]() is not in mixedCase\n",
+        "first_markdown_element": "",
+        "id": "069de1a1fc66f4a5a704347a8bbdc07c045bb1420def1b345619766e8a259791",
+        "check": "naming-convention",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "_a",
+            "source_mapping": {
+              "start": 8845,
+              "length": 9,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "strConcat",
+                "source_mapping": {
+                  "start": 8826,
+                  "length": 119,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "MetaPoc",
+                    "source_mapping": {
+                      "start": 25,
+                      "length": 8927,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "strConcat(string,string)"
+                }
+              }
+            },
+            "additional_fields": {
+              "target": "parameter",
+              "convention": "mixedCase"
+            }
+          }
+        ],
+        "description": "Parameter MetaPoc.strConcat(string,string)._a () is not in mixedCase\n",
+        "markdown": "Parameter [MetaPoc.strConcat(string,string)._a]() is not in mixedCase\n",
+        "first_markdown_element": "",
+        "id": "0e05169478c999010d68b592d6dc90b20cdfa240e5e9d206852d661d7f1dbf9b",
+        "check": "naming-convention",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "ListAllSince",
+            "source_mapping": {
+              "start": 4377,
+              "length": 268,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "MetaPoc",
+                "source_mapping": {
+                  "start": 25,
+                  "length": 8927,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              },
+              "signature": "ListAllSince(uint256)"
+            },
+            "additional_fields": {
+              "target": "function",
+              "convention": "mixedCase"
+            }
+          }
+        ],
+        "description": "Function MetaPoc.ListAllSince(uint256) () is not in mixedCase\n",
+        "markdown": "Function [MetaPoc.ListAllSince(uint256)]() is not in mixedCase\n",
+        "first_markdown_element": "",
+        "id": "0e616c972f6eb85d8de8534bab459f1e8509811014fbb3eaca9b57a83d45c9cc",
+        "check": "naming-convention",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "MajListAll",
+            "source_mapping": {
+              "start": 5833,
+              "length": 84,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "MetaPoc",
+                "source_mapping": {
+                  "start": 25,
+                  "length": 8927,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              },
+              "signature": "MajListAll()"
+            },
+            "additional_fields": {
+              "target": "function",
+              "convention": "mixedCase"
+            }
+          }
+        ],
+        "description": "Function MetaPoc.MajListAll() () is not in mixedCase\n",
+        "markdown": "Function [MetaPoc.MajListAll()]() is not in mixedCase\n",
+        "first_markdown_element": "",
+        "id": "123538c450f8911ac88f7e630f167f1fd4b421feb80c621ac9aa1a3b7f896984",
+        "check": "naming-convention",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "Hash",
+            "source_mapping": {
+              "start": 4014,
+              "length": 11,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "CheckExec",
+                "source_mapping": {
+                  "start": 3995,
+                  "length": 372,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "MetaPoc",
+                    "source_mapping": {
+                      "start": 25,
+                      "length": 8927,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "CheckExec(string)"
+                }
+              }
+            },
+            "additional_fields": {
+              "target": "parameter",
+              "convention": "mixedCase"
+            }
+          }
+        ],
+        "description": "Parameter MetaPoc.CheckExec(string).Hash () is not in mixedCase\n",
+        "markdown": "Parameter [MetaPoc.CheckExec(string).Hash]() is not in mixedCase\n",
+        "first_markdown_element": "",
+        "id": "1f0acfcd38ecaebf631aa8bdef2efa82bdfb66c0bb8e49d4783fbb45982dae4f",
+        "check": "naming-convention",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "MajListNotVal",
+            "source_mapping": {
+              "start": 6321,
+              "length": 406,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "MetaPoc",
+                "source_mapping": {
+                  "start": 25,
+                  "length": 8927,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              },
+              "signature": "MajListNotVal()"
+            },
+            "additional_fields": {
+              "target": "function",
+              "convention": "mixedCase"
+            }
+          }
+        ],
+        "description": "Function MetaPoc.MajListNotVal() () is not in mixedCase\n",
+        "markdown": "Function [MetaPoc.MajListNotVal()]() is not in mixedCase\n",
+        "first_markdown_element": "",
+        "id": "2b6dbf560eefffc31863852375b9469d9c8f77943ffbcc6b2aade6aef2dad87f",
+        "check": "naming-convention",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "_c",
+            "source_mapping": {
+              "start": 8727,
+              "length": 9,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "strConcat",
+                "source_mapping": {
+                  "start": 8686,
+                  "length": 130,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "MetaPoc",
+                    "source_mapping": {
+                      "start": 25,
+                      "length": 8927,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "strConcat(string,string,string)"
+                }
+              }
+            },
+            "additional_fields": {
+              "target": "parameter",
+              "convention": "mixedCase"
+            }
+          }
+        ],
+        "description": "Parameter MetaPoc.strConcat(string,string,string)._c () is not in mixedCase\n",
+        "markdown": "Parameter [MetaPoc.strConcat(string,string,string)._c]() is not in mixedCase\n",
+        "first_markdown_element": "",
+        "id": "3303f9f3eebdb09e9f7a3522899702524c48fafd2c526cfda5302ffe6d37d25a",
+        "check": "naming-convention",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "event",
+            "name": "Filiate_Changed",
+            "source_mapping": {
+              "start": 1276,
+              "length": 39,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "MetaPoc",
+                "source_mapping": {
+                  "start": 25,
+                  "length": 8927,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              },
+              "signature": "Filiate_Changed(address)"
+            },
+            "additional_fields": {
+              "target": "event",
+              "convention": "CapWords"
+            }
+          }
+        ],
+        "description": "Event MetaPoc.Filiate_Changed(address) () is not in CapWords\n",
+        "markdown": "Event [MetaPoc.Filiate_Changed(address)]() is not in CapWords\n",
+        "first_markdown_element": "",
+        "id": "42dc8441777ed5c99e94b4e6277851154cd2ac450f7cbc11e3167b3d417d2fd0",
+        "check": "naming-convention",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "_b",
+            "source_mapping": {
+              "start": 7467,
+              "length": 9,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "strEqual",
+                "source_mapping": {
+                  "start": 7438,
+                  "length": 266,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "MetaPoc",
+                    "source_mapping": {
+                      "start": 25,
+                      "length": 8927,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "strEqual(string,string)"
+                }
+              }
+            },
+            "additional_fields": {
+              "target": "parameter",
+              "convention": "mixedCase"
+            }
+          }
+        ],
+        "description": "Parameter MetaPoc.strEqual(string,string)._b () is not in mixedCase\n",
+        "markdown": "Parameter [MetaPoc.strEqual(string,string)._b]() is not in mixedCase\n",
+        "first_markdown_element": "",
+        "id": "48a69ff28c2df458443c39b136846c38f98d687e0e0cbf04a838d107a33a7437",
+        "check": "naming-convention",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "ValidateExec",
+            "source_mapping": {
+              "start": 3457,
+              "length": 528,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "MetaPoc",
+                "source_mapping": {
+                  "start": 25,
+                  "length": 8927,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              },
+              "signature": "ValidateExec(string)"
+            },
+            "additional_fields": {
+              "target": "function",
+              "convention": "mixedCase"
+            }
+          }
+        ],
+        "description": "Function MetaPoc.ValidateExec(string) () is not in mixedCase\n",
+        "markdown": "Function [MetaPoc.ValidateExec(string)]() is not in mixedCase\n",
+        "first_markdown_element": "",
+        "id": "4afe0835a5a6d978bea812ef710b6f8cea69dc425a6d2135adb1f0957dd018a4",
+        "check": "naming-convention",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "_d",
+            "source_mapping": {
+              "start": 7760,
+              "length": 9,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "strConcat",
+                "source_mapping": {
+                  "start": 7708,
+                  "length": 817,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "MetaPoc",
+                    "source_mapping": {
+                      "start": 25,
+                      "length": 8927,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "strConcat(string,string,string,string,string)"
+                }
+              }
+            },
+            "additional_fields": {
+              "target": "parameter",
+              "convention": "mixedCase"
+            }
+          }
+        ],
+        "description": "Parameter MetaPoc.strConcat(string,string,string,string,string)._d () is not in mixedCase\n",
+        "markdown": "Parameter [MetaPoc.strConcat(string,string,string,string,string)._d]() is not in mixedCase\n",
+        "first_markdown_element": "",
+        "id": "4f4c14c064b19a4d6f2ca2b490b21801d3888d87ae3638363faa97eb48eff6b2",
+        "check": "naming-convention",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "ListValidated",
+            "source_mapping": {
+              "start": 5676,
+              "length": 119,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "MetaPoc",
+                "source_mapping": {
+                  "start": 25,
+                  "length": 8927,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              },
+              "signature": "ListValidated()"
+            },
+            "additional_fields": {
+              "target": "function",
+              "convention": "mixedCase"
+            }
+          }
+        ],
+        "description": "Function MetaPoc.ListValidated() () is not in mixedCase\n",
+        "markdown": "Function [MetaPoc.ListValidated()]() is not in mixedCase\n",
+        "first_markdown_element": "",
+        "id": "50505750aeb5bc64664cbc72b9d101f6734a8b75f629918c810686c885208c23",
+        "check": "naming-convention",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "CountExecs",
+            "source_mapping": {
+              "start": 5066,
+              "length": 144,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "MetaPoc",
+                "source_mapping": {
+                  "start": 25,
+                  "length": 8927,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              },
+              "signature": "CountExecs()"
+            },
+            "additional_fields": {
+              "target": "function",
+              "convention": "mixedCase"
+            }
+          }
+        ],
+        "description": "Function MetaPoc.CountExecs() () is not in mixedCase\n",
+        "markdown": "Function [MetaPoc.CountExecs()]() is not in mixedCase\n",
+        "first_markdown_element": "",
+        "id": "517c774678b3f5ac21f18a36d0ee6ee15ff0da54cbbbd77d5b81347ef62e9048",
+        "check": "naming-convention",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "_a",
+            "source_mapping": {
+              "start": 8554,
+              "length": 9,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "strConcat",
+                "source_mapping": {
+                  "start": 8535,
+                  "length": 141,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "MetaPoc",
+                    "source_mapping": {
+                      "start": 25,
+                      "length": 8927,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "strConcat(string,string,string,string)"
+                }
+              }
+            },
+            "additional_fields": {
+              "target": "parameter",
+              "convention": "mixedCase"
+            }
+          }
+        ],
+        "description": "Parameter MetaPoc.strConcat(string,string,string,string)._a () is not in mixedCase\n",
+        "markdown": "Parameter [MetaPoc.strConcat(string,string,string,string)._a]() is not in mixedCase\n",
+        "first_markdown_element": "",
+        "id": "5423782afb17956de19d3c3c12c3f094c56291857aa223dc117b4ebdad35a43f",
+        "check": "naming-convention",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "val_since",
+            "source_mapping": {
+              "start": 759,
+              "length": 26,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "MetaPoc",
+                "source_mapping": {
+                  "start": 25,
+                  "length": 8927,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              }
+            },
+            "additional_fields": {
+              "target": "variable",
+              "convention": "mixedCase"
+            }
+          }
+        ],
+        "description": "Variable MetaPoc.val_since () is not in mixedCase\n",
+        "markdown": "Variable [MetaPoc.val_since]() is not in mixedCase\n",
+        "first_markdown_element": "",
+        "id": "58a9b0b2f25f6cf3a8d482061e6a4e6511730a5079ddce4bc769defc7093ef75",
+        "check": "naming-convention",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "ChangeOwner",
+            "source_mapping": {
+              "start": 2495,
+              "length": 160,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "MetaPoc",
+                "source_mapping": {
+                  "start": 25,
+                  "length": 8927,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              },
+              "signature": "ChangeOwner(address)"
+            },
+            "additional_fields": {
+              "target": "function",
+              "convention": "mixedCase"
+            }
+          }
+        ],
+        "description": "Function MetaPoc.ChangeOwner(address) () is not in mixedCase\n",
+        "markdown": "Function [MetaPoc.ChangeOwner(address)]() is not in mixedCase\n",
+        "first_markdown_element": "",
+        "id": "58db44b6310b8658848621ef393205044a1c29f75a579186ebf07bd5531ebcad",
+        "check": "naming-convention",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "_c",
+            "source_mapping": {
+              "start": 8576,
+              "length": 9,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "strConcat",
+                "source_mapping": {
+                  "start": 8535,
+                  "length": 141,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "MetaPoc",
+                    "source_mapping": {
+                      "start": 25,
+                      "length": 8927,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "strConcat(string,string,string,string)"
+                }
+              }
+            },
+            "additional_fields": {
+              "target": "parameter",
+              "convention": "mixedCase"
+            }
+          }
+        ],
+        "description": "Parameter MetaPoc.strConcat(string,string,string,string)._c () is not in mixedCase\n",
+        "markdown": "Parameter [MetaPoc.strConcat(string,string,string,string)._c]() is not in mixedCase\n",
+        "first_markdown_element": "",
+        "id": "59d1452a672d8c568977d7f62aa82d736521123fa928e7af1050d8c6e03d0f90",
+        "check": "naming-convention",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "_b",
+            "source_mapping": {
+              "start": 8856,
+              "length": 9,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "strConcat",
+                "source_mapping": {
+                  "start": 8826,
+                  "length": 119,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "MetaPoc",
+                    "source_mapping": {
+                      "start": 25,
+                      "length": 8927,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "strConcat(string,string)"
+                }
+              }
+            },
+            "additional_fields": {
+              "target": "parameter",
+              "convention": "mixedCase"
+            }
+          }
+        ],
+        "description": "Parameter MetaPoc.strConcat(string,string)._b () is not in mixedCase\n",
+        "markdown": "Parameter [MetaPoc.strConcat(string,string)._b]() is not in mixedCase\n",
+        "first_markdown_element": "",
+        "id": "5a31830e976c34279c9aef22616097eff11d5db2303966a6d1af6fcac0d8026d",
+        "check": "naming-convention",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "LastExec",
+            "source_mapping": {
+              "start": 5220,
+              "length": 132,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "MetaPoc",
+                "source_mapping": {
+                  "start": 25,
+                  "length": 8927,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              },
+              "signature": "LastExec()"
+            },
+            "additional_fields": {
+              "target": "function",
+              "convention": "mixedCase"
+            }
+          }
+        ],
+        "description": "Function MetaPoc.LastExec() () is not in mixedCase\n",
+        "markdown": "Function [MetaPoc.LastExec()]() is not in mixedCase\n",
+        "first_markdown_element": "",
+        "id": "6a2eb12f3b20141f75eb5d6c9b5c1753cc8310d47e6e2ed42bee51fb5e833076",
+        "check": "naming-convention",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "CheckExec",
+            "source_mapping": {
+              "start": 3995,
+              "length": 372,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "MetaPoc",
+                "source_mapping": {
+                  "start": 25,
+                  "length": 8927,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              },
+              "signature": "CheckExec(string)"
+            },
+            "additional_fields": {
+              "target": "function",
+              "convention": "mixedCase"
+            }
+          }
+        ],
+        "description": "Function MetaPoc.CheckExec(string) () is not in mixedCase\n",
+        "markdown": "Function [MetaPoc.CheckExec(string)]() is not in mixedCase\n",
+        "first_markdown_element": "",
+        "id": "6ba866d65bb3c8658a370059e84d07f257e331f294c84a533bef66f4b346765b",
+        "check": "naming-convention",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "_c",
+            "source_mapping": {
+              "start": 7749,
+              "length": 9,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "strConcat",
+                "source_mapping": {
+                  "start": 7708,
+                  "length": 817,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "MetaPoc",
+                    "source_mapping": {
+                      "start": 25,
+                      "length": 8927,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "strConcat(string,string,string,string,string)"
+                }
+              }
+            },
+            "additional_fields": {
+              "target": "parameter",
+              "convention": "mixedCase"
+            }
+          }
+        ],
+        "description": "Parameter MetaPoc.strConcat(string,string,string,string,string)._c () is not in mixedCase\n",
+        "markdown": "Parameter [MetaPoc.strConcat(string,string,string,string,string)._c]() is not in mixedCase\n",
+        "first_markdown_element": "",
+        "id": "6eca489d013f72ff8b69c72538ef99cfbb825a4d569e1030a87a87ba76c01425",
+        "check": "naming-convention",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "_b",
+            "source_mapping": {
+              "start": 8565,
+              "length": 9,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "strConcat",
+                "source_mapping": {
+                  "start": 8535,
+                  "length": 141,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "MetaPoc",
+                    "source_mapping": {
+                      "start": 25,
+                      "length": 8927,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "strConcat(string,string,string,string)"
+                }
+              }
+            },
+            "additional_fields": {
+              "target": "parameter",
+              "convention": "mixedCase"
+            }
+          }
+        ],
+        "description": "Parameter MetaPoc.strConcat(string,string,string,string)._b () is not in mixedCase\n",
+        "markdown": "Parameter [MetaPoc.strConcat(string,string,string,string)._b]() is not in mixedCase\n",
+        "first_markdown_element": "",
+        "id": "6f7349326cf8a6521562ea4a24580a0d54e76aa7d64b984565dc32b457ea8eae",
+        "check": "naming-convention",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "Hash",
+            "source_mapping": {
+              "start": 3479,
+              "length": 11,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "ValidateExec",
+                "source_mapping": {
+                  "start": 3457,
+                  "length": 528,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "MetaPoc",
+                    "source_mapping": {
+                      "start": 25,
+                      "length": 8927,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "ValidateExec(string)"
+                }
+              }
+            },
+            "additional_fields": {
+              "target": "parameter",
+              "convention": "mixedCase"
+            }
+          }
+        ],
+        "description": "Parameter MetaPoc.ValidateExec(string).Hash () is not in mixedCase\n",
+        "markdown": "Parameter [MetaPoc.ValidateExec(string).Hash]() is not in mixedCase\n",
+        "first_markdown_element": "",
+        "id": "6fb418c0dde71433a68d075a43746a3e5e5a30ea9dcc27cab044fb63827fc3e8",
+        "check": "naming-convention",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "event",
+            "name": "Listed_Validated",
+            "source_mapping": {
+              "start": 1127,
+              "length": 48,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "MetaPoc",
+                "source_mapping": {
+                  "start": 25,
+                  "length": 8927,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              },
+              "signature": "Listed_Validated(uint256,string)"
+            },
+            "additional_fields": {
+              "target": "event",
+              "convention": "CapWords"
+            }
+          }
+        ],
+        "description": "Event MetaPoc.Listed_Validated(uint256,string) () is not in CapWords\n",
+        "markdown": "Event [MetaPoc.Listed_Validated(uint256,string)]() is not in CapWords\n",
+        "first_markdown_element": "",
+        "id": "7d4dcbb6593dcea9ede6c197d233026fe25c083a0c940f82e4812d291a11d7f2",
+        "check": "naming-convention",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "_b",
+            "source_mapping": {
+              "start": 7738,
+              "length": 9,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "strConcat",
+                "source_mapping": {
+                  "start": 7708,
+                  "length": 817,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "MetaPoc",
+                    "source_mapping": {
+                      "start": 25,
+                      "length": 8927,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "strConcat(string,string,string,string,string)"
+                }
+              }
+            },
+            "additional_fields": {
+              "target": "parameter",
+              "convention": "mixedCase"
+            }
+          }
+        ],
+        "description": "Parameter MetaPoc.strConcat(string,string,string,string,string)._b () is not in mixedCase\n",
+        "markdown": "Parameter [MetaPoc.strConcat(string,string,string,string,string)._b]() is not in mixedCase\n",
+        "first_markdown_element": "",
+        "id": "84470597286daa967394702cc1cfa643dafaa2ee2872cfee4a450fd2d6ab44b3",
+        "check": "naming-convention",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "nb_notVal",
+            "source_mapping": {
+              "start": 401,
+              "length": 26,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "MetaPoc",
+                "source_mapping": {
+                  "start": 25,
+                  "length": 8927,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              }
+            },
+            "additional_fields": {
+              "target": "variable",
+              "convention": "mixedCase"
+            }
+          }
+        ],
+        "description": "Variable MetaPoc.nb_notVal () is not in mixedCase\n",
+        "markdown": "Variable [MetaPoc.nb_notVal]() is not in mixedCase\n",
+        "first_markdown_element": "",
+        "id": "886e796fa568ce2bd040701aece365bd161f3412eb760bb879a4f8c64ff4ca17",
+        "check": "naming-convention",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "val_lastDateCreated",
+            "source_mapping": {
+              "start": 829,
+              "length": 36,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "MetaPoc",
+                "source_mapping": {
+                  "start": 25,
+                  "length": 8927,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              }
+            },
+            "additional_fields": {
+              "target": "variable",
+              "convention": "mixedCase"
+            }
+          }
+        ],
+        "description": "Variable MetaPoc.val_lastDateCreated () is not in mixedCase\n",
+        "markdown": "Variable [MetaPoc.val_lastDateCreated]() is not in mixedCase\n",
+        "first_markdown_element": "",
+        "id": "8a3b94df42cfeb728923ad6f98e7257669f1d2105260e965152ced0b732b08ca",
+        "check": "naming-convention",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "event",
+            "name": "Listed_NotValidated",
+            "source_mapping": {
+              "start": 1180,
+              "length": 51,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "MetaPoc",
+                "source_mapping": {
+                  "start": 25,
+                  "length": 8927,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              },
+              "signature": "Listed_NotValidated(uint256,string)"
+            },
+            "additional_fields": {
+              "target": "event",
+              "convention": "CapWords"
+            }
+          }
+        ],
+        "description": "Event MetaPoc.Listed_NotValidated(uint256,string) () is not in CapWords\n",
+        "markdown": "Event [MetaPoc.Listed_NotValidated(uint256,string)]() is not in CapWords\n",
+        "first_markdown_element": "",
+        "id": "8b3dd5e13546af19ac6a88b8fd62004688f91d933623858ba4b8990de53b6429",
+        "check": "naming-convention",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "nb_total",
+            "source_mapping": {
+              "start": 370,
+              "length": 25,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "MetaPoc",
+                "source_mapping": {
+                  "start": 25,
+                  "length": 8927,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              }
+            },
+            "additional_fields": {
+              "target": "variable",
+              "convention": "mixedCase"
+            }
+          }
+        ],
+        "description": "Variable MetaPoc.nb_total () is not in mixedCase\n",
+        "markdown": "Variable [MetaPoc.nb_total]() is not in mixedCase\n",
+        "first_markdown_element": "",
+        "id": "900697268e45768790a1a1ec2594de4b5a94efbc036029dbe880450c6f06b38a",
+        "check": "naming-convention",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "ListValSince",
+            "source_mapping": {
+              "start": 4857,
+              "length": 174,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "MetaPoc",
+                "source_mapping": {
+                  "start": 25,
+                  "length": 8927,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              },
+              "signature": "ListValSince(uint256)"
+            },
+            "additional_fields": {
+              "target": "function",
+              "convention": "mixedCase"
+            }
+          }
+        ],
+        "description": "Function MetaPoc.ListValSince(uint256) () is not in mixedCase\n",
+        "markdown": "Function [MetaPoc.ListValSince(uint256)]() is not in mixedCase\n",
+        "first_markdown_element": "",
+        "id": "9305750280370e36a01c70e65e776e0021f75b324aed051dad1e38b80d27eeae",
+        "check": "naming-convention",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "Hash",
+            "source_mapping": {
+              "start": 2965,
+              "length": 11,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "AddExec",
+                "source_mapping": {
+                  "start": 2948,
+                  "length": 499,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "MetaPoc",
+                    "source_mapping": {
+                      "start": 25,
+                      "length": 8927,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "AddExec(string)"
+                }
+              }
+            },
+            "additional_fields": {
+              "target": "parameter",
+              "convention": "mixedCase"
+            }
+          }
+        ],
+        "description": "Parameter MetaPoc.AddExec(string).Hash () is not in mixedCase\n",
+        "markdown": "Parameter [MetaPoc.AddExec(string).Hash]() is not in mixedCase\n",
+        "first_markdown_element": "",
+        "id": "9fae27c415c4b490397049619d985c6d0e57a868ba38967cc90e8831f222b4ec",
+        "check": "naming-convention",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "val_last",
+            "source_mapping": {
+              "start": 791,
+              "length": 32,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "MetaPoc",
+                "source_mapping": {
+                  "start": 25,
+                  "length": 8927,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              }
+            },
+            "additional_fields": {
+              "target": "variable",
+              "convention": "mixedCase"
+            }
+          }
+        ],
+        "description": "Variable MetaPoc.val_last () is not in mixedCase\n",
+        "markdown": "Variable [MetaPoc.val_last]() is not in mixedCase\n",
+        "first_markdown_element": "",
+        "id": "b0a75e3df14f74eaf7ab09263cf0c9ada04abe759d1b8a8478417a61644691ee",
+        "check": "naming-convention",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "_e",
+            "source_mapping": {
+              "start": 7771,
+              "length": 9,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "strConcat",
+                "source_mapping": {
+                  "start": 7708,
+                  "length": 817,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "MetaPoc",
+                    "source_mapping": {
+                      "start": 25,
+                      "length": 8927,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "strConcat(string,string,string,string,string)"
+                }
+              }
+            },
+            "additional_fields": {
+              "target": "parameter",
+              "convention": "mixedCase"
+            }
+          }
+        ],
+        "description": "Parameter MetaPoc.strConcat(string,string,string,string,string)._e () is not in mixedCase\n",
+        "markdown": "Parameter [MetaPoc.strConcat(string,string,string,string,string)._e]() is not in mixedCase\n",
+        "first_markdown_element": "",
+        "id": "b56174e0144834262ee30005ffcdfb2a82b54308d811ee79f7fb502ded5b192a",
+        "check": "naming-convention",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "LastValidated",
+            "source_mapping": {
+              "start": 5362,
+              "length": 170,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "MetaPoc",
+                "source_mapping": {
+                  "start": 25,
+                  "length": 8927,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              },
+              "signature": "LastValidated()"
+            },
+            "additional_fields": {
+              "target": "function",
+              "convention": "mixedCase"
+            }
+          }
+        ],
+        "description": "Function MetaPoc.LastValidated() () is not in mixedCase\n",
+        "markdown": "Function [MetaPoc.LastValidated()]() is not in mixedCase\n",
+        "first_markdown_element": "",
+        "id": "b6dfb3e948e8d26fd10b36c600411708dd537b81038fd77fda88b19e641fd2b1",
+        "check": "naming-convention",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "_a",
+            "source_mapping": {
+              "start": 7456,
+              "length": 9,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "strEqual",
+                "source_mapping": {
+                  "start": 7438,
+                  "length": 266,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "MetaPoc",
+                    "source_mapping": {
+                      "start": 25,
+                      "length": 8927,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "strEqual(string,string)"
+                }
+              }
+            },
+            "additional_fields": {
+              "target": "parameter",
+              "convention": "mixedCase"
+            }
+          }
+        ],
+        "description": "Parameter MetaPoc.strEqual(string,string)._a () is not in mixedCase\n",
+        "markdown": "Parameter [MetaPoc.strEqual(string,string)._a]() is not in mixedCase\n",
+        "first_markdown_element": "",
+        "id": "bd5c1727d131e6db6431150fd339a80eecf663ba5961a0956d567f2d86c85928",
+        "check": "naming-convention",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "AddExec",
+            "source_mapping": {
+              "start": 2948,
+              "length": 499,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "MetaPoc",
+                "source_mapping": {
+                  "start": 25,
+                  "length": 8927,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              },
+              "signature": "AddExec(string)"
+            },
+            "additional_fields": {
+              "target": "function",
+              "convention": "mixedCase"
+            }
+          }
+        ],
+        "description": "Function MetaPoc.AddExec(string) () is not in mixedCase\n",
+        "markdown": "Function [MetaPoc.AddExec(string)]() is not in mixedCase\n",
+        "first_markdown_element": "",
+        "id": "bdead4ece0cce947ad13cf1e9c30fae30725dadde365be56df6246b6569943bd",
+        "check": "naming-convention",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "last_exec",
+            "source_mapping": {
+              "start": 467,
+              "length": 33,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "MetaPoc",
+                "source_mapping": {
+                  "start": 25,
+                  "length": 8927,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              }
+            },
+            "additional_fields": {
+              "target": "variable",
+              "convention": "mixedCase"
+            }
+          }
+        ],
+        "description": "Variable MetaPoc.last_exec () is not in mixedCase\n",
+        "markdown": "Variable [MetaPoc.last_exec]() is not in mixedCase\n",
+        "first_markdown_element": "",
+        "id": "bfed7d4a054fa3cff4a81f22b4b8334c7926a154f422c83359355c701a4d92c4",
+        "check": "naming-convention",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "_b",
+            "source_mapping": {
+              "start": 8716,
+              "length": 9,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "strConcat",
+                "source_mapping": {
+                  "start": 8686,
+                  "length": 130,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "MetaPoc",
+                    "source_mapping": {
+                      "start": 25,
+                      "length": 8927,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "strConcat(string,string,string)"
+                }
+              }
+            },
+            "additional_fields": {
+              "target": "parameter",
+              "convention": "mixedCase"
+            }
+          }
+        ],
+        "description": "Parameter MetaPoc.strConcat(string,string,string)._b () is not in mixedCase\n",
+        "markdown": "Parameter [MetaPoc.strConcat(string,string,string)._b]() is not in mixedCase\n",
+        "first_markdown_element": "",
+        "id": "c705bf15466b67bbe127934d35d8902f055a002c4a07214e1dffcccc24f2f607",
+        "check": "naming-convention",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "ListNotValidated",
+            "source_mapping": {
+              "start": 5542,
+              "length": 128,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "MetaPoc",
+                "source_mapping": {
+                  "start": 25,
+                  "length": 8927,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              },
+              "signature": "ListNotValidated()"
+            },
+            "additional_fields": {
+              "target": "function",
+              "convention": "mixedCase"
+            }
+          }
+        ],
+        "description": "Function MetaPoc.ListNotValidated() () is not in mixedCase\n",
+        "markdown": "Function [MetaPoc.ListNotValidated()]() is not in mixedCase\n",
+        "first_markdown_element": "",
+        "id": "c7383bcd3bce54b6ec4082612e135149e1072f45275a1ba6bc884aeb44be989e",
+        "check": "naming-convention",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "notVal_since",
+            "source_mapping": {
+              "start": 595,
+              "length": 29,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "MetaPoc",
+                "source_mapping": {
+                  "start": 25,
+                  "length": 8927,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              }
+            },
+            "additional_fields": {
+              "target": "variable",
+              "convention": "mixedCase"
+            }
+          }
+        ],
+        "description": "Variable MetaPoc.notVal_since () is not in mixedCase\n",
+        "markdown": "Variable [MetaPoc.notVal_since]() is not in mixedCase\n",
+        "first_markdown_element": "",
+        "id": "c74fe6595bde406363396a51493aada04347017a2e58d627709eedcd55980480",
+        "check": "naming-convention",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "_d",
+            "source_mapping": {
+              "start": 8587,
+              "length": 9,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "strConcat",
+                "source_mapping": {
+                  "start": 8535,
+                  "length": 141,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "MetaPoc",
+                    "source_mapping": {
+                      "start": 25,
+                      "length": 8927,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "strConcat(string,string,string,string)"
+                }
+              }
+            },
+            "additional_fields": {
+              "target": "parameter",
+              "convention": "mixedCase"
+            }
+          }
+        ],
+        "description": "Parameter MetaPoc.strConcat(string,string,string,string)._d () is not in mixedCase\n",
+        "markdown": "Parameter [MetaPoc.strConcat(string,string,string,string)._d]() is not in mixedCase\n",
+        "first_markdown_element": "",
+        "id": "cc86e3b476307c69d265f75be101d1c15e759034e3899dd31a789b02305a9e14",
+        "check": "naming-convention",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "notVal_last",
+            "source_mapping": {
+              "start": 630,
+              "length": 35,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "MetaPoc",
+                "source_mapping": {
+                  "start": 25,
+                  "length": 8927,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              }
+            },
+            "additional_fields": {
+              "target": "variable",
+              "convention": "mixedCase"
+            }
+          }
+        ],
+        "description": "Variable MetaPoc.notVal_last () is not in mixedCase\n",
+        "markdown": "Variable [MetaPoc.notVal_last]() is not in mixedCase\n",
+        "first_markdown_element": "",
+        "id": "d328858539adf397ed0059c2be8efe1527853554c143d3f0e9f4e0b72723d9df",
+        "check": "naming-convention",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "_a",
+            "source_mapping": {
+              "start": 8705,
+              "length": 9,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "strConcat",
+                "source_mapping": {
+                  "start": 8686,
+                  "length": 130,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "MetaPoc",
+                    "source_mapping": {
+                      "start": 25,
+                      "length": 8927,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "strConcat(string,string,string)"
+                }
+              }
+            },
+            "additional_fields": {
+              "target": "parameter",
+              "convention": "mixedCase"
+            }
+          }
+        ],
+        "description": "Parameter MetaPoc.strConcat(string,string,string)._a () is not in mixedCase\n",
+        "markdown": "Parameter [MetaPoc.strConcat(string,string,string)._a]() is not in mixedCase\n",
+        "first_markdown_element": "",
+        "id": "d80f76d2189ea34f0d95c6426de91caf39e15bd2955ba769764d98dc4d3e7952",
+        "check": "naming-convention",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "MajListVal",
+            "source_mapping": {
+              "start": 5927,
+              "length": 384,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "MetaPoc",
+                "source_mapping": {
+                  "start": 25,
+                  "length": 8927,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              },
+              "signature": "MajListVal()"
+            },
+            "additional_fields": {
+              "target": "function",
+              "convention": "mixedCase"
+            }
+          }
+        ],
+        "description": "Function MetaPoc.MajListVal() () is not in mixedCase\n",
+        "markdown": "Function [MetaPoc.MajListVal()]() is not in mixedCase\n",
+        "first_markdown_element": "",
+        "id": "e4984a4ac1b32b0ee959f93cfba65171a45f866d0cb728a61a70955bc0c21247",
+        "check": "naming-convention",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "notVal_lastDateCreated",
+            "source_mapping": {
+              "start": 671,
+              "length": 39,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "MetaPoc",
+                "source_mapping": {
+                  "start": 25,
+                  "length": 8927,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              }
+            },
+            "additional_fields": {
+              "target": "variable",
+              "convention": "mixedCase"
+            }
+          }
+        ],
+        "description": "Variable MetaPoc.notVal_lastDateCreated () is not in mixedCase\n",
+        "markdown": "Variable [MetaPoc.notVal_lastDateCreated]() is not in mixedCase\n",
+        "first_markdown_element": "",
+        "id": "e9a7e5d343ddf372e9c84f2556d9ebc4086bdc930ea6a2756abb2edb2617d9df",
+        "check": "naming-convention",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "val_list",
+            "source_mapping": {
+              "start": 721,
+              "length": 32,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "MetaPoc",
+                "source_mapping": {
+                  "start": 25,
+                  "length": 8927,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              }
+            },
+            "additional_fields": {
+              "target": "variable",
+              "convention": "mixedCase"
+            }
+          }
+        ],
+        "description": "Variable MetaPoc.val_list () is not in mixedCase\n",
+        "markdown": "Variable [MetaPoc.val_list]() is not in mixedCase\n",
+        "first_markdown_element": "",
+        "id": "ecd5779b9b72e085fcd534dcf976b5039e89f3caf1c478d37929f538abbd0b99",
+        "check": "naming-convention",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "notVal_list",
+            "source_mapping": {
+              "start": 554,
+              "length": 35,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "MetaPoc",
+                "source_mapping": {
+                  "start": 25,
+                  "length": 8927,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              }
+            },
+            "additional_fields": {
+              "target": "variable",
+              "convention": "mixedCase"
+            }
+          }
+        ],
+        "description": "Variable MetaPoc.notVal_list () is not in mixedCase\n",
+        "markdown": "Variable [MetaPoc.notVal_list]() is not in mixedCase\n",
+        "first_markdown_element": "",
+        "id": "ecf84c7146a175981fd91797fffb3f1fa64922f4655af9ff6b3ce7099be9e43f",
+        "check": "naming-convention",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "val_lastDateValidated",
+            "source_mapping": {
+              "start": 871,
+              "length": 38,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "MetaPoc",
+                "source_mapping": {
+                  "start": 25,
+                  "length": 8927,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              }
+            },
+            "additional_fields": {
+              "target": "variable",
+              "convention": "mixedCase"
+            }
+          }
+        ],
+        "description": "Variable MetaPoc.val_lastDateValidated () is not in mixedCase\n",
+        "markdown": "Variable [MetaPoc.val_lastDateValidated]() is not in mixedCase\n",
+        "first_markdown_element": "",
+        "id": "f1696d6360d2893867e8113caf8b6092f34dc191cbd0652310e0530687e87e43",
+        "check": "naming-convention",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "_a",
+            "source_mapping": {
+              "start": 7727,
+              "length": 9,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "strConcat",
+                "source_mapping": {
+                  "start": 7708,
+                  "length": 817,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "MetaPoc",
+                    "source_mapping": {
+                      "start": 25,
+                      "length": 8927,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "strConcat(string,string,string,string,string)"
+                }
+              }
+            },
+            "additional_fields": {
+              "target": "parameter",
+              "convention": "mixedCase"
+            }
+          }
+        ],
+        "description": "Parameter MetaPoc.strConcat(string,string,string,string,string)._a () is not in mixedCase\n",
+        "markdown": "Parameter [MetaPoc.strConcat(string,string,string,string,string)._a]() is not in mixedCase\n",
+        "first_markdown_element": "",
+        "id": "f258670ba669f4ba3a9ca9f871a8c5512cf94a8c1c21d82f8b66b245f0b1c990",
+        "check": "naming-convention",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "ListNotValSince",
+            "source_mapping": {
+              "start": 4655,
+              "length": 192,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "MetaPoc",
+                "source_mapping": {
+                  "start": 25,
+                  "length": 8927,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              },
+              "signature": "ListNotValSince(uint256)"
+            },
+            "additional_fields": {
+              "target": "function",
+              "convention": "mixedCase"
+            }
+          }
+        ],
+        "description": "Function MetaPoc.ListNotValSince(uint256) () is not in mixedCase\n",
+        "markdown": "Function [MetaPoc.ListNotValSince(uint256)]() is not in mixedCase\n",
+        "first_markdown_element": "",
+        "id": "f91d2744442842c2dbd1b154c9323d2ffbd9aa6dccfa0cf3f1306801ef6e7746",
+        "check": "naming-convention",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "ChangeFiliate",
+            "source_mapping": {
+              "start": 2665,
+              "length": 173,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "MetaPoc",
+                "source_mapping": {
+                  "start": 25,
+                  "length": 8927,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              },
+              "signature": "ChangeFiliate(address)"
+            },
+            "additional_fields": {
+              "target": "function",
+              "convention": "mixedCase"
+            }
+          }
+        ],
+        "description": "Function MetaPoc.ChangeFiliate(address) () is not in mixedCase\n",
+        "markdown": "Function [MetaPoc.ChangeFiliate(address)]() is not in mixedCase\n",
+        "first_markdown_element": "",
+        "id": "fc34dc8fcc4e1436661c332bbd842e520e016d212f9960e5e3b31d91c8a8c8dd",
+        "check": "naming-convention",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "last_execDateCreated",
+            "source_mapping": {
+              "start": 506,
+              "length": 37,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "MetaPoc",
+                "source_mapping": {
+                  "start": 25,
+                  "length": 8927,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              }
+            },
+            "additional_fields": {
+              "target": "variable",
+              "convention": "mixedCase"
+            }
+          }
+        ],
+        "description": "Variable MetaPoc.last_execDateCreated () is not in mixedCase\n",
+        "markdown": "Variable [MetaPoc.last_execDateCreated]() is not in mixedCase\n",
+        "first_markdown_element": "",
+        "id": "fcb70de7cbc279642a1da06411cc8668a379a85aa03d20d01edab7adef05862d",
+        "check": "naming-convention",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "event",
+            "name": "Owner_Changed",
+            "source_mapping": {
+              "start": 1236,
+              "length": 35,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "MetaPoc",
+                "source_mapping": {
+                  "start": 25,
+                  "length": 8927,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              },
+              "signature": "Owner_Changed(address)"
+            },
+            "additional_fields": {
+              "target": "event",
+              "convention": "CapWords"
+            }
+          }
+        ],
+        "description": "Event MetaPoc.Owner_Changed(address) () is not in CapWords\n",
+        "markdown": "Event [MetaPoc.Owner_Changed(address)]() is not in CapWords\n",
+        "first_markdown_element": "",
+        "id": "fd34b0de8e96276e9b237bc434faa90034f92581321b146863649991bdd94044",
+        "check": "naming-convention",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "notVal_last",
+            "source_mapping": {
+              "start": 630,
+              "length": 35,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "MetaPoc",
+                "source_mapping": {
+                  "start": 25,
+                  "length": 8927,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              }
+            }
+          },
+          {
+            "type": "variable",
+            "name": "notVal_list",
+            "source_mapping": {
+              "start": 554,
+              "length": 35,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "MetaPoc",
+                "source_mapping": {
+                  "start": 25,
+                  "length": 8927,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              }
+            }
+          }
+        ],
+        "description": "Variable MetaPoc.notVal_last () is too similar to MetaPoc.notVal_list ()\n",
+        "markdown": "Variable [MetaPoc.notVal_last]() is too similar to [MetaPoc.notVal_list]()\n",
+        "first_markdown_element": "",
+        "id": "60cbb6a3d5019b71fe3a129289f98d42c12b66e7538aa734e3b329f3cd798c28",
+        "check": "similar-names",
+        "impact": "Informational",
+        "confidence": "Medium"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "last_execDateCreated",
+            "source_mapping": {
+              "start": 506,
+              "length": 37,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "MetaPoc",
+                "source_mapping": {
+                  "start": 25,
+                  "length": 8927,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              }
+            }
+          },
+          {
+            "type": "contract",
+            "name": "MetaPoc",
+            "source_mapping": {
+              "start": 25,
+              "length": 8927,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            }
+          }
+        ],
+        "description": "MetaPoc.last_execDateCreated () is never used in MetaPoc ()\n",
+        "markdown": "[MetaPoc.last_execDateCreated]() is never used in [MetaPoc]()\n",
+        "first_markdown_element": "",
+        "id": "981a570f7c0b70ac50ab45f29f72362af94e53ddb257d7d867b8e8e63ef30dfc",
+        "check": "unused-state",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "last_exec",
+            "source_mapping": {
+              "start": 467,
+              "length": 33,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "MetaPoc",
+                "source_mapping": {
+                  "start": 25,
+                  "length": 8927,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              }
+            }
+          },
+          {
+            "type": "contract",
+            "name": "MetaPoc",
+            "source_mapping": {
+              "start": 25,
+              "length": 8927,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            }
+          }
+        ],
+        "description": "MetaPoc.last_exec () is never used in MetaPoc ()\n",
+        "markdown": "[MetaPoc.last_exec]() is never used in [MetaPoc]()\n",
+        "first_markdown_element": "",
+        "id": "e792d195916d0dcc71aac43a0b83ce018e3ba37d5596960ed2d44a0f6ebe7394",
+        "check": "unused-state",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "node",
+            "name": "i < executions.length",
+            "source_mapping": {
+              "start": 6010,
+              "length": 21,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "MajListVal",
+                "source_mapping": {
+                  "start": 5927,
+                  "length": 384,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "MetaPoc",
+                    "source_mapping": {
+                      "start": 25,
+                      "length": 8927,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "MajListVal()"
+                }
+              }
+            }
+          }
+        ],
+        "description": "Loop condition i < executions.length () should use cached array length instead of referencing `length` member of the storage array.\n ",
+        "markdown": "Loop condition [i < executions.length]() should use cached array length instead of referencing `length` member of the storage array.\n ",
+        "first_markdown_element": "",
+        "id": "86aee17dd9a426bcc2bd9d3e7aa2cbcd93b059013fd4445e522c54dff0fe8db0",
+        "check": "cache-array-length",
+        "impact": "Optimization",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "last_execDateCreated",
+            "source_mapping": {
+              "start": 506,
+              "length": 37,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "MetaPoc",
+                "source_mapping": {
+                  "start": 25,
+                  "length": 8927,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              }
+            }
+          }
+        ],
+        "description": "MetaPoc.last_execDateCreated () should be constant \n",
+        "markdown": "[MetaPoc.last_execDateCreated]() should be constant \n",
+        "first_markdown_element": "",
+        "id": "bafbd406d5730bcc795267961035779099898545c303068c4d6b9b4f7b8f97cb",
+        "check": "constable-states",
+        "impact": "Optimization",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "last_exec",
+            "source_mapping": {
+              "start": 467,
+              "length": 33,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "MetaPoc",
+                "source_mapping": {
+                  "start": 25,
+                  "length": 8927,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              }
+            }
+          }
+        ],
+        "description": "MetaPoc.last_exec () should be constant \n",
+        "markdown": "[MetaPoc.last_exec]() should be constant \n",
+        "first_markdown_element": "",
+        "id": "d95c11b3c05c1bb1bd07b2ba65c0c4b7a3b4b12f8a4b69b1ea0d6c18821adfa2",
+        "check": "constable-states",
+        "impact": "Optimization",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "CheckExec",
+            "source_mapping": {
+              "start": 3995,
+              "length": 372,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "MetaPoc",
+                "source_mapping": {
+                  "start": 25,
+                  "length": 8927,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              },
+              "signature": "CheckExec(string)"
+            }
+          }
+        ],
+        "description": "CheckExec(string) should be declared external:\n\t- MetaPoc.CheckExec(string) ()\n",
+        "markdown": "CheckExec(string) should be declared external:\n\t- [MetaPoc.CheckExec(string)]()\n",
+        "first_markdown_element": "",
+        "id": "594cf91c9daeb9d54ae3dbf82d6053ec403f7c741227e6583a95ecc58fba5134",
+        "check": "external-function",
+        "impact": "Optimization",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "ValidateExec",
+            "source_mapping": {
+              "start": 3457,
+              "length": 528,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "MetaPoc",
+                "source_mapping": {
+                  "start": 25,
+                  "length": 8927,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              },
+              "signature": "ValidateExec(string)"
+            }
+          }
+        ],
+        "description": "ValidateExec(string) should be declared external:\n\t- MetaPoc.ValidateExec(string) ()\n",
+        "markdown": "ValidateExec(string) should be declared external:\n\t- [MetaPoc.ValidateExec(string)]()\n",
+        "first_markdown_element": "",
+        "id": "b8eb52718064f3d8e9116773b7312054bcb65777d58a59f44b79c5eeca72a293",
+        "check": "external-function",
+        "impact": "Optimization",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "AddExec",
+            "source_mapping": {
+              "start": 2948,
+              "length": 499,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "MetaPoc",
+                "source_mapping": {
+                  "start": 25,
+                  "length": 8927,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              },
+              "signature": "AddExec(string)"
+            }
+          }
+        ],
+        "description": "AddExec(string) should be declared external:\n\t- MetaPoc.AddExec(string) ()\n",
+        "markdown": "AddExec(string) should be declared external:\n\t- [MetaPoc.AddExec(string)]()\n",
+        "first_markdown_element": "",
+        "id": "fd0192a7c2f1fc8a68778db8b956269df855f4f091d98a04bd5de388ab2a0037",
+        "check": "external-function",
+        "impact": "Optimization",
+        "confidence": "High"
+      }
+    ]
+  }
+}

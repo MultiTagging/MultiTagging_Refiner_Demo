@@ -1,0 +1,154 @@
+{
+  "fileName": "Benchmarks/Study_SamplesSet/37f5af54014f078f1820a54b1f2b5c09.sol",
+  "baseName": "37f5af54014f078f1820a54b1f2b5c09.sol",
+  "iter": 3,
+  "time": "345.876522",
+  "errMsg": null,
+  "result": [
+    {
+      "no": "1",
+      "kind": "IO",
+      "line": 12,
+      "signatures": [
+        {
+          "contractName": "TheNextBlock",
+          "methodName": "placeBet",
+          "argTypes": [ "address" ]
+        }
+      ],
+      "exp": "(a * b)",
+      "status": "unproven"
+    },
+    {
+      "no": "2",
+      "kind": "IO",
+      "line": 26,
+      "signatures": [
+        {
+          "contractName": "TheNextBlock",
+          "methodName": "placeBet",
+          "argTypes": [ "address" ]
+        }
+      ],
+      "exp": "(a - b)",
+      "status": "proven"
+    },
+    {
+      "no": "3",
+      "kind": "IO",
+      "line": 30,
+      "signatures": [
+        {
+          "contractName": "TheNextBlock",
+          "methodName": "@fallback",
+          "argTypes": []
+        },
+        {
+          "contractName": "TheNextBlock",
+          "methodName": "placeBet",
+          "argTypes": [ "address" ]
+        }
+      ],
+      "exp": "(a + b)",
+      "status": "unproven"
+    },
+    {
+      "no": "4",
+      "kind": "IO",
+      "line": 153,
+      "signatures": [
+        {
+          "contractName": "TheNextBlock",
+          "methodName": "placeBet",
+          "argTypes": [ "address" ]
+        }
+      ],
+      "exp": "(playersPoints[msg.sender] - 1)",
+      "status": "proven"
+    },
+    {
+      "no": "5",
+      "kind": "DZ",
+      "line": 13,
+      "signatures": [
+        {
+          "contractName": "TheNextBlock",
+          "methodName": "placeBet",
+          "argTypes": [ "address" ]
+        }
+      ],
+      "exp": "(c / a)",
+      "status": "proven"
+    },
+    {
+      "no": "6",
+      "kind": "DZ",
+      "line": 19,
+      "signatures": [
+        {
+          "contractName": "TheNextBlock",
+          "methodName": "placeBet",
+          "argTypes": [ "address" ]
+        }
+      ],
+      "exp": "(a / b)",
+      "status": "proven"
+    },
+    {
+      "no": "7",
+      "kind": "DZ",
+      "line": 109,
+      "signatures": [
+        {
+          "contractName": "TheNextBlock",
+          "methodName": "placeBet",
+          "argTypes": [ "address" ]
+        }
+      ],
+      "exp": "(amount % 100)",
+      "status": "proven"
+    },
+    {
+      "no": "8",
+      "kind": "ETH_LEAK",
+      "line": 96,
+      "signatures": [
+        {
+          "contractName": "TheNextBlock",
+          "methodName": "placeBet",
+          "argTypes": [ "address" ]
+        }
+      ],
+      "exp": "msg.sender.transfer(SafeMath.sub(msg.value, allowedBetAmount));",
+      "status": "proven"
+    },
+    {
+      "no": "9",
+      "kind": "ETH_LEAK",
+      "line": 187,
+      "signatures": [
+        {
+          "contractName": "TheNextBlock",
+          "methodName": "withdrawMyFunds",
+          "argTypes": []
+        }
+      ],
+      "exp": "msg.sender.transfer(balance);",
+      "status": "unproven"
+    },
+    {
+      "no": "10",
+      "kind": "ETH_LEAK",
+      "line": 194,
+      "signatures": [
+        {
+          "contractName": "TheNextBlock",
+          "methodName": "withdrawOwnersFunds",
+          "argTypes": []
+        }
+      ],
+      "exp": "owner.addr.transfer(balance);",
+      "status": "unproven"
+    }
+  ]
+}

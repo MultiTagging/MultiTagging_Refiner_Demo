@@ -1,0 +1,95 @@
+{
+  "fileName": "Benchmarks/Study_SamplesSet/61fd7260afd95f7dec23b13d54403c57.sol",
+  "baseName": "61fd7260afd95f7dec23b13d54403c57.sol",
+  "iter": 42,
+  "time": "302.718845",
+  "errMsg": null,
+  "result": [
+    {
+      "no": "1",
+      "kind": "IO",
+      "line": 36,
+      "signatures": [
+        {
+          "contractName": "GHHT",
+          "methodName": "transfer",
+          "argTypes": [ "address", "uint256" ]
+        },
+        {
+          "contractName": "GHHT",
+          "methodName": "transferFrom",
+          "argTypes": [ "address", "address", "uint256" ]
+        }
+      ],
+      "exp": "(_a - _b)",
+      "status": "proven"
+    },
+    {
+      "no": "2",
+      "kind": "IO",
+      "line": 43,
+      "signatures": [
+        {
+          "contractName": "GHHT",
+          "methodName": "transfer",
+          "argTypes": [ "address", "uint256" ]
+        },
+        {
+          "contractName": "GHHT",
+          "methodName": "transferFrom",
+          "argTypes": [ "address", "address", "uint256" ]
+        }
+      ],
+      "exp": "(_a + _b)",
+      "status": "unproven"
+    },
+    {
+      "no": "3",
+      "kind": "IO",
+      "line": 62,
+      "signatures": [
+        {
+          "contractName": "GHHT",
+          "methodName": "GHHT",
+          "argTypes": [ "address" ]
+        }
+      ],
+      "exp": "(10 ** decimals)",
+      "status": "proven"
+    },
+    {
+      "no": "4",
+      "kind": "IO",
+      "line": 62,
+      "signatures": [
+        {
+          "contractName": "GHHT",
+          "methodName": "GHHT",
+          "argTypes": [ "address" ]
+        }
+      ],
+      "exp": "(100000000000 * (10 ** decimals))",
+      "status": "proven"
+    },
+    {
+      "no": "5",
+      "kind": "KA",
+      "line": 148,
+      "signatures": [
+        { "contractName": "GHHT", "methodName": "kill", "argTypes": [] }
+      ],
+      "exp": "selfdestruct(owner);",
+      "status": "proven"
+    },
+    {
+      "no": "6",
+      "kind": "ETH_LEAK",
+      "line": 148,
+      "signatures": [
+        { "contractName": "GHHT", "methodName": "kill", "argTypes": [] }
+      ],
+      "exp": "selfdestruct(owner);",
+      "status": "proven"
+    }
+  ]
+}

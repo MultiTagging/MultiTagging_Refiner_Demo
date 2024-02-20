@@ -1,0 +1,430 @@
+{
+  "fileName": "Benchmarks/Study_SamplesSet/93fcee47eb3d0ae4fc712150d049042e.sol",
+  "baseName": "93fcee47eb3d0ae4fc712150d049042e.sol",
+  "iter": 1319,
+  "time": "300.12906",
+  "errMsg": null,
+  "result": [
+    {
+      "no": "1",
+      "kind": "IO",
+      "line": 85,
+      "signatures": [
+        {
+          "contractName": "TokenEscrow",
+          "methodName": "transfer",
+          "argTypes": [ "address", "uint256" ]
+        }
+      ],
+      "exp": "(balanceFor[_to] + _value)",
+      "status": "unproven"
+    },
+    {
+      "no": "2",
+      "kind": "IO",
+      "line": 89,
+      "signatures": [
+        {
+          "contractName": "TokenEscrow",
+          "methodName": "transfer",
+          "argTypes": [ "address", "uint256" ]
+        }
+      ],
+      "exp": "(balanceFor[msg.sender] - _value)",
+      "status": "proven"
+    },
+    {
+      "no": "3",
+      "kind": "IO",
+      "line": 90,
+      "signatures": [
+        {
+          "contractName": "TokenEscrow",
+          "methodName": "transfer",
+          "argTypes": [ "address", "uint256" ]
+        }
+      ],
+      "exp": "(balanceFor[_to] + _value)",
+      "status": "proven"
+    },
+    {
+      "no": "4",
+      "kind": "IO",
+      "line": 98,
+      "signatures": [
+        {
+          "contractName": "TokenEscrow",
+          "methodName": "transferByOwner",
+          "argTypes": [ "uint256" ]
+        }
+      ],
+      "exp": "(discountIndex + 1)",
+      "status": "proven"
+    },
+    {
+      "no": "5",
+      "kind": "IO",
+      "line": 101,
+      "signatures": [
+        {
+          "contractName": "TokenEscrow",
+          "methodName": "transferByOwner",
+          "argTypes": [ "uint256" ]
+        }
+      ],
+      "exp": "(tokenSupply.totalSupply + _value)",
+      "status": "unproven"
+    },
+    {
+      "no": "6",
+      "kind": "IO",
+      "line": 102,
+      "signatures": [
+        {
+          "contractName": "TokenEscrow",
+          "methodName": "transferByOwner",
+          "argTypes": [ "uint256" ]
+        }
+      ],
+      "exp": "(_value - (tokenSupply.limit - tokenSupply.totalSupply))",
+      "status": "proven"
+    },
+    {
+      "no": "7",
+      "kind": "IO",
+      "line": 102,
+      "signatures": [
+        {
+          "contractName": "TokenEscrow",
+          "methodName": "transferByOwner",
+          "argTypes": [ "uint256" ]
+        }
+      ],
+      "exp": "(tokenSupply.limit - tokenSupply.totalSupply)",
+      "status": "proven"
+    },
+    {
+      "no": "8",
+      "kind": "IO",
+      "line": 105,
+      "signatures": [
+        {
+          "contractName": "TokenEscrow",
+          "methodName": "transferByOwner",
+          "argTypes": [ "uint256" ]
+        }
+      ],
+      "exp": "(tokenSupply.totalSupply + _value)",
+      "status": "unproven"
+    },
+    {
+      "no": "9",
+      "kind": "IO",
+      "line": 130,
+      "signatures": [
+        {
+          "contractName": "TokenEscrow",
+          "methodName": "convert",
+          "argTypes": []
+        }
+      ],
+      "exp": "(balanceFor[owner] * exchangeRate)",
+      "status": "unproven"
+    },
+    {
+      "no": "10",
+      "kind": "IO",
+      "line": 172,
+      "signatures": [
+        {
+          "contractName": "TokenEscrow",
+          "methodName": "@fallback",
+          "argTypes": []
+        }
+      ],
+      "exp": "(discountIndex + 1)",
+      "status": "proven"
+    },
+    {
+      "no": "11",
+      "kind": "IO",
+      "line": 184,
+      "signatures": [
+        {
+          "contractName": "TokenEscrow",
+          "methodName": "@fallback",
+          "argTypes": []
+        }
+      ],
+      "exp": "(tokenSupply.totalSupply + tokensPossibleToBuy)",
+      "status": "unproven"
+    },
+    {
+      "no": "12",
+      "kind": "IO",
+      "line": 185,
+      "signatures": [
+        {
+          "contractName": "TokenEscrow",
+          "methodName": "@fallback",
+          "argTypes": []
+        }
+      ],
+      "exp": "(tokenSupply.limit - tokenSupply.totalSupply)",
+      "status": "proven"
+    },
+    {
+      "no": "13",
+      "kind": "IO",
+      "line": 188,
+      "signatures": [
+        {
+          "contractName": "TokenEscrow",
+          "methodName": "@fallback",
+          "argTypes": []
+        }
+      ],
+      "exp": "(tokenSupply.totalSupply + tokensPossibleToBuy)",
+      "status": "unproven"
+    },
+    {
+      "no": "14",
+      "kind": "IO",
+      "line": 189,
+      "signatures": [
+        {
+          "contractName": "TokenEscrow",
+          "methodName": "@fallback",
+          "argTypes": []
+        }
+      ],
+      "exp": "(tokenAmount + tokensPossibleToBuy)",
+      "status": "unproven"
+    },
+    {
+      "no": "15",
+      "kind": "IO",
+      "line": 191,
+      "signatures": [
+        {
+          "contractName": "TokenEscrow",
+          "methodName": "@fallback",
+          "argTypes": []
+        }
+      ],
+      "exp": "(tokensPossibleToBuy * tokenSupply.tokenPriceInWei)",
+      "status": "unproven"
+    },
+    {
+      "no": "16",
+      "kind": "IO",
+      "line": 193,
+      "signatures": [
+        {
+          "contractName": "TokenEscrow",
+          "methodName": "@fallback",
+          "argTypes": []
+        }
+      ],
+      "exp": "(amountToBePaid + delta)",
+      "status": "unproven"
+    },
+    {
+      "no": "17",
+      "kind": "IO",
+      "line": 194,
+      "signatures": [
+        {
+          "contractName": "TokenEscrow",
+          "methodName": "@fallback",
+          "argTypes": []
+        }
+      ],
+      "exp": "(amountTransfered - delta)",
+      "status": "unproven"
+    },
+    {
+      "no": "18",
+      "kind": "IO",
+      "line": 213,
+      "signatures": [
+        {
+          "contractName": "TokenEscrow",
+          "methodName": "@fallback",
+          "argTypes": []
+        }
+      ],
+      "exp": "(msg.value - amountToBePaid)",
+      "status": "unproven"
+    },
+    {
+      "no": "19",
+      "kind": "IO",
+      "line": 233,
+      "signatures": [
+        {
+          "contractName": "TokenEscrow",
+          "methodName": "@fallback",
+          "argTypes": []
+        },
+        {
+          "contractName": "TokenEscrow",
+          "methodName": "transferFromOwner",
+          "argTypes": [ "address", "uint256" ]
+        }
+      ],
+      "exp": "(balanceFor[_to] + _value)",
+      "status": "unproven"
+    },
+    {
+      "no": "20",
+      "kind": "IO",
+      "line": 234,
+      "signatures": [
+        {
+          "contractName": "TokenEscrow",
+          "methodName": "@fallback",
+          "argTypes": []
+        },
+        {
+          "contractName": "TokenEscrow",
+          "methodName": "transferFromOwner",
+          "argTypes": [ "address", "uint256" ]
+        }
+      ],
+      "exp": "(balanceFor[owner] - _value)",
+      "status": "proven"
+    },
+    {
+      "no": "21",
+      "kind": "IO",
+      "line": 235,
+      "signatures": [
+        {
+          "contractName": "TokenEscrow",
+          "methodName": "@fallback",
+          "argTypes": []
+        },
+        {
+          "contractName": "TokenEscrow",
+          "methodName": "transferFromOwner",
+          "argTypes": [ "address", "uint256" ]
+        }
+      ],
+      "exp": "(balanceFor[_to] + _value)",
+      "status": "proven"
+    },
+    {
+      "no": "22",
+      "kind": "DZ",
+      "line": 179,
+      "signatures": [
+        {
+          "contractName": "TokenEscrow",
+          "methodName": "@fallback",
+          "argTypes": []
+        }
+      ],
+      "exp": "(amountTransfered / tokenSupply.tokenPriceInWei)",
+      "status": "unproven"
+    },
+    {
+      "no": "23",
+      "kind": "KA",
+      "line": 221,
+      "signatures": [
+        {
+          "contractName": "TokenEscrow",
+          "methodName": "kill",
+          "argTypes": []
+        }
+      ],
+      "exp": "selfdestruct(msg.sender);",
+      "status": "proven"
+    },
+    {
+      "no": "24",
+      "kind": "ETH_LEAK",
+      "line": 161,
+      "signatures": [
+        {
+          "contractName": "TokenEscrow",
+          "methodName": "@fallback",
+          "argTypes": []
+        }
+      ],
+      "exp": "msg.sender.transfer(msg.value);",
+      "status": "proven"
+    },
+    {
+      "no": "25",
+      "kind": "ETH_LEAK",
+      "line": 167,
+      "signatures": [
+        {
+          "contractName": "TokenEscrow",
+          "methodName": "@fallback",
+          "argTypes": []
+        }
+      ],
+      "exp": "msg.sender.transfer(msg.value);",
+      "status": "proven"
+    },
+    {
+      "no": "26",
+      "kind": "ETH_LEAK",
+      "line": 202,
+      "signatures": [
+        {
+          "contractName": "TokenEscrow",
+          "methodName": "@fallback",
+          "argTypes": []
+        }
+      ],
+      "exp": "msg.sender.transfer(msg.value);",
+      "status": "unproven"
+    },
+    {
+      "no": "27",
+      "kind": "ETH_LEAK",
+      "line": 210,
+      "signatures": [
+        {
+          "contractName": "TokenEscrow",
+          "methodName": "@fallback",
+          "argTypes": []
+        }
+      ],
+      "exp": "owner.transfer(amountToBePaid);",
+      "status": "proven"
+    },
+    {
+      "no": "28",
+      "kind": "ETH_LEAK",
+      "line": 213,
+      "signatures": [
+        {
+          "contractName": "TokenEscrow",
+          "methodName": "@fallback",
+          "argTypes": []
+        }
+      ],
+      "exp": "msg.sender.transfer((msg.value - amountToBePaid));",
+      "status": "unproven"
+    },
+    {
+      "no": "29",
+      "kind": "ETH_LEAK",
+      "line": 221,
+      "signatures": [
+        {
+          "contractName": "TokenEscrow",
+          "methodName": "kill",
+          "argTypes": []
+        }
+      ],
+      "exp": "selfdestruct(msg.sender);",
+      "status": "proven"
+    }
+  ]
+}

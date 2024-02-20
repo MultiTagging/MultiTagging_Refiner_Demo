@@ -1,0 +1,187 @@
+{
+  "fileName": "Benchmarks/Study_SamplesSet/8894e1396db648cf0b38692c8cff87f7.sol",
+  "baseName": "8894e1396db648cf0b38692c8cff87f7.sol",
+  "iter": 122,
+  "time": "341.948675",
+  "errMsg": null,
+  "result": [
+    {
+      "no": "1",
+      "kind": "IO",
+      "line": 5,
+      "signatures": [
+        { "contractName": "PT", "methodName": "@fallback", "argTypes": [] },
+        { "contractName": "PT", "methodName": "getTokens", "argTypes": [] }
+      ],
+      "exp": "(a * b)",
+      "status": "unproven"
+    },
+    {
+      "no": "2",
+      "kind": "IO",
+      "line": 17,
+      "signatures": [
+        {
+          "contractName": "PT",
+          "methodName": "PT",
+          "argTypes": [ "uint256", "string", "string" ]
+        },
+        {
+          "contractName": "PT",
+          "methodName": "burn",
+          "argTypes": [ "uint256" ]
+        },
+        {
+          "contractName": "PT",
+          "methodName": "distr",
+          "argTypes": [ "address", "uint256" ]
+        },
+        { "contractName": "PT", "methodName": "getTokens", "argTypes": [] },
+        {
+          "contractName": "PT",
+          "methodName": "transfer",
+          "argTypes": [ "address", "uint256" ]
+        },
+        {
+          "contractName": "PT",
+          "methodName": "transferFrom",
+          "argTypes": [ "address", "address", "uint256" ]
+        }
+      ],
+      "exp": "(a - b)",
+      "status": "proven"
+    },
+    {
+      "no": "3",
+      "kind": "IO",
+      "line": 21,
+      "signatures": [
+        {
+          "contractName": "PT",
+          "methodName": "distr",
+          "argTypes": [ "address", "uint256" ]
+        },
+        { "contractName": "PT", "methodName": "getTokens", "argTypes": [] },
+        {
+          "contractName": "PT",
+          "methodName": "transfer",
+          "argTypes": [ "address", "uint256" ]
+        },
+        {
+          "contractName": "PT",
+          "methodName": "transferFrom",
+          "argTypes": [ "address", "address", "uint256" ]
+        }
+      ],
+      "exp": "(a + b)",
+      "status": "unproven"
+    },
+    {
+      "no": "4",
+      "kind": "IO",
+      "line": 106,
+      "signatures": [
+        {
+          "contractName": "PT",
+          "methodName": "PT",
+          "argTypes": [ "uint256", "string", "string" ]
+        }
+      ],
+      "exp": "(10 ** uint256(decimals))",
+      "status": "proven"
+    },
+    {
+      "no": "5",
+      "kind": "IO",
+      "line": 106,
+      "signatures": [
+        {
+          "contractName": "PT",
+          "methodName": "PT",
+          "argTypes": [ "uint256", "string", "string" ]
+        }
+      ],
+      "exp": "(initialSupply * (10 ** uint256(decimals)))",
+      "status": "unproven"
+    },
+    {
+      "no": "6",
+      "kind": "IO",
+      "line": 170,
+      "signatures": [
+        {
+          "contractName": "PT",
+          "methodName": "transfer",
+          "argTypes": [ "address", "uint256" ]
+        },
+        {
+          "contractName": "PT",
+          "methodName": "transferFrom",
+          "argTypes": [ "address", "address", "uint256" ]
+        }
+      ],
+      "exp": "(size + 4)",
+      "status": "proven"
+    },
+    {
+      "no": "7",
+      "kind": "IO",
+      "line": 174,
+      "signatures": [
+        {
+          "contractName": "PT",
+          "methodName": "transfer",
+          "argTypes": [ "address", "uint256" ]
+        }
+      ],
+      "exp": "(2 * 32)",
+      "status": "proven"
+    },
+    {
+      "no": "8",
+      "kind": "IO",
+      "line": 184,
+      "signatures": [
+        {
+          "contractName": "PT",
+          "methodName": "transferFrom",
+          "argTypes": [ "address", "address", "uint256" ]
+        }
+      ],
+      "exp": "(3 * 32)",
+      "status": "proven"
+    },
+    {
+      "no": "9",
+      "kind": "DZ",
+      "line": 6,
+      "signatures": [
+        { "contractName": "PT", "methodName": "@fallback", "argTypes": [] },
+        { "contractName": "PT", "methodName": "getTokens", "argTypes": [] }
+      ],
+      "exp": "(c / a)",
+      "status": "unproven"
+    },
+    {
+      "no": "10",
+      "kind": "DZ",
+      "line": 11,
+      "signatures": [
+        { "contractName": "PT", "methodName": "@fallback", "argTypes": [] },
+        { "contractName": "PT", "methodName": "getTokens", "argTypes": [] }
+      ],
+      "exp": "(a / b)",
+      "status": "proven"
+    },
+    {
+      "no": "11",
+      "kind": "ETH_LEAK",
+      "line": 215,
+      "signatures": [
+        { "contractName": "PT", "methodName": "withdraw", "argTypes": [] }
+      ],
+      "exp": "owner.transfer(etherBalance);",
+      "status": "proven"
+    }
+  ]
+}

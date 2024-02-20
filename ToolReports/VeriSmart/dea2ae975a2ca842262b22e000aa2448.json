@@ -1,0 +1,79 @@
+{
+  "fileName": "Benchmarks/Study_SamplesSet/dea2ae975a2ca842262b22e000aa2448.sol",
+  "baseName": "dea2ae975a2ca842262b22e000aa2448.sol",
+  "iter": 4,
+  "time": "0.978812",
+  "errMsg": null,
+  "result": [
+    {
+      "no": "1",
+      "kind": "IO",
+      "line": 26,
+      "signatures": [
+        {
+          "contractName": "HashBet",
+          "methodName": "resolveBet",
+          "argTypes": []
+        }
+      ],
+      "exp": "(block.number - bet.height)",
+      "status": "unproven"
+    },
+    {
+      "no": "2",
+      "kind": "IO",
+      "line": 29,
+      "signatures": [
+        {
+          "contractName": "HashBet",
+          "methodName": "resolveBet",
+          "argTypes": []
+        }
+      ],
+      "exp": "(bet.height + 3)",
+      "status": "unproven"
+    },
+    {
+      "no": "3",
+      "kind": "DZ",
+      "line": 32,
+      "signatures": [
+        {
+          "contractName": "HashBet",
+          "methodName": "resolveBet",
+          "argTypes": []
+        }
+      ],
+      "exp": "(hashVal / FACTOR)",
+      "status": "proven"
+    },
+    {
+      "no": "4",
+      "kind": "DZ",
+      "line": 32,
+      "signatures": [
+        {
+          "contractName": "HashBet",
+          "methodName": "resolveBet",
+          "argTypes": []
+        }
+      ],
+      "exp": "(uint16((hashVal / FACTOR)) % 1000)",
+      "status": "proven"
+    },
+    {
+      "no": "5",
+      "kind": "ETH_LEAK",
+      "line": 35,
+      "signatures": [
+        {
+          "contractName": "HashBet",
+          "methodName": "resolveBet",
+          "argTypes": []
+        }
+      ],
+      "exp": "msg.sender.transfer(address(this).balance);",
+      "status": "unproven"
+    }
+  ]
+}

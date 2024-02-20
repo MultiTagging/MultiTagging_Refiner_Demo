@@ -1,0 +1,51 @@
+{
+  "fileName": "Benchmarks/Study_SamplesSet/9a3c17d1fca688d370f89a3b0db3a272.sol",
+  "baseName": "9a3c17d1fca688d370f89a3b0db3a272.sol",
+  "iter": 2,
+  "time": "0.047073",
+  "errMsg": null,
+  "result": [
+    {
+      "no": "1",
+      "kind": "KA",
+      "line": 22,
+      "signatures": [
+        {
+          "contractName": "gray_SuicideEasily",
+          "methodName": "withdraw",
+          "argTypes": []
+        }
+      ],
+      "exp": "selfdestruct(_Beneficiary);",
+      "status": "proven"
+    },
+    {
+      "no": "2",
+      "kind": "ETH_LEAK",
+      "line": 17,
+      "signatures": [
+        {
+          "contractName": "gray_SuicideEasily",
+          "methodName": "withdraw",
+          "argTypes": []
+        }
+      ],
+      "exp": "msg.sender.transfer(address(this).balance);",
+      "status": "proven"
+    },
+    {
+      "no": "3",
+      "kind": "ETH_LEAK",
+      "line": 22,
+      "signatures": [
+        {
+          "contractName": "gray_SuicideEasily",
+          "methodName": "withdraw",
+          "argTypes": []
+        }
+      ],
+      "exp": "selfdestruct(_Beneficiary);",
+      "status": "proven"
+    }
+  ]
+}

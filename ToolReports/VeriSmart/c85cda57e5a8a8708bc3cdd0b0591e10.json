@@ -1,0 +1,205 @@
+{
+  "fileName": "Benchmarks/Study_SamplesSet/c85cda57e5a8a8708bc3cdd0b0591e10.sol",
+  "baseName": "c85cda57e5a8a8708bc3cdd0b0591e10.sol",
+  "iter": 138,
+  "time": "300.800011",
+  "errMsg": null,
+  "result": [
+    {
+      "no": "1",
+      "kind": "IO",
+      "line": 48,
+      "signatures": [
+        {
+          "contractName": "RaiseFundsForACause",
+          "methodName": "donate",
+          "argTypes": []
+        }
+      ],
+      "exp": "(timeStarted + expirationInSeconds)",
+      "status": "unproven"
+    },
+    {
+      "no": "2",
+      "kind": "IO",
+      "line": 53,
+      "signatures": [
+        {
+          "contractName": "RaiseFundsForACause",
+          "methodName": "donate",
+          "argTypes": []
+        }
+      ],
+      "exp": "(donationData[msg.sender] + msg.value)",
+      "status": "unproven"
+    },
+    {
+      "no": "3",
+      "kind": "IO",
+      "line": 54,
+      "signatures": [
+        {
+          "contractName": "RaiseFundsForACause",
+          "methodName": "donate",
+          "argTypes": []
+        }
+      ],
+      "exp": "(totalAmountRaised + msg.value)",
+      "status": "unproven"
+    },
+    {
+      "no": "4",
+      "kind": "IO",
+      "line": 55,
+      "signatures": [
+        {
+          "contractName": "RaiseFundsForACause",
+          "methodName": "donate",
+          "argTypes": []
+        }
+      ],
+      "exp": "(numPayments + 1)",
+      "status": "proven"
+    },
+    {
+      "no": "5",
+      "kind": "IO",
+      "line": 57,
+      "signatures": [
+        {
+          "contractName": "RaiseFundsForACause",
+          "methodName": "donate",
+          "argTypes": []
+        }
+      ],
+      "exp": "(donationData[msg.sender] + msg.value)",
+      "status": "proven"
+    },
+    {
+      "no": "6",
+      "kind": "IO",
+      "line": 58,
+      "signatures": [
+        {
+          "contractName": "RaiseFundsForACause",
+          "methodName": "donate",
+          "argTypes": []
+        }
+      ],
+      "exp": "(totalAmountRaised + msg.value)",
+      "status": "proven"
+    },
+    {
+      "no": "7",
+      "kind": "IO",
+      "line": 59,
+      "signatures": [
+        {
+          "contractName": "RaiseFundsForACause",
+          "methodName": "donate",
+          "argTypes": []
+        }
+      ],
+      "exp": "(numPayments + 1)",
+      "status": "proven"
+    },
+    {
+      "no": "8",
+      "kind": "IO",
+      "line": 79,
+      "signatures": [
+        {
+          "contractName": "RaiseFundsForACause",
+          "methodName": "receiverWithdraw",
+          "argTypes": []
+        }
+      ],
+      "exp": "(timeStarted + expirationInSeconds)",
+      "status": "unproven"
+    },
+    {
+      "no": "9",
+      "kind": "IO",
+      "line": 92,
+      "signatures": [
+        {
+          "contractName": "RaiseFundsForACause",
+          "methodName": "withdraw",
+          "argTypes": []
+        }
+      ],
+      "exp": "(timeStarted + expirationInSeconds)",
+      "status": "unproven"
+    },
+    {
+      "no": "10",
+      "kind": "IO",
+      "line": 107,
+      "signatures": [
+        {
+          "contractName": "RaiseFundsForACause",
+          "methodName": "currentTotalExcess",
+          "argTypes": []
+        }
+      ],
+      "exp": "(totalAmountRaised - minimumAmountRequired)",
+      "status": "proven"
+    },
+    {
+      "no": "11",
+      "kind": "IO",
+      "line": 118,
+      "signatures": [
+        {
+          "contractName": "RaiseFundsForACause",
+          "methodName": "expirationTimestamp",
+          "argTypes": []
+        }
+      ],
+      "exp": "(timeStarted + expirationInSeconds)",
+      "status": "unproven"
+    },
+    {
+      "no": "12",
+      "kind": "IO",
+      "line": 119,
+      "signatures": [
+        {
+          "contractName": "RaiseFundsForACause",
+          "methodName": "expirationTimestamp",
+          "argTypes": []
+        }
+      ],
+      "exp": "(timeStarted + expirationInSeconds)",
+      "status": "proven"
+    },
+    {
+      "no": "13",
+      "kind": "ETH_LEAK",
+      "line": 83,
+      "signatures": [
+        {
+          "contractName": "RaiseFundsForACause",
+          "methodName": "receiverWithdraw",
+          "argTypes": []
+        }
+      ],
+      "exp": "receiver.transfer(this.balance);",
+      "status": "proven"
+    },
+    {
+      "no": "14",
+      "kind": "ETH_LEAK",
+      "line": 97,
+      "signatures": [
+        {
+          "contractName": "RaiseFundsForACause",
+          "methodName": "withdraw",
+          "argTypes": []
+        }
+      ],
+      "exp": "msg.sender.transfer(value);",
+      "status": "proven"
+    }
+  ]
+}

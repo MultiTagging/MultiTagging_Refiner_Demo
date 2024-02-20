@@ -1,0 +1,1208 @@
+{
+  "success": true,
+  "error": null,
+  "results": {
+    "detectors": [
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "GetPie",
+            "source_mapping": {
+              "start": 151,
+              "length": 2504,
+              "filename_relative": "Benchmarks/Study_SamplesSet/cea02d371a65dbadaa9aee297d8b2476.sol",
+              "filename_absolute": "/home/shikah/Documents/PhD/VulDet/Benchmarks/Study_SamplesSet/cea02d371a65dbadaa9aee297d8b2476.sol",
+              "filename_short": "Benchmarks/Study_SamplesSet/cea02d371a65dbadaa9aee297d8b2476.sol",
+              "is_dependency": false,
+              "lines": [
+                14,
+                15,
+                16,
+                17,
+                18,
+                19,
+                20,
+                21,
+                22
+              ],
+              "starting_column": 5,
+              "ending_column": 6
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "Pie",
+                "source_mapping": {
+                  "start": 26,
+                  "length": 7347,
+                  "filename_relative": "Benchmarks/Study_SamplesSet/cea02d371a65dbadaa9aee297d8b2476.sol",
+                  "filename_absolute": "/home/shikah/Documents/PhD/VulDet/Benchmarks/Study_SamplesSet/cea02d371a65dbadaa9aee297d8b2476.sol",
+                  "filename_short": "Benchmarks/Study_SamplesSet/cea02d371a65dbadaa9aee297d8b2476.sol",
+                  "is_dependency": false,
+                  "lines": [
+                    3,
+                    4,
+                    5,
+                    6,
+                    7,
+                    8,
+                    9,
+                    10,
+                    11,
+                    12,
+                    13,
+                    14,
+                    15,
+                    16,
+                    17,
+                    18,
+                    19,
+                    20,
+                    21,
+                    22,
+                    23,
+                    24,
+                    25,
+                    26,
+                    27,
+                    28,
+                    29,
+                    30,
+                    31,
+                    32,
+                    33,
+                    34,
+                    35,
+                    36,
+                    37,
+                    38,
+                    39,
+                    40
+                  ],
+                  "starting_column": 1,
+                  "ending_column": 0
+                }
+              },
+              "signature": "GetPie()"
+            }
+          },
+          {
+            "type": "node",
+            "name": "msg.sender.transfer(this.balance)",
+            "source_mapping": {
+              "start": 2493,
+              "length": 33,
+              "filename_relative": "Benchmarks/Study_SamplesSet/cea02d371a65dbadaa9aee297d8b2476.sol",
+              "filename_absolute": "/home/shikah/Documents/PhD/VulDet/Benchmarks/Study_SamplesSet/cea02d371a65dbadaa9aee297d8b2476.sol",
+              "filename_short": "Benchmarks/Study_SamplesSet/cea02d371a65dbadaa9aee297d8b2476.sol",
+              "is_dependency": false,
+              "lines": [
+                20
+              ],
+              "starting_column": 13,
+              "ending_column": 46
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "GetPie",
+                "source_mapping": {
+                  "start": 151,
+                  "length": 2504,
+                  "filename_relative": "Benchmarks/Study_SamplesSet/cea02d371a65dbadaa9aee297d8b2476.sol",
+                  "filename_absolute": "/home/shikah/Documents/PhD/VulDet/Benchmarks/Study_SamplesSet/cea02d371a65dbadaa9aee297d8b2476.sol",
+                  "filename_short": "Benchmarks/Study_SamplesSet/cea02d371a65dbadaa9aee297d8b2476.sol",
+                  "is_dependency": false,
+                  "lines": [
+                    14,
+                    15,
+                    16,
+                    17,
+                    18,
+                    19,
+                    20,
+                    21,
+                    22
+                  ],
+                  "starting_column": 5,
+                  "ending_column": 6
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "Pie",
+                    "source_mapping": {
+                      "start": 26,
+                      "length": 7347,
+                      "filename_relative": "Benchmarks/Study_SamplesSet/cea02d371a65dbadaa9aee297d8b2476.sol",
+                      "filename_absolute": "/home/shikah/Documents/PhD/VulDet/Benchmarks/Study_SamplesSet/cea02d371a65dbadaa9aee297d8b2476.sol",
+                      "filename_short": "Benchmarks/Study_SamplesSet/cea02d371a65dbadaa9aee297d8b2476.sol",
+                      "is_dependency": false,
+                      "lines": [
+                        3,
+                        4,
+                        5,
+                        6,
+                        7,
+                        8,
+                        9,
+                        10,
+                        11,
+                        12,
+                        13,
+                        14,
+                        15,
+                        16,
+                        17,
+                        18,
+                        19,
+                        20,
+                        21,
+                        22,
+                        23,
+                        24,
+                        25,
+                        26,
+                        27,
+                        28,
+                        29,
+                        30,
+                        31,
+                        32,
+                        33,
+                        34,
+                        35,
+                        36,
+                        37,
+                        38,
+                        39,
+                        40
+                      ],
+                      "starting_column": 1,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "GetPie()"
+                }
+              }
+            }
+          }
+        ],
+        "description": "Pie.GetPie() (Benchmarks/Study_SamplesSet/cea02d371a65dbadaa9aee297d8b2476.sol#14-22) sends eth to arbitrary user\n\tDangerous calls:\n\t- msg.sender.transfer(this.balance) (Benchmarks/Study_SamplesSet/cea02d371a65dbadaa9aee297d8b2476.sol#20)\n",
+        "markdown": "[Pie.GetPie()](Benchmarks/Study_SamplesSet/cea02d371a65dbadaa9aee297d8b2476.sol#L14-L22) sends eth to arbitrary user\n\tDangerous calls:\n\t- [msg.sender.transfer(this.balance)](Benchmarks/Study_SamplesSet/cea02d371a65dbadaa9aee297d8b2476.sol#L20)\n",
+        "first_markdown_element": "Benchmarks/Study_SamplesSet/cea02d371a65dbadaa9aee297d8b2476.sol#L14-L22",
+        "id": "c514698bd21c4d95d5f0218745efc1f2dd654a77d4913f8b0f32437dcb00e1c0",
+        "check": "arbitrary-send-eth",
+        "impact": "High",
+        "confidence": "Medium"
+      },
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "Command",
+            "source_mapping": {
+              "start": 7217,
+              "length": 154,
+              "filename_relative": "Benchmarks/Study_SamplesSet/cea02d371a65dbadaa9aee297d8b2476.sol",
+              "filename_absolute": "/home/shikah/Documents/PhD/VulDet/Benchmarks/Study_SamplesSet/cea02d371a65dbadaa9aee297d8b2476.sol",
+              "filename_short": "Benchmarks/Study_SamplesSet/cea02d371a65dbadaa9aee297d8b2476.sol",
+              "is_dependency": false,
+              "lines": [
+                32,
+                33,
+                34,
+                35,
+                36,
+                37,
+                38
+              ],
+              "starting_column": 5,
+              "ending_column": 6
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "Pie",
+                "source_mapping": {
+                  "start": 26,
+                  "length": 7347,
+                  "filename_relative": "Benchmarks/Study_SamplesSet/cea02d371a65dbadaa9aee297d8b2476.sol",
+                  "filename_absolute": "/home/shikah/Documents/PhD/VulDet/Benchmarks/Study_SamplesSet/cea02d371a65dbadaa9aee297d8b2476.sol",
+                  "filename_short": "Benchmarks/Study_SamplesSet/cea02d371a65dbadaa9aee297d8b2476.sol",
+                  "is_dependency": false,
+                  "lines": [
+                    3,
+                    4,
+                    5,
+                    6,
+                    7,
+                    8,
+                    9,
+                    10,
+                    11,
+                    12,
+                    13,
+                    14,
+                    15,
+                    16,
+                    17,
+                    18,
+                    19,
+                    20,
+                    21,
+                    22,
+                    23,
+                    24,
+                    25,
+                    26,
+                    27,
+                    28,
+                    29,
+                    30,
+                    31,
+                    32,
+                    33,
+                    34,
+                    35,
+                    36,
+                    37,
+                    38,
+                    39,
+                    40
+                  ],
+                  "starting_column": 1,
+                  "ending_column": 0
+                }
+              },
+              "signature": "Command(address,bytes)"
+            }
+          },
+          {
+            "type": "node",
+            "name": "adr.call.value(msg.value)(data)",
+            "source_mapping": {
+              "start": 7333,
+              "length": 31,
+              "filename_relative": "Benchmarks/Study_SamplesSet/cea02d371a65dbadaa9aee297d8b2476.sol",
+              "filename_absolute": "/home/shikah/Documents/PhD/VulDet/Benchmarks/Study_SamplesSet/cea02d371a65dbadaa9aee297d8b2476.sol",
+              "filename_short": "Benchmarks/Study_SamplesSet/cea02d371a65dbadaa9aee297d8b2476.sol",
+              "is_dependency": false,
+              "lines": [
+                37
+              ],
+              "starting_column": 9,
+              "ending_column": 40
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "Command",
+                "source_mapping": {
+                  "start": 7217,
+                  "length": 154,
+                  "filename_relative": "Benchmarks/Study_SamplesSet/cea02d371a65dbadaa9aee297d8b2476.sol",
+                  "filename_absolute": "/home/shikah/Documents/PhD/VulDet/Benchmarks/Study_SamplesSet/cea02d371a65dbadaa9aee297d8b2476.sol",
+                  "filename_short": "Benchmarks/Study_SamplesSet/cea02d371a65dbadaa9aee297d8b2476.sol",
+                  "is_dependency": false,
+                  "lines": [
+                    32,
+                    33,
+                    34,
+                    35,
+                    36,
+                    37,
+                    38
+                  ],
+                  "starting_column": 5,
+                  "ending_column": 6
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "Pie",
+                    "source_mapping": {
+                      "start": 26,
+                      "length": 7347,
+                      "filename_relative": "Benchmarks/Study_SamplesSet/cea02d371a65dbadaa9aee297d8b2476.sol",
+                      "filename_absolute": "/home/shikah/Documents/PhD/VulDet/Benchmarks/Study_SamplesSet/cea02d371a65dbadaa9aee297d8b2476.sol",
+                      "filename_short": "Benchmarks/Study_SamplesSet/cea02d371a65dbadaa9aee297d8b2476.sol",
+                      "is_dependency": false,
+                      "lines": [
+                        3,
+                        4,
+                        5,
+                        6,
+                        7,
+                        8,
+                        9,
+                        10,
+                        11,
+                        12,
+                        13,
+                        14,
+                        15,
+                        16,
+                        17,
+                        18,
+                        19,
+                        20,
+                        21,
+                        22,
+                        23,
+                        24,
+                        25,
+                        26,
+                        27,
+                        28,
+                        29,
+                        30,
+                        31,
+                        32,
+                        33,
+                        34,
+                        35,
+                        36,
+                        37,
+                        38,
+                        39,
+                        40
+                      ],
+                      "starting_column": 1,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "Command(address,bytes)"
+                }
+              }
+            }
+          }
+        ],
+        "description": "Pie.Command(address,bytes) (Benchmarks/Study_SamplesSet/cea02d371a65dbadaa9aee297d8b2476.sol#32-38) ignores return value by adr.call.value(msg.value)(data) (Benchmarks/Study_SamplesSet/cea02d371a65dbadaa9aee297d8b2476.sol#37)\n",
+        "markdown": "[Pie.Command(address,bytes)](Benchmarks/Study_SamplesSet/cea02d371a65dbadaa9aee297d8b2476.sol#L32-L38) ignores return value by [adr.call.value(msg.value)(data)](Benchmarks/Study_SamplesSet/cea02d371a65dbadaa9aee297d8b2476.sol#L37)\n",
+        "first_markdown_element": "Benchmarks/Study_SamplesSet/cea02d371a65dbadaa9aee297d8b2476.sol#L32-L38",
+        "id": "d159d696acb3034974bf3279194b62867f8265e3b3f16deaaf1614df671c9c90",
+        "check": "unchecked-lowlevel",
+        "impact": "Medium",
+        "confidence": "Medium"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "adr",
+            "source_mapping": {
+              "start": 7234,
+              "length": 11,
+              "filename_relative": "Benchmarks/Study_SamplesSet/cea02d371a65dbadaa9aee297d8b2476.sol",
+              "filename_absolute": "/home/shikah/Documents/PhD/VulDet/Benchmarks/Study_SamplesSet/cea02d371a65dbadaa9aee297d8b2476.sol",
+              "filename_short": "Benchmarks/Study_SamplesSet/cea02d371a65dbadaa9aee297d8b2476.sol",
+              "is_dependency": false,
+              "lines": [
+                32
+              ],
+              "starting_column": 22,
+              "ending_column": 33
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "Command",
+                "source_mapping": {
+                  "start": 7217,
+                  "length": 154,
+                  "filename_relative": "Benchmarks/Study_SamplesSet/cea02d371a65dbadaa9aee297d8b2476.sol",
+                  "filename_absolute": "/home/shikah/Documents/PhD/VulDet/Benchmarks/Study_SamplesSet/cea02d371a65dbadaa9aee297d8b2476.sol",
+                  "filename_short": "Benchmarks/Study_SamplesSet/cea02d371a65dbadaa9aee297d8b2476.sol",
+                  "is_dependency": false,
+                  "lines": [
+                    32,
+                    33,
+                    34,
+                    35,
+                    36,
+                    37,
+                    38
+                  ],
+                  "starting_column": 5,
+                  "ending_column": 6
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "Pie",
+                    "source_mapping": {
+                      "start": 26,
+                      "length": 7347,
+                      "filename_relative": "Benchmarks/Study_SamplesSet/cea02d371a65dbadaa9aee297d8b2476.sol",
+                      "filename_absolute": "/home/shikah/Documents/PhD/VulDet/Benchmarks/Study_SamplesSet/cea02d371a65dbadaa9aee297d8b2476.sol",
+                      "filename_short": "Benchmarks/Study_SamplesSet/cea02d371a65dbadaa9aee297d8b2476.sol",
+                      "is_dependency": false,
+                      "lines": [
+                        3,
+                        4,
+                        5,
+                        6,
+                        7,
+                        8,
+                        9,
+                        10,
+                        11,
+                        12,
+                        13,
+                        14,
+                        15,
+                        16,
+                        17,
+                        18,
+                        19,
+                        20,
+                        21,
+                        22,
+                        23,
+                        24,
+                        25,
+                        26,
+                        27,
+                        28,
+                        29,
+                        30,
+                        31,
+                        32,
+                        33,
+                        34,
+                        35,
+                        36,
+                        37,
+                        38,
+                        39,
+                        40
+                      ],
+                      "starting_column": 1,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "Command(address,bytes)"
+                }
+              }
+            }
+          },
+          {
+            "type": "node",
+            "name": "adr.call.value(msg.value)(data)",
+            "source_mapping": {
+              "start": 7333,
+              "length": 31,
+              "filename_relative": "Benchmarks/Study_SamplesSet/cea02d371a65dbadaa9aee297d8b2476.sol",
+              "filename_absolute": "/home/shikah/Documents/PhD/VulDet/Benchmarks/Study_SamplesSet/cea02d371a65dbadaa9aee297d8b2476.sol",
+              "filename_short": "Benchmarks/Study_SamplesSet/cea02d371a65dbadaa9aee297d8b2476.sol",
+              "is_dependency": false,
+              "lines": [
+                37
+              ],
+              "starting_column": 9,
+              "ending_column": 40
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "Command",
+                "source_mapping": {
+                  "start": 7217,
+                  "length": 154,
+                  "filename_relative": "Benchmarks/Study_SamplesSet/cea02d371a65dbadaa9aee297d8b2476.sol",
+                  "filename_absolute": "/home/shikah/Documents/PhD/VulDet/Benchmarks/Study_SamplesSet/cea02d371a65dbadaa9aee297d8b2476.sol",
+                  "filename_short": "Benchmarks/Study_SamplesSet/cea02d371a65dbadaa9aee297d8b2476.sol",
+                  "is_dependency": false,
+                  "lines": [
+                    32,
+                    33,
+                    34,
+                    35,
+                    36,
+                    37,
+                    38
+                  ],
+                  "starting_column": 5,
+                  "ending_column": 6
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "Pie",
+                    "source_mapping": {
+                      "start": 26,
+                      "length": 7347,
+                      "filename_relative": "Benchmarks/Study_SamplesSet/cea02d371a65dbadaa9aee297d8b2476.sol",
+                      "filename_absolute": "/home/shikah/Documents/PhD/VulDet/Benchmarks/Study_SamplesSet/cea02d371a65dbadaa9aee297d8b2476.sol",
+                      "filename_short": "Benchmarks/Study_SamplesSet/cea02d371a65dbadaa9aee297d8b2476.sol",
+                      "is_dependency": false,
+                      "lines": [
+                        3,
+                        4,
+                        5,
+                        6,
+                        7,
+                        8,
+                        9,
+                        10,
+                        11,
+                        12,
+                        13,
+                        14,
+                        15,
+                        16,
+                        17,
+                        18,
+                        19,
+                        20,
+                        21,
+                        22,
+                        23,
+                        24,
+                        25,
+                        26,
+                        27,
+                        28,
+                        29,
+                        30,
+                        31,
+                        32,
+                        33,
+                        34,
+                        35,
+                        36,
+                        37,
+                        38,
+                        39,
+                        40
+                      ],
+                      "starting_column": 1,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "Command(address,bytes)"
+                }
+              }
+            }
+          }
+        ],
+        "description": "Pie.Command(address,bytes).adr (Benchmarks/Study_SamplesSet/cea02d371a65dbadaa9aee297d8b2476.sol#32) lacks a zero-check on :\n\t\t- adr.call.value(msg.value)(data) (Benchmarks/Study_SamplesSet/cea02d371a65dbadaa9aee297d8b2476.sol#37)\n",
+        "markdown": "[Pie.Command(address,bytes).adr](Benchmarks/Study_SamplesSet/cea02d371a65dbadaa9aee297d8b2476.sol#L32) lacks a zero-check on :\n\t\t- [adr.call.value(msg.value)(data)](Benchmarks/Study_SamplesSet/cea02d371a65dbadaa9aee297d8b2476.sol#L37)\n",
+        "first_markdown_element": "Benchmarks/Study_SamplesSet/cea02d371a65dbadaa9aee297d8b2476.sol#L32",
+        "id": "4b3033a4d9f468de9fc69d3dcd27c9cb7092be094f7f350d397e779f0a0897c7",
+        "check": "missing-zero-check",
+        "impact": "Low",
+        "confidence": "Medium"
+      },
+      {
+        "elements": [
+          {
+            "type": "pragma",
+            "name": "^0.4.19",
+            "source_mapping": {
+              "start": 0,
+              "length": 24,
+              "filename_relative": "Benchmarks/Study_SamplesSet/cea02d371a65dbadaa9aee297d8b2476.sol",
+              "filename_absolute": "/home/shikah/Documents/PhD/VulDet/Benchmarks/Study_SamplesSet/cea02d371a65dbadaa9aee297d8b2476.sol",
+              "filename_short": "Benchmarks/Study_SamplesSet/cea02d371a65dbadaa9aee297d8b2476.sol",
+              "is_dependency": false,
+              "lines": [
+                1
+              ],
+              "starting_column": 1,
+              "ending_column": 25
+            },
+            "type_specific_fields": {
+              "directive": [
+                "solidity",
+                "^",
+                "0.4",
+                ".19"
+              ]
+            }
+          }
+        ],
+        "description": "Pragma version^0.4.19 (Benchmarks/Study_SamplesSet/cea02d371a65dbadaa9aee297d8b2476.sol#1) allows old versions\n",
+        "markdown": "Pragma version[^0.4.19](Benchmarks/Study_SamplesSet/cea02d371a65dbadaa9aee297d8b2476.sol#L1) allows old versions\n",
+        "first_markdown_element": "Benchmarks/Study_SamplesSet/cea02d371a65dbadaa9aee297d8b2476.sol#L1",
+        "id": "3b0a099de7f4c4f070ca376b2d31331920153a858e1b7fc5cc2905e58e2c5b6a",
+        "check": "solc-version",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [],
+        "description": "solc-0.4.19 is not recommended for deployment\n",
+        "markdown": "solc-0.4.19 is not recommended for deployment\n",
+        "first_markdown_element": "",
+        "id": "6c57d3efd769b2c1ca361b3d06ff1f2677845be92f7b50762125a4196d71725a",
+        "check": "solc-version",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "Command",
+            "source_mapping": {
+              "start": 7217,
+              "length": 154,
+              "filename_relative": "Benchmarks/Study_SamplesSet/cea02d371a65dbadaa9aee297d8b2476.sol",
+              "filename_absolute": "/home/shikah/Documents/PhD/VulDet/Benchmarks/Study_SamplesSet/cea02d371a65dbadaa9aee297d8b2476.sol",
+              "filename_short": "Benchmarks/Study_SamplesSet/cea02d371a65dbadaa9aee297d8b2476.sol",
+              "is_dependency": false,
+              "lines": [
+                32,
+                33,
+                34,
+                35,
+                36,
+                37,
+                38
+              ],
+              "starting_column": 5,
+              "ending_column": 6
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "Pie",
+                "source_mapping": {
+                  "start": 26,
+                  "length": 7347,
+                  "filename_relative": "Benchmarks/Study_SamplesSet/cea02d371a65dbadaa9aee297d8b2476.sol",
+                  "filename_absolute": "/home/shikah/Documents/PhD/VulDet/Benchmarks/Study_SamplesSet/cea02d371a65dbadaa9aee297d8b2476.sol",
+                  "filename_short": "Benchmarks/Study_SamplesSet/cea02d371a65dbadaa9aee297d8b2476.sol",
+                  "is_dependency": false,
+                  "lines": [
+                    3,
+                    4,
+                    5,
+                    6,
+                    7,
+                    8,
+                    9,
+                    10,
+                    11,
+                    12,
+                    13,
+                    14,
+                    15,
+                    16,
+                    17,
+                    18,
+                    19,
+                    20,
+                    21,
+                    22,
+                    23,
+                    24,
+                    25,
+                    26,
+                    27,
+                    28,
+                    29,
+                    30,
+                    31,
+                    32,
+                    33,
+                    34,
+                    35,
+                    36,
+                    37,
+                    38,
+                    39,
+                    40
+                  ],
+                  "starting_column": 1,
+                  "ending_column": 0
+                }
+              },
+              "signature": "Command(address,bytes)"
+            }
+          },
+          {
+            "type": "node",
+            "name": "adr.call.value(msg.value)(data)",
+            "source_mapping": {
+              "start": 7333,
+              "length": 31,
+              "filename_relative": "Benchmarks/Study_SamplesSet/cea02d371a65dbadaa9aee297d8b2476.sol",
+              "filename_absolute": "/home/shikah/Documents/PhD/VulDet/Benchmarks/Study_SamplesSet/cea02d371a65dbadaa9aee297d8b2476.sol",
+              "filename_short": "Benchmarks/Study_SamplesSet/cea02d371a65dbadaa9aee297d8b2476.sol",
+              "is_dependency": false,
+              "lines": [
+                37
+              ],
+              "starting_column": 9,
+              "ending_column": 40
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "Command",
+                "source_mapping": {
+                  "start": 7217,
+                  "length": 154,
+                  "filename_relative": "Benchmarks/Study_SamplesSet/cea02d371a65dbadaa9aee297d8b2476.sol",
+                  "filename_absolute": "/home/shikah/Documents/PhD/VulDet/Benchmarks/Study_SamplesSet/cea02d371a65dbadaa9aee297d8b2476.sol",
+                  "filename_short": "Benchmarks/Study_SamplesSet/cea02d371a65dbadaa9aee297d8b2476.sol",
+                  "is_dependency": false,
+                  "lines": [
+                    32,
+                    33,
+                    34,
+                    35,
+                    36,
+                    37,
+                    38
+                  ],
+                  "starting_column": 5,
+                  "ending_column": 6
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "Pie",
+                    "source_mapping": {
+                      "start": 26,
+                      "length": 7347,
+                      "filename_relative": "Benchmarks/Study_SamplesSet/cea02d371a65dbadaa9aee297d8b2476.sol",
+                      "filename_absolute": "/home/shikah/Documents/PhD/VulDet/Benchmarks/Study_SamplesSet/cea02d371a65dbadaa9aee297d8b2476.sol",
+                      "filename_short": "Benchmarks/Study_SamplesSet/cea02d371a65dbadaa9aee297d8b2476.sol",
+                      "is_dependency": false,
+                      "lines": [
+                        3,
+                        4,
+                        5,
+                        6,
+                        7,
+                        8,
+                        9,
+                        10,
+                        11,
+                        12,
+                        13,
+                        14,
+                        15,
+                        16,
+                        17,
+                        18,
+                        19,
+                        20,
+                        21,
+                        22,
+                        23,
+                        24,
+                        25,
+                        26,
+                        27,
+                        28,
+                        29,
+                        30,
+                        31,
+                        32,
+                        33,
+                        34,
+                        35,
+                        36,
+                        37,
+                        38,
+                        39,
+                        40
+                      ],
+                      "starting_column": 1,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "Command(address,bytes)"
+                }
+              }
+            }
+          }
+        ],
+        "description": "Low level call in Pie.Command(address,bytes) (Benchmarks/Study_SamplesSet/cea02d371a65dbadaa9aee297d8b2476.sol#32-38):\n\t- adr.call.value(msg.value)(data) (Benchmarks/Study_SamplesSet/cea02d371a65dbadaa9aee297d8b2476.sol#37)\n",
+        "markdown": "Low level call in [Pie.Command(address,bytes)](Benchmarks/Study_SamplesSet/cea02d371a65dbadaa9aee297d8b2476.sol#L32-L38):\n\t- [adr.call.value(msg.value)(data)](Benchmarks/Study_SamplesSet/cea02d371a65dbadaa9aee297d8b2476.sol#L37)\n",
+        "first_markdown_element": "Benchmarks/Study_SamplesSet/cea02d371a65dbadaa9aee297d8b2476.sol#L32-L38",
+        "id": "040d1229b1da2a105a9c51d584be824c14283e2ddbba24478d37b2c155eaee07",
+        "check": "low-level-calls",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "Command",
+            "source_mapping": {
+              "start": 7217,
+              "length": 154,
+              "filename_relative": "Benchmarks/Study_SamplesSet/cea02d371a65dbadaa9aee297d8b2476.sol",
+              "filename_absolute": "/home/shikah/Documents/PhD/VulDet/Benchmarks/Study_SamplesSet/cea02d371a65dbadaa9aee297d8b2476.sol",
+              "filename_short": "Benchmarks/Study_SamplesSet/cea02d371a65dbadaa9aee297d8b2476.sol",
+              "is_dependency": false,
+              "lines": [
+                32,
+                33,
+                34,
+                35,
+                36,
+                37,
+                38
+              ],
+              "starting_column": 5,
+              "ending_column": 6
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "Pie",
+                "source_mapping": {
+                  "start": 26,
+                  "length": 7347,
+                  "filename_relative": "Benchmarks/Study_SamplesSet/cea02d371a65dbadaa9aee297d8b2476.sol",
+                  "filename_absolute": "/home/shikah/Documents/PhD/VulDet/Benchmarks/Study_SamplesSet/cea02d371a65dbadaa9aee297d8b2476.sol",
+                  "filename_short": "Benchmarks/Study_SamplesSet/cea02d371a65dbadaa9aee297d8b2476.sol",
+                  "is_dependency": false,
+                  "lines": [
+                    3,
+                    4,
+                    5,
+                    6,
+                    7,
+                    8,
+                    9,
+                    10,
+                    11,
+                    12,
+                    13,
+                    14,
+                    15,
+                    16,
+                    17,
+                    18,
+                    19,
+                    20,
+                    21,
+                    22,
+                    23,
+                    24,
+                    25,
+                    26,
+                    27,
+                    28,
+                    29,
+                    30,
+                    31,
+                    32,
+                    33,
+                    34,
+                    35,
+                    36,
+                    37,
+                    38,
+                    39,
+                    40
+                  ],
+                  "starting_column": 1,
+                  "ending_column": 0
+                }
+              },
+              "signature": "Command(address,bytes)"
+            },
+            "additional_fields": {
+              "target": "function",
+              "convention": "mixedCase"
+            }
+          }
+        ],
+        "description": "Function Pie.Command(address,bytes) (Benchmarks/Study_SamplesSet/cea02d371a65dbadaa9aee297d8b2476.sol#32-38) is not in mixedCase\n",
+        "markdown": "Function [Pie.Command(address,bytes)](Benchmarks/Study_SamplesSet/cea02d371a65dbadaa9aee297d8b2476.sol#L32-L38) is not in mixedCase\n",
+        "first_markdown_element": "Benchmarks/Study_SamplesSet/cea02d371a65dbadaa9aee297d8b2476.sol#L32-L38",
+        "id": "6bf7321b21470f991f6d6d7ea9eba3d7dee5f51c1fa1dcffa276ba075aaf816d",
+        "check": "naming-convention",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "GetPie",
+            "source_mapping": {
+              "start": 151,
+              "length": 2504,
+              "filename_relative": "Benchmarks/Study_SamplesSet/cea02d371a65dbadaa9aee297d8b2476.sol",
+              "filename_absolute": "/home/shikah/Documents/PhD/VulDet/Benchmarks/Study_SamplesSet/cea02d371a65dbadaa9aee297d8b2476.sol",
+              "filename_short": "Benchmarks/Study_SamplesSet/cea02d371a65dbadaa9aee297d8b2476.sol",
+              "is_dependency": false,
+              "lines": [
+                14,
+                15,
+                16,
+                17,
+                18,
+                19,
+                20,
+                21,
+                22
+              ],
+              "starting_column": 5,
+              "ending_column": 6
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "Pie",
+                "source_mapping": {
+                  "start": 26,
+                  "length": 7347,
+                  "filename_relative": "Benchmarks/Study_SamplesSet/cea02d371a65dbadaa9aee297d8b2476.sol",
+                  "filename_absolute": "/home/shikah/Documents/PhD/VulDet/Benchmarks/Study_SamplesSet/cea02d371a65dbadaa9aee297d8b2476.sol",
+                  "filename_short": "Benchmarks/Study_SamplesSet/cea02d371a65dbadaa9aee297d8b2476.sol",
+                  "is_dependency": false,
+                  "lines": [
+                    3,
+                    4,
+                    5,
+                    6,
+                    7,
+                    8,
+                    9,
+                    10,
+                    11,
+                    12,
+                    13,
+                    14,
+                    15,
+                    16,
+                    17,
+                    18,
+                    19,
+                    20,
+                    21,
+                    22,
+                    23,
+                    24,
+                    25,
+                    26,
+                    27,
+                    28,
+                    29,
+                    30,
+                    31,
+                    32,
+                    33,
+                    34,
+                    35,
+                    36,
+                    37,
+                    38,
+                    39,
+                    40
+                  ],
+                  "starting_column": 1,
+                  "ending_column": 0
+                }
+              },
+              "signature": "GetPie()"
+            },
+            "additional_fields": {
+              "target": "function",
+              "convention": "mixedCase"
+            }
+          }
+        ],
+        "description": "Function Pie.GetPie() (Benchmarks/Study_SamplesSet/cea02d371a65dbadaa9aee297d8b2476.sol#14-22) is not in mixedCase\n",
+        "markdown": "Function [Pie.GetPie()](Benchmarks/Study_SamplesSet/cea02d371a65dbadaa9aee297d8b2476.sol#L14-L22) is not in mixedCase\n",
+        "first_markdown_element": "Benchmarks/Study_SamplesSet/cea02d371a65dbadaa9aee297d8b2476.sol#L14-L22",
+        "id": "dc5054558d68fcb3bc37733b911312c3b50e6006c94332a445273251c2fb9a87",
+        "check": "naming-convention",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "Owner",
+            "source_mapping": {
+              "start": 45,
+              "length": 33,
+              "filename_relative": "Benchmarks/Study_SamplesSet/cea02d371a65dbadaa9aee297d8b2476.sol",
+              "filename_absolute": "/home/shikah/Documents/PhD/VulDet/Benchmarks/Study_SamplesSet/cea02d371a65dbadaa9aee297d8b2476.sol",
+              "filename_short": "Benchmarks/Study_SamplesSet/cea02d371a65dbadaa9aee297d8b2476.sol",
+              "is_dependency": false,
+              "lines": [
+                5
+              ],
+              "starting_column": 5,
+              "ending_column": 38
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "Pie",
+                "source_mapping": {
+                  "start": 26,
+                  "length": 7347,
+                  "filename_relative": "Benchmarks/Study_SamplesSet/cea02d371a65dbadaa9aee297d8b2476.sol",
+                  "filename_absolute": "/home/shikah/Documents/PhD/VulDet/Benchmarks/Study_SamplesSet/cea02d371a65dbadaa9aee297d8b2476.sol",
+                  "filename_short": "Benchmarks/Study_SamplesSet/cea02d371a65dbadaa9aee297d8b2476.sol",
+                  "is_dependency": false,
+                  "lines": [
+                    3,
+                    4,
+                    5,
+                    6,
+                    7,
+                    8,
+                    9,
+                    10,
+                    11,
+                    12,
+                    13,
+                    14,
+                    15,
+                    16,
+                    17,
+                    18,
+                    19,
+                    20,
+                    21,
+                    22,
+                    23,
+                    24,
+                    25,
+                    26,
+                    27,
+                    28,
+                    29,
+                    30,
+                    31,
+                    32,
+                    33,
+                    34,
+                    35,
+                    36,
+                    37,
+                    38,
+                    39,
+                    40
+                  ],
+                  "starting_column": 1,
+                  "ending_column": 0
+                }
+              }
+            },
+            "additional_fields": {
+              "target": "variable",
+              "convention": "mixedCase"
+            }
+          }
+        ],
+        "description": "Variable Pie.Owner (Benchmarks/Study_SamplesSet/cea02d371a65dbadaa9aee297d8b2476.sol#5) is not in mixedCase\n",
+        "markdown": "Variable [Pie.Owner](Benchmarks/Study_SamplesSet/cea02d371a65dbadaa9aee297d8b2476.sol#L5) is not in mixedCase\n",
+        "first_markdown_element": "Benchmarks/Study_SamplesSet/cea02d371a65dbadaa9aee297d8b2476.sol#L5",
+        "id": "e5bec57e50edecfe276ea766ae6bc726893dbc3905cda0048a4038897cec1fdf",
+        "check": "naming-convention",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "Command",
+            "source_mapping": {
+              "start": 7217,
+              "length": 154,
+              "filename_relative": "Benchmarks/Study_SamplesSet/cea02d371a65dbadaa9aee297d8b2476.sol",
+              "filename_absolute": "/home/shikah/Documents/PhD/VulDet/Benchmarks/Study_SamplesSet/cea02d371a65dbadaa9aee297d8b2476.sol",
+              "filename_short": "Benchmarks/Study_SamplesSet/cea02d371a65dbadaa9aee297d8b2476.sol",
+              "is_dependency": false,
+              "lines": [
+                32,
+                33,
+                34,
+                35,
+                36,
+                37,
+                38
+              ],
+              "starting_column": 5,
+              "ending_column": 6
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "Pie",
+                "source_mapping": {
+                  "start": 26,
+                  "length": 7347,
+                  "filename_relative": "Benchmarks/Study_SamplesSet/cea02d371a65dbadaa9aee297d8b2476.sol",
+                  "filename_absolute": "/home/shikah/Documents/PhD/VulDet/Benchmarks/Study_SamplesSet/cea02d371a65dbadaa9aee297d8b2476.sol",
+                  "filename_short": "Benchmarks/Study_SamplesSet/cea02d371a65dbadaa9aee297d8b2476.sol",
+                  "is_dependency": false,
+                  "lines": [
+                    3,
+                    4,
+                    5,
+                    6,
+                    7,
+                    8,
+                    9,
+                    10,
+                    11,
+                    12,
+                    13,
+                    14,
+                    15,
+                    16,
+                    17,
+                    18,
+                    19,
+                    20,
+                    21,
+                    22,
+                    23,
+                    24,
+                    25,
+                    26,
+                    27,
+                    28,
+                    29,
+                    30,
+                    31,
+                    32,
+                    33,
+                    34,
+                    35,
+                    36,
+                    37,
+                    38,
+                    39,
+                    40
+                  ],
+                  "starting_column": 1,
+                  "ending_column": 0
+                }
+              },
+              "signature": "Command(address,bytes)"
+            }
+          }
+        ],
+        "description": "Command(address,bytes) should be declared external:\n\t- Pie.Command(address,bytes) (Benchmarks/Study_SamplesSet/cea02d371a65dbadaa9aee297d8b2476.sol#32-38)\n",
+        "markdown": "Command(address,bytes) should be declared external:\n\t- [Pie.Command(address,bytes)](Benchmarks/Study_SamplesSet/cea02d371a65dbadaa9aee297d8b2476.sol#L32-L38)\n",
+        "first_markdown_element": "Benchmarks/Study_SamplesSet/cea02d371a65dbadaa9aee297d8b2476.sol#L32-L38",
+        "id": "1e97fdf98cef449632a378488cd23b8aa27477dacf2296e127f3ad7e24517df4",
+        "check": "external-function",
+        "impact": "Optimization",
+        "confidence": "High"
+      }
+    ]
+  }
+}

@@ -1,0 +1,341 @@
+{
+  "fileName": "Benchmarks/Study_SamplesSet/578c4dc33ce8c9c13071e7909c4c9fef.sol",
+  "baseName": "578c4dc33ce8c9c13071e7909c4c9fef.sol",
+  "iter": 1,
+  "time": "1622.632781",
+  "errMsg": null,
+  "result": [
+    {
+      "no": "1",
+      "kind": "IO",
+      "line": 6,
+      "signatures": [
+        {
+          "contractName": "Ethex",
+          "methodName": "calculateFee",
+          "argTypes": [ "uint256", "uint256" ]
+        },
+        {
+          "contractName": "Ethex",
+          "methodName": "calculateFeeForAccount",
+          "argTypes": [ "uint256", "uint256", "address" ]
+        },
+        {
+          "contractName": "Ethex",
+          "methodName": "feeFromTotalCost",
+          "argTypes": [ "uint256", "uint256" ]
+        },
+        {
+          "contractName": "Ethex",
+          "methodName": "takeBuyOrder",
+          "argTypes": [
+            "address", "uint256", "uint256", "uint256", "address"
+          ]
+        },
+        {
+          "contractName": "Ethex",
+          "methodName": "takeSellOrder",
+          "argTypes": [ "address", "uint256", "uint256", "address" ]
+        }
+      ],
+      "exp": "(a * b)",
+      "status": "unproven"
+    },
+    {
+      "no": "2",
+      "kind": "IO",
+      "line": 13,
+      "signatures": [
+        {
+          "contractName": "Ethex",
+          "methodName": "feeFromTotalCost",
+          "argTypes": [ "uint256", "uint256" ]
+        },
+        {
+          "contractName": "Ethex",
+          "methodName": "makeBuyOrder",
+          "argTypes": [ "address", "uint256" ]
+        },
+        {
+          "contractName": "Ethex",
+          "methodName": "takeBuyOrder",
+          "argTypes": [
+            "address", "uint256", "uint256", "uint256", "address"
+          ]
+        },
+        {
+          "contractName": "Ethex",
+          "methodName": "takeSellOrder",
+          "argTypes": [ "address", "uint256", "uint256", "address" ]
+        }
+      ],
+      "exp": "(a - b)",
+      "status": "proven"
+    },
+    {
+      "no": "3",
+      "kind": "IO",
+      "line": 17,
+      "signatures": [
+        {
+          "contractName": "Ethex",
+          "methodName": "feeFromTotalCost",
+          "argTypes": [ "uint256", "uint256" ]
+        },
+        {
+          "contractName": "Ethex",
+          "methodName": "makeBuyOrder",
+          "argTypes": [ "address", "uint256" ]
+        },
+        {
+          "contractName": "Ethex",
+          "methodName": "makeSellOrder",
+          "argTypes": [ "address", "uint256", "uint256" ]
+        },
+        {
+          "contractName": "Ethex",
+          "methodName": "takeBuyOrder",
+          "argTypes": [
+            "address", "uint256", "uint256", "uint256", "address"
+          ]
+        },
+        {
+          "contractName": "Ethex",
+          "methodName": "takeSellOrder",
+          "argTypes": [ "address", "uint256", "uint256", "address" ]
+        }
+      ],
+      "exp": "(a + b)",
+      "status": "unproven"
+    },
+    {
+      "no": "4",
+      "kind": "IO",
+      "line": 115,
+      "signatures": [
+        {
+          "contractName": "Ethex",
+          "methodName": "changeLastFreeBlock",
+          "argTypes": [ "uint256" ]
+        }
+      ],
+      "exp": "(block.number + 100)",
+      "status": "unproven"
+    },
+    {
+      "no": "5",
+      "kind": "DZ",
+      "line": 7,
+      "signatures": [
+        {
+          "contractName": "Ethex",
+          "methodName": "calculateFee",
+          "argTypes": [ "uint256", "uint256" ]
+        },
+        {
+          "contractName": "Ethex",
+          "methodName": "calculateFeeForAccount",
+          "argTypes": [ "uint256", "uint256", "address" ]
+        },
+        {
+          "contractName": "Ethex",
+          "methodName": "feeFromTotalCost",
+          "argTypes": [ "uint256", "uint256" ]
+        },
+        {
+          "contractName": "Ethex",
+          "methodName": "takeBuyOrder",
+          "argTypes": [
+            "address", "uint256", "uint256", "uint256", "address"
+          ]
+        },
+        {
+          "contractName": "Ethex",
+          "methodName": "takeSellOrder",
+          "argTypes": [ "address", "uint256", "uint256", "address" ]
+        }
+      ],
+      "exp": "(c / a)",
+      "status": "unproven"
+    },
+    {
+      "no": "6",
+      "kind": "DZ",
+      "line": 152,
+      "signatures": [
+        {
+          "contractName": "Ethex",
+          "methodName": "feeFromTotalCost",
+          "argTypes": [ "uint256", "uint256" ]
+        }
+      ],
+      "exp": "(safeMul(totalCost, 1000000000000000000) / safeAdd(1000000000000000000, feeAmount))",
+      "status": "proven"
+    },
+    {
+      "no": "7",
+      "kind": "DZ",
+      "line": 155,
+      "signatures": [
+        {
+          "contractName": "Ethex",
+          "methodName": "feeFromTotalCost",
+          "argTypes": [ "uint256", "uint256" ]
+        }
+      ],
+      "exp": "(safeMul(totalCost, 1000000000000000000) % safeAdd(1000000000000000000, feeAmount))",
+      "status": "proven"
+    },
+    {
+      "no": "8",
+      "kind": "DZ",
+      "line": 180,
+      "signatures": [
+        {
+          "contractName": "Ethex",
+          "methodName": "calculateFee",
+          "argTypes": [ "uint256", "uint256" ]
+        },
+        {
+          "contractName": "Ethex",
+          "methodName": "calculateFeeForAccount",
+          "argTypes": [ "uint256", "uint256", "address" ]
+        },
+        {
+          "contractName": "Ethex",
+          "methodName": "takeBuyOrder",
+          "argTypes": [
+            "address", "uint256", "uint256", "uint256", "address"
+          ]
+        },
+        {
+          "contractName": "Ethex",
+          "methodName": "takeSellOrder",
+          "argTypes": [ "address", "uint256", "uint256", "address" ]
+        }
+      ],
+      "exp": "(safeMul(cost, feeAmount) / 1000000000000000000)",
+      "status": "proven"
+    },
+    {
+      "no": "9",
+      "kind": "DZ",
+      "line": 257,
+      "signatures": [
+        {
+          "contractName": "Ethex",
+          "methodName": "takeBuyOrder",
+          "argTypes": [
+            "address", "uint256", "uint256", "uint256", "address"
+          ]
+        }
+      ],
+      "exp": "(safeMul(totalTokens, weiAmount) / tokenAmount)",
+      "status": "proven"
+    },
+    {
+      "no": "10",
+      "kind": "DZ",
+      "line": 315,
+      "signatures": [
+        {
+          "contractName": "Ethex",
+          "methodName": "takeSellOrder",
+          "argTypes": [ "address", "uint256", "uint256", "address" ]
+        }
+      ],
+      "exp": "(safeMul(transactionWeiAmountNoFee, tokenAmount) / weiAmount)",
+      "status": "proven"
+    },
+    {
+      "no": "11",
+      "kind": "ETH_LEAK",
+      "line": 241,
+      "signatures": [
+        {
+          "contractName": "Ethex",
+          "methodName": "cancelAllBuyOrders",
+          "argTypes": [ "address", "uint256", "uint256" ]
+        }
+      ],
+      "exp": "msg.sender.send(remain)",
+      "status": "unproven"
+    },
+    {
+      "no": "12",
+      "kind": "ETH_LEAK",
+      "line": 281,
+      "signatures": [
+        {
+          "contractName": "Ethex",
+          "methodName": "takeBuyOrder",
+          "argTypes": [
+            "address", "uint256", "uint256", "uint256", "address"
+          ]
+        }
+      ],
+      "exp": "buyer.send(refundAmount)",
+      "status": "unproven"
+    },
+    {
+      "no": "13",
+      "kind": "ETH_LEAK",
+      "line": 291,
+      "signatures": [
+        {
+          "contractName": "Ethex",
+          "methodName": "takeBuyOrder",
+          "argTypes": [
+            "address", "uint256", "uint256", "uint256", "address"
+          ]
+        }
+      ],
+      "exp": "feeAccount.send(safeAdd(currentTakeFee, currentMakeFee))",
+      "status": "unproven"
+    },
+    {
+      "no": "14",
+      "kind": "ETH_LEAK",
+      "line": 297,
+      "signatures": [
+        {
+          "contractName": "Ethex",
+          "methodName": "takeBuyOrder",
+          "argTypes": [
+            "address", "uint256", "uint256", "uint256", "address"
+          ]
+        }
+      ],
+      "exp": "msg.sender.send(safeSub(transactionWeiAmountNoFee, currentTakeFee))",
+      "status": "unproven"
+    },
+    {
+      "no": "15",
+      "kind": "ETH_LEAK",
+      "line": 336,
+      "signatures": [
+        {
+          "contractName": "Ethex",
+          "methodName": "takeSellOrder",
+          "argTypes": [ "address", "uint256", "uint256", "address" ]
+        }
+      ],
+      "exp": "feeAccount.send(totalFee)",
+      "status": "unproven"
+    },
+    {
+      "no": "16",
+      "kind": "ETH_LEAK",
+      "line": 342,
+      "signatures": [
+        {
+          "contractName": "Ethex",
+          "methodName": "takeSellOrder",
+          "argTypes": [ "address", "uint256", "uint256", "address" ]
+        }
+      ],
+      "exp": "seller.send(makerProceedsAfterFee)",
+      "status": "unproven"
+    }
+  ]
+}

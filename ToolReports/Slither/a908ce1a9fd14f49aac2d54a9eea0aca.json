@@ -1,0 +1,751 @@
+{
+  "success": true,
+  "error": null,
+  "results": {
+    "detectors": [
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "fallback",
+            "source_mapping": {
+              "start": 330,
+              "length": 387,
+              "filename_relative": "Benchmarks/Study_SamplesSet/a908ce1a9fd14f49aac2d54a9eea0aca.sol",
+              "filename_absolute": "/home/shikah/Documents/PhD/VulDet/Benchmarks/Study_SamplesSet/a908ce1a9fd14f49aac2d54a9eea0aca.sol",
+              "filename_short": "Benchmarks/Study_SamplesSet/a908ce1a9fd14f49aac2d54a9eea0aca.sol",
+              "is_dependency": false,
+              "lines": [
+                15,
+                16,
+                17,
+                18,
+                19,
+                20,
+                21,
+                22,
+                23,
+                24
+              ],
+              "starting_column": 5,
+              "ending_column": 6
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "Roulette",
+                "source_mapping": {
+                  "start": 138,
+                  "length": 581,
+                  "filename_relative": "Benchmarks/Study_SamplesSet/a908ce1a9fd14f49aac2d54a9eea0aca.sol",
+                  "filename_absolute": "/home/shikah/Documents/PhD/VulDet/Benchmarks/Study_SamplesSet/a908ce1a9fd14f49aac2d54a9eea0aca.sol",
+                  "filename_short": "Benchmarks/Study_SamplesSet/a908ce1a9fd14f49aac2d54a9eea0aca.sol",
+                  "is_dependency": false,
+                  "lines": [
+                    9,
+                    10,
+                    11,
+                    12,
+                    13,
+                    14,
+                    15,
+                    16,
+                    17,
+                    18,
+                    19,
+                    20,
+                    21,
+                    22,
+                    23,
+                    24,
+                    25
+                  ],
+                  "starting_column": 1,
+                  "ending_column": 2
+                }
+              },
+              "signature": "fallback()"
+            }
+          },
+          {
+            "type": "node",
+            "name": "msg.sender.transfer(this.balance)",
+            "source_mapping": {
+              "start": 667,
+              "length": 33,
+              "filename_relative": "Benchmarks/Study_SamplesSet/a908ce1a9fd14f49aac2d54a9eea0aca.sol",
+              "filename_absolute": "/home/shikah/Documents/PhD/VulDet/Benchmarks/Study_SamplesSet/a908ce1a9fd14f49aac2d54a9eea0aca.sol",
+              "filename_short": "Benchmarks/Study_SamplesSet/a908ce1a9fd14f49aac2d54a9eea0aca.sol",
+              "is_dependency": false,
+              "lines": [
+                22
+              ],
+              "starting_column": 13,
+              "ending_column": 46
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "fallback",
+                "source_mapping": {
+                  "start": 330,
+                  "length": 387,
+                  "filename_relative": "Benchmarks/Study_SamplesSet/a908ce1a9fd14f49aac2d54a9eea0aca.sol",
+                  "filename_absolute": "/home/shikah/Documents/PhD/VulDet/Benchmarks/Study_SamplesSet/a908ce1a9fd14f49aac2d54a9eea0aca.sol",
+                  "filename_short": "Benchmarks/Study_SamplesSet/a908ce1a9fd14f49aac2d54a9eea0aca.sol",
+                  "is_dependency": false,
+                  "lines": [
+                    15,
+                    16,
+                    17,
+                    18,
+                    19,
+                    20,
+                    21,
+                    22,
+                    23,
+                    24
+                  ],
+                  "starting_column": 5,
+                  "ending_column": 6
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "Roulette",
+                    "source_mapping": {
+                      "start": 138,
+                      "length": 581,
+                      "filename_relative": "Benchmarks/Study_SamplesSet/a908ce1a9fd14f49aac2d54a9eea0aca.sol",
+                      "filename_absolute": "/home/shikah/Documents/PhD/VulDet/Benchmarks/Study_SamplesSet/a908ce1a9fd14f49aac2d54a9eea0aca.sol",
+                      "filename_short": "Benchmarks/Study_SamplesSet/a908ce1a9fd14f49aac2d54a9eea0aca.sol",
+                      "is_dependency": false,
+                      "lines": [
+                        9,
+                        10,
+                        11,
+                        12,
+                        13,
+                        14,
+                        15,
+                        16,
+                        17,
+                        18,
+                        19,
+                        20,
+                        21,
+                        22,
+                        23,
+                        24,
+                        25
+                      ],
+                      "starting_column": 1,
+                      "ending_column": 2
+                    }
+                  },
+                  "signature": "fallback()"
+                }
+              }
+            }
+          }
+        ],
+        "description": "Roulette.fallback() (Benchmarks/Study_SamplesSet/a908ce1a9fd14f49aac2d54a9eea0aca.sol#15-24) sends eth to arbitrary user\n\tDangerous calls:\n\t- msg.sender.transfer(this.balance) (Benchmarks/Study_SamplesSet/a908ce1a9fd14f49aac2d54a9eea0aca.sol#22)\n",
+        "markdown": "[Roulette.fallback()](Benchmarks/Study_SamplesSet/a908ce1a9fd14f49aac2d54a9eea0aca.sol#L15-L24) sends eth to arbitrary user\n\tDangerous calls:\n\t- [msg.sender.transfer(this.balance)](Benchmarks/Study_SamplesSet/a908ce1a9fd14f49aac2d54a9eea0aca.sol#L22)\n",
+        "first_markdown_element": "Benchmarks/Study_SamplesSet/a908ce1a9fd14f49aac2d54a9eea0aca.sol#L15-L24",
+        "id": "f653dcb3748ef74069d86ee9c028789f0eb7505811fbe7ddd72cbc3ce5041d37",
+        "check": "arbitrary-send-eth",
+        "impact": "High",
+        "confidence": "Medium"
+      },
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "fallback",
+            "source_mapping": {
+              "start": 330,
+              "length": 387,
+              "filename_relative": "Benchmarks/Study_SamplesSet/a908ce1a9fd14f49aac2d54a9eea0aca.sol",
+              "filename_absolute": "/home/shikah/Documents/PhD/VulDet/Benchmarks/Study_SamplesSet/a908ce1a9fd14f49aac2d54a9eea0aca.sol",
+              "filename_short": "Benchmarks/Study_SamplesSet/a908ce1a9fd14f49aac2d54a9eea0aca.sol",
+              "is_dependency": false,
+              "lines": [
+                15,
+                16,
+                17,
+                18,
+                19,
+                20,
+                21,
+                22,
+                23,
+                24
+              ],
+              "starting_column": 5,
+              "ending_column": 6
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "Roulette",
+                "source_mapping": {
+                  "start": 138,
+                  "length": 581,
+                  "filename_relative": "Benchmarks/Study_SamplesSet/a908ce1a9fd14f49aac2d54a9eea0aca.sol",
+                  "filename_absolute": "/home/shikah/Documents/PhD/VulDet/Benchmarks/Study_SamplesSet/a908ce1a9fd14f49aac2d54a9eea0aca.sol",
+                  "filename_short": "Benchmarks/Study_SamplesSet/a908ce1a9fd14f49aac2d54a9eea0aca.sol",
+                  "is_dependency": false,
+                  "lines": [
+                    9,
+                    10,
+                    11,
+                    12,
+                    13,
+                    14,
+                    15,
+                    16,
+                    17,
+                    18,
+                    19,
+                    20,
+                    21,
+                    22,
+                    23,
+                    24,
+                    25
+                  ],
+                  "starting_column": 1,
+                  "ending_column": 2
+                }
+              },
+              "signature": "fallback()"
+            }
+          },
+          {
+            "type": "node",
+            "name": "now % 15 == 0",
+            "source_mapping": {
+              "start": 628,
+              "length": 13,
+              "filename_relative": "Benchmarks/Study_SamplesSet/a908ce1a9fd14f49aac2d54a9eea0aca.sol",
+              "filename_absolute": "/home/shikah/Documents/PhD/VulDet/Benchmarks/Study_SamplesSet/a908ce1a9fd14f49aac2d54a9eea0aca.sol",
+              "filename_short": "Benchmarks/Study_SamplesSet/a908ce1a9fd14f49aac2d54a9eea0aca.sol",
+              "is_dependency": false,
+              "lines": [
+                21
+              ],
+              "starting_column": 12,
+              "ending_column": 25
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "fallback",
+                "source_mapping": {
+                  "start": 330,
+                  "length": 387,
+                  "filename_relative": "Benchmarks/Study_SamplesSet/a908ce1a9fd14f49aac2d54a9eea0aca.sol",
+                  "filename_absolute": "/home/shikah/Documents/PhD/VulDet/Benchmarks/Study_SamplesSet/a908ce1a9fd14f49aac2d54a9eea0aca.sol",
+                  "filename_short": "Benchmarks/Study_SamplesSet/a908ce1a9fd14f49aac2d54a9eea0aca.sol",
+                  "is_dependency": false,
+                  "lines": [
+                    15,
+                    16,
+                    17,
+                    18,
+                    19,
+                    20,
+                    21,
+                    22,
+                    23,
+                    24
+                  ],
+                  "starting_column": 5,
+                  "ending_column": 6
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "Roulette",
+                    "source_mapping": {
+                      "start": 138,
+                      "length": 581,
+                      "filename_relative": "Benchmarks/Study_SamplesSet/a908ce1a9fd14f49aac2d54a9eea0aca.sol",
+                      "filename_absolute": "/home/shikah/Documents/PhD/VulDet/Benchmarks/Study_SamplesSet/a908ce1a9fd14f49aac2d54a9eea0aca.sol",
+                      "filename_short": "Benchmarks/Study_SamplesSet/a908ce1a9fd14f49aac2d54a9eea0aca.sol",
+                      "is_dependency": false,
+                      "lines": [
+                        9,
+                        10,
+                        11,
+                        12,
+                        13,
+                        14,
+                        15,
+                        16,
+                        17,
+                        18,
+                        19,
+                        20,
+                        21,
+                        22,
+                        23,
+                        24,
+                        25
+                      ],
+                      "starting_column": 1,
+                      "ending_column": 2
+                    }
+                  },
+                  "signature": "fallback()"
+                }
+              }
+            }
+          }
+        ],
+        "description": "Roulette.fallback() (Benchmarks/Study_SamplesSet/a908ce1a9fd14f49aac2d54a9eea0aca.sol#15-24) uses a weak PRNG: \"now % 15 == 0 (Benchmarks/Study_SamplesSet/a908ce1a9fd14f49aac2d54a9eea0aca.sol#21)\" \n",
+        "markdown": "[Roulette.fallback()](Benchmarks/Study_SamplesSet/a908ce1a9fd14f49aac2d54a9eea0aca.sol#L15-L24) uses a weak PRNG: \"[now % 15 == 0](Benchmarks/Study_SamplesSet/a908ce1a9fd14f49aac2d54a9eea0aca.sol#L21)\" \n",
+        "first_markdown_element": "Benchmarks/Study_SamplesSet/a908ce1a9fd14f49aac2d54a9eea0aca.sol#L15-L24",
+        "id": "7c82757daa5d09154b585efe9e91316d5fbc4afdc63f9d92dc2fa26071496d57",
+        "check": "weak-prng",
+        "impact": "High",
+        "confidence": "Medium"
+      },
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "fallback",
+            "source_mapping": {
+              "start": 330,
+              "length": 387,
+              "filename_relative": "Benchmarks/Study_SamplesSet/a908ce1a9fd14f49aac2d54a9eea0aca.sol",
+              "filename_absolute": "/home/shikah/Documents/PhD/VulDet/Benchmarks/Study_SamplesSet/a908ce1a9fd14f49aac2d54a9eea0aca.sol",
+              "filename_short": "Benchmarks/Study_SamplesSet/a908ce1a9fd14f49aac2d54a9eea0aca.sol",
+              "is_dependency": false,
+              "lines": [
+                15,
+                16,
+                17,
+                18,
+                19,
+                20,
+                21,
+                22,
+                23,
+                24
+              ],
+              "starting_column": 5,
+              "ending_column": 6
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "Roulette",
+                "source_mapping": {
+                  "start": 138,
+                  "length": 581,
+                  "filename_relative": "Benchmarks/Study_SamplesSet/a908ce1a9fd14f49aac2d54a9eea0aca.sol",
+                  "filename_absolute": "/home/shikah/Documents/PhD/VulDet/Benchmarks/Study_SamplesSet/a908ce1a9fd14f49aac2d54a9eea0aca.sol",
+                  "filename_short": "Benchmarks/Study_SamplesSet/a908ce1a9fd14f49aac2d54a9eea0aca.sol",
+                  "is_dependency": false,
+                  "lines": [
+                    9,
+                    10,
+                    11,
+                    12,
+                    13,
+                    14,
+                    15,
+                    16,
+                    17,
+                    18,
+                    19,
+                    20,
+                    21,
+                    22,
+                    23,
+                    24,
+                    25
+                  ],
+                  "starting_column": 1,
+                  "ending_column": 2
+                }
+              },
+              "signature": "fallback()"
+            }
+          },
+          {
+            "type": "node",
+            "name": "now % 15 == 0",
+            "source_mapping": {
+              "start": 628,
+              "length": 13,
+              "filename_relative": "Benchmarks/Study_SamplesSet/a908ce1a9fd14f49aac2d54a9eea0aca.sol",
+              "filename_absolute": "/home/shikah/Documents/PhD/VulDet/Benchmarks/Study_SamplesSet/a908ce1a9fd14f49aac2d54a9eea0aca.sol",
+              "filename_short": "Benchmarks/Study_SamplesSet/a908ce1a9fd14f49aac2d54a9eea0aca.sol",
+              "is_dependency": false,
+              "lines": [
+                21
+              ],
+              "starting_column": 12,
+              "ending_column": 25
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "fallback",
+                "source_mapping": {
+                  "start": 330,
+                  "length": 387,
+                  "filename_relative": "Benchmarks/Study_SamplesSet/a908ce1a9fd14f49aac2d54a9eea0aca.sol",
+                  "filename_absolute": "/home/shikah/Documents/PhD/VulDet/Benchmarks/Study_SamplesSet/a908ce1a9fd14f49aac2d54a9eea0aca.sol",
+                  "filename_short": "Benchmarks/Study_SamplesSet/a908ce1a9fd14f49aac2d54a9eea0aca.sol",
+                  "is_dependency": false,
+                  "lines": [
+                    15,
+                    16,
+                    17,
+                    18,
+                    19,
+                    20,
+                    21,
+                    22,
+                    23,
+                    24
+                  ],
+                  "starting_column": 5,
+                  "ending_column": 6
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "Roulette",
+                    "source_mapping": {
+                      "start": 138,
+                      "length": 581,
+                      "filename_relative": "Benchmarks/Study_SamplesSet/a908ce1a9fd14f49aac2d54a9eea0aca.sol",
+                      "filename_absolute": "/home/shikah/Documents/PhD/VulDet/Benchmarks/Study_SamplesSet/a908ce1a9fd14f49aac2d54a9eea0aca.sol",
+                      "filename_short": "Benchmarks/Study_SamplesSet/a908ce1a9fd14f49aac2d54a9eea0aca.sol",
+                      "is_dependency": false,
+                      "lines": [
+                        9,
+                        10,
+                        11,
+                        12,
+                        13,
+                        14,
+                        15,
+                        16,
+                        17,
+                        18,
+                        19,
+                        20,
+                        21,
+                        22,
+                        23,
+                        24,
+                        25
+                      ],
+                      "starting_column": 1,
+                      "ending_column": 2
+                    }
+                  },
+                  "signature": "fallback()"
+                }
+              }
+            }
+          }
+        ],
+        "description": "Roulette.fallback() (Benchmarks/Study_SamplesSet/a908ce1a9fd14f49aac2d54a9eea0aca.sol#15-24) uses a dangerous strict equality:\n\t- now % 15 == 0 (Benchmarks/Study_SamplesSet/a908ce1a9fd14f49aac2d54a9eea0aca.sol#21)\n",
+        "markdown": "[Roulette.fallback()](Benchmarks/Study_SamplesSet/a908ce1a9fd14f49aac2d54a9eea0aca.sol#L15-L24) uses a dangerous strict equality:\n\t- [now % 15 == 0](Benchmarks/Study_SamplesSet/a908ce1a9fd14f49aac2d54a9eea0aca.sol#L21)\n",
+        "first_markdown_element": "Benchmarks/Study_SamplesSet/a908ce1a9fd14f49aac2d54a9eea0aca.sol#L15-L24",
+        "id": "a499ec0160c35d717c1b8c7431f60143e157ea724112a4e5825757e4b5b23e4f",
+        "check": "incorrect-equality",
+        "impact": "Medium",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "fallback",
+            "source_mapping": {
+              "start": 330,
+              "length": 387,
+              "filename_relative": "Benchmarks/Study_SamplesSet/a908ce1a9fd14f49aac2d54a9eea0aca.sol",
+              "filename_absolute": "/home/shikah/Documents/PhD/VulDet/Benchmarks/Study_SamplesSet/a908ce1a9fd14f49aac2d54a9eea0aca.sol",
+              "filename_short": "Benchmarks/Study_SamplesSet/a908ce1a9fd14f49aac2d54a9eea0aca.sol",
+              "is_dependency": false,
+              "lines": [
+                15,
+                16,
+                17,
+                18,
+                19,
+                20,
+                21,
+                22,
+                23,
+                24
+              ],
+              "starting_column": 5,
+              "ending_column": 6
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "Roulette",
+                "source_mapping": {
+                  "start": 138,
+                  "length": 581,
+                  "filename_relative": "Benchmarks/Study_SamplesSet/a908ce1a9fd14f49aac2d54a9eea0aca.sol",
+                  "filename_absolute": "/home/shikah/Documents/PhD/VulDet/Benchmarks/Study_SamplesSet/a908ce1a9fd14f49aac2d54a9eea0aca.sol",
+                  "filename_short": "Benchmarks/Study_SamplesSet/a908ce1a9fd14f49aac2d54a9eea0aca.sol",
+                  "is_dependency": false,
+                  "lines": [
+                    9,
+                    10,
+                    11,
+                    12,
+                    13,
+                    14,
+                    15,
+                    16,
+                    17,
+                    18,
+                    19,
+                    20,
+                    21,
+                    22,
+                    23,
+                    24,
+                    25
+                  ],
+                  "starting_column": 1,
+                  "ending_column": 2
+                }
+              },
+              "signature": "fallback()"
+            }
+          },
+          {
+            "type": "node",
+            "name": "require(bool)(now != pastBlockTime)",
+            "source_mapping": {
+              "start": 481,
+              "length": 29,
+              "filename_relative": "Benchmarks/Study_SamplesSet/a908ce1a9fd14f49aac2d54a9eea0aca.sol",
+              "filename_absolute": "/home/shikah/Documents/PhD/VulDet/Benchmarks/Study_SamplesSet/a908ce1a9fd14f49aac2d54a9eea0aca.sol",
+              "filename_short": "Benchmarks/Study_SamplesSet/a908ce1a9fd14f49aac2d54a9eea0aca.sol",
+              "is_dependency": false,
+              "lines": [
+                18
+              ],
+              "starting_column": 9,
+              "ending_column": 38
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "fallback",
+                "source_mapping": {
+                  "start": 330,
+                  "length": 387,
+                  "filename_relative": "Benchmarks/Study_SamplesSet/a908ce1a9fd14f49aac2d54a9eea0aca.sol",
+                  "filename_absolute": "/home/shikah/Documents/PhD/VulDet/Benchmarks/Study_SamplesSet/a908ce1a9fd14f49aac2d54a9eea0aca.sol",
+                  "filename_short": "Benchmarks/Study_SamplesSet/a908ce1a9fd14f49aac2d54a9eea0aca.sol",
+                  "is_dependency": false,
+                  "lines": [
+                    15,
+                    16,
+                    17,
+                    18,
+                    19,
+                    20,
+                    21,
+                    22,
+                    23,
+                    24
+                  ],
+                  "starting_column": 5,
+                  "ending_column": 6
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "Roulette",
+                    "source_mapping": {
+                      "start": 138,
+                      "length": 581,
+                      "filename_relative": "Benchmarks/Study_SamplesSet/a908ce1a9fd14f49aac2d54a9eea0aca.sol",
+                      "filename_absolute": "/home/shikah/Documents/PhD/VulDet/Benchmarks/Study_SamplesSet/a908ce1a9fd14f49aac2d54a9eea0aca.sol",
+                      "filename_short": "Benchmarks/Study_SamplesSet/a908ce1a9fd14f49aac2d54a9eea0aca.sol",
+                      "is_dependency": false,
+                      "lines": [
+                        9,
+                        10,
+                        11,
+                        12,
+                        13,
+                        14,
+                        15,
+                        16,
+                        17,
+                        18,
+                        19,
+                        20,
+                        21,
+                        22,
+                        23,
+                        24,
+                        25
+                      ],
+                      "starting_column": 1,
+                      "ending_column": 2
+                    }
+                  },
+                  "signature": "fallback()"
+                }
+              }
+            }
+          },
+          {
+            "type": "node",
+            "name": "now % 15 == 0",
+            "source_mapping": {
+              "start": 628,
+              "length": 13,
+              "filename_relative": "Benchmarks/Study_SamplesSet/a908ce1a9fd14f49aac2d54a9eea0aca.sol",
+              "filename_absolute": "/home/shikah/Documents/PhD/VulDet/Benchmarks/Study_SamplesSet/a908ce1a9fd14f49aac2d54a9eea0aca.sol",
+              "filename_short": "Benchmarks/Study_SamplesSet/a908ce1a9fd14f49aac2d54a9eea0aca.sol",
+              "is_dependency": false,
+              "lines": [
+                21
+              ],
+              "starting_column": 12,
+              "ending_column": 25
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "fallback",
+                "source_mapping": {
+                  "start": 330,
+                  "length": 387,
+                  "filename_relative": "Benchmarks/Study_SamplesSet/a908ce1a9fd14f49aac2d54a9eea0aca.sol",
+                  "filename_absolute": "/home/shikah/Documents/PhD/VulDet/Benchmarks/Study_SamplesSet/a908ce1a9fd14f49aac2d54a9eea0aca.sol",
+                  "filename_short": "Benchmarks/Study_SamplesSet/a908ce1a9fd14f49aac2d54a9eea0aca.sol",
+                  "is_dependency": false,
+                  "lines": [
+                    15,
+                    16,
+                    17,
+                    18,
+                    19,
+                    20,
+                    21,
+                    22,
+                    23,
+                    24
+                  ],
+                  "starting_column": 5,
+                  "ending_column": 6
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "Roulette",
+                    "source_mapping": {
+                      "start": 138,
+                      "length": 581,
+                      "filename_relative": "Benchmarks/Study_SamplesSet/a908ce1a9fd14f49aac2d54a9eea0aca.sol",
+                      "filename_absolute": "/home/shikah/Documents/PhD/VulDet/Benchmarks/Study_SamplesSet/a908ce1a9fd14f49aac2d54a9eea0aca.sol",
+                      "filename_short": "Benchmarks/Study_SamplesSet/a908ce1a9fd14f49aac2d54a9eea0aca.sol",
+                      "is_dependency": false,
+                      "lines": [
+                        9,
+                        10,
+                        11,
+                        12,
+                        13,
+                        14,
+                        15,
+                        16,
+                        17,
+                        18,
+                        19,
+                        20,
+                        21,
+                        22,
+                        23,
+                        24,
+                        25
+                      ],
+                      "starting_column": 1,
+                      "ending_column": 2
+                    }
+                  },
+                  "signature": "fallback()"
+                }
+              }
+            }
+          }
+        ],
+        "description": "Roulette.fallback() (Benchmarks/Study_SamplesSet/a908ce1a9fd14f49aac2d54a9eea0aca.sol#15-24) uses timestamp for comparisons\n\tDangerous comparisons:\n\t- require(bool)(now != pastBlockTime) (Benchmarks/Study_SamplesSet/a908ce1a9fd14f49aac2d54a9eea0aca.sol#18)\n\t- now % 15 == 0 (Benchmarks/Study_SamplesSet/a908ce1a9fd14f49aac2d54a9eea0aca.sol#21)\n",
+        "markdown": "[Roulette.fallback()](Benchmarks/Study_SamplesSet/a908ce1a9fd14f49aac2d54a9eea0aca.sol#L15-L24) uses timestamp for comparisons\n\tDangerous comparisons:\n\t- [require(bool)(now != pastBlockTime)](Benchmarks/Study_SamplesSet/a908ce1a9fd14f49aac2d54a9eea0aca.sol#L18)\n\t- [now % 15 == 0](Benchmarks/Study_SamplesSet/a908ce1a9fd14f49aac2d54a9eea0aca.sol#L21)\n",
+        "first_markdown_element": "Benchmarks/Study_SamplesSet/a908ce1a9fd14f49aac2d54a9eea0aca.sol#L15-L24",
+        "id": "1d2a119a9a41184997769da9b8394d89c8409fdb5da4ec37b0e5cf7639e7a9dd",
+        "check": "timestamp",
+        "impact": "Low",
+        "confidence": "Medium"
+      },
+      {
+        "elements": [
+          {
+            "type": "pragma",
+            "name": "^0.4.25",
+            "source_mapping": {
+              "start": 112,
+              "length": 24,
+              "filename_relative": "Benchmarks/Study_SamplesSet/a908ce1a9fd14f49aac2d54a9eea0aca.sol",
+              "filename_absolute": "/home/shikah/Documents/PhD/VulDet/Benchmarks/Study_SamplesSet/a908ce1a9fd14f49aac2d54a9eea0aca.sol",
+              "filename_short": "Benchmarks/Study_SamplesSet/a908ce1a9fd14f49aac2d54a9eea0aca.sol",
+              "is_dependency": false,
+              "lines": [
+                7
+              ],
+              "starting_column": 1,
+              "ending_column": 25
+            },
+            "type_specific_fields": {
+              "directive": [
+                "solidity",
+                "^",
+                "0.4",
+                ".25"
+              ]
+            }
+          }
+        ],
+        "description": "Pragma version^0.4.25 (Benchmarks/Study_SamplesSet/a908ce1a9fd14f49aac2d54a9eea0aca.sol#7) allows old versions\n",
+        "markdown": "Pragma version[^0.4.25](Benchmarks/Study_SamplesSet/a908ce1a9fd14f49aac2d54a9eea0aca.sol#L7) allows old versions\n",
+        "first_markdown_element": "Benchmarks/Study_SamplesSet/a908ce1a9fd14f49aac2d54a9eea0aca.sol#L7",
+        "id": "27a38a5abd567ff6a0c70df26e26df9ddfc292bfd00908238b08af062510201a",
+        "check": "solc-version",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [],
+        "description": "solc-0.4.25 is not recommended for deployment\n",
+        "markdown": "solc-0.4.25 is not recommended for deployment\n",
+        "first_markdown_element": "",
+        "id": "4d64003d70a62b1c6963f871e841b6cbd633d07d95554e1a50e0f25d9b71ebb3",
+        "check": "solc-version",
+        "impact": "Informational",
+        "confidence": "High"
+      }
+    ]
+  }
+}

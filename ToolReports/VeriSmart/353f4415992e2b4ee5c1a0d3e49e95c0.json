@@ -1,0 +1,71 @@
+{
+  "fileName": "Benchmarks/Study_SamplesSet/353f4415992e2b4ee5c1a0d3e49e95c0.sol",
+  "baseName": "353f4415992e2b4ee5c1a0d3e49e95c0.sol",
+  "iter": 6,
+  "time": "1.222385",
+  "errMsg": null,
+  "result": [
+    {
+      "no": "1",
+      "kind": "IO",
+      "line": 24,
+      "signatures": [
+        { "contractName": "Wallet", "methodName": "deposit", "argTypes": [] }
+      ],
+      "exp": "(balances[msg.sender] + msg.value)",
+      "status": "unproven"
+    },
+    {
+      "no": "2",
+      "kind": "IO",
+      "line": 25,
+      "signatures": [
+        { "contractName": "Wallet", "methodName": "deposit", "argTypes": [] }
+      ],
+      "exp": "(balances[msg.sender] + msg.value)",
+      "status": "proven"
+    },
+    {
+      "no": "3",
+      "kind": "IO",
+      "line": 32,
+      "signatures": [
+        {
+          "contractName": "Wallet",
+          "methodName": "withdraw",
+          "argTypes": [ "uint256" ]
+        }
+      ],
+      "exp": "(balances[msg.sender] - amount)",
+      "status": "unproven"
+    },
+    {
+      "no": "4",
+      "kind": "ETH_LEAK",
+      "line": 31,
+      "signatures": [
+        {
+          "contractName": "Wallet",
+          "methodName": "withdraw",
+          "argTypes": [ "uint256" ]
+        }
+      ],
+      "exp": "msg.sender.transfer(amount);",
+      "status": "unproven"
+    },
+    {
+      "no": "5",
+      "kind": "ETH_LEAK",
+      "line": 39,
+      "signatures": [
+        {
+          "contractName": "Wallet",
+          "methodName": "migrateTo",
+          "argTypes": [ "address" ]
+        }
+      ],
+      "exp": "to.transfer(this.balance);",
+      "status": "proven"
+    }
+  ]
+}

@@ -1,0 +1,164 @@
+{
+  "fileName": "Benchmarks/Study_SamplesSet/41a6d7eb6b5b23d416ec8adc63dd5cb6.sol",
+  "baseName": "41a6d7eb6b5b23d416ec8adc63dd5cb6.sol",
+  "iter": 1,
+  "time": "424.093386",
+  "errMsg": null,
+  "result": [
+    {
+      "no": "1",
+      "kind": "IO",
+      "line": 9,
+      "signatures": [
+        {
+          "contractName": "SCCsale",
+          "methodName": "createTokens",
+          "argTypes": [ "address" ]
+        }
+      ],
+      "exp": "(a * b)",
+      "status": "unproven"
+    },
+    {
+      "no": "2",
+      "kind": "IO",
+      "line": 19,
+      "signatures": [
+        {
+          "contractName": "SCCsale",
+          "methodName": "transfer",
+          "argTypes": [ "address", "uint256" ]
+        },
+        {
+          "contractName": "SCCsale",
+          "methodName": "transferFrom",
+          "argTypes": [ "address", "address", "uint256" ]
+        }
+      ],
+      "exp": "(a - b)",
+      "status": "proven"
+    },
+    {
+      "no": "3",
+      "kind": "IO",
+      "line": 22,
+      "signatures": [
+        {
+          "contractName": "SCCsale",
+          "methodName": "createTokens",
+          "argTypes": [ "address" ]
+        },
+        {
+          "contractName": "SCCsale",
+          "methodName": "transfer",
+          "argTypes": [ "address", "uint256" ]
+        },
+        {
+          "contractName": "SCCsale",
+          "methodName": "transferFrom",
+          "argTypes": [ "address", "address", "uint256" ]
+        }
+      ],
+      "exp": "(a + b)",
+      "status": "unproven"
+    },
+    {
+      "no": "4",
+      "kind": "IO",
+      "line": 107,
+      "signatures": [
+        {
+          "contractName": "SCCsale",
+          "methodName": "createTokens",
+          "argTypes": [ "address" ]
+        }
+      ],
+      "exp": "(block.number - 1)",
+      "status": "unproven"
+    },
+    {
+      "no": "5",
+      "kind": "IO",
+      "line": 153,
+      "signatures": [
+        {
+          "contractName": "SCCsale",
+          "methodName": "SCCsale",
+          "argTypes": []
+        }
+      ],
+      "exp": "(now + 86400)",
+      "status": "unproven"
+    },
+    {
+      "no": "6",
+      "kind": "DZ",
+      "line": 10,
+      "signatures": [
+        {
+          "contractName": "SCCsale",
+          "methodName": "createTokens",
+          "argTypes": [ "address" ]
+        }
+      ],
+      "exp": "(c / a)",
+      "status": "proven"
+    },
+    {
+      "no": "7",
+      "kind": "DZ",
+      "line": 14,
+      "signatures": [
+        {
+          "contractName": "SCCsale",
+          "methodName": "createTokens",
+          "argTypes": [ "address" ]
+        }
+      ],
+      "exp": "(a / b)",
+      "status": "proven"
+    },
+    {
+      "no": "8",
+      "kind": "DZ",
+      "line": 107,
+      "signatures": [
+        {
+          "contractName": "SCCsale",
+          "methodName": "createTokens",
+          "argTypes": [ "address" ]
+        }
+      ],
+      "exp": "(uint256(keccak256(block.blockhash((block.number - 1)), tokens)) % 6)",
+      "status": "proven"
+    },
+    {
+      "no": "9",
+      "kind": "DZ",
+      "line": 120,
+      "signatures": [
+        {
+          "contractName": "SCCsale",
+          "methodName": "createTokens",
+          "argTypes": [ "address" ]
+        }
+      ],
+      "exp": "(block.number % 2)",
+      "status": "proven"
+    },
+    {
+      "no": "10",
+      "kind": "ETH_LEAK",
+      "line": 131,
+      "signatures": [
+        {
+          "contractName": "SCCsale",
+          "methodName": "createTokens",
+          "argTypes": [ "address" ]
+        }
+      ],
+      "exp": "owner.send(msg.value)",
+      "status": "unproven"
+    }
+  ]
+}

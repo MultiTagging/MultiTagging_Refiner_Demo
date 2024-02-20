@@ -1,0 +1,240 @@
+{
+  "fileName": "Benchmarks/Study_SamplesSet/07cbb747e4b2a4a9e71c59cb8b75cb33.sol",
+  "baseName": "07cbb747e4b2a4a9e71c59cb8b75cb33.sol",
+  "iter": 453,
+  "time": "300.282067",
+  "errMsg": null,
+  "result": [
+    {
+      "no": "1",
+      "kind": "IO",
+      "line": 17,
+      "signatures": [
+        {
+          "contractName": "DigitalEnthusiasts",
+          "methodName": "DigitalEnthusiasts",
+          "argTypes": []
+        },
+        {
+          "contractName": "DigitalEnthusiasts",
+          "methodName": "burn",
+          "argTypes": [ "uint256" ]
+        },
+        {
+          "contractName": "DigitalEnthusiasts",
+          "methodName": "distr",
+          "argTypes": [ "address", "uint256" ]
+        },
+        {
+          "contractName": "DigitalEnthusiasts",
+          "methodName": "transfer",
+          "argTypes": [ "address", "uint256" ]
+        },
+        {
+          "contractName": "DigitalEnthusiasts",
+          "methodName": "transferFrom",
+          "argTypes": [ "address", "address", "uint256" ]
+        }
+      ],
+      "exp": "(a - b)",
+      "status": "proven"
+    },
+    {
+      "no": "2",
+      "kind": "IO",
+      "line": 21,
+      "signatures": [
+        {
+          "contractName": "DigitalEnthusiasts",
+          "methodName": "distr",
+          "argTypes": [ "address", "uint256" ]
+        },
+        {
+          "contractName": "DigitalEnthusiasts",
+          "methodName": "transfer",
+          "argTypes": [ "address", "uint256" ]
+        },
+        {
+          "contractName": "DigitalEnthusiasts",
+          "methodName": "transferFrom",
+          "argTypes": [ "address", "address", "uint256" ]
+        }
+      ],
+      "exp": "(a + b)",
+      "status": "unproven"
+    },
+    {
+      "no": "3",
+      "kind": "IO",
+      "line": 66,
+      "signatures": [
+        {
+          "contractName": "DigitalEnthusiasts",
+          "methodName": "DigitalEnthusiasts",
+          "argTypes": []
+        }
+      ],
+      "exp": "(1000000000 * decimalsValue)",
+      "status": "proven"
+    },
+    {
+      "no": "4",
+      "kind": "IO",
+      "line": 95,
+      "signatures": [
+        {
+          "contractName": "DigitalEnthusiasts",
+          "methodName": "transfer",
+          "argTypes": [ "address", "uint256" ]
+        },
+        {
+          "contractName": "DigitalEnthusiasts",
+          "methodName": "transferFrom",
+          "argTypes": [ "address", "address", "uint256" ]
+        }
+      ],
+      "exp": "(size + 4)",
+      "status": "proven"
+    },
+    {
+      "no": "5",
+      "kind": "IO",
+      "line": 101,
+      "signatures": [
+        {
+          "contractName": "DigitalEnthusiasts",
+          "methodName": "DigitalEnthusiasts",
+          "argTypes": []
+        }
+      ],
+      "exp": "(300000000 * decimalsValue)",
+      "status": "proven"
+    },
+    {
+      "no": "6",
+      "kind": "IO",
+      "line": 111,
+      "signatures": [
+        {
+          "contractName": "DigitalEnthusiasts",
+          "methodName": "enableWhitelist",
+          "argTypes": [ "address[]" ]
+        }
+      ],
+      "exp": "(i + 1)",
+      "status": "proven"
+    },
+    {
+      "no": "7",
+      "kind": "IO",
+      "line": 117,
+      "signatures": [
+        {
+          "contractName": "DigitalEnthusiasts",
+          "methodName": "disableWhitelist",
+          "argTypes": [ "address[]" ]
+        }
+      ],
+      "exp": "(i + 1)",
+      "status": "proven"
+    },
+    {
+      "no": "8",
+      "kind": "IO",
+      "line": 138,
+      "signatures": [
+        {
+          "contractName": "DigitalEnthusiasts",
+          "methodName": "@fallback",
+          "argTypes": []
+        }
+      ],
+      "exp": "((2000 * decimalsValue) + (120000 * msg.value))",
+      "status": "unproven"
+    },
+    {
+      "no": "9",
+      "kind": "IO",
+      "line": 138,
+      "signatures": [
+        {
+          "contractName": "DigitalEnthusiasts",
+          "methodName": "@fallback",
+          "argTypes": []
+        }
+      ],
+      "exp": "(120000 * msg.value)",
+      "status": "unproven"
+    },
+    {
+      "no": "10",
+      "kind": "IO",
+      "line": 138,
+      "signatures": [
+        {
+          "contractName": "DigitalEnthusiasts",
+          "methodName": "@fallback",
+          "argTypes": []
+        }
+      ],
+      "exp": "(2000 * decimalsValue)",
+      "status": "proven"
+    },
+    {
+      "no": "11",
+      "kind": "IO",
+      "line": 161,
+      "signatures": [
+        {
+          "contractName": "DigitalEnthusiasts",
+          "methodName": "transfer",
+          "argTypes": [ "address", "uint256" ]
+        }
+      ],
+      "exp": "(2 * 32)",
+      "status": "proven"
+    },
+    {
+      "no": "12",
+      "kind": "IO",
+      "line": 171,
+      "signatures": [
+        {
+          "contractName": "DigitalEnthusiasts",
+          "methodName": "transferFrom",
+          "argTypes": [ "address", "address", "uint256" ]
+        }
+      ],
+      "exp": "(3 * 32)",
+      "status": "proven"
+    },
+    {
+      "no": "13",
+      "kind": "ETH_LEAK",
+      "line": 153,
+      "signatures": [
+        {
+          "contractName": "DigitalEnthusiasts",
+          "methodName": "@fallback",
+          "argTypes": []
+        }
+      ],
+      "exp": "owner.transfer(etherBalance);",
+      "status": "proven"
+    },
+    {
+      "no": "14",
+      "kind": "ETH_LEAK",
+      "line": 202,
+      "signatures": [
+        {
+          "contractName": "DigitalEnthusiasts",
+          "methodName": "withdraw",
+          "argTypes": []
+        }
+      ],
+      "exp": "owner.transfer(etherBalance);",
+      "status": "proven"
+    }
+  ]
+}

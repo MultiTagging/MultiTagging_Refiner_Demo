@@ -1,0 +1,163 @@
+{
+  "fileName": "Benchmarks/Study_SamplesSet/d915085730f97b522e278a4546aa03d1.sol",
+  "baseName": "d915085730f97b522e278a4546aa03d1.sol",
+  "iter": 1,
+  "time": "768.249527",
+  "errMsg": null,
+  "result": [
+    {
+      "no": "1",
+      "kind": "IO",
+      "line": 53,
+      "signatures": [
+        {
+          "contractName": "ETHLCrowdsale",
+          "methodName": "@fallback",
+          "argTypes": []
+        }
+      ],
+      "exp": "(msg.value * 2500)",
+      "status": "unproven"
+    },
+    {
+      "no": "2",
+      "kind": "IO",
+      "line": 58,
+      "signatures": [
+        {
+          "contractName": "ETHLCrowdsale",
+          "methodName": "@fallback",
+          "argTypes": []
+        }
+      ],
+      "exp": "(msg.value * 1250)",
+      "status": "unproven"
+    },
+    {
+      "no": "3",
+      "kind": "IO",
+      "line": 63,
+      "signatures": [
+        {
+          "contractName": "ETHLCrowdsale",
+          "methodName": "@fallback",
+          "argTypes": []
+        }
+      ],
+      "exp": "(msg.value * 833)",
+      "status": "unproven"
+    },
+    {
+      "no": "4",
+      "kind": "IO",
+      "line": 68,
+      "signatures": [
+        {
+          "contractName": "ETHLCrowdsale",
+          "methodName": "@fallback",
+          "argTypes": []
+        }
+      ],
+      "exp": "(msg.value * 416)",
+      "status": "unproven"
+    },
+    {
+      "no": "5",
+      "kind": "IO",
+      "line": 73,
+      "signatures": [
+        {
+          "contractName": "ETHLCrowdsale",
+          "methodName": "@fallback",
+          "argTypes": []
+        }
+      ],
+      "exp": "(msg.value * 357)",
+      "status": "unproven"
+    },
+    {
+      "no": "6",
+      "kind": "IO",
+      "line": 78,
+      "signatures": [
+        {
+          "contractName": "ETHLCrowdsale",
+          "methodName": "@fallback",
+          "argTypes": []
+        }
+      ],
+      "exp": "(msg.value * 333)",
+      "status": "unproven"
+    },
+    {
+      "no": "7",
+      "kind": "IO",
+      "line": 81,
+      "signatures": [
+        {
+          "contractName": "ETHLCrowdsale",
+          "methodName": "@fallback",
+          "argTypes": []
+        }
+      ],
+      "exp": "(tokenSold + (amount / 1000000000000000000))",
+      "status": "unproven"
+    },
+    {
+      "no": "8",
+      "kind": "DZ",
+      "line": 81,
+      "signatures": [
+        {
+          "contractName": "ETHLCrowdsale",
+          "methodName": "@fallback",
+          "argTypes": []
+        }
+      ],
+      "exp": "(amount / 1000000000000000000)",
+      "status": "proven"
+    },
+    {
+      "no": "9",
+      "kind": "KA",
+      "line": 44,
+      "signatures": [
+        {
+          "contractName": "ETHLCrowdsale",
+          "methodName": "kill",
+          "argTypes": []
+        }
+      ],
+      "exp": "selfdestruct(owner);",
+      "status": "unproven"
+    },
+    {
+      "no": "10",
+      "kind": "ETH_LEAK",
+      "line": 44,
+      "signatures": [
+        {
+          "contractName": "ETHLCrowdsale",
+          "methodName": "kill",
+          "argTypes": []
+        }
+      ],
+      "exp": "selfdestruct(owner);",
+      "status": "unproven"
+    },
+    {
+      "no": "11",
+      "kind": "ETH_LEAK",
+      "line": 84,
+      "signatures": [
+        {
+          "contractName": "ETHLCrowdsale",
+          "methodName": "@fallback",
+          "argTypes": []
+        }
+      ],
+      "exp": "owner.transfer(msg.value);",
+      "status": "unproven"
+    }
+  ]
+}

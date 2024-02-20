@@ -1,0 +1,1106 @@
+{
+  "success": true,
+  "error": null,
+  "results": {
+    "detectors": [
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "transfer",
+            "source_mapping": {
+              "start": 54,
+              "length": 392,
+              "filename_relative": "Benchmarks/Study_SamplesSet/33f2be2e1138eeb24108e39c23ed1aac.sol",
+              "filename_absolute": "/home/shikah/Documents/PhD/VulDet/Benchmarks/Study_SamplesSet/33f2be2e1138eeb24108e39c23ed1aac.sol",
+              "filename_short": "Benchmarks/Study_SamplesSet/33f2be2e1138eeb24108e39c23ed1aac.sol",
+              "is_dependency": false,
+              "lines": [
+                5,
+                6,
+                7,
+                8,
+                9,
+                10,
+                11,
+                12,
+                13
+              ],
+              "starting_column": 5,
+              "ending_column": 6
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "airDrop",
+                "source_mapping": {
+                  "start": 27,
+                  "length": 421,
+                  "filename_relative": "Benchmarks/Study_SamplesSet/33f2be2e1138eeb24108e39c23ed1aac.sol",
+                  "filename_absolute": "/home/shikah/Documents/PhD/VulDet/Benchmarks/Study_SamplesSet/33f2be2e1138eeb24108e39c23ed1aac.sol",
+                  "filename_short": "Benchmarks/Study_SamplesSet/33f2be2e1138eeb24108e39c23ed1aac.sol",
+                  "is_dependency": false,
+                  "lines": [
+                    3,
+                    4,
+                    5,
+                    6,
+                    7,
+                    8,
+                    9,
+                    10,
+                    11,
+                    12,
+                    13,
+                    14,
+                    15
+                  ],
+                  "starting_column": 1,
+                  "ending_column": 0
+                }
+              },
+              "signature": "transfer(address,address,address[],uint256,uint256)"
+            }
+          },
+          {
+            "type": "node",
+            "name": "caddress.call(id,from,_tos[i],_value)",
+            "source_mapping": {
+              "start": 371,
+              "length": 37,
+              "filename_relative": "Benchmarks/Study_SamplesSet/33f2be2e1138eeb24108e39c23ed1aac.sol",
+              "filename_absolute": "/home/shikah/Documents/PhD/VulDet/Benchmarks/Study_SamplesSet/33f2be2e1138eeb24108e39c23ed1aac.sol",
+              "filename_short": "Benchmarks/Study_SamplesSet/33f2be2e1138eeb24108e39c23ed1aac.sol",
+              "is_dependency": false,
+              "lines": [
+                10
+              ],
+              "starting_column": 13,
+              "ending_column": 50
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "transfer",
+                "source_mapping": {
+                  "start": 54,
+                  "length": 392,
+                  "filename_relative": "Benchmarks/Study_SamplesSet/33f2be2e1138eeb24108e39c23ed1aac.sol",
+                  "filename_absolute": "/home/shikah/Documents/PhD/VulDet/Benchmarks/Study_SamplesSet/33f2be2e1138eeb24108e39c23ed1aac.sol",
+                  "filename_short": "Benchmarks/Study_SamplesSet/33f2be2e1138eeb24108e39c23ed1aac.sol",
+                  "is_dependency": false,
+                  "lines": [
+                    5,
+                    6,
+                    7,
+                    8,
+                    9,
+                    10,
+                    11,
+                    12,
+                    13
+                  ],
+                  "starting_column": 5,
+                  "ending_column": 6
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "airDrop",
+                    "source_mapping": {
+                      "start": 27,
+                      "length": 421,
+                      "filename_relative": "Benchmarks/Study_SamplesSet/33f2be2e1138eeb24108e39c23ed1aac.sol",
+                      "filename_absolute": "/home/shikah/Documents/PhD/VulDet/Benchmarks/Study_SamplesSet/33f2be2e1138eeb24108e39c23ed1aac.sol",
+                      "filename_short": "Benchmarks/Study_SamplesSet/33f2be2e1138eeb24108e39c23ed1aac.sol",
+                      "is_dependency": false,
+                      "lines": [
+                        3,
+                        4,
+                        5,
+                        6,
+                        7,
+                        8,
+                        9,
+                        10,
+                        11,
+                        12,
+                        13,
+                        14,
+                        15
+                      ],
+                      "starting_column": 1,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "transfer(address,address,address[],uint256,uint256)"
+                }
+              }
+            }
+          }
+        ],
+        "description": "airDrop.transfer(address,address,address[],uint256,uint256) (Benchmarks/Study_SamplesSet/33f2be2e1138eeb24108e39c23ed1aac.sol#5-13) ignores return value by caddress.call(id,from,_tos[i],_value) (Benchmarks/Study_SamplesSet/33f2be2e1138eeb24108e39c23ed1aac.sol#10)\n",
+        "markdown": "[airDrop.transfer(address,address,address[],uint256,uint256)](Benchmarks/Study_SamplesSet/33f2be2e1138eeb24108e39c23ed1aac.sol#L5-L13) ignores return value by [caddress.call(id,from,_tos[i],_value)](Benchmarks/Study_SamplesSet/33f2be2e1138eeb24108e39c23ed1aac.sol#L10)\n",
+        "first_markdown_element": "Benchmarks/Study_SamplesSet/33f2be2e1138eeb24108e39c23ed1aac.sol#L5-L13",
+        "id": "87cc0c6786fae2af689e53048c2da10f134693415e9363dd3bdbae4bef6a1c87",
+        "check": "unchecked-lowlevel",
+        "impact": "Medium",
+        "confidence": "Medium"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "from",
+            "source_mapping": {
+              "start": 72,
+              "length": 12,
+              "filename_relative": "Benchmarks/Study_SamplesSet/33f2be2e1138eeb24108e39c23ed1aac.sol",
+              "filename_absolute": "/home/shikah/Documents/PhD/VulDet/Benchmarks/Study_SamplesSet/33f2be2e1138eeb24108e39c23ed1aac.sol",
+              "filename_short": "Benchmarks/Study_SamplesSet/33f2be2e1138eeb24108e39c23ed1aac.sol",
+              "is_dependency": false,
+              "lines": [
+                5
+              ],
+              "starting_column": 23,
+              "ending_column": 35
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "transfer",
+                "source_mapping": {
+                  "start": 54,
+                  "length": 392,
+                  "filename_relative": "Benchmarks/Study_SamplesSet/33f2be2e1138eeb24108e39c23ed1aac.sol",
+                  "filename_absolute": "/home/shikah/Documents/PhD/VulDet/Benchmarks/Study_SamplesSet/33f2be2e1138eeb24108e39c23ed1aac.sol",
+                  "filename_short": "Benchmarks/Study_SamplesSet/33f2be2e1138eeb24108e39c23ed1aac.sol",
+                  "is_dependency": false,
+                  "lines": [
+                    5,
+                    6,
+                    7,
+                    8,
+                    9,
+                    10,
+                    11,
+                    12,
+                    13
+                  ],
+                  "starting_column": 5,
+                  "ending_column": 6
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "airDrop",
+                    "source_mapping": {
+                      "start": 27,
+                      "length": 421,
+                      "filename_relative": "Benchmarks/Study_SamplesSet/33f2be2e1138eeb24108e39c23ed1aac.sol",
+                      "filename_absolute": "/home/shikah/Documents/PhD/VulDet/Benchmarks/Study_SamplesSet/33f2be2e1138eeb24108e39c23ed1aac.sol",
+                      "filename_short": "Benchmarks/Study_SamplesSet/33f2be2e1138eeb24108e39c23ed1aac.sol",
+                      "is_dependency": false,
+                      "lines": [
+                        3,
+                        4,
+                        5,
+                        6,
+                        7,
+                        8,
+                        9,
+                        10,
+                        11,
+                        12,
+                        13,
+                        14,
+                        15
+                      ],
+                      "starting_column": 1,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "transfer(address,address,address[],uint256,uint256)"
+                }
+              }
+            }
+          },
+          {
+            "type": "node",
+            "name": "caddress.call(id,from,_tos[i],_value)",
+            "source_mapping": {
+              "start": 371,
+              "length": 37,
+              "filename_relative": "Benchmarks/Study_SamplesSet/33f2be2e1138eeb24108e39c23ed1aac.sol",
+              "filename_absolute": "/home/shikah/Documents/PhD/VulDet/Benchmarks/Study_SamplesSet/33f2be2e1138eeb24108e39c23ed1aac.sol",
+              "filename_short": "Benchmarks/Study_SamplesSet/33f2be2e1138eeb24108e39c23ed1aac.sol",
+              "is_dependency": false,
+              "lines": [
+                10
+              ],
+              "starting_column": 13,
+              "ending_column": 50
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "transfer",
+                "source_mapping": {
+                  "start": 54,
+                  "length": 392,
+                  "filename_relative": "Benchmarks/Study_SamplesSet/33f2be2e1138eeb24108e39c23ed1aac.sol",
+                  "filename_absolute": "/home/shikah/Documents/PhD/VulDet/Benchmarks/Study_SamplesSet/33f2be2e1138eeb24108e39c23ed1aac.sol",
+                  "filename_short": "Benchmarks/Study_SamplesSet/33f2be2e1138eeb24108e39c23ed1aac.sol",
+                  "is_dependency": false,
+                  "lines": [
+                    5,
+                    6,
+                    7,
+                    8,
+                    9,
+                    10,
+                    11,
+                    12,
+                    13
+                  ],
+                  "starting_column": 5,
+                  "ending_column": 6
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "airDrop",
+                    "source_mapping": {
+                      "start": 27,
+                      "length": 421,
+                      "filename_relative": "Benchmarks/Study_SamplesSet/33f2be2e1138eeb24108e39c23ed1aac.sol",
+                      "filename_absolute": "/home/shikah/Documents/PhD/VulDet/Benchmarks/Study_SamplesSet/33f2be2e1138eeb24108e39c23ed1aac.sol",
+                      "filename_short": "Benchmarks/Study_SamplesSet/33f2be2e1138eeb24108e39c23ed1aac.sol",
+                      "is_dependency": false,
+                      "lines": [
+                        3,
+                        4,
+                        5,
+                        6,
+                        7,
+                        8,
+                        9,
+                        10,
+                        11,
+                        12,
+                        13,
+                        14,
+                        15
+                      ],
+                      "starting_column": 1,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "transfer(address,address,address[],uint256,uint256)"
+                }
+              }
+            }
+          }
+        ],
+        "description": "airDrop.transfer(address,address,address[],uint256,uint256).from (Benchmarks/Study_SamplesSet/33f2be2e1138eeb24108e39c23ed1aac.sol#5) lacks a zero-check on :\n\t\t- caddress.call(id,from,_tos[i],_value) (Benchmarks/Study_SamplesSet/33f2be2e1138eeb24108e39c23ed1aac.sol#10)\n",
+        "markdown": "[airDrop.transfer(address,address,address[],uint256,uint256).from](Benchmarks/Study_SamplesSet/33f2be2e1138eeb24108e39c23ed1aac.sol#L5) lacks a zero-check on :\n\t\t- [caddress.call(id,from,_tos[i],_value)](Benchmarks/Study_SamplesSet/33f2be2e1138eeb24108e39c23ed1aac.sol#L10)\n",
+        "first_markdown_element": "Benchmarks/Study_SamplesSet/33f2be2e1138eeb24108e39c23ed1aac.sol#L5",
+        "id": "a96ccf485e147c01fd7591dee099aec588857b70d748ec3011ac43558f521a80",
+        "check": "missing-zero-check",
+        "impact": "Low",
+        "confidence": "Medium"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "caddress",
+            "source_mapping": {
+              "start": 85,
+              "length": 16,
+              "filename_relative": "Benchmarks/Study_SamplesSet/33f2be2e1138eeb24108e39c23ed1aac.sol",
+              "filename_absolute": "/home/shikah/Documents/PhD/VulDet/Benchmarks/Study_SamplesSet/33f2be2e1138eeb24108e39c23ed1aac.sol",
+              "filename_short": "Benchmarks/Study_SamplesSet/33f2be2e1138eeb24108e39c23ed1aac.sol",
+              "is_dependency": false,
+              "lines": [
+                5
+              ],
+              "starting_column": 36,
+              "ending_column": 52
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "transfer",
+                "source_mapping": {
+                  "start": 54,
+                  "length": 392,
+                  "filename_relative": "Benchmarks/Study_SamplesSet/33f2be2e1138eeb24108e39c23ed1aac.sol",
+                  "filename_absolute": "/home/shikah/Documents/PhD/VulDet/Benchmarks/Study_SamplesSet/33f2be2e1138eeb24108e39c23ed1aac.sol",
+                  "filename_short": "Benchmarks/Study_SamplesSet/33f2be2e1138eeb24108e39c23ed1aac.sol",
+                  "is_dependency": false,
+                  "lines": [
+                    5,
+                    6,
+                    7,
+                    8,
+                    9,
+                    10,
+                    11,
+                    12,
+                    13
+                  ],
+                  "starting_column": 5,
+                  "ending_column": 6
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "airDrop",
+                    "source_mapping": {
+                      "start": 27,
+                      "length": 421,
+                      "filename_relative": "Benchmarks/Study_SamplesSet/33f2be2e1138eeb24108e39c23ed1aac.sol",
+                      "filename_absolute": "/home/shikah/Documents/PhD/VulDet/Benchmarks/Study_SamplesSet/33f2be2e1138eeb24108e39c23ed1aac.sol",
+                      "filename_short": "Benchmarks/Study_SamplesSet/33f2be2e1138eeb24108e39c23ed1aac.sol",
+                      "is_dependency": false,
+                      "lines": [
+                        3,
+                        4,
+                        5,
+                        6,
+                        7,
+                        8,
+                        9,
+                        10,
+                        11,
+                        12,
+                        13,
+                        14,
+                        15
+                      ],
+                      "starting_column": 1,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "transfer(address,address,address[],uint256,uint256)"
+                }
+              }
+            }
+          },
+          {
+            "type": "node",
+            "name": "caddress.call(id,from,_tos[i],_value)",
+            "source_mapping": {
+              "start": 371,
+              "length": 37,
+              "filename_relative": "Benchmarks/Study_SamplesSet/33f2be2e1138eeb24108e39c23ed1aac.sol",
+              "filename_absolute": "/home/shikah/Documents/PhD/VulDet/Benchmarks/Study_SamplesSet/33f2be2e1138eeb24108e39c23ed1aac.sol",
+              "filename_short": "Benchmarks/Study_SamplesSet/33f2be2e1138eeb24108e39c23ed1aac.sol",
+              "is_dependency": false,
+              "lines": [
+                10
+              ],
+              "starting_column": 13,
+              "ending_column": 50
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "transfer",
+                "source_mapping": {
+                  "start": 54,
+                  "length": 392,
+                  "filename_relative": "Benchmarks/Study_SamplesSet/33f2be2e1138eeb24108e39c23ed1aac.sol",
+                  "filename_absolute": "/home/shikah/Documents/PhD/VulDet/Benchmarks/Study_SamplesSet/33f2be2e1138eeb24108e39c23ed1aac.sol",
+                  "filename_short": "Benchmarks/Study_SamplesSet/33f2be2e1138eeb24108e39c23ed1aac.sol",
+                  "is_dependency": false,
+                  "lines": [
+                    5,
+                    6,
+                    7,
+                    8,
+                    9,
+                    10,
+                    11,
+                    12,
+                    13
+                  ],
+                  "starting_column": 5,
+                  "ending_column": 6
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "airDrop",
+                    "source_mapping": {
+                      "start": 27,
+                      "length": 421,
+                      "filename_relative": "Benchmarks/Study_SamplesSet/33f2be2e1138eeb24108e39c23ed1aac.sol",
+                      "filename_absolute": "/home/shikah/Documents/PhD/VulDet/Benchmarks/Study_SamplesSet/33f2be2e1138eeb24108e39c23ed1aac.sol",
+                      "filename_short": "Benchmarks/Study_SamplesSet/33f2be2e1138eeb24108e39c23ed1aac.sol",
+                      "is_dependency": false,
+                      "lines": [
+                        3,
+                        4,
+                        5,
+                        6,
+                        7,
+                        8,
+                        9,
+                        10,
+                        11,
+                        12,
+                        13,
+                        14,
+                        15
+                      ],
+                      "starting_column": 1,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "transfer(address,address,address[],uint256,uint256)"
+                }
+              }
+            }
+          }
+        ],
+        "description": "airDrop.transfer(address,address,address[],uint256,uint256).caddress (Benchmarks/Study_SamplesSet/33f2be2e1138eeb24108e39c23ed1aac.sol#5) lacks a zero-check on :\n\t\t- caddress.call(id,from,_tos[i],_value) (Benchmarks/Study_SamplesSet/33f2be2e1138eeb24108e39c23ed1aac.sol#10)\n",
+        "markdown": "[airDrop.transfer(address,address,address[],uint256,uint256).caddress](Benchmarks/Study_SamplesSet/33f2be2e1138eeb24108e39c23ed1aac.sol#L5) lacks a zero-check on :\n\t\t- [caddress.call(id,from,_tos[i],_value)](Benchmarks/Study_SamplesSet/33f2be2e1138eeb24108e39c23ed1aac.sol#L10)\n",
+        "first_markdown_element": "Benchmarks/Study_SamplesSet/33f2be2e1138eeb24108e39c23ed1aac.sol#L5",
+        "id": "b6080e77af944c11616176b8a39b4cce9df0310a41e787fabd5687b9112b66b8",
+        "check": "missing-zero-check",
+        "impact": "Low",
+        "confidence": "Medium"
+      },
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "transfer",
+            "source_mapping": {
+              "start": 54,
+              "length": 392,
+              "filename_relative": "Benchmarks/Study_SamplesSet/33f2be2e1138eeb24108e39c23ed1aac.sol",
+              "filename_absolute": "/home/shikah/Documents/PhD/VulDet/Benchmarks/Study_SamplesSet/33f2be2e1138eeb24108e39c23ed1aac.sol",
+              "filename_short": "Benchmarks/Study_SamplesSet/33f2be2e1138eeb24108e39c23ed1aac.sol",
+              "is_dependency": false,
+              "lines": [
+                5,
+                6,
+                7,
+                8,
+                9,
+                10,
+                11,
+                12,
+                13
+              ],
+              "starting_column": 5,
+              "ending_column": 6
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "airDrop",
+                "source_mapping": {
+                  "start": 27,
+                  "length": 421,
+                  "filename_relative": "Benchmarks/Study_SamplesSet/33f2be2e1138eeb24108e39c23ed1aac.sol",
+                  "filename_absolute": "/home/shikah/Documents/PhD/VulDet/Benchmarks/Study_SamplesSet/33f2be2e1138eeb24108e39c23ed1aac.sol",
+                  "filename_short": "Benchmarks/Study_SamplesSet/33f2be2e1138eeb24108e39c23ed1aac.sol",
+                  "is_dependency": false,
+                  "lines": [
+                    3,
+                    4,
+                    5,
+                    6,
+                    7,
+                    8,
+                    9,
+                    10,
+                    11,
+                    12,
+                    13,
+                    14,
+                    15
+                  ],
+                  "starting_column": 1,
+                  "ending_column": 0
+                }
+              },
+              "signature": "transfer(address,address,address[],uint256,uint256)"
+            }
+          },
+          {
+            "type": "node",
+            "name": "caddress.call(id,from,_tos[i],_value)",
+            "source_mapping": {
+              "start": 371,
+              "length": 37,
+              "filename_relative": "Benchmarks/Study_SamplesSet/33f2be2e1138eeb24108e39c23ed1aac.sol",
+              "filename_absolute": "/home/shikah/Documents/PhD/VulDet/Benchmarks/Study_SamplesSet/33f2be2e1138eeb24108e39c23ed1aac.sol",
+              "filename_short": "Benchmarks/Study_SamplesSet/33f2be2e1138eeb24108e39c23ed1aac.sol",
+              "is_dependency": false,
+              "lines": [
+                10
+              ],
+              "starting_column": 13,
+              "ending_column": 50
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "transfer",
+                "source_mapping": {
+                  "start": 54,
+                  "length": 392,
+                  "filename_relative": "Benchmarks/Study_SamplesSet/33f2be2e1138eeb24108e39c23ed1aac.sol",
+                  "filename_absolute": "/home/shikah/Documents/PhD/VulDet/Benchmarks/Study_SamplesSet/33f2be2e1138eeb24108e39c23ed1aac.sol",
+                  "filename_short": "Benchmarks/Study_SamplesSet/33f2be2e1138eeb24108e39c23ed1aac.sol",
+                  "is_dependency": false,
+                  "lines": [
+                    5,
+                    6,
+                    7,
+                    8,
+                    9,
+                    10,
+                    11,
+                    12,
+                    13
+                  ],
+                  "starting_column": 5,
+                  "ending_column": 6
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "airDrop",
+                    "source_mapping": {
+                      "start": 27,
+                      "length": 421,
+                      "filename_relative": "Benchmarks/Study_SamplesSet/33f2be2e1138eeb24108e39c23ed1aac.sol",
+                      "filename_absolute": "/home/shikah/Documents/PhD/VulDet/Benchmarks/Study_SamplesSet/33f2be2e1138eeb24108e39c23ed1aac.sol",
+                      "filename_short": "Benchmarks/Study_SamplesSet/33f2be2e1138eeb24108e39c23ed1aac.sol",
+                      "is_dependency": false,
+                      "lines": [
+                        3,
+                        4,
+                        5,
+                        6,
+                        7,
+                        8,
+                        9,
+                        10,
+                        11,
+                        12,
+                        13,
+                        14,
+                        15
+                      ],
+                      "starting_column": 1,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "transfer(address,address,address[],uint256,uint256)"
+                }
+              }
+            }
+          }
+        ],
+        "description": "airDrop.transfer(address,address,address[],uint256,uint256) (Benchmarks/Study_SamplesSet/33f2be2e1138eeb24108e39c23ed1aac.sol#5-13) has external calls inside a loop: caddress.call(id,from,_tos[i],_value) (Benchmarks/Study_SamplesSet/33f2be2e1138eeb24108e39c23ed1aac.sol#10)\n",
+        "markdown": "[airDrop.transfer(address,address,address[],uint256,uint256)](Benchmarks/Study_SamplesSet/33f2be2e1138eeb24108e39c23ed1aac.sol#L5-L13) has external calls inside a loop: [caddress.call(id,from,_tos[i],_value)](Benchmarks/Study_SamplesSet/33f2be2e1138eeb24108e39c23ed1aac.sol#L10)\n",
+        "first_markdown_element": "Benchmarks/Study_SamplesSet/33f2be2e1138eeb24108e39c23ed1aac.sol#L5-L13",
+        "id": "f9c9db1147a42cff009ffa2683af7e346f163a137cac36a644d8a64fd5a56b10",
+        "check": "calls-loop",
+        "impact": "Low",
+        "confidence": "Medium"
+      },
+      {
+        "elements": [],
+        "description": "solc-0.4.24 is not recommended for deployment\n",
+        "markdown": "solc-0.4.24 is not recommended for deployment\n",
+        "first_markdown_element": "",
+        "id": "4fdaa1943fda7c6196f21cde2a89972a5de2e49314548f4161996d6ef6af4a38",
+        "check": "solc-version",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "pragma",
+            "name": "^0.4.24",
+            "source_mapping": {
+              "start": 0,
+              "length": 24,
+              "filename_relative": "Benchmarks/Study_SamplesSet/33f2be2e1138eeb24108e39c23ed1aac.sol",
+              "filename_absolute": "/home/shikah/Documents/PhD/VulDet/Benchmarks/Study_SamplesSet/33f2be2e1138eeb24108e39c23ed1aac.sol",
+              "filename_short": "Benchmarks/Study_SamplesSet/33f2be2e1138eeb24108e39c23ed1aac.sol",
+              "is_dependency": false,
+              "lines": [
+                1
+              ],
+              "starting_column": 1,
+              "ending_column": 25
+            },
+            "type_specific_fields": {
+              "directive": [
+                "solidity",
+                "^",
+                "0.4",
+                ".24"
+              ]
+            }
+          }
+        ],
+        "description": "Pragma version^0.4.24 (Benchmarks/Study_SamplesSet/33f2be2e1138eeb24108e39c23ed1aac.sol#1) allows old versions\n",
+        "markdown": "Pragma version[^0.4.24](Benchmarks/Study_SamplesSet/33f2be2e1138eeb24108e39c23ed1aac.sol#L1) allows old versions\n",
+        "first_markdown_element": "Benchmarks/Study_SamplesSet/33f2be2e1138eeb24108e39c23ed1aac.sol#L1",
+        "id": "ad0bcd58bd239bf4d8219651bdf2296b4c8204a8d9bc9c15f0fedd84897d26b3",
+        "check": "solc-version",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "transfer",
+            "source_mapping": {
+              "start": 54,
+              "length": 392,
+              "filename_relative": "Benchmarks/Study_SamplesSet/33f2be2e1138eeb24108e39c23ed1aac.sol",
+              "filename_absolute": "/home/shikah/Documents/PhD/VulDet/Benchmarks/Study_SamplesSet/33f2be2e1138eeb24108e39c23ed1aac.sol",
+              "filename_short": "Benchmarks/Study_SamplesSet/33f2be2e1138eeb24108e39c23ed1aac.sol",
+              "is_dependency": false,
+              "lines": [
+                5,
+                6,
+                7,
+                8,
+                9,
+                10,
+                11,
+                12,
+                13
+              ],
+              "starting_column": 5,
+              "ending_column": 6
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "airDrop",
+                "source_mapping": {
+                  "start": 27,
+                  "length": 421,
+                  "filename_relative": "Benchmarks/Study_SamplesSet/33f2be2e1138eeb24108e39c23ed1aac.sol",
+                  "filename_absolute": "/home/shikah/Documents/PhD/VulDet/Benchmarks/Study_SamplesSet/33f2be2e1138eeb24108e39c23ed1aac.sol",
+                  "filename_short": "Benchmarks/Study_SamplesSet/33f2be2e1138eeb24108e39c23ed1aac.sol",
+                  "is_dependency": false,
+                  "lines": [
+                    3,
+                    4,
+                    5,
+                    6,
+                    7,
+                    8,
+                    9,
+                    10,
+                    11,
+                    12,
+                    13,
+                    14,
+                    15
+                  ],
+                  "starting_column": 1,
+                  "ending_column": 0
+                }
+              },
+              "signature": "transfer(address,address,address[],uint256,uint256)"
+            }
+          },
+          {
+            "type": "node",
+            "name": "caddress.call(id,from,_tos[i],_value)",
+            "source_mapping": {
+              "start": 371,
+              "length": 37,
+              "filename_relative": "Benchmarks/Study_SamplesSet/33f2be2e1138eeb24108e39c23ed1aac.sol",
+              "filename_absolute": "/home/shikah/Documents/PhD/VulDet/Benchmarks/Study_SamplesSet/33f2be2e1138eeb24108e39c23ed1aac.sol",
+              "filename_short": "Benchmarks/Study_SamplesSet/33f2be2e1138eeb24108e39c23ed1aac.sol",
+              "is_dependency": false,
+              "lines": [
+                10
+              ],
+              "starting_column": 13,
+              "ending_column": 50
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "transfer",
+                "source_mapping": {
+                  "start": 54,
+                  "length": 392,
+                  "filename_relative": "Benchmarks/Study_SamplesSet/33f2be2e1138eeb24108e39c23ed1aac.sol",
+                  "filename_absolute": "/home/shikah/Documents/PhD/VulDet/Benchmarks/Study_SamplesSet/33f2be2e1138eeb24108e39c23ed1aac.sol",
+                  "filename_short": "Benchmarks/Study_SamplesSet/33f2be2e1138eeb24108e39c23ed1aac.sol",
+                  "is_dependency": false,
+                  "lines": [
+                    5,
+                    6,
+                    7,
+                    8,
+                    9,
+                    10,
+                    11,
+                    12,
+                    13
+                  ],
+                  "starting_column": 5,
+                  "ending_column": 6
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "airDrop",
+                    "source_mapping": {
+                      "start": 27,
+                      "length": 421,
+                      "filename_relative": "Benchmarks/Study_SamplesSet/33f2be2e1138eeb24108e39c23ed1aac.sol",
+                      "filename_absolute": "/home/shikah/Documents/PhD/VulDet/Benchmarks/Study_SamplesSet/33f2be2e1138eeb24108e39c23ed1aac.sol",
+                      "filename_short": "Benchmarks/Study_SamplesSet/33f2be2e1138eeb24108e39c23ed1aac.sol",
+                      "is_dependency": false,
+                      "lines": [
+                        3,
+                        4,
+                        5,
+                        6,
+                        7,
+                        8,
+                        9,
+                        10,
+                        11,
+                        12,
+                        13,
+                        14,
+                        15
+                      ],
+                      "starting_column": 1,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "transfer(address,address,address[],uint256,uint256)"
+                }
+              }
+            }
+          }
+        ],
+        "description": "Low level call in airDrop.transfer(address,address,address[],uint256,uint256) (Benchmarks/Study_SamplesSet/33f2be2e1138eeb24108e39c23ed1aac.sol#5-13):\n\t- caddress.call(id,from,_tos[i],_value) (Benchmarks/Study_SamplesSet/33f2be2e1138eeb24108e39c23ed1aac.sol#10)\n",
+        "markdown": "Low level call in [airDrop.transfer(address,address,address[],uint256,uint256)](Benchmarks/Study_SamplesSet/33f2be2e1138eeb24108e39c23ed1aac.sol#L5-L13):\n\t- [caddress.call(id,from,_tos[i],_value)](Benchmarks/Study_SamplesSet/33f2be2e1138eeb24108e39c23ed1aac.sol#L10)\n",
+        "first_markdown_element": "Benchmarks/Study_SamplesSet/33f2be2e1138eeb24108e39c23ed1aac.sol#L5-L13",
+        "id": "824b9cac6ee9c2f65044ce7a7bd50a50b6aedbecf1c4306841e3f98b2e20be90",
+        "check": "low-level-calls",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "_decimals",
+            "source_mapping": {
+              "start": 125,
+              "length": 14,
+              "filename_relative": "Benchmarks/Study_SamplesSet/33f2be2e1138eeb24108e39c23ed1aac.sol",
+              "filename_absolute": "/home/shikah/Documents/PhD/VulDet/Benchmarks/Study_SamplesSet/33f2be2e1138eeb24108e39c23ed1aac.sol",
+              "filename_short": "Benchmarks/Study_SamplesSet/33f2be2e1138eeb24108e39c23ed1aac.sol",
+              "is_dependency": false,
+              "lines": [
+                5
+              ],
+              "starting_column": 76,
+              "ending_column": 90
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "transfer",
+                "source_mapping": {
+                  "start": 54,
+                  "length": 392,
+                  "filename_relative": "Benchmarks/Study_SamplesSet/33f2be2e1138eeb24108e39c23ed1aac.sol",
+                  "filename_absolute": "/home/shikah/Documents/PhD/VulDet/Benchmarks/Study_SamplesSet/33f2be2e1138eeb24108e39c23ed1aac.sol",
+                  "filename_short": "Benchmarks/Study_SamplesSet/33f2be2e1138eeb24108e39c23ed1aac.sol",
+                  "is_dependency": false,
+                  "lines": [
+                    5,
+                    6,
+                    7,
+                    8,
+                    9,
+                    10,
+                    11,
+                    12,
+                    13
+                  ],
+                  "starting_column": 5,
+                  "ending_column": 6
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "airDrop",
+                    "source_mapping": {
+                      "start": 27,
+                      "length": 421,
+                      "filename_relative": "Benchmarks/Study_SamplesSet/33f2be2e1138eeb24108e39c23ed1aac.sol",
+                      "filename_absolute": "/home/shikah/Documents/PhD/VulDet/Benchmarks/Study_SamplesSet/33f2be2e1138eeb24108e39c23ed1aac.sol",
+                      "filename_short": "Benchmarks/Study_SamplesSet/33f2be2e1138eeb24108e39c23ed1aac.sol",
+                      "is_dependency": false,
+                      "lines": [
+                        3,
+                        4,
+                        5,
+                        6,
+                        7,
+                        8,
+                        9,
+                        10,
+                        11,
+                        12,
+                        13,
+                        14,
+                        15
+                      ],
+                      "starting_column": 1,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "transfer(address,address,address[],uint256,uint256)"
+                }
+              }
+            },
+            "additional_fields": {
+              "target": "parameter",
+              "convention": "mixedCase"
+            }
+          }
+        ],
+        "description": "Parameter airDrop.transfer(address,address,address[],uint256,uint256)._decimals (Benchmarks/Study_SamplesSet/33f2be2e1138eeb24108e39c23ed1aac.sol#5) is not in mixedCase\n",
+        "markdown": "Parameter [airDrop.transfer(address,address,address[],uint256,uint256)._decimals](Benchmarks/Study_SamplesSet/33f2be2e1138eeb24108e39c23ed1aac.sol#L5) is not in mixedCase\n",
+        "first_markdown_element": "Benchmarks/Study_SamplesSet/33f2be2e1138eeb24108e39c23ed1aac.sol#L5",
+        "id": "0dcb527d7cf73d6cce7839ceb21a94d069e409fb0eb0a311d81b704070f8e895",
+        "check": "naming-convention",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "_tos",
+            "source_mapping": {
+              "start": 102,
+              "length": 14,
+              "filename_relative": "Benchmarks/Study_SamplesSet/33f2be2e1138eeb24108e39c23ed1aac.sol",
+              "filename_absolute": "/home/shikah/Documents/PhD/VulDet/Benchmarks/Study_SamplesSet/33f2be2e1138eeb24108e39c23ed1aac.sol",
+              "filename_short": "Benchmarks/Study_SamplesSet/33f2be2e1138eeb24108e39c23ed1aac.sol",
+              "is_dependency": false,
+              "lines": [
+                5
+              ],
+              "starting_column": 53,
+              "ending_column": 67
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "transfer",
+                "source_mapping": {
+                  "start": 54,
+                  "length": 392,
+                  "filename_relative": "Benchmarks/Study_SamplesSet/33f2be2e1138eeb24108e39c23ed1aac.sol",
+                  "filename_absolute": "/home/shikah/Documents/PhD/VulDet/Benchmarks/Study_SamplesSet/33f2be2e1138eeb24108e39c23ed1aac.sol",
+                  "filename_short": "Benchmarks/Study_SamplesSet/33f2be2e1138eeb24108e39c23ed1aac.sol",
+                  "is_dependency": false,
+                  "lines": [
+                    5,
+                    6,
+                    7,
+                    8,
+                    9,
+                    10,
+                    11,
+                    12,
+                    13
+                  ],
+                  "starting_column": 5,
+                  "ending_column": 6
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "airDrop",
+                    "source_mapping": {
+                      "start": 27,
+                      "length": 421,
+                      "filename_relative": "Benchmarks/Study_SamplesSet/33f2be2e1138eeb24108e39c23ed1aac.sol",
+                      "filename_absolute": "/home/shikah/Documents/PhD/VulDet/Benchmarks/Study_SamplesSet/33f2be2e1138eeb24108e39c23ed1aac.sol",
+                      "filename_short": "Benchmarks/Study_SamplesSet/33f2be2e1138eeb24108e39c23ed1aac.sol",
+                      "is_dependency": false,
+                      "lines": [
+                        3,
+                        4,
+                        5,
+                        6,
+                        7,
+                        8,
+                        9,
+                        10,
+                        11,
+                        12,
+                        13,
+                        14,
+                        15
+                      ],
+                      "starting_column": 1,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "transfer(address,address,address[],uint256,uint256)"
+                }
+              }
+            },
+            "additional_fields": {
+              "target": "parameter",
+              "convention": "mixedCase"
+            }
+          }
+        ],
+        "description": "Parameter airDrop.transfer(address,address,address[],uint256,uint256)._tos (Benchmarks/Study_SamplesSet/33f2be2e1138eeb24108e39c23ed1aac.sol#5) is not in mixedCase\n",
+        "markdown": "Parameter [airDrop.transfer(address,address,address[],uint256,uint256)._tos](Benchmarks/Study_SamplesSet/33f2be2e1138eeb24108e39c23ed1aac.sol#L5) is not in mixedCase\n",
+        "first_markdown_element": "Benchmarks/Study_SamplesSet/33f2be2e1138eeb24108e39c23ed1aac.sol#L5",
+        "id": "42b7c1bdbcee4727409a7b0658fac49f24841d25a0ea0f12bfe97521ef265971",
+        "check": "naming-convention",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "contract",
+            "name": "airDrop",
+            "source_mapping": {
+              "start": 27,
+              "length": 421,
+              "filename_relative": "Benchmarks/Study_SamplesSet/33f2be2e1138eeb24108e39c23ed1aac.sol",
+              "filename_absolute": "/home/shikah/Documents/PhD/VulDet/Benchmarks/Study_SamplesSet/33f2be2e1138eeb24108e39c23ed1aac.sol",
+              "filename_short": "Benchmarks/Study_SamplesSet/33f2be2e1138eeb24108e39c23ed1aac.sol",
+              "is_dependency": false,
+              "lines": [
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10,
+                11,
+                12,
+                13,
+                14,
+                15
+              ],
+              "starting_column": 1,
+              "ending_column": 0
+            },
+            "additional_fields": {
+              "target": "contract",
+              "convention": "CapWords"
+            }
+          }
+        ],
+        "description": "Contract airDrop (Benchmarks/Study_SamplesSet/33f2be2e1138eeb24108e39c23ed1aac.sol#3-15) is not in CapWords\n",
+        "markdown": "Contract [airDrop](Benchmarks/Study_SamplesSet/33f2be2e1138eeb24108e39c23ed1aac.sol#L3-L15) is not in CapWords\n",
+        "first_markdown_element": "Benchmarks/Study_SamplesSet/33f2be2e1138eeb24108e39c23ed1aac.sol#L3-L15",
+        "id": "5eab801c3d928fd25e62df1f28704b4663f0d12a37732c04ab0495af04253efe",
+        "check": "naming-convention",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "transfer",
+            "source_mapping": {
+              "start": 54,
+              "length": 392,
+              "filename_relative": "Benchmarks/Study_SamplesSet/33f2be2e1138eeb24108e39c23ed1aac.sol",
+              "filename_absolute": "/home/shikah/Documents/PhD/VulDet/Benchmarks/Study_SamplesSet/33f2be2e1138eeb24108e39c23ed1aac.sol",
+              "filename_short": "Benchmarks/Study_SamplesSet/33f2be2e1138eeb24108e39c23ed1aac.sol",
+              "is_dependency": false,
+              "lines": [
+                5,
+                6,
+                7,
+                8,
+                9,
+                10,
+                11,
+                12,
+                13
+              ],
+              "starting_column": 5,
+              "ending_column": 6
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "airDrop",
+                "source_mapping": {
+                  "start": 27,
+                  "length": 421,
+                  "filename_relative": "Benchmarks/Study_SamplesSet/33f2be2e1138eeb24108e39c23ed1aac.sol",
+                  "filename_absolute": "/home/shikah/Documents/PhD/VulDet/Benchmarks/Study_SamplesSet/33f2be2e1138eeb24108e39c23ed1aac.sol",
+                  "filename_short": "Benchmarks/Study_SamplesSet/33f2be2e1138eeb24108e39c23ed1aac.sol",
+                  "is_dependency": false,
+                  "lines": [
+                    3,
+                    4,
+                    5,
+                    6,
+                    7,
+                    8,
+                    9,
+                    10,
+                    11,
+                    12,
+                    13,
+                    14,
+                    15
+                  ],
+                  "starting_column": 1,
+                  "ending_column": 0
+                }
+              },
+              "signature": "transfer(address,address,address[],uint256,uint256)"
+            }
+          }
+        ],
+        "description": "transfer(address,address,address[],uint256,uint256) should be declared external:\n\t- airDrop.transfer(address,address,address[],uint256,uint256) (Benchmarks/Study_SamplesSet/33f2be2e1138eeb24108e39c23ed1aac.sol#5-13)\n",
+        "markdown": "transfer(address,address,address[],uint256,uint256) should be declared external:\n\t- [airDrop.transfer(address,address,address[],uint256,uint256)](Benchmarks/Study_SamplesSet/33f2be2e1138eeb24108e39c23ed1aac.sol#L5-L13)\n",
+        "first_markdown_element": "Benchmarks/Study_SamplesSet/33f2be2e1138eeb24108e39c23ed1aac.sol#L5-L13",
+        "id": "b6b45682e53207a0d354d698745a9ed7596ceb77fce23b99179677370cb1bed1",
+        "check": "external-function",
+        "impact": "Optimization",
+        "confidence": "High"
+      }
+    ]
+  }
+}

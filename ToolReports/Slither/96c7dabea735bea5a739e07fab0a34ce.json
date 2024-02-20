@@ -1,0 +1,1734 @@
+{
+  "success": true,
+  "error": null,
+  "results": {
+    "detectors": [
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "delegate",
+            "source_mapping": {
+              "start": 116,
+              "length": 67,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "Owned",
+                "source_mapping": {
+                  "start": 24,
+                  "length": 223,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              },
+              "signature": "delegate(address)"
+            }
+          },
+          {
+            "type": "node",
+            "name": "owner = _owner",
+            "source_mapping": {
+              "start": 166,
+              "length": 14,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "delegate",
+                "source_mapping": {
+                  "start": 116,
+                  "length": 67,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "Owned",
+                    "source_mapping": {
+                      "start": 24,
+                      "length": 223,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "delegate(address)"
+                }
+              }
+            }
+          }
+        ],
+        "description": "Owned.delegate(address) () should emit an event for: \n\t- owner = _owner () \n",
+        "markdown": "[Owned.delegate(address)]() should emit an event for: \n\t- [owner = _owner]() \n",
+        "first_markdown_element": "",
+        "id": "07ae4dd7037a73ba67bfac8ca01ba61a353d654166ab69c96c4dcad77b1d2986",
+        "check": "events-access",
+        "impact": "Low",
+        "confidence": "Medium"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "_owner",
+            "source_mapping": {
+              "start": 134,
+              "length": 14,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "delegate",
+                "source_mapping": {
+                  "start": 116,
+                  "length": 67,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "Owned",
+                    "source_mapping": {
+                      "start": 24,
+                      "length": 223,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "delegate(address)"
+                }
+              }
+            }
+          },
+          {
+            "type": "node",
+            "name": "owner = _owner",
+            "source_mapping": {
+              "start": 166,
+              "length": 14,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "delegate",
+                "source_mapping": {
+                  "start": 116,
+                  "length": 67,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "Owned",
+                    "source_mapping": {
+                      "start": 24,
+                      "length": 223,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "delegate(address)"
+                }
+              }
+            }
+          }
+        ],
+        "description": "Owned.delegate(address)._owner () lacks a zero-check on :\n\t\t- owner = _owner ()\n",
+        "markdown": "[Owned.delegate(address)._owner]() lacks a zero-check on :\n\t\t- [owner = _owner]()\n",
+        "first_markdown_element": "",
+        "id": "dc4412a1e079958916e95cb5c4ad98f69556d4a0643bd0d249a479b025a12137",
+        "check": "missing-zero-check",
+        "impact": "Low",
+        "confidence": "Medium"
+      },
+      {
+        "elements": [
+          {
+            "type": "node",
+            "name": "suicide(address)(owner)",
+            "source_mapping": {
+              "start": 311,
+              "length": 14,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "kill",
+                "source_mapping": {
+                  "start": 279,
+                  "length": 49,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "Mortal",
+                    "source_mapping": {
+                      "start": 248,
+                      "length": 82,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "kill()"
+                }
+              }
+            }
+          }
+        ],
+        "description": "Deprecated standard detected suicide(address)(owner) ():\n\t- Usage of \"suicide()\" should be replaced with \"selfdestruct()\"\n",
+        "markdown": "Deprecated standard detected [suicide(address)(owner)]():\n\t- Usage of \"suicide()\" should be replaced with \"selfdestruct()\"\n",
+        "first_markdown_element": "",
+        "id": "af38f120e2d6ce3d7567404eb936f0124e2e9b2e954f0ddc56088aa4c884e377",
+        "check": "deprecated-standards",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "node",
+            "name": "",
+            "source_mapping": {
+              "start": 234,
+              "length": 5,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "onlyOwner",
+                "source_mapping": {
+                  "start": 188,
+                  "length": 57,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "Owned",
+                    "source_mapping": {
+                      "start": 24,
+                      "length": 223,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "onlyOwner()"
+                }
+              }
+            }
+          }
+        ],
+        "description": "Deprecated standard detected THROW ():\n\t- Usage of \"throw\" should be replaced with \"revert()\"\n",
+        "markdown": "Deprecated standard detected [THROW]():\n\t- Usage of \"throw\" should be replaced with \"revert()\"\n",
+        "first_markdown_element": "",
+        "id": "f5556cf1c70b64b9e4b1fc32044dd970b5f2c8b9fc21b7971fda01971033f2d5",
+        "check": "deprecated-standards",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "pragma",
+            "name": "^0.4.2",
+            "source_mapping": {
+              "start": 0,
+              "length": 23,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "directive": [
+                "solidity",
+                "^",
+                "0.4",
+                ".2"
+              ]
+            }
+          }
+        ],
+        "description": "Pragma version^0.4.2 () allows old versions\n",
+        "markdown": "Pragma version[^0.4.2]() allows old versions\n",
+        "first_markdown_element": "",
+        "id": "684a56cd27e54ff2efdccacdc31c1f9807e03d1014a0a136c00240d60a2f3a67",
+        "check": "solc-version",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [],
+        "description": "solc-0.4.2 is not recommended for deployment\n",
+        "markdown": "solc-0.4.2 is not recommended for deployment\n",
+        "first_markdown_element": "",
+        "id": "707dbfcfdf84b6816d84949bbe947a3701cd8aa49952e3db1879e122f1f0990d",
+        "check": "solc-version",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "_name",
+            "source_mapping": {
+              "start": 913,
+              "length": 12,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "disown",
+                "source_mapping": {
+                  "start": 897,
+                  "length": 90,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "AiraRegistrarService",
+                    "source_mapping": {
+                      "start": 675,
+                      "length": 1265,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "disown(string)"
+                }
+              }
+            },
+            "additional_fields": {
+              "target": "parameter",
+              "convention": "mixedCase"
+            }
+          }
+        ],
+        "description": "Parameter AiraRegistrarService.disown(string)._name () is not in mixedCase\n",
+        "markdown": "Parameter [AiraRegistrarService.disown(string)._name]() is not in mixedCase\n",
+        "first_markdown_element": "",
+        "id": "1160fa3331df7bfabfea895077d693b618ce97a9a20f215dafa561d58bf51b66",
+        "check": "naming-convention",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "_name",
+            "source_mapping": {
+              "start": 1380,
+              "length": 12,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "record",
+                "source_mapping": {
+                  "start": 1364,
+                  "length": 238,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "AiraRegistrarService",
+                    "source_mapping": {
+                      "start": 675,
+                      "length": 1265,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "record(string)"
+                }
+              }
+            },
+            "additional_fields": {
+              "target": "parameter",
+              "convention": "mixedCase"
+            }
+          }
+        ],
+        "description": "Parameter AiraRegistrarService.record(string)._name () is not in mixedCase\n",
+        "markdown": "Parameter [AiraRegistrarService.record(string)._name]() is not in mixedCase\n",
+        "first_markdown_element": "",
+        "id": "3ab6bfffea0ffdcd2fb6490be85cb257f0f5ae168e2892f09d23f6acd96bbf12",
+        "check": "naming-convention",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "_name",
+            "source_mapping": {
+              "start": 1819,
+              "length": 12,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "content",
+                "source_mapping": {
+                  "start": 1802,
+                  "length": 95,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "AiraRegistrarService",
+                    "source_mapping": {
+                      "start": 675,
+                      "length": 1265,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "content(string)"
+                }
+              }
+            },
+            "additional_fields": {
+              "target": "parameter",
+              "convention": "mixedCase"
+            }
+          }
+        ],
+        "description": "Parameter AiraRegistrarService.content(string)._name () is not in mixedCase\n",
+        "markdown": "Parameter [AiraRegistrarService.content(string)._name]() is not in mixedCase\n",
+        "first_markdown_element": "",
+        "id": "4313d464ebe79ae33159f4e3e5aa5f95f78c7189e45a0bdbdabe068b1e9c3dbd",
+        "check": "naming-convention",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "_owner",
+            "source_mapping": {
+              "start": 134,
+              "length": 14,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "delegate",
+                "source_mapping": {
+                  "start": 116,
+                  "length": 67,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "Owned",
+                    "source_mapping": {
+                      "start": 24,
+                      "length": 223,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "delegate(address)"
+                }
+              }
+            },
+            "additional_fields": {
+              "target": "parameter",
+              "convention": "mixedCase"
+            }
+          }
+        ],
+        "description": "Parameter Owned.delegate(address)._owner () is not in mixedCase\n",
+        "markdown": "Parameter [Owned.delegate(address)._owner]() is not in mixedCase\n",
+        "first_markdown_element": "",
+        "id": "43f6fa8344e9c4c233be3308fc469b1b8882d17c860dfa920af31952322f811d",
+        "check": "naming-convention",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "_name",
+            "source_mapping": {
+              "start": 1007,
+              "length": 12,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "setAddr",
+                "source_mapping": {
+                  "start": 990,
+                  "length": 106,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "AiraRegistrarService",
+                    "source_mapping": {
+                      "start": 675,
+                      "length": 1265,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "setAddr(string,address)"
+                }
+              }
+            },
+            "additional_fields": {
+              "target": "parameter",
+              "convention": "mixedCase"
+            }
+          }
+        ],
+        "description": "Parameter AiraRegistrarService.setAddr(string,address)._name () is not in mixedCase\n",
+        "markdown": "Parameter [AiraRegistrarService.setAddr(string,address)._name]() is not in mixedCase\n",
+        "first_markdown_element": "",
+        "id": "814e6509843af67dac33d4a8ecaa71a13d96a18579a28fcf0594c57c195841c5",
+        "check": "naming-convention",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "m_toRecord",
+            "source_mapping": {
+              "start": 1900,
+              "length": 37,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "AiraRegistrarService",
+                "source_mapping": {
+                  "start": 675,
+                  "length": 1265,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              }
+            },
+            "additional_fields": {
+              "target": "variable",
+              "convention": "mixedCase"
+            }
+          }
+        ],
+        "description": "Variable AiraRegistrarService.m_toRecord () is not in mixedCase\n",
+        "markdown": "Variable [AiraRegistrarService.m_toRecord]() is not in mixedCase\n",
+        "first_markdown_element": "",
+        "id": "84a2085da6ef7e5639a4b87aaf8e7fc7e438220d645f72af9499f627fcfcbbbe",
+        "check": "naming-convention",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "_a",
+            "source_mapping": {
+              "start": 1021,
+              "length": 10,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "setAddr",
+                "source_mapping": {
+                  "start": 990,
+                  "length": 106,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "AiraRegistrarService",
+                    "source_mapping": {
+                      "start": 675,
+                      "length": 1265,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "setAddr(string,address)"
+                }
+              }
+            },
+            "additional_fields": {
+              "target": "parameter",
+              "convention": "mixedCase"
+            }
+          }
+        ],
+        "description": "Parameter AiraRegistrarService.setAddr(string,address)._a () is not in mixedCase\n",
+        "markdown": "Parameter [AiraRegistrarService.setAddr(string,address)._a]() is not in mixedCase\n",
+        "first_markdown_element": "",
+        "id": "a7f798fe5a284a79dd956b9c4ec9b8f07a51c44b744d81f171d440ff228853dd",
+        "check": "naming-convention",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "_registrar",
+            "source_mapping": {
+              "start": 1137,
+              "length": 18,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "setSubRegistrar",
+                "source_mapping": {
+                  "start": 1098,
+                  "length": 138,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "AiraRegistrarService",
+                    "source_mapping": {
+                      "start": 675,
+                      "length": 1265,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "setSubRegistrar(string,address)"
+                }
+              }
+            },
+            "additional_fields": {
+              "target": "parameter",
+              "convention": "mixedCase"
+            }
+          }
+        ],
+        "description": "Parameter AiraRegistrarService.setSubRegistrar(string,address)._registrar () is not in mixedCase\n",
+        "markdown": "Parameter [AiraRegistrarService.setSubRegistrar(string,address)._registrar]() is not in mixedCase\n",
+        "first_markdown_element": "",
+        "id": "abac67d89faf31f291365eadfefd9c68dc501c00e122462aa37a3aa395cf6f47",
+        "check": "naming-convention",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "_name",
+            "source_mapping": {
+              "start": 1618,
+              "length": 12,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "addr",
+                "source_mapping": {
+                  "start": 1604,
+                  "length": 89,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "AiraRegistrarService",
+                    "source_mapping": {
+                      "start": 675,
+                      "length": 1265,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "addr(string)"
+                }
+              }
+            },
+            "additional_fields": {
+              "target": "parameter",
+              "convention": "mixedCase"
+            }
+          }
+        ],
+        "description": "Parameter AiraRegistrarService.addr(string)._name () is not in mixedCase\n",
+        "markdown": "Parameter [AiraRegistrarService.addr(string)._name]() is not in mixedCase\n",
+        "first_markdown_element": "",
+        "id": "dbe6eda47ab22ad2ddbfc95487fa9c71eacabfcf1570db7cc27455856503776f",
+        "check": "naming-convention",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "_name",
+            "source_mapping": {
+              "start": 1258,
+              "length": 12,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "setContent",
+                "source_mapping": {
+                  "start": 1238,
+                  "length": 124,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "AiraRegistrarService",
+                    "source_mapping": {
+                      "start": 675,
+                      "length": 1265,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "setContent(string,bytes32)"
+                }
+              }
+            },
+            "additional_fields": {
+              "target": "parameter",
+              "convention": "mixedCase"
+            }
+          }
+        ],
+        "description": "Parameter AiraRegistrarService.setContent(string,bytes32)._name () is not in mixedCase\n",
+        "markdown": "Parameter [AiraRegistrarService.setContent(string,bytes32)._name]() is not in mixedCase\n",
+        "first_markdown_element": "",
+        "id": "ef069ea2084d70161f046f3f6e1e186a85ae48582069e83de8416120b60bfe48",
+        "check": "naming-convention",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "_name",
+            "source_mapping": {
+              "start": 1717,
+              "length": 12,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "subRegistrar",
+                "source_mapping": {
+                  "start": 1695,
+                  "length": 105,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "AiraRegistrarService",
+                    "source_mapping": {
+                      "start": 675,
+                      "length": 1265,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "subRegistrar(string)"
+                }
+              }
+            },
+            "additional_fields": {
+              "target": "parameter",
+              "convention": "mixedCase"
+            }
+          }
+        ],
+        "description": "Parameter AiraRegistrarService.subRegistrar(string)._name () is not in mixedCase\n",
+        "markdown": "Parameter [AiraRegistrarService.subRegistrar(string)._name]() is not in mixedCase\n",
+        "first_markdown_element": "",
+        "id": "f108e6f895f5ea06c91aa06c9ba963ae7597e2f963cbe8e758fb71adcfee0990",
+        "check": "naming-convention",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "_content",
+            "source_mapping": {
+              "start": 1272,
+              "length": 16,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "setContent",
+                "source_mapping": {
+                  "start": 1238,
+                  "length": 124,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "AiraRegistrarService",
+                    "source_mapping": {
+                      "start": 675,
+                      "length": 1265,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "setContent(string,bytes32)"
+                }
+              }
+            },
+            "additional_fields": {
+              "target": "parameter",
+              "convention": "mixedCase"
+            }
+          }
+        ],
+        "description": "Parameter AiraRegistrarService.setContent(string,bytes32)._content () is not in mixedCase\n",
+        "markdown": "Parameter [AiraRegistrarService.setContent(string,bytes32)._content]() is not in mixedCase\n",
+        "first_markdown_element": "",
+        "id": "f46aef954bfdf43eb648402e2d1cf54e3f0ced6d9fed6f6d5ba3a0c9c8d792ec",
+        "check": "naming-convention",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "_name",
+            "source_mapping": {
+              "start": 1123,
+              "length": 12,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "setSubRegistrar",
+                "source_mapping": {
+                  "start": 1098,
+                  "length": 138,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "AiraRegistrarService",
+                    "source_mapping": {
+                      "start": 675,
+                      "length": 1265,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "setSubRegistrar(string,address)"
+                }
+              }
+            },
+            "additional_fields": {
+              "target": "parameter",
+              "convention": "mixedCase"
+            }
+          }
+        ],
+        "description": "Parameter AiraRegistrarService.setSubRegistrar(string,address)._name () is not in mixedCase\n",
+        "markdown": "Parameter [AiraRegistrarService.setSubRegistrar(string,address)._name]() is not in mixedCase\n",
+        "first_markdown_element": "",
+        "id": "f88d5612371fdbd2903a6ed4859bee49311b7b5ca7fbaee711a085c208c9eabb",
+        "check": "naming-convention",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "content",
+            "source_mapping": {
+              "start": 1802,
+              "length": 95,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "AiraRegistrarService",
+                "source_mapping": {
+                  "start": 675,
+                  "length": 1265,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              },
+              "signature": "content(string)"
+            }
+          },
+          {
+            "type": "function",
+            "name": "content",
+            "source_mapping": {
+              "start": 604,
+              "length": 68,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "Registrar",
+                "source_mapping": {
+                  "start": 331,
+                  "length": 343,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              },
+              "signature": "content(string)"
+            }
+          }
+        ],
+        "description": "content(string) should be declared external:\n\t- AiraRegistrarService.content(string) ()\n\t- Registrar.content(string) ()\n",
+        "markdown": "content(string) should be declared external:\n\t- [AiraRegistrarService.content(string)]()\n\t- [Registrar.content(string)]()\n",
+        "first_markdown_element": "",
+        "id": "17aaf26d894eac5f497e4ee8322c040c728cf3d6e226414ed6549f5a462800a9",
+        "check": "external-function",
+        "impact": "Optimization",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "setContent",
+            "source_mapping": {
+              "start": 1238,
+              "length": 124,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "AiraRegistrarService",
+                "source_mapping": {
+                  "start": 675,
+                  "length": 1265,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              },
+              "signature": "setContent(string,bytes32)"
+            }
+          }
+        ],
+        "description": "setContent(string,bytes32) should be declared external:\n\t- AiraRegistrarService.setContent(string,bytes32) ()\n",
+        "markdown": "setContent(string,bytes32) should be declared external:\n\t- [AiraRegistrarService.setContent(string,bytes32)]()\n",
+        "first_markdown_element": "",
+        "id": "1a244143033196c9a484cacf897cafc65e7646a40951d641c52a3fe05e33e04a",
+        "check": "external-function",
+        "impact": "Optimization",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "subRegistrar",
+            "source_mapping": {
+              "start": 1695,
+              "length": 105,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "AiraRegistrarService",
+                "source_mapping": {
+                  "start": 675,
+                  "length": 1265,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              },
+              "signature": "subRegistrar(string)"
+            }
+          },
+          {
+            "type": "function",
+            "name": "subRegistrar",
+            "source_mapping": {
+              "start": 524,
+              "length": 78,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "Registrar",
+                "source_mapping": {
+                  "start": 331,
+                  "length": 343,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              },
+              "signature": "subRegistrar(string)"
+            }
+          }
+        ],
+        "description": "subRegistrar(string) should be declared external:\n\t- AiraRegistrarService.subRegistrar(string) ()\n\t- Registrar.subRegistrar(string) ()\n",
+        "markdown": "subRegistrar(string) should be declared external:\n\t- [AiraRegistrarService.subRegistrar(string)]()\n\t- [Registrar.subRegistrar(string)]()\n",
+        "first_markdown_element": "",
+        "id": "67f0e22bc05271876b685c323c470e5930d78068d011274ac5cfa92bf771e6f4",
+        "check": "external-function",
+        "impact": "Optimization",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "addr",
+            "source_mapping": {
+              "start": 1604,
+              "length": 89,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "AiraRegistrarService",
+                "source_mapping": {
+                  "start": 675,
+                  "length": 1265,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              },
+              "signature": "addr(string)"
+            }
+          },
+          {
+            "type": "function",
+            "name": "addr",
+            "source_mapping": {
+              "start": 457,
+              "length": 65,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "Registrar",
+                "source_mapping": {
+                  "start": 331,
+                  "length": 343,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              },
+              "signature": "addr(string)"
+            }
+          }
+        ],
+        "description": "addr(string) should be declared external:\n\t- AiraRegistrarService.addr(string) ()\n\t- Registrar.addr(string) ()\n",
+        "markdown": "addr(string) should be declared external:\n\t- [AiraRegistrarService.addr(string)]()\n\t- [Registrar.addr(string)]()\n",
+        "first_markdown_element": "",
+        "id": "6ce2b326c3c8a3470835501d8cac89be6dd76b1f3e1d12c83e75cdafc2209db8",
+        "check": "external-function",
+        "impact": "Optimization",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "setAddr",
+            "source_mapping": {
+              "start": 990,
+              "length": 106,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "AiraRegistrarService",
+                "source_mapping": {
+                  "start": 675,
+                  "length": 1265,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              },
+              "signature": "setAddr(string,address)"
+            }
+          }
+        ],
+        "description": "setAddr(string,address) should be declared external:\n\t- AiraRegistrarService.setAddr(string,address) ()\n",
+        "markdown": "setAddr(string,address) should be declared external:\n\t- [AiraRegistrarService.setAddr(string,address)]()\n",
+        "first_markdown_element": "",
+        "id": "7f238e79113a3993b39300dd5625720de21e6b132f10a7c9262eae4cd2ee7941",
+        "check": "external-function",
+        "impact": "Optimization",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "record",
+            "source_mapping": {
+              "start": 1364,
+              "length": 238,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "AiraRegistrarService",
+                "source_mapping": {
+                  "start": 675,
+                  "length": 1265,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              },
+              "signature": "record(string)"
+            }
+          }
+        ],
+        "description": "record(string) should be declared external:\n\t- AiraRegistrarService.record(string) ()\n",
+        "markdown": "record(string) should be declared external:\n\t- [AiraRegistrarService.record(string)]()\n",
+        "first_markdown_element": "",
+        "id": "959013b8f1c1f788226a20628f53401a7038b7335f43bba03a9ae2e6bad45b5a",
+        "check": "external-function",
+        "impact": "Optimization",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "disown",
+            "source_mapping": {
+              "start": 897,
+              "length": 90,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "AiraRegistrarService",
+                "source_mapping": {
+                  "start": 675,
+                  "length": 1265,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              },
+              "signature": "disown(string)"
+            }
+          }
+        ],
+        "description": "disown(string) should be declared external:\n\t- AiraRegistrarService.disown(string) ()\n",
+        "markdown": "disown(string) should be declared external:\n\t- [AiraRegistrarService.disown(string)]()\n",
+        "first_markdown_element": "",
+        "id": "a35a1079e0455e6a968216790d0f883ecd2560106920ade3d966ecf5501103aa",
+        "check": "external-function",
+        "impact": "Optimization",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "owner",
+            "source_mapping": {
+              "start": 813,
+              "length": 81,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "AiraRegistrarService",
+                "source_mapping": {
+                  "start": 675,
+                  "length": 1265,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              },
+              "signature": "owner(string)"
+            }
+          },
+          {
+            "type": "function",
+            "name": "owner",
+            "source_mapping": {
+              "start": 391,
+              "length": 64,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "Registrar",
+                "source_mapping": {
+                  "start": 331,
+                  "length": 343,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              },
+              "signature": "owner(string)"
+            }
+          }
+        ],
+        "description": "owner(string) should be declared external:\n\t- AiraRegistrarService.owner(string) ()\n\t- Registrar.owner(string) ()\n",
+        "markdown": "owner(string) should be declared external:\n\t- [AiraRegistrarService.owner(string)]()\n\t- [Registrar.owner(string)]()\n",
+        "first_markdown_element": "",
+        "id": "c8cd881812431326085f0bdbb34a4688e38dda6a741ef39247842ae8d76f44db",
+        "check": "external-function",
+        "impact": "Optimization",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "setSubRegistrar",
+            "source_mapping": {
+              "start": 1098,
+              "length": 138,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "AiraRegistrarService",
+                "source_mapping": {
+                  "start": 675,
+                  "length": 1265,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              },
+              "signature": "setSubRegistrar(string,address)"
+            }
+          }
+        ],
+        "description": "setSubRegistrar(string,address) should be declared external:\n\t- AiraRegistrarService.setSubRegistrar(string,address) ()\n",
+        "markdown": "setSubRegistrar(string,address) should be declared external:\n\t- [AiraRegistrarService.setSubRegistrar(string,address)]()\n",
+        "first_markdown_element": "",
+        "id": "da706260652802e91e32fc3e9754dbace81ad0d767ef9aee8144e75bf6b406ba",
+        "check": "external-function",
+        "impact": "Optimization",
+        "confidence": "High"
+      }
+    ]
+  }
+}

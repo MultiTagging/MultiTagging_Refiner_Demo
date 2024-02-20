@@ -1,0 +1,43 @@
+{
+  "fileName": "Benchmarks/Study_SamplesSet/0814bc7337c9aea7604bcf1e34602eec.sol",
+  "baseName": "0814bc7337c9aea7604bcf1e34602eec.sol",
+  "iter": 3,
+  "time": "0.12875",
+  "errMsg": null,
+  "result": [
+    {
+      "no": "1",
+      "kind": "KA",
+      "line": 40,
+      "signatures": [
+        { "contractName": "vualt", "methodName": "clear", "argTypes": [] }
+      ],
+      "exp": "selfdestruct(owner);",
+      "status": "proven"
+    },
+    {
+      "no": "2",
+      "kind": "ETH_LEAK",
+      "line": 18,
+      "signatures": [
+        {
+          "contractName": "vualt",
+          "methodName": "withdraw",
+          "argTypes": [ "string" ]
+        }
+      ],
+      "exp": "msg.sender.transfer(address(this).balance);",
+      "status": "unproven"
+    },
+    {
+      "no": "3",
+      "kind": "ETH_LEAK",
+      "line": 40,
+      "signatures": [
+        { "contractName": "vualt", "methodName": "clear", "argTypes": [] }
+      ],
+      "exp": "selfdestruct(owner);",
+      "status": "proven"
+    }
+  ]
+}

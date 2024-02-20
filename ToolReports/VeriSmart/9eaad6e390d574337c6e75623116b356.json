@@ -1,0 +1,195 @@
+{
+  "fileName": "Benchmarks/Study_SamplesSet/9eaad6e390d574337c6e75623116b356.sol",
+  "baseName": "9eaad6e390d574337c6e75623116b356.sol",
+  "iter": 36,
+  "time": "314.470132",
+  "errMsg": null,
+  "result": [
+    {
+      "no": "1",
+      "kind": "IO",
+      "line": 9,
+      "signatures": [
+        {
+          "contractName": "TrekChain",
+          "methodName": "@fallback",
+          "argTypes": []
+        },
+        {
+          "contractName": "TrekChain",
+          "methodName": "getTokens",
+          "argTypes": []
+        }
+      ],
+      "exp": "(a * b)",
+      "status": "unproven"
+    },
+    {
+      "no": "2",
+      "kind": "IO",
+      "line": 21,
+      "signatures": [
+        {
+          "contractName": "TrekChain",
+          "methodName": "TrekChain",
+          "argTypes": []
+        },
+        {
+          "contractName": "TrekChain",
+          "methodName": "burn",
+          "argTypes": [ "uint256" ]
+        },
+        {
+          "contractName": "TrekChain",
+          "methodName": "distr",
+          "argTypes": [ "address", "uint256" ]
+        },
+        {
+          "contractName": "TrekChain",
+          "methodName": "getTokens",
+          "argTypes": []
+        },
+        {
+          "contractName": "TrekChain",
+          "methodName": "transfer",
+          "argTypes": [ "address", "uint256" ]
+        },
+        {
+          "contractName": "TrekChain",
+          "methodName": "transferFrom",
+          "argTypes": [ "address", "address", "uint256" ]
+        }
+      ],
+      "exp": "(a - b)",
+      "status": "proven"
+    },
+    {
+      "no": "3",
+      "kind": "IO",
+      "line": 25,
+      "signatures": [
+        {
+          "contractName": "TrekChain",
+          "methodName": "distr",
+          "argTypes": [ "address", "uint256" ]
+        },
+        {
+          "contractName": "TrekChain",
+          "methodName": "getTokens",
+          "argTypes": []
+        },
+        {
+          "contractName": "TrekChain",
+          "methodName": "transfer",
+          "argTypes": [ "address", "uint256" ]
+        },
+        {
+          "contractName": "TrekChain",
+          "methodName": "transferFrom",
+          "argTypes": [ "address", "address", "uint256" ]
+        }
+      ],
+      "exp": "(a + b)",
+      "status": "unproven"
+    },
+    {
+      "no": "4",
+      "kind": "IO",
+      "line": 161,
+      "signatures": [
+        {
+          "contractName": "TrekChain",
+          "methodName": "transfer",
+          "argTypes": [ "address", "uint256" ]
+        },
+        {
+          "contractName": "TrekChain",
+          "methodName": "transferFrom",
+          "argTypes": [ "address", "address", "uint256" ]
+        }
+      ],
+      "exp": "(size + 4)",
+      "status": "proven"
+    },
+    {
+      "no": "5",
+      "kind": "IO",
+      "line": 165,
+      "signatures": [
+        {
+          "contractName": "TrekChain",
+          "methodName": "transfer",
+          "argTypes": [ "address", "uint256" ]
+        }
+      ],
+      "exp": "(2 * 32)",
+      "status": "proven"
+    },
+    {
+      "no": "6",
+      "kind": "IO",
+      "line": 175,
+      "signatures": [
+        {
+          "contractName": "TrekChain",
+          "methodName": "transferFrom",
+          "argTypes": [ "address", "address", "uint256" ]
+        }
+      ],
+      "exp": "(3 * 32)",
+      "status": "proven"
+    },
+    {
+      "no": "7",
+      "kind": "DZ",
+      "line": 10,
+      "signatures": [
+        {
+          "contractName": "TrekChain",
+          "methodName": "@fallback",
+          "argTypes": []
+        },
+        {
+          "contractName": "TrekChain",
+          "methodName": "getTokens",
+          "argTypes": []
+        }
+      ],
+      "exp": "(c / a)",
+      "status": "unproven"
+    },
+    {
+      "no": "8",
+      "kind": "DZ",
+      "line": 15,
+      "signatures": [
+        {
+          "contractName": "TrekChain",
+          "methodName": "@fallback",
+          "argTypes": []
+        },
+        {
+          "contractName": "TrekChain",
+          "methodName": "getTokens",
+          "argTypes": []
+        }
+      ],
+      "exp": "(a / b)",
+      "status": "proven"
+    },
+    {
+      "no": "9",
+      "kind": "ETH_LEAK",
+      "line": 206,
+      "signatures": [
+        {
+          "contractName": "TrekChain",
+          "methodName": "withdraw",
+          "argTypes": []
+        }
+      ],
+      "exp": "owner.transfer(etherBalance);",
+      "status": "proven"
+    }
+  ]
+}

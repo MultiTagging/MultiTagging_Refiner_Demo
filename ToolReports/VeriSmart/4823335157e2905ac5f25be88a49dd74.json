@@ -1,0 +1,51 @@
+{
+  "fileName": "Benchmarks/Study_SamplesSet/4823335157e2905ac5f25be88a49dd74.sol",
+  "baseName": "4823335157e2905ac5f25be88a49dd74.sol",
+  "iter": 8,
+  "time": "0.316876",
+  "errMsg": null,
+  "result": [
+    {
+      "no": "1",
+      "kind": "KA",
+      "line": 51,
+      "signatures": [
+        {
+          "contractName": "GuessTheNumber",
+          "methodName": "kill",
+          "argTypes": []
+        }
+      ],
+      "exp": "selfdestruct(_owner);",
+      "status": "proven"
+    },
+    {
+      "no": "2",
+      "kind": "ETH_LEAK",
+      "line": 39,
+      "signatures": [
+        {
+          "contractName": "GuessTheNumber",
+          "methodName": "guess",
+          "argTypes": [ "uint256" ]
+        }
+      ],
+      "exp": "guesser.transfer(p);",
+      "status": "proven"
+    },
+    {
+      "no": "3",
+      "kind": "ETH_LEAK",
+      "line": 51,
+      "signatures": [
+        {
+          "contractName": "GuessTheNumber",
+          "methodName": "kill",
+          "argTypes": []
+        }
+      ],
+      "exp": "selfdestruct(_owner);",
+      "status": "proven"
+    }
+  ]
+}

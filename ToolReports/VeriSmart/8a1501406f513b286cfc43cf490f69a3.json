@@ -1,0 +1,33 @@
+{
+  "fileName": "Benchmarks/Study_SamplesSet/8a1501406f513b286cfc43cf490f69a3.sol",
+  "baseName": "8a1501406f513b286cfc43cf490f69a3.sol",
+  "iter": 3,
+  "time": "0.066421",
+  "errMsg": null,
+  "result": [
+    {
+      "no": "1",
+      "kind": "IO",
+      "line": 17,
+      "signatures": [
+        {
+          "contractName": "Map",
+          "methodName": "set",
+          "argTypes": [ "uint256", "uint256" ]
+        }
+      ],
+      "exp": "(key + 1)",
+      "status": "unproven"
+    },
+    {
+      "no": "2",
+      "kind": "ETH_LEAK",
+      "line": 28,
+      "signatures": [
+        { "contractName": "Map", "methodName": "withdraw", "argTypes": [] }
+      ],
+      "exp": "msg.sender.transfer(address(this).balance);",
+      "status": "proven"
+    }
+  ]
+}

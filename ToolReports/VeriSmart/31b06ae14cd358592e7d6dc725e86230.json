@@ -1,0 +1,820 @@
+{
+  "fileName": "Benchmarks/Study_SamplesSet/31b06ae14cd358592e7d6dc725e86230.sol",
+  "baseName": "31b06ae14cd358592e7d6dc725e86230.sol",
+  "iter": 30,
+  "time": "308.579091",
+  "errMsg": null,
+  "result": [
+    {
+      "no": "1",
+      "kind": "IO",
+      "line": 411,
+      "signatures": [
+        {
+          "contractName": "Registry",
+          "methodName": "addContribution",
+          "argTypes": [
+            "address", "uint256", "uint256", "uint256", "uint256"
+          ]
+        }
+      ],
+      "exp": "(nextContributorIndex + 1)",
+      "status": "unproven"
+    },
+    {
+      "no": "2",
+      "kind": "IO",
+      "line": 413,
+      "signatures": [
+        {
+          "contractName": "Registry",
+          "methodName": "addContribution",
+          "argTypes": [
+            "address", "uint256", "uint256", "uint256", "uint256"
+          ]
+        }
+      ],
+      "exp": "(contributorList[_contributor].contributionETH + _amount)",
+      "status": "unproven"
+    },
+    {
+      "no": "3",
+      "kind": "IO",
+      "line": 414,
+      "signatures": [
+        {
+          "contractName": "Registry",
+          "methodName": "addContribution",
+          "argTypes": [
+            "address", "uint256", "uint256", "uint256", "uint256"
+          ]
+        }
+      ],
+      "exp": "(contributorList[_contributor].contributionUSD + _amusd)",
+      "status": "unproven"
+    },
+    {
+      "no": "4",
+      "kind": "IO",
+      "line": 415,
+      "signatures": [
+        {
+          "contractName": "Registry",
+          "methodName": "addContribution",
+          "argTypes": [
+            "address", "uint256", "uint256", "uint256", "uint256"
+          ]
+        }
+      ],
+      "exp": "(contributorList[_contributor].tokensIssued + _tokens)",
+      "status": "unproven"
+    },
+    {
+      "no": "5",
+      "kind": "IO",
+      "line": 438,
+      "signatures": [
+        {
+          "contractName": "Registry",
+          "methodName": "addContributor",
+          "argTypes": [
+            "address", "uint256", "uint256", "uint256", "uint256"
+          ]
+        }
+      ],
+      "exp": "(nextContributorIndex + 1)",
+      "status": "unproven"
+    },
+    {
+      "no": "6",
+      "kind": "IO",
+      "line": 602,
+      "signatures": [
+        {
+          "contractName": "Crowdsale",
+          "methodName": "calculateMaxEthIssued",
+          "argTypes": []
+        },
+        {
+          "contractName": "Crowdsale",
+          "methodName": "checkCrowdsaleState",
+          "argTypes": [ "uint256" ]
+        },
+        {
+          "contractName": "Crowdsale",
+          "methodName": "getTotalUSDInTokens",
+          "argTypes": []
+        },
+        {
+          "contractName": "Crowdsale",
+          "methodName": "processTransaction",
+          "argTypes": [ "address", "uint256" ]
+        }
+      ],
+      "exp": "(a * b)",
+      "status": "unproven"
+    },
+    {
+      "no": "7",
+      "kind": "IO",
+      "line": 622,
+      "signatures": [
+        {
+          "contractName": "Crowdsale",
+          "methodName": "processTransaction",
+          "argTypes": [ "address", "uint256" ]
+        },
+        {
+          "contractName": "SafeMath",
+          "methodName": "sub",
+          "argTypes": [ "uint256", "uint256" ]
+        }
+      ],
+      "exp": "(a - b)",
+      "status": "proven"
+    },
+    {
+      "no": "8",
+      "kind": "IO",
+      "line": 629,
+      "signatures": [
+        {
+          "contractName": "Crowdsale",
+          "methodName": "checkCrowdsaleState",
+          "argTypes": [ "uint256" ]
+        },
+        {
+          "contractName": "SafeMath",
+          "methodName": "add",
+          "argTypes": [ "uint256", "uint256" ]
+        }
+      ],
+      "exp": "(a + b)",
+      "status": "unproven"
+    },
+    {
+      "no": "9",
+      "kind": "IO",
+      "line": 750,
+      "signatures": [
+        {
+          "contractName": "Crowdsale",
+          "methodName": "tokenFallback",
+          "argTypes": [ "address", "uint256", "dbytes" ]
+        },
+        {
+          "contractName": "ERC223ReceivingContract",
+          "methodName": "tokenFallback",
+          "argTypes": [ "address", "uint256", "dbytes" ]
+        }
+      ],
+      "exp": "(((uint32(_data[3]) + (uint32(_data[2]) << 8)) + (uint32(_data[1]) << 16)) + (uint32(_data[0]) << 24))",
+      "status": "unproven"
+    },
+    {
+      "no": "10",
+      "kind": "IO",
+      "line": 750,
+      "signatures": [
+        {
+          "contractName": "Crowdsale",
+          "methodName": "tokenFallback",
+          "argTypes": [ "address", "uint256", "dbytes" ]
+        },
+        {
+          "contractName": "ERC223ReceivingContract",
+          "methodName": "tokenFallback",
+          "argTypes": [ "address", "uint256", "dbytes" ]
+        }
+      ],
+      "exp": "((uint32(_data[3]) + (uint32(_data[2]) << 8)) + (uint32(_data[1]) << 16))",
+      "status": "unproven"
+    },
+    {
+      "no": "11",
+      "kind": "IO",
+      "line": 750,
+      "signatures": [
+        {
+          "contractName": "Crowdsale",
+          "methodName": "tokenFallback",
+          "argTypes": [ "address", "uint256", "dbytes" ]
+        },
+        {
+          "contractName": "ERC223ReceivingContract",
+          "methodName": "tokenFallback",
+          "argTypes": [ "address", "uint256", "dbytes" ]
+        }
+      ],
+      "exp": "(uint32(_data[3]) + (uint32(_data[2]) << 8))",
+      "status": "proven"
+    },
+    {
+      "no": "12",
+      "kind": "IO",
+      "line": 1154,
+      "signatures": [
+        {
+          "contractName": "Crowdsale",
+          "methodName": "Crowdsale",
+          "argTypes": [
+            "address", "address", "address", "uint256", "uint256", "uint256",
+            "uint256", "address", "uint256"
+          ]
+        }
+      ],
+      "exp": "(_softCap * 1000000000000000000)",
+      "status": "unproven"
+    },
+    {
+      "no": "13",
+      "kind": "IO",
+      "line": 1155,
+      "signatures": [
+        {
+          "contractName": "Crowdsale",
+          "methodName": "Crowdsale",
+          "argTypes": [
+            "address", "address", "address", "uint256", "uint256", "uint256",
+            "uint256", "address", "uint256"
+          ]
+        }
+      ],
+      "exp": "(_hardCap * 1000000000000000000)",
+      "status": "unproven"
+    },
+    {
+      "no": "14",
+      "kind": "IO",
+      "line": 1156,
+      "signatures": [
+        {
+          "contractName": "Crowdsale",
+          "methodName": "Crowdsale",
+          "argTypes": [
+            "address", "address", "address", "uint256", "uint256", "uint256",
+            "uint256", "address", "uint256"
+          ]
+        }
+      ],
+      "exp": "(100000 * 1000000000000000000)",
+      "status": "proven"
+    },
+    {
+      "no": "15",
+      "kind": "IO",
+      "line": 1226,
+      "signatures": [
+        {
+          "contractName": "Crowdsale",
+          "methodName": "setSoftCap",
+          "argTypes": [ "uint256" ]
+        }
+      ],
+      "exp": "(_softCap * 1000000000000000000)",
+      "status": "unproven"
+    },
+    {
+      "no": "16",
+      "kind": "IO",
+      "line": 1231,
+      "signatures": [
+        {
+          "contractName": "Crowdsale",
+          "methodName": "setHardCap",
+          "argTypes": [ "uint256" ]
+        }
+      ],
+      "exp": "(_hardCap * 1000000000000000000)",
+      "status": "unproven"
+    },
+    {
+      "no": "17",
+      "kind": "IO",
+      "line": 1308,
+      "signatures": [
+        {
+          "contractName": "Crowdsale",
+          "methodName": "processTransaction",
+          "argTypes": [ "address", "uint256" ]
+        }
+      ],
+      "exp": "(_amount.mul(ethUsdPrice) - maxContribution)",
+      "status": "proven"
+    },
+    {
+      "no": "18",
+      "kind": "IO",
+      "line": 1309,
+      "signatures": [
+        {
+          "contractName": "Crowdsale",
+          "methodName": "processTransaction",
+          "argTypes": [ "address", "uint256" ]
+        }
+      ],
+      "exp": "(contributionAmountETH - returnAmountUsd.div(ethUsdPrice))",
+      "status": "unproven"
+    },
+    {
+      "no": "19",
+      "kind": "IO",
+      "line": 1313,
+      "signatures": [
+        {
+          "contractName": "Crowdsale",
+          "methodName": "processTransaction",
+          "argTypes": [ "address", "uint256" ]
+        }
+      ],
+      "exp": "(usdRaised + contributionAmountUsd)",
+      "status": "unproven"
+    },
+    {
+      "no": "20",
+      "kind": "IO",
+      "line": 1321,
+      "signatures": [
+        {
+          "contractName": "Crowdsale",
+          "methodName": "processTransaction",
+          "argTypes": [ "address", "uint256" ]
+        }
+      ],
+      "exp": "(totalTokens + tokens)",
+      "status": "unproven"
+    },
+    {
+      "no": "21",
+      "kind": "IO",
+      "line": 1326,
+      "signatures": [
+        {
+          "contractName": "Crowdsale",
+          "methodName": "processTransaction",
+          "argTypes": [ "address", "uint256" ]
+        }
+      ],
+      "exp": "(ethRaised + contributionAmountETH)",
+      "status": "unproven"
+    },
+    {
+      "no": "22",
+      "kind": "IO",
+      "line": 1327,
+      "signatures": [
+        {
+          "contractName": "Crowdsale",
+          "methodName": "processTransaction",
+          "argTypes": [ "address", "uint256" ]
+        }
+      ],
+      "exp": "(totalTokens + tokens)",
+      "status": "unproven"
+    },
+    {
+      "no": "23",
+      "kind": "IO",
+      "line": 1328,
+      "signatures": [
+        {
+          "contractName": "Crowdsale",
+          "methodName": "processTransaction",
+          "argTypes": [ "address", "uint256" ]
+        }
+      ],
+      "exp": "(usdRaised + contributionAmountUsd)",
+      "status": "unproven"
+    },
+    {
+      "no": "24",
+      "kind": "IO",
+      "line": 1363,
+      "signatures": [
+        {
+          "contractName": "Crowdsale",
+          "methodName": "calculateMaxContributionUsd",
+          "argTypes": []
+        },
+        {
+          "contractName": "Crowdsale",
+          "methodName": "processTransaction",
+          "argTypes": [ "address", "uint256" ]
+        }
+      ],
+      "exp": "(hardCap - usdRaised)",
+      "status": "unproven"
+    },
+    {
+      "no": "25",
+      "kind": "IO",
+      "line": 1367,
+      "signatures": [
+        {
+          "contractName": "Crowdsale",
+          "methodName": "calculateMaxTokensIssued",
+          "argTypes": []
+        }
+      ],
+      "exp": "(hardCapToken - totalTokens)",
+      "status": "unproven"
+    },
+    {
+      "no": "26",
+      "kind": "IO",
+      "line": 1371,
+      "signatures": [
+        {
+          "contractName": "Crowdsale",
+          "methodName": "calculateMaxEthIssued",
+          "argTypes": []
+        }
+      ],
+      "exp": "(hardCap.mul(ethUsdPrice) - usdRaised.mul(ethUsdPrice))",
+      "status": "unproven"
+    },
+    {
+      "no": "27",
+      "kind": "IO",
+      "line": 1401,
+      "signatures": [
+        {
+          "contractName": "Crowdsale",
+          "methodName": "batchReturnUNT",
+          "argTypes": [ "uint256" ]
+        }
+      ],
+      "exp": "(cnt + 1)",
+      "status": "proven"
+    },
+    {
+      "no": "28",
+      "kind": "IO",
+      "line": 1412,
+      "signatures": [
+        {
+          "contractName": "Crowdsale",
+          "methodName": "batchReturnUNT",
+          "argTypes": [ "uint256" ]
+        }
+      ],
+      "exp": "(withdrawedTokens + numberOfUNT)",
+      "status": "unproven"
+    },
+    {
+      "no": "29",
+      "kind": "IO",
+      "line": 1417,
+      "signatures": [
+        {
+          "contractName": "Crowdsale",
+          "methodName": "batchReturnUNT",
+          "argTypes": [ "uint256" ]
+        }
+      ],
+      "exp": "(nextContributorToTransferTokens + 1)",
+      "status": "unproven"
+    },
+    {
+      "no": "30",
+      "kind": "IO",
+      "line": 1432,
+      "signatures": [
+        {
+          "contractName": "Crowdsale",
+          "methodName": "getTokens",
+          "argTypes": []
+        }
+      ],
+      "exp": "(withdrawedTokens + numberOfUNT)",
+      "status": "unproven"
+    },
+    {
+      "no": "31",
+      "kind": "IO",
+      "line": 1439,
+      "signatures": [
+        {
+          "contractName": "Crowdsale",
+          "methodName": "getOverTokens",
+          "argTypes": []
+        }
+      ],
+      "exp": "(totalTokens - withdrawedTokens)",
+      "status": "unproven"
+    },
+    {
+      "no": "32",
+      "kind": "IO",
+      "line": 1440,
+      "signatures": [
+        {
+          "contractName": "Crowdsale",
+          "methodName": "getOverTokens",
+          "argTypes": []
+        }
+      ],
+      "exp": "(checkBalanceContract() - (totalTokens - withdrawedTokens))",
+      "status": "unproven"
+    },
+    {
+      "no": "33",
+      "kind": "IO",
+      "line": 1440,
+      "signatures": [
+        {
+          "contractName": "Crowdsale",
+          "methodName": "getOverTokens",
+          "argTypes": []
+        }
+      ],
+      "exp": "(totalTokens - withdrawedTokens)",
+      "status": "unproven"
+    },
+    {
+      "no": "34",
+      "kind": "IO",
+      "line": 1531,
+      "signatures": [
+        {
+          "contractName": "Crowdsale",
+          "methodName": "addContributor",
+          "argTypes": [
+            "address", "uint256", "uint256", "uint256", "uint256"
+          ]
+        }
+      ],
+      "exp": "(ethRaised + _amount)",
+      "status": "unproven"
+    },
+    {
+      "no": "35",
+      "kind": "IO",
+      "line": 1532,
+      "signatures": [
+        {
+          "contractName": "Crowdsale",
+          "methodName": "addContributor",
+          "argTypes": [
+            "address", "uint256", "uint256", "uint256", "uint256"
+          ]
+        }
+      ],
+      "exp": "(usdRaised + _amusd)",
+      "status": "unproven"
+    },
+    {
+      "no": "36",
+      "kind": "IO",
+      "line": 1533,
+      "signatures": [
+        {
+          "contractName": "Crowdsale",
+          "methodName": "addContributor",
+          "argTypes": [
+            "address", "uint256", "uint256", "uint256", "uint256"
+          ]
+        }
+      ],
+      "exp": "(totalTokens + _tokens)",
+      "status": "unproven"
+    },
+    {
+      "no": "37",
+      "kind": "IO",
+      "line": 1539,
+      "signatures": [
+        {
+          "contractName": "Crowdsale",
+          "methodName": "editContribution",
+          "argTypes": [
+            "address", "uint256", "uint256", "uint256", "uint256"
+          ]
+        }
+      ],
+      "exp": "(ethRaised - registry.getContributionETH(_contributor))",
+      "status": "unproven"
+    },
+    {
+      "no": "38",
+      "kind": "IO",
+      "line": 1540,
+      "signatures": [
+        {
+          "contractName": "Crowdsale",
+          "methodName": "editContribution",
+          "argTypes": [
+            "address", "uint256", "uint256", "uint256", "uint256"
+          ]
+        }
+      ],
+      "exp": "(usdRaised - registry.getContributionUSD(_contributor))",
+      "status": "unproven"
+    },
+    {
+      "no": "39",
+      "kind": "IO",
+      "line": 1541,
+      "signatures": [
+        {
+          "contractName": "Crowdsale",
+          "methodName": "editContribution",
+          "argTypes": [
+            "address", "uint256", "uint256", "uint256", "uint256"
+          ]
+        }
+      ],
+      "exp": "(totalTokens - registry.getContributionTokens(_contributor))",
+      "status": "unproven"
+    },
+    {
+      "no": "40",
+      "kind": "IO",
+      "line": 1544,
+      "signatures": [
+        {
+          "contractName": "Crowdsale",
+          "methodName": "editContribution",
+          "argTypes": [
+            "address", "uint256", "uint256", "uint256", "uint256"
+          ]
+        }
+      ],
+      "exp": "(ethRaised + _amount)",
+      "status": "unproven"
+    },
+    {
+      "no": "41",
+      "kind": "IO",
+      "line": 1545,
+      "signatures": [
+        {
+          "contractName": "Crowdsale",
+          "methodName": "editContribution",
+          "argTypes": [
+            "address", "uint256", "uint256", "uint256", "uint256"
+          ]
+        }
+      ],
+      "exp": "(usdRaised + _amusd)",
+      "status": "unproven"
+    },
+    {
+      "no": "42",
+      "kind": "IO",
+      "line": 1546,
+      "signatures": [
+        {
+          "contractName": "Crowdsale",
+          "methodName": "editContribution",
+          "argTypes": [
+            "address", "uint256", "uint256", "uint256", "uint256"
+          ]
+        }
+      ],
+      "exp": "(totalTokens + _tokens)",
+      "status": "unproven"
+    },
+    {
+      "no": "43",
+      "kind": "IO",
+      "line": 1553,
+      "signatures": [
+        {
+          "contractName": "Crowdsale",
+          "methodName": "removeContributor",
+          "argTypes": [ "address" ]
+        }
+      ],
+      "exp": "(ethRaised - registry.getContributionETH(_contributor))",
+      "status": "unproven"
+    },
+    {
+      "no": "44",
+      "kind": "IO",
+      "line": 1554,
+      "signatures": [
+        {
+          "contractName": "Crowdsale",
+          "methodName": "removeContributor",
+          "argTypes": [ "address" ]
+        }
+      ],
+      "exp": "(usdRaised - registry.getContributionUSD(_contributor))",
+      "status": "unproven"
+    },
+    {
+      "no": "45",
+      "kind": "IO",
+      "line": 1555,
+      "signatures": [
+        {
+          "contractName": "Crowdsale",
+          "methodName": "removeContributor",
+          "argTypes": [ "address" ]
+        }
+      ],
+      "exp": "(totalTokens - registry.getContributionTokens(_contributor))",
+      "status": "unproven"
+    },
+    {
+      "no": "46",
+      "kind": "DZ",
+      "line": 603,
+      "signatures": [
+        {
+          "contractName": "Crowdsale",
+          "methodName": "calculateMaxEthIssued",
+          "argTypes": []
+        },
+        {
+          "contractName": "Crowdsale",
+          "methodName": "checkCrowdsaleState",
+          "argTypes": [ "uint256" ]
+        },
+        {
+          "contractName": "Crowdsale",
+          "methodName": "getTotalUSDInTokens",
+          "argTypes": []
+        },
+        {
+          "contractName": "Crowdsale",
+          "methodName": "processTransaction",
+          "argTypes": [ "address", "uint256" ]
+        }
+      ],
+      "exp": "(c / a)",
+      "status": "proven"
+    },
+    {
+      "no": "47",
+      "kind": "DZ",
+      "line": 612,
+      "signatures": [
+        {
+          "contractName": "Crowdsale",
+          "methodName": "processTransaction",
+          "argTypes": [ "address", "uint256" ]
+        }
+      ],
+      "exp": "(a / b)",
+      "status": "unproven"
+    },
+    {
+      "no": "48",
+      "kind": "ETH_LEAK",
+      "line": 1259,
+      "signatures": [
+        {
+          "contractName": "Crowdsale",
+          "methodName": "@fallback",
+          "argTypes": []
+        }
+      ],
+      "exp": "msg.sender.transfer(msg.value);",
+      "status": "proven"
+    },
+    {
+      "no": "49",
+      "kind": "ETH_LEAK",
+      "line": 1322,
+      "signatures": [
+        {
+          "contractName": "Crowdsale",
+          "methodName": "processTransaction",
+          "argTypes": [ "address", "uint256" ]
+        }
+      ],
+      "exp": "_contributor.transfer(_amount);",
+      "status": "unproven"
+    },
+    {
+      "no": "50",
+      "kind": "ETH_LEAK",
+      "line": 1334,
+      "signatures": [
+        {
+          "contractName": "Crowdsale",
+          "methodName": "processTransaction",
+          "argTypes": [ "address", "uint256" ]
+        }
+      ],
+      "exp": "_contributor.transfer(returnAmountETH);",
+      "status": "unproven"
+    },
+    {
+      "no": "51",
+      "kind": "ETH_LEAK",
+      "line": 1457,
+      "signatures": [
+        {
+          "contractName": "Crowdsale",
+          "methodName": "refund",
+          "argTypes": []
+        }
+      ],
+      "exp": "msg.sender.send(ethContributed)",
+      "status": "unproven"
+    }
+  ]
+}

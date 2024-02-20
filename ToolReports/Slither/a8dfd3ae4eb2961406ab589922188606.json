@@ -1,0 +1,2185 @@
+{
+  "success": true,
+  "error": null,
+  "results": {
+    "detectors": [
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "fallback",
+            "source_mapping": {
+              "start": 1100,
+              "length": 851,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "Crowdsale",
+                "source_mapping": {
+                  "start": 96,
+                  "length": 3987,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              },
+              "signature": "fallback()"
+            }
+          },
+          {
+            "type": "node",
+            "name": "tokenReward.transfer(msg.sender,amount / price)",
+            "source_mapping": {
+              "start": 1385,
+              "length": 48,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "fallback",
+                "source_mapping": {
+                  "start": 1100,
+                  "length": 851,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "Crowdsale",
+                    "source_mapping": {
+                      "start": 96,
+                      "length": 3987,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "fallback()"
+                }
+              }
+            },
+            "additional_fields": {
+              "underlying_type": "external_calls"
+            }
+          },
+          {
+            "type": "node",
+            "name": "beneficiary.send(amount)",
+            "source_mapping": {
+              "start": 1799,
+              "length": 24,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "fallback",
+                "source_mapping": {
+                  "start": 1100,
+                  "length": 851,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "Crowdsale",
+                    "source_mapping": {
+                      "start": 96,
+                      "length": 3987,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "fallback()"
+                }
+              }
+            },
+            "additional_fields": {
+              "underlying_type": "external_calls_sending_eth"
+            }
+          },
+          {
+            "type": "node",
+            "name": "resAmount -= amount",
+            "source_mapping": {
+              "start": 1901,
+              "length": 19,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "fallback",
+                "source_mapping": {
+                  "start": 1100,
+                  "length": 851,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "Crowdsale",
+                    "source_mapping": {
+                      "start": 96,
+                      "length": 3987,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "fallback()"
+                }
+              }
+            },
+            "additional_fields": {
+              "underlying_type": "variables_written",
+              "variable_name": "resAmount"
+            }
+          }
+        ],
+        "description": "Reentrancy in Crowdsale.fallback() ():\n\tExternal calls:\n\t- tokenReward.transfer(msg.sender,amount / price) ()\n\tExternal calls sending eth:\n\t- beneficiary.send(amount) ()\n\tState variables written after the call(s):\n\t- resAmount -= amount ()\n\tCrowdsale.resAmount () can be used in cross function reentrancies:\n\t- Crowdsale.devResWithdrawal() ()\n\t- Crowdsale.devWithdrawal(uint256,uint256) ()\n\t- Crowdsale.fallback() ()\n\t- Crowdsale.safeWithdrawal() ()\n",
+        "markdown": "Reentrancy in [Crowdsale.fallback()]():\n\tExternal calls:\n\t- [tokenReward.transfer(msg.sender,amount / price)]()\n\tExternal calls sending eth:\n\t- [beneficiary.send(amount)]()\n\tState variables written after the call(s):\n\t- [resAmount -= amount]()\n\t[Crowdsale.resAmount]() can be used in cross function reentrancies:\n\t- [Crowdsale.devResWithdrawal()]()\n\t- [Crowdsale.devWithdrawal(uint256,uint256)]()\n\t- [Crowdsale.fallback()]()\n\t- [Crowdsale.safeWithdrawal()]()\n",
+        "first_markdown_element": "",
+        "id": "6a5a2598b071a1c235d19d5bfd63d35ea02e03b530c3b440d049d795e79c3dcc",
+        "check": "reentrancy-eth",
+        "impact": "High",
+        "confidence": "Medium"
+      },
+      {
+        "elements": [
+          {
+            "type": "contract",
+            "name": "token",
+            "source_mapping": {
+              "start": 26,
+              "length": 68,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            }
+          },
+          {
+            "type": "function",
+            "name": "transfer",
+            "source_mapping": {
+              "start": 42,
+              "length": 51,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "token",
+                "source_mapping": {
+                  "start": 26,
+                  "length": 68,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              },
+              "signature": "transfer(address,uint256)"
+            }
+          }
+        ],
+        "description": "token () has incorrect ERC20 function interface:token.transfer(address,uint256) ()\n",
+        "markdown": "[token]() has incorrect ERC20 function interface:[token.transfer(address,uint256)]()\n",
+        "first_markdown_element": "",
+        "id": "a6a07d907577ff521a810a599a8e4901f1bff5cc29d327e6a15f3bfb46ce2a72",
+        "check": "erc20-interface",
+        "impact": "Medium",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "afterDeadline",
+            "source_mapping": {
+              "start": 2901,
+              "length": 52,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "Crowdsale",
+                "source_mapping": {
+                  "start": 96,
+                  "length": 3987,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              },
+              "signature": "afterDeadline()"
+            }
+          }
+        ],
+        "description": "Modifier Crowdsale.afterDeadline() () does not always execute _; or revert",
+        "markdown": "Modifier [Crowdsale.afterDeadline()]() does not always execute _; or revert",
+        "first_markdown_element": "",
+        "id": "208f669a908ce4d5dc1342531c92d2c2275be40001886c083f28eadd6bcb1d9a",
+        "check": "incorrect-modifier",
+        "impact": "Low",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "fallback",
+            "source_mapping": {
+              "start": 1100,
+              "length": 851,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "Crowdsale",
+                "source_mapping": {
+                  "start": 96,
+                  "length": 3987,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              },
+              "signature": "fallback()"
+            }
+          },
+          {
+            "type": "node",
+            "name": "tokenReward.transfer(msg.sender,amount / price)",
+            "source_mapping": {
+              "start": 1385,
+              "length": 48,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "fallback",
+                "source_mapping": {
+                  "start": 1100,
+                  "length": 851,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "Crowdsale",
+                    "source_mapping": {
+                      "start": 96,
+                      "length": 3987,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "fallback()"
+                }
+              }
+            },
+            "additional_fields": {
+              "underlying_type": "external_calls"
+            }
+          },
+          {
+            "type": "node",
+            "name": "tokenReward.transfer(msg.sender,amount / price)",
+            "source_mapping": {
+              "start": 1385,
+              "length": 48,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "fallback",
+                "source_mapping": {
+                  "start": 1100,
+                  "length": 851,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "Crowdsale",
+                    "source_mapping": {
+                      "start": 96,
+                      "length": 3987,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "fallback()"
+                }
+              }
+            },
+            "additional_fields": {
+              "underlying_type": "external_calls_sending_eth"
+            }
+          },
+          {
+            "type": "node",
+            "name": "minimumTargetReached = true",
+            "source_mapping": {
+              "start": 1566,
+              "length": 27,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "fallback",
+                "source_mapping": {
+                  "start": 1100,
+                  "length": 851,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "Crowdsale",
+                    "source_mapping": {
+                      "start": 96,
+                      "length": 3987,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "fallback()"
+                }
+              }
+            },
+            "additional_fields": {
+              "underlying_type": "variables_written",
+              "variable_name": "minimumTargetReached"
+            }
+          }
+        ],
+        "description": "Reentrancy in Crowdsale.fallback() ():\n\tExternal calls:\n\t- tokenReward.transfer(msg.sender,amount / price) ()\n\tState variables written after the call(s):\n\t- minimumTargetReached = true ()\n",
+        "markdown": "Reentrancy in [Crowdsale.fallback()]():\n\tExternal calls:\n\t- [tokenReward.transfer(msg.sender,amount / price)]()\n\tState variables written after the call(s):\n\t- [minimumTargetReached = true]()\n",
+        "first_markdown_element": "",
+        "id": "bc2c53fb92c2067efd894ff47ebff55ad276114ddf3eca9c3190ae8bb2d17f88",
+        "check": "reentrancy-benign",
+        "impact": "Low",
+        "confidence": "Medium"
+      },
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "fallback",
+            "source_mapping": {
+              "start": 1100,
+              "length": 851,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "Crowdsale",
+                "source_mapping": {
+                  "start": 96,
+                  "length": 3987,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              },
+              "signature": "fallback()"
+            }
+          },
+          {
+            "type": "node",
+            "name": "tokenReward.transfer(msg.sender,amount / price)",
+            "source_mapping": {
+              "start": 1385,
+              "length": 48,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "fallback",
+                "source_mapping": {
+                  "start": 1100,
+                  "length": 851,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "Crowdsale",
+                    "source_mapping": {
+                      "start": 96,
+                      "length": 3987,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "fallback()"
+                }
+              }
+            },
+            "additional_fields": {
+              "underlying_type": "external_calls"
+            }
+          },
+          {
+            "type": "node",
+            "name": "FundTransfer(msg.sender,amount,true)",
+            "source_mapping": {
+              "start": 1443,
+              "length": 38,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "fallback",
+                "source_mapping": {
+                  "start": 1100,
+                  "length": 851,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "Crowdsale",
+                    "source_mapping": {
+                      "start": 96,
+                      "length": 3987,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "fallback()"
+                }
+              }
+            },
+            "additional_fields": {
+              "underlying_type": "event"
+            }
+          },
+          {
+            "type": "node",
+            "name": "GoalReached(beneficiary,minimumTarget)",
+            "source_mapping": {
+              "start": 1607,
+              "length": 39,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "fallback",
+                "source_mapping": {
+                  "start": 1100,
+                  "length": 851,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "Crowdsale",
+                    "source_mapping": {
+                      "start": 96,
+                      "length": 3987,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "fallback()"
+                }
+              }
+            },
+            "additional_fields": {
+              "underlying_type": "event"
+            }
+          }
+        ],
+        "description": "Reentrancy in Crowdsale.fallback() ():\n\tExternal calls:\n\t- tokenReward.transfer(msg.sender,amount / price) ()\n\tEvent emitted after the call(s):\n\t- FundTransfer(msg.sender,amount,true) ()\n\t- GoalReached(beneficiary,minimumTarget) ()\n",
+        "markdown": "Reentrancy in [Crowdsale.fallback()]():\n\tExternal calls:\n\t- [tokenReward.transfer(msg.sender,amount / price)]()\n\tEvent emitted after the call(s):\n\t- [FundTransfer(msg.sender,amount,true)]()\n\t- [GoalReached(beneficiary,minimumTarget)]()\n",
+        "first_markdown_element": "",
+        "id": "42361fca90a5e1a4cb28c388861daf8a09c7fe3682936233a061142dd40056f1",
+        "check": "reentrancy-events",
+        "impact": "Low",
+        "confidence": "Medium"
+      },
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "fallback",
+            "source_mapping": {
+              "start": 1100,
+              "length": 851,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "Crowdsale",
+                "source_mapping": {
+                  "start": 96,
+                  "length": 3987,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              },
+              "signature": "fallback()"
+            }
+          },
+          {
+            "type": "node",
+            "name": "tokenReward.transfer(msg.sender,amount / price)",
+            "source_mapping": {
+              "start": 1385,
+              "length": 48,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "fallback",
+                "source_mapping": {
+                  "start": 1100,
+                  "length": 851,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "Crowdsale",
+                    "source_mapping": {
+                      "start": 96,
+                      "length": 3987,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "fallback()"
+                }
+              }
+            },
+            "additional_fields": {
+              "underlying_type": "external_calls"
+            }
+          },
+          {
+            "type": "node",
+            "name": "beneficiary.send(amount)",
+            "source_mapping": {
+              "start": 1799,
+              "length": 24,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "fallback",
+                "source_mapping": {
+                  "start": 1100,
+                  "length": 851,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "Crowdsale",
+                    "source_mapping": {
+                      "start": 96,
+                      "length": 3987,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "fallback()"
+                }
+              }
+            },
+            "additional_fields": {
+              "underlying_type": "external_calls_sending_eth"
+            }
+          },
+          {
+            "type": "node",
+            "name": "FundTransfer(beneficiary,amount,false)",
+            "source_mapping": {
+              "start": 1843,
+              "length": 40,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "fallback",
+                "source_mapping": {
+                  "start": 1100,
+                  "length": 851,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "Crowdsale",
+                    "source_mapping": {
+                      "start": 96,
+                      "length": 3987,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "fallback()"
+                }
+              }
+            },
+            "additional_fields": {
+              "underlying_type": "event"
+            }
+          }
+        ],
+        "description": "Reentrancy in Crowdsale.fallback() ():\n\tExternal calls:\n\t- tokenReward.transfer(msg.sender,amount / price) ()\n\tExternal calls sending eth:\n\t- beneficiary.send(amount) ()\n\tEvent emitted after the call(s):\n\t- FundTransfer(beneficiary,amount,false) ()\n",
+        "markdown": "Reentrancy in [Crowdsale.fallback()]():\n\tExternal calls:\n\t- [tokenReward.transfer(msg.sender,amount / price)]()\n\tExternal calls sending eth:\n\t- [beneficiary.send(amount)]()\n\tEvent emitted after the call(s):\n\t- [FundTransfer(beneficiary,amount,false)]()\n",
+        "first_markdown_element": "",
+        "id": "b6191743dbf2cad1a16e10a261dc6f680905b7b94bbc902bd91dca85f984ede6",
+        "check": "reentrancy-events",
+        "impact": "Low",
+        "confidence": "Medium"
+      },
+      {
+        "elements": [
+          {
+            "type": "node",
+            "name": "",
+            "source_mapping": {
+              "start": 1197,
+              "length": 5,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "fallback",
+                "source_mapping": {
+                  "start": 1100,
+                  "length": 851,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "Crowdsale",
+                    "source_mapping": {
+                      "start": 96,
+                      "length": 3987,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "fallback()"
+                }
+              }
+            }
+          }
+        ],
+        "description": "Deprecated standard detected THROW ():\n\t- Usage of \"throw\" should be replaced with \"revert()\"\n",
+        "markdown": "Deprecated standard detected [THROW]():\n\t- Usage of \"throw\" should be replaced with \"revert()\"\n",
+        "first_markdown_element": "",
+        "id": "f5556cf1c70b64b9e4b1fc32044dd970b5f2c8b9fc21b7971fda01971033f2d5",
+        "check": "deprecated-standards",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "minimumTarget",
+            "source_mapping": {
+              "start": 650,
+              "length": 43,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "Crowdsale",
+                "source_mapping": {
+                  "start": 96,
+                  "length": 3987,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              }
+            }
+          }
+        ],
+        "description": "Crowdsale.minimumTarget () is set pre-construction with a non-constant function or state variable:\n\t- 1500000 * price\n",
+        "markdown": "[Crowdsale.minimumTarget]() is set pre-construction with a non-constant function or state variable:\n\t- 1500000 * price\n",
+        "first_markdown_element": "",
+        "id": "5f9dfefdcf5cb35bd6ae7290e873a35667caca00b5d896a7841239452d93ce8e",
+        "check": "function-init-state",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "maximumTarget",
+            "source_mapping": {
+              "start": 724,
+              "length": 43,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "Crowdsale",
+                "source_mapping": {
+                  "start": 96,
+                  "length": 3987,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              }
+            }
+          }
+        ],
+        "description": "Crowdsale.maximumTarget () is set pre-construction with a non-constant function or state variable:\n\t- 9803020 * price\n",
+        "markdown": "[Crowdsale.maximumTarget]() is set pre-construction with a non-constant function or state variable:\n\t- 9803020 * price\n",
+        "first_markdown_element": "",
+        "id": "61a485c7c30ffc527e2028bccdc1fe950d867055c8210b1f8891042bd6c3d993",
+        "check": "function-init-state",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "pragma",
+            "name": "^0.4.8",
+            "source_mapping": {
+              "start": 0,
+              "length": 23,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "directive": [
+                "solidity",
+                "^",
+                "0.4",
+                ".8"
+              ]
+            }
+          }
+        ],
+        "description": "Pragma version^0.4.8 () allows old versions\n",
+        "markdown": "Pragma version[^0.4.8]() allows old versions\n",
+        "first_markdown_element": "",
+        "id": "dd43bca9b08bc1fa7b94a3e619671f3c2c98a72b8b3bf0caf1e1f86665ec4569",
+        "check": "solc-version",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [],
+        "description": "solc-0.4.8 is not recommended for deployment\n",
+        "markdown": "solc-0.4.8 is not recommended for deployment\n",
+        "first_markdown_element": "",
+        "id": "ebbd8e423b3c73a93e118f8daed7c9ac33b0d525351f79b5ea41076caa3c1bc5",
+        "check": "solc-version",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "contract",
+            "name": "token",
+            "source_mapping": {
+              "start": 26,
+              "length": 68,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "additional_fields": {
+              "target": "contract",
+              "convention": "CapWords"
+            }
+          }
+        ],
+        "description": "Contract token () is not in CapWords\n",
+        "markdown": "Contract [token]() is not in CapWords\n",
+        "first_markdown_element": "",
+        "id": "2afda56fc17f0ac73dfec0bb7bea77446a3764109f6a2f037b6ad634de37842b",
+        "check": "naming-convention",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "fallback",
+            "source_mapping": {
+              "start": 1100,
+              "length": 851,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "Crowdsale",
+                "source_mapping": {
+                  "start": 96,
+                  "length": 3987,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              },
+              "signature": "fallback()"
+            }
+          },
+          {
+            "type": "node",
+            "name": "beneficiary.send(amount)",
+            "source_mapping": {
+              "start": 1799,
+              "length": 24,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "fallback",
+                "source_mapping": {
+                  "start": 1100,
+                  "length": 851,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "Crowdsale",
+                    "source_mapping": {
+                      "start": 96,
+                      "length": 3987,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "fallback()"
+                }
+              }
+            },
+            "additional_fields": {
+              "underlying_type": "external_calls"
+            }
+          },
+          {
+            "type": "node",
+            "name": "resAmount -= amount",
+            "source_mapping": {
+              "start": 1901,
+              "length": 19,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "fallback",
+                "source_mapping": {
+                  "start": 1100,
+                  "length": 851,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "Crowdsale",
+                    "source_mapping": {
+                      "start": 96,
+                      "length": 3987,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "fallback()"
+                }
+              }
+            },
+            "additional_fields": {
+              "underlying_type": "variables_written",
+              "variable_name": "resAmount"
+            }
+          },
+          {
+            "type": "node",
+            "name": "FundTransfer(beneficiary,amount,false)",
+            "source_mapping": {
+              "start": 1843,
+              "length": 40,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "fallback",
+                "source_mapping": {
+                  "start": 1100,
+                  "length": 851,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "Crowdsale",
+                    "source_mapping": {
+                      "start": 96,
+                      "length": 3987,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "fallback()"
+                }
+              }
+            },
+            "additional_fields": {
+              "underlying_type": "event"
+            }
+          }
+        ],
+        "description": "Reentrancy in Crowdsale.fallback() ():\n\tExternal calls:\n\t- beneficiary.send(amount) ()\n\tState variables written after the call(s):\n\t- resAmount -= amount ()\n\tEvent emitted after the call(s):\n\t- FundTransfer(beneficiary,amount,false) ()\n",
+        "markdown": "Reentrancy in [Crowdsale.fallback()]():\n\tExternal calls:\n\t- [beneficiary.send(amount)]()\n\tState variables written after the call(s):\n\t- [resAmount -= amount]()\n\tEvent emitted after the call(s):\n\t- [FundTransfer(beneficiary,amount,false)]()\n",
+        "first_markdown_element": "",
+        "id": "6eaf3f454c32839285cf88c106e37ada4d17f94acc1c1c941ef7e8b0180543d7",
+        "check": "reentrancy-unlimited-gas",
+        "impact": "Informational",
+        "confidence": "Medium"
+      },
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "safeWithdrawal",
+            "source_mapping": {
+              "start": 3555,
+              "length": 526,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "Crowdsale",
+                "source_mapping": {
+                  "start": 96,
+                  "length": 3987,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              },
+              "signature": "safeWithdrawal()"
+            }
+          },
+          {
+            "type": "node",
+            "name": "msg.sender.send(amount)",
+            "source_mapping": {
+              "start": 3828,
+              "length": 23,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "safeWithdrawal",
+                "source_mapping": {
+                  "start": 3555,
+                  "length": 526,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "Crowdsale",
+                    "source_mapping": {
+                      "start": 96,
+                      "length": 3987,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "safeWithdrawal()"
+                }
+              }
+            },
+            "additional_fields": {
+              "underlying_type": "external_calls"
+            }
+          },
+          {
+            "type": "node",
+            "name": "resAmount -= amount",
+            "source_mapping": {
+              "start": 3936,
+              "length": 19,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "safeWithdrawal",
+                "source_mapping": {
+                  "start": 3555,
+                  "length": 526,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "Crowdsale",
+                    "source_mapping": {
+                      "start": 96,
+                      "length": 3987,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "safeWithdrawal()"
+                }
+              }
+            },
+            "additional_fields": {
+              "underlying_type": "variables_written",
+              "variable_name": "resAmount"
+            }
+          },
+          {
+            "type": "node",
+            "name": "FundTransfer(msg.sender,amount,false)",
+            "source_mapping": {
+              "start": 3875,
+              "length": 39,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "safeWithdrawal",
+                "source_mapping": {
+                  "start": 3555,
+                  "length": 526,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "Crowdsale",
+                    "source_mapping": {
+                      "start": 96,
+                      "length": 3987,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "safeWithdrawal()"
+                }
+              }
+            },
+            "additional_fields": {
+              "underlying_type": "event"
+            }
+          }
+        ],
+        "description": "Reentrancy in Crowdsale.safeWithdrawal() ():\n\tExternal calls:\n\t- msg.sender.send(amount) ()\n\tState variables written after the call(s):\n\t- resAmount -= amount ()\n\tEvent emitted after the call(s):\n\t- FundTransfer(msg.sender,amount,false) ()\n",
+        "markdown": "Reentrancy in [Crowdsale.safeWithdrawal()]():\n\tExternal calls:\n\t- [msg.sender.send(amount)]()\n\tState variables written after the call(s):\n\t- [resAmount -= amount]()\n\tEvent emitted after the call(s):\n\t- [FundTransfer(msg.sender,amount,false)]()\n",
+        "first_markdown_element": "",
+        "id": "97654191b0ab96f59a56769981dad6c97250a127e863550c499b703c72e630de",
+        "check": "reentrancy-unlimited-gas",
+        "impact": "Informational",
+        "confidence": "Medium"
+      },
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "devWithdrawal",
+            "source_mapping": {
+              "start": 2061,
+              "length": 298,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "Crowdsale",
+                "source_mapping": {
+                  "start": 96,
+                  "length": 3987,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              },
+              "signature": "devWithdrawal(uint256,uint256)"
+            }
+          },
+          {
+            "type": "node",
+            "name": "beneficiary.send(wAmount)",
+            "source_mapping": {
+              "start": 2226,
+              "length": 25,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "devWithdrawal",
+                "source_mapping": {
+                  "start": 2061,
+                  "length": 298,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "Crowdsale",
+                    "source_mapping": {
+                      "start": 96,
+                      "length": 3987,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "devWithdrawal(uint256,uint256)"
+                }
+              }
+            },
+            "additional_fields": {
+              "underlying_type": "external_calls"
+            }
+          },
+          {
+            "type": "node",
+            "name": "resAmount -= wAmount",
+            "source_mapping": {
+              "start": 2322,
+              "length": 20,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "devWithdrawal",
+                "source_mapping": {
+                  "start": 2061,
+                  "length": 298,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "Crowdsale",
+                    "source_mapping": {
+                      "start": 96,
+                      "length": 3987,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "devWithdrawal(uint256,uint256)"
+                }
+              }
+            },
+            "additional_fields": {
+              "underlying_type": "variables_written",
+              "variable_name": "resAmount"
+            }
+          },
+          {
+            "type": "node",
+            "name": "FundTransfer(beneficiary,wAmount,false)",
+            "source_mapping": {
+              "start": 2267,
+              "length": 41,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "devWithdrawal",
+                "source_mapping": {
+                  "start": 2061,
+                  "length": 298,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "Crowdsale",
+                    "source_mapping": {
+                      "start": 96,
+                      "length": 3987,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "devWithdrawal(uint256,uint256)"
+                }
+              }
+            },
+            "additional_fields": {
+              "underlying_type": "event"
+            }
+          }
+        ],
+        "description": "Reentrancy in Crowdsale.devWithdrawal(uint256,uint256) ():\n\tExternal calls:\n\t- beneficiary.send(wAmount) ()\n\tState variables written after the call(s):\n\t- resAmount -= wAmount ()\n\tEvent emitted after the call(s):\n\t- FundTransfer(beneficiary,wAmount,false) ()\n",
+        "markdown": "Reentrancy in [Crowdsale.devWithdrawal(uint256,uint256)]():\n\tExternal calls:\n\t- [beneficiary.send(wAmount)]()\n\tState variables written after the call(s):\n\t- [resAmount -= wAmount]()\n\tEvent emitted after the call(s):\n\t- [FundTransfer(beneficiary,wAmount,false)]()\n",
+        "first_markdown_element": "",
+        "id": "b8982705732944064cae539edb7849e038b0749c33693130a03bfc2c5f2af8a1",
+        "check": "reentrancy-unlimited-gas",
+        "impact": "Informational",
+        "confidence": "Medium"
+      },
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "devResWithdrawal",
+            "source_mapping": {
+              "start": 2450,
+              "length": 255,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "Crowdsale",
+                "source_mapping": {
+                  "start": 96,
+                  "length": 3987,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              },
+              "signature": "devResWithdrawal()"
+            }
+          },
+          {
+            "type": "node",
+            "name": "beneficiary.send(resAmount)",
+            "source_mapping": {
+              "start": 2566,
+              "length": 27,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "devResWithdrawal",
+                "source_mapping": {
+                  "start": 2450,
+                  "length": 255,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "Crowdsale",
+                    "source_mapping": {
+                      "start": 96,
+                      "length": 3987,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "devResWithdrawal()"
+                }
+              }
+            },
+            "additional_fields": {
+              "underlying_type": "external_calls"
+            }
+          },
+          {
+            "type": "node",
+            "name": "resAmount -= resAmount",
+            "source_mapping": {
+              "start": 2666,
+              "length": 22,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "devResWithdrawal",
+                "source_mapping": {
+                  "start": 2450,
+                  "length": 255,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "Crowdsale",
+                    "source_mapping": {
+                      "start": 96,
+                      "length": 3987,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "devResWithdrawal()"
+                }
+              }
+            },
+            "additional_fields": {
+              "underlying_type": "variables_written",
+              "variable_name": "resAmount"
+            }
+          },
+          {
+            "type": "node",
+            "name": "FundTransfer(beneficiary,resAmount,false)",
+            "source_mapping": {
+              "start": 2609,
+              "length": 43,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "devResWithdrawal",
+                "source_mapping": {
+                  "start": 2450,
+                  "length": 255,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "Crowdsale",
+                    "source_mapping": {
+                      "start": 96,
+                      "length": 3987,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "devResWithdrawal()"
+                }
+              }
+            },
+            "additional_fields": {
+              "underlying_type": "event"
+            }
+          }
+        ],
+        "description": "Reentrancy in Crowdsale.devResWithdrawal() ():\n\tExternal calls:\n\t- beneficiary.send(resAmount) ()\n\tState variables written after the call(s):\n\t- resAmount -= resAmount ()\n\tEvent emitted after the call(s):\n\t- FundTransfer(beneficiary,resAmount,false) ()\n",
+        "markdown": "Reentrancy in [Crowdsale.devResWithdrawal()]():\n\tExternal calls:\n\t- [beneficiary.send(resAmount)]()\n\tState variables written after the call(s):\n\t- [resAmount -= resAmount]()\n\tEvent emitted after the call(s):\n\t- [FundTransfer(beneficiary,resAmount,false)]()\n",
+        "first_markdown_element": "",
+        "id": "d088eee9a6b6a436e3b2802ba6b61f7aeb0b4e0a82e3affe6fbd737111b946f4",
+        "check": "reentrancy-unlimited-gas",
+        "impact": "Informational",
+        "confidence": "Medium"
+      },
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "slitherConstructorVariables",
+            "source_mapping": {
+              "start": 96,
+              "length": 3987,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "Crowdsale",
+                "source_mapping": {
+                  "start": 96,
+                  "length": 3987,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              },
+              "signature": "slitherConstructorVariables()"
+            }
+          },
+          {
+            "type": "node",
+            "name": "minimumTarget = 1500000 * price",
+            "source_mapping": {
+              "start": 650,
+              "length": 43,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "slitherConstructorVariables",
+                "source_mapping": {
+                  "start": 96,
+                  "length": 3987,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "Crowdsale",
+                    "source_mapping": {
+                      "start": 96,
+                      "length": 3987,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "slitherConstructorVariables()"
+                }
+              }
+            }
+          }
+        ],
+        "description": "Crowdsale.slitherConstructorVariables() () uses literals with too many digits:\n\t- minimumTarget = 1500000 * price ()\n",
+        "markdown": "[Crowdsale.slitherConstructorVariables()]() uses literals with too many digits:\n\t- [minimumTarget = 1500000 * price]()\n",
+        "first_markdown_element": "",
+        "id": "db3d17f525efe6acb785ed1bac5b16100fcd01a314e5f870ad9f8a022fb00027",
+        "check": "too-many-digits",
+        "impact": "Informational",
+        "confidence": "Medium"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "beneficiary",
+            "source_mapping": {
+              "start": 494,
+              "length": 71,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "Crowdsale",
+                "source_mapping": {
+                  "start": 96,
+                  "length": 3987,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              }
+            }
+          }
+        ],
+        "description": "Crowdsale.beneficiary () should be constant \n",
+        "markdown": "[Crowdsale.beneficiary]() should be constant \n",
+        "first_markdown_element": "",
+        "id": "413c5532fc8d30995a111a17d7dd519f347cbc366fbbea80140bb74bf79681b5",
+        "check": "constable-states",
+        "impact": "Optimization",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "tokenReward",
+            "source_mapping": {
+              "start": 872,
+              "length": 76,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "Crowdsale",
+                "source_mapping": {
+                  "start": 96,
+                  "length": 3987,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              }
+            }
+          }
+        ],
+        "description": "Crowdsale.tokenReward () should be constant \n",
+        "markdown": "[Crowdsale.tokenReward]() should be constant \n",
+        "first_markdown_element": "",
+        "id": "89cc1429d57c589b55acb3f274226f7d35b1c21145a087e35e5d26a21e506f86",
+        "check": "constable-states",
+        "impact": "Optimization",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "price",
+            "source_mapping": {
+              "start": 593,
+              "length": 32,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "Crowdsale",
+                "source_mapping": {
+                  "start": 96,
+                  "length": 3987,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              }
+            }
+          }
+        ],
+        "description": "Crowdsale.price () should be constant \n",
+        "markdown": "[Crowdsale.price]() should be constant \n",
+        "first_markdown_element": "",
+        "id": "c1cc03b0b29dec39834e5db239b81538c3e891315175e442a5ce059a7be884a5",
+        "check": "constable-states",
+        "impact": "Optimization",
+        "confidence": "High"
+      }
+    ]
+  }
+}

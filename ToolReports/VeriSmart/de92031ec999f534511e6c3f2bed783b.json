@@ -1,0 +1,317 @@
+{
+  "fileName": "Benchmarks/Study_SamplesSet/de92031ec999f534511e6c3f2bed783b.sol",
+  "baseName": "de92031ec999f534511e6c3f2bed783b.sol",
+  "iter": 1428,
+  "time": "300.14164",
+  "errMsg": null,
+  "result": [
+    {
+      "no": "1",
+      "kind": "IO",
+      "line": 35,
+      "signatures": [
+        {
+          "contractName": "Ethraffle_v4b",
+          "methodName": "Ethraffle_v4b",
+          "argTypes": []
+        }
+      ],
+      "exp": "(prize + fee)",
+      "status": "proven"
+    },
+    {
+      "no": "2",
+      "kind": "IO",
+      "line": 67,
+      "signatures": [
+        {
+          "contractName": "Ethraffle_v4b",
+          "methodName": "buyTickets",
+          "argTypes": []
+        }
+      ],
+      "exp": "(gaps.length - 1)",
+      "status": "proven"
+    },
+    {
+      "no": "3",
+      "kind": "IO",
+      "line": 68,
+      "signatures": [
+        {
+          "contractName": "Ethraffle_v4b",
+          "methodName": "buyTickets",
+          "argTypes": []
+        }
+      ],
+      "exp": "(gaps.length - 1)",
+      "status": "proven"
+    },
+    {
+      "no": "4",
+      "kind": "IO",
+      "line": 70,
+      "signatures": [
+        {
+          "contractName": "Ethraffle_v4b",
+          "methodName": "buyTickets",
+          "argTypes": []
+        }
+      ],
+      "exp": "(nextTicket + 1)",
+      "status": "proven"
+    },
+    {
+      "no": "5",
+      "kind": "IO",
+      "line": 75,
+      "signatures": [
+        {
+          "contractName": "Ethraffle_v4b",
+          "methodName": "buyTickets",
+          "argTypes": []
+        }
+      ],
+      "exp": "(moneySent - pricePerTicket)",
+      "status": "proven"
+    },
+    {
+      "no": "6",
+      "kind": "IO",
+      "line": 100,
+      "signatures": [
+        {
+          "contractName": "Ethraffle_v4b",
+          "methodName": "chooseWinner",
+          "argTypes": []
+        }
+      ],
+      "exp": "(raffleId + 1)",
+      "status": "unproven"
+    },
+    {
+      "no": "7",
+      "kind": "IO",
+      "line": 116,
+      "signatures": [
+        {
+          "contractName": "Ethraffle_v4b",
+          "methodName": "getRefund",
+          "argTypes": []
+        }
+      ],
+      "exp": "(i + 1)",
+      "status": "proven"
+    },
+    {
+      "no": "8",
+      "kind": "IO",
+      "line": 118,
+      "signatures": [
+        {
+          "contractName": "Ethraffle_v4b",
+          "methodName": "getRefund",
+          "argTypes": []
+        }
+      ],
+      "exp": "(refund + pricePerTicket)",
+      "status": "unproven"
+    },
+    {
+      "no": "9",
+      "kind": "IO",
+      "line": 135,
+      "signatures": [
+        {
+          "contractName": "Ethraffle_v4b",
+          "methodName": "endRaffle",
+          "argTypes": []
+        }
+      ],
+      "exp": "(i + 1)",
+      "status": "proven"
+    },
+    {
+      "no": "10",
+      "kind": "IO",
+      "line": 143,
+      "signatures": [
+        {
+          "contractName": "Ethraffle_v4b",
+          "methodName": "endRaffle",
+          "argTypes": []
+        }
+      ],
+      "exp": "(raffleId + 1)",
+      "status": "unproven"
+    },
+    {
+      "no": "11",
+      "kind": "DZ",
+      "line": 35,
+      "signatures": [
+        {
+          "contractName": "Ethraffle_v4b",
+          "methodName": "Ethraffle_v4b",
+          "argTypes": []
+        }
+      ],
+      "exp": "((prize + fee) / totalTickets)",
+      "status": "proven"
+    },
+    {
+      "no": "12",
+      "kind": "DZ",
+      "line": 90,
+      "signatures": [
+        {
+          "contractName": "Ethraffle_v4b",
+          "methodName": "chooseWinner",
+          "argTypes": []
+        }
+      ],
+      "exp": "(uint256(block.coinbase) % totalTickets)",
+      "status": "proven"
+    },
+    {
+      "no": "13",
+      "kind": "DZ",
+      "line": 91,
+      "signatures": [
+        {
+          "contractName": "Ethraffle_v4b",
+          "methodName": "chooseWinner",
+          "argTypes": []
+        }
+      ],
+      "exp": "(uint256(msg.sender) % totalTickets)",
+      "status": "proven"
+    },
+    {
+      "no": "14",
+      "kind": "DZ",
+      "line": 95,
+      "signatures": [
+        {
+          "contractName": "Ethraffle_v4b",
+          "methodName": "chooseWinner",
+          "argTypes": []
+        }
+      ],
+      "exp": "(uint256(randHash) % totalTickets)",
+      "status": "proven"
+    },
+    {
+      "no": "15",
+      "kind": "KA",
+      "line": 158,
+      "signatures": [
+        {
+          "contractName": "Ethraffle_v4b",
+          "methodName": "kill",
+          "argTypes": []
+        }
+      ],
+      "exp": "selfdestruct(feeAddress);",
+      "status": "proven"
+    },
+    {
+      "no": "16",
+      "kind": "ETH_LEAK",
+      "line": 58,
+      "signatures": [
+        {
+          "contractName": "Ethraffle_v4b",
+          "methodName": "buyTickets",
+          "argTypes": []
+        }
+      ],
+      "exp": "msg.sender.transfer(msg.value);",
+      "status": "proven"
+    },
+    {
+      "no": "17",
+      "kind": "ETH_LEAK",
+      "line": 85,
+      "signatures": [
+        {
+          "contractName": "Ethraffle_v4b",
+          "methodName": "buyTickets",
+          "argTypes": []
+        }
+      ],
+      "exp": "msg.sender.transfer(moneySent);",
+      "status": "unproven"
+    },
+    {
+      "no": "18",
+      "kind": "ETH_LEAK",
+      "line": 109,
+      "signatures": [
+        {
+          "contractName": "Ethraffle_v4b",
+          "methodName": "chooseWinner",
+          "argTypes": []
+        }
+      ],
+      "exp": "winningAddress.transfer(prize);",
+      "status": "unproven"
+    },
+    {
+      "no": "19",
+      "kind": "ETH_LEAK",
+      "line": 110,
+      "signatures": [
+        {
+          "contractName": "Ethraffle_v4b",
+          "methodName": "chooseWinner",
+          "argTypes": []
+        }
+      ],
+      "exp": "feeAddress.transfer(fee);",
+      "status": "proven"
+    },
+    {
+      "no": "20",
+      "kind": "ETH_LEAK",
+      "line": 126,
+      "signatures": [
+        {
+          "contractName": "Ethraffle_v4b",
+          "methodName": "getRefund",
+          "argTypes": []
+        }
+      ],
+      "exp": "msg.sender.transfer(refund);",
+      "status": "unproven"
+    },
+    {
+      "no": "21",
+      "kind": "ETH_LEAK",
+      "line": 138,
+      "signatures": [
+        {
+          "contractName": "Ethraffle_v4b",
+          "methodName": "endRaffle",
+          "argTypes": []
+        }
+      ],
+      "exp": "contestants[i].addr.transfer(pricePerTicket);",
+      "status": "unproven"
+    },
+    {
+      "no": "22",
+      "kind": "ETH_LEAK",
+      "line": 158,
+      "signatures": [
+        {
+          "contractName": "Ethraffle_v4b",
+          "methodName": "kill",
+          "argTypes": []
+        }
+      ],
+      "exp": "selfdestruct(feeAddress);",
+      "status": "proven"
+    }
+  ]
+}

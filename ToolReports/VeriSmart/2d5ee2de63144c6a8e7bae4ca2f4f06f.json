@@ -1,0 +1,289 @@
+{
+  "fileName": "Benchmarks/Study_SamplesSet/2d5ee2de63144c6a8e7bae4ca2f4f06f.sol",
+  "baseName": "2d5ee2de63144c6a8e7bae4ca2f4f06f.sol",
+  "iter": 8,
+  "time": "303.417296",
+  "errMsg": null,
+  "result": [
+    {
+      "no": "1",
+      "kind": "IO",
+      "line": 8,
+      "signatures": [
+        {
+          "contractName": "TUStoken",
+          "methodName": "transfer",
+          "argTypes": [ "address", "uint256" ]
+        }
+      ],
+      "exp": "(balances[msg.sender] - _value)",
+      "status": "proven"
+    },
+    {
+      "no": "2",
+      "kind": "IO",
+      "line": 9,
+      "signatures": [
+        {
+          "contractName": "TUStoken",
+          "methodName": "transfer",
+          "argTypes": [ "address", "uint256" ]
+        }
+      ],
+      "exp": "(balances[_to] + _value)",
+      "status": "unproven"
+    },
+    {
+      "no": "3",
+      "kind": "IO",
+      "line": 18,
+      "signatures": [
+        {
+          "contractName": "TUStoken",
+          "methodName": "transferFrom",
+          "argTypes": [ "address", "address", "uint256" ]
+        }
+      ],
+      "exp": "(balances[_to] + _value)",
+      "status": "unproven"
+    },
+    {
+      "no": "4",
+      "kind": "IO",
+      "line": 19,
+      "signatures": [
+        {
+          "contractName": "TUStoken",
+          "methodName": "transferFrom",
+          "argTypes": [ "address", "address", "uint256" ]
+        }
+      ],
+      "exp": "(balances[_from] - _value)",
+      "status": "unproven"
+    },
+    {
+      "no": "5",
+      "kind": "IO",
+      "line": 20,
+      "signatures": [
+        {
+          "contractName": "TUStoken",
+          "methodName": "transferFrom",
+          "argTypes": [ "address", "address", "uint256" ]
+        }
+      ],
+      "exp": "(allowed[_from][msg.sender] - _value)",
+      "status": "proven"
+    },
+    {
+      "no": "6",
+      "kind": "IO",
+      "line": 86,
+      "signatures": [
+        {
+          "contractName": "TUStoken",
+          "methodName": "makeMoveBro",
+          "argTypes": []
+        }
+      ],
+      "exp": "(amount * 1000000000000000000)",
+      "status": "unproven"
+    },
+    {
+      "no": "7",
+      "kind": "IO",
+      "line": 86,
+      "signatures": [
+        {
+          "contractName": "TUStoken",
+          "methodName": "makeMoveBro",
+          "argTypes": []
+        }
+      ],
+      "exp": "(msg.value - (amount * 1000000000000000000))",
+      "status": "unproven"
+    },
+    {
+      "no": "8",
+      "kind": "IO",
+      "line": 102,
+      "signatures": [
+        {
+          "contractName": "TUStoken",
+          "methodName": "makeMoveBro",
+          "argTypes": []
+        }
+      ],
+      "exp": "(((amount * 1000000000000000000) / 20) + (toDonats / 2))",
+      "status": "unproven"
+    },
+    {
+      "no": "9",
+      "kind": "IO",
+      "line": 102,
+      "signatures": [
+        {
+          "contractName": "TUStoken",
+          "methodName": "makeMoveBro",
+          "argTypes": []
+        }
+      ],
+      "exp": "(amount * 1000000000000000000)",
+      "status": "unproven"
+    },
+    {
+      "no": "10",
+      "kind": "IO",
+      "line": 103,
+      "signatures": [
+        {
+          "contractName": "TUStoken",
+          "methodName": "makeMoveBro",
+          "argTypes": []
+        }
+      ],
+      "exp": "(JP_sum + toJP)",
+      "status": "unproven"
+    },
+    {
+      "no": "11",
+      "kind": "IO",
+      "line": 105,
+      "signatures": [
+        {
+          "contractName": "TUStoken",
+          "methodName": "makeMoveBro",
+          "argTypes": []
+        }
+      ],
+      "exp": "(amount * bonus)",
+      "status": "unproven"
+    },
+    {
+      "no": "12",
+      "kind": "IO",
+      "line": 106,
+      "signatures": [
+        {
+          "contractName": "TUStoken",
+          "methodName": "makeMoveBro",
+          "argTypes": []
+        }
+      ],
+      "exp": "(balances[msg.sender] + tokens)",
+      "status": "unproven"
+    },
+    {
+      "no": "13",
+      "kind": "IO",
+      "line": 107,
+      "signatures": [
+        {
+          "contractName": "TUStoken",
+          "methodName": "makeMoveBro",
+          "argTypes": []
+        }
+      ],
+      "exp": "(totalSupply + tokens)",
+      "status": "unproven"
+    },
+    {
+      "no": "14",
+      "kind": "IO",
+      "line": 111,
+      "signatures": [
+        {
+          "contractName": "TUStoken",
+          "methodName": "makeMoveBro",
+          "argTypes": []
+        }
+      ],
+      "exp": "(totalEthInWei + msg.value)",
+      "status": "unproven"
+    },
+    {
+      "no": "15",
+      "kind": "IO",
+      "line": 112,
+      "signatures": [
+        {
+          "contractName": "TUStoken",
+          "methodName": "makeMoveBro",
+          "argTypes": []
+        }
+      ],
+      "exp": "(msg.value - toJP)",
+      "status": "unproven"
+    },
+    {
+      "no": "16",
+      "kind": "DZ",
+      "line": 85,
+      "signatures": [
+        {
+          "contractName": "TUStoken",
+          "methodName": "makeMoveBro",
+          "argTypes": []
+        }
+      ],
+      "exp": "(msg.value / 1000000000000000000)",
+      "status": "proven"
+    },
+    {
+      "no": "17",
+      "kind": "DZ",
+      "line": 102,
+      "signatures": [
+        {
+          "contractName": "TUStoken",
+          "methodName": "makeMoveBro",
+          "argTypes": []
+        }
+      ],
+      "exp": "((amount * 1000000000000000000) / 20)",
+      "status": "proven"
+    },
+    {
+      "no": "18",
+      "kind": "DZ",
+      "line": 102,
+      "signatures": [
+        {
+          "contractName": "TUStoken",
+          "methodName": "makeMoveBro",
+          "argTypes": []
+        }
+      ],
+      "exp": "(toDonats / 2)",
+      "status": "proven"
+    },
+    {
+      "no": "19",
+      "kind": "ETH_LEAK",
+      "line": 80,
+      "signatures": [
+        {
+          "contractName": "TUStoken",
+          "methodName": "finishICO",
+          "argTypes": []
+        }
+      ],
+      "exp": "JP_winner.transfer(tempo);",
+      "status": "unproven"
+    },
+    {
+      "no": "20",
+      "kind": "ETH_LEAK",
+      "line": 112,
+      "signatures": [
+        {
+          "contractName": "TUStoken",
+          "methodName": "makeMoveBro",
+          "argTypes": []
+        }
+      ],
+      "exp": "hommie.transfer((msg.value - toJP));",
+      "status": "proven"
+    }
+  ]
+}

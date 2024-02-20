@@ -1,0 +1,163 @@
+{
+  "fileName": "Benchmarks/Study_SamplesSet/bd32386ca9d9f19130cee3cb773c9456.sol",
+  "baseName": "bd32386ca9d9f19130cee3cb773c9456.sol",
+  "iter": 658,
+  "time": "300.363224",
+  "errMsg": null,
+  "result": [
+    {
+      "no": "1",
+      "kind": "IO",
+      "line": 103,
+      "signatures": [
+        {
+          "contractName": "HFTCrowdsale",
+          "methodName": "@fallback",
+          "argTypes": []
+        }
+      ],
+      "exp": "(msg.value * prices[price])",
+      "status": "unproven"
+    },
+    {
+      "no": "2",
+      "kind": "IO",
+      "line": 104,
+      "signatures": [
+        {
+          "contractName": "HFTCrowdsale",
+          "methodName": "@fallback",
+          "argTypes": []
+        }
+      ],
+      "exp": "(amountSoldPerPeriod + (amount / 1000000000000000000))",
+      "status": "unproven"
+    },
+    {
+      "no": "3",
+      "kind": "IO",
+      "line": 107,
+      "signatures": [
+        {
+          "contractName": "HFTCrowdsale",
+          "methodName": "@fallback",
+          "argTypes": []
+        }
+      ],
+      "exp": "(price + 1)",
+      "status": "proven"
+    },
+    {
+      "no": "4",
+      "kind": "IO",
+      "line": 108,
+      "signatures": [
+        {
+          "contractName": "HFTCrowdsale",
+          "methodName": "@fallback",
+          "argTypes": []
+        }
+      ],
+      "exp": "(period + 1)",
+      "status": "proven"
+    },
+    {
+      "no": "5",
+      "kind": "IO",
+      "line": 112,
+      "signatures": [
+        {
+          "contractName": "HFTCrowdsale",
+          "methodName": "@fallback",
+          "argTypes": []
+        }
+      ],
+      "exp": "(msg.value * prices[price])",
+      "status": "unproven"
+    },
+    {
+      "no": "6",
+      "kind": "IO",
+      "line": 113,
+      "signatures": [
+        {
+          "contractName": "HFTCrowdsale",
+          "methodName": "@fallback",
+          "argTypes": []
+        }
+      ],
+      "exp": "(amountSoldPerPeriod + (amount / 1000000000000000000))",
+      "status": "proven"
+    },
+    {
+      "no": "7",
+      "kind": "DZ",
+      "line": 104,
+      "signatures": [
+        {
+          "contractName": "HFTCrowdsale",
+          "methodName": "@fallback",
+          "argTypes": []
+        }
+      ],
+      "exp": "(amount / 1000000000000000000)",
+      "status": "proven"
+    },
+    {
+      "no": "8",
+      "kind": "DZ",
+      "line": 113,
+      "signatures": [
+        {
+          "contractName": "HFTCrowdsale",
+          "methodName": "@fallback",
+          "argTypes": []
+        }
+      ],
+      "exp": "(amount / 1000000000000000000)",
+      "status": "proven"
+    },
+    {
+      "no": "9",
+      "kind": "KA",
+      "line": 93,
+      "signatures": [
+        {
+          "contractName": "HFTCrowdsale",
+          "methodName": "kill",
+          "argTypes": []
+        }
+      ],
+      "exp": "selfdestruct(owner);",
+      "status": "proven"
+    },
+    {
+      "no": "10",
+      "kind": "ETH_LEAK",
+      "line": 93,
+      "signatures": [
+        {
+          "contractName": "HFTCrowdsale",
+          "methodName": "kill",
+          "argTypes": []
+        }
+      ],
+      "exp": "selfdestruct(owner);",
+      "status": "proven"
+    },
+    {
+      "no": "11",
+      "kind": "ETH_LEAK",
+      "line": 118,
+      "signatures": [
+        {
+          "contractName": "HFTCrowdsale",
+          "methodName": "@fallback",
+          "argTypes": []
+        }
+      ],
+      "exp": "owner.transfer(msg.value);",
+      "status": "proven"
+    }
+  ]
+}

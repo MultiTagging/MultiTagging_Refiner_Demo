@@ -1,0 +1,504 @@
+{
+  "success": true,
+  "error": null,
+  "results": {
+    "detectors": [
+      {
+        "elements": [
+          {
+            "type": "contract",
+            "name": "ProofOfIndividuality",
+            "source_mapping": {
+              "start": 277,
+              "length": 1403,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            }
+          },
+          {
+            "type": "node",
+            "name": "Humans.push(Human(_name,msg.sender))",
+            "source_mapping": {
+              "start": 1028,
+              "length": 101,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "nameYourself",
+                "source_mapping": {
+                  "start": 864,
+                  "length": 288,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "ProofOfIndividuality",
+                    "source_mapping": {
+                      "start": 277,
+                      "length": 1403,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "nameYourself(string)"
+                }
+              }
+            }
+          }
+        ],
+        "description": "ProofOfIndividuality () contract sets array length with a user-controlled value:\n\t- Humans.push(Human(_name,msg.sender)) ()\n",
+        "markdown": "[ProofOfIndividuality]() contract sets array length with a user-controlled value:\n\t- [Humans.push(Human(_name,msg.sender))]()\n",
+        "first_markdown_element": "",
+        "id": "d408e3075dafd6da1fdedd5bd1a030a62902ccbdc7a2c2aff128b122f8997bb4",
+        "check": "controlled-array-length",
+        "impact": "High",
+        "confidence": "Medium"
+      },
+      {
+        "elements": [
+          {
+            "type": "node",
+            "name": "",
+            "source_mapping": {
+              "start": 954,
+              "length": 5,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "nameYourself",
+                "source_mapping": {
+                  "start": 864,
+                  "length": 288,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "ProofOfIndividuality",
+                    "source_mapping": {
+                      "start": 277,
+                      "length": 1403,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "nameYourself(string)"
+                }
+              }
+            }
+          }
+        ],
+        "description": "Deprecated standard detected THROW ():\n\t- Usage of \"throw\" should be replaced with \"revert()\"\n",
+        "markdown": "Deprecated standard detected [THROW]():\n\t- Usage of \"throw\" should be replaced with \"revert()\"\n",
+        "first_markdown_element": "",
+        "id": "f5556cf1c70b64b9e4b1fc32044dd970b5f2c8b9fc21b7971fda01971033f2d5",
+        "check": "deprecated-standards",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "pragma",
+            "name": "^0.4.6",
+            "source_mapping": {
+              "start": 0,
+              "length": 23,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "directive": [
+                "solidity",
+                "^",
+                "0.4",
+                ".6"
+              ]
+            }
+          }
+        ],
+        "description": "Pragma version^0.4.6 () allows old versions\n",
+        "markdown": "Pragma version[^0.4.6]() allows old versions\n",
+        "first_markdown_element": "",
+        "id": "54eae9514d5e93f8fb467cb6e12380204cb269720316b950ba80b399a769bf71",
+        "check": "solc-version",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [],
+        "description": "solc-0.4.6 is not recommended for deployment\n",
+        "markdown": "solc-0.4.6 is not recommended for deployment\n",
+        "first_markdown_element": "",
+        "id": "b2e09ce9c0c37029707bd5645a9a2972adb1c4c04948009825bacc17fa383ec8",
+        "check": "solc-version",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "Humans",
+            "source_mapping": {
+              "start": 414,
+              "length": 21,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "ProofOfIndividuality",
+                "source_mapping": {
+                  "start": 277,
+                  "length": 1403,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              }
+            },
+            "additional_fields": {
+              "target": "variable",
+              "convention": "mixedCase"
+            }
+          }
+        ],
+        "description": "Variable ProofOfIndividuality.Humans () is not in mixedCase\n",
+        "markdown": "Variable [ProofOfIndividuality.Humans]() is not in mixedCase\n",
+        "first_markdown_element": "",
+        "id": "40560500157a8c2edf00c384b492c51538703c3161d5024b4085843c25fed45f",
+        "check": "naming-convention",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "_name",
+            "source_mapping": {
+              "start": 886,
+              "length": 12,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "nameYourself",
+                "source_mapping": {
+                  "start": 864,
+                  "length": 288,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "ProofOfIndividuality",
+                    "source_mapping": {
+                      "start": 277,
+                      "length": 1403,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "nameYourself(string)"
+                }
+              }
+            },
+            "additional_fields": {
+              "target": "parameter",
+              "convention": "mixedCase"
+            }
+          }
+        ],
+        "description": "Parameter ProofOfIndividuality.nameYourself(string)._name () is not in mixedCase\n",
+        "markdown": "Parameter [ProofOfIndividuality.nameYourself(string)._name]() is not in mixedCase\n",
+        "first_markdown_element": "",
+        "id": "613ca730eff4bf42f0405e524c121dbec00cc85fbeced969de8e13d0499897f2",
+        "check": "naming-convention",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "POI",
+            "source_mapping": {
+              "start": 507,
+              "length": 35,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "ProofOfIndividuality",
+                "source_mapping": {
+                  "start": 277,
+                  "length": 1403,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              }
+            },
+            "additional_fields": {
+              "target": "variable",
+              "convention": "mixedCase"
+            }
+          }
+        ],
+        "description": "Variable ProofOfIndividuality.POI () is not in mixedCase\n",
+        "markdown": "Variable [ProofOfIndividuality.POI]() is not in mixedCase\n",
+        "first_markdown_element": "",
+        "id": "66c77e24978c8a4dfe787fe14bf0c3b74a762e745be21d313093207d7836c86b",
+        "check": "naming-convention",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "_POIholder",
+            "source_mapping": {
+              "start": 1569,
+              "length": 18,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "verifyPOI",
+                "source_mapping": {
+                  "start": 1550,
+                  "length": 119,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "ProofOfIndividuality",
+                    "source_mapping": {
+                      "start": 277,
+                      "length": 1403,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "verifyPOI(address)"
+                }
+              }
+            },
+            "additional_fields": {
+              "target": "parameter",
+              "convention": "mixedCase"
+            }
+          }
+        ],
+        "description": "Parameter ProofOfIndividuality.verifyPOI(address)._POIholder () is not in mixedCase\n",
+        "markdown": "Parameter [ProofOfIndividuality.verifyPOI(address)._POIholder]() is not in mixedCase\n",
+        "first_markdown_element": "",
+        "id": "b947f9c04342a18a07014e516d5b7ecbd8c492a405cb5fdd306f62f8e18ee1eb",
+        "check": "naming-convention",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "HumansIndex",
+            "source_mapping": {
+              "start": 445,
+              "length": 43,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "ProofOfIndividuality",
+                "source_mapping": {
+                  "start": 277,
+                  "length": 1403,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              }
+            },
+            "additional_fields": {
+              "target": "variable",
+              "convention": "mixedCase"
+            }
+          }
+        ],
+        "description": "Variable ProofOfIndividuality.HumansIndex () is not in mixedCase\n",
+        "markdown": "Variable [ProofOfIndividuality.HumansIndex]() is not in mixedCase\n",
+        "first_markdown_element": "",
+        "id": "cef520514967f2081c26778ae984d698b1fa67151548fafe5d5466f8390cde98",
+        "check": "naming-convention",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "nameYourself",
+            "source_mapping": {
+              "start": 864,
+              "length": 288,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "ProofOfIndividuality",
+                "source_mapping": {
+                  "start": 277,
+                  "length": 1403,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              },
+              "signature": "nameYourself(string)"
+            }
+          }
+        ],
+        "description": "nameYourself(string) should be declared external:\n\t- ProofOfIndividuality.nameYourself(string) ()\n",
+        "markdown": "nameYourself(string) should be declared external:\n\t- [ProofOfIndividuality.nameYourself(string)]()\n",
+        "first_markdown_element": "",
+        "id": "713be08557ddc7d5c3fc0fdc1c320da05a921f2b9f98645638693e8823401bdb",
+        "check": "external-function",
+        "impact": "Optimization",
+        "confidence": "High"
+      }
+    ]
+  }
+}

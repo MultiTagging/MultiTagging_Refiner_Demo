@@ -1,0 +1,271 @@
+{
+  "fileName": "Benchmarks/Study_SamplesSet/de7fbb5fc3b3a3d638cb3250daa2373f.sol",
+  "baseName": "de7fbb5fc3b3a3d638cb3250daa2373f.sol",
+  "iter": 419,
+  "time": "304.687683",
+  "errMsg": null,
+  "result": [
+    {
+      "no": "1",
+      "kind": "IO",
+      "line": 124,
+      "signatures": [
+        {
+          "contractName": "KimContract",
+          "methodName": "releaseSomeKims",
+          "argTypes": [ "uint256" ]
+        }
+      ],
+      "exp": "(counter + 1)",
+      "status": "proven"
+    },
+    {
+      "no": "2",
+      "kind": "IO",
+      "line": 130,
+      "signatures": [
+        {
+          "contractName": "KimContract",
+          "methodName": "releaseSomeKims",
+          "argTypes": [ "uint256" ]
+        }
+      ],
+      "exp": "(kimsCreated + 1)",
+      "status": "unproven"
+    },
+    {
+      "no": "3",
+      "kind": "IO",
+      "line": 158,
+      "signatures": [
+        {
+          "contractName": "KimContract",
+          "methodName": "sellToken",
+          "argTypes": [ "uint256", "uint256" ]
+        }
+      ],
+      "exp": "(kimsOnAuction + 1)",
+      "status": "unproven"
+    },
+    {
+      "no": "4",
+      "kind": "IO",
+      "line": 190,
+      "signatures": [
+        {
+          "contractName": "KimContract",
+          "methodName": "_completeAuction",
+          "argTypes": [ "uint256", "address", "address", "uint256" ]
+        }
+      ],
+      "exp": "(sellPrice - auctioneerCut)",
+      "status": "unproven"
+    },
+    {
+      "no": "5",
+      "kind": "IO",
+      "line": 194,
+      "signatures": [
+        {
+          "contractName": "KimContract",
+          "methodName": "_completeAuction",
+          "argTypes": [ "uint256", "address", "address", "uint256" ]
+        }
+      ],
+      "exp": "(pendingWithdrawals[seller] + (sellerProceeds + auctioneerCut))",
+      "status": "unproven"
+    },
+    {
+      "no": "6",
+      "kind": "IO",
+      "line": 194,
+      "signatures": [
+        {
+          "contractName": "KimContract",
+          "methodName": "_completeAuction",
+          "argTypes": [ "uint256", "address", "address", "uint256" ]
+        }
+      ],
+      "exp": "(sellerProceeds + auctioneerCut)",
+      "status": "unproven"
+    },
+    {
+      "no": "7",
+      "kind": "IO",
+      "line": 201,
+      "signatures": [
+        {
+          "contractName": "KimContract",
+          "methodName": "_completeAuction",
+          "argTypes": [ "uint256", "address", "address", "uint256" ]
+        }
+      ],
+      "exp": "(pendingWithdrawals[seller] + sellerProceeds)",
+      "status": "unproven"
+    },
+    {
+      "no": "8",
+      "kind": "IO",
+      "line": 203,
+      "signatures": [
+        {
+          "contractName": "KimContract",
+          "methodName": "_completeAuction",
+          "argTypes": [ "uint256", "address", "address", "uint256" ]
+        }
+      ],
+      "exp": "(pendingWithdrawals[this] + auctioneerCut)",
+      "status": "unproven"
+    },
+    {
+      "no": "9",
+      "kind": "IO",
+      "line": 210,
+      "signatures": [
+        {
+          "contractName": "KimContract",
+          "methodName": "_completeAuction",
+          "argTypes": [ "uint256", "address", "address", "uint256" ]
+        }
+      ],
+      "exp": "(kimsOnAuction - 1)",
+      "status": "unproven"
+    },
+    {
+      "no": "10",
+      "kind": "IO",
+      "line": 237,
+      "signatures": [
+        {
+          "contractName": "KimContract",
+          "methodName": "_completeAuction",
+          "argTypes": [ "uint256", "address", "address", "uint256" ]
+        }
+      ],
+      "exp": "(sellPrice * sellerCut)",
+      "status": "unproven"
+    },
+    {
+      "no": "11",
+      "kind": "IO",
+      "line": 249,
+      "signatures": [
+        {
+          "contractName": "KimContract",
+          "methodName": "_completeAuction",
+          "argTypes": [ "uint256", "address", "address", "uint256" ]
+        },
+        {
+          "contractName": "KimContract",
+          "methodName": "transfer",
+          "argTypes": [ "address", "uint256" ]
+        }
+      ],
+      "exp": "(balanceOf[_from] - 1)",
+      "status": "unproven"
+    },
+    {
+      "no": "12",
+      "kind": "IO",
+      "line": 251,
+      "signatures": [
+        {
+          "contractName": "KimContract",
+          "methodName": "_completeAuction",
+          "argTypes": [ "uint256", "address", "address", "uint256" ]
+        },
+        {
+          "contractName": "KimContract",
+          "methodName": "transfer",
+          "argTypes": [ "address", "uint256" ]
+        }
+      ],
+      "exp": "(balanceOf[_to] + 1)",
+      "status": "unproven"
+    },
+    {
+      "no": "13",
+      "kind": "IO",
+      "line": 287,
+      "signatures": [
+        {
+          "contractName": "KimContract",
+          "methodName": "averageKimSalePrice",
+          "argTypes": []
+        }
+      ],
+      "exp": "(i + 1)",
+      "status": "unproven"
+    },
+    {
+      "no": "14",
+      "kind": "IO",
+      "line": 288,
+      "signatures": [
+        {
+          "contractName": "KimContract",
+          "methodName": "averageKimSalePrice",
+          "argTypes": []
+        }
+      ],
+      "exp": "(sumOfAllKimAuctions + tokenAuction[i].sellPrice)",
+      "status": "unproven"
+    },
+    {
+      "no": "15",
+      "kind": "DZ",
+      "line": 237,
+      "signatures": [
+        {
+          "contractName": "KimContract",
+          "methodName": "_completeAuction",
+          "argTypes": [ "uint256", "address", "address", "uint256" ]
+        }
+      ],
+      "exp": "((sellPrice * sellerCut) / 1000)",
+      "status": "proven"
+    },
+    {
+      "no": "16",
+      "kind": "DZ",
+      "line": 290,
+      "signatures": [
+        {
+          "contractName": "KimContract",
+          "methodName": "averageKimSalePrice",
+          "argTypes": []
+        }
+      ],
+      "exp": "(sumOfAllKimAuctions / kimsOnAuction)",
+      "status": "unproven"
+    },
+    {
+      "no": "17",
+      "kind": "ETH_LEAK",
+      "line": 303,
+      "signatures": [
+        {
+          "contractName": "KimContract",
+          "methodName": "withdraw",
+          "argTypes": []
+        }
+      ],
+      "exp": "msg.sender.transfer(amount);",
+      "status": "unproven"
+    },
+    {
+      "no": "18",
+      "kind": "ETH_LEAK",
+      "line": 313,
+      "signatures": [
+        {
+          "contractName": "KimContract",
+          "methodName": "withdrawBalance",
+          "argTypes": []
+        }
+      ],
+      "exp": "cfoAddress.transfer(balance);",
+      "status": "proven"
+    }
+  ]
+}

@@ -1,0 +1,924 @@
+{
+  "success": true,
+  "error": null,
+  "results": {
+    "detectors": [
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "testNumberRequest",
+            "source_mapping": {
+              "start": 615,
+              "length": 451,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "RandomRealityCaller",
+                "source_mapping": {
+                  "start": 242,
+                  "length": 976,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              },
+              "signature": "testNumberRequest(address,uint256,uint256,uint256,uint256)"
+            }
+          },
+          {
+            "type": "node",
+            "name": "id = randomrealityapi.requestNumber.value(cost)(min,max,blocks,secs)",
+            "source_mapping": {
+              "start": 874,
+              "length": 79,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "testNumberRequest",
+                "source_mapping": {
+                  "start": 615,
+                  "length": 451,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "RandomRealityCaller",
+                    "source_mapping": {
+                      "start": 242,
+                      "length": 976,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "testNumberRequest(address,uint256,uint256,uint256,uint256)"
+                }
+              }
+            }
+          }
+        ],
+        "description": "RandomRealityCaller.testNumberRequest(address,uint256,uint256,uint256,uint256) () sends eth to arbitrary user\n\tDangerous calls:\n\t- id = randomrealityapi.requestNumber.value(cost)(min,max,blocks,secs) ()\n",
+        "markdown": "[RandomRealityCaller.testNumberRequest(address,uint256,uint256,uint256,uint256)]() sends eth to arbitrary user\n\tDangerous calls:\n\t- [id = randomrealityapi.requestNumber.value(cost)(min,max,blocks,secs)]()\n",
+        "first_markdown_element": "",
+        "id": "a8c5578502c1280cf19a6004b0247f0a795e1bd1d48d354c1d81df1c13258353",
+        "check": "arbitrary-send-eth",
+        "impact": "High",
+        "confidence": "Medium"
+      },
+      {
+        "elements": [
+          {
+            "type": "contract",
+            "name": "RandomRealityAPI",
+            "source_mapping": {
+              "start": 25,
+              "length": 215,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            }
+          },
+          {
+            "type": "function",
+            "name": "requestNumber",
+            "source_mapping": {
+              "start": 57,
+              "length": 117,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "RandomRealityAPI",
+                "source_mapping": {
+                  "start": 25,
+                  "length": 215,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              },
+              "signature": "requestNumber(uint256,uint256,uint256,uint256)"
+            }
+          }
+        ],
+        "description": "Contract locking ether found:\n\tContract RandomRealityAPI () has payable functions:\n\t - RandomRealityAPI.requestNumber(uint256,uint256,uint256,uint256) ()\n\tBut does not have a function to withdraw the ether\n",
+        "markdown": "Contract locking ether found:\n\tContract [RandomRealityAPI]() has payable functions:\n\t - [RandomRealityAPI.requestNumber(uint256,uint256,uint256,uint256)]()\n\tBut does not have a function to withdraw the ether\n",
+        "first_markdown_element": "",
+        "id": "9e998565d11ead3986c04edb866c81e0a18ac6c02930c696f70ed6f934e40383",
+        "check": "locked-ether",
+        "impact": "Medium",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "testNumberRequest",
+            "source_mapping": {
+              "start": 615,
+              "length": 451,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "RandomRealityCaller",
+                "source_mapping": {
+                  "start": 242,
+                  "length": 976,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              },
+              "signature": "testNumberRequest(address,uint256,uint256,uint256,uint256)"
+            }
+          },
+          {
+            "type": "node",
+            "name": "cost = randomrealityapi.getPrice(200000)",
+            "source_mapping": {
+              "start": 816,
+              "length": 48,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "testNumberRequest",
+                "source_mapping": {
+                  "start": 615,
+                  "length": 451,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "RandomRealityCaller",
+                    "source_mapping": {
+                      "start": 242,
+                      "length": 976,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "testNumberRequest(address,uint256,uint256,uint256,uint256)"
+                }
+              }
+            },
+            "additional_fields": {
+              "underlying_type": "external_calls"
+            }
+          },
+          {
+            "type": "node",
+            "name": "id = randomrealityapi.requestNumber.value(cost)(min,max,blocks,secs)",
+            "source_mapping": {
+              "start": 874,
+              "length": 79,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "testNumberRequest",
+                "source_mapping": {
+                  "start": 615,
+                  "length": 451,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "RandomRealityCaller",
+                    "source_mapping": {
+                      "start": 242,
+                      "length": 976,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "testNumberRequest(address,uint256,uint256,uint256,uint256)"
+                }
+              }
+            },
+            "additional_fields": {
+              "underlying_type": "external_calls"
+            }
+          },
+          {
+            "type": "node",
+            "name": "id = randomrealityapi.requestNumber.value(cost)(min,max,blocks,secs)",
+            "source_mapping": {
+              "start": 874,
+              "length": 79,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "testNumberRequest",
+                "source_mapping": {
+                  "start": 615,
+                  "length": 451,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "RandomRealityCaller",
+                    "source_mapping": {
+                      "start": 242,
+                      "length": 976,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "testNumberRequest(address,uint256,uint256,uint256,uint256)"
+                }
+              }
+            },
+            "additional_fields": {
+              "underlying_type": "external_calls_sending_eth"
+            }
+          },
+          {
+            "type": "node",
+            "name": "MadeRequest(id)",
+            "source_mapping": {
+              "start": 963,
+              "length": 15,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "testNumberRequest",
+                "source_mapping": {
+                  "start": 615,
+                  "length": 451,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "RandomRealityCaller",
+                    "source_mapping": {
+                      "start": 242,
+                      "length": 976,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "testNumberRequest(address,uint256,uint256,uint256,uint256)"
+                }
+              }
+            },
+            "additional_fields": {
+              "underlying_type": "event"
+            }
+          }
+        ],
+        "description": "Reentrancy in RandomRealityCaller.testNumberRequest(address,uint256,uint256,uint256,uint256) ():\n\tExternal calls:\n\t- cost = randomrealityapi.getPrice(200000) ()\n\t- id = randomrealityapi.requestNumber.value(cost)(min,max,blocks,secs) ()\n\tExternal calls sending eth:\n\t- id = randomrealityapi.requestNumber.value(cost)(min,max,blocks,secs) ()\n\tEvent emitted after the call(s):\n\t- MadeRequest(id) ()\n",
+        "markdown": "Reentrancy in [RandomRealityCaller.testNumberRequest(address,uint256,uint256,uint256,uint256)]():\n\tExternal calls:\n\t- [cost = randomrealityapi.getPrice(200000)]()\n\t- [id = randomrealityapi.requestNumber.value(cost)(min,max,blocks,secs)]()\n\tExternal calls sending eth:\n\t- [id = randomrealityapi.requestNumber.value(cost)(min,max,blocks,secs)]()\n\tEvent emitted after the call(s):\n\t- [MadeRequest(id)]()\n",
+        "first_markdown_element": "",
+        "id": "9c8afae73e000523b2615616bd67faa909af54983279b08e49c960bffa77fa13",
+        "check": "reentrancy-events",
+        "impact": "Low",
+        "confidence": "Medium"
+      },
+      {
+        "elements": [
+          {
+            "type": "node",
+            "name": "",
+            "source_mapping": {
+              "start": 597,
+              "length": 5,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "withdraw",
+                "source_mapping": {
+                  "start": 514,
+                  "length": 95,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "RandomRealityCaller",
+                    "source_mapping": {
+                      "start": 242,
+                      "length": 976,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "withdraw(address,uint256)"
+                }
+              }
+            }
+          }
+        ],
+        "description": "Deprecated standard detected THROW ():\n\t- Usage of \"throw\" should be replaced with \"revert()\"\n",
+        "markdown": "Deprecated standard detected [THROW]():\n\t- Usage of \"throw\" should be replaced with \"revert()\"\n",
+        "first_markdown_element": "",
+        "id": "f5556cf1c70b64b9e4b1fc32044dd970b5f2c8b9fc21b7971fda01971033f2d5",
+        "check": "deprecated-standards",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "pragma",
+            "name": "^0.4.6",
+            "source_mapping": {
+              "start": 0,
+              "length": 23,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "directive": [
+                "solidity",
+                "^",
+                "0.4",
+                ".6"
+              ]
+            }
+          }
+        ],
+        "description": "Pragma version^0.4.6 () allows old versions\n",
+        "markdown": "Pragma version[^0.4.6]() allows old versions\n",
+        "first_markdown_element": "",
+        "id": "54eae9514d5e93f8fb467cb6e12380204cb269720316b950ba80b399a769bf71",
+        "check": "solc-version",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [],
+        "description": "solc-0.4.6 is not recommended for deployment\n",
+        "markdown": "solc-0.4.6 is not recommended for deployment\n",
+        "first_markdown_element": "",
+        "id": "b2e09ce9c0c37029707bd5645a9a2972adb1c4c04948009825bacc17fa383ec8",
+        "check": "solc-version",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "wait_secs",
+            "source_mapping": {
+              "start": 127,
+              "length": 17,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "requestNumber",
+                "source_mapping": {
+                  "start": 57,
+                  "length": 117,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "RandomRealityAPI",
+                    "source_mapping": {
+                      "start": 25,
+                      "length": 215,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "requestNumber(uint256,uint256,uint256,uint256)"
+                }
+              }
+            },
+            "additional_fields": {
+              "target": "parameter",
+              "convention": "mixedCase"
+            }
+          }
+        ],
+        "description": "Parameter RandomRealityAPI.requestNumber(uint256,uint256,uint256,uint256).wait_secs () is not in mixedCase\n",
+        "markdown": "Parameter [RandomRealityAPI.requestNumber(uint256,uint256,uint256,uint256).wait_secs]() is not in mixedCase\n",
+        "first_markdown_element": "",
+        "id": "0051890774de0c8795d60fef0c91e8276260e9d55291bc8a8f1cef848daff4bd",
+        "check": "naming-convention",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "ipfs_proof",
+            "source_mapping": {
+              "start": 1145,
+              "length": 18,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "__random_callback",
+                "source_mapping": {
+                  "start": 1072,
+                  "length": 143,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "RandomRealityCaller",
+                    "source_mapping": {
+                      "start": 242,
+                      "length": 976,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "__random_callback(bytes32,uint256,uint256,bytes32)"
+                }
+              }
+            },
+            "additional_fields": {
+              "target": "parameter",
+              "convention": "mixedCase"
+            }
+          }
+        ],
+        "description": "Parameter RandomRealityCaller.__random_callback(bytes32,uint256,uint256,bytes32).ipfs_proof () is not in mixedCase\n",
+        "markdown": "Parameter [RandomRealityCaller.__random_callback(bytes32,uint256,uint256,bytes32).ipfs_proof]() is not in mixedCase\n",
+        "first_markdown_element": "",
+        "id": "914f71a4298c3379fbecfd4d81e31192314ede355e58c540d1aa24278e3eee8b",
+        "check": "naming-convention",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "request_id",
+            "source_mapping": {
+              "start": 1099,
+              "length": 18,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "__random_callback",
+                "source_mapping": {
+                  "start": 1072,
+                  "length": 143,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "RandomRealityCaller",
+                    "source_mapping": {
+                      "start": 242,
+                      "length": 976,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "__random_callback(bytes32,uint256,uint256,bytes32)"
+                }
+              }
+            },
+            "additional_fields": {
+              "target": "parameter",
+              "convention": "mixedCase"
+            }
+          }
+        ],
+        "description": "Parameter RandomRealityCaller.__random_callback(bytes32,uint256,uint256,bytes32).request_id () is not in mixedCase\n",
+        "markdown": "Parameter [RandomRealityCaller.__random_callback(bytes32,uint256,uint256,bytes32).request_id]() is not in mixedCase\n",
+        "first_markdown_element": "",
+        "id": "de0522c894253326f03c30f15b1d4e9cbada9940a761d8666275dfe6649d145a",
+        "check": "naming-convention",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "wait_blocks",
+            "source_mapping": {
+              "start": 106,
+              "length": 19,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "requestNumber",
+                "source_mapping": {
+                  "start": 57,
+                  "length": 117,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "RandomRealityAPI",
+                    "source_mapping": {
+                      "start": 25,
+                      "length": 215,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "requestNumber(uint256,uint256,uint256,uint256)"
+                }
+              }
+            },
+            "additional_fields": {
+              "target": "parameter",
+              "convention": "mixedCase"
+            }
+          }
+        ],
+        "description": "Parameter RandomRealityAPI.requestNumber(uint256,uint256,uint256,uint256).wait_blocks () is not in mixedCase\n",
+        "markdown": "Parameter [RandomRealityAPI.requestNumber(uint256,uint256,uint256,uint256).wait_blocks]() is not in mixedCase\n",
+        "first_markdown_element": "",
+        "id": "eca25576914681ff05958274f7bb3fef5498cfd93ba4aa88a319c706184a486a",
+        "check": "naming-convention",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "__random_callback",
+            "source_mapping": {
+              "start": 1072,
+              "length": 143,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "RandomRealityCaller",
+                "source_mapping": {
+                  "start": 242,
+                  "length": 976,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              },
+              "signature": "__random_callback(bytes32,uint256,uint256,bytes32)"
+            },
+            "additional_fields": {
+              "target": "function",
+              "convention": "mixedCase"
+            }
+          }
+        ],
+        "description": "Function RandomRealityCaller.__random_callback(bytes32,uint256,uint256,bytes32) () is not in mixedCase\n",
+        "markdown": "Function [RandomRealityCaller.__random_callback(bytes32,uint256,uint256,bytes32)]() is not in mixedCase\n",
+        "first_markdown_element": "",
+        "id": "fbecf3c99a88d3073242364414e933d1218f04a1d18db9d39b23f985289a05d4",
+        "check": "naming-convention",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "testNumberRequest",
+            "source_mapping": {
+              "start": 615,
+              "length": 451,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "RandomRealityCaller",
+                "source_mapping": {
+                  "start": 242,
+                  "length": 976,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              },
+              "signature": "testNumberRequest(address,uint256,uint256,uint256,uint256)"
+            }
+          },
+          {
+            "type": "node",
+            "name": "cost = randomrealityapi.getPrice(200000)",
+            "source_mapping": {
+              "start": 816,
+              "length": 48,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "testNumberRequest",
+                "source_mapping": {
+                  "start": 615,
+                  "length": 451,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "RandomRealityCaller",
+                    "source_mapping": {
+                      "start": 242,
+                      "length": 976,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "testNumberRequest(address,uint256,uint256,uint256,uint256)"
+                }
+              }
+            }
+          }
+        ],
+        "description": "RandomRealityCaller.testNumberRequest(address,uint256,uint256,uint256,uint256) () uses literals with too many digits:\n\t- cost = randomrealityapi.getPrice(200000) ()\n",
+        "markdown": "[RandomRealityCaller.testNumberRequest(address,uint256,uint256,uint256,uint256)]() uses literals with too many digits:\n\t- [cost = randomrealityapi.getPrice(200000)]()\n",
+        "first_markdown_element": "",
+        "id": "8e4608b9b62048e2789b2ac52346a00a91e082ec72e4b8c5480d63cda51fe06e",
+        "check": "too-many-digits",
+        "impact": "Informational",
+        "confidence": "Medium"
+      }
+    ]
+  }
+}

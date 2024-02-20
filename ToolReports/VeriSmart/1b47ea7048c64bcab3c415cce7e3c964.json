@@ -1,0 +1,136 @@
+{
+  "fileName": "Benchmarks/Study_SamplesSet/1b47ea7048c64bcab3c415cce7e3c964.sol",
+  "baseName": "1b47ea7048c64bcab3c415cce7e3c964.sol",
+  "iter": 86,
+  "time": "327.08308",
+  "errMsg": null,
+  "result": [
+    {
+      "no": "1",
+      "kind": "IO",
+      "line": 23,
+      "signatures": [
+        {
+          "contractName": "HalfToken",
+          "methodName": "@fallback",
+          "argTypes": []
+        },
+        {
+          "contractName": "HalfToken",
+          "methodName": "transfer",
+          "argTypes": [ "address", "uint256" ]
+        },
+        {
+          "contractName": "HalfToken",
+          "methodName": "transferFrom",
+          "argTypes": [ "address", "address", "uint256" ]
+        }
+      ],
+      "exp": "(a + b)",
+      "status": "unproven"
+    },
+    {
+      "no": "2",
+      "kind": "IO",
+      "line": 28,
+      "signatures": [
+        {
+          "contractName": "HalfToken",
+          "methodName": "transfer",
+          "argTypes": [ "address", "uint256" ]
+        },
+        {
+          "contractName": "HalfToken",
+          "methodName": "transferFrom",
+          "argTypes": [ "address", "address", "uint256" ]
+        }
+      ],
+      "exp": "(a - b)",
+      "status": "proven"
+    },
+    {
+      "no": "3",
+      "kind": "IO",
+      "line": 133,
+      "signatures": [
+        {
+          "contractName": "HalfToken",
+          "methodName": "totalSupply",
+          "argTypes": []
+        }
+      ],
+      "exp": "(_totalSupply - balances[address(0)])",
+      "status": "unproven"
+    },
+    {
+      "no": "4",
+      "kind": "IO",
+      "line": 219,
+      "signatures": [
+        {
+          "contractName": "HalfToken",
+          "methodName": "@fallback",
+          "argTypes": []
+        }
+      ],
+      "exp": "(participants + 1)",
+      "status": "proven"
+    },
+    {
+      "no": "5",
+      "kind": "DZ",
+      "line": 152,
+      "signatures": [
+        {
+          "contractName": "HalfToken",
+          "methodName": "transfer",
+          "argTypes": [ "address", "uint256" ]
+        }
+      ],
+      "exp": "(tokens / 2)",
+      "status": "proven"
+    },
+    {
+      "no": "6",
+      "kind": "DZ",
+      "line": 153,
+      "signatures": [
+        {
+          "contractName": "HalfToken",
+          "methodName": "transfer",
+          "argTypes": [ "address", "uint256" ]
+        }
+      ],
+      "exp": "(tokens / 2)",
+      "status": "proven"
+    },
+    {
+      "no": "7",
+      "kind": "DZ",
+      "line": 186,
+      "signatures": [
+        {
+          "contractName": "HalfToken",
+          "methodName": "transferFrom",
+          "argTypes": [ "address", "address", "uint256" ]
+        }
+      ],
+      "exp": "(tokens / 2)",
+      "status": "proven"
+    },
+    {
+      "no": "8",
+      "kind": "DZ",
+      "line": 187,
+      "signatures": [
+        {
+          "contractName": "HalfToken",
+          "methodName": "transferFrom",
+          "argTypes": [ "address", "address", "uint256" ]
+        }
+      ],
+      "exp": "(tokens / 2)",
+      "status": "proven"
+    }
+  ]
+}

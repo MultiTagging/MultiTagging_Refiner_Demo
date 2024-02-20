@@ -1,0 +1,95 @@
+{
+  "fileName": "Benchmarks/Study_SamplesSet/de9dee1319f605155092633560084fc8.sol",
+  "baseName": "de9dee1319f605155092633560084fc8.sol",
+  "iter": 525,
+  "time": "300.953223",
+  "errMsg": null,
+  "result": [
+    {
+      "no": "1",
+      "kind": "IO",
+      "line": 37,
+      "signatures": [
+        {
+          "contractName": "AbstractToken",
+          "methodName": "transfer",
+          "argTypes": [ "address", "uint256" ]
+        },
+        {
+          "contractName": "OJCToken",
+          "methodName": "createTokens",
+          "argTypes": [ "uint256" ]
+        },
+        {
+          "contractName": "OJCToken",
+          "methodName": "transfer",
+          "argTypes": [ "address", "uint256" ]
+        },
+        {
+          "contractName": "OJCToken",
+          "methodName": "transferFrom",
+          "argTypes": [ "address", "address", "uint256" ]
+        }
+      ],
+      "exp": "(a - b)",
+      "status": "proven"
+    },
+    {
+      "no": "2",
+      "kind": "IO",
+      "line": 41,
+      "signatures": [
+        {
+          "contractName": "AbstractToken",
+          "methodName": "transfer",
+          "argTypes": [ "address", "uint256" ]
+        },
+        {
+          "contractName": "OJCToken",
+          "methodName": "createTokens",
+          "argTypes": [ "uint256" ]
+        },
+        {
+          "contractName": "OJCToken",
+          "methodName": "transfer",
+          "argTypes": [ "address", "uint256" ]
+        },
+        {
+          "contractName": "OJCToken",
+          "methodName": "transferFrom",
+          "argTypes": [ "address", "address", "uint256" ]
+        }
+      ],
+      "exp": "(a + b)",
+      "status": "unproven"
+    },
+    {
+      "no": "3",
+      "kind": "IO",
+      "line": 190,
+      "signatures": [
+        {
+          "contractName": "OJCToken",
+          "methodName": "OJCToken",
+          "argTypes": []
+        }
+      ],
+      "exp": "(10 ** 8)",
+      "status": "proven"
+    },
+    {
+      "no": "4",
+      "kind": "IO",
+      "line": 190,
+      "signatures": [
+        {
+          "contractName": "OJCToken",
+          "methodName": "OJCToken",
+          "argTypes": []
+        }
+      ],
+      "exp": "(100000000 * (10 ** 8))",
+      "status": "proven"
+    }
+  ]
+}

@@ -1,0 +1,1931 @@
+{
+  "success": true,
+  "error": null,
+  "results": {
+    "detectors": [
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "withdraw",
+            "source_mapping": {
+              "start": 14134,
+              "length": 896,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "RSPLT_F",
+                "source_mapping": {
+                  "start": 106,
+                  "length": 15411,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              },
+              "signature": "withdraw()"
+            }
+          },
+          {
+            "type": "node",
+            "name": "! msg.sender.call.gas(withdrawGas).value(amount)()",
+            "source_mapping": {
+              "start": 14757,
+              "length": 49,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "withdraw",
+                "source_mapping": {
+                  "start": 14134,
+                  "length": 896,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "RSPLT_F",
+                    "source_mapping": {
+                      "start": 106,
+                      "length": 15411,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "withdraw()"
+                }
+              }
+            },
+            "additional_fields": {
+              "underlying_type": "external_calls"
+            }
+          },
+          {
+            "type": "node",
+            "name": "partnerAccounts[i].balance = 0",
+            "source_mapping": {
+              "start": 14610,
+              "length": 30,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "withdraw",
+                "source_mapping": {
+                  "start": 14134,
+                  "length": 896,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "RSPLT_F",
+                    "source_mapping": {
+                      "start": 106,
+                      "length": 15411,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "withdraw()"
+                }
+              }
+            },
+            "additional_fields": {
+              "underlying_type": "variables_written",
+              "variable_name": "partnerAccounts"
+            }
+          },
+          {
+            "type": "node",
+            "name": "totalFundsWithdrawn += amount",
+            "source_mapping": {
+              "start": 14682,
+              "length": 29,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "withdraw",
+                "source_mapping": {
+                  "start": 14134,
+                  "length": 896,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "RSPLT_F",
+                    "source_mapping": {
+                      "start": 106,
+                      "length": 15411,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "withdraw()"
+                }
+              }
+            },
+            "additional_fields": {
+              "underlying_type": "variables_written",
+              "variable_name": "totalFundsWithdrawn"
+            }
+          }
+        ],
+        "description": "Reentrancy in RSPLT_F.withdraw() ():\n\tExternal calls:\n\t- ! msg.sender.call.gas(withdrawGas).value(amount)() ()\n\tState variables written after the call(s):\n\t- partnerAccounts[i].balance = 0 ()\n\tRSPLT_F.partnerAccounts () can be used in cross function reentrancies:\n\t- RSPLT_F.addAccount(address,uint256,bool) ()\n\t- RSPLT_F.distribute() ()\n\t- RSPLT_F.getAccountInfo(address) ()\n\t- RSPLT_F.getNumEvenSplits() ()\n\t- RSPLT_F.getTotalPctx10() ()\n\t- RSPLT_F.withdraw() ()\n\t- totalFundsWithdrawn += amount ()\n\tRSPLT_F.totalFundsWithdrawn () can be used in cross function reentrancies:\n\t- RSPLT_F.reset() ()\n\t- RSPLT_F.withdraw() ()\n",
+        "markdown": "Reentrancy in [RSPLT_F.withdraw()]():\n\tExternal calls:\n\t- [! msg.sender.call.gas(withdrawGas).value(amount)()]()\n\tState variables written after the call(s):\n\t- [partnerAccounts[i].balance = 0]()\n\t[RSPLT_F.partnerAccounts]() can be used in cross function reentrancies:\n\t- [RSPLT_F.addAccount(address,uint256,bool)]()\n\t- [RSPLT_F.distribute()]()\n\t- [RSPLT_F.getAccountInfo(address)]()\n\t- [RSPLT_F.getNumEvenSplits()]()\n\t- [RSPLT_F.getTotalPctx10()]()\n\t- [RSPLT_F.withdraw()]()\n\t- [totalFundsWithdrawn += amount]()\n\t[RSPLT_F.totalFundsWithdrawn]() can be used in cross function reentrancies:\n\t- [RSPLT_F.reset()]()\n\t- [RSPLT_F.withdraw()]()\n",
+        "first_markdown_element": "",
+        "id": "58472bdb00d12b68ba144fd62a8075e88fa02c30ef83ee2755a1340d2cd9ac5f",
+        "check": "reentrancy-eth",
+        "impact": "High",
+        "confidence": "Medium"
+      },
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "setEvenDistThresh",
+            "source_mapping": {
+              "start": 3567,
+              "length": 501,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "RSPLT_F",
+                "source_mapping": {
+                  "start": 106,
+                  "length": 15411,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              },
+              "signature": "setEvenDistThresh(uint256)"
+            }
+          },
+          {
+            "type": "node",
+            "name": "evenDistThresh = (_thresh / TENHUNDWEI) * TENHUNDWEI",
+            "source_mapping": {
+              "start": 3940,
+              "length": 52,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "setEvenDistThresh",
+                "source_mapping": {
+                  "start": 3567,
+                  "length": 501,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "RSPLT_F",
+                    "source_mapping": {
+                      "start": 106,
+                      "length": 15411,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "setEvenDistThresh(uint256)"
+                }
+              }
+            }
+          }
+        ],
+        "description": "RSPLT_F.setEvenDistThresh(uint256) () performs a multiplication on the result of a division:\n\t- evenDistThresh = (_thresh / TENHUNDWEI) * TENHUNDWEI ()\n",
+        "markdown": "[RSPLT_F.setEvenDistThresh(uint256)]() performs a multiplication on the result of a division:\n\t- [evenDistThresh = (_thresh / TENHUNDWEI) * TENHUNDWEI]()\n",
+        "first_markdown_element": "",
+        "id": "c141ebdf96620b4b94c52781e53bee7e5c5a30e08e90314938c5e4428124852f",
+        "check": "divide-before-multiply",
+        "impact": "Medium",
+        "confidence": "Medium"
+      },
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "withdraw",
+            "source_mapping": {
+              "start": 14134,
+              "length": 896,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "RSPLT_F",
+                "source_mapping": {
+                  "start": 106,
+                  "length": 15411,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              },
+              "signature": "withdraw()"
+            }
+          },
+          {
+            "type": "node",
+            "name": "! msg.sender.call.gas(withdrawGas).value(amount)()",
+            "source_mapping": {
+              "start": 14757,
+              "length": 49,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "withdraw",
+                "source_mapping": {
+                  "start": 14134,
+                  "length": 896,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "RSPLT_F",
+                    "source_mapping": {
+                      "start": 106,
+                      "length": 15411,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "withdraw()"
+                }
+              }
+            }
+          }
+        ],
+        "description": "RSPLT_F.withdraw() () has external calls inside a loop: ! msg.sender.call.gas(withdrawGas).value(amount)() ()\n",
+        "markdown": "[RSPLT_F.withdraw()]() has external calls inside a loop: [! msg.sender.call.gas(withdrawGas).value(amount)()]()\n",
+        "first_markdown_element": "",
+        "id": "20c279482e9a074fad1b79727376fe98beb36e7aa2db86bfe3e16a230f73e5a3",
+        "check": "calls-loop",
+        "impact": "Low",
+        "confidence": "Medium"
+      },
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "withdraw",
+            "source_mapping": {
+              "start": 14134,
+              "length": 896,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "RSPLT_F",
+                "source_mapping": {
+                  "start": 106,
+                  "length": 15411,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              },
+              "signature": "withdraw()"
+            }
+          },
+          {
+            "type": "node",
+            "name": "! msg.sender.call.gas(withdrawGas).value(amount)()",
+            "source_mapping": {
+              "start": 14757,
+              "length": 49,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "withdraw",
+                "source_mapping": {
+                  "start": 14134,
+                  "length": 896,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "RSPLT_F",
+                    "source_mapping": {
+                      "start": 106,
+                      "length": 15411,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "withdraw()"
+                }
+              }
+            },
+            "additional_fields": {
+              "underlying_type": "external_calls"
+            }
+          },
+          {
+            "type": "node",
+            "name": "StatEvent(err: balance is zero)",
+            "source_mapping": {
+              "start": 14494,
+              "length": 33,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "withdraw",
+                "source_mapping": {
+                  "start": 14134,
+                  "length": 896,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "RSPLT_F",
+                    "source_mapping": {
+                      "start": 106,
+                      "length": 15411,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "withdraw()"
+                }
+              }
+            },
+            "additional_fields": {
+              "underlying_type": "event"
+            }
+          },
+          {
+            "type": "node",
+            "name": "StatEventI(ok: rewards paid,amount)",
+            "source_mapping": {
+              "start": 14903,
+              "length": 38,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "withdraw",
+                "source_mapping": {
+                  "start": 14134,
+                  "length": 896,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "RSPLT_F",
+                    "source_mapping": {
+                      "start": 106,
+                      "length": 15411,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "withdraw()"
+                }
+              }
+            },
+            "additional_fields": {
+              "underlying_type": "event"
+            }
+          }
+        ],
+        "description": "Reentrancy in RSPLT_F.withdraw() ():\n\tExternal calls:\n\t- ! msg.sender.call.gas(withdrawGas).value(amount)() ()\n\tEvent emitted after the call(s):\n\t- StatEvent(err: balance is zero) ()\n\t- StatEventI(ok: rewards paid,amount) ()\n",
+        "markdown": "Reentrancy in [RSPLT_F.withdraw()]():\n\tExternal calls:\n\t- [! msg.sender.call.gas(withdrawGas).value(amount)()]()\n\tEvent emitted after the call(s):\n\t- [StatEvent(err: balance is zero)]()\n\t- [StatEventI(ok: rewards paid,amount)]()\n",
+        "first_markdown_element": "",
+        "id": "d4bd6ced2d973a2e06bae06338198227995249d51ab3cd840002ec1d61a300fd",
+        "check": "reentrancy-events",
+        "impact": "Low",
+        "confidence": "Medium"
+      },
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "withdraw",
+            "source_mapping": {
+              "start": 14134,
+              "length": 896,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "RSPLT_F",
+                "source_mapping": {
+                  "start": 106,
+                  "length": 15411,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              },
+              "signature": "withdraw()"
+            }
+          },
+          {
+            "type": "node",
+            "name": "! msg.sender.call.gas(withdrawGas).value(amount)()",
+            "source_mapping": {
+              "start": 14757,
+              "length": 49,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "withdraw",
+                "source_mapping": {
+                  "start": 14134,
+                  "length": 896,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "RSPLT_F",
+                    "source_mapping": {
+                      "start": 106,
+                      "length": 15411,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "withdraw()"
+                }
+              }
+            }
+          }
+        ],
+        "description": "RSPLT_F.withdraw() () tries to limit the gas of an external call that controls implicit decoding\n\t! msg.sender.call.gas(withdrawGas).value(amount)() ()\n",
+        "markdown": "[RSPLT_F.withdraw()]() tries to limit the gas of an external call that controls implicit decoding\n\t[! msg.sender.call.gas(withdrawGas).value(amount)()]()\n",
+        "first_markdown_element": "",
+        "id": "6305edd9935ebd59abf71d650e5e7aee58e66b119181cbcb051f5686e2658c90",
+        "check": "return-bomb",
+        "impact": "Low",
+        "confidence": "Medium"
+      },
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "withdraw",
+            "source_mapping": {
+              "start": 14134,
+              "length": 896,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "RSPLT_F",
+                "source_mapping": {
+                  "start": 106,
+                  "length": 15411,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              },
+              "signature": "withdraw()"
+            }
+          },
+          {
+            "type": "node",
+            "name": "totalFundsWithdrawn += amount",
+            "source_mapping": {
+              "start": 14682,
+              "length": 29,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "withdraw",
+                "source_mapping": {
+                  "start": 14134,
+                  "length": 896,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "RSPLT_F",
+                    "source_mapping": {
+                      "start": 106,
+                      "length": 15411,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "withdraw()"
+                }
+              }
+            }
+          }
+        ],
+        "description": "RSPLT_F.withdraw() () has costly operations inside a loop:\n\t- totalFundsWithdrawn += amount ()\n",
+        "markdown": "[RSPLT_F.withdraw()]() has costly operations inside a loop:\n\t- [totalFundsWithdrawn += amount]()\n",
+        "first_markdown_element": "",
+        "id": "810366281062485c373672dadc1ccdedf346b2d57ac78185a25248c72bd2573f",
+        "check": "costly-loop",
+        "impact": "Informational",
+        "confidence": "Medium"
+      },
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "distribute",
+            "source_mapping": {
+              "start": 8165,
+              "length": 5842,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "RSPLT_F",
+                "source_mapping": {
+                  "start": 106,
+                  "length": 15411,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              },
+              "signature": "distribute()"
+            }
+          },
+          {
+            "type": "node",
+            "name": "totalFundsDistributed += acctDist",
+            "source_mapping": {
+              "start": 9960,
+              "length": 33,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "distribute",
+                "source_mapping": {
+                  "start": 8165,
+                  "length": 5842,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "RSPLT_F",
+                    "source_mapping": {
+                      "start": 106,
+                      "length": 15411,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "distribute()"
+                }
+              }
+            }
+          }
+        ],
+        "description": "RSPLT_F.distribute() () has costly operations inside a loop:\n\t- totalFundsDistributed += acctDist ()\n",
+        "markdown": "[RSPLT_F.distribute()]() has costly operations inside a loop:\n\t- [totalFundsDistributed += acctDist]()\n",
+        "first_markdown_element": "",
+        "id": "caf88bd338f6b468293e9311b4c897b10cc36e3f15067d261c5acb092e39e88c",
+        "check": "costly-loop",
+        "impact": "Informational",
+        "confidence": "Medium"
+      },
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "distribute",
+            "source_mapping": {
+              "start": 8165,
+              "length": 5842,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "RSPLT_F",
+                "source_mapping": {
+                  "start": 106,
+                  "length": 15411,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              },
+              "signature": "distribute()"
+            }
+          },
+          {
+            "type": "node",
+            "name": "holdoverBalance -= acctDist",
+            "source_mapping": {
+              "start": 10027,
+              "length": 27,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "distribute",
+                "source_mapping": {
+                  "start": 8165,
+                  "length": 5842,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "RSPLT_F",
+                    "source_mapping": {
+                      "start": 106,
+                      "length": 15411,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "distribute()"
+                }
+              }
+            }
+          }
+        ],
+        "description": "RSPLT_F.distribute() () has costly operations inside a loop:\n\t- holdoverBalance -= acctDist ()\n",
+        "markdown": "[RSPLT_F.distribute()]() has costly operations inside a loop:\n\t- [holdoverBalance -= acctDist]()\n",
+        "first_markdown_element": "",
+        "id": "ec4a620d8f36c5f20a6b277717e0fdc60c49628be8375d3197d0fd54d4e66e91",
+        "check": "costly-loop",
+        "impact": "Informational",
+        "confidence": "Medium"
+      },
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "distribute",
+            "source_mapping": {
+              "start": 8165,
+              "length": 5842,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "RSPLT_F",
+                "source_mapping": {
+                  "start": 106,
+                  "length": 15411,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              },
+              "signature": "distribute()"
+            }
+          }
+        ],
+        "description": "RSPLT_F.distribute() () has a high cyclomatic complexity (16).\n",
+        "markdown": "[RSPLT_F.distribute()]() has a high cyclomatic complexity (16).\n",
+        "first_markdown_element": "",
+        "id": "0377e9fdcf6efb78a8e6b69a2b21fef4553cf51f3f4eda3a36d47779ee2f1a1e",
+        "check": "cyclomatic-complexity",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "node",
+            "name": "suicide(address)(owner)",
+            "source_mapping": {
+              "start": 15489,
+              "length": 14,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "hariKari",
+                "source_mapping": {
+                  "start": 15140,
+                  "length": 374,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "RSPLT_F",
+                    "source_mapping": {
+                      "start": 106,
+                      "length": 15411,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "hariKari()"
+                }
+              }
+            }
+          }
+        ],
+        "description": "Deprecated standard detected suicide(address)(owner) ():\n\t- Usage of \"suicide()\" should be replaced with \"selfdestruct()\"\n",
+        "markdown": "Deprecated standard detected [suicide(address)(owner)]():\n\t- Usage of \"suicide()\" should be replaced with \"selfdestruct()\"\n",
+        "first_markdown_element": "",
+        "id": "af38f120e2d6ce3d7567404eb936f0124e2e9b2e954f0ddc56088aa4c884e377",
+        "check": "deprecated-standards",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "node",
+            "name": "",
+            "source_mapping": {
+              "start": 14856,
+              "length": 5,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "withdraw",
+                "source_mapping": {
+                  "start": 14134,
+                  "length": 896,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "RSPLT_F",
+                    "source_mapping": {
+                      "start": 106,
+                      "length": 15411,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "withdraw()"
+                }
+              }
+            }
+          }
+        ],
+        "description": "Deprecated standard detected THROW ():\n\t- Usage of \"throw\" should be replaced with \"revert()\"\n",
+        "markdown": "Deprecated standard detected [THROW]():\n\t- Usage of \"throw\" should be replaced with \"revert()\"\n",
+        "first_markdown_element": "",
+        "id": "f5556cf1c70b64b9e4b1fc32044dd970b5f2c8b9fc21b7971fda01971033f2d5",
+        "check": "deprecated-standards",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "pragma",
+            "name": "^0.4.6",
+            "source_mapping": {
+              "start": 0,
+              "length": 23,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "directive": [
+                "solidity",
+                "^",
+                "0.4",
+                ".6"
+              ]
+            }
+          }
+        ],
+        "description": "Pragma version^0.4.6 () allows old versions\n",
+        "markdown": "Pragma version[^0.4.6]() allows old versions\n",
+        "first_markdown_element": "",
+        "id": "54eae9514d5e93f8fb467cb6e12380204cb269720316b950ba80b399a769bf71",
+        "check": "solc-version",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [],
+        "description": "solc-0.4.6 is not recommended for deployment\n",
+        "markdown": "solc-0.4.6 is not recommended for deployment\n",
+        "first_markdown_element": "",
+        "id": "b2e09ce9c0c37029707bd5645a9a2972adb1c4c04948009825bacc17fa383ec8",
+        "check": "solc-version",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "withdraw",
+            "source_mapping": {
+              "start": 14134,
+              "length": 896,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "RSPLT_F",
+                "source_mapping": {
+                  "start": 106,
+                  "length": 15411,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              },
+              "signature": "withdraw()"
+            }
+          },
+          {
+            "type": "node",
+            "name": "! msg.sender.call.gas(withdrawGas).value(amount)()",
+            "source_mapping": {
+              "start": 14757,
+              "length": 49,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "withdraw",
+                "source_mapping": {
+                  "start": 14134,
+                  "length": 896,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "RSPLT_F",
+                    "source_mapping": {
+                      "start": 106,
+                      "length": 15411,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "withdraw()"
+                }
+              }
+            }
+          }
+        ],
+        "description": "Low level call in RSPLT_F.withdraw() ():\n\t- ! msg.sender.call.gas(withdrawGas).value(amount)() ()\n",
+        "markdown": "Low level call in [RSPLT_F.withdraw()]():\n\t- [! msg.sender.call.gas(withdrawGas).value(amount)()]()\n",
+        "first_markdown_element": "",
+        "id": "3b12519fd8ff50cef2e15394059825c4645e13ee6838473b7ea70f676266f06a",
+        "check": "low-level-calls",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "TENHUNDWEI",
+            "source_mapping": {
+              "start": 1591,
+              "length": 31,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "RSPLT_F",
+                "source_mapping": {
+                  "start": 106,
+                  "length": 15411,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              }
+            },
+            "additional_fields": {
+              "target": "variable",
+              "convention": "mixedCase"
+            }
+          }
+        ],
+        "description": "Variable RSPLT_F.TENHUNDWEI () is not in mixedCase\n",
+        "markdown": "Variable [RSPLT_F.TENHUNDWEI]() is not in mixedCase\n",
+        "first_markdown_element": "",
+        "id": "6d5c083cae6972731ca1bccef3a10147cfb73cd2c1313b67b4ab63e4d81db055",
+        "check": "naming-convention",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "_evenStart",
+            "source_mapping": {
+              "start": 4745,
+              "length": 15,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "addAccount",
+                "source_mapping": {
+                  "start": 4693,
+                  "length": 932,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "RSPLT_F",
+                    "source_mapping": {
+                      "start": 106,
+                      "length": 15411,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "addAccount(address,uint256,bool)"
+                }
+              }
+            },
+            "additional_fields": {
+              "target": "parameter",
+              "convention": "mixedCase"
+            }
+          }
+        ],
+        "description": "Parameter RSPLT_F.addAccount(address,uint256,bool)._evenStart () is not in mixedCase\n",
+        "markdown": "Parameter [RSPLT_F.addAccount(address,uint256,bool)._evenStart]() is not in mixedCase\n",
+        "first_markdown_element": "",
+        "id": "84f4e67f5cf67ef078bada357edb0f45a783b1aed2365a8a7d52663b3f4e7702",
+        "check": "naming-convention",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "_thresh",
+            "source_mapping": {
+              "start": 3594,
+              "length": 15,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "setEvenDistThresh",
+                "source_mapping": {
+                  "start": 3567,
+                  "length": 501,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "RSPLT_F",
+                    "source_mapping": {
+                      "start": 106,
+                      "length": 15411,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "setEvenDistThresh(uint256)"
+                }
+              }
+            },
+            "additional_fields": {
+              "target": "parameter",
+              "convention": "mixedCase"
+            }
+          }
+        ],
+        "description": "Parameter RSPLT_F.setEvenDistThresh(uint256)._thresh () is not in mixedCase\n",
+        "markdown": "Parameter [RSPLT_F.setEvenDistThresh(uint256)._thresh]() is not in mixedCase\n",
+        "first_markdown_element": "",
+        "id": "8e01239077ef0a5881f27426c9f0cab2a711797fb06ca0fdcd07c23be1ebf873",
+        "check": "naming-convention",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "contract",
+            "name": "RSPLT_F",
+            "source_mapping": {
+              "start": 106,
+              "length": 15411,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "additional_fields": {
+              "target": "contract",
+              "convention": "CapWords"
+            }
+          }
+        ],
+        "description": "Contract RSPLT_F () is not in CapWords\n",
+        "markdown": "Contract [RSPLT_F]() is not in CapWords\n",
+        "first_markdown_element": "",
+        "id": "9352f594f363e80dea8252d2e14559d78c06d49549deb9f216fc1b1709876480",
+        "check": "naming-convention",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "MAX_ACCOUNTS",
+            "source_mapping": {
+              "start": 1686,
+              "length": 30,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "RSPLT_F",
+                "source_mapping": {
+                  "start": 106,
+                  "length": 15411,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              }
+            },
+            "additional_fields": {
+              "target": "variable",
+              "convention": "mixedCase"
+            }
+          }
+        ],
+        "description": "Variable RSPLT_F.MAX_ACCOUNTS () is not in mixedCase\n",
+        "markdown": "Variable [RSPLT_F.MAX_ACCOUNTS]() is not in mixedCase\n",
+        "first_markdown_element": "",
+        "id": "9c564d70c203511c50340ef1a7b5b52223fa2a0ba24cf4cce09ef97fa87ea2dc",
+        "check": "naming-convention",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "_withdrawGas",
+            "source_mapping": {
+              "start": 4239,
+              "length": 20,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "setWitdrawGas",
+                "source_mapping": {
+                  "start": 4216,
+                  "length": 311,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "RSPLT_F",
+                    "source_mapping": {
+                      "start": 106,
+                      "length": 15411,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "setWitdrawGas(uint256)"
+                }
+              }
+            },
+            "additional_fields": {
+              "target": "parameter",
+              "convention": "mixedCase"
+            }
+          }
+        ],
+        "description": "Parameter RSPLT_F.setWitdrawGas(uint256)._withdrawGas () is not in mixedCase\n",
+        "markdown": "Parameter [RSPLT_F.setWitdrawGas(uint256)._withdrawGas]() is not in mixedCase\n",
+        "first_markdown_element": "",
+        "id": "ac23d02a49d4d7e23d8eb33fb14f42e89676f7cfa293a90950a61ef4e1a18cce",
+        "check": "naming-convention",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "struct",
+            "name": "partnerAccount",
+            "source_mapping": {
+              "start": 268,
+              "length": 378,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "RSPLT_F",
+                "source_mapping": {
+                  "start": 106,
+                  "length": 15411,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              }
+            },
+            "additional_fields": {
+              "target": "structure",
+              "convention": "CapWords"
+            }
+          }
+        ],
+        "description": "Struct RSPLT_F.partnerAccount () is not in CapWords\n",
+        "markdown": "Struct [RSPLT_F.partnerAccount]() is not in CapWords\n",
+        "first_markdown_element": "",
+        "id": "b00cd4df106bf8f6ec54b0ca05aa552132fbd077d0828b23e607e03dc2afe59f",
+        "check": "naming-convention",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "_addr",
+            "source_mapping": {
+              "start": 5765,
+              "length": 13,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "getAccountInfo",
+                "source_mapping": {
+                  "start": 5741,
+                  "length": 832,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "RSPLT_F",
+                    "source_mapping": {
+                      "start": 106,
+                      "length": 15411,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "getAccountInfo(address)"
+                }
+              }
+            },
+            "additional_fields": {
+              "target": "parameter",
+              "convention": "mixedCase"
+            }
+          }
+        ],
+        "description": "Parameter RSPLT_F.getAccountInfo(address)._addr () is not in mixedCase\n",
+        "markdown": "Parameter [RSPLT_F.getAccountInfo(address)._addr]() is not in mixedCase\n",
+        "first_markdown_element": "",
+        "id": "bc1b439239debe7d685025db31d421474c7cae3b73821f897eaecd72b2c2654a",
+        "check": "naming-convention",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "_addr",
+            "source_mapping": {
+              "start": 4713,
+              "length": 13,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "addAccount",
+                "source_mapping": {
+                  "start": 4693,
+                  "length": 932,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "RSPLT_F",
+                    "source_mapping": {
+                      "start": 106,
+                      "length": 15411,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "addAccount(address,uint256,bool)"
+                }
+              }
+            },
+            "additional_fields": {
+              "target": "parameter",
+              "convention": "mixedCase"
+            }
+          }
+        ],
+        "description": "Parameter RSPLT_F.addAccount(address,uint256,bool)._addr () is not in mixedCase\n",
+        "markdown": "Parameter [RSPLT_F.addAccount(address,uint256,bool)._addr]() is not in mixedCase\n",
+        "first_markdown_element": "",
+        "id": "d567d5ab02c9dd3098da8d57362726a36eb422aa5ba9f23808f43019b8cb22ff",
+        "check": "naming-convention",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "_pctx10",
+            "source_mapping": {
+              "start": 4728,
+              "length": 15,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "addAccount",
+                "source_mapping": {
+                  "start": 4693,
+                  "length": 932,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "RSPLT_F",
+                    "source_mapping": {
+                      "start": 106,
+                      "length": 15411,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "addAccount(address,uint256,bool)"
+                }
+              }
+            },
+            "additional_fields": {
+              "target": "parameter",
+              "convention": "mixedCase"
+            }
+          }
+        ],
+        "description": "Parameter RSPLT_F.addAccount(address,uint256,bool)._pctx10 () is not in mixedCase\n",
+        "markdown": "Parameter [RSPLT_F.addAccount(address,uint256,bool)._pctx10]() is not in mixedCase\n",
+        "first_markdown_element": "",
+        "id": "e78bfe272cd0390eeb3b7d35503240acf13d22aa0b595077238abd048c9d762a",
+        "check": "naming-convention",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "TENHUNDWEI",
+            "source_mapping": {
+              "start": 1591,
+              "length": 31,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "RSPLT_F",
+                "source_mapping": {
+                  "start": 106,
+                  "length": 15411,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              }
+            }
+          }
+        ],
+        "description": "RSPLT_F.TENHUNDWEI () should be constant \n",
+        "markdown": "[RSPLT_F.TENHUNDWEI]() should be constant \n",
+        "first_markdown_element": "",
+        "id": "802ba6f43ae364f2fd256bd7a706f876d2a25fc5d8ba5b793d94de9d8b550227",
+        "check": "constable-states",
+        "impact": "Optimization",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "MAX_ACCOUNTS",
+            "source_mapping": {
+              "start": 1686,
+              "length": 30,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "RSPLT_F",
+                "source_mapping": {
+                  "start": 106,
+                  "length": 15411,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              }
+            }
+          }
+        ],
+        "description": "RSPLT_F.MAX_ACCOUNTS () should be constant \n",
+        "markdown": "[RSPLT_F.MAX_ACCOUNTS]() should be constant \n",
+        "first_markdown_element": "",
+        "id": "c4dbd12f7a02b718ebddbfb0da58b0dd13d4afd9fa351d4373b2458c53b5a565",
+        "check": "constable-states",
+        "impact": "Optimization",
+        "confidence": "High"
+      }
+    ]
+  }
+}

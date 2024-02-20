@@ -1,0 +1,29 @@
+{
+  "fileName": "Benchmarks/Study_SamplesSet/2863d65e378a66fddd0f96c51964ee62.sol",
+  "baseName": "2863d65e378a66fddd0f96c51964ee62.sol",
+  "iter": 23,
+  "time": "5.623943",
+  "errMsg": null,
+  "result": [
+    {
+      "no": "1",
+      "kind": "IO",
+      "line": 20,
+      "signatures": [
+        { "contractName": "Token", "methodName": "consume", "argTypes": [] }
+      ],
+      "exp": "(balances[msg.sender] - 1)",
+      "status": "proven"
+    },
+    {
+      "no": "2",
+      "kind": "IO",
+      "line": 24,
+      "signatures": [
+        { "contractName": "Token", "methodName": "backdoor", "argTypes": [] }
+      ],
+      "exp": "(balances[msg.sender] + 1)",
+      "status": "unproven"
+    }
+  ]
+}

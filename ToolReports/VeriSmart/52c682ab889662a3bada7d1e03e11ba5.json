@@ -1,0 +1,333 @@
+{
+  "fileName": "Benchmarks/Study_SamplesSet/52c682ab889662a3bada7d1e03e11ba5.sol",
+  "baseName": "52c682ab889662a3bada7d1e03e11ba5.sol",
+  "iter": 98,
+  "time": "301.702094",
+  "errMsg": null,
+  "result": [
+    {
+      "no": "1",
+      "kind": "IO",
+      "line": 135,
+      "signatures": [
+        {
+          "contractName": "DepositBank",
+          "methodName": "Deposit",
+          "argTypes": []
+        }
+      ],
+      "exp": "(Lenders[msg.sender].Amount + msg.value)",
+      "status": "unproven"
+    },
+    {
+      "no": "2",
+      "kind": "IO",
+      "line": 142,
+      "signatures": [
+        {
+          "contractName": "DepositBank",
+          "methodName": "CheckProfit",
+          "argTypes": [ "address" ]
+        },
+        {
+          "contractName": "DepositBank",
+          "methodName": "Deposit",
+          "argTypes": []
+        },
+        {
+          "contractName": "DepositBank",
+          "methodName": "FixProfit",
+          "argTypes": []
+        },
+        {
+          "contractName": "DepositBank",
+          "methodName": "WitdrawLenderProfit",
+          "argTypes": []
+        }
+      ],
+      "exp": "(((Lenders[addr].Amount / 100) * PrcntRate) * ((now - Lenders[addr].LastLendTime) / 86400))",
+      "status": "unproven"
+    },
+    {
+      "no": "3",
+      "kind": "IO",
+      "line": 142,
+      "signatures": [
+        {
+          "contractName": "DepositBank",
+          "methodName": "CheckProfit",
+          "argTypes": [ "address" ]
+        },
+        {
+          "contractName": "DepositBank",
+          "methodName": "Deposit",
+          "argTypes": []
+        },
+        {
+          "contractName": "DepositBank",
+          "methodName": "FixProfit",
+          "argTypes": []
+        },
+        {
+          "contractName": "DepositBank",
+          "methodName": "WitdrawLenderProfit",
+          "argTypes": []
+        }
+      ],
+      "exp": "((Lenders[addr].Amount / 100) * PrcntRate)",
+      "status": "unproven"
+    },
+    {
+      "no": "4",
+      "kind": "IO",
+      "line": 142,
+      "signatures": [
+        {
+          "contractName": "DepositBank",
+          "methodName": "CheckProfit",
+          "argTypes": [ "address" ]
+        },
+        {
+          "contractName": "DepositBank",
+          "methodName": "Deposit",
+          "argTypes": []
+        },
+        {
+          "contractName": "DepositBank",
+          "methodName": "FixProfit",
+          "argTypes": []
+        },
+        {
+          "contractName": "DepositBank",
+          "methodName": "WitdrawLenderProfit",
+          "argTypes": []
+        }
+      ],
+      "exp": "(now - Lenders[addr].LastLendTime)",
+      "status": "unproven"
+    },
+    {
+      "no": "5",
+      "kind": "IO",
+      "line": 149,
+      "signatures": [
+        {
+          "contractName": "DepositBank",
+          "methodName": "Deposit",
+          "argTypes": []
+        },
+        {
+          "contractName": "DepositBank",
+          "methodName": "FixProfit",
+          "argTypes": []
+        },
+        {
+          "contractName": "DepositBank",
+          "methodName": "WitdrawLenderProfit",
+          "argTypes": []
+        }
+      ],
+      "exp": "(Lenders[msg.sender].Reserved + CheckProfit(msg.sender))",
+      "status": "unproven"
+    },
+    {
+      "no": "6",
+      "kind": "IO",
+      "line": 175,
+      "signatures": [
+        {
+          "contractName": "DepositBank",
+          "methodName": "@fallback",
+          "argTypes": []
+        },
+        {
+          "contractName": "DepositBank",
+          "methodName": "ToSponsor",
+          "argTypes": []
+        }
+      ],
+      "exp": "(SponsorsQty + 1)",
+      "status": "unproven"
+    },
+    {
+      "no": "7",
+      "kind": "IO",
+      "line": 176,
+      "signatures": [
+        {
+          "contractName": "DepositBank",
+          "methodName": "@fallback",
+          "argTypes": []
+        },
+        {
+          "contractName": "DepositBank",
+          "methodName": "ToSponsor",
+          "argTypes": []
+        }
+      ],
+      "exp": "(Sponsors[msg.sender] + msg.value)",
+      "status": "unproven"
+    },
+    {
+      "no": "8",
+      "kind": "IO",
+      "line": 177,
+      "signatures": [
+        {
+          "contractName": "DepositBank",
+          "methodName": "@fallback",
+          "argTypes": []
+        },
+        {
+          "contractName": "DepositBank",
+          "methodName": "ToSponsor",
+          "argTypes": []
+        }
+      ],
+      "exp": "(CharterCapital + msg.value)",
+      "status": "unproven"
+    },
+    {
+      "no": "9",
+      "kind": "IO",
+      "line": 216,
+      "signatures": [
+        {
+          "contractName": "DepositBank",
+          "methodName": "WithdrawToSponsor",
+          "argTypes": [ "address", "uint256" ]
+        }
+      ],
+      "exp": "(CharterCapital - _wei)",
+      "status": "proven"
+    },
+    {
+      "no": "10",
+      "kind": "DZ",
+      "line": 142,
+      "signatures": [
+        {
+          "contractName": "DepositBank",
+          "methodName": "CheckProfit",
+          "argTypes": [ "address" ]
+        },
+        {
+          "contractName": "DepositBank",
+          "methodName": "Deposit",
+          "argTypes": []
+        },
+        {
+          "contractName": "DepositBank",
+          "methodName": "FixProfit",
+          "argTypes": []
+        },
+        {
+          "contractName": "DepositBank",
+          "methodName": "WitdrawLenderProfit",
+          "argTypes": []
+        }
+      ],
+      "exp": "((now - Lenders[addr].LastLendTime) / 86400)",
+      "status": "proven"
+    },
+    {
+      "no": "11",
+      "kind": "DZ",
+      "line": 142,
+      "signatures": [
+        {
+          "contractName": "DepositBank",
+          "methodName": "CheckProfit",
+          "argTypes": [ "address" ]
+        },
+        {
+          "contractName": "DepositBank",
+          "methodName": "Deposit",
+          "argTypes": []
+        },
+        {
+          "contractName": "DepositBank",
+          "methodName": "FixProfit",
+          "argTypes": []
+        },
+        {
+          "contractName": "DepositBank",
+          "methodName": "WitdrawLenderProfit",
+          "argTypes": []
+        }
+      ],
+      "exp": "(Lenders[addr].Amount / 100)",
+      "status": "proven"
+    },
+    {
+      "no": "12",
+      "kind": "ETH_LEAK",
+      "line": 49,
+      "signatures": [
+        {
+          "contractName": "DepositBank",
+          "methodName": "WthdrawAllToCreator",
+          "argTypes": []
+        }
+      ],
+      "exp": "creator.transfer(this.balance);",
+      "status": "proven"
+    },
+    {
+      "no": "13",
+      "kind": "ETH_LEAK",
+      "line": 59,
+      "signatures": [
+        {
+          "contractName": "DepositBank",
+          "methodName": "WthdrawToCreator",
+          "argTypes": [ "uint256" ]
+        }
+      ],
+      "exp": "creator.transfer(val);",
+      "status": "proven"
+    },
+    {
+      "no": "14",
+      "kind": "ETH_LEAK",
+      "line": 69,
+      "signatures": [
+        {
+          "contractName": "DepositBank",
+          "methodName": "WthdrawTo",
+          "argTypes": [ "address", "uint256" ]
+        }
+      ],
+      "exp": "addr.transfer(val);",
+      "status": "proven"
+    },
+    {
+      "no": "15",
+      "kind": "ETH_LEAK",
+      "line": 162,
+      "signatures": [
+        {
+          "contractName": "DepositBank",
+          "methodName": "WitdrawLenderProfit",
+          "argTypes": []
+        }
+      ],
+      "exp": "msg.sender.transfer(profit);",
+      "status": "unproven"
+    },
+    {
+      "no": "16",
+      "kind": "ETH_LEAK",
+      "line": 214,
+      "signatures": [
+        {
+          "contractName": "DepositBank",
+          "methodName": "WithdrawToSponsor",
+          "argTypes": [ "address", "uint256" ]
+        }
+      ],
+      "exp": "_addr.send(_wei)",
+      "status": "unproven"
+    }
+  ]
+}

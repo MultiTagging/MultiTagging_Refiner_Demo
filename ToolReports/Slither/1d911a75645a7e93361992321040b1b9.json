@@ -1,0 +1,852 @@
+{
+  "success": true,
+  "error": null,
+  "results": {
+    "detectors": [
+      {
+        "elements": [
+          {
+            "type": "contract",
+            "name": "InchainICO",
+            "source_mapping": {
+              "start": 99,
+              "length": 2726,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            }
+          },
+          {
+            "type": "node",
+            "name": "owners.push(_owners[i])",
+            "source_mapping": {
+              "start": 757,
+              "length": 23,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "InchainICO",
+                "source_mapping": {
+                  "start": 475,
+                  "length": 362,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "InchainICO",
+                    "source_mapping": {
+                      "start": 99,
+                      "length": 2726,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "InchainICO(address[],uint256)"
+                }
+              }
+            }
+          }
+        ],
+        "description": "InchainICO () contract sets array length with a user-controlled value:\n\t- owners.push(_owners[i]) ()\n",
+        "markdown": "[InchainICO]() contract sets array length with a user-controlled value:\n\t- [owners.push(_owners[i])]()\n",
+        "first_markdown_element": "",
+        "id": "46595caa8e4782059517dc6dfa986d0854832c7388e266386699e480cb403f52",
+        "check": "controlled-array-length",
+        "impact": "High",
+        "confidence": "Medium"
+      },
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "_removeOperation",
+            "source_mapping": {
+              "start": 2109,
+              "length": 351,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "InchainICO",
+                "source_mapping": {
+                  "start": 99,
+                  "length": 2726,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              },
+              "signature": "_removeOperation(bytes32)"
+            }
+          },
+          {
+            "type": "struct",
+            "name": "PendingOperation",
+            "source_mapping": {
+              "start": 125,
+              "length": 102,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "InchainICO",
+                "source_mapping": {
+                  "start": 99,
+                  "length": 2726,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              }
+            }
+          },
+          {
+            "type": "node",
+            "name": "delete pending[_operation]",
+            "source_mapping": {
+              "start": 2427,
+              "length": 26,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "_removeOperation",
+                "source_mapping": {
+                  "start": 2109,
+                  "length": 351,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "InchainICO",
+                    "source_mapping": {
+                      "start": 99,
+                      "length": 2726,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "_removeOperation(bytes32)"
+                }
+              }
+            }
+          }
+        ],
+        "description": "InchainICO._removeOperation(bytes32) () deletes InchainICO.PendingOperation () which contains a mapping:\n\t-delete pending[_operation] ()\n",
+        "markdown": "[InchainICO._removeOperation(bytes32)]() deletes [InchainICO.PendingOperation]() which contains a mapping:\n\t-[delete pending[_operation]]()\n",
+        "first_markdown_element": "",
+        "id": "b314e052430382bfc8f8e385a3b1ef03594f2f37ccbf1635ca56406db6bbfcbd",
+        "check": "mapping-deletion",
+        "impact": "Medium",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "_to",
+            "source_mapping": {
+              "start": 2480,
+              "length": 11,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "send",
+                "source_mapping": {
+                  "start": 2466,
+                  "length": 125,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "InchainICO",
+                    "source_mapping": {
+                      "start": 99,
+                      "length": 2726,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "send(address,uint256)"
+                }
+              }
+            }
+          },
+          {
+            "type": "node",
+            "name": "_to.send(_value)",
+            "source_mapping": {
+              "start": 2561,
+              "length": 23,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "send",
+                "source_mapping": {
+                  "start": 2466,
+                  "length": 125,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "InchainICO",
+                    "source_mapping": {
+                      "start": 99,
+                      "length": 2726,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "send(address,uint256)"
+                }
+              }
+            }
+          }
+        ],
+        "description": "InchainICO.send(address,uint256)._to () lacks a zero-check on :\n\t\t- _to.send(_value) ()\n",
+        "markdown": "[InchainICO.send(address,uint256)._to]() lacks a zero-check on :\n\t\t- [_to.send(_value)]()\n",
+        "first_markdown_element": "",
+        "id": "c2c793dee93b612a7542eb3805ab287c9282fcfd6598962efbd329bc2145d105",
+        "check": "missing-zero-check",
+        "impact": "Low",
+        "confidence": "Medium"
+      },
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "onlymanyowners",
+            "source_mapping": {
+              "start": 1265,
+              "length": 120,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "InchainICO",
+                "source_mapping": {
+                  "start": 99,
+                  "length": 2726,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              },
+              "signature": "onlymanyowners(bytes32)"
+            }
+          }
+        ],
+        "description": "Modifier InchainICO.onlymanyowners(bytes32) () does not always execute _; or revert",
+        "markdown": "Modifier [InchainICO.onlymanyowners(bytes32)]() does not always execute _; or revert",
+        "first_markdown_element": "",
+        "id": "503df1b0ab59d0af46e40eafc09749156941a65b4dedfccb5f275ea625d48001",
+        "check": "incorrect-modifier",
+        "impact": "Low",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "node",
+            "name": "onlymanyowners(sha3()(msg.data))",
+            "source_mapping": {
+              "start": 2506,
+              "length": 30,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "send",
+                "source_mapping": {
+                  "start": 2466,
+                  "length": 125,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "InchainICO",
+                    "source_mapping": {
+                      "start": 99,
+                      "length": 2726,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "send(address,uint256)"
+                }
+              }
+            }
+          }
+        ],
+        "description": "Deprecated standard detected onlymanyowners(sha3()(msg.data)) ():\n\t- Usage of \"sha3()\" should be replaced with \"keccak256()\"\n",
+        "markdown": "Deprecated standard detected [onlymanyowners(sha3()(msg.data))]():\n\t- Usage of \"sha3()\" should be replaced with \"keccak256()\"\n",
+        "first_markdown_element": "",
+        "id": "34f8948488b38c787af2fa2134e9ed4e8cf159a191b0954509d3c0a2459386ef",
+        "check": "deprecated-standards",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "node",
+            "name": "",
+            "source_mapping": {
+              "start": 1538,
+              "length": 5,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "_confirmAndCheck",
+                "source_mapping": {
+                  "start": 1391,
+                  "length": 712,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "InchainICO",
+                    "source_mapping": {
+                      "start": 99,
+                      "length": 2726,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "_confirmAndCheck(bytes32)"
+                }
+              }
+            }
+          }
+        ],
+        "description": "Deprecated standard detected THROW ():\n\t- Usage of \"throw\" should be replaced with \"revert()\"\n",
+        "markdown": "Deprecated standard detected [THROW]():\n\t- Usage of \"throw\" should be replaced with \"revert()\"\n",
+        "first_markdown_element": "",
+        "id": "f5556cf1c70b64b9e4b1fc32044dd970b5f2c8b9fc21b7971fda01971033f2d5",
+        "check": "deprecated-standards",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "pragma",
+            "name": "^0.4.3",
+            "source_mapping": {
+              "start": 0,
+              "length": 23,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "directive": [
+                "solidity",
+                "^",
+                "0.4",
+                ".3"
+              ]
+            }
+          }
+        ],
+        "description": "Pragma version^0.4.3 () allows old versions\n",
+        "markdown": "Pragma version[^0.4.3]() allows old versions\n",
+        "first_markdown_element": "",
+        "id": "2111d9c25ae6332b0d733972aa97825732916b01caeb1c91991cb81b1d60efc1",
+        "check": "solc-version",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [],
+        "description": "solc-0.4.3 is not recommended for deployment\n",
+        "markdown": "solc-0.4.3 is not recommended for deployment\n",
+        "first_markdown_element": "",
+        "id": "89e91481fa523edf3aa43d23e73ed1a70f5c4deb4f4c95ce14da494519ac4658",
+        "check": "solc-version",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "_operation",
+            "source_mapping": {
+              "start": 865,
+              "length": 18,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "hasConfirmed",
+                "source_mapping": {
+                  "start": 843,
+                  "length": 145,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "InchainICO",
+                    "source_mapping": {
+                      "start": 99,
+                      "length": 2726,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "hasConfirmed(bytes32,address)"
+                }
+              }
+            },
+            "additional_fields": {
+              "target": "parameter",
+              "convention": "mixedCase"
+            }
+          }
+        ],
+        "description": "Parameter InchainICO.hasConfirmed(bytes32,address)._operation () is not in mixedCase\n",
+        "markdown": "Parameter [InchainICO.hasConfirmed(bytes32,address)._operation]() is not in mixedCase\n",
+        "first_markdown_element": "",
+        "id": "25023f0619ee7d84bf0dfe872b47ae525e7c048a1dcb442956c81515a0cf2d6e",
+        "check": "naming-convention",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "_value",
+            "source_mapping": {
+              "start": 2493,
+              "length": 11,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "send",
+                "source_mapping": {
+                  "start": 2466,
+                  "length": 125,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "InchainICO",
+                    "source_mapping": {
+                      "start": 99,
+                      "length": 2726,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "send(address,uint256)"
+                }
+              }
+            },
+            "additional_fields": {
+              "target": "parameter",
+              "convention": "mixedCase"
+            }
+          }
+        ],
+        "description": "Parameter InchainICO.send(address,uint256)._value () is not in mixedCase\n",
+        "markdown": "Parameter [InchainICO.send(address,uint256)._value]() is not in mixedCase\n",
+        "first_markdown_element": "",
+        "id": "4a5b146ba052b83d18d53f65093856f59cc62aca552ecc293855678c6da865d3",
+        "check": "naming-convention",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "_to",
+            "source_mapping": {
+              "start": 2480,
+              "length": 11,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "send",
+                "source_mapping": {
+                  "start": 2466,
+                  "length": 125,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "InchainICO",
+                    "source_mapping": {
+                      "start": 99,
+                      "length": 2726,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "send(address,uint256)"
+                }
+              }
+            },
+            "additional_fields": {
+              "target": "parameter",
+              "convention": "mixedCase"
+            }
+          }
+        ],
+        "description": "Parameter InchainICO.send(address,uint256)._to () is not in mixedCase\n",
+        "markdown": "Parameter [InchainICO.send(address,uint256)._to]() is not in mixedCase\n",
+        "first_markdown_element": "",
+        "id": "dd4b675a1e3f8858cf3beaa0ba3e6c12aa22f655118c987d8a2bde0c17f558d1",
+        "check": "naming-convention",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "_owner",
+            "source_mapping": {
+              "start": 885,
+              "length": 14,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "hasConfirmed",
+                "source_mapping": {
+                  "start": 843,
+                  "length": 145,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "InchainICO",
+                    "source_mapping": {
+                      "start": 99,
+                      "length": 2726,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "hasConfirmed(bytes32,address)"
+                }
+              }
+            },
+            "additional_fields": {
+              "target": "parameter",
+              "convention": "mixedCase"
+            }
+          }
+        ],
+        "description": "Parameter InchainICO.hasConfirmed(bytes32,address)._owner () is not in mixedCase\n",
+        "markdown": "Parameter [InchainICO.hasConfirmed(bytes32,address)._owner]() is not in mixedCase\n",
+        "first_markdown_element": "",
+        "id": "f5c5a2982d40c38103f2b5153fc0c298f9e80c8c2df91792b410260c8557f62a",
+        "check": "naming-convention",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "node",
+            "name": "i < owners.length",
+            "source_mapping": {
+              "start": 2243,
+              "length": 17,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "_removeOperation",
+                "source_mapping": {
+                  "start": 2109,
+                  "length": 351,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "InchainICO",
+                    "source_mapping": {
+                      "start": 99,
+                      "length": 2726,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "_removeOperation(bytes32)"
+                }
+              }
+            }
+          }
+        ],
+        "description": "Loop condition i < owners.length () should use cached array length instead of referencing `length` member of the storage array.\n ",
+        "markdown": "Loop condition [i < owners.length]() should use cached array length instead of referencing `length` member of the storage array.\n ",
+        "first_markdown_element": "",
+        "id": "54ad968e5de8fc87a879429b514c5fef486bacc4b248643ac20b367f076801f7",
+        "check": "cache-array-length",
+        "impact": "Optimization",
+        "confidence": "High"
+      }
+    ]
+  }
+}

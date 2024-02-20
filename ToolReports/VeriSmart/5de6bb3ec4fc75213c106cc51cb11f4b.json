@@ -1,0 +1,195 @@
+{
+  "fileName": "Benchmarks/Study_SamplesSet/5de6bb3ec4fc75213c106cc51cb11f4b.sol",
+  "baseName": "5de6bb3ec4fc75213c106cc51cb11f4b.sol",
+  "iter": 35,
+  "time": "304.466388",
+  "errMsg": null,
+  "result": [
+    {
+      "no": "1",
+      "kind": "IO",
+      "line": 5,
+      "signatures": [
+        {
+          "contractName": "FunKoin",
+          "methodName": "@fallback",
+          "argTypes": []
+        },
+        {
+          "contractName": "FunKoin",
+          "methodName": "getTokens",
+          "argTypes": []
+        }
+      ],
+      "exp": "(a * b)",
+      "status": "unproven"
+    },
+    {
+      "no": "2",
+      "kind": "IO",
+      "line": 17,
+      "signatures": [
+        {
+          "contractName": "FunKoin",
+          "methodName": "FunKoin",
+          "argTypes": []
+        },
+        {
+          "contractName": "FunKoin",
+          "methodName": "burn",
+          "argTypes": [ "uint256" ]
+        },
+        {
+          "contractName": "FunKoin",
+          "methodName": "distr",
+          "argTypes": [ "address", "uint256" ]
+        },
+        {
+          "contractName": "FunKoin",
+          "methodName": "getTokens",
+          "argTypes": []
+        },
+        {
+          "contractName": "FunKoin",
+          "methodName": "transfer",
+          "argTypes": [ "address", "uint256" ]
+        },
+        {
+          "contractName": "FunKoin",
+          "methodName": "transferFrom",
+          "argTypes": [ "address", "address", "uint256" ]
+        }
+      ],
+      "exp": "(a - b)",
+      "status": "proven"
+    },
+    {
+      "no": "3",
+      "kind": "IO",
+      "line": 21,
+      "signatures": [
+        {
+          "contractName": "FunKoin",
+          "methodName": "distr",
+          "argTypes": [ "address", "uint256" ]
+        },
+        {
+          "contractName": "FunKoin",
+          "methodName": "getTokens",
+          "argTypes": []
+        },
+        {
+          "contractName": "FunKoin",
+          "methodName": "transfer",
+          "argTypes": [ "address", "uint256" ]
+        },
+        {
+          "contractName": "FunKoin",
+          "methodName": "transferFrom",
+          "argTypes": [ "address", "address", "uint256" ]
+        }
+      ],
+      "exp": "(a + b)",
+      "status": "unproven"
+    },
+    {
+      "no": "4",
+      "kind": "IO",
+      "line": 164,
+      "signatures": [
+        {
+          "contractName": "FunKoin",
+          "methodName": "transfer",
+          "argTypes": [ "address", "uint256" ]
+        },
+        {
+          "contractName": "FunKoin",
+          "methodName": "transferFrom",
+          "argTypes": [ "address", "address", "uint256" ]
+        }
+      ],
+      "exp": "(size + 4)",
+      "status": "proven"
+    },
+    {
+      "no": "5",
+      "kind": "IO",
+      "line": 168,
+      "signatures": [
+        {
+          "contractName": "FunKoin",
+          "methodName": "transfer",
+          "argTypes": [ "address", "uint256" ]
+        }
+      ],
+      "exp": "(2 * 32)",
+      "status": "proven"
+    },
+    {
+      "no": "6",
+      "kind": "IO",
+      "line": 178,
+      "signatures": [
+        {
+          "contractName": "FunKoin",
+          "methodName": "transferFrom",
+          "argTypes": [ "address", "address", "uint256" ]
+        }
+      ],
+      "exp": "(3 * 32)",
+      "status": "proven"
+    },
+    {
+      "no": "7",
+      "kind": "DZ",
+      "line": 6,
+      "signatures": [
+        {
+          "contractName": "FunKoin",
+          "methodName": "@fallback",
+          "argTypes": []
+        },
+        {
+          "contractName": "FunKoin",
+          "methodName": "getTokens",
+          "argTypes": []
+        }
+      ],
+      "exp": "(c / a)",
+      "status": "unproven"
+    },
+    {
+      "no": "8",
+      "kind": "DZ",
+      "line": 11,
+      "signatures": [
+        {
+          "contractName": "FunKoin",
+          "methodName": "@fallback",
+          "argTypes": []
+        },
+        {
+          "contractName": "FunKoin",
+          "methodName": "getTokens",
+          "argTypes": []
+        }
+      ],
+      "exp": "(a / b)",
+      "status": "proven"
+    },
+    {
+      "no": "9",
+      "kind": "ETH_LEAK",
+      "line": 209,
+      "signatures": [
+        {
+          "contractName": "FunKoin",
+          "methodName": "withdraw",
+          "argTypes": []
+        }
+      ],
+      "exp": "owner.transfer(etherBalance);",
+      "status": "proven"
+    }
+  ]
+}

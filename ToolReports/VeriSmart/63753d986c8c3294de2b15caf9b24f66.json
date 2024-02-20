@@ -1,0 +1,51 @@
+{
+  "fileName": "Benchmarks/Study_SamplesSet/63753d986c8c3294de2b15caf9b24f66.sol",
+  "baseName": "63753d986c8c3294de2b15caf9b24f66.sol",
+  "iter": 2,
+  "time": "0.277823",
+  "errMsg": null,
+  "result": [
+    {
+      "no": "1",
+      "kind": "IO",
+      "line": 19,
+      "signatures": [
+        {
+          "contractName": "EtherGet",
+          "methodName": "getTokens",
+          "argTypes": [ "uint256", "address" ]
+        }
+      ],
+      "exp": "(i + 1)",
+      "status": "proven"
+    },
+    {
+      "no": "2",
+      "kind": "ETH_LEAK",
+      "line": 16,
+      "signatures": [
+        {
+          "contractName": "EtherGet",
+          "methodName": "withdrawEther",
+          "argTypes": []
+        }
+      ],
+      "exp": "owner.transfer(this.balance);",
+      "status": "proven"
+    },
+    {
+      "no": "3",
+      "kind": "ETH_LEAK",
+      "line": 20,
+      "signatures": [
+        {
+          "contractName": "EtherGet",
+          "methodName": "getTokens",
+          "argTypes": [ "uint256", "address" ]
+        }
+      ],
+      "exp": "addr.call.value(0)();",
+      "status": "proven"
+    }
+  ]
+}

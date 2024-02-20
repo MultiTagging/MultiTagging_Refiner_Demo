@@ -1,0 +1,212 @@
+{
+  "fileName": "Benchmarks/Study_SamplesSet/8f7ae3d52fc17414ed141f1cb4fe3ed0.sol",
+  "baseName": "8f7ae3d52fc17414ed141f1cb4fe3ed0.sol",
+  "iter": 372,
+  "time": "300.972057",
+  "errMsg": null,
+  "result": [
+    {
+      "no": "1",
+      "kind": "IO",
+      "line": 135,
+      "signatures": [
+        { "contractName": "Loan", "methodName": "@fallback", "argTypes": [] },
+        {
+          "contractName": "Loan",
+          "methodName": "InvestFund",
+          "argTypes": []
+        }
+      ],
+      "exp": "(InvestorsQty + 1)",
+      "status": "unproven"
+    },
+    {
+      "no": "2",
+      "kind": "IO",
+      "line": 136,
+      "signatures": [
+        { "contractName": "Loan", "methodName": "@fallback", "argTypes": [] },
+        {
+          "contractName": "Loan",
+          "methodName": "InvestFund",
+          "argTypes": []
+        }
+      ],
+      "exp": "(Investors[msg.sender] + msg.value)",
+      "status": "unproven"
+    },
+    {
+      "no": "3",
+      "kind": "IO",
+      "line": 137,
+      "signatures": [
+        { "contractName": "Loan", "methodName": "@fallback", "argTypes": [] },
+        {
+          "contractName": "Loan",
+          "methodName": "InvestFund",
+          "argTypes": []
+        }
+      ],
+      "exp": "(TotalInvested + msg.value)",
+      "status": "unproven"
+    },
+    {
+      "no": "4",
+      "kind": "IO",
+      "line": 138,
+      "signatures": [
+        { "contractName": "Loan", "methodName": "@fallback", "argTypes": [] },
+        {
+          "contractName": "Loan",
+          "methodName": "InvestFund",
+          "argTypes": []
+        }
+      ],
+      "exp": "(Available + msg.value)",
+      "status": "unproven"
+    },
+    {
+      "no": "5",
+      "kind": "IO",
+      "line": 148,
+      "signatures": [
+        { "contractName": "Loan", "methodName": "ToLend", "argTypes": [] }
+      ],
+      "exp": "(Creditors[msg.sender].Invested + msg.value)",
+      "status": "unproven"
+    },
+    {
+      "no": "6",
+      "kind": "IO",
+      "line": 157,
+      "signatures": [
+        {
+          "contractName": "Loan",
+          "methodName": "CheckProfit",
+          "argTypes": [ "address" ]
+        },
+        { "contractName": "Loan", "methodName": "TakeBack", "argTypes": [] }
+      ],
+      "exp": "(((Creditors[addr].Invested / 100) * prcntRate) * ((now - Creditors[addr].Time) / 86400))",
+      "status": "unproven"
+    },
+    {
+      "no": "7",
+      "kind": "IO",
+      "line": 157,
+      "signatures": [
+        {
+          "contractName": "Loan",
+          "methodName": "CheckProfit",
+          "argTypes": [ "address" ]
+        },
+        { "contractName": "Loan", "methodName": "TakeBack", "argTypes": [] }
+      ],
+      "exp": "((Creditors[addr].Invested / 100) * prcntRate)",
+      "status": "unproven"
+    },
+    {
+      "no": "8",
+      "kind": "IO",
+      "line": 157,
+      "signatures": [
+        {
+          "contractName": "Loan",
+          "methodName": "CheckProfit",
+          "argTypes": [ "address" ]
+        },
+        { "contractName": "Loan", "methodName": "TakeBack", "argTypes": [] }
+      ],
+      "exp": "(now - Creditors[addr].Time)",
+      "status": "unproven"
+    },
+    {
+      "no": "9",
+      "kind": "IO",
+      "line": 167,
+      "signatures": [
+        { "contractName": "Loan", "methodName": "TakeBack", "argTypes": [] }
+      ],
+      "exp": "(Creditors[msg.sender].Invested + profit)",
+      "status": "unproven"
+    },
+    {
+      "no": "10",
+      "kind": "IO",
+      "line": 184,
+      "signatures": [
+        {
+          "contractName": "Loan",
+          "methodName": "WithdrawToInvestor",
+          "argTypes": [ "address", "uint256" ]
+        }
+      ],
+      "exp": "(Available - _wei)",
+      "status": "unproven"
+    },
+    {
+      "no": "11",
+      "kind": "DZ",
+      "line": 157,
+      "signatures": [
+        {
+          "contractName": "Loan",
+          "methodName": "CheckProfit",
+          "argTypes": [ "address" ]
+        },
+        { "contractName": "Loan", "methodName": "TakeBack", "argTypes": [] }
+      ],
+      "exp": "((now - Creditors[addr].Time) / 86400)",
+      "status": "proven"
+    },
+    {
+      "no": "12",
+      "kind": "DZ",
+      "line": 157,
+      "signatures": [
+        {
+          "contractName": "Loan",
+          "methodName": "CheckProfit",
+          "argTypes": [ "address" ]
+        },
+        { "contractName": "Loan", "methodName": "TakeBack", "argTypes": [] }
+      ],
+      "exp": "(Creditors[addr].Invested / 100)",
+      "status": "proven"
+    },
+    {
+      "no": "13",
+      "kind": "ETH_LEAK",
+      "line": 169,
+      "signatures": [
+        { "contractName": "Loan", "methodName": "TakeBack", "argTypes": [] }
+      ],
+      "exp": "msg.sender.transfer(summ);",
+      "status": "unproven"
+    },
+    {
+      "no": "14",
+      "kind": "ETH_LEAK",
+      "line": 182,
+      "signatures": [
+        {
+          "contractName": "Loan",
+          "methodName": "WithdrawToInvestor",
+          "argTypes": [ "address", "uint256" ]
+        }
+      ],
+      "exp": "_addr.send(_wei)",
+      "status": "proven"
+    },
+    {
+      "no": "15",
+      "kind": "ETH_LEAK",
+      "line": 197,
+      "signatures": [
+        { "contractName": "Loan", "methodName": "Wthdraw", "argTypes": [] }
+      ],
+      "exp": "Creator.transfer(this.balance);",
+      "status": "proven"
+    }
+  ]
+}

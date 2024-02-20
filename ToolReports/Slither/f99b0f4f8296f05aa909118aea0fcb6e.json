@@ -1,0 +1,729 @@
+{
+  "success": true,
+  "error": null,
+  "results": {
+    "detectors": [
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "sol_clean",
+            "source_mapping": {
+              "start": 147,
+              "length": 235,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "Sweeper",
+                "source_mapping": {
+                  "start": 96,
+                  "length": 763,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              },
+              "signature": "sol_clean(uint256,uint256)"
+            }
+          },
+          {
+            "type": "node",
+            "name": "b.send(0)",
+            "source_mapping": {
+              "start": 355,
+              "length": 9,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "sol_clean",
+                "source_mapping": {
+                  "start": 147,
+                  "length": 235,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "Sweeper",
+                    "source_mapping": {
+                      "start": 96,
+                      "length": 763,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "sol_clean(uint256,uint256)"
+                }
+              }
+            }
+          }
+        ],
+        "description": "Sweeper.sol_clean(uint256,uint256) () sends eth to arbitrary user\n\tDangerous calls:\n\t- b.send(0) ()\n",
+        "markdown": "[Sweeper.sol_clean(uint256,uint256)]() sends eth to arbitrary user\n\tDangerous calls:\n\t- [b.send(0)]()\n",
+        "first_markdown_element": "",
+        "id": "db3fa175bfb262bbab8fd490896ee91dd87567309f163b6810d9eff12e232b68",
+        "check": "arbitrary-send-eth",
+        "impact": "High",
+        "confidence": "Medium"
+      },
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "sol_clean",
+            "source_mapping": {
+              "start": 147,
+              "length": 235,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "Sweeper",
+                "source_mapping": {
+                  "start": 96,
+                  "length": 763,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              },
+              "signature": "sol_clean(uint256,uint256)"
+            }
+          },
+          {
+            "type": "node",
+            "name": "b.send(0)",
+            "source_mapping": {
+              "start": 355,
+              "length": 9,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "sol_clean",
+                "source_mapping": {
+                  "start": 147,
+                  "length": 235,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "Sweeper",
+                    "source_mapping": {
+                      "start": 96,
+                      "length": 763,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "sol_clean(uint256,uint256)"
+                }
+              }
+            }
+          }
+        ],
+        "description": "Sweeper.sol_clean(uint256,uint256) () ignores return value by b.send(0) ()\n",
+        "markdown": "[Sweeper.sol_clean(uint256,uint256)]() ignores return value by [b.send(0)]()\n",
+        "first_markdown_element": "",
+        "id": "0e18aeb5a2d479f772ed7e6bf1f42658070ce7d91372f42aad8081f9a38baa17",
+        "check": "unchecked-send",
+        "impact": "Medium",
+        "confidence": "Medium"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "b",
+            "source_mapping": {
+              "start": 214,
+              "length": 13,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "sol_clean",
+                "source_mapping": {
+                  "start": 147,
+                  "length": 235,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "Sweeper",
+                    "source_mapping": {
+                      "start": 96,
+                      "length": 763,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "sol_clean(uint256,uint256)"
+                }
+              }
+            }
+          },
+          {
+            "type": "node",
+            "name": "b.send(0)",
+            "source_mapping": {
+              "start": 355,
+              "length": 9,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "sol_clean",
+                "source_mapping": {
+                  "start": 147,
+                  "length": 235,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "Sweeper",
+                    "source_mapping": {
+                      "start": 96,
+                      "length": 763,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "sol_clean(uint256,uint256)"
+                }
+              }
+            }
+          }
+        ],
+        "description": "Sweeper.sol_clean(uint256,uint256).b () lacks a zero-check on :\n\t\t- b.send(0) ()\n",
+        "markdown": "[Sweeper.sol_clean(uint256,uint256).b]() lacks a zero-check on :\n\t\t- [b.send(0)]()\n",
+        "first_markdown_element": "",
+        "id": "f9794cdc2b0d6be0b59ec28ac4d96e61b1c047c1bf3aa39e9ce039fe870c8f81",
+        "check": "missing-zero-check",
+        "impact": "Low",
+        "confidence": "Medium"
+      },
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "sol_clean",
+            "source_mapping": {
+              "start": 147,
+              "length": 235,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "Sweeper",
+                "source_mapping": {
+                  "start": 96,
+                  "length": 763,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              },
+              "signature": "sol_clean(uint256,uint256)"
+            }
+          },
+          {
+            "type": "node",
+            "name": "b.send(0)",
+            "source_mapping": {
+              "start": 355,
+              "length": 9,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "sol_clean",
+                "source_mapping": {
+                  "start": 147,
+                  "length": 235,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "Sweeper",
+                    "source_mapping": {
+                      "start": 96,
+                      "length": 763,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "sol_clean(uint256,uint256)"
+                }
+              }
+            }
+          }
+        ],
+        "description": "Sweeper.sol_clean(uint256,uint256) () has external calls inside a loop: b.send(0) ()\n",
+        "markdown": "[Sweeper.sol_clean(uint256,uint256)]() has external calls inside a loop: [b.send(0)]()\n",
+        "first_markdown_element": "",
+        "id": "d6722d92e8a0a506e84489d2724e57cf7317ecb5b902e69d440be505ae86ad8b",
+        "check": "calls-loop",
+        "impact": "Low",
+        "confidence": "Medium"
+      },
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "asm_clean",
+            "source_mapping": {
+              "start": 412,
+              "length": 445,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "Sweeper",
+                "source_mapping": {
+                  "start": 96,
+                  "length": 763,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              },
+              "signature": "asm_clean(uint256,uint256)"
+            }
+          },
+          {
+            "type": "node",
+            "name": "",
+            "source_mapping": {
+              "start": 462,
+              "length": 395,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "asm_clean",
+                "source_mapping": {
+                  "start": 412,
+                  "length": 445,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "Sweeper",
+                    "source_mapping": {
+                      "start": 96,
+                      "length": 763,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "asm_clean(uint256,uint256)"
+                }
+              }
+            }
+          }
+        ],
+        "description": "Sweeper.asm_clean(uint256,uint256) () uses assembly\n\t- INLINE ASM ()\n",
+        "markdown": "[Sweeper.asm_clean(uint256,uint256)]() uses assembly\n\t- [INLINE ASM]()\n",
+        "first_markdown_element": "",
+        "id": "2a5173980946492b8d86cb0d2c5d2a2f4bec51c9fb997af61cb651aede0f58cf",
+        "check": "assembly",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "pragma",
+            "name": "^0.4.4",
+            "source_mapping": {
+              "start": 0,
+              "length": 23,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "directive": [
+                "solidity",
+                "^",
+                "0.4",
+                ".4"
+              ]
+            }
+          }
+        ],
+        "description": "Pragma version^0.4.4 () allows old versions\n",
+        "markdown": "Pragma version[^0.4.4]() allows old versions\n",
+        "first_markdown_element": "",
+        "id": "c524dbac81447218cdcc218b1e615718838db5d05e8e9dedd1312462097ce552",
+        "check": "solc-version",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [],
+        "description": "solc-0.4.4 is not recommended for deployment\n",
+        "markdown": "solc-0.4.4 is not recommended for deployment\n",
+        "first_markdown_element": "",
+        "id": "d3c9a9a2694f771324145f36235e7a11e1b0352ba5bffd7634afad1f93f9692b",
+        "check": "solc-version",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "asm_clean",
+            "source_mapping": {
+              "start": 412,
+              "length": 445,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "Sweeper",
+                "source_mapping": {
+                  "start": 96,
+                  "length": 763,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              },
+              "signature": "asm_clean(uint256,uint256)"
+            },
+            "additional_fields": {
+              "target": "function",
+              "convention": "mixedCase"
+            }
+          }
+        ],
+        "description": "Function Sweeper.asm_clean(uint256,uint256) () is not in mixedCase\n",
+        "markdown": "Function [Sweeper.asm_clean(uint256,uint256)]() is not in mixedCase\n",
+        "first_markdown_element": "",
+        "id": "7d068f773d16414fa4e85b10a525fd978a6f57dcd9515daa21d12a5f64b2bceb",
+        "check": "naming-convention",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "sol_clean",
+            "source_mapping": {
+              "start": 147,
+              "length": 235,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "Sweeper",
+                "source_mapping": {
+                  "start": 96,
+                  "length": 763,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              },
+              "signature": "sol_clean(uint256,uint256)"
+            },
+            "additional_fields": {
+              "target": "function",
+              "convention": "mixedCase"
+            }
+          }
+        ],
+        "description": "Function Sweeper.sol_clean(uint256,uint256) () is not in mixedCase\n",
+        "markdown": "Function [Sweeper.sol_clean(uint256,uint256)]() is not in mixedCase\n",
+        "first_markdown_element": "",
+        "id": "93f422654cee22195149a7faf17d413523e9db4e7a0986c82502bfcd74810b68",
+        "check": "naming-convention",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "sol_clean",
+            "source_mapping": {
+              "start": 147,
+              "length": 235,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "Sweeper",
+                "source_mapping": {
+                  "start": 96,
+                  "length": 763,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                }
+              },
+              "signature": "sol_clean(uint256,uint256)"
+            }
+          },
+          {
+            "type": "node",
+            "name": "b = address(x / 0x1000000000000000000000000)",
+            "source_mapping": {
+              "start": 299,
+              "length": 42,
+              "filename_relative": "",
+              "filename_absolute": "",
+              "filename_short": "",
+              "is_dependency": false,
+              "lines": [],
+              "starting_column": 0,
+              "ending_column": 0
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "sol_clean",
+                "source_mapping": {
+                  "start": 147,
+                  "length": 235,
+                  "filename_relative": "",
+                  "filename_absolute": "",
+                  "filename_short": "",
+                  "is_dependency": false,
+                  "lines": [],
+                  "starting_column": 0,
+                  "ending_column": 0
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "Sweeper",
+                    "source_mapping": {
+                      "start": 96,
+                      "length": 763,
+                      "filename_relative": "",
+                      "filename_absolute": "",
+                      "filename_short": "",
+                      "is_dependency": false,
+                      "lines": [],
+                      "starting_column": 0,
+                      "ending_column": 0
+                    }
+                  },
+                  "signature": "sol_clean(uint256,uint256)"
+                }
+              }
+            }
+          }
+        ],
+        "description": "Sweeper.sol_clean(uint256,uint256) () uses literals with too many digits:\n\t- b = address(x / 0x1000000000000000000000000) ()\n",
+        "markdown": "[Sweeper.sol_clean(uint256,uint256)]() uses literals with too many digits:\n\t- [b = address(x / 0x1000000000000000000000000)]()\n",
+        "first_markdown_element": "",
+        "id": "35b7626d5a7533d48a091f0ded91d9781506b287878f18f66ed154d0a161a56f",
+        "check": "too-many-digits",
+        "impact": "Informational",
+        "confidence": "Medium"
+      }
+    ]
+  }
+}

@@ -1,0 +1,709 @@
+{
+  "fileName": "Benchmarks/Study_SamplesSet/2e8fd96ad2a73ae6e808291676e83167.sol",
+  "baseName": "2e8fd96ad2a73ae6e808291676e83167.sol",
+  "iter": 1548,
+  "time": "300.198984",
+  "errMsg": null,
+  "result": [
+    {
+      "no": "1",
+      "kind": "IO",
+      "line": 84,
+      "signatures": [
+        {
+          "contractName": "WinEthFree",
+          "methodName": "resetInvestor",
+          "argTypes": [ "address" ]
+        }
+      ],
+      "exp": "(investors[addr].waveNum - 1)",
+      "status": "unproven"
+    },
+    {
+      "no": "2",
+      "kind": "IO",
+      "line": 108,
+      "signatures": [
+        {
+          "contractName": "WinEthFree",
+          "methodName": "calcInterest",
+          "argTypes": [ "address" ]
+        }
+      ],
+      "exp": "(((investment * ratePercent) / 100) * (now - payTime))",
+      "status": "unproven"
+    },
+    {
+      "no": "3",
+      "kind": "IO",
+      "line": 108,
+      "signatures": [
+        {
+          "contractName": "WinEthFree",
+          "methodName": "calcInterest",
+          "argTypes": [ "address" ]
+        }
+      ],
+      "exp": "(investment * ratePercent)",
+      "status": "unproven"
+    },
+    {
+      "no": "4",
+      "kind": "IO",
+      "line": 108,
+      "signatures": [
+        {
+          "contractName": "WinEthFree",
+          "methodName": "calcInterest",
+          "argTypes": [ "address" ]
+        }
+      ],
+      "exp": "(now - payTime)",
+      "status": "unproven"
+    },
+    {
+      "no": "5",
+      "kind": "IO",
+      "line": 109,
+      "signatures": [
+        {
+          "contractName": "WinEthFree",
+          "methodName": "calcInterest",
+          "argTypes": [ "address" ]
+        }
+      ],
+      "exp": "(interest + payableInterest)",
+      "status": "unproven"
+    },
+    {
+      "no": "6",
+      "kind": "IO",
+      "line": 111,
+      "signatures": [
+        {
+          "contractName": "WinEthFree",
+          "methodName": "calcInterest",
+          "argTypes": [ "address" ]
+        }
+      ],
+      "exp": "(investment - paidInterest)",
+      "status": "proven"
+    },
+    {
+      "no": "7",
+      "kind": "IO",
+      "line": 128,
+      "signatures": [
+        {
+          "contractName": "WinEthFree",
+          "methodName": "takeInterest",
+          "argTypes": [ "address" ]
+        }
+      ],
+      "exp": "(uint256((interest / minInterestWager)) * minInterestWager)",
+      "status": "unproven"
+    },
+    {
+      "no": "8",
+      "kind": "IO",
+      "line": 130,
+      "signatures": [
+        {
+          "contractName": "WinEthFree",
+          "methodName": "takeInterest",
+          "argTypes": [ "address" ]
+        }
+      ],
+      "exp": "(interest - interestRoundDown)",
+      "status": "unproven"
+    },
+    {
+      "no": "9",
+      "kind": "IO",
+      "line": 131,
+      "signatures": [
+        {
+          "contractName": "WinEthFree",
+          "methodName": "takeInterest",
+          "argTypes": [ "address" ]
+        }
+      ],
+      "exp": "(investors[addr].paidInterest + interestRoundDown)",
+      "status": "unproven"
+    },
+    {
+      "no": "10",
+      "kind": "IO",
+      "line": 200,
+      "signatures": [
+        {
+          "contractName": "WinEthFree",
+          "methodName": "WinnerNotReturn",
+          "argTypes": [ "address" ]
+        }
+      ],
+      "exp": "(investors[addr].investment - minInvestment)",
+      "status": "proven"
+    },
+    {
+      "no": "11",
+      "kind": "IO",
+      "line": 220,
+      "signatures": [
+        {
+          "contractName": "WinEthFree",
+          "methodName": "doBet",
+          "argTypes": [ "address", "uint256", "WagerType" ]
+        }
+      ],
+      "exp": "(prizePool + ((value * prizePercent) / 100))",
+      "status": "proven"
+    },
+    {
+      "no": "12",
+      "kind": "IO",
+      "line": 220,
+      "signatures": [
+        {
+          "contractName": "WinEthFree",
+          "methodName": "doBet",
+          "argTypes": [ "address", "uint256", "WagerType" ]
+        }
+      ],
+      "exp": "(value * prizePercent)",
+      "status": "unproven"
+    },
+    {
+      "no": "13",
+      "kind": "IO",
+      "line": 229,
+      "signatures": [
+        {
+          "contractName": "WinEthFree",
+          "methodName": "doBet",
+          "argTypes": [ "address", "uint256", "WagerType" ]
+        }
+      ],
+      "exp": "(value * leverageMultiple)",
+      "status": "unproven"
+    },
+    {
+      "no": "14",
+      "kind": "IO",
+      "line": 232,
+      "signatures": [
+        {
+          "contractName": "WinEthFree",
+          "methodName": "doBet",
+          "argTypes": [ "address", "uint256", "WagerType" ]
+        }
+      ],
+      "exp": "(value * leverageMultiple)",
+      "status": "unproven"
+    },
+    {
+      "no": "15",
+      "kind": "IO",
+      "line": 236,
+      "signatures": [
+        {
+          "contractName": "WinEthFree",
+          "methodName": "doBet",
+          "argTypes": [ "address", "uint256", "WagerType" ]
+        }
+      ],
+      "exp": "(lotteryTickets.length + 1)",
+      "status": "unproven"
+    },
+    {
+      "no": "16",
+      "kind": "IO",
+      "line": 239,
+      "signatures": [
+        {
+          "contractName": "WinEthFree",
+          "methodName": "doBet",
+          "argTypes": [ "address", "uint256", "WagerType" ]
+        }
+      ],
+      "exp": "(activeTicketSlotSum + 1)",
+      "status": "unproven"
+    },
+    {
+      "no": "17",
+      "kind": "IO",
+      "line": 243,
+      "signatures": [
+        {
+          "contractName": "WinEthFree",
+          "methodName": "doBet",
+          "argTypes": [ "address", "uint256", "WagerType" ]
+        }
+      ],
+      "exp": "(ticketSum + ticketNum)",
+      "status": "proven"
+    },
+    {
+      "no": "18",
+      "kind": "IO",
+      "line": 244,
+      "signatures": [
+        {
+          "contractName": "WinEthFree",
+          "methodName": "doBet",
+          "argTypes": [ "address", "uint256", "WagerType" ]
+        }
+      ],
+      "exp": "(ticketSum - 1)",
+      "status": "unproven"
+    },
+    {
+      "no": "19",
+      "kind": "IO",
+      "line": 250,
+      "signatures": [
+        {
+          "contractName": "WinEthFree",
+          "methodName": "doBet",
+          "argTypes": [ "address", "uint256", "WagerType" ]
+        }
+      ],
+      "exp": "(address(this).balance - prizePool)",
+      "status": "proven"
+    },
+    {
+      "no": "20",
+      "kind": "IO",
+      "line": 268,
+      "signatures": [
+        {
+          "contractName": "WinEthFree",
+          "methodName": "random",
+          "argTypes": [ "uint256" ]
+        }
+      ],
+      "exp": "(block.number - 1)",
+      "status": "unproven"
+    },
+    {
+      "no": "21",
+      "kind": "IO",
+      "line": 279,
+      "signatures": [
+        {
+          "contractName": "WinEthFree",
+          "methodName": "getLuckyTickets",
+          "argTypes": []
+        }
+      ],
+      "exp": "(i + 1)",
+      "status": "unproven"
+    },
+    {
+      "no": "22",
+      "kind": "IO",
+      "line": 282,
+      "signatures": [
+        {
+          "contractName": "WinEthFree",
+          "methodName": "getLuckyTickets",
+          "argTypes": []
+        }
+      ],
+      "exp": "(j + 1)",
+      "status": "proven"
+    },
+    {
+      "no": "23",
+      "kind": "IO",
+      "line": 291,
+      "signatures": [
+        {
+          "contractName": "WinEthFree",
+          "methodName": "getLuckyTickets",
+          "argTypes": []
+        }
+      ],
+      "exp": "(k + 1)",
+      "status": "unproven"
+    },
+    {
+      "no": "24",
+      "kind": "IO",
+      "line": 304,
+      "signatures": [
+        {
+          "contractName": "WinEthFree",
+          "methodName": "sort",
+          "argTypes": [ "uint256[]" ]
+        }
+      ],
+      "exp": "(data.length - 1)",
+      "status": "proven"
+    },
+    {
+      "no": "25",
+      "kind": "IO",
+      "line": 311,
+      "signatures": [
+        {
+          "contractName": "WinEthFree",
+          "methodName": "quickSort",
+          "argTypes": [ "uint256[]", "uint256", "uint256" ]
+        }
+      ],
+      "exp": "(left + ((right - left) / 2))",
+      "status": "unproven"
+    },
+    {
+      "no": "26",
+      "kind": "IO",
+      "line": 311,
+      "signatures": [
+        {
+          "contractName": "WinEthFree",
+          "methodName": "quickSort",
+          "argTypes": [ "uint256[]", "uint256", "uint256" ]
+        }
+      ],
+      "exp": "(right - left)",
+      "status": "unproven"
+    },
+    {
+      "no": "27",
+      "kind": "IO",
+      "line": 313,
+      "signatures": [
+        {
+          "contractName": "WinEthFree",
+          "methodName": "quickSort",
+          "argTypes": [ "uint256[]", "uint256", "uint256" ]
+        }
+      ],
+      "exp": "(i + 1)",
+      "status": "proven"
+    },
+    {
+      "no": "28",
+      "kind": "IO",
+      "line": 314,
+      "signatures": [
+        {
+          "contractName": "WinEthFree",
+          "methodName": "quickSort",
+          "argTypes": [ "uint256[]", "uint256", "uint256" ]
+        }
+      ],
+      "exp": "(j - 1)",
+      "status": "unproven"
+    },
+    {
+      "no": "29",
+      "kind": "IO",
+      "line": 317,
+      "signatures": [
+        {
+          "contractName": "WinEthFree",
+          "methodName": "quickSort",
+          "argTypes": [ "uint256[]", "uint256", "uint256" ]
+        }
+      ],
+      "exp": "(i + 1)",
+      "status": "proven"
+    },
+    {
+      "no": "30",
+      "kind": "IO",
+      "line": 318,
+      "signatures": [
+        {
+          "contractName": "WinEthFree",
+          "methodName": "quickSort",
+          "argTypes": [ "uint256[]", "uint256", "uint256" ]
+        }
+      ],
+      "exp": "(j - 1)",
+      "status": "unproven"
+    },
+    {
+      "no": "31",
+      "kind": "IO",
+      "line": 337,
+      "signatures": [
+        {
+          "contractName": "WinEthFree",
+          "methodName": "payTicketsPrize",
+          "argTypes": [ "uint256[]" ]
+        }
+      ],
+      "exp": "(i + 1)",
+      "status": "unproven"
+    },
+    {
+      "no": "32",
+      "kind": "IO",
+      "line": 341,
+      "signatures": [
+        {
+          "contractName": "WinEthFree",
+          "methodName": "payTicketsPrize",
+          "argTypes": [ "uint256[]" ]
+        }
+      ],
+      "exp": "(k + 1)",
+      "status": "proven"
+    },
+    {
+      "no": "33",
+      "kind": "IO",
+      "line": 363,
+      "signatures": [
+        {
+          "contractName": "WinEthFree",
+          "methodName": "payTicketsPrize",
+          "argTypes": [ "uint256[]" ]
+        }
+      ],
+      "exp": "(k + 1)",
+      "status": "proven"
+    },
+    {
+      "no": "34",
+      "kind": "IO",
+      "line": 425,
+      "signatures": [
+        {
+          "contractName": "WinEthFree",
+          "methodName": "takeCommission",
+          "argTypes": [ "uint256" ]
+        }
+      ],
+      "exp": "(value * commissionPercent)",
+      "status": "unproven"
+    },
+    {
+      "no": "35",
+      "kind": "IO",
+      "line": 465,
+      "signatures": [
+        {
+          "contractName": "Leverage",
+          "methodName": "@fallback",
+          "argTypes": []
+        }
+      ],
+      "exp": "(uint256((value / minInvestment)) * minInvestment)",
+      "status": "unproven"
+    },
+    {
+      "no": "36",
+      "kind": "DZ",
+      "line": 108,
+      "signatures": [
+        {
+          "contractName": "WinEthFree",
+          "methodName": "calcInterest",
+          "argTypes": [ "address" ]
+        }
+      ],
+      "exp": "((((investment * ratePercent) / 100) * (now - payTime)) / ratePeriod)",
+      "status": "unproven"
+    },
+    {
+      "no": "37",
+      "kind": "DZ",
+      "line": 108,
+      "signatures": [
+        {
+          "contractName": "WinEthFree",
+          "methodName": "calcInterest",
+          "argTypes": [ "address" ]
+        }
+      ],
+      "exp": "((investment * ratePercent) / 100)",
+      "status": "proven"
+    },
+    {
+      "no": "38",
+      "kind": "DZ",
+      "line": 128,
+      "signatures": [
+        {
+          "contractName": "WinEthFree",
+          "methodName": "takeInterest",
+          "argTypes": [ "address" ]
+        }
+      ],
+      "exp": "(interest / minInterestWager)",
+      "status": "unproven"
+    },
+    {
+      "no": "39",
+      "kind": "DZ",
+      "line": 220,
+      "signatures": [
+        {
+          "contractName": "WinEthFree",
+          "methodName": "doBet",
+          "argTypes": [ "address", "uint256", "WagerType" ]
+        }
+      ],
+      "exp": "((value * prizePercent) / 100)",
+      "status": "proven"
+    },
+    {
+      "no": "40",
+      "kind": "DZ",
+      "line": 225,
+      "signatures": [
+        {
+          "contractName": "WinEthFree",
+          "methodName": "doBet",
+          "argTypes": [ "address", "uint256", "WagerType" ]
+        }
+      ],
+      "exp": "(value / minInvestment)",
+      "status": "unproven"
+    },
+    {
+      "no": "41",
+      "kind": "DZ",
+      "line": 229,
+      "signatures": [
+        {
+          "contractName": "WinEthFree",
+          "methodName": "doBet",
+          "argTypes": [ "address", "uint256", "WagerType" ]
+        }
+      ],
+      "exp": "((value * leverageMultiple) / minInvestment)",
+      "status": "unproven"
+    },
+    {
+      "no": "42",
+      "kind": "DZ",
+      "line": 232,
+      "signatures": [
+        {
+          "contractName": "WinEthFree",
+          "methodName": "doBet",
+          "argTypes": [ "address", "uint256", "WagerType" ]
+        }
+      ],
+      "exp": "((value * leverageMultiple) / minInvestment)",
+      "status": "unproven"
+    },
+    {
+      "no": "43",
+      "kind": "DZ",
+      "line": 280,
+      "signatures": [
+        {
+          "contractName": "WinEthFree",
+          "methodName": "getLuckyTickets",
+          "argTypes": []
+        }
+      ],
+      "exp": "(random(i) % ticketSum)",
+      "status": "unproven"
+    },
+    {
+      "no": "44",
+      "kind": "DZ",
+      "line": 311,
+      "signatures": [
+        {
+          "contractName": "WinEthFree",
+          "methodName": "quickSort",
+          "argTypes": [ "uint256[]", "uint256", "uint256" ]
+        }
+      ],
+      "exp": "((right - left) / 2)",
+      "status": "proven"
+    },
+    {
+      "no": "45",
+      "kind": "DZ",
+      "line": 425,
+      "signatures": [
+        {
+          "contractName": "WinEthFree",
+          "methodName": "takeCommission",
+          "argTypes": [ "uint256" ]
+        }
+      ],
+      "exp": "((value * commissionPercent) / 100)",
+      "status": "proven"
+    },
+    {
+      "no": "46",
+      "kind": "DZ",
+      "line": 465,
+      "signatures": [
+        {
+          "contractName": "Leverage",
+          "methodName": "@fallback",
+          "argTypes": []
+        }
+      ],
+      "exp": "(value / minInvestment)",
+      "status": "proven"
+    },
+    {
+      "no": "47",
+      "kind": "ETH_LEAK",
+      "line": 252,
+      "signatures": [
+        {
+          "contractName": "WinEthFree",
+          "methodName": "doBet",
+          "argTypes": [ "address", "uint256", "WagerType" ]
+        }
+      ],
+      "exp": "addr.transfer(minInvestment);",
+      "status": "unproven"
+    },
+    {
+      "no": "48",
+      "kind": "ETH_LEAK",
+      "line": 352,
+      "signatures": [
+        {
+          "contractName": "WinEthFree",
+          "methodName": "payTicketsPrize",
+          "argTypes": [ "uint256[]" ]
+        }
+      ],
+      "exp": "winner.transfer(prize);",
+      "status": "unproven"
+    },
+    {
+      "no": "49",
+      "kind": "ETH_LEAK",
+      "line": 426,
+      "signatures": [
+        {
+          "contractName": "WinEthFree",
+          "methodName": "takeCommission",
+          "argTypes": [ "uint256" ]
+        }
+      ],
+      "exp": "admin.transfer(commission);",
+      "status": "unproven"
+    },
+    {
+      "no": "50",
+      "kind": "ETH_LEAK",
+      "line": 461,
+      "signatures": [
+        {
+          "contractName": "Leverage",
+          "methodName": "@fallback",
+          "argTypes": []
+        }
+      ],
+      "exp": "address(mainContract).transfer(value);",
+      "status": "unproven"
+    }
+  ]
+}

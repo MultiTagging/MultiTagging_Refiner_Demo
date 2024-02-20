@@ -1,0 +1,155 @@
+{
+  "fileName": "Benchmarks/Study_SamplesSet/1193cc3aedbade2c62c60f272cab636e.sol",
+  "baseName": "1193cc3aedbade2c62c60f272cab636e.sol",
+  "iter": 1071,
+  "time": "300.066358",
+  "errMsg": null,
+  "result": [
+    {
+      "no": "1",
+      "kind": "IO",
+      "line": 11,
+      "signatures": [
+        {
+          "contractName": "ggbank",
+          "methodName": "transfer",
+          "argTypes": [ "address", "uint256" ]
+        }
+      ],
+      "exp": "(a - b)",
+      "status": "proven"
+    },
+    {
+      "no": "2",
+      "kind": "IO",
+      "line": 17,
+      "signatures": [
+        {
+          "contractName": "ggbank",
+          "methodName": "transfer",
+          "argTypes": [ "address", "uint256" ]
+        }
+      ],
+      "exp": "(a + b)",
+      "status": "unproven"
+    },
+    {
+      "no": "3",
+      "kind": "IO",
+      "line": 55,
+      "signatures": [
+        { "contractName": "ggbank", "methodName": "ggbank", "argTypes": [] }
+      ],
+      "exp": "(10 ** uint256(decimals))",
+      "status": "proven"
+    },
+    {
+      "no": "4",
+      "kind": "IO",
+      "line": 55,
+      "signatures": [
+        { "contractName": "ggbank", "methodName": "ggbank", "argTypes": [] }
+      ],
+      "exp": "(20000000000 * (10 ** uint256(decimals)))",
+      "status": "proven"
+    },
+    {
+      "no": "5",
+      "kind": "IO",
+      "line": 89,
+      "signatures": [
+        {
+          "contractName": "ggbank",
+          "methodName": "checkfriend",
+          "argTypes": [ "address" ]
+        }
+      ],
+      "exp": "(i + 1)",
+      "status": "proven"
+    },
+    {
+      "no": "6",
+      "kind": "IO",
+      "line": 103,
+      "signatures": [
+        {
+          "contractName": "ggbank",
+          "methodName": "getAirdrop",
+          "argTypes": []
+        }
+      ],
+      "exp": "(_totalSupply + _airdropAmount)",
+      "status": "unproven"
+    },
+    {
+      "no": "7",
+      "kind": "IO",
+      "line": 110,
+      "signatures": [
+        {
+          "contractName": "ggbank",
+          "methodName": "goodluck",
+          "argTypes": []
+        }
+      ],
+      "exp": "(balances[msg.sender] - 100)",
+      "status": "proven"
+    },
+    {
+      "no": "8",
+      "kind": "IO",
+      "line": 113,
+      "signatures": [
+        {
+          "contractName": "ggbank",
+          "methodName": "goodluck",
+          "argTypes": []
+        }
+      ],
+      "exp": "(balances[msg.sender] + 20000)",
+      "status": "unproven"
+    },
+    {
+      "no": "9",
+      "kind": "IO",
+      "line": 114,
+      "signatures": [
+        {
+          "contractName": "ggbank",
+          "methodName": "goodluck",
+          "argTypes": []
+        }
+      ],
+      "exp": "(_totalSupply + 20000)",
+      "status": "unproven"
+    },
+    {
+      "no": "10",
+      "kind": "DZ",
+      "line": 111,
+      "signatures": [
+        {
+          "contractName": "ggbank",
+          "methodName": "goodluck",
+          "argTypes": []
+        }
+      ],
+      "exp": "(uint256(keccak256(abi.encodePacked(block.number))) % 100)",
+      "status": "proven"
+    },
+    {
+      "no": "11",
+      "kind": "DZ",
+      "line": 112,
+      "signatures": [
+        {
+          "contractName": "ggbank",
+          "methodName": "goodluck",
+          "argTypes": []
+        }
+      ],
+      "exp": "(uint256(keccak256(abi.encodePacked(msg.sender))) % 100)",
+      "status": "proven"
+    }
+  ]
+}

@@ -1,0 +1,155 @@
+{
+  "fileName": "Benchmarks/Study_SamplesSet/ae4378e7096691224b4eae0b3ac1a4d0.sol",
+  "baseName": "ae4378e7096691224b4eae0b3ac1a4d0.sol",
+  "iter": 36,
+  "time": "307.333103",
+  "errMsg": null,
+  "result": [
+    {
+      "no": "1",
+      "kind": "IO",
+      "line": 5,
+      "signatures": [
+        { "contractName": "SOS", "methodName": "@fallback", "argTypes": [] },
+        { "contractName": "SOS", "methodName": "getTokens", "argTypes": [] }
+      ],
+      "exp": "(a * b)",
+      "status": "unproven"
+    },
+    {
+      "no": "2",
+      "kind": "IO",
+      "line": 17,
+      "signatures": [
+        { "contractName": "SOS", "methodName": "SOS", "argTypes": [] },
+        {
+          "contractName": "SOS",
+          "methodName": "burn",
+          "argTypes": [ "uint256" ]
+        },
+        {
+          "contractName": "SOS",
+          "methodName": "distr",
+          "argTypes": [ "address", "uint256" ]
+        },
+        { "contractName": "SOS", "methodName": "getTokens", "argTypes": [] },
+        {
+          "contractName": "SOS",
+          "methodName": "transfer",
+          "argTypes": [ "address", "uint256" ]
+        },
+        {
+          "contractName": "SOS",
+          "methodName": "transferFrom",
+          "argTypes": [ "address", "address", "uint256" ]
+        }
+      ],
+      "exp": "(a - b)",
+      "status": "proven"
+    },
+    {
+      "no": "3",
+      "kind": "IO",
+      "line": 21,
+      "signatures": [
+        {
+          "contractName": "SOS",
+          "methodName": "distr",
+          "argTypes": [ "address", "uint256" ]
+        },
+        { "contractName": "SOS", "methodName": "getTokens", "argTypes": [] },
+        {
+          "contractName": "SOS",
+          "methodName": "transfer",
+          "argTypes": [ "address", "uint256" ]
+        },
+        {
+          "contractName": "SOS",
+          "methodName": "transferFrom",
+          "argTypes": [ "address", "address", "uint256" ]
+        }
+      ],
+      "exp": "(a + b)",
+      "status": "unproven"
+    },
+    {
+      "no": "4",
+      "kind": "IO",
+      "line": 164,
+      "signatures": [
+        {
+          "contractName": "SOS",
+          "methodName": "transfer",
+          "argTypes": [ "address", "uint256" ]
+        },
+        {
+          "contractName": "SOS",
+          "methodName": "transferFrom",
+          "argTypes": [ "address", "address", "uint256" ]
+        }
+      ],
+      "exp": "(size + 4)",
+      "status": "proven"
+    },
+    {
+      "no": "5",
+      "kind": "IO",
+      "line": 168,
+      "signatures": [
+        {
+          "contractName": "SOS",
+          "methodName": "transfer",
+          "argTypes": [ "address", "uint256" ]
+        }
+      ],
+      "exp": "(2 * 32)",
+      "status": "proven"
+    },
+    {
+      "no": "6",
+      "kind": "IO",
+      "line": 178,
+      "signatures": [
+        {
+          "contractName": "SOS",
+          "methodName": "transferFrom",
+          "argTypes": [ "address", "address", "uint256" ]
+        }
+      ],
+      "exp": "(3 * 32)",
+      "status": "proven"
+    },
+    {
+      "no": "7",
+      "kind": "DZ",
+      "line": 6,
+      "signatures": [
+        { "contractName": "SOS", "methodName": "@fallback", "argTypes": [] },
+        { "contractName": "SOS", "methodName": "getTokens", "argTypes": [] }
+      ],
+      "exp": "(c / a)",
+      "status": "unproven"
+    },
+    {
+      "no": "8",
+      "kind": "DZ",
+      "line": 11,
+      "signatures": [
+        { "contractName": "SOS", "methodName": "@fallback", "argTypes": [] },
+        { "contractName": "SOS", "methodName": "getTokens", "argTypes": [] }
+      ],
+      "exp": "(a / b)",
+      "status": "proven"
+    },
+    {
+      "no": "9",
+      "kind": "ETH_LEAK",
+      "line": 209,
+      "signatures": [
+        { "contractName": "SOS", "methodName": "withdraw", "argTypes": [] }
+      ],
+      "exp": "owner.transfer(etherBalance);",
+      "status": "proven"
+    }
+  ]
+}
