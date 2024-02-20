@@ -58,4 +58,4 @@ def get_ToolAnalysisTime(tool, analysisTimeReportsPath):
     except IOError:
         print("Path not exist") 
 
-#print(generateTags('VeriSmart',0))
+#print(generateTags('Mythril',0))

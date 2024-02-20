@@ -19,15 +19,27 @@ def parse(tool,reportsLocation,reportSource):
                     try:
                         for filename in os.listdir(path):
                             codes = []
-                            if os.path.getsize(path/filename) != 0:
-                                file = open(path/filename,errors="ignore")
-                                data = file.readlines()
-                                file.close()
-                                for line in data:
-                                    if 'SWC ID' in line and line.rstrip() not in codes:
-                                        codes.append(line.rstrip())
-                            else:
-                                codes ='error'
+                            if '.txt' in filename:
+                                if os.path.getsize(path/filename) != 0:
+                                    file = open(path/filename,errors="ignore")
+                                    data = file.readlines()
+                                    file.close()
+                                    for line in data:
+                                        if 'SWC ID' in line and line.rstrip() not in codes:
+                                            codes.append(line.rstrip())
+                                else:
+                                    codes ='error'
+                            elif '.json' in filename:
+                                if os.path.getsize(path/filename) != 0:
+                                    file = open(path/filename,errors="ignore")
+                                    data = pd.DataFrame(json.load(file))
+                                    file.close()
+                                    df = pd.DataFrame(data['issues'][0])
+                                    if len(df) != 0:
+                                        codes = df['swcID']
+                                    codes = list(dict.fromkeys(codes))
+                                else:
+                                    codes ='error'
                             toolTags.loc[len(toolTags)]=[filename.rstrip().rsplit('.')[0],codes]
                         print(tool + " tags have been extracted successfully")
                         return toolTags
@@ -56,17 +68,18 @@ def parse(tool,reportsLocation,reportSource):
                 case 'Slither':
                     try:
                         for filename in os.listdir(path):
-                            codes = []
-                            if os.path.getsize(path/filename) != 0:
-                                file = open(path/filename,errors="ignore")
-                                data = json.load(file)
-                                file.close()
-                                for i in range(0,len(data['results']['detectors'])):
-                                    codes.append(data['results']['detectors'][i]['check'])
-                                codes = list(dict.fromkeys(codes))
-                            else:
-                                codes.append('error')
-                            toolTags.loc[len(toolTags)]=[filename.rstrip().rsplit('.')[0],codes]
+                            if '.json' in filename:
+                                codes = []
+                                if os.path.getsize(path/filename) != 0:
+                                    file = open(path/filename,errors="ignore")
+                                    data = json.load(file)
+                                    file.close()
+                                    for i in range(0,len(data['results']['detectors'])):
+                                        codes.append(data['results']['detectors'][i]['check'])
+                                    codes = list(dict.fromkeys(codes))
+                                else:
+                                    codes.append('error')
+                                toolTags.loc[len(toolTags)]=[filename.rstrip().rsplit('.')[0],codes]
                         print(tool + " tags have been extracted successfully")
                         return toolTags
                     except IOError:

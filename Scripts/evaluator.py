@@ -3,9 +3,9 @@ from sklearn import metrics
 import matplotlib.pyplot as plt
 from matplotlib import gridspec
 
-def eval(tool):
+def eval(tool,base):
     ToolDS = pd.read_csv('./Results/LabeledData/'+tool+'.csv')
-    BaseDS = pd.read_csv('./Benchmarks/EDA_Outcomes/cgt_MultiDS_StudySet.csv')
+    BaseDS = pd.read_csv('./Benchmarks/EDA_Outcomes/BaseDS/' + base)
 
     predicted = createDASPmetrics(tool,ToolDS)
     actual = createDASPmetrics('Base',BaseDS)
@@ -30,15 +30,15 @@ def eval(tool):
     confusionMatrix = metrics.multilabel_confusion_matrix(actual, predicted)
     plot_confusionMatrix(confusionMatrix, tool)
 
-    from sklearn.metrics import classification_report, confusion_matrix
+    from sklearn.metrics import classification_report
 
     print(classification_report(actual, predicted,zero_division=0))
 
-    '''from sklearn.metrics import precision_recall_fscore_support as score
+    from sklearn.metrics import precision_recall_fscore_support as score
     precision,recall,fscore,support=score(actual,predicted,average='weighted')
     print ('Precision : {}'.format(precision))
     print ('Recall    : {}'.format(recall))
-    print ('F-score   : {}'.format(fscore))'''
+    print ('F-score   : {}'.format(fscore))
 
 def createDASPmetrics(tool,DS):
     DASPmetrics =  pd.DataFrame(columns=['id','1','2','3','4','5','6','7','8','9'])
