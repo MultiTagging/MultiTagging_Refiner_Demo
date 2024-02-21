@@ -50,17 +50,20 @@ def createDASPmetrics(tool,DS):
         DASP_Label = 'DASP'
     else:
         address = 'contractAddress'
-        DASP_Label = tool+'_Labels'
+        DASP_Label = tool+'_DASP_Rank'
 
     for index, row in DS.iterrows():
-        DASPmetrics.at[index,'id'] = DS[address].iloc[index]
-        if DS[DASP_Label].iloc[index] == 'safe':
-            for i in range(1,10):
-                DASPmetrics.at[index, str(i)] = 0
+        if len(DS.at[index,DASP_Label]) == 1 and 'error' in DS.at[index,DASP_Label]:
+            continue
         else:
-            for i in range(1,10):
-                DASPmetrics.at[index, str(i)] = 1 if str(i) in DS[DASP_Label].iloc[index] else 0
-    
+            DASPmetrics.at[index,'id'] = DS[address].iloc[index]
+            if DS[DASP_Label].iloc[index] == 'safe':
+                for i in range(1,10):
+                    DASPmetrics.at[index, str(i)] = 0
+            else:
+                for i in range(1,10):
+                    DASPmetrics.at[index, str(i)] = 1 if str(i) in DS[DASP_Label].iloc[index] else 0
+        
     DASPmetrics.sort_values('id',inplace=True)
     DASPmetrics.reset_index(inplace=True, drop=True)
     return DASPmetrics

@@ -12,15 +12,18 @@ def map(labeledSC,VulnerablityMapFilePath,tool):
         DASPDF = pd.read_excel(VulnerablityMapFilePath,sheet_name='DASP')
 
         for index, row in labeledSC.iterrows():
-            if len(row[tool+'_Labels']) == 1 and row[tool+'_Labels'] == 'error':
-                continue
-            elif len(row[tool+'_Labels']) == 0:
+            SWC_Codes = []
+            SWC_Titles= []
+            DASP_Ranks = []
+            DASP_Titles = []
+            if len(row[tool+'_Labels']) == 1 and 'error' in row[tool+'_Labels']:
+                SWC_Codes.append('error')
+                SWC_Titles.append('error')
+                DASP_Ranks.append('error')
+                DASP_Titles.append('error')
+            elif len(row[tool+'_Labels']) == 0 or row[tool+'_Labels'].all() == ['']:
                 labeledSC.at[index,tool+'_Labels'] = 'safe'
             else:
-                SWC_Codes = []
-                SWC_Titles= []
-                DASP_Ranks = []
-                DASP_Titles = []
                 labels = row[tool+'_Labels']
                 #print('labels: ',labels, ' with length: ', len(labels))
                 for label in labels:
@@ -40,10 +43,10 @@ def map(labeledSC,VulnerablityMapFilePath,tool):
                 SWC_Codes = list(filter(lambda x: str(x) != 'nan', SWC_Codes))
                 DASP_Ranks = list(filter(lambda x: str(x) != 'nan', DASP_Ranks))
                 
-                labeledSC.at[index,tool+'_SWC_Code'] = list(dict.fromkeys(SWC_Codes))
-                labeledSC.at[index,tool+'_SWC_Title'] = list(dict.fromkeys(SWC_Titles))
-                labeledSC.at[index,tool+'_DASP_Rank'] = list(dict.fromkeys(DASP_Ranks))
-                labeledSC.at[index,tool+'_DASP_Title'] = list(dict.fromkeys(DASP_Titles))
+            labeledSC.at[index,tool+'_SWC_Code'] = list(dict.fromkeys(SWC_Codes))
+            labeledSC.at[index,tool+'_SWC_Title'] = list(dict.fromkeys(SWC_Titles))
+            labeledSC.at[index,tool+'_DASP_Rank'] = list(dict.fromkeys(DASP_Ranks))
+            labeledSC.at[index,tool+'_DASP_Title'] = list(dict.fromkeys(DASP_Titles))
         return labeledSC
     except IOError:
         print("Path not exist") 
