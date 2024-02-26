@@ -1,14 +1,19 @@
 import pandas as pd
-from sklearn import metrics
-import matplotlib.pyplot as plt
-from matplotlib import gridspec
+from ast import literal_eval
+
 
 def eval_v2(tool,base):
-    ToolDS = pd.read_csv('./Results/LabeledData/'+tool+'.csv')
-    BaseDS = pd.read_csv('./Benchmarks/EDA_Outcomes/BaseDS/' + base)
+    DASP_unique_Ranks_tool = detectable_vulnerabilities(tool,False)
+    print(tool, 'designed to detect', len(DASP_unique_Ranks_tool), 'vulnerabilities from DASP Top 10, which are:\n', DASP_unique_Ranks_tool)
+    
+    ToolDS = pd.read_csv('./Results/LabeledData/'+tool+'.csv',converters={tool+'_DASP_Rank': literal_eval})
+    BaseDS = pd.read_csv('./Benchmarks/EDA_Outcomes/BaseDS/' + base,converters={'DASP': literal_eval})
 
     predicted = createDASPmetrics(tool,ToolDS)
     actual = createDASPmetrics('Base',BaseDS)
+
+    DASP_unique_Ranks_Base = detectable_vulnerabilities(actual,True)
+    print(base.split('.')[0], 'contains', len(DASP_unique_Ranks_Base), 'vulnerability types from DASP Top 10, which are:\n', DASP_unique_Ranks_Base)
 
     while len(predicted['id']) != len(actual['id']):
         if len(predicted['id']) > len(actual['id']):
@@ -19,10 +24,34 @@ def eval_v2(tool,base):
             actual.reset_index(inplace=True, drop=True)
 
     metricsDF = compute_confusion_matrix(actual, predicted)
-    print(metricsDF)
+    metricsDF.insert(0, 'Base',base,True)
+    metricsDF = add_detectable_Base_Columns(metricsDF,DASP_unique_Ranks_tool,DASP_unique_Ranks_Base)
+    metricsDF.to_csv('./Results/Evaluations/'+base.split('.')[0]+'/'+tool+'.csv',index=False)
+    return metricsDF
+
+def detectable_vulnerabilities(DS,flag):
+    DASP_unique_Ranks = []
+
+    if flag:
+        for rank in range(1,11):
+            if 1 in DS[str(rank)].tolist():
+                DASP_unique_Ranks.append(rank)
+    else:
+        VulnerablityMapDF = pd.read_excel('./Mapping/VulnerablityMap.xlsx',sheet_name=DS)
+        VulnerablityMapDF.sort_values('DASP',inplace=True)
+        DASP_unique_Ranks= VulnerablityMapDF['DASP'].unique()
+        DASP_unique_Ranks = list(filter(lambda x: str(x) != 'nan', DASP_unique_Ranks))
+    
+    DASP_Labels = ['Reentrancy','Access Control','Arithmetic','Unchecked Return Values','DoS','Bad Randomness','Front-Running','Time manipulation','Short Address Attack','Unknown Unknowns']
+
+    DASP_unique_Labels = []
+    for rank in DASP_unique_Ranks:
+        DASP_unique_Labels.append(DASP_Labels[int(rank-1)])
+
+    return DASP_unique_Labels
 
 def createDASPmetrics(tool,DS):
-    DASPmetrics =  pd.DataFrame(columns=['id','DASP','1','2','3','4','5','6','7','8','9'])
+    DASPmetrics =  pd.DataFrame(columns=['id','DASP','1','2','3','4','5','6','7','8','9','10'])
     address = ''
     DASP_Label = ''
 
@@ -40,18 +69,18 @@ def createDASPmetrics(tool,DS):
             DASPmetrics.at[index,'id'] = DS[address].iloc[index]
             DASPmetrics.at[index,'DASP'] = DS[DASP_Label].iloc[index]
             if DS.at[index,DASP_Label] == 'safe':
-                for i in range(1,10):
+                for i in range(1,11):
                     DASPmetrics.at[index, str(i)] = 0
             else:
-                for i in range(1,10):
-                    DASPmetrics.at[index, str(i)] = 1 if str(i) in DS.at[index,DASP_Label] else 0
+                for i in range(1,11):
+                    DASPmetrics.at[index, str(i)] = 1 if i in DS.at[index,DASP_Label] else 0
     DASPmetrics.sort_values('id',inplace=True)
     DASPmetrics.reset_index(inplace=True, drop=True)
     return DASPmetrics
 
 def compute_confusion_matrix(actual, predicted):
     metricsDF = pd.DataFrame(columns = ['Label','TP','TN','FP','FN','Recall','Precision'])
-    DASP_Labels = ['Reentrancy','Access Control','Arithmetic','Unchecked Return Values','DoS','Bad Randomness','Front-Running','Time manipulation','Short Address Attack']
+    DASP_Labels = ['Reentrancy','Access Control','Arithmetic','Unchecked Return Values','DoS','Bad Randomness','Front-Running','Time manipulation','Short Address Attack','Unknown Unknowns']
 
     for label in range(0,9):
         TP = TN = FP = FN = 0
@@ -78,5 +107,16 @@ def compute_confusion_matrix(actual, predicted):
             metricsDF.at[label,'Precision'] = (TP/(TP+FP))
     
     return metricsDF
+
+def add_detectable_Base_Columns(metricsDF,DASP_unique_Ranks_tool,DASP_unique_Ranks_Base):
+    metricsDF.insert(2, 'In Base','',True)
+    metricsDF.insert(3, 'Detectable By Tool','',True)
+
+    for index,row in metricsDF.iterrows():
+        metricsDF.at[index, 'In Base'] = True if metricsDF.at[index, 'Label'] in DASP_unique_Ranks_Base else False
+        metricsDF.at[index, 'Detectable By Tool'] = True if metricsDF.at[index, 'Label'] in DASP_unique_Ranks_tool else False
+    
+    return metricsDF
+
 
 #eval_v2('Slither','cgt_MultiDS_StudySet.csv')
