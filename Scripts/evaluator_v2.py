@@ -40,9 +40,12 @@ def eval_v2(tool,base):
     metricsDF.insert(0, 'Base',base,True)
     metricsDF = add_detectable_Base_Columns(metricsDF,DASP_unique_Ranks_tool,DASP_unique_Ranks_Base)
     if vote:
-        metricsDF.to_csv('./Results/Evaluations/'+base.split('.')[0]+'/'+tool+ voteMethod +'.csv',index=False)
+        metricsDF.to_csv('./Results/Evaluations/'+base.split('.')[0]+'/'+tool +'.csv',index=False)
+        predicted.to_csv('./Results/DASP_Data/'+base.split('.')[0]+'/predicted_'+tool +'.csv',index=False)
     else:
         metricsDF.to_csv('./Results/Evaluations/'+base.split('.')[0]+'/'+tool+'.csv',index=False)
+        predicted.to_csv('./Results/DASP_Data/'+base.split('.')[0]+'/predicted_'+tool+'.csv',index=False)
+    actual.to_csv('./Results/DASP_Data/'+base.split('.')[0]+'/actual.csv',index=False)
     return metricsDF
 
 def detectable_vulnerabilities(DS,flag,vote):

@@ -8,7 +8,7 @@ def plot_result(tool,Base):
     if len(Base) == 1 and Base[0].lower() == 'all':
         Base = [f.name for f in os.scandir(EvaluationsFolderPath) if f.is_dir()]     
     if len(tool) == 1 and tool[0].lower() == 'all':
-        tool = [f.name.split('.')[0] for f in os.scandir(EvaluationsFolderPath+Base[0]) if f.is_file()]
+        tool = [f.name.split('.')[0] for f in os.scandir(EvaluationsFolderPath+Base[0]) if f.is_file() and '.csv' in f.name]
     tool = sorted(tool)
     Base = sorted(Base)
     resultDF= get_performance_results(tool,Base)
