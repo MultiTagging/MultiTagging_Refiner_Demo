@@ -3,29 +3,16 @@ from ast import literal_eval
 
 
 def eval_v2(tool,base):
-    vote = False
-    if 'vote' in tool.lower():
-        vote = True
-        ToolDS = pd.read_csv('./Results/LabeledData/voteBasedData.csv',converters={'DASP': literal_eval})
-        voteMethod = '_' + tool.rsplit('_')[1] # vote method: [_avg|_majority|_AtLeast]
-
-        DASP_unique_Ranks_tool = detectable_vulnerabilities(ToolDS,True,vote)
-        print('The implemented list of tools are able to detect', len(DASP_unique_Ranks_tool), 'vulnerabilities from DASP Top 10, which are:\n', DASP_unique_Ranks_tool)
-       
-    else:
-        DASP_unique_Ranks_tool = detectable_vulnerabilities(tool,False,vote)
-        print(tool, 'designed to detect', len(DASP_unique_Ranks_tool), 'vulnerabilities from DASP Top 10, which are:\n', DASP_unique_Ranks_tool)
-        ToolDS = pd.read_csv('./Results/LabeledData/'+tool+'.csv',converters={tool+'_DASP_Rank': literal_eval})
-        
+    DASP_unique_Ranks_tool = detectable_vulnerabilities(tool,False)
+    print(tool, 'designed to detect', len(DASP_unique_Ranks_tool), 'vulnerabilities from DASP Top 10, which are:\n', DASP_unique_Ranks_tool)
+    
+    ToolDS = pd.read_csv('./Results/LabeledData/'+tool+'.csv',converters={tool+'_DASP_Rank': literal_eval})
     BaseDS = pd.read_csv('./Benchmarks/EDA_Outcomes/BaseDS/' + base,converters={'DASP': literal_eval})
 
-    if vote:
-        predicted = createDASPmetrics(tool,ToolDS,voteMethod) #pass the vote method: [_avg|_majority|_AtLeast]
-    else:
-        predicted = createDASPmetrics(tool,ToolDS,'')
-    actual = createDASPmetrics('Base',BaseDS,'')
+    predicted = createDASPmetrics(tool,ToolDS)
+    actual = createDASPmetrics('Base',BaseDS)
 
-    DASP_unique_Ranks_Base = detectable_vulnerabilities(actual,True,vote)
+    DASP_unique_Ranks_Base = detectable_vulnerabilities(actual,True)
     print(base.split('.')[0], 'contains', len(DASP_unique_Ranks_Base), 'vulnerability types from DASP Top 10, which are:\n', DASP_unique_Ranks_Base)
 
     while len(predicted['id']) != len(actual['id']):
@@ -35,26 +22,20 @@ def eval_v2(tool,base):
         else:
             actual.drop(actual[~actual['id'].isin(predicted['id'])].index, inplace=True)    
             actual.reset_index(inplace=True, drop=True)
-    
+
     metricsDF = compute_confusion_matrix(actual, predicted)
     metricsDF.insert(0, 'Base',base,True)
     metricsDF = add_detectable_Base_Columns(metricsDF,DASP_unique_Ranks_tool,DASP_unique_Ranks_Base)
-    if vote:
-        metricsDF.to_csv('./Results/Evaluations/'+base.split('.')[0]+'/'+tool+ voteMethod +'.csv',index=False)
-    else:
-        metricsDF.to_csv('./Results/Evaluations/'+base.split('.')[0]+'/'+tool+'.csv',index=False)
+    metricsDF.to_csv('./Results/Evaluations/'+base.split('.')[0]+'/'+tool+'.csv',index=False)
     return metricsDF
 
-def detectable_vulnerabilities(DS,flag,vote):
+def detectable_vulnerabilities(DS,flag):
     DASP_unique_Ranks = []
 
     if flag:
-        if vote:
-            DASP_unique_Ranks = list(set(DS['DASP'].sum()))
-        else:
-            for rank in range(1,11):
-                if 1 in DS[str(rank)].tolist():
-                    DASP_unique_Ranks.append(rank)
+        for rank in range(1,11):
+            if 1 in DS[str(rank)].tolist():
+                DASP_unique_Ranks.append(rank)
     else:
         VulnerablityMapDF = pd.read_excel('./Mapping/VulnerablityMap.xlsx',sheet_name=DS)
         VulnerablityMapDF.sort_values('DASP',inplace=True)
@@ -69,37 +50,30 @@ def detectable_vulnerabilities(DS,flag,vote):
 
     return DASP_unique_Labels
 
-def createDASPmetrics(tool,DS,method):
+def createDASPmetrics(tool,DS):
     DASPmetrics =  pd.DataFrame(columns=['id','DASP','1','2','3','4','5','6','7','8','9','10'])
     address = ''
     DASP_Label = ''
 
-    if 'vote' in tool.lower():
-        DASPmetrics['id'] = DS['id']
-        DASPmetrics['DASP'] = DS['DASP']
-        for i in range(1,11):
-            DASPmetrics[str(i)] = DS[str(i)+method]
-            #DASPmetrics.at[index, str(i)] = 1 if DS.at[index,DASP_Label] == 1 else 0
+    if tool == 'Base':
+        address = 'fp_sol'
+        DASP_Label = 'DASP'
     else:
-        if tool.lower() == 'base':
-            address = 'fp_sol'
-            DASP_Label = 'DASP'
-        else:
-            address = 'contractAddress'
-            DASP_Label = tool+'_DASP_Rank'
+        address = 'contractAddress'
+        DASP_Label = tool+'_DASP_Rank'
 
-        for index, row in DS.iterrows():
-            if len(DS.at[index,DASP_Label]) == 1 and 'error' in DS.at[index,DASP_Label]:
-                continue
+    for index, row in DS.iterrows():
+        if len(DS.at[index,DASP_Label]) == 1 and 'error' in DS.at[index,DASP_Label]:
+            continue
+        else:
+            DASPmetrics.at[index,'id'] = DS[address].iloc[index]
+            DASPmetrics.at[index,'DASP'] = DS[DASP_Label].iloc[index]
+            if DS.at[index,DASP_Label] == 'safe':
+                for i in range(1,11):
+                    DASPmetrics.at[index, str(i)] = 0
             else:
-                DASPmetrics.at[index,'id'] = DS[address].iloc[index]
-                DASPmetrics.at[index,'DASP'] = DS[DASP_Label].iloc[index]
-                if DS.at[index,DASP_Label] == 'safe':
-                    for i in range(1,11):
-                        DASPmetrics.at[index, str(i)] = 0
-                else:
-                    for i in range(1,11):
-                        DASPmetrics.at[index, str(i)] = 1 if i in DS.at[index,DASP_Label] else 0
+                for i in range(1,11):
+                    DASPmetrics.at[index, str(i)] = 1 if i in DS.at[index,DASP_Label] else 0
     DASPmetrics.sort_values('id',inplace=True)
     DASPmetrics.reset_index(inplace=True, drop=True)
     return DASPmetrics
@@ -145,4 +119,4 @@ def add_detectable_Base_Columns(metricsDF,DASP_unique_Ranks_tool,DASP_unique_Ran
     return metricsDF
 
 
-#eval_v2('vote_avg','eThor.csv')
+#eval_v2('Slither','cgt_MultiDS_StudySet.csv')
