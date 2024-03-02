@@ -147,7 +147,7 @@ def plot_OneTool_OneBase(resultDF,tool):
     for p in ax.patches:
         ax.text(p.get_x() + 0.15,
                 p.get_height()* .5 ,
-                '{0:.3f}'.format(p.get_height()),
+                '{0:.2f}'.format(p.get_height()),
                 color='black', rotation='vertical', size='small')
 
     plt.title('Precision and Recall for ' + tool[0] + 'tool per vulnerability on ' + Base[0], fontsize=12)

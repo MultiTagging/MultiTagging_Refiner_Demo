@@ -75,7 +75,7 @@ def vote_methods(labelVots,method):
         case 'majority':
             label = 1 if labelVots.count(1) > labelVots.count(0) else 0
         case 'AtLeast':
-            label = 1 if labelVots.count(1) >= 2 else 0
+            label = 1 if labelVots.count(1) >= 1 else 0
     return label
 
 def add_voteColumns(VoteData,method):
