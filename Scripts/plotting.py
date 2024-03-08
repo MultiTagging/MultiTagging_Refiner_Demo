@@ -87,7 +87,7 @@ def plot_ManyTool_ManyBase(resultDF,tool):
             ax = axs[Vulnerabilities.index(v),Base.index(b)]
             for p in ax.patches:
                 if p.get_height() > 0:
-                    ax.text(p.get_x()+0.1,
+                    ax.text(p.get_x()+0,
                     p.get_height()* .5 ,
                     '{0:.2f}'.format(p.get_height()),
                     color='black', rotation='vertical', size='large')

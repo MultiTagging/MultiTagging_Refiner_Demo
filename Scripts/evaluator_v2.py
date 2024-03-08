@@ -7,7 +7,7 @@ def eval_v2(tool,base):
     if 'vote' in tool.lower():
         vote = True
         ToolDS = pd.read_csv('./Results/LabeledData/voteBasedData.csv',converters={'DASP': literal_eval})
-        voteMethod = '_' + tool.rsplit('_')[1] # vote method: [_avg|_majority|_AtLeast]
+        voteMethod = '_' + tool.rsplit('_')[1] # vote method: [_Threshold|_majority|_AtLeast]
 
         DASP_unique_Ranks_tool = detectable_vulnerabilities(ToolDS,True,vote)
         print('The implemented list of tools are able to detect', len(DASP_unique_Ranks_tool), 'vulnerabilities from DASP Top 10, which are:\n', DASP_unique_Ranks_tool)
@@ -40,8 +40,8 @@ def eval_v2(tool,base):
     metricsDF.insert(0, 'Base',base,True)
     metricsDF = add_detectable_Base_Columns(metricsDF,DASP_unique_Ranks_tool,DASP_unique_Ranks_Base)
     if vote:
-        metricsDF.to_csv('./Results/Evaluations/'+base.split('.')[0]+'/'+tool +'.csv',index=False)
-        predicted.to_csv('./Results/DASP_Data/'+base.split('.')[0]+'/predicted_'+tool +'.csv',index=False)
+        metricsDF.to_csv('./Results/Evaluations/'+base.split('.')[0]+'/'+tool +'.csv',index=False) #toBemove to other dir
+        predicted.to_csv('./Results/DASP_Data/'+base.split('.')[0]+'/predicted_'+tool +'.csv',index=False) #toBemove to other dir
     else:
         metricsDF.to_csv('./Results/Evaluations/'+base.split('.')[0]+'/'+tool+'.csv',index=False)
         predicted.to_csv('./Results/DASP_Data/'+base.split('.')[0]+'/predicted_'+tool+'.csv',index=False)
@@ -51,7 +51,7 @@ def eval_v2(tool,base):
 def detectable_vulnerabilities(DS,flag,vote):
     DASP_unique_Ranks = []
 
-    if flag:
+    if flag: #True if DS is base data or vote data
         if vote:
             DASP_unique_Ranks = list(set(DS['DASP'].sum()))
         else:
