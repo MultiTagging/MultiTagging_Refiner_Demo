@@ -1,5 +1,7 @@
 import pandas as pd
 from ast import literal_eval
+import seaborn as sns
+import matplotlib.pyplot as plt
 
 def getOverlap(tools):
     if len(tools) <= 1:
@@ -22,7 +24,8 @@ def getOverlap(tools):
                         overlapDF.at[tool,test] = compute_overlap(tool,test,baseTool_Labels,testTool_Labels,vulnList)
                     else:
                         overlapDF.at[tool,test] = 0*100
-        #print(overlapDF)
+        plot_Overlep_HeatMap(overlapDF)
+        overlapDF.to_csv('./Results/Overlap/OverlapDegree.csv')
     return overlapDF
 
 def compute_overlap(tool,test,baseTool_Labels,testTool_Labels,vulnList):
@@ -56,5 +59,12 @@ def get_common_vuln_list(tool, test,ToolsCapacity):
         if ToolsCapacity.at[tool,DASP_Labels[v]] == ToolsCapacity.at[test,DASP_Labels[v]] == 1:
             vulnList.append(v+1)
     return vulnList
-      
+
+def plot_Overlep_HeatMap(overlapDF):
+    overlapDF = overlapDF.astype(float)
+    ax = sns.heatmap(overlapDF, annot=True, fmt='.2f',cmap='Blues',vmax=100,vmin=0,linewidths=1,square=True,annot_kws={'size': 12})
+    plt.title("Overlap of Tool Findings %")
+    ax.invert_yaxis()
+    plt.show() 
+
 #getOverlap(['MAIAN','Mythril','Semgrep','Slither','Solhint','VeriSmart'])
