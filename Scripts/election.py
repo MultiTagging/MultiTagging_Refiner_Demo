@@ -50,8 +50,8 @@ def electLabel():
                    for rank in range(1,11):
                        VoteData.at[last_index,str(rank)] = Tool_DASP_Result.at[index,str(rank)]
     
-    VoteResult = vote(VoteData,'avg') # Threshold: ['avg', 'majority','at least 2','tool power per vulnerablitiy']
-    VoteResult = vote(VoteResult,'majority')
+    VoteResult = vote(VoteData,'Threshold') # Threshold: ['avg', 'majority','at least 2','tool power per vulnerablitiy']
+    VoteResult = vote(VoteResult,'Majority')
     VoteResult = vote(VoteResult,'AtLeast')
 
     VoteResult.to_csv('./Results/LabeledData/voteBasedData.csv',index=False)
@@ -70,9 +70,9 @@ def vote(VoteData,method):
 def vote_methods(labelVots,method):
     label = 0
     match method:
-        case 'avg':
-            label = 1 if numpy.average(labelVots) >= 50 else 0
-        case 'majority':
+        case 'Threshold': ## change to threshold value
+            label = 1 if numpy.average(labelVots) >= 0.50 else 0
+        case 'Majority':
             label = 1 if labelVots.count(1) > labelVots.count(0) else 0
         case 'AtLeast':
             label = 1 if labelVots.count(1) >= 1 else 0

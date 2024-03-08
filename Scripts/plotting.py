@@ -5,6 +5,8 @@ import os
 
 def plot_result(tool,Base):
     EvaluationsFolderPath = './Results/Evaluations/'
+    ToolsCapacity = pd.read_excel('./Mapping/ToolsCapacity.xlsx',sheet_name='DASP',index_col='Tool')
+    labels = []
     if len(Base) == 1 and Base[0].lower() == 'all':
         Base = [f.name for f in os.scandir(EvaluationsFolderPath) if f.is_dir()]     
     if len(tool) == 1 and tool[0].lower() == 'all':
@@ -15,7 +17,19 @@ def plot_result(tool,Base):
     plot_performance_results(resultDF,tool)
     
     return resultDF
-    
+
+def get_labelsList(ToolsCapacity,tool):
+    labels = []
+    DASP_Labels = ['Reentrancy','Access Control','Arithmetic','Unchecked Return Values','DoS','Bad Randomness','Front-Running','Time manipulation','Short Address Attack']
+
+    '''if tool[0].lower() == 'all':
+        for v in DASP_Labels:
+            if 1 in ToolsCapacity[v].values.tolist():
+                labels.append(v)'''
+    for v in DASP_Labels:
+        if 1 in ToolsCapacity[v].tolist():
+            labels.append(v)
+    return labels
 
 def plot_performance_results(resultDF,tool):
     Base = resultDF.Base.unique().tolist()
@@ -31,7 +45,13 @@ def plot_performance_results(resultDF,tool):
 
 def plot_ManyTool_ManyBase(resultDF,tool):
     Base = resultDF.Base.unique().tolist()
-    Vulnerabilities = resultDF.Label.unique().tolist()
+    '''if tool[0].lower() == 'all':
+        ToolsCapacity = pd.read_excel('./Mapping/ToolsCapacity.xlsx',sheet_name='DASP',index_col='Tool')
+        Vulnerabilities = get_labelsList(ToolsCapacity,tool)
+    else:
+        Vulnerabilities = resultDF.Label.unique().tolist()'''
+    ToolsCapacity = pd.read_excel('./Mapping/ToolsCapacity.xlsx',sheet_name='DASP',index_col='Tool')
+    Vulnerabilities = get_labelsList(ToolsCapacity,tool)
 
     dict_resultDF = resultDF.to_dict('records')
     rows = len(Vulnerabilities)
@@ -188,4 +208,4 @@ def buildDF(tool):
         resultDF[t+'_Precision'] = ''
     return resultDF
 
-#plot_result(['All'],['All'])
+#plot_result(['All'],['SolidiFI','Doublade','JiuZhou','SBcurated'])

@@ -21,7 +21,7 @@ def map(labeledSC,VulnerablityMapFilePath,tool):
                 SWC_Titles.append('error')
                 DASP_Ranks.append('error')
                 DASP_Titles.append('error')
-            elif len(row[tool+'_Labels']) == 0 or row[tool+'_Labels'] == ['']:
+            elif len(row[tool+'_Labels']) == 0 or row[tool+'_Labels'].all() == ['']: #solhint: elif len(row[tool+'_Labels']) == 0 or row[tool+'_Labels'].all() == ['']:
                 labeledSC.at[index,tool+'_Labels'] = 'safe'
             else:
                 labels = row[tool+'_Labels']
