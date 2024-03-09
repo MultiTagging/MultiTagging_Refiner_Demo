@@ -15,25 +15,28 @@ config_file_path = self_dir / config_file_name
 #-------------------------------------------
 
 def generateTags(tool,reportSource):
-    Tools =['MAIAN','Mythril','Semgrep','Slither','Solhint','VeriSmart']
-    configFile = open(config_file_path)
-    config_File = json.load(configFile)
-    configFile.close()
-    
-    vulnReportsPath = config_File['Reports_Directory_Path'][Tools.index(tool)]['Path']
-    labeledSC = parse(tool,vulnReportsPath,reportSource)
+    try:
+        Tools =['MAIAN','Mythril','Semgrep','Slither','Solhint','VeriSmart']
+        configFile = open(config_file_path)
+        config_File = json.load(configFile)
+        configFile.close()
+        
+        vulnReportsPath = config_File['Reports_Directory_Path'][Tools.index(tool)]['Path']
+        labeledSC = parse(tool,vulnReportsPath,reportSource)
 
-    if reportSource ==0 and tool != 'VeriSmart':
-        analysisTimeReportsPath = config_File['AnalysisTime_Directory_Path'][Tools.index(tool)]['Path']    
-        tool_LabeledDS = pd.DataFrame(get_ToolAnalysisTime(tool, analysisTimeReportsPath))
-        labeledSC= labeledSC.merge(tool_LabeledDS,on='contractAddress')
-    
-    VulnerablityMapFilePath = config_File['VulnerablityMap_File_Path'][0]['Path']  
-    mapLabeledSC = map(labeledSC,VulnerablityMapFilePath,tool)
+        if reportSource ==0 and tool != 'VeriSmart':
+            analysisTimeReportsPath = config_File['AnalysisTime_Directory_Path'][Tools.index(tool)]['Path']    
+            tool_LabeledDS = pd.DataFrame(get_ToolAnalysisTime(tool, analysisTimeReportsPath))
+            labeledSC= labeledSC.merge(tool_LabeledDS,on='contractAddress')
+        
+        VulnerablityMapFilePath = config_File['VulnerablityMap_File_Path'][0]['Path']  
+        mapLabeledSC = map(labeledSC,VulnerablityMapFilePath,tool)
 
-    mapLabeledSC.to_csv('./Results/LabeledData/'+tool+'.csv',index=False)
-    return mapLabeledSC
-
+        mapLabeledSC.to_csv('./Results/LabeledData/'+tool+'.csv',index=False)
+        return mapLabeledSC
+    except Exception as err:
+        print(f"Unexpected {err=}, {type(err)=}")
+        raise
 def get_ToolAnalysisTime(tool, analysisTimeReportsPath):
     self_dir = Path(__file__).resolve().parents[1]
     path = self_dir / analysisTimeReportsPath

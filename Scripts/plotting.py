@@ -4,19 +4,23 @@ import pandas as pd
 import os
 
 def plot_result(tool,Base):
-    EvaluationsFolderPath = './Results/Evaluations/'
-    ToolsCapacity = pd.read_excel('./Mapping/ToolsCapacity.xlsx',sheet_name='DASP',index_col='Tool')
-    labels = []
-    if len(Base) == 1 and Base[0].lower() == 'all':
-        Base = [f.name for f in os.scandir(EvaluationsFolderPath) if f.is_dir()]     
-    if len(tool) == 1 and tool[0].lower() == 'all':
-        tool = [f.name.split('.')[0] for f in os.scandir(EvaluationsFolderPath+Base[0]) if f.is_file() and '.csv' in f.name]
-    tool = sorted(tool)
-    Base = sorted(Base)
-    resultDF= get_performance_results(tool,Base)
-    plot_performance_results(resultDF,tool)
-    
-    return resultDF
+    try:
+        EvaluationsFolderPath = './Results/Evaluations/'
+        ToolsCapacity = pd.read_excel('./Mapping/ToolsCapacity.xlsx',sheet_name='DASP',index_col='Tool')
+        labels = []
+        if len(Base) == 1 and Base[0].lower() == 'all':
+            Base = [f.name for f in os.scandir(EvaluationsFolderPath) if f.is_dir()]     
+        if len(tool) == 1 and tool[0].lower() == 'all':
+            tool = [f.name.split('.')[0] for f in os.scandir(EvaluationsFolderPath+Base[0]) if f.is_file() and '.csv' in f.name]
+        tool = sorted(tool)
+        Base = sorted(Base)
+        resultDF= get_performance_results(tool,Base)
+        plot_performance_results(resultDF,tool)
+        
+        return resultDF
+    except Exception as err:
+        print(f"Unexpected {err=}, {type(err)=}")
+        raise
 
 def get_labelsList(ToolsCapacity,tool):
     labels = []

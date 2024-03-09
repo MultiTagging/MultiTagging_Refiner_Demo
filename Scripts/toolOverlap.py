@@ -4,30 +4,33 @@ import seaborn as sns
 import matplotlib.pyplot as plt
 
 def getOverlap(tools):
-    if len(tools) <= 1:
-        print('You should pass a list of tools')
-    else:
-        overlapDF = pd.DataFrame(index=tools, columns=tools)
+    try:
+        if len(tools) <= 1:
+            print('You should pass a list of tools')
+        else:
+            overlapDF = pd.DataFrame(index=tools, columns=tools)
 
-        ToolsCapacity = pd.read_excel('./Mapping/ToolsCapacity.xlsx',sheet_name='DASP',index_col='Tool')
+            ToolsCapacity = pd.read_excel('./Mapping/ToolsCapacity.xlsx',sheet_name='DASP',index_col='Tool')
 
-        for tool in tools:
-            baseTool_Labels = pd.read_csv('./Results/LabeledData/'+tool+'.csv',converters={tool+'_DASP_Rank': literal_eval})
-            for test in tools:
-                if test == tool:
-                    overlapDF.at[tool,test] = (1/1) * 100
-                else:
-                    vulnList = get_common_vuln_list(tool,test,ToolsCapacity)
-  
-                    if len(vulnList)>0:
-                        testTool_Labels = pd.read_csv('./Results/LabeledData/'+test+'.csv',converters={test+'_DASP_Rank': literal_eval})
-                        overlapDF.at[tool,test] = compute_overlap(tool,test,baseTool_Labels,testTool_Labels,vulnList)
+            for tool in tools:
+                baseTool_Labels = pd.read_csv('./Results/LabeledData/'+tool+'.csv',converters={tool+'_DASP_Rank': literal_eval})
+                for test in tools:
+                    if test == tool:
+                        overlapDF.at[tool,test] = (1/1) * 100
                     else:
-                        overlapDF.at[tool,test] = 0*100
-        plot_Overlep_HeatMap(overlapDF)
-        overlapDF.to_csv('./Results/Overlap/OverlapDegree.csv')
-    return overlapDF
-
+                        vulnList = get_common_vuln_list(tool,test,ToolsCapacity)
+    
+                        if len(vulnList)>0:
+                            testTool_Labels = pd.read_csv('./Results/LabeledData/'+test+'.csv',converters={test+'_DASP_Rank': literal_eval})
+                            overlapDF.at[tool,test] = compute_overlap(tool,test,baseTool_Labels,testTool_Labels,vulnList)
+                        else:
+                            overlapDF.at[tool,test] = 0*100
+            plot_Overlep_HeatMap(overlapDF)
+            overlapDF.to_csv('./Results/Overlap/OverlapDegree.csv')
+        return overlapDF
+    except Exception as err:
+        print(f"Unexpected {err=}, {type(err)=}")
+        raise
 def compute_overlap(tool,test,baseTool_Labels,testTool_Labels,vulnList):
     overlapValue = 0
     base_totalSamples = 0

@@ -10,55 +10,59 @@ self_dir = Path(__file__).resolve().parent
 config_file_path = self_dir / config_file_name
 #-------------------------------------------
 def eval(tool,base):
-    configFile = open(config_file_path)
-    config_File = json.load(configFile)
-    configFile.close()
-    BaseDS_Dir = config_File['BaseDS'][0]['Path']
+    try:
+        configFile = open(config_file_path)
+        config_File = json.load(configFile)
+        configFile.close()
+        BaseDS_Dir = config_File['BaseDS'][0]['Path']
 
-    vote = False
-    if 'vote' in tool.lower():
-        vote = True
-        ToolDS = pd.read_csv('./Results/LabeledData/voteBasedData.csv',converters={'DASP': literal_eval})
-        voteMethod = '_' + tool.rsplit('_')[1] # vote method: [_Threshold|_majority|_AtLeast]
+        vote = False
+        if 'vote' in tool.lower():
+            vote = True
+            ToolDS = pd.read_csv('./Results/LabeledData/voteBasedData.csv',converters={'DASP': literal_eval})
+            voteMethod = '_' + tool.rsplit('_')[1] # vote method: [_Threshold|_majority|_AtLeast]
 
-        DASP_unique_Ranks_tool = detectable_vulnerabilities(ToolDS,True,vote)
-        print('The implemented list of tools are able to detect', len(DASP_unique_Ranks_tool), 'vulnerabilities from DASP Top 10, which are:\n', DASP_unique_Ranks_tool)
-       
-    else:
-        DASP_unique_Ranks_tool = detectable_vulnerabilities(tool,False,vote)
-        print(tool, 'designed to detect', len(DASP_unique_Ranks_tool), 'vulnerabilities from DASP Top 10, which are:\n', DASP_unique_Ranks_tool)
-        ToolDS = pd.read_csv('./Results/LabeledData/'+tool+'.csv',converters={tool+'_DASP_Rank': literal_eval})
+            DASP_unique_Ranks_tool = detectable_vulnerabilities(ToolDS,True,vote)
+            print('The implemented list of tools are able to detect', len(DASP_unique_Ranks_tool), 'vulnerabilities from DASP Top 10, which are:\n', DASP_unique_Ranks_tool)
         
-    BaseDS = pd.read_csv(BaseDS_Dir + base,converters={'DASP': literal_eval})
-
-    if vote:
-        predicted = createDASPmetrics(tool,ToolDS,voteMethod) #pass the vote method: [_avg|_majority|_AtLeast]
-    else:
-        predicted = createDASPmetrics(tool,ToolDS,'')
-    actual = createDASPmetrics('Base',BaseDS,'')
-
-    DASP_unique_Ranks_Base = detectable_vulnerabilities(actual,True,vote)
-    print(base.split('.')[0], 'contains', len(DASP_unique_Ranks_Base), 'vulnerability types from DASP Top 10, which are:\n', DASP_unique_Ranks_Base)
-
-    while len(predicted['id']) != len(actual['id']):
-        if len(predicted['id']) > len(actual['id']):
-            predicted.drop(predicted[~predicted['id'].isin(actual['id'])].index, inplace=True)    
-            predicted.reset_index(inplace=True, drop=True)
         else:
-            actual.drop(actual[~actual['id'].isin(predicted['id'])].index, inplace=True)    
-            actual.reset_index(inplace=True, drop=True)
-    
-    metricsDF = compute_confusion_matrix(actual, predicted)
-    metricsDF.insert(0, 'Base',base,True)
-    metricsDF = add_detectable_Base_Columns(metricsDF,DASP_unique_Ranks_tool,DASP_unique_Ranks_Base)
-    if vote:
-        metricsDF.to_csv('./Results/Evaluations/'+base.split('.')[0]+'/'+tool +'.csv',index=False) #toBemove to other dir
-        predicted.to_csv('./Results/DASP_Data/'+base.split('.')[0]+'/predicted_'+tool +'.csv',index=False) #toBemove to other dir
-    else:
-        metricsDF.to_csv('./Results/Evaluations/'+base.split('.')[0]+'/'+tool+'.csv',index=False)
-        predicted.to_csv('./Results/DASP_Data/'+base.split('.')[0]+'/predicted_'+tool+'.csv',index=False)
-    actual.to_csv('./Results/DASP_Data/'+base.split('.')[0]+'/actual.csv',index=False)
-    return metricsDF
+            DASP_unique_Ranks_tool = detectable_vulnerabilities(tool,False,vote)
+            print(tool, 'designed to detect', len(DASP_unique_Ranks_tool), 'vulnerabilities from DASP Top 10, which are:\n', DASP_unique_Ranks_tool)
+            ToolDS = pd.read_csv('./Results/LabeledData/'+tool+'.csv',converters={tool+'_DASP_Rank': literal_eval})
+            
+        BaseDS = pd.read_csv(BaseDS_Dir + base,converters={'DASP': literal_eval})
+
+        if vote:
+            predicted = createDASPmetrics(tool,ToolDS,voteMethod) #pass the vote method: [_avg|_majority|_AtLeast]
+        else:
+            predicted = createDASPmetrics(tool,ToolDS,'')
+        actual = createDASPmetrics('Base',BaseDS,'')
+
+        DASP_unique_Ranks_Base = detectable_vulnerabilities(actual,True,vote)
+        print(base.split('.')[0], 'contains', len(DASP_unique_Ranks_Base), 'vulnerability types from DASP Top 10, which are:\n', DASP_unique_Ranks_Base)
+
+        while len(predicted['id']) != len(actual['id']):
+            if len(predicted['id']) > len(actual['id']):
+                predicted.drop(predicted[~predicted['id'].isin(actual['id'])].index, inplace=True)    
+                predicted.reset_index(inplace=True, drop=True)
+            else:
+                actual.drop(actual[~actual['id'].isin(predicted['id'])].index, inplace=True)    
+                actual.reset_index(inplace=True, drop=True)
+        
+        metricsDF = compute_confusion_matrix(actual, predicted)
+        metricsDF.insert(0, 'Base',base,True)
+        metricsDF = add_detectable_Base_Columns(metricsDF,DASP_unique_Ranks_tool,DASP_unique_Ranks_Base)
+        if vote:
+            metricsDF.to_csv('./Results/Evaluations/'+base.split('.')[0]+'/'+tool +'.csv',index=False) #toBemove to other dir
+            predicted.to_csv('./Results/DASP_Data/'+base.split('.')[0]+'/predicted_'+tool +'.csv',index=False) #toBemove to other dir
+        else:
+            metricsDF.to_csv('./Results/Evaluations/'+base.split('.')[0]+'/'+tool+'.csv',index=False)
+            predicted.to_csv('./Results/DASP_Data/'+base.split('.')[0]+'/predicted_'+tool+'.csv',index=False)
+        actual.to_csv('./Results/DASP_Data/'+base.split('.')[0]+'/actual.csv',index=False)
+        return metricsDF
+    except Exception as err:
+        print(f"Unexpected {err=}, {type(err)=}")
+        raise
 
 def detectable_vulnerabilities(DS,flag,vote):
     DASP_unique_Ranks = []
