@@ -12,7 +12,7 @@ The MultiTagging framework provides several functions through the following comp
 ## Requirements
 *  Python >=3.11.7
 ## Usage
-1.  Clone <A Herf="https://github.com/shikahJS/MultiTagging/tree/main"> MultiTagging repository </A>
+1.  Clone <A Href="https://github.com/shikahJS/MultiTagging/tree/main"> MultiTagging repository </A>
 
 
 ## Demo
