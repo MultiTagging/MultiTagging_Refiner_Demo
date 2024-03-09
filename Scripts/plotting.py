@@ -21,11 +21,6 @@ def plot_result(tool,Base):
 def get_labelsList(ToolsCapacity,tool):
     labels = []
     DASP_Labels = ['Reentrancy','Access Control','Arithmetic','Unchecked Return Values','DoS','Bad Randomness','Front-Running','Time manipulation','Short Address Attack']
-
-    '''if tool[0].lower() == 'all':
-        for v in DASP_Labels:
-            if 1 in ToolsCapacity[v].values.tolist():
-                labels.append(v)'''
     for v in DASP_Labels:
         if 1 in ToolsCapacity[v].tolist():
             labels.append(v)
@@ -34,22 +29,17 @@ def get_labelsList(ToolsCapacity,tool):
 def plot_performance_results(resultDF,tool):
     Base = resultDF.Base.unique().tolist()
 
-    if len(tool) > 1 and len(Base) > 1:   # Many tools x Many Bases >> Done
+    if len(tool) > 1 and len(Base) > 1:   # Many tools x Many Bases
         plot_ManyTool_ManyBase(resultDF,tool)
     elif len(tool)== 1 and len(Base) > 1: # One tool x Many Bases >> ToBeAdded
         print(len(resultDF))
-    elif len(tool)> 1 and len(Base) == 1: # Many tools x One Base >> ToBeAdded
-        print(len(resultDF))
-    else:                                 # One tool x One Base >> Done
+    elif len(tool)> 1 and len(Base) == 1: # Many tools x One Base
+        plot_ManyTool_OneBase(resultDF,tool)
+    else:                                 # One tool x One Base
         plot_OneTool_OneBase(resultDF,tool)
 
 def plot_ManyTool_ManyBase(resultDF,tool):
     Base = resultDF.Base.unique().tolist()
-    '''if tool[0].lower() == 'all':
-        ToolsCapacity = pd.read_excel('./Mapping/ToolsCapacity.xlsx',sheet_name='DASP',index_col='Tool')
-        Vulnerabilities = get_labelsList(ToolsCapacity,tool)
-    else:
-        Vulnerabilities = resultDF.Label.unique().tolist()'''
     ToolsCapacity = pd.read_excel('./Mapping/ToolsCapacity.xlsx',sheet_name='DASP',index_col='Tool')
     Vulnerabilities = get_labelsList(ToolsCapacity,tool)
 
@@ -69,7 +59,6 @@ def plot_ManyTool_ManyBase(resultDF,tool):
             for index in range(0,len(dict_resultDF)):
                 
                 if dict_resultDF[index]['Base'] == b and dict_resultDF[index]['Label'] == v:
-                    #print('b is:', b, 'and Base is:', dict_resultDF[index]['Base'])
                     for t in tool:
                         Precision_Scores.append(dict_resultDF[index][t+'_Precision'])
                         Recall_Scores.append(dict_resultDF[index][t+'_Recall'])
@@ -91,9 +80,6 @@ def plot_ManyTool_ManyBase(resultDF,tool):
                     p.get_height()* .5 ,
                     '{0:.2f}'.format(p.get_height()),
                     color='black', rotation='vertical', size='large')
-            #axs[Vulnerabilities.index(v),Base.index(b)].set_xlabel('Tool')
-            #axs[Vulnerabilities.index(v),Base.index(b)].set_ylabel('Score')
-            #axs[Vulnerabilities.index(v),Base.index(b)].set_title('Tools performance in detecting '+ v + ' on ' + b + ' dataset', fontsize=6)
             
             if Vulnerabilities.index(v) == len(Vulnerabilities) -1 :
                 axs[Vulnerabilities.index(v),Base.index(b)].set_xticks(range(len(tool)))
@@ -112,13 +98,70 @@ def plot_ManyTool_ManyBase(resultDF,tool):
                 size=10, ha='right', va='center')
 
     fig.legend(["Precision", "Recall"])
-    #fig.supylabel('Score')
-    #fig.tight_layout()
     fig.subplots_adjust(left=0.15, top=0.95)
     
     plt.show()
 
+def plot_ManyTool_OneBase(resultDF,tool):
+    Base = resultDF.Base.unique().tolist()
+    ToolsCapacity = pd.read_excel('./Mapping/ToolsCapacity.xlsx',sheet_name='DASP',index_col='Tool')
+    Vulnerabilities = get_labelsList(ToolsCapacity,tool)
+
+    dict_resultDF = resultDF.to_dict('records')
+    rows = cols =3
+
+    fig, axs = plt.subplots(rows,cols, figsize=(25, 20))
+    plt.rc('xtick', labelsize='large')
+    plt.rc('ytick', labelsize=6)
+    x=y=0
+    for v in Vulnerabilities:
+        Precision_Scores = []
+        Recall_Scores = []
+        #store Precision and Recall in one list
+        for index in range(0,len(dict_resultDF)):
+            if dict_resultDF[index]['Label'] == v:
+                #print('b is:', b, 'and Base is:', dict_resultDF[index]['Base'])
+                for t in tool:
+                    Precision_Scores.append(dict_resultDF[index][t+'_Precision'])
+                    Recall_Scores.append(dict_resultDF[index][t+'_Recall'])
+                continue
+        # Plot bar chart
+        bar_width = 0.4
+        x_range_Precision_Scores = [idx - bar_width/2 for idx in range(len(tool))]
+        x_range_Recall_Scores = [idx + bar_width/2 for idx in range(len(tool))]
+
+        axs[x,y].bar(x_range_Precision_Scores,Precision_Scores,width=bar_width,color='lightblue')
+        axs[x,y].bar(x_range_Recall_Scores,Recall_Scores,width=bar_width,color='steelblue')
+        axs[x,y].grid(True, color = "grey", which='major', linewidth = "0.3", linestyle = "-.")
+        axs[x,y].grid(True, color="grey", which='minor', linestyle=':', linewidth="0.5")
+        axs[x,y].minorticks_on()
+        axs[x,y].set_yticks((0,0.5,1))
+        ax = axs[x,y]
+        for p in ax.patches:
+            if p.get_height() > 0:
+                ax.text(p.get_x()+0,
+                p.get_height()* .5 ,
+                '{0:.2f}'.format(p.get_height()),
+                color='black', rotation='vertical', size='large')
+        axs[x,y].set_xlabel('Tool')
+        axs[x,y].set_ylabel('Score')
+        axs[x,y].set_title('Tools performance in detecting '+ v + ' on ' + Base[0] + ' dataset', fontsize=6)
+        axs[x,y].set_xticks(range(len(tool)))
+        axs[x,y].set_xticklabels(tool,rotation = 90)
         
+        if (y+1)%3 == 0:
+            y=0
+            x +=1
+        else:
+            y +=1
+
+    fig.legend(["Precision", "Recall"])
+    #fig.supylabel('Score')
+    fig.tight_layout()
+    #fig.subplots_adjust(left=0.15, top=0.95)
+    
+    plt.show()
+
 def plot_OneVuln_ManyTool(Vulnerability,Base,tool,Precision_And_Recall_scores):
     #create DataFrame
     Precision_And_Recall_scores_DF = pd.DataFrame({'Tool': tool*2,
@@ -170,7 +213,7 @@ def plot_OneTool_OneBase(resultDF,tool):
                 '{0:.2f}'.format(p.get_height()),
                 color='black', rotation='vertical', size='small')
 
-    plt.title('Precision and Recall for ' + tool[0] + 'tool per vulnerability on ' + Base[0], fontsize=12)
+    plt.title('Precision and Recall for ' + tool[0] + ' per vulnerability on ' + Base[0], fontsize=12)
     plt.grid(True, color = "grey", which='major', linewidth = "0.3", linestyle = "-.")
     plt.grid(True, color="grey", which='minor', linestyle=':', linewidth="0.5");
     plt.minorticks_on()
