@@ -1,8 +1,20 @@
 import pandas as pd
 from ast import literal_eval
-
-
+from pathlib import Path
+import json
+#-------------------------------------------
+#Get the correct path to the configuration file
+#-------------------------------------------
+config_file_name = 'config.json'
+self_dir = Path(__file__).resolve().parent
+config_file_path = self_dir / config_file_name
+#-------------------------------------------
 def eval(tool,base):
+    configFile = open(config_file_path)
+    config_File = json.load(configFile)
+    configFile.close()
+    BaseDS_Dir = config_File['BaseDS'][0]['Path']
+
     vote = False
     if 'vote' in tool.lower():
         vote = True
@@ -17,7 +29,7 @@ def eval(tool,base):
         print(tool, 'designed to detect', len(DASP_unique_Ranks_tool), 'vulnerabilities from DASP Top 10, which are:\n', DASP_unique_Ranks_tool)
         ToolDS = pd.read_csv('./Results/LabeledData/'+tool+'.csv',converters={tool+'_DASP_Rank': literal_eval})
         
-    BaseDS = pd.read_csv('./Benchmarks/EDA_Outcomes/BaseDS/' + base,converters={'DASP': literal_eval})
+    BaseDS = pd.read_csv(BaseDS_Dir + base,converters={'DASP': literal_eval})
 
     if vote:
         predicted = createDASPmetrics(tool,ToolDS,voteMethod) #pass the vote method: [_avg|_majority|_AtLeast]
