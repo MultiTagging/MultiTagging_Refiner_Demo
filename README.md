@@ -16,6 +16,6 @@ The MultiTagging framework provides several functions through the following comp
 ```python
 git clone https://github.com/shikahJS/MultiTagging.git
 ```
-2. Replace files in <A Href="https://github.com/shikahJS/MultiTagging/tree/main/ToolReports">ToolReports</A>, <A Href="https://github.com/shikahJS/MultiTagging/tree/main/ToolAnalysisTime">ToolAnalysisTime</A>, and <A Href="https://github.com/shikahJS/MultiTagging/tree/main/BaseDS">BaseDS</A> with your study's files. You can alternatively update the config file.
+2. Replace files in <A Href="https://github.com/shikahJS/MultiTagging/tree/main/ToolReports">ToolReports</A>, <A Href="https://github.com/shikahJS/MultiTagging/tree/main/ToolAnalysisTime">ToolAnalysisTime</A>, and <A Href="https://github.com/shikahJS/MultiTagging/tree/main/BaseDS">BaseDS</A> with your study's files. You can alternatively update the <A Href="https://github.com/shikahJS/MultiTagging/blob/main/Scripts/config.json"> Scripts/config.json </A> file.
 ## Demo
 *  The Multhitagging framework demo is available here: <A Href="https://github.com/shikahJS/MultiTagging/blob/main/MultiTagging.ipynb">MultiTagging.ipynb</A>
