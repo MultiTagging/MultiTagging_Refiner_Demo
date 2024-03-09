@@ -56,5 +56,5 @@ The MultiTagging framework provides several functions through the following comp
 
 ## Contributors
 
-<!-- readme: collaborators,contributors -start -->
-<!-- readme: collaborators,contributors -end -->
+<!-- readme: collaborators, contributors -start -->
+<!-- readme: collaborators, contributors -end -->
