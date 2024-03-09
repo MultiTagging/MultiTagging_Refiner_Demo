@@ -13,14 +13,14 @@ The MultiTagging framework provides several functions through the following comp
 *  Python >=3.11.7
 *  Jupyter Notebook.
 ## Usage
-1.  Clone <A Href="https://github.com/shikahJS/MultiTagging/tree/main"> MultiTagging repository </A>
+1.   Clone <A Href="https://github.com/shikahJS/MultiTagging/tree/main"> MultiTagging repository </A>
    ```
       git clone https://github.com/shikahJS/MultiTagging.git
    ```
-2. Go to the MultiTagging home directory.
+2.   Go to the MultiTagging home directory.
    ```
       cd MutliTagging
    ```
-3. Replace files in <A Href="https://github.com/shikahJS/MultiTagging/tree/main/ToolReports">ToolReports</A>, <A Href="https://github.com/shikahJS/MultiTagging/tree/main/ToolAnalysisTime">ToolAnalysisTime</A>, and <A Href="https://github.com/shikahJS/MultiTagging/tree/main/BaseDS">BaseDS</A> with your study's files. You can alternatively update the <A Href="https://github.com/shikahJS/MultiTagging/blob/main/Scripts/config.json"> Scripts/config.json </A> file.
+3.   Replace files in <A Href="https://github.com/shikahJS/MultiTagging/tree/main/ToolReports">ToolReports</A>, <A Href="https://github.com/shikahJS/MultiTagging/tree/main/ToolAnalysisTime">ToolAnalysisTime</A>, and <A Href="https://github.com/shikahJS/MultiTagging/tree/main/BaseDS">BaseDS</A> with your study's files. You can alternatively update the <A Href="https://github.com/shikahJS/MultiTagging/blob/main/Scripts/config.json"> Scripts/config.json </A> file.
 ## Demo
 *  The Multhitagging framework demo is available here: <A Href="https://github.com/shikahJS/MultiTagging/blob/main/MultiTagging.ipynb">MultiTagging.ipynb</A>
