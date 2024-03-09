@@ -28,7 +28,7 @@ The MultiTagging framework provides several functions through the following comp
          ```
          python3 Main.py
          ```
-         2.   Pass your choises and enter the requested input to get the output.
+         2.   Pass your choices and enter the requested input to get the output.
          ```
          MultiTagging Framework
          ..................................................
@@ -53,3 +53,8 @@ The MultiTagging framework provides several functions through the following comp
 ## Demo
 *  The Multhitagging framework demo is available here: <A Href="https://github.com/shikahJS/MultiTagging/blob/main/MultiTagging.ipynb">MultiTagging.ipynb</A>
 *  For the Demo's output: check the <A Href="https://github.com/shikahJS/MultiTagging/tree/06153cf181ad723e61420d5480c5f319ef4aaafe/Results">Results</A> directory.
+
+## Contributors
+
+<!-- readme: collaborators,contributors -start -->
+<!-- readme: collaborators,contributors -end -->
