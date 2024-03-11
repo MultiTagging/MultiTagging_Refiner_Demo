@@ -11,7 +11,7 @@ The MultiTagging framework provides several functions through the following comp
 * Currently Tagger supports 6 tools: <A Href="https://github.com/smartbugs/MAIAN">MAIAN</A>, <A Href="https://github.com/Consensys/mythril">Mythril</A>, <A Href="https://github.com/Decurity/semgrep-smart-contracts">Semgrep</A>, <A Href="https://github.com/crytic/slither">Slither</A>, <A Href="https://github.com/protofire/solhint">Solhint</A>, and <A Href="https://github.com/kupl/VeriSmart-public">VeriSmart</A>.
 ## Requirements
 *  <A Href="https://www.python.org/">Python</A> >=3.11.7
-*  You can run MultiTagging frame work using <A Href="https://jupyter.org/"> Jupyter Notebook</A> or from <A Href="https://support.apple.com/en-sa/guide/terminal/apd5265185d-f365-44cb-8b09-71a064a42125/mac">Terminal</A>.
+*  You can run MultiTagging framework using <A Href="https://jupyter.org/"> Jupyter Notebook</A> or from <A Href="https://support.apple.com/en-sa/guide/terminal/apd5265185d-f365-44cb-8b09-71a064a42125/mac">Terminal</A>.
 ## Usage
 1.   Clone <A Href="https://github.com/shikahJS/MultiTagging/tree/main"> MultiTagging repository </A>
    ```
