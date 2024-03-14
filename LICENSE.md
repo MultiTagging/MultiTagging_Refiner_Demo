@@ -1,4 +1,4 @@
-MIT License
+# MIT License for MultiTagging Framework
 
 Copyright (c) 2024 Shikah Alsunaidi, Hamoud Aljamaan
 
