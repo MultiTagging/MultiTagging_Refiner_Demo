@@ -10,7 +10,7 @@ def electLabel(Voters):
         dict_DASP_ToolsCapacity = {item['Tool']:item for item in dict_DASP_ToolsCapacity}
         DASP_Labels = ['Reentrancy','Access Control','Arithmetic','Unchecked Return Values','DoS','Bad Randomness','Front-Running','Time manipulation','Short Address Attack','Unknown Unknowns']
 
-        VoteData =  pd.DataFrame(columns=['id','DASP','1','2','3','4','5','6','7','8','9','10'])
+        VoteData =  pd.DataFrame(columns=['id','Tools','DASP','1','2','3','4','5','6','7','8','9','10'])
         if len(Voters) == 1 and Voters[0].lower() == 'all':
             Tools = sorted([f.name.split('.')[0] for f in os.scandir('./Results/LabeledData') if f.is_file() and 'csv' in f.name and f.name != 'voteBasedData.csv'])
         else:
@@ -19,38 +19,42 @@ def electLabel(Voters):
         for Tool in Tools:
             ToolResult = pd.read_csv('./Results/LabeledData/' + Tool + '.csv',converters={Tool+'_DASP_Rank': literal_eval})
             Tool_DASP_Result = createDASPmetrics(Tool, ToolResult,dict_DASP_ToolsCapacity)
-            #To fill the VoteData DF for the first time using the first tool
+            #To fill the VoteData DF for the first time using the first tool.  This block create a DF with ids from the first tool.
             if Tools.index(Tool) == 0:
                 VoteData['id'] = Tool_DASP_Result['id']
                 VoteData['DASP'] = [list() for x in range(len(VoteData.index))]
+                VoteData['Tools']= [list() for x in range(len(VoteData.index))]
                 for rank in range(1,11):
                     VoteData[str(rank)] = [list() for x in range(len(VoteData.index))]
-            else:
-                #To update the VoteData DF using other tools vote
-                unfoundIDs = []
-                for index, row in Tool_DASP_Result.iterrows():
-                    ID = Tool_DASP_Result.at[index,'id']
-                    if VoteData.query("id == @ID").shape[0] > 0:
-                        DestnationIndex =  VoteData.query("id == @ID").index[0]
+            
+            #To update the VoteData DF using other tools vote
+            unfoundIDs = []
+            for index, row in Tool_DASP_Result.iterrows():
+                ID = Tool_DASP_Result.at[index,'id']
+                if VoteData.query("id == @ID").shape[0] > 0:
+                    DestnationIndex =  VoteData.query("id == @ID").index[0]
+                    currentValue = VoteData.at[DestnationIndex,'Tools']
+                    VoteData.at[DestnationIndex, 'Tools'] = list(set(currentValue + [Tool]))
 
-                        for rank in range(1,11):
-                            if dict_DASP_ToolsCapacity[Tool][DASP_Labels[rank-1]] == 1:
-                                currentValue = VoteData.at[DestnationIndex,'DASP']
-                                VoteData.at[DestnationIndex, 'DASP'] = list(set(currentValue + Tool_DASP_Result.at[index, 'DASP']))
-                                currentValue = VoteData.at[DestnationIndex,str(rank)]
-                                #print(currentValue,'_And_',Tool_DASP_Result.at[index, str(rank)])
-                                VoteData.at[DestnationIndex,str(rank)] = list(currentValue + Tool_DASP_Result.at[index, str(rank)])
-                    else:
-                        unfoundIDs.append(ID)
-                #To add new ids for samples that were not analyzed by the previous tools.
-                if len(unfoundIDs)>0:
-                    for ID in unfoundIDs:
-                        unfounIDIndex =  Tool_DASP_Result.query("id == @ID").index[0]
-                        last_index = len(VoteData)
-                        VoteData.at[last_index,'id'] = Tool_DASP_Result.at[unfounIDIndex,'id']
-                        VoteData.at[last_index,'DASP'] = Tool_DASP_Result.at[unfounIDIndex,'DASP']
-                        for rank in range(1,11):
-                            VoteData.at[last_index,str(rank)] = Tool_DASP_Result.at[unfounIDIndex,str(rank)]
+                    for rank in range(1,11):
+                        if dict_DASP_ToolsCapacity[Tool][DASP_Labels[rank-1]] == 1:
+                            currentValue = VoteData.at[DestnationIndex,'DASP']
+                            VoteData.at[DestnationIndex, 'DASP'] = list(set(currentValue + Tool_DASP_Result.at[index, 'DASP']))
+                            currentValue = VoteData.at[DestnationIndex,str(rank)]
+                            #print(currentValue,'_And_',Tool_DASP_Result.at[index, str(rank)])
+                            VoteData.at[DestnationIndex,str(rank)] = list(currentValue + Tool_DASP_Result.at[index, str(rank)])
+                else:
+                    unfoundIDs.append(ID)
+            #To add new ids for samples that were not analyzed by the previous tools.
+            if len(unfoundIDs)>0:
+                for ID in unfoundIDs:
+                    unfounIDIndex =  Tool_DASP_Result.query("id == @ID").index[0]
+                    last_index = len(VoteData)
+                    VoteData.at[last_index,'id'] = Tool_DASP_Result.at[unfounIDIndex,'id']
+                    VoteData.at[last_index,'Tools'] = [Tool]
+                    VoteData.at[last_index,'DASP'] = Tool_DASP_Result.at[unfounIDIndex,'DASP']
+                    for rank in range(1,11):
+                        VoteData.at[last_index,str(rank)] = Tool_DASP_Result.at[unfounIDIndex,str(rank)]
         
         VoteResult = vote(VoteData,'Threshold') # Threshold: ['Threshold', 'Majority','AtLeast 1','tool power per vulnerablitiy']
         VoteResult = vote(VoteResult,'Majority')
