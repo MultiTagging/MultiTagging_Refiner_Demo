@@ -91,12 +91,16 @@ def parse(tool,reportsLocation,reportSource):
                             codes = []
                             if os.path.getsize(path/filename) != 0:
                                 file = open(path/filename,errors="ignore")
-                                data = json.load(file)
+                                lines = file.readlines()
                                 file.close()
-                                if data['errMsg'] == None:
-                                    for i in range(0,len(data['result'])):
-                                        if data['result'][i]['status'] == 'unproven' and data['result'][i]['kind'] not in codes:
-                                            codes.append(data['result'][i]['kind'])
+                                if lines[0].startswith('{'):
+                                    file = open(path/filename,errors="ignore")
+                                    data = json.load(file)
+                                    file.close()
+                                    if data['errMsg'] == None:
+                                        for i in range(0,len(data['result'])):
+                                            if data['result'][i]['status'] == 'unproven' and data['result'][i]['kind'] not in codes:
+                                                codes.append(data['result'][i]['kind'])
                                 else:
                                   codes.append('error')  
                             else:
