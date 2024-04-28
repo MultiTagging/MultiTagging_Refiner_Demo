@@ -74,9 +74,12 @@ def parse(tool,reportsLocation,reportSource):
                                     file = open(path/filename,errors="ignore")
                                     data = json.load(file)
                                     file.close()
-                                    for i in range(0,len(data['results']['detectors'])):
-                                        codes.append(data['results']['detectors'][i]['check'])
-                                    codes = list(dict.fromkeys(codes))
+                                    if data['success']:
+                                        for i in range(0,len(data['results']['detectors'])):
+                                            codes.append(data['results']['detectors'][i]['check'])
+                                        codes = list(dict.fromkeys(codes))
+                                    else:
+                                        codes.append('error')
                                 else:
                                     codes.append('error')
                                 toolTags.loc[len(toolTags)]=[filename.rstrip().rsplit('.')[0],codes]
