@@ -13,7 +13,7 @@ The MultiTagging framework provides several functions through the following comp
 *  <A Href="https://www.python.org/">Python</A> >=3.11.7
 *  You can run MultiTagging framework using <A Href="https://jupyter.org/"> Jupyter Notebook</A> or from <A Href="https://support.apple.com/en-sa/guide/terminal/apd5265185d-f365-44cb-8b09-71a064a42125/mac">Terminal</A>.
 ## Usage
-1.   Clone <A Href="https://github.com/shikahJS/MultiTagging/tree/main"> MultiTagging repository </A>
+1.   Clone <A Href="https://github.com/MultiTagging/MutliTagging"> MultiTagging repository </A>
    ```
       git clone https://github.com/MultiTagging/MutliTagging.git
    ```
@@ -21,10 +21,10 @@ The MultiTagging framework provides several functions through the following comp
    ```
       cd MutliTagging
    ```
-3.   Replace files in <A Href="https://github.com/shikahJS/MultiTagging/tree/main/ToolReports">ToolReports</A>, <A Href="https://github.com/shikahJS/MultiTagging/tree/main/ToolAnalysisTime">ToolAnalysisTime</A>, and <A Href="https://github.com/shikahJS/MultiTagging/tree/main/BaseDS">BaseDS</A> with your study's files. You can alternatively update the <A Href="https://github.com/shikahJS/MultiTagging/blob/main/Scripts/config.json"> Scripts/config.json </A> file.
+3.   Replace files in <A Href="https://github.com/MultiTagging/MultiTagging/tree/main/ToolReports">ToolReports</A>, <A Href="https://github.com/MultiTagging/MultiTagging/tree/main/ToolAnalysisTime">ToolAnalysisTime</A>, and <A Href="https://github.com/MultiTagging/MultiTagging/tree/main/BaseDS">BaseDS</A> with your study's files. You can alternatively update the <A Href="https://github.com/MultiTagging/MultiTagging/blob/main/Scripts/config.json"> Scripts/config.json </A> file.
 4.   Run MutliTagging framework, there are three options:
       1. **Termianl Option:**
-         1.   Run <A Href="https://github.com/shikahJS/MultiTagging/blob/main/Main.py">Main.py</A> to open the wizard program. 
+         1.   Run <A Href="https://github.com/MultiTagging/MutliTagging/blob/main/Main.py">Main.py</A> to open the wizard program. 
          ```
          python3 Main.py
          ```
