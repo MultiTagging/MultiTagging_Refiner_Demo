@@ -34,10 +34,21 @@ def parse(tool,reportsLocation,reportSource):
                                     file = open(path/filename,errors="ignore")
                                     data = pd.DataFrame(json.load(file))
                                     file.close()
-                                    df = pd.DataFrame(data['issues'][0])
-                                    if len(df) != 0:
-                                        codes = df['swcID']
-                                    codes = list(dict.fromkeys(codes))
+
+                                    if len(data) == 0 and data.columns[0] == 'success': 
+                                        codes.append('error')
+                                    elif len(data) == 0 and data.columns[0] == 'error':
+                                        codes = []
+                                    else:
+                                       if len(data['issues']) != 0:
+                                            for i in range(0,len(data['issues'])):
+                                                if 'success' in data.keys():
+                                                    codes.append(data['issues'][i]['swc-id'])
+                                                else:
+                                                    df = pd.DataFrame(data['issues'][i])
+                                                    if len(df) != 0:
+                                                        codes = df['swcID']
+                                            codes = list(dict.fromkeys(codes))        
                                 else:
                                     codes ='error'
                             toolTags.loc[len(toolTags)]=[filename.rstrip().rsplit('.')[0],codes]
