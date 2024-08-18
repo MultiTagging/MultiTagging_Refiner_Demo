@@ -15,7 +15,7 @@ The MultiTagging framework provides several functions through the following comp
 ## Usage
 1.   Clone <A Href="https://github.com/shikahJS/MultiTagging/tree/main"> MultiTagging repository </A>
    ```
-      git clone https://github.com/shikahJS/MultiTagging.git
+      git clone https://github.com/MultiTagging/MutliTagging.git
    ```
 2.   Go to the MultiTagging home directory.
    ```
