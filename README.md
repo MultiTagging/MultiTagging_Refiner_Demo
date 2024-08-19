@@ -13,18 +13,18 @@ The MultiTagging framework provides several functions through the following comp
 *  <A Href="https://www.python.org/">Python</A> >=3.11.7
 *  You can run MultiTagging framework using <A Href="https://jupyter.org/"> Jupyter Notebook</A> or from <A Href="https://support.apple.com/en-sa/guide/terminal/apd5265185d-f365-44cb-8b09-71a064a42125/mac">Terminal</A>.
 ## Usage
-1.   Clone <A Href="https://github.com/MultiTagging/MutliTagging"> MultiTagging repository </A>
+1.   Clone <A Href="https://github.com/MultiTagging/MultiTagging"> MultiTagging repository </A>
    ```
-      git clone https://github.com/MultiTagging/MutliTagging.git
+      git clone https://github.com/MultiTagging/MultiTagging.git
    ```
 2.   Go to the MultiTagging home directory.
    ```
-      cd MutliTagging
+      cd MultiTagging
    ```
-3.   Add your study's files in <A Href="https://github.com/MultiTagging/MutliTagging/tree/main/ToolReports">ToolReports</A>, <A Href="https://github.com/MultiTagging/MutliTagging/tree/main/ToolAnalysisTime">ToolAnalysisTime</A>, and <A Href="https://github.com/MultiTagging/MutliTagging/tree/main/BaseDS">BaseDS</A>. To retrieve study files from other folders, you can alternatively update the <A Href="https://github.com/MultiTagging/MultiTagging/blob/main/Scripts/config.json"> Scripts/config.json </A> file.
-4.   Run MutliTagging framework, there are three options:
+3.   Add your study's files in <A Href="https://github.com/MultiTagging/MultiTagging/tree/main/ToolReports">ToolReports</A>, <A Href="https://github.com/MultiTagging/MultiTagging/tree/main/ToolAnalysisTime">ToolAnalysisTime</A>, and <A Href="https://github.com/MultiTagging/MultiTagging/tree/main/BaseDS">BaseDS</A>. To retrieve study files from other folders, you can alternatively update the <A Href="https://github.com/MultiTagging/MultiTagging/blob/main/Scripts/config.json"> Scripts/config.json </A> file.
+4.   Run MultiTagging framework, there are three options:
       1. **Termianl Option:**
-         1.   Run <A Href="https://github.com/MultiTagging/MutliTagging/blob/main/Main.py">Main.py</A> to open the wizard program. 
+         1.   Run <A Href="https://github.com/MultiTagging/MultiTagging/blob/main/Main.py">Main.py</A> to open the wizard program. 
          ```
          python3 Main.py
          ```
@@ -42,9 +42,9 @@ The MultiTagging framework provides several functions through the following comp
           6: Exit
          ..................................................
          ```
-         3.   Check the <A Href="https://github.com/MultiTagging/MutliTagging/tree/main/Results">Results</A> directory to get the saved output.
+         3.   Check the <A Href="https://github.com/MultiTagging/MultiTagging/tree/main/Results">Results</A> directory to get the saved output.
       2. **Jupyter Notebook:**
-         * In a code cell, Run <A Href="https://github.com/MultiTagging/MutliTagging/blob/main/Main.py">Main.py</A> to open the wizard program. 
+         * In a code cell, Run <A Href="https://github.com/MultiTagging/MultiTagging/blob/main/Main.py">Main.py</A> to open the wizard program. 
       ```
       run -i 'Main.py'
       ```
