@@ -3,6 +3,7 @@ from Scripts.evaluator import eval
 from Scripts.plotting import plot_result
 from Scripts.toolOverlap import getOverlap
 from Scripts.election import electLabel
+from Scripts.createPerformanceOutFiles import createPerformanceOutFiles
 
 import os
 from pathlib import Path
@@ -79,6 +80,13 @@ def main():
                         else:
                             print(baseFlieName)
                             print(dataFileName)
+
+                            #create avgAnalysisTimeAndFailureRate files if not exit
+                            files = os.listdir('./Results/Performance/')
+                            if not 'avgAnalysisTimeAndFailureRate.csv' in files or not 'avgAnalysisTimeAndFailureRate_Fair.csv' in files:
+                                Bases = baseFlieName.split('.')[0]
+                                createPerformanceOutFiles(Tools,Bases)
+
                             evaluationResult = eval(dataFileName,baseFlieName+'.csv')
                             print('The evaluation result of',dataFileName,'using the base',baseFlieName,'is',evaluationResult)
                 except:
