@@ -28,7 +28,7 @@ def parse(tool,reportsLocation,reportSource):
                                         if 'SWC ID' in line and line.rstrip() not in codes:
                                             codes.append(line.rstrip())
                                 else:
-                                    codes ='error'
+                                    codes.append('error')
                             elif '.json' in filename:
                                 if os.path.getsize(path/filename) != 0:
                                     file = open(path/filename,errors="ignore")
@@ -50,7 +50,7 @@ def parse(tool,reportsLocation,reportSource):
                                                         codes = df['swcID']
                                             codes = list(dict.fromkeys(codes))        
                                 else:
-                                    codes ='error'
+                                    codes.append('error')
                             toolTags.loc[len(toolTags)]=[filename.rstrip().rsplit('.')[0],codes]
                         print(tool + " tags have been extracted successfully")
                         return toolTags
