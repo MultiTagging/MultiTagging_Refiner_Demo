@@ -4,7 +4,7 @@ A vulnerable Ethereum smart contract labeling framework.
 The MultiTagging framework provides several functions through the following components:
 *  **Tagger:** It parses analysis tool reports to extract vulnerability tags and map them to the common vulnerability labels, i.e., SWC codes and DASP Ranks.
 *  **Evaluator:** It measures the performance of the tool using different evaluation metrics.
-*  **Elector:** It elects the sample label based on votes of a number of tools. It supports three voting options: AtLeastOne, Majority, and Threshold.
+*  **Elector:** It elects the sample label based on votes of a number of tools. It supports two Threshold-based vote methods (AtLeastOne and Majority) and one Power-based vote method.
 *  **Plotter:** It plots the evaluation results in different formats.
 ## Supported Tools
 * The components of the MultiTagging framework can be utilized for any analysis tool except for the Tagger.
@@ -21,7 +21,7 @@ The MultiTagging framework provides several functions through the following comp
    ```
       cd MutliTagging
    ```
-3.   Replace files in <A Href="https://github.com/MultiTagging/MultiTagging/tree/main/ToolReports">ToolReports</A>, <A Href="https://github.com/MultiTagging/MultiTagging/tree/main/ToolAnalysisTime">ToolAnalysisTime</A>, and <A Href="https://github.com/MultiTagging/MultiTagging/tree/main/BaseDS">BaseDS</A> with your study's files. You can alternatively update the <A Href="https://github.com/MultiTagging/MultiTagging/blob/main/Scripts/config.json"> Scripts/config.json </A> file.
+3.   Add your study's files in <A Href="https://github.com/MultiTagging/MutliTagging/tree/main/ToolReports">ToolReports</A>, <A Href="https://github.com/MultiTagging/MutliTagging/tree/main/ToolAnalysisTime">ToolAnalysisTime</A>, and <A Href="https://github.com/MultiTagging/MutliTagging/tree/main/BaseDS">BaseDS</A>. To retrieve study files from other folders, you can alternatively update the <A Href="https://github.com/MultiTagging/MultiTagging/blob/main/Scripts/config.json"> Scripts/config.json </A> file.
 4.   Run MutliTagging framework, there are three options:
       1. **Termianl Option:**
          1.   Run <A Href="https://github.com/MultiTagging/MutliTagging/blob/main/Main.py">Main.py</A> to open the wizard program. 
@@ -42,14 +42,13 @@ The MultiTagging framework provides several functions through the following comp
           6: Exit
          ..................................................
          ```
-         3.   Check the <A Href="https://github.com/shikahJS/MultiTagging/tree/06153cf181ad723e61420d5480c5f319ef4aaafe/Results">Results</A> directory to get the saved output.
+         3.   Check the <A Href="https://github.com/MultiTagging/MutliTagging/tree/main/Results">Results</A> directory to get the saved output.
       2. **Jupyter Notebook:**
-         * In a code cell, Run <A Href="https://github.com/shikahJS/MultiTagging/blob/main/Main.py">Main.py</A> to open the wizard program. 
+         * In a code cell, Run <A Href="https://github.com/MultiTagging/MutliTagging/blob/main/Main.py">Main.py</A> to open the wizard program. 
       ```
       run -i 'Main.py'
       ```
       3. **Within your Python code**
-        *   You can call any function of MultiTagging framework directly. Check the <A Href="https://github.com/shikahJS/MultiTagging/blob/main/MultiTagging.ipynb">Multhitagging framework demo</A>
+        *   You can call any function of MultiTagging framework directly. Check the <A Href="https://github.com/MultiTagging/MultiTagging_Demo.git">Multhitagging_Demo</A>
 ## Demo
-*  The Multhitagging framework demo is available here: <A Href="https://github.com/shikahJS/MultiTagging/blob/main/MultiTagging.ipynb">MultiTagging.ipynb</A>
-*  For the Demo's output: check the <A Href="https://github.com/shikahJS/MultiTagging/tree/06153cf181ad723e61420d5480c5f319ef4aaafe/Results">Results</A> directory.
+*  The Multhitagging framework demo is available here: <A Href="https://github.com/MultiTagging/MultiTagging_Demo.git">Multhitagging_Demo</A>
