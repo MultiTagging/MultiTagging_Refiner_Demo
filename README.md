@@ -49,6 +49,6 @@ The MultiTagging framework provides several functions through the following comp
       run -i 'Main.py'
       ```
       3. **Within your Python code**
-        *   You can call any function of MultiTagging framework directly. Check the <A Href="https://github.com/MultiTagging/MultiTagging_Demo.git">Multhitagging_Demo</A>
+        *   You can call any function of MultiTagging framework directly. Check the <A Href="https://github.com/MultiTagging/MultiTagging_Demo.git">MultiTagging Demo</A>
 ## Demo
-*  The Multhitagging framework demo is available here: <A Href="https://github.com/MultiTagging/MultiTagging_Demo.git">Multhitagging_Demo</A>
+*  The Multhitagging framework demo is available here: <A Href="https://github.com/MultiTagging/MultiTagging_Demo.git">MultiTagging Demo</A>
