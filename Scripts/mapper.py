@@ -27,8 +27,10 @@ def map(labeledSC,VulnerablityMapFilePath,tool):
                 labeledSC.at[index,tool+'_Labels'] = 'safe'   
             else:
                 labels = row[tool+'_Labels']
-                #print('labels: ',labels, ' with length: ', len(labels))
                 for label in labels:
+                    if tool == 'Mythril':
+                        if label.startswith('SWC'): label = label.split('-')[1]
+                        label = int(label)
                     if VulnerablityMapDF.query("Detectors == @label").shape[0] > 0:
                         Detector_RowIndex = VulnerablityMapDF.query("Detectors == @label").index[0]
                         SWC_Codes.append(VulnerablityMapDF["SWC"].iloc[Detector_RowIndex])
