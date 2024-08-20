@@ -40,7 +40,7 @@ def parse(tool,reportsLocation,reportSource):
                                     elif len(data) == 0 and data.columns[0] == 'error':
                                         codes = []
                                     else:
-                                       if len(data['issues']) != 0:
+                                        if len(data['issues']) != 0:
                                             for i in range(0,len(data['issues'])):
                                                 if 'success' in data.keys():
                                                     codes.append(data['issues'][i]['swc-id'])
@@ -48,7 +48,7 @@ def parse(tool,reportsLocation,reportSource):
                                                     df = pd.DataFrame(data['issues'][i])
                                                     if len(df) != 0:
                                                         codes = df['swcID']
-                                            codes = list(dict.fromkeys(codes))        
+                                            codes = list(dict.fromkeys(codes)) 
                                 else:
                                     codes.append('error')
                             toolTags.loc[len(toolTags)]=[filename.rstrip().rsplit('.')[0],codes]
@@ -85,12 +85,9 @@ def parse(tool,reportsLocation,reportSource):
                                     file = open(path/filename,errors="ignore")
                                     data = json.load(file)
                                     file.close()
-                                    if data['success']:
-                                        for i in range(0,len(data['results']['detectors'])):
-                                            codes.append(data['results']['detectors'][i]['check'])
-                                        codes = list(dict.fromkeys(codes))
-                                    else:
-                                        codes.append('error')
+                                    for i in range(0,len(data['results']['detectors'])):
+                                        codes.append(data['results']['detectors'][i]['check'])
+                                    codes = list(dict.fromkeys(codes))
                                 else:
                                     codes.append('error')
                                 toolTags.loc[len(toolTags)]=[filename.rstrip().rsplit('.')[0],codes]
@@ -105,16 +102,12 @@ def parse(tool,reportsLocation,reportSource):
                             codes = []
                             if os.path.getsize(path/filename) != 0:
                                 file = open(path/filename,errors="ignore")
-                                lines = file.readlines()
+                                data = json.load(file)
                                 file.close()
-                                if lines[0].startswith('{'):
-                                    file = open(path/filename,errors="ignore")
-                                    data = json.load(file)
-                                    file.close()
-                                    if data['errMsg'] == None:
-                                        for i in range(0,len(data['result'])):
-                                            if data['result'][i]['status'] == 'unproven' and data['result'][i]['kind'] not in codes:
-                                                codes.append(data['result'][i]['kind'])
+                                if data['errMsg'] == None:
+                                    for i in range(0,len(data['result'])):
+                                        if data['result'][i]['status'] == 'unproven' and data['result'][i]['kind'] not in codes:
+                                            codes.append(data['result'][i]['kind'])
                                 else:
                                   codes.append('error')  
                             else:

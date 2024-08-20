@@ -24,7 +24,7 @@ def eval(tool,base,Fair):
                 ToolDS = pd.read_csv('./Results/LabeledData/voteBasedData_Fair.csv',converters={'DASP': literal_eval})
             else:
                 ToolDS = pd.read_csv('./Results/LabeledData/voteBasedData.csv',converters={'DASP': literal_eval})
-            voteMethod = '_' + tool.rsplit('_')[1] # vote method: [_Power-based|_majority|_AtLeast]
+            voteMethod = '_' + tool.rsplit('_')[1]
 
             DASP_unique_Ranks_tool = detectable_vulnerabilities(ToolDS,True,vote)
             print('The implemented list of tools are able to detect', len(DASP_unique_Ranks_tool), 'vulnerabilities from DASP Top 10, which are:\n', DASP_unique_Ranks_tool)
@@ -37,7 +37,7 @@ def eval(tool,base,Fair):
         BaseDS = pd.read_csv(BaseDS_Dir + base,converters={'DASP': literal_eval})
 
         if vote:
-            predicted = createDASPmetrics(tool,ToolDS,voteMethod) #pass the vote method: [_Power-based|_majority|_AtLeast]
+            predicted = createDASPmetrics(tool,ToolDS,voteMethod)
         else:
             predicted = createDASPmetrics(tool,ToolDS,'')
         actual = createDASPmetrics('Base',BaseDS,'')
@@ -46,7 +46,7 @@ def eval(tool,base,Fair):
         print(base.split('.')[0], 'contains', len(DASP_unique_Ranks_Base), 'vulnerability types from DASP Top 10, which are:\n', DASP_unique_Ranks_Base)
 
         if Fair:
-            #remove uncommon addr
+            #remove Uncommon samples
             commonAdrr = pd.DataFrame()
             commonAdrr['id'] =  get_commonSamples(['MAIAN','Mythril','Slither','Semgrep','Solhint','VeriSmart'])
             predicted.drop(predicted[~predicted['id'].isin(commonAdrr['id'])].index, inplace=True)
@@ -204,7 +204,7 @@ def set_avgAnalysisTimeAndFailureRate(predicted,BaseDS,base,tool,Fair):
         avgAnalysisTimeAndFailureRateDF = pd.read_csv('./Results/Performance/avgAnalysisTimeAndFailureRate_Fair.csv')
     else:
         avgAnalysisTimeAndFailureRateDF = pd.read_csv('./Results/Performance/avgAnalysisTimeAndFailureRate.csv')
-
+   
     rowIndex =  avgAnalysisTimeAndFailureRateDF.index[(avgAnalysisTimeAndFailureRateDF['Tool'] == tool) & (avgAnalysisTimeAndFailureRateDF['Base'] == base)].to_list()[0]
     #print(rowIndex)
     avgAnalysisTime = predicted[['AnalysisTime']].mean()

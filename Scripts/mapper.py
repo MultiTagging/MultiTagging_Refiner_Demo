@@ -16,15 +16,15 @@ def map(labeledSC,VulnerablityMapFilePath,tool):
             SWC_Titles= []
             DASP_Ranks = []
             DASP_Titles = []
-            if (len(row[tool+'_Labels']) == 1 and 'error' in row[tool+'_Labels']) or row[tool+'_Labels'] == 'error':
+            if (len(row[tool+'_Labels']) == 1 and 'error' in row[tool+'_Labels']):
                 SWC_Codes.append('error')
                 SWC_Titles.append('error')
                 DASP_Ranks.append('error')
                 DASP_Titles.append('error')
-            elif tool.lower() == 'solhint' and (len(row[tool+'_Labels']) == 0 or row[tool+'_Labels'].all() == ['']): #solhint: elif len(row[tool+'_Labels']) == 0 or row[tool+'_Labels'].all() == ['']:
+            elif tool.lower() == 'solhint' and (len(row[tool+'_Labels']) == 0 or row[tool+'_Labels'].all() == ['']): 
                 labeledSC.at[index,tool+'_Labels'] = 'safe'
-            elif tool.lower() != 'solhint' and (len(row[tool+'_Labels']) == 0 or row[tool+'_Labels'] == ['']): #solhint: elif len(row[tool+'_Labels']) == 0 or row[tool+'_Labels'].all() == ['']:
-                labeledSC.at[index,tool+'_Labels'] = 'safe'  
+            elif tool.lower() != 'solhint' and (len(row[tool+'_Labels']) == 0 or row[tool+'_Labels'] == ['']): 
+                labeledSC.at[index,tool+'_Labels'] = 'safe'   
             else:
                 labels = row[tool+'_Labels']
                 for label in labels:

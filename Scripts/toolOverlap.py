@@ -2,8 +2,9 @@ import pandas as pd
 from ast import literal_eval
 import seaborn as sns
 import matplotlib.pyplot as plt
+from Scripts.commonSamples import get_commonSamples
 
-def getOverlap(tools):
+def getOverlap(tools,Fair):
     try:
         if len(tools) <= 1:
             print('You should pass a list of tools')
@@ -12,8 +13,18 @@ def getOverlap(tools):
 
             ToolsCapacity = pd.read_excel('./Mapping/ToolsCapacity.xlsx',sheet_name='DASP',index_col='Tool')
 
+            if Fair:
+                #Git common addr
+                commonAdrr = pd.DataFrame()
+                commonAdrr['contractAddress'] =  get_commonSamples(tools)
+
             for tool in tools:
                 baseTool_Labels = pd.read_csv('./Results/LabeledData/'+tool+'.csv',converters={tool+'_DASP_Rank': literal_eval})
+
+                if Fair:
+                    #remove none common addr
+                    baseTool_Labels.drop(baseTool_Labels[~baseTool_Labels['contractAddress'].isin(commonAdrr['contractAddress'])].index, inplace=True)
+
                 for test in tools:
                     if test == tool:
                         overlapDF.at[tool,test] = (1/1) * 100
@@ -23,10 +34,17 @@ def getOverlap(tools):
                         if len(vulnList)>0:
                             testTool_Labels = pd.read_csv('./Results/LabeledData/'+test+'.csv',converters={test+'_DASP_Rank': literal_eval})
                             overlapDF.at[tool,test] = compute_overlap(tool,test,baseTool_Labels,testTool_Labels,vulnList)
+                            
+                            if Fair:
+                                #remove none common addr
+                                testTool_Labels.drop(testTool_Labels[~testTool_Labels['contractAddress'].isin(commonAdrr['contractAddress'])].index, inplace=True)
                         else:
                             overlapDF.at[tool,test] = 0*100
             plot_Overlep_HeatMap(overlapDF)
-            overlapDF.to_csv('./Results/Overlap/OverlapDegree.csv')
+            if Fair:
+               overlapDF.to_csv('./Results/Overlap/OverlapDegree_Fair.csv') 
+            else:
+                overlapDF.to_csv('./Results/Overlap/OverlapDegree.csv')
         return overlapDF
     except Exception as err:
         print(f"Unexpected {err=}, {type(err)=}")
@@ -65,7 +83,7 @@ def get_common_vuln_list(tool, test,ToolsCapacity):
 
 def plot_Overlep_HeatMap(overlapDF):
     overlapDF = overlapDF.astype(float)
-    ax = sns.heatmap(overlapDF, annot=True, fmt='.2f',cmap='Blues',vmax=100,vmin=0,linewidths=1,square=True,annot_kws={'size': 12})
+    ax = sns.heatmap(overlapDF, annot=True, fmt='.2f',cmap='Blues',vmax=100,vmin=0,linewidths=1,square=True,annot_kws={'size': 12,'weight':'bold'})
     plt.title("Overlap of Tool Findings %")
     ax.invert_yaxis()
     plt.show() 
