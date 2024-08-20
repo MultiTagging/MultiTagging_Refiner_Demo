@@ -75,10 +75,9 @@ def plot_ManyTool_ManyBase(resultDF,tool,ToolsCapacity):
                 bar_width = 0.4
                 x_range_Precision_Scores = [idx - 0.2 for idx in range(len(tool))]
                 x_range_Recall_Scores = [idx for idx in range(len(tool))]
-                x_range_F1Score_Scores = [idx + 0.2 for idx in range(len(tool))]
+
                 axs[Vulnerabilities.index(v),Base.index(b)].bar(x_range_Precision_Scores,Precision_Scores,width=bar_width,color='lightblue')
                 axs[Vulnerabilities.index(v),Base.index(b)].bar(x_range_Recall_Scores,Recall_Scores,width=bar_width,color='steelblue')
-                axs[Vulnerabilities.index(v),Base.index(b)].bar(x_range_F1Score_Scores,AUC_Scores,width=bar_width,color='gray')
                 axs[Vulnerabilities.index(v),Base.index(b)].grid(True, color = "grey", which='major', linewidth = "0.3", linestyle = "-.")
                 axs[Vulnerabilities.index(v),Base.index(b)].grid(True, color="grey", which='minor', linestyle=':', linewidth="0.5")
                 axs[Vulnerabilities.index(v),Base.index(b)].minorticks_on()
@@ -101,7 +100,7 @@ def plot_ManyTool_ManyBase(resultDF,tool,ToolsCapacity):
                 xycoords='axes fraction', textcoords='offset points',
                 size='large', ha='center', va='baseline')
 
-    fig.legend(["Precision", "Recall","AUC-PR"],loc="lower left", ncol=1)
+    fig.legend(["Precision", "Recall"],loc="lower left", ncol=1)
     #fig.subplots_adjust(left=0, top=1)
     fig.tight_layout()
     plt.show()
@@ -121,7 +120,7 @@ def plot_ManyTool_OneBase(resultDF,tool,ToolsCapacity):
         Precision_Scores = []
         Recall_Scores = []
 
-        #store Precision, Recall, and F1-Score in one list
+        #store Precision and Recall in one list
         for index in range(0,len(dict_resultDF)):
             if dict_resultDF[index]['Label'] == v:
                 #print('b is:', b, 'and Base is:', dict_resultDF[index]['Base'])
@@ -165,17 +164,17 @@ def plot_ManyTool_OneBase(resultDF,tool,ToolsCapacity):
     
     plt.show()
 
-def plot_OneVuln_ManyTool(Vulnerability,Base,tool,Precision_Recall_And_F1score_scores):
+def plot_OneVuln_ManyTool(Vulnerability,Base,tool,Precision_Recall_scores):
     #create DataFrame
-    Precision_Recall_And_F1score_scores_DF = pd.DataFrame({'Tool': tool*3,
-                                  'Score': Precision_Recall_And_F1score_scores,
-                                  'Evaluation Metrics': ['Precision']*6 + ['Recall']*6 + ['AUC-PR']*6})
+    Precision_Recall_DF = pd.DataFrame({'Tool': tool*2,
+                                  'Score': Precision_Recall_scores,
+                                  'Evaluation Metrics': ['Precision']*6 + ['Recall']*6})
     #set seaborn plotting aesthetics
     sns.set(style='ticks')
     #create grouped bar charts
     g, axes = plt.subplots(9,3)
     ax = axes[0,0]
-    g=sns.catplot(x='Tool', y='Score', hue='Evaluation Metrics', data=Precision_Recall_And_F1score_scores_DF, kind='bar', height=4, aspect=2.5, palette="PuBu")
+    g=sns.catplot(x='Tool', y='Score', hue='Evaluation Metrics', data=Precision_Recall_DF, kind='bar', height=4, aspect=2.5, palette="PuBu")
     
     
     for p in ax.patches:
@@ -194,21 +193,21 @@ def plot_OneVuln_ManyTool(Vulnerability,Base,tool,Precision_Recall_And_F1score_s
 def plot_OneTool_OneBase(resultDF,tool):
     Base = resultDF.Base.unique().tolist()
     #store Precision and Recall in one list
-    Precision_Recall_And_AUC_scores =[]
+    Precision_Recall_scores =[]
     Precision_Scores = resultDF[tool[0]+'_Precision'].to_list()
     Recall_Scores  = resultDF[tool[0]+'_Recall'].to_list()
-    AUC_Scores  = resultDF[tool[0]+'_AUC-PR'].to_list()
-    Precision_Recall_And_AUC_scores = Precision_Scores + Recall_Scores + AUC_Scores
+
+    Precision_Recall_scores = Precision_Scores + Recall_Scores
     NoOfLabels = len(resultDF)
     #create DataFrame
-    Precision_Recall_And_AUC_scores_DF = pd.DataFrame({'Vulnerability': resultDF['Label'].to_list()*3,
-                                  'Score': Precision_Recall_And_AUC_scores,
-                                  'Evaluation Metrics': ['Precision']*NoOfLabels + ['Recall']*NoOfLabels + ['AUC-PR']*NoOfLabels})
+    Precision_Recall_And_DF = pd.DataFrame({'Vulnerability': resultDF['Label'].to_list()*2,
+                                  'Score': Precision_Recall_scores,
+                                  'Evaluation Metrics': ['Precision']*NoOfLabels + ['Recall']*NoOfLabels})
     
     #set seaborn plotting aesthetics
     sns.set(style='ticks')
     #create grouped bar chart
-    g=sns.catplot(x='Vulnerability', y='Score', hue='Evaluation Metrics', data=Precision_Recall_And_AUC_scores_DF, kind='bar', height=4, aspect=2.5, palette="PuBu")
+    g=sns.catplot(x='Vulnerability', y='Score', hue='Evaluation Metrics', data=Precision_Recall_And_DF, kind='bar', height=4, aspect=2.5, palette="PuBu")
 
     ax = g.facet_axis(0,0)
     for p in ax.patches:
@@ -217,7 +216,7 @@ def plot_OneTool_OneBase(resultDF,tool):
                 '{0:.2f}'.format(p.get_height()),
                 color='black', rotation='vertical', size='small')
 
-    plt.title('Precision, Recall, and AUC-PR for ' + tool[0] + ' per vulnerability on ' + Base[0], fontsize=12)
+    plt.title('Precision and Recall for ' + tool[0] + ' per vulnerability on ' + Base[0], fontsize=12)
     plt.grid(True, color = "grey", which='major', linewidth = "0.3", linestyle = "-.")
     plt.grid(True, color="grey", which='minor', linestyle=':', linewidth="0.5");
     plt.minorticks_on()
