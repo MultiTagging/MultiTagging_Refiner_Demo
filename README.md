@@ -22,7 +22,7 @@ The MultiTagging framework provides several functions through the following comp
       cd MultiTagging
    ```
 3.   Add your study's files in <A Href="https://github.com/MultiTagging/MultiTagging/tree/main/ToolReports">ToolReports</A>, <A Href="https://github.com/MultiTagging/MultiTagging/tree/main/ToolAnalysisTime">ToolAnalysisTime</A>, and <A Href="https://github.com/MultiTagging/MultiTagging/tree/main/BaseDS">BaseDS</A>. To retrieve study files from other folders, you can alternatively update the <A Href="https://github.com/MultiTagging/MultiTagging/blob/main/Scripts/config.json"> Scripts/config.json </A> file.
-4.   Run MultiTagging framework, there are three options:
+4.   Run the MultiTagging framework, there are three options:
       1. **Termianl Option:**
          1.   Run <A Href="https://github.com/MultiTagging/MultiTagging/blob/main/Main.py">Main.py</A> to open the wizard program. 
          ```
@@ -49,6 +49,6 @@ The MultiTagging framework provides several functions through the following comp
       run -i 'Main.py'
       ```
       3. **Within your Python code**
-        *   You can call any function of MultiTagging framework directly. Check the <A Href="https://github.com/MultiTagging/MultiTagging_Demo.git">MultiTagging Demo</A>
+        *   You can call any function of the MultiTagging framework directly. Check the <A Href="https://github.com/MultiTagging/MultiTagging_Demo.git">MultiTagging Demo</A>
 ## Demo
-*  The Multhitagging framework demo is available here: <A Href="https://github.com/MultiTagging/MultiTagging_Demo.git">MultiTagging Demo</A>
+*  The MultiTagging framework demo is available here: <A Href="https://github.com/MultiTagging/MultiTagging_Demo.git">MultiTagging Demo</A>
