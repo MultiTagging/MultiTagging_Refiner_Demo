@@ -39,7 +39,8 @@ The MultiTagging framework provides several functions through the following comp
           3: Get the evaluation report.
           4: Get the evaluation chart.
           5: Get tools overlap degree.
-          6: Exit
+          6: Get tool efficiency scores 
+          7: Exit
          ..................................................
          ```
          3.   Check the <A Href="https://github.com/MultiTagging/MultiTagging/tree/main/Results">Results</A> directory to get the saved output.
