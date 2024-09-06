@@ -3,14 +3,14 @@ from Scripts.evaluator import eval
 from Scripts.plotting import plot_result
 from Scripts.toolOverlap import getOverlap
 from Scripts.election import electLabel
+from Scripts.toolOverlap_perVuln import getOverlapPerV
+from Scripts.ToolEfficiency import get_toolEfficiency
 from Scripts.createPerformanceOutFiles import createPerformanceOutFiles
 
 import os
 from pathlib import Path
 import json
 
-import seaborn as sns
-import matplotlib.pyplot as plt
 import pandas as pd
 
 import warnings as w
@@ -59,9 +59,19 @@ def main():
                 try:
                     toolList = getToolsList()
                     if len(toolList) >1 or 'All' in toolList:
-                        print('The data is being processed now, wait a moment...\n\n')
-                        voteBasedLabeledData = electLabel(toolList)
-                        print('Vote Based-Labeled Data: \n', voteBasedLabeledData,'\n')
+                        baseFlieName = input("Enter the base data file name, e.g., SBcurated: ")
+                        baseFlieName = validation(baseFlieName,'BaseDataFile')
+                        if baseFlieName is False:
+                            print('Wrong input, The base data file does not found')
+                        else:
+                            Fair = input()
+                            if Fair not in [True, False]:
+                                print('Wrong Input')
+                            else:
+                                #tools performance + overlap..
+                                print('The data is being processed now, wait a moment...\n\n')
+                                voteBasedLabeledData = electLabel(baseFlieName,toolList,Fair)
+                                print('Vote Based-Labeled Data: \n', voteBasedLabeledData,'\n')
                     else:
                         print('You must pass at least two tool names')
                 except:

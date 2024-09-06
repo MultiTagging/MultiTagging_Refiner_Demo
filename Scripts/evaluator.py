@@ -1,7 +1,7 @@
 import pandas as pd
 from ast import literal_eval
 from pathlib import Path
-import json
+import json, os
 from Scripts.commonSamples import get_commonSamples
 #-------------------------------------------
 #Get the correct path to the configuration file
@@ -69,22 +69,30 @@ def eval(tool,base,Fair):
             set_avgAnalysisTimeAndFailureRate(predicted,BaseDS,base.split('.')[0],tool,Fair)
         #-------------------------------------------
         if Fair:
-            if vote:
-                metricsDF.to_csv('./Results/Evaluations_Fair/'+base.split('.')[0]+'/'+ tool +'.csv',index=False) #toBemove to other dir
-                predicted.to_csv('./Results/DASP_Data_Fair/'+base.split('.')[0]+'/predicted_'+tool +'.csv',index=False) #toBemove to other dir
-            else:
-                metricsDF.to_csv('./Results/Evaluations_Fair/'+base.split('.')[0]+'/' + tool + '.csv',index=False)
-                predicted.to_csv('./Results/DASP_Data_Fair/'+base.split('.')[0]+'/predicted_'+tool+'.csv',index=False)
-            actual.to_csv('./Results/DASP_Data_Fair/'+base.split('.')[0]+'/actual.csv',index=False)
+            EvaluationsOutDir = './Results/Evaluations_Fair/'
+            DASP_DataOutDir = './Results/DASP_Data_Fair/'
         else:
-            if vote:
-                metricsDF.to_csv('./Results/Evaluations/'+base.split('.')[0]+'/'+tool +'.csv',index=False) #toBemove to other dir
-                predicted.to_csv('./Results/DASP_Data/'+base.split('.')[0]+'/predicted_'+tool +'.csv',index=False) #toBemove to other dir
-            else:
-                metricsDF.to_csv('./Results/Evaluations/'+base.split('.')[0]+'/'+tool+'.csv',index=False)
-                predicted.to_csv('./Results/DASP_Data/'+base.split('.')[0]+'/predicted_'+tool+'.csv',index=False)
-            actual.to_csv('./Results/DASP_Data/'+base.split('.')[0]+'/actual.csv',index=False)
+            EvaluationsOutDir = './Results/Evaluations/'
+            DASP_DataOutDir = './Results/DASP_Data/'
 
+        #Create Base dir if not exit
+        BaseName = base.split('.')[0]
+        if not BaseName in [f.name for f in os.scandir(EvaluationsOutDir) if f.is_dir()]:
+            path = os.path.join(EvaluationsOutDir, BaseName)
+            os.mkdir(path)
+        if not BaseName in [f.name for f in os.scandir(DASP_DataOutDir) if f.is_dir()]:
+            path = os.path.join(DASP_DataOutDir, BaseName)
+            os.mkdir(path)  
+        #Save output
+        print(EvaluationsOutDir + BaseName +'/'+ tool +'.csv')
+        print(DASP_DataOutDir + BaseName +'/predicted_'+tool +'.csv')
+        if vote:
+            metricsDF.to_csv(EvaluationsOutDir + BaseName +'/'+ tool +'.csv',index=False) #toBeMoved to other dir
+            predicted.to_csv(DASP_DataOutDir + BaseName +'/predicted_'+tool +'.csv',index=False) #toBeMoved to other dir
+        else:
+            metricsDF.to_csv(EvaluationsOutDir + BaseName + '/' + tool + '.csv',index=False)
+            predicted.to_csv(DASP_DataOutDir + BaseName + '/predicted_' + tool + '.csv',index=False)
+        actual.to_csv(DASP_DataOutDir + BaseName + '/actual.csv',index=False)
         return metricsDF
     except Exception as err:
         print(f"Unexpected {err=}, {type(err)=}")
