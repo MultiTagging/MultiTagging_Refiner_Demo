@@ -3,14 +3,17 @@ from ast import literal_eval
 import seaborn as sns
 import matplotlib.pyplot as plt
 from Scripts.commonSamples import get_commonSamples
+import os
 
 DASP_Labels = ['Reentrancy','Access Control','Arithmetic','Unchecked Return Values','DoS','Bad Randomness','Front-Running','Time manipulation','Short Address Attack']
 
 def getOverlapPerV(tools,Fair):
     try:
-        if len(tools) <= 1:
+        if len(tools) <= 1 and tools[0].lower() != 'all':
             print('You should pass a list of tools')
         else:
+            if tools[0].lower() == 'all':
+                tools = sorted([f.name.split('.')[0] for f in os.scandir('./Results/LabeledData') if f.is_file() and 'csv' in f.name and not f.name in ['voteBasedData.csv','AllToolsData.csv','voteBasedData_Fair.csv','AllToolsData_Fair.csv']])
             if Fair:
                 #Git common addr
                 commonAdrr = pd.DataFrame()

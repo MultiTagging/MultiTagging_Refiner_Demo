@@ -3,12 +3,15 @@ from ast import literal_eval
 import seaborn as sns
 import matplotlib.pyplot as plt
 from Scripts.commonSamples import get_commonSamples
+import os
 
 def getOverlap(tools,Fair):
     try:
-        if len(tools) <= 1:
+        if len(tools) <= 1 and tools[0].lower() != 'all':
             print('You should pass a list of tools')
         else:
+            if tools[0].lower() == 'all':
+                tools = sorted([f.name.split('.')[0] for f in os.scandir('./Results/LabeledData') if f.is_file() and 'csv' in f.name and not f.name in ['voteBasedData.csv','AllToolsData.csv','voteBasedData_Fair.csv','AllToolsData_Fair.csv']])
             overlapDF = pd.DataFrame(index=tools, columns=tools)
 
             ToolsCapacity = pd.read_excel('./Mapping/ToolsCapacity.xlsx',sheet_name='DASP',index_col='Tool')
