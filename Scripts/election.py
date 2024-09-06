@@ -4,6 +4,7 @@ import numpy as np
 import os
 import math
 from Scripts.commonSamples import get_commonSamples
+from IPython.display import display
 
 def electLabel(Base, Voters,Fair):
     try:
@@ -25,7 +26,6 @@ def electLabel(Base, Voters,Fair):
 
         for Tool in Tools:
             ToolResult = pd.read_csv('./Results/LabeledData/' + Tool + '.csv',converters={Tool+'_DASP_Rank': literal_eval})
-
             if Fair:
                 #remove uncommon addr
                 ToolResult.drop(ToolResult[~ToolResult['contractAddress'].isin(commonAdrr['contractAddress'])].index, inplace=True) 
@@ -126,7 +126,8 @@ def Power_based_vote(VoteData,Base, Tools,dict_DASP_ToolsCapacity,DASP_Labels,Fa
     #[3]Identify voting method for each vulnerability
     #------------------------------------------------
     votingMethod = get_votingMethod(toolsPerformanceDic,toolsRules)
-    print('votingMethod:\n',votingMethod)
+    print('votingMethod:\n')
+    display(votingMethod)
     #[4]Invert positive flags for overlapping samples of other tools
     #---------------------------------------------------------------
     #[5]Apply vote
@@ -283,6 +284,8 @@ def get_toolsPerformance(Bases, Tools,DASP_Labels,Fair):
 
     if Bases[0].lower() == 'all':
         Bases = sorted([d.name for d in os.scandir(resultsPath) if d.is_dir and not d.name.startswith('.')])
+    else:
+        Bases = [Bases]
 
     #create output DF (toolsPerformanceDF)
     Metrics = ['Recall','Precision']
@@ -299,18 +302,16 @@ def get_toolsPerformance(Bases, Tools,DASP_Labels,Fair):
     for base in Bases:
         for tool in Tools:
             toolPerformance_on_base = pd.read_csv(resultsPath + '/' + base + '/' + tool + '.csv')#,converters={'Recall': literal_eval,'Precision': literal_eval,'F1-score': literal_eval})
-
             for index, row in toolPerformance_on_base.iterrows():
                 v = toolPerformance_on_base.at[index,'Label']
 
                 toolsPerformanceDic[v][tool]['Recall'].append(toolPerformance_on_base.at[index,'Recall'])
                 toolsPerformanceDic[v][tool]['Precision'].append(toolPerformance_on_base.at[index,'Precision'])
-
     if len(Bases) >0:
         for v in toolsPerformanceDic.keys():
             for tool in toolsPerformanceDic[v].keys():
                 toolsPerformanceDic[v][tool]['Recall'] = np.average(toolsPerformanceDic[v][tool]['Recall'])
-                toolsPerformanceDic[v][tool]['Precision'] = np.average(toolsPerformanceDic[v][tool]['Precision'])               
+                toolsPerformanceDic[v][tool]['Precision'] = np.average(toolsPerformanceDic[v][tool]['Precision'])            
     return toolsPerformanceDic
 
 def add_voteColumns(VoteData,method):
