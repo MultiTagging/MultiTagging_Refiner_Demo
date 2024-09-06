@@ -6,6 +6,8 @@ from Scripts.election import electLabel
 from Scripts.toolOverlap_perVuln import getOverlapPerV
 from Scripts.ToolEfficiency import get_toolEfficiency
 from Scripts.createPerformanceOutFiles import createPerformanceOutFiles
+from IPython.display import display
+
 
 import os
 from pathlib import Path
@@ -35,7 +37,7 @@ def main():
     flag = True
     while flag:
         print('.'*50 + '\n')
-        print('Enter the number of the selected function:\n 1: Get the labeled data for the tool reports.\n 2: Get vote-based labeled data. \n 3: Get the evaluation report.\n 4: Get the evaluation chart.\n 5: Get tools overlap degree.\n 6: Exit')
+        print('Enter the number of the selected function:\n 1: Get the labeled data for the tool reports.\n 2: Get vote-based labeled data. \n 3: Get the evaluation report.\n 4: Get the evaluation chart.\n 5: Get tools overlap degree.\n 6: Get tool efficiency scores \n 7: Exit')
         print('.'*50 + '\n')
         option = int(input('Your choice: '))
 
@@ -52,7 +54,7 @@ def main():
                             print('Wrong input; The source must be either 0 or 1')
                         else:
                             labeledDS =generateTags(tool,source)
-                            print(labeledDS)  
+                            display(labeledDS)  
                 except:
                     print('Unexpected error')
             case 2:
@@ -64,14 +66,30 @@ def main():
                         if baseFlieName is False:
                             print('Wrong input, The base data file does not found')
                         else:
-                            Fair = input()
+                            Fair = bool(strtobool(input("To perform a Fair assessment, which includes just the common samples that all tools were able to analyze, enter '1' or 'True'; otherwise, enter '0' or 'False'.")))
                             if Fair not in [True, False]:
-                                print('Wrong Input')
+                                print('Wrong Input!')
                             else:
                                 #tools performance + overlap..
-                                print('The data is being processed now, wait a moment...\n\n')
-                                voteBasedLabeledData = electLabel(baseFlieName,toolList,Fair)
-                                print('Vote Based-Labeled Data: \n', voteBasedLabeledData,'\n')
+                                if Fair:
+                                    EvaluationsOutDir = './Results/Evaluations_Fair/'
+                                    overlapFileName = 'OverlapDegree_PerVuln_Fair.csv'
+                                else:
+                                    EvaluationsOutDir = './Results/Evaluations/'
+                                    overlapFileName = 'OverlapDegree_PerVuln.csv'
+                                baseDir = EvaluationsOutDir + baseFlieName + '/'
+                                OverlapDir = './Results/Overlap/'
+                                if not baseFlieName in [f.name for f in os.scandir(EvaluationsOutDir) if f.is_dir()]:
+                                    print('Tools evaluation results folder not found. \n Perform option #3 to get tools evaluation results.')
+                                elif len([f.name for f in os.scandir(baseDir) if f.is_file() and '.csv' in f.name ]) <= 1:
+                                    print('Tools evaluation results not found. \n Perform option #3 to get tools evaluation results.')
+                                elif not overlapFileName in [f.name for f in os.scandir(OverlapDir) if f.is_file()]:
+                                    print('Overlap degrees per vulnerability class csv file not found. \n Perform option #5 to generate Overlap degree csv file.')
+                                else:
+                                    print('The data is being processed now, wait a moment...\n')
+                                    voteBasedLabeledData = electLabel(baseFlieName,toolList,Fair)
+                                    print('Vote Based-Labeled Data: \n')
+                                    display(voteBasedLabeledData)
                     else:
                         print('You must pass at least two tool names')
                 except:
@@ -88,17 +106,19 @@ def main():
                         if baseFlieName is False:
                             print('Wrong input, The base data file does not found')
                         else:
-                            print(baseFlieName)
-                            print(dataFileName)
+                            Fair = bool(strtobool(input("To perform a Fair assessment, which includes just the common samples that all tools were able to analyze, enter '1' or 'True'; otherwise, enter '0' or 'False'.")))
+                            if Fair not in [True, False]:
+                                print('Wrong Input!')
+                            else:
+                                #create avgAnalysisTimeAndFailureRate files if not exit
+                                files = os.listdir('./Results/Performance/')
+                                if not 'avgAnalysisTimeAndFailureRate.csv' in files or not 'avgAnalysisTimeAndFailureRate_Fair.csv' in files:
+                                    Bases = baseFlieName.split('.')[0]
+                                    createPerformanceOutFiles(Tools,Bases)
 
-                            #create avgAnalysisTimeAndFailureRate files if not exit
-                            files = os.listdir('./Results/Performance/')
-                            if not 'avgAnalysisTimeAndFailureRate.csv' in files or not 'avgAnalysisTimeAndFailureRate_Fair.csv' in files:
-                                Bases = baseFlieName.split('.')[0]
-                                createPerformanceOutFiles(Tools,Bases)
-
-                            evaluationResult = eval(dataFileName,baseFlieName+'.csv')
-                            print('The evaluation result of',dataFileName,'using the base',baseFlieName,'is',evaluationResult)
+                                evaluationResult = eval(dataFileName,baseFlieName +'.csv',Fair)
+                                print('The evaluation result of',dataFileName,'using the base',baseFlieName,'is')
+                                display(evaluationResult)
                 except:
                     print('Unexpected error')
             case 4:
@@ -107,9 +127,14 @@ def main():
                     if len(toolList) > 0 :
                         baseList = getBasesList()
                         if len(baseList) > 0:
-                            Eval_Results = plot_result(toolList,baseList)
-                            #Eval_Results.to_csv('./Results/Charts/AllResult.csv',index=False)
-                            print('Evaluation Data:\n',Eval_Results)
+                            Fair = bool(strtobool(input("To perform a Fair assessment, which includes just the common samples that all tools were able to analyze, enter '1' or 'True'; otherwise, enter '0' or 'False'.")))
+                            if Fair not in [True, False]:
+                                print('Wrong Input!')
+                            else:
+                                Eval_Results = plot_result(toolList,baseList,Fair)
+                                #Eval_Results.to_csv('./Results/Charts/AllResult.csv',index=False)
+                                print('Evaluation Data:\n')
+                                display(Eval_Results)
                         else:
                             print('Wrong input')
                     else:
@@ -120,14 +145,33 @@ def main():
                 try:
                     toolList = getToolsList()
                     if len(toolList) >1 or 'All' in toolList:
-                        print('The data is being processed now, wait a moment...\n\n')
-                        overlapDF = getOverlap(toolList)
-                        print('Tools Overlap Degrees: \n', overlapDF,'\n')
+                        Fair = bool(strtobool(input("To perform a Fair assessment, which includes just the common samples that all tools were able to analyze, enter '1' or 'True'; otherwise, enter '0' or 'False'.")))
+                        if Fair not in [True, False]:
+                            print('Wrong Input!')
+                        else:
+                            overlapPerClass = bool(strtobool(input('To measure the overlap degree per vulnerability class, enter "True" or "1" otherwise enter "False" or "0"')))
+                            if overlapPerClass not in [True, False]:
+                                print('Wrong Input!')
+                            else:
+                                print('The data is being processed now, wait a moment...\n\n')
+                                if overlapPerClass:
+                                    overlapDF = getOverlapPerV(toolList,Fair)
+                                    print('Tools Overlap Degrees For Each Vulnerability Class: \n')
+                                else:
+                                    overlapDF = getOverlap(toolList,Fair)
+                                    print('Tools Overlap Degrees: \n')
+                                display(overlapDF)
                     else:
                         print('You must pass at least two tool names')
                 except:
                     print('Unexpected error')
             case 6:
+                Fair = bool(strtobool(input("To perform a Fair assessment, which includes just the common samples that all tools were able to analyze, enter '1' or 'True'; otherwise, enter '0' or 'False'.")))
+                if Fair not in [True, False]:
+                    print('Wrong Input!')
+                else:
+                    get_toolEfficiency(Fair)
+            case 7:
                 flag =False
 
 def validation(input,type):
@@ -195,5 +239,20 @@ def getBasesList():
             else:
                 Bases.append(base)
             print('Enter the name of the next base data and press Enter (to Exit, press Enter directly): ')
-    return Bases 
+    return Bases
+
+def strtobool (val):
+    #Source: https://stackoverflow.com/questions/715417/converting-from-a-string-to-boolean-in-python
+    """Convert a string representation of truth to true (1) or false (0).
+    True values are 'y', 'yes', 't', 'true', 'on', and '1'; false values
+    are 'n', 'no', 'f', 'false', 'off', and '0'.  Raises ValueError if
+    'val' is anything else.
+    """
+    val = val.lower()
+    if val in ('y', 'yes', 't', 'true', 'on', '1'):
+        return 1
+    elif val in ('n', 'no', 'f', 'false', 'off', '0'):
+        return 0
+    else:
+        raise ValueError("invalid truth value %r" % (val,))
 main()
