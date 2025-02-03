@@ -54,7 +54,7 @@ The MultiTagging framework provides several functions through the following comp
 ## Demo
 *  The MultiTagging framework demo is available here: <A Href="https://github.com/MultiTagging/MultiTagging_Demo.git">MultiTagging Demo</A>
 ## Publications
-For more details about the MultiTagging Framework, read our publication: <A Href="https://www.mdpi.com/2079-9292/13/23/4616">MultiTagging: A Vulnerable Smart Contract Labeling and Evaluation Framework</A>, published in the Electronic Journal. Please cite our article if you use any part of the framework.
+For more details about the MultiTagging Framework, read our publication: <A Href="https://www.mdpi.com/2079-9292/13/23/4616">MultiTagging: A Vulnerable Smart Contract Labeling and Evaluation Framework</A>, published in the Electronics Journal. Please cite our article if you use any part of the framework.
 ```
 @article{alsunaidi2024multitagging,
   title={MultiTagging: A Vulnerable Smart Contract Labeling and Evaluation Framework},
