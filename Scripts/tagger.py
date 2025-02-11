@@ -23,16 +23,23 @@ def generateTags(tool,reportSource):
         
         vulnReportsPath = config_File['Reports_Directory_Path'][Tools.index(tool)]['Path']
         labeledSC = parse(tool,vulnReportsPath,reportSource)
-
         if reportSource ==0 and tool != 'VeriSmart':
             analysisTimeReportsPath = config_File['AnalysisTime_Directory_Path'][Tools.index(tool)]['Path']    
             tool_LabeledDS = pd.DataFrame(get_ToolAnalysisTime(tool, analysisTimeReportsPath))
+
+            labeledSC['contractAddress'] = labeledSC['contractAddress'].astype(str).str.strip().str.lower()
+            tool_LabeledDS['contractAddress'] = tool_LabeledDS['contractAddress'].astype(str).str.strip().str.lower()
+
+            labeledSC = labeledSC.drop_duplicates(subset=['contractAddress']).dropna(subset=['contractAddress'])
+            tool_LabeledDS = tool_LabeledDS.drop_duplicates(subset=['contractAddress']).dropna(subset=['contractAddress'])
+
             labeledSC= labeledSC.merge(tool_LabeledDS,on='contractAddress')
         
         VulnerablityMapFilePath = config_File['VulnerablityMap_File_Path'][0]['Path']  
         mapLabeledSC = map(labeledSC,VulnerablityMapFilePath,tool)
 
         mapLabeledSC.to_csv('./Results/LabeledData/'+tool+'.csv',index=False)
+
         return mapLabeledSC
     except Exception as err:
         print(f"Unexpected {err=}, {type(err)=}")
