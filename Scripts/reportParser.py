@@ -85,9 +85,12 @@ def parse(tool,reportsLocation,reportSource):
                                     file = open(path/filename,errors="ignore")
                                     data = json.load(file)
                                     file.close()
-                                    for i in range(0,len(data['results']['detectors'])):
-                                        codes.append(data['results']['detectors'][i]['check'])
-                                    codes = list(dict.fromkeys(codes))
+                                    if data['success'] == True:
+                                        for i in range(0,len(data['results']['detectors'])):
+                                            codes.append(data['results']['detectors'][i]['check'])
+                                        codes = list(dict.fromkeys(codes))
+                                    else:
+                                        codes.append('error')
                                 else:
                                     codes.append('error')
                                 toolTags.loc[len(toolTags)]=[filename.rstrip().rsplit('.')[0],codes]
@@ -99,20 +102,21 @@ def parse(tool,reportsLocation,reportSource):
                     try:
                         toolTags[tool+'_AnalysisTime'] = ''
                         for filename in os.listdir(path):
-                            codes = []
-                            if os.path.getsize(path/filename) != 0:
-                                file = open(path/filename,errors="ignore")
-                                data = json.load(file)
-                                file.close()
-                                if data['errMsg'] == None:
-                                    for i in range(0,len(data['result'])):
-                                        if data['result'][i]['status'] == 'unproven' and data['result'][i]['kind'] not in codes:
-                                            codes.append(data['result'][i]['kind'])
+                            if '.json' in filename:
+                                codes = []
+                                if os.path.getsize(path/filename) != 0:
+                                    file = open(path/filename,errors="ignore")
+                                    data = json.load(file)
+                                    file.close()
+                                    if data['errMsg'] == None:
+                                        for i in range(0,len(data['result'])):
+                                            if data['result'][i]['status'] == 'unproven' and data['result'][i]['kind'] not in codes:
+                                                codes.append(data['result'][i]['kind'])
+                                    else:
+                                        codes.append('error')  
                                 else:
-                                  codes.append('error')  
-                            else:
-                                codes.append('error')
-                            toolTags.loc[len(toolTags)]=[filename.rstrip().rsplit('.')[0],codes,data['time']]
+                                    codes.append('error')
+                                toolTags.loc[len(toolTags)]=[filename.rstrip().rsplit('.')[0],codes,data['time']]
                         print(tool + " tags have been extracted successfully")
                         return toolTags
                     except IOError:
