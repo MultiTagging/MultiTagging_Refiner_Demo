@@ -1,7 +1,7 @@
 import pandas as pd
 from ast import literal_eval
 import numpy as np
-import os
+import os, json,ast
 import math
 from Scripts.commonSamples import get_commonSamples
 from IPython.display import display
@@ -72,7 +72,7 @@ def electLabel(Base, Voters,Fair):
         #---------------------
         # Apply voting methods
         #---------------------
-        VoteResult = Power_based_vote(VoteData,Base, Tools,dict_DASP_ToolsCapacity,DASP_Labels,Fair,commonAdrr)
+        VoteResult = Power_based_vote(VoteData,Base, Tools,dict_DASP_ToolsCapacity,DASP_Labels,Fair,commonAdrr,ApplyMethodOnle = True)
         print('Power_based_vote is done')
         VoteResult = vote(VoteResult,'Majority')
         VoteResult = vote(VoteResult,'AtLeastOne')
@@ -109,23 +109,46 @@ def vote_methods(labelVots,method):
             label = 1 if labelVots.count(1) >= 1 else 0
     return label
 
-def Power_based_vote(VoteData,Base, Tools,dict_DASP_ToolsCapacity,DASP_Labels,Fair,commonAdrr):
+def Power_based_vote(VoteData,Base, Tools,dict_DASP_ToolsCapacity,DASP_Labels,Fair,commonAdrr,ApplyMethodOnle = False):
     
     #[1]Identify tool sensitivity rate [High | Low]
     #----------------------------------------------
-    toolsPerformanceDic = get_toolsPerformance(Base, Tools,DASP_Labels,Fair)
-    print('toolsPerformanceDic:\n',toolsPerformanceDic)
+    if not ApplyMethodOnle:
+        toolsPerformanceDic = get_toolsPerformance(Base, Tools,DASP_Labels,Fair)
+        print('toolsPerformanceDic:\n')
+        display(toolsPerformanceDic)
 
     #[2]Identify tool role [Voter | Inverter | None]
     #------------------------------------------------------
-    toolsOVerlapDegree = get_toolsOVerlapDegree(DASP_Labels,Tools,Fair)
-    print('toolsOVerlapDegree:\n',toolsOVerlapDegree)
-    toolsRules = get_toolRole(toolsPerformanceDic,toolsOVerlapDegree)
-    print('toolsRule:\n',toolsRules)
+    if ApplyMethodOnle:
+        toolsRules = pd.read_csv('./Results/VoteResult/powerVoteRules.csv')
+        for col in toolsRules.columns:
+            toolsRules[col] = toolsRules[col].apply(parse_powerVoteData)
+    else:
+        toolsOVerlapDegree = get_toolsOVerlapDegree(DASP_Labels,Tools,Fair)
+        print('toolsOVerlapDegree:\n',toolsOVerlapDegree)
+        toolsRules = get_toolRole(toolsPerformanceDic,toolsOVerlapDegree)
+    print('toolsRule:\n')
+    display(toolsRules)
 
     #[3]Identify voting method for each vulnerability
     #------------------------------------------------
-    votingMethod = get_votingMethod(toolsPerformanceDic,toolsRules)
+    if ApplyMethodOnle:
+        votingMethoddata = pd.read_csv('./Results/VoteResult/votingMethod.csv')
+        for col in votingMethoddata.columns:
+            votingMethoddata[col] = votingMethoddata[col].apply(parse_powerVoteData)
+        
+        votingMethod = {}
+        for label in votingMethoddata.columns[1:]:  # Skip the first column, which contains the method types
+            votingMethod[label] = {
+                'Voters': votingMethoddata.loc[votingMethoddata['Method'] == 'Voters', label].values[0],
+                'Inverter': votingMethoddata.loc[votingMethoddata['Method'] == 'Inverter', label].values[0],
+                'AtLeastOne': votingMethoddata.loc[votingMethoddata['Method'] == 'AtLeastOne', label].values[0],
+                'Majority': votingMethoddata.loc[votingMethoddata['Method'] == 'Majority', label].values[0],
+            }
+
+    else:
+        votingMethod = get_votingMethod(toolsPerformanceDic,toolsRules)
     print('votingMethod:\n')
     display(votingMethod)
     #[4]Invert positive flags for overlapping samples of other tools
@@ -142,6 +165,10 @@ def Power_based_vote(VoteData,Base, Tools,dict_DASP_ToolsCapacity,DASP_Labels,Fa
             label = DASP_Labels[i-1]
 
             votingRules = votingMethod[label]
+            print(label)
+            print(votingRules)
+            print('AtLeastOne:',votingRules['Majority'])
+            print('Majority:',votingRules['AtLeastOne'])
             
             if len(votingRules['Majority']) == len(votingRules['AtLeastOne']) == 0:
                 continue
@@ -402,5 +429,20 @@ def get_Tools_DASP_Result(Tools,dict_DASP_ToolsCapacity,Fair,commonAdrr):
         Tools_DASP_Result.to_csv('./Results/LabeledData/AllToolsData.csv',index=False)
    
     return Tools_DASP_Result
+#--------------------------------------------------------------------
+def parse_powerVoteData(value):
+
+    if isinstance(value, str):
+        value = value.strip()
+        try:
+            # Attempt to parse as JSON or Python literal
+            return json.loads(value)
+        except json.JSONDecodeError:
+            try:
+                return ast.literal_eval(value)
+            except (ValueError, SyntaxError):
+                # Return original string if it cannot be parsed
+                return value
+    return value
 
 #electLabel(['All'])
