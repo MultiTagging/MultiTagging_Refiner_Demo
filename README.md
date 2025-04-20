@@ -65,6 +65,9 @@ For more details about the MultiTagging Framework, read our publication: <A Href
   number={23},
   pages={4616},
   year={2024},
-  publisher={MDPI}
+  publisher={MDPI},
+  URL = {https://www.mdpi.com/2079-9292/13/23/4616},
+  ISSN = {2079-9292},
+  DOI = {10.3390/electronics13234616}
 }
 ```
