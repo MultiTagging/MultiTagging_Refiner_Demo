@@ -22,8 +22,7 @@ def get_commonSamples(Tools):
             ToolDS = pd.read_csv('./Results/LabeledData/'+tool+'.csv')
 
             #Remove errors
-            ToolDS = ToolDS[ToolDS[tool+'_Labels'] != "['error']"]
-            #print(tool,':',len(ToolDS))
+            ToolDS = ToolDS[~ToolDS[tool + '_DASP_Title'].apply(lambda v: (isinstance(v, list) and v == ['error']) or (isinstance(v, str) and v.strip() == "['error']"))].copy()
             if len(commonAdrrDF) == 0:
                 commonAdrrDF['contractAddress'] = ToolDS['contractAddress'].to_list()
             else:
